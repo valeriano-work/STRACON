@@ -1,0 +1,11 @@
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.Stracon.Politicas\Pe.Stracon.PoliticasCross.Core\bin\Release\Pe.Stracon.PoliticasCross.Core.dll
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.Stracon.Politicas\Pe.Stracon.PoliticasCross.Core\bin\Release\Pe.Stracon.PoliticasCross.Core.pdb
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.Stracon.Politicas\Pe.Stracon.PoliticasCross.Core\bin\Release\log4net.dll
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.Stracon.Politicas\Pe.Stracon.PoliticasCross.Core\bin\Release\Pe.GyM.Security.Account.dll
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.Stracon.Politicas\Pe.Stracon.PoliticasCross.Core\bin\Release\Pe.GyM.Security.Account.pdb
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.Stracon.Politicas\Pe.Stracon.PoliticasCross.Core\bin\Release\Pe.GyM.Security.Account.dll.config
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.Stracon.Politicas\Pe.Stracon.PoliticasCross.Core\obj\Release\Pe.Stracon.PoliticasCross.Core.csprojAssemblyReference.cache
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.Stracon.Politicas\Pe.Stracon.PoliticasCross.Core\obj\Release\Pe.Stracon.PoliticasCross.Core.csproj.CoreCompileInputs.cache
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.Stracon.Politicas\Pe.Stracon.PoliticasCross.Core\obj\Release\Pe.Stracon.PoliticasCross.Core.csproj.CopyComplete
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.Stracon.Politicas\Pe.Stracon.PoliticasCross.Core\obj\Release\Pe.Stracon.PoliticasCross.Core.dll
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.Stracon.Politicas\Pe.Stracon.PoliticasCross.Core\obj\Release\Pe.Stracon.PoliticasCross.Core.pdb

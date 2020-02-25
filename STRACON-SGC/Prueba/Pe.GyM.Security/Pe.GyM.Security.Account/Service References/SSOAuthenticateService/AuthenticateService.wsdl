@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AuthenticateService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://10.244.4.20/SSO/Service/AuthenticateService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://10.244.4.20/SSO/Service/AuthenticateService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://10.244.4.20/SSO/Service/AuthenticateService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IAuthenticateService_Authenticate_InputMessage">
+    <wsdl:part name="parameters" element="tns:Authenticate" />
+  </wsdl:message>
+  <wsdl:message name="IAuthenticateService_Authenticate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAuthenticateService_GetUserByToken_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByToken" />
+  </wsdl:message>
+  <wsdl:message name="IAuthenticateService_GetUserByToken_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAuthenticateService_IsUserLoggedIn_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsUserLoggedIn" />
+  </wsdl:message>
+  <wsdl:message name="IAuthenticateService_IsUserLoggedIn_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsUserLoggedInResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAuthenticateService_IsValidRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsValidRequest" />
+  </wsdl:message>
+  <wsdl:message name="IAuthenticateService_IsValidRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsValidRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAuthenticateService_GetUserStauts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserStauts" />
+  </wsdl:message>
+  <wsdl:message name="IAuthenticateService_GetUserStauts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserStautsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAuthenticateService_GetAccessToSystem_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccessToSystem" />
+  </wsdl:message>
+  <wsdl:message name="IAuthenticateService_GetAccessToSystem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccessToSystemResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IAuthenticateService">
+    <wsdl:operation name="Authenticate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAuthenticateService/Authenticate" message="tns:IAuthenticateService_Authenticate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAuthenticateService/AuthenticateResponse" message="tns:IAuthenticateService_Authenticate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByToken">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAuthenticateService/GetUserByToken" message="tns:IAuthenticateService_GetUserByToken_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAuthenticateService/GetUserByTokenResponse" message="tns:IAuthenticateService_GetUserByToken_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsUserLoggedIn">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAuthenticateService/IsUserLoggedIn" message="tns:IAuthenticateService_IsUserLoggedIn_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAuthenticateService/IsUserLoggedInResponse" message="tns:IAuthenticateService_IsUserLoggedIn_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsValidRequest">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAuthenticateService/IsValidRequest" message="tns:IAuthenticateService_IsValidRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAuthenticateService/IsValidRequestResponse" message="tns:IAuthenticateService_IsValidRequest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserStauts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAuthenticateService/GetUserStauts" message="tns:IAuthenticateService_GetUserStauts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAuthenticateService/GetUserStautsResponse" message="tns:IAuthenticateService_GetUserStauts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccessToSystem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAuthenticateService/GetAccessToSystem" message="tns:IAuthenticateService_GetAccessToSystem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAuthenticateService/GetAccessToSystemResponse" message="tns:IAuthenticateService_GetAccessToSystem_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IAuthenticateService" type="tns:IAuthenticateService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Authenticate">
+      <soap:operation soapAction="http://tempuri.org/IAuthenticateService/Authenticate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByToken">
+      <soap:operation soapAction="http://tempuri.org/IAuthenticateService/GetUserByToken" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsUserLoggedIn">
+      <soap:operation soapAction="http://tempuri.org/IAuthenticateService/IsUserLoggedIn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsValidRequest">
+      <soap:operation soapAction="http://tempuri.org/IAuthenticateService/IsValidRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserStauts">
+      <soap:operation soapAction="http://tempuri.org/IAuthenticateService/GetUserStauts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccessToSystem">
+      <soap:operation soapAction="http://tempuri.org/IAuthenticateService/GetAccessToSystem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AuthenticateService">
+    <wsdl:port name="BasicHttpBinding_IAuthenticateService" binding="tns:BasicHttpBinding_IAuthenticateService">
+      <soap:address location="http://10.244.4.20/SSO/Service/AuthenticateService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

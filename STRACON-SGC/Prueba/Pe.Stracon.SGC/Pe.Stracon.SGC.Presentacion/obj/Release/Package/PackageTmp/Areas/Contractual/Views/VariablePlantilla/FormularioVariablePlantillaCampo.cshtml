@@ -1,0 +1,42 @@
+﻿@using Pe.Stracon.SGC.Presentacion.Recursos.Base
+@using Pe.Stracon.SGC.Presentacion.Recursos.Contractual
+@model Pe.Stracon.SGC.Presentacion.Core.ViewModel.Contractual.VariablePlantilla.VariablePlantillaCampoFormulario
+
+<form id="frmVariablePlantillaCampo">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <input id="hdnCodigoVariable" type="hidden" value="@Model.VariableCampo.CodigoVariable" />
+                <input id="hdnCodigoVariableCampo" type="hidden" value="@Model.VariableCampo.CodigoVariableCampo" />
+                <label for="spnFrmOrden">@VariablePlantillaResource.EtiquetaOrden</label>
+                @Html.TextBox("spnFrmOrden", @Model.VariableCampo.Orden, new { @class = "form-control", @id = "spnFrmOrden" })
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="txtFrmTitulo">@VariablePlantillaResource.EtiquetaNombre</label>
+                @Html.TextBox("txtFrmNombre", @Model.VariableCampo.Nombre, new { @class = "form-control", @id = "txtFrmNombre" })
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="slcTipoAlineamiento">@VariablePlantillaResource.EtiquetaTipoAlineamiento</label>
+                @Html.DropDownList("slcTipoAlineamiento", @Model.TipoAlineamiento, new { @class="form-control", @id="slcTipoAlineamiento" })
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="txtTamanio">@VariablePlantillaResource.EtiquetaTamanio</label>
+                @Html.TextBox("txtTamanio", @Model.VariableCampo.Tamanio, new { @class="form-control", @id="txtTamanio" })
+            </div>
+        </div>
+    </div>
+</form>
+
+<div class="comp-Modal-footer">
+    <button class="btn btn-default" id="btnFrmVariablePlantillaCampoCancelar">@GenericoResource.BotonCancelar</button>
+    <button class="btn btn-primary" id="btnFrmVariablePlantillaCampoGrabar">@GenericoResource.BotonGrabar</button>
+</div>
+

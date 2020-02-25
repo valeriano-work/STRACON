@@ -1,0 +1,14 @@
+﻿@using Pe.Stracon.SGC.Presentacion.Recursos.Base
+@using Pe.Stracon.SGC.Presentacion.Recursos.Contractual
+@using Pe.Stracon.SGC.Presentacion.Recursos.Mensajes
+@using Pe.Stracon.SGC.Presentacion.Core.Helpers
+@*@model Pe.Stracon.SGC.Presentacion.Core.ViewModel.Contractual.Plantilla.PlantillaBusqueda*@
+
+@{
+    var disabled = (Model.ControlPermisos.ControlTotal || Model.ControlPermisos.Escritura) ? false : true;
+    var disabledEliminar = (Model.ControlPermisos.ControlTotal) ? false : true;
+}
+
+<div class="GmdBody-header">
+    <h2>@PlantillaRequerimientoResource.EtiquetaTituloPrincipal</h2>
+</div>

@@ -1,0 +1,206 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Pe.Stracon.SGC.Cross.Core</name>
+    </assembly>
+    <members>
+        <member name="T:Pe.Stracon.SGC.Cross.Core.Base.GenericException`1">
+            <summary>
+            Exception base
+            </summary>
+            <remarks>
+            Creación:   GMD 22122014 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Cross.Core.Base.IEntornoActualAplicacion">
+            <summary>
+            Objecto que representa un entorno de usuario en la aplicación
+            </summary>
+            <remarks>
+            Creación:       GMD 20150319
+            Modificación:   
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Cross.Core.Base.IEntornoActualAplicacion.UsuarioSession">
+            <summary>
+            Alias del usaurio en sesión
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Cross.Core.Base.IEntornoActualAplicacion.Terminal">
+            <summary>
+            Terminal de donde se accedio
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Cross.Core.Base.IEntornoActualAplicacion.CodigoSistema">
+            <summary>
+            Codigo actual del sistema
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Cross.Core.Base.IEntornoActualAplicacion.CodigoEmpresa">
+            <summary>
+            Codigo actual de la empresa del sistema
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Cross.Core.Exception.ApplicationLayerException`1">
+            <summary>
+            Application Exception
+            </summary>
+            <remarks>
+            Creación:   GMD 22122014 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Cross.Core.Exception.InfrastructureLayerException`1">
+            <summary>
+            Infrastructure Exception
+            </summary>
+            <remarks>
+            Creación:   GMD 22122014 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Cross.Core.Extension.Extension">
+            <summary>
+            Entidad de Negocio que representa la clase estatica Extension
+            </summary>
+            <remarks>
+            Creación:       GMD 18/03/2015 <br />
+            Modificación:                <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Cross.Core.Extension.Extension.ToDataTable``1(System.Collections.Generic.IList{``0})">
+            <summary>
+            Método que permite listar una tabla
+            </summary>
+            <returns> tabla </returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Cross.Core.Extension.Extension.SetValue``2(System.Collections.Generic.IDictionary{``0,``1},``0,``1)">
+            <summary>
+            Extensión para setar un valor en un diccionario.
+            </summary>
+            <typeparam name="TKey">Tipo de la llave</typeparam>
+            <typeparam name="TValue">Tipo del valor a setear</typeparam>
+            <param name="data">Diccionario en el cual se buscará</param>
+            <param name="llave">Llave para la búsqueda</param>
+            <param name="valor">valor a setear</param>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Cross.Core.Security.EntornoActualAplicacion">
+            <summary>
+            Objecto que representa un entorno de usuario en la aplicación
+            </summary>
+            <remarks>
+            Creación:       GMD 20150319
+            Modificación:   
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Cross.Core.Security.EntornoActualAplicacion.UsuarioSession">
+            <summary>
+            Alias del usaurio en sesión
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Cross.Core.Security.EntornoActualAplicacion.Terminal">
+            <summary>
+            Terminal de donde se accedio
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Cross.Core.Security.EntornoActualAplicacion.CodigoSistema">
+            <summary>
+            Codigo actual del sistema
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Cross.Core.Security.EntornoActualAplicacion.CodigoEmpresa">
+            <summary>
+            Codigo actual de la empresa del sistema
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Cross.Core.Util.Utilitario">
+            <summary>
+            Clase Utilitaria
+            </summary>
+            <remarks>
+            Creación:       GMD 20150319
+            Modificación:   
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Cross.Core.Util.Utilitario.ObtenerNombreMes(System.Int32)">
+            <summary>
+            Obtiene el nombre de un mes calendario.
+            </summary>
+            <param name="mes">Número de Mes</param>
+            <returns>Nombre del Mes</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Cross.Core.Util.Utilitario.ObtenerListaMeses">
+            <summary>
+            Obtiene la lista de meses
+            </summary>
+            <returns>Retorna la lista de meses</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Cross.Core.Util.Utilitario.RetornaIniciales(System.String)">
+            <summary>
+            Retorna las iniciales de un nombre
+            </summary>
+            <param name="nombre">nombre a evaluar</param>
+            <returns></returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Cross.Core.Util.Utilitario.HtmlACadena(System.String)">
+            <summary>
+            Retorna las iniciales de un nombre
+            </summary>
+            <param name="nombre">nombre a evaluar</param>
+            <returns></returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Cross.Core.Util.Utilitario.ObtenerControlPermisos(Pe.GyM.Security.Account.Model.CuentaUsuario,System.String)">
+            <summary>
+            Obtiene los permisos de Lectura, Escritura y Control Total de la Opción seleccionada
+            </summary>
+            <param name="user">Cuenta de usuario de la sesión</param>
+            <param name="url">Dirección Url de la opción seleccionada</param>
+            <returns>Permisos de Lectura, Escritura y Control Total de la Opción seleccionada</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Cross.Core.Util.Utilitario.CadenaFormatoFecha(System.String,System.String)">
+            <summary>
+            Convierte formato string to datetime
+            </summary>
+            <param name="valor">valor</param>
+            <param name="formato">formato</param>
+            <returns></returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Cross.Core.Util.Utilitario.GeneraArchivoDesdeReporting(System.String,System.String,System.String,System.String,System.Collections.Generic.List{Microsoft.Reporting.WebForms.ReportParameter})">
+            <summary>
+            Permite generar un Archivo desde un Reporting Service
+            </summary>
+            <param name="reporteServerUrl">Servidor del reporting</param>
+            <param name="rutaReporte">Carpeta donde se ubica el reporte</param>
+            <param name="nombreReporte">Nombre del reporte</param>
+            <param name="formatoReporte">Formato a exportar</param>
+             /// <param name="parametros">Lista Parametros</param>
+            <returns>Archivo en un arreglo de bytes</returns>
+        </member>
+        <member name="T:Pe.GyM.SGC.Cross.Core.Base.ReporteCredencial">
+            <summary>
+            Clase My Credencial
+            </summary>
+        </member>
+        <member name="M:Pe.GyM.SGC.Cross.Core.Base.ReporteCredencial.GetFormsCredentials(System.Net.Cookie@,System.String@,System.String@,System.String@)">
+            <summary>
+            Método pa obtener las credenciales de forma
+            </summary>
+            <param name="authCookie">Creador de la cookie</param>
+            <param name="userName">Nombre del usuario</param>
+            <param name="password">Contraseña</param>
+            <param name="authority">Cargo</param>
+            <returns>Verdadero o Falso</returns>
+        </member>
+        <member name="P:Pe.GyM.SGC.Cross.Core.Base.ReporteCredencial.ImpersonationUser">
+            <summary>
+            ImpersonationUser
+            </summary>
+        </member>
+        <member name="P:Pe.GyM.SGC.Cross.Core.Base.ReporteCredencial.NetworkCredentials">
+            <summary>
+            NetworkCredentials
+            </summary>
+        </member>
+    </members>
+</doc>

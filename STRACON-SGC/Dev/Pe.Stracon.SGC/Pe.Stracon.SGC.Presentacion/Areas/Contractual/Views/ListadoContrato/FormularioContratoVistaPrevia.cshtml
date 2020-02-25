@@ -1,0 +1,35 @@
+﻿@using Pe.Stracon.SGC.Presentacion.Recursos.Base
+@using Pe.Stracon.SGC.Presentacion.Recursos.Contractual
+@model  Pe.Stracon.SGC.Presentacion.Core.ViewModel.Contractual.ListadoContrato.ContratoVistaPreviaFormulario
+
+<form id="frmContratoVistaPrevia">
+    <div class="row">
+        <div class="col-sm-7">
+            <div class="form-group">
+                <label for="divContenidoContrato">@FlujoAprobacionResource.EtiquetaVistaPrevia</label>
+                <div class="wrap-MarcoDocumento">
+                    <div id="divContenidoContrato" class="box-MarcoDocumento box-MardocumentoA4">
+                        @Html.Raw(Model.ContratoDocumento.Contenido)
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-5">
+            <div class="form-group">
+                <label for="chkFrmSolicitarModificacion">@FlujoAprobacionResource.EtiquetaSolicitarModificacion</label>
+                <div>
+                    @Html.CheckBox("chkFrmSolicitarModificacion", false, new { @id = "chkFrmSolicitarModificacion" })
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="txtFrmModificacionSolicitada">@FlujoAprobacionResource.EtiquetaDescripcionModificacionSolicitada</label>
+                @Html.TextArea("txtFrmModificacionSolicitada", null, new { @class = "form-control", @id = "txtFrmModificacionSolicitada", disabled = "disabled"})
+            </div>
+        </div>
+    </div>
+</form>
+<div class="comp-Modal-footer">
+    <button class="btn btn-default" id="btnFrmContratoVistaPreviaCancelar">@GenericoResource.BotonCancelar</button>
+    <button class="btn btn-default" id="btnFrmContratoVistaPreviaAnterior">@GenericoResource.BotonAnterior</button>
+    <button class="btn btn-primary" id="btnFrmContratoVistaPreviaGrabar">@GenericoResource.BotonGrabar</button>
+</div>

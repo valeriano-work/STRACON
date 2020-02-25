@@ -1,0 +1,25 @@
+﻿@using Pe.Stracon.SGC.Presentacion.Recursos.Base
+@using Pe.Stracon.SGC.Presentacion.Recursos.Contractual
+@model Pe.Stracon.SGC.Presentacion.Core.ViewModel.Contractual.ListadoContrato.ContratoParrafoTablaFormulario
+
+<script type="text/javascript">
+    ns('Pe.Stracon.SGC.Presentacion.Contractual.ListadoContrato.FormularioContratoParrafoTabla.Models')
+    Pe.Stracon.SGC.Presentacion.Contractual.ListadoContrato.FormularioContratoParrafoTabla.Models.FormularioContratoParrafoTabla = @Html.Raw(Json.Encode(Model))
+</script>
+
+@Html.Raw("<div id=\"divContenedorContratoParrafoTabla" + @Model.VariableCampo[0].CodigoVariable + "\">")
+    @Html.Raw("<form id=\"frmContratoParrafoTabla" + @Model.VariableCampo[0].CodigoVariable + "\">")
+                <div class="row">
+                    <div class="col-sm-12">
+                        @Html.Raw("<button id=\"btnAgregrarContratoParrafoTabla" + @Model.VariableCampo[0].CodigoVariable + "\" class=\"btn btn-default\" type=\"button\">" + @GenericoResource.BotonAñadir + "</button>")
+                        <hr />
+                    </div>
+                </div>
+                @Html.Raw("<div id=\"divGrdResultContratoParrafoTabla" + @Model.VariableCampo[0].CodigoVariable + "\">")
+                @Html.Raw("</div>")
+    @Html.Raw("</form>")
+    <div class="comp-Modal-footer">
+        @Html.Raw("<button class=\"btn btn-default\" id=\"btnCancelarContratoParrafoTabla" + @Model.VariableCampo[0].CodigoVariable + "\">" + @GenericoResource.BotonCancelar + "</button>")
+        @Html.Raw("<button class=\"btn btn-primary\" id=\"btnAceptarContratoParrafoTabla" + @Model.VariableCampo[0].CodigoVariable + "\">" + @GenericoResource.BotonAceptar + "</button>")
+    </div>
+@Html.Raw("</div>")

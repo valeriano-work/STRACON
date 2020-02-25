@@ -1,0 +1,51 @@
+﻿@using Pe.Stracon.SGC.Presentacion.Recursos.Contractual
+@using Pe.Stracon.SGC.Presentacion.Recursos.Base
+<div id="divContenedorContratoPrincipal">
+    <form id="frmBuscadorContratoPrincipal">
+        <div class="row">            
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="txtNombreContrato">@ListadoContratoResource.EtiquetaNumeroContrato</label>
+                    @Html.TextBox("txtNombreContrato", null, new { @class = "form-control", @id = "txtNombreContrato" })
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="txtDescripcionContrato">@ListadoContratoResource.EtiquetaDescripcion</label>
+                    @Html.TextBox("txtDescripcionContrato", null, new { @class = "form-control", @id = "txtDescripcionContrato" })
+                </div>
+            </div>            
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <button id="btnBuscarGrilla" class="btn btn-default" type="button">@GenericoResource.BotonMostrar</button>
+                    <hr />
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>@GenericoResource.EtiquetaResultadosBusqueda</h3>                 
+            </div>
+        </div>
+        <div id="divGrdResultContratoPrincipal">
+        </div>
+    </form>
+    <div class="comp-Modal-footer">
+        <button class="btn btn-default" id="btnCancelarCP">@GenericoResource.BotonCancelar</button>
+        <button class="btn btn-primary" id="btnAceptarCP">@GenericoResource.BotonAceptar</button>
+    </div>
+</div>
+<script type="text/javascript">
+    ns('Pe.Stracon.SGC.Presentacion.Contractual.BuscadorContratoPrincipal.Actions');
+    Pe.Stracon.SGC.Presentacion.Contractual.BuscadorContratoPrincipal.Actions.BuscarContratoP = '@Url.Action("ListarContratoPrincipal", "ListadoContrato", new { Area = "Base" })';
+
+    ns('Pe.Stracon.SGC.Presentacion.Contractual.BuscadorContratoPrincipal.Resource');
+    Pe.Stracon.SGC.Presentacion.Contractual.BuscadorContratoPrincipal.Resource.EtiquetaCPTitulo = '@Html.Raw(ListadoContratoResource.EtiquetaCPTitulo)';
+    Pe.Stracon.SGC.Presentacion.Contractual.BuscadorContratoPrincipal.Resource.EtiquetaCPGridNumeroCon = '@Html.Raw(ListadoContratoResource.EtiquetaCPGridNumeroCon)';
+    Pe.Stracon.SGC.Presentacion.Contractual.BuscadorContratoPrincipal.Resource.EtiquetaCPGridDescripCon = '@Html.Raw(ListadoContratoResource.EtiquetaCPGridDescripCon)';
+    Pe.Stracon.SGC.Presentacion.Contractual.BuscadorContratoPrincipal.Resource.EtiquetaCPGridProveedor = '@Html.Raw(ListadoContratoResource.EtiquetaCPGridProveedor)';
+</script>
+
+

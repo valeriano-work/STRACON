@@ -1,0 +1,89 @@
+﻿@using Pe.Stracon.SGC.Presentacion.Recursos.Base
+@using Pe.Stracon.SGC.Presentacion.Recursos.Contractual
+@using Pe.Stracon.SGC.Presentacion.Recursos.Mensajes
+@using Pe.Stracon.SGC.Presentacion.Core.Helpers
+@using Pe.Stracon.SGC.Aplicacion.Core.Message
+@model Pe.Stracon.SGC.Presentacion.Core.ViewModel.Contractual.ReporteBienesContrato.ReporteBienesContratoBusqueda
+
+@{
+    var dataReport = TempData["DataReport"];
+}
+
+<div class="GmdBody-header">
+    <h2>@ReporteBienesContratoResource.EtiquetaTitulo</h2>
+</div>
+<div class="GmdBody-body">
+    <form id="frmReporteBienesContrato">
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label for="slcUnidadOperativa">@ReporteBienesContratoResource.EtiquetaUnidadOperativa</label>
+                    @Html.DropDownList("CodigoUnidadOperativa", @Model.UnidadOperativa, new { @class = "form-control", @id = "slcUnidadOperativa", validable = "required ValidarUnidadOperativa" })
+                    @Html.TextBox("NombreUnidadOperativa", null, new { @class = "form-control hidden", @id = "hdnNombreUnidadOperativa" })
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label for="slcTipoBien">@ReporteBienesContratoResource.EtiquetaTipoBien</label>
+                    @Html.DropDownList("CodigoTipoBien", @Model.TipoBien, new { @class = "form-control", @id = "slcTipoBien", validable = "required ValidarTipoBien" })
+                    @Html.TextBox("DescripcionTipoBien", null, new { @class = "form-control hidden", @id = "hdnDescripcionTipoBien" })
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label for="txtRucProveedor">@ReporteBienesContratoResource.EtiquetaRucProveedor</label>
+                    @Html.TextBox("RucProveedor", null, new { @class = "form-control", @id = "txtRucProveedor" })
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label for="txtNombreProveedor">@ReporteBienesContratoResource.EtiquetaNombreProveedor</label>
+                    @Html.TextBox("NombreProveedor", null, new { @class = "form-control", @id = "txtNombreProveedor" })
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label for="txtNumeroContrato">@ReporteBienesContratoResource.EtiquetaNumeroContrato</label>
+                    @Html.TextBox("NumeroContrato", null, new { @class = "form-control", @id = "txtNumeroContrato" })
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label for="txtNumeroSerie">@ReporteBienesContratoResource.EtiquetaNumeroSerie</label>
+                    @Html.TextBox("NumeroSerie", null, new { @class = "form-control", @id = "txtNumeroSerie" })
+                </div>
+            </div>
+            @*INICIO: Agregado por Julio Carrera - Norma Contable*@
+            @*<div class="col-sm-2">
+                <div class="form-group">
+                    <label for="txtMes">Mes</label>
+                    <input name="Mes" class="form-control" type="number" id="txtMes" step="1" required min="1" max="12" value="1" />
+                    <input name="Ano" class="form-control" type="number" id="txtAno" step="1" required min="2000" max="2022" value="2019" />
+                    @Html.DropDownListFor(model => model.Mes, new SelectList(Model.lstMeses, "Value", "Text"), "--SELECCIONAR--", new { @class = "form-control", id = "slcFrmMes", @validable = "required ValidarTipoTarifa" })               
+                </div>
+            </div>*@
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label for="txtAno">Año</label>
+                    @Html.DropDownListFor(model => model.Ano, new SelectList(Model.lstAnos, "Value", "Text"), "(TODOS)", new { @class = "form-control", id = "slcFrmAno", @validable = "required ValidarTipoTarifa" })
+                </div>
+            </div>
+            @*FIN: Agregado por Julio Carrera - Norma Contable*@
+        </div>
+    </form>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="form-group">
+                <button class="btn btn-info" id="btnLimpiar" type="reset">@GenericoResource.BotonLimpiar</button>
+                <button class="btn btn-default" id="btnBuscar">@GenericoResource.BotonMostrar</button>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <div id="divContenedorReportView">
+        @Html.Partial("~/Areas/Base/Views/Reporte/ReportViewControl.ascx", dataReport)
+    </div>
+</div>
+

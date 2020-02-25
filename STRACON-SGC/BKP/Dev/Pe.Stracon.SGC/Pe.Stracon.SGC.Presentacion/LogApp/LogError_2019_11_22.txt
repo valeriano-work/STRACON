@@ -1,0 +1,90 @@
+FechaHora = 22/11/2019 15:36:26
+MensajeError = [Error]
+The sign-in name or password does not match one in the Microsoft account system.
+DetalleError = [Pila]
+   en Microsoft.SharePoint.Client.Idcrl.IdcrlAuth.GetServiceToken(String securityXml, String serviceTarget, String servicePolicy)
+   en Microsoft.SharePoint.Client.Idcrl.IdcrlAuth.GetServiceToken(String username, String password, String serviceTarget, String servicePolicy)
+   en Microsoft.SharePoint.Client.Idcrl.SharePointOnlineAuthenticationProvider.GetAuthenticationCookie(Uri url, String username, SecureString password, Boolean alwaysThrowOnFailure, EventHandler`1 executingWebRequest)
+   en Microsoft.SharePoint.Client.SharePointOnlineCredentials.GetAuthenticationCookie(Uri url, Boolean refresh, Boolean alwaysThrowOnFailure)
+   en Microsoft.SharePoint.Client.ClientRuntimeContext.SetupRequestCredential(ClientRuntimeContext context, HttpWebRequest request)
+   en Microsoft.SharePoint.Client.SPWebRequestExecutor.GetRequestStream()
+   en Microsoft.SharePoint.Client.ClientContext.GetWebRequestExecutor()
+   en Microsoft.SharePoint.Client.ClientContext.GetFormDigestInfoPrivate()
+   en Microsoft.SharePoint.Client.ClientContext.EnsureFormDigest()
+   en Microsoft.SharePoint.Client.ClientContext.ExecuteQuery()
+   en Pe.Stracon.SGC.Aplicacion.Service.Contractual.SharePointService.RegistrarLogErrores(String siteUrl, String opcion, String mensajeError) en D:\Modulos\Fuentes\STRACON-SGC\Dev\Pe.Stracon.SGC\Pe.Stracon.SGC.Aplicacion.Service\Contractual\SharePointService.cs:línea 380
+   en Pe.Stracon.SGC.Aplicacion.Service.Contractual.SharePointService.DescargaArchivoPorId(String& hayError, Int64 idItem, String listName) en D:\Modulos\Fuentes\STRACON-SGC\Dev\Pe.Stracon.SGC\Pe.Stracon.SGC.Aplicacion.Service\Contractual\SharePointService.cs:línea 127
+   en Pe.Stracon.SGC.Aplicacion.Service.Contractual.ContratoService.GenerarContenidoContrato(Guid codigoContrato, Nullable`1 codigoContratoEstadio, String& nombreArchivoContrato, String linkFileCss) en D:\Modulos\Fuentes\STRACON-SGC\Dev\Pe.Stracon.SGC\Pe.Stracon.SGC.Aplicacion.Service\Contractual\ContratoService.cs:línea 2436
+__________________________________________________
+FechaHora = 22/11/2019 15:40:57
+MensajeError = [Error]
+The sign-in name or password does not match one in the Microsoft account system.
+DetalleError = [Pila]
+   en Microsoft.SharePoint.Client.Idcrl.IdcrlAuth.GetServiceToken(String securityXml, String serviceTarget, String servicePolicy)
+   en Microsoft.SharePoint.Client.Idcrl.IdcrlAuth.GetServiceToken(String username, String password, String serviceTarget, String servicePolicy)
+   en Microsoft.SharePoint.Client.Idcrl.SharePointOnlineAuthenticationProvider.GetAuthenticationCookie(Uri url, String username, SecureString password, Boolean alwaysThrowOnFailure, EventHandler`1 executingWebRequest)
+   en Microsoft.SharePoint.Client.SharePointOnlineCredentials.GetAuthenticationCookie(Uri url, Boolean refresh, Boolean alwaysThrowOnFailure)
+   en Microsoft.SharePoint.Client.ClientRuntimeContext.SetupRequestCredential(ClientRuntimeContext context, HttpWebRequest request)
+   en Microsoft.SharePoint.Client.SPWebRequestExecutor.GetRequestStream()
+   en Microsoft.SharePoint.Client.ClientContext.GetWebRequestExecutor()
+   en Microsoft.SharePoint.Client.ClientContext.GetFormDigestInfoPrivate()
+   en Microsoft.SharePoint.Client.ClientContext.EnsureFormDigest()
+   en Microsoft.SharePoint.Client.ClientContext.ExecuteQuery()
+   en Pe.Stracon.SGC.Aplicacion.Service.Contractual.SharePointService.RegistrarLogErrores(String siteUrl, String opcion, String mensajeError) en D:\Modulos\Fuentes\STRACON-SGC\Dev\Pe.Stracon.SGC\Pe.Stracon.SGC.Aplicacion.Service\Contractual\SharePointService.cs:línea 380
+   en Pe.Stracon.SGC.Aplicacion.Service.Contractual.SharePointService.DescargaArchivoPorId(String& hayError, Int64 idItem, String listName) en D:\Modulos\Fuentes\STRACON-SGC\Dev\Pe.Stracon.SGC\Pe.Stracon.SGC.Aplicacion.Service\Contractual\SharePointService.cs:línea 127
+   en Pe.Stracon.SGC.Aplicacion.Service.Contractual.ContratoService.GenerarContenidoContrato(Guid codigoContrato, Nullable`1 codigoContratoEstadio, String& nombreArchivoContrato, String linkFileCss) en D:\Modulos\Fuentes\STRACON-SGC\Dev\Pe.Stracon.SGC\Pe.Stracon.SGC.Aplicacion.Service\Contractual\ContratoService.cs:línea 2436
+__________________________________________________
+FechaHora = 22/11/2019 15:43:05
+MensajeError = [Error]
+The sign-in name or password does not match one in the Microsoft account system.
+DetalleError = [Pila]
+   en Microsoft.SharePoint.Client.Idcrl.IdcrlAuth.GetServiceToken(String securityXml, String serviceTarget, String servicePolicy)
+   en Microsoft.SharePoint.Client.Idcrl.IdcrlAuth.GetServiceToken(String username, String password, String serviceTarget, String servicePolicy)
+   en Microsoft.SharePoint.Client.Idcrl.SharePointOnlineAuthenticationProvider.GetAuthenticationCookie(Uri url, String username, SecureString password, Boolean alwaysThrowOnFailure, EventHandler`1 executingWebRequest)
+   en Microsoft.SharePoint.Client.SharePointOnlineCredentials.GetAuthenticationCookie(Uri url, Boolean refresh, Boolean alwaysThrowOnFailure)
+   en Microsoft.SharePoint.Client.ClientRuntimeContext.SetupRequestCredential(ClientRuntimeContext context, HttpWebRequest request)
+   en Microsoft.SharePoint.Client.SPWebRequestExecutor.GetRequestStream()
+   en Microsoft.SharePoint.Client.ClientContext.GetWebRequestExecutor()
+   en Microsoft.SharePoint.Client.ClientContext.GetFormDigestInfoPrivate()
+   en Microsoft.SharePoint.Client.ClientContext.EnsureFormDigest()
+   en Microsoft.SharePoint.Client.ClientContext.ExecuteQuery()
+   en Pe.Stracon.SGC.Aplicacion.Service.Contractual.SharePointService.RegistrarLogErrores(String siteUrl, String opcion, String mensajeError) en D:\Modulos\Fuentes\STRACON-SGC\Dev\Pe.Stracon.SGC\Pe.Stracon.SGC.Aplicacion.Service\Contractual\SharePointService.cs:línea 380
+   en Pe.Stracon.SGC.Aplicacion.Service.Contractual.SharePointService.DescargaArchivoPorId(String& hayError, Int64 idItem, String listName) en D:\Modulos\Fuentes\STRACON-SGC\Dev\Pe.Stracon.SGC\Pe.Stracon.SGC.Aplicacion.Service\Contractual\SharePointService.cs:línea 127
+   en Pe.Stracon.SGC.Aplicacion.Service.Contractual.ContratoService.GenerarContenidoContrato(Guid codigoContrato, Nullable`1 codigoContratoEstadio, String& nombreArchivoContrato, String linkFileCss) en D:\Modulos\Fuentes\STRACON-SGC\Dev\Pe.Stracon.SGC\Pe.Stracon.SGC.Aplicacion.Service\Contractual\ContratoService.cs:línea 2436
+__________________________________________________
+FechaHora = 22/11/2019 15:47:01
+MensajeError = [Error]
+The sign-in name or password does not match one in the Microsoft account system.
+DetalleError = [Pila]
+   en Microsoft.SharePoint.Client.Idcrl.IdcrlAuth.GetServiceToken(String securityXml, String serviceTarget, String servicePolicy)
+   en Microsoft.SharePoint.Client.Idcrl.IdcrlAuth.GetServiceToken(String username, String password, String serviceTarget, String servicePolicy)
+   en Microsoft.SharePoint.Client.Idcrl.SharePointOnlineAuthenticationProvider.GetAuthenticationCookie(Uri url, String username, SecureString password, Boolean alwaysThrowOnFailure, EventHandler`1 executingWebRequest)
+   en Microsoft.SharePoint.Client.SharePointOnlineCredentials.GetAuthenticationCookie(Uri url, Boolean refresh, Boolean alwaysThrowOnFailure)
+   en Microsoft.SharePoint.Client.ClientRuntimeContext.SetupRequestCredential(ClientRuntimeContext context, HttpWebRequest request)
+   en Microsoft.SharePoint.Client.SPWebRequestExecutor.GetRequestStream()
+   en Microsoft.SharePoint.Client.ClientContext.GetWebRequestExecutor()
+   en Microsoft.SharePoint.Client.ClientContext.GetFormDigestInfoPrivate()
+   en Microsoft.SharePoint.Client.ClientContext.EnsureFormDigest()
+   en Microsoft.SharePoint.Client.ClientContext.ExecuteQuery()
+   en Pe.Stracon.SGC.Aplicacion.Service.Contractual.SharePointService.RegistrarLogErrores(String siteUrl, String opcion, String mensajeError) en D:\Modulos\Fuentes\STRACON-SGC\Dev\Pe.Stracon.SGC\Pe.Stracon.SGC.Aplicacion.Service\Contractual\SharePointService.cs:línea 380
+   en Pe.Stracon.SGC.Aplicacion.Service.Contractual.SharePointService.DescargaArchivoPorId(String& hayError, Int64 idItem, String listName) en D:\Modulos\Fuentes\STRACON-SGC\Dev\Pe.Stracon.SGC\Pe.Stracon.SGC.Aplicacion.Service\Contractual\SharePointService.cs:línea 127
+   en Pe.Stracon.SGC.Aplicacion.Service.Contractual.ContratoService.GenerarContenidoContrato(Guid codigoContrato, Nullable`1 codigoContratoEstadio, String& nombreArchivoContrato, String linkFileCss) en D:\Modulos\Fuentes\STRACON-SGC\Dev\Pe.Stracon.SGC\Pe.Stracon.SGC.Aplicacion.Service\Contractual\ContratoService.cs:línea 2436
+__________________________________________________
+FechaHora = 22/11/2019 17:30:08
+MensajeError = [Error]
+El valor no puede ser nulo.
+Nombre del parámetro: html
+DetalleError = [Pila]
+   en HtmlAgilityPack.HtmlDocument.LoadHtml(String html) en d:\Source\htmlagilitypack.new\Trunk\HtmlAgilityPack\HtmlDocument.cs:línea 656
+   en Pe.Stracon.SGC.Aplicacion.Service.Contractual.ContratoService.GenerarContratoLocal(Guid codigoContrato, ContratoEntity objContrato, String contenido_, String linkFileCss) en D:\Modulos\Fuentes\STRACON-SGC\Dev\Pe.Stracon.SGC\Pe.Stracon.SGC.Aplicacion.Service\Contractual\ContratoService.cs:línea 2523
+   en Pe.Stracon.SGC.Aplicacion.Service.Contractual.ContratoService.GenerarContenidoContrato(Guid codigoContrato, Nullable`1 codigoContratoEstadio, String& nombreArchivoContrato, String linkFileCss) en D:\Modulos\Fuentes\STRACON-SGC\Dev\Pe.Stracon.SGC\Pe.Stracon.SGC.Aplicacion.Service\Contractual\ContratoService.cs:línea 2440
+__________________________________________________
+FechaHora = 22/11/2019 17:33:23
+MensajeError = [Error]
+El valor no puede ser nulo.
+Nombre del parámetro: html
+DetalleError = [Pila]
+   en HtmlAgilityPack.HtmlDocument.LoadHtml(String html) en d:\Source\htmlagilitypack.new\Trunk\HtmlAgilityPack\HtmlDocument.cs:línea 656
+   en Pe.Stracon.SGC.Aplicacion.Service.Contractual.ContratoService.GenerarContratoLocal(Guid codigoContrato, ContratoEntity objContrato, String contenido_, String linkFileCss) en D:\Modulos\Fuentes\STRACON-SGC\Dev\Pe.Stracon.SGC\Pe.Stracon.SGC.Aplicacion.Service\Contractual\ContratoService.cs:línea 2523
+   en Pe.Stracon.SGC.Aplicacion.Service.Contractual.ContratoService.GenerarContenidoContrato(Guid codigoContrato, Nullable`1 codigoContratoEstadio, String& nombreArchivoContrato, String linkFileCss) en D:\Modulos\Fuentes\STRACON-SGC\Dev\Pe.Stracon.SGC\Pe.Stracon.SGC.Aplicacion.Service\Contractual\ContratoService.cs:línea 2440
+__________________________________________________

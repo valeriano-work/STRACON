@@ -1,0 +1,10 @@
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.Stracon.Politicas\Pe.Stracon.Politicas.Infraestructura.CommandModel\bin\Release\Pe.Stracon.Politicas.Infraestructura.CommandModel.dll.config
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.Stracon.Politicas\Pe.Stracon.Politicas.Infraestructura.CommandModel\bin\Release\Pe.Stracon.Politicas.Infraestructura.CommandModel.dll
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.Stracon.Politicas\Pe.Stracon.Politicas.Infraestructura.CommandModel\bin\Release\Pe.Stracon.Politicas.Infraestructura.CommandModel.pdb
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.Stracon.Politicas\Pe.Stracon.Politicas.Infraestructura.CommandModel\bin\Release\EntityFramework.dll
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.Stracon.Politicas\Pe.Stracon.Politicas.Infraestructura.CommandModel\bin\Release\EntityFramework.SqlServer.dll
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.Stracon.Politicas\Pe.Stracon.Politicas.Infraestructura.CommandModel\obj\Release\Pe.Stracon.Politicas.Infraestructura.CommandModel.csprojAssemblyReference.cache
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.Stracon.Politicas\Pe.Stracon.Politicas.Infraestructura.CommandModel\obj\Release\Pe.Stracon.Politicas.Infraestructura.CommandModel.csproj.CoreCompileInputs.cache
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.Stracon.Politicas\Pe.Stracon.Politicas.Infraestructura.CommandModel\obj\Release\Pe.Stracon.Politicas.Infraestructura.CommandModel.csproj.CopyComplete
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.Stracon.Politicas\Pe.Stracon.Politicas.Infraestructura.CommandModel\obj\Release\Pe.Stracon.Politicas.Infraestructura.CommandModel.dll
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.Stracon.Politicas\Pe.Stracon.Politicas.Infraestructura.CommandModel\obj\Release\Pe.Stracon.Politicas.Infraestructura.CommandModel.pdb

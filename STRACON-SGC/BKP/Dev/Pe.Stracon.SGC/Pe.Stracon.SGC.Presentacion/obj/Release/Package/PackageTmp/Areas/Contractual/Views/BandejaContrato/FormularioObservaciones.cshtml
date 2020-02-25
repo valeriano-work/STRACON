@@ -1,0 +1,76 @@
+﻿@using Pe.Stracon.SGC.Presentacion.Core.Helpers
+@using Pe.Stracon.SGC.Presentacion.Recursos.Base
+@using Pe.Stracon.SGC.Presentacion.Recursos.Contractual
+@model Pe.Stracon.SGC.Presentacion.Core.ViewModel.Contractual.BandejaContrato.ObservacionesFormulario
+<script type="text/javascript">
+    ns('Pe.Stracon.SGC.Presentacion.Contractual.BandejaContrato.Models');
+    Pe.Stracon.SGC.Presentacion.Contractual.BandejaContrato.Models.FormularioObservaciones = @(Html.Raw(Json.Encode(Model)));
+</script>
+<div class="row">
+    <div class="col-sm-12">
+        <div class="form-group">
+            <label for="txtObservacion">@BandejaContratoResource.EtiquetaObservacion</label>
+            @Html.TextArea("txtObservacion", null, new { @class = "form-control", @id = "txtObservacion" })
+        </div>
+    </div>
+</div>
+@if(Model.Contrato.IndicadorAdhesion == true)
+{
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="form-group">
+                <label>@BandejaContratoResource.EtiquetaReemplazarContrato</label>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="form-group">
+                <div class="col-sm-9">
+                    <input id="uploadFile" type="text" class="form-control" placeholder="Buscar Archivo ..." readonly="readonly"/>
+                </div>
+                <div>
+                    <div id="fileInput" class="fileUpload btn btn-primary">
+                        <span>@GenericoResource.BotonSeleccionar</span>
+                        <input type="file" name="MyFile" id="MyFile" class="upload" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}else
+{
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="form-group">
+                <label>@BandejaContratoResource.EtiquetaContrato</label>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        @*<div class="col-sm-6">
+            <div class="form-group">
+                <div id="divGrdParrafos" style="max-height: 140px; overflow-y:auto; overflow-x:hidden;">
+                </div>
+            </div>
+        </div>*@
+        <div class="col-sm-12">
+            <div class="form-group">
+                <div id="divContenidoContrato" class="box-ParrafosObservacion" style="max-height: 140px; overflow:auto;">
+                    @(Html.Raw(Model.ContratoDocumento.Contenido))
+                </div>            
+            </div>
+        </div>
+    </div>    
+}
+<div class="row">
+    <div class="col-sm-12">
+        <label>@BandejaContratoResource.EtiquetaEnviarA</label>
+        <div id="divGrdEtapasContrato" >
+        </div>
+    </div>
+</div>
+<div class="comp-Modal-footer">
+    <button class="btn btn-default" id="btnFrmObservacionesCancelar">@GenericoResource.BotonCancelar</button>
+    <button class="btn btn-primary" id="btnFrmObservacionesGrabar">@GenericoResource.BotonGrabar</button>
+</div>

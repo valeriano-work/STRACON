@@ -1,0 +1,104 @@
+﻿@using Pe.Stracon.SGC.Presentacion.Recursos.Base
+@using Pe.Stracon.SGC.Presentacion.Recursos.Contractual
+@using Pe.Stracon.SGC.Presentacion.Core.Helpers
+@model Pe.Stracon.SGC.Presentacion.Core.ViewModel.Contractual.Consulta.ConsultaFormulario
+
+<script type="text/javascript">
+    ns('Pe.Stracon.SGC.Presentacion.Core.ViewModel.Contractual.Consulta.FormularioConsulta.Model')
+    Pe.Stracon.SGC.Presentacion.Core.ViewModel.Contractual.Consulta.FormularioConsulta.Model.ListaDestinatario = @(Html.Raw(Json.Encode(Model.Consulta.ListaDestinatario)));
+    Pe.Stracon.SGC.Presentacion.Core.ViewModel.Contractual.Consulta.FormularioConsulta.Model.Modelo = @(Html.Raw(Json.Encode(Model)));
+</script>
+
+<form id="frmConsulta" onsubmit="return false;">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="txtDestinatario">@BandejaContratoResource.EtiquetaDestinatario</label>
+                @if (Model.IndicadorStaff == true)
+                {
+                    @Html.TextBox("txtDestinatarioFormulario", null, new { @class = "form-control", @id = "txtDestinatarioFormulario", @validable = "required ValidarDestinatario" })
+                }
+                else
+                {
+                    @Html.DropDownList("slcFrmDestinatario", Model.ListaStaff, new { @class = "form-control", @id = "slcFrmDestinatario", @validable = "required ValidarDestinatario" })
+                }
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="slcFrmTipoConsulta">@BandejaContratoResource.EtiquetaTipoConsulta</label>
+                @Html.DropDownList("slcFrmTipoConsulta", Model.ListadoTipo, new { @class = "form-control", @id = "slcFrmTipoConsulta", @validable = "required ValidarTipoConsulta" })
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="slcFrmUnidadOperativaFormularioConsulta">@ConsultaResource.EtiquetaUnidadOperativa</label>
+                @Html.DropDownList("slcFrmUnidadOperativaFormularioConsulta", Model.ListadoUnidadOperativa, new { @class = "form-control", @id = "slcFrmUnidadOperativaFormularioConsulta" })
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="slcFrmAreaFormularioConsulta">@ConsultaResource.EtiquetaArea</label>
+                @Html.DropDownList("slcFrmAreaFormularioConsulta", Model.ListaArea, new { @class = "form-control", @id = "slcFrmAreaFormularioConsulta" })
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="form-group">
+                <label for="txtAsunto">@ConsultaResource.GridAsunto</label>
+                @Html.TextArea("txtAsunto", null, new { @class = "form-control", @id = "txtAsunto", @validable = "required ValidarAsunto" })
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="form-group">
+                <label for="txtContenido">@ConsultaResource.EtiquetaContenido</label>
+                @Html.TextArea("txtContenido", null, new { @class = "form-control", @id = "txtContenido", @validable = "required ValidarContenido" })
+            </div>
+        </div>
+    </div>
+    <label><b>@GenericoResource.TituloAdjuntos</b></label>
+    <div class="row">
+        <div class="col-sm-8">
+            <input id="uploadFileConsulta" type="text" class="form-control" placeholder="Buscar Archivo ..." readonly="readonly" />
+        </div>
+        <div class="col-sm-4">
+            <div id="fileInput" class="fileUpload btn btn-primary">
+                <span>@GenericoResource.BotonSeleccionar</span>
+                <input type="file" name="MyFileConsulta" id="MyFileConsulta" class="upload" />
+            </div>
+            <button id="btnAceptarCargaAdjuntoConsulta" class="btn btn-default">@GenericoResource.BotonAceptar</button>
+        </div>
+    </div>
+    <hr />
+
+    <div class="row">
+        <div class="col-sm-12">
+            <table id="tblAdjuntos" class="table table-striped table-bordered table-hover text-center text-middle" cellspacing="0" width="100%">
+                <thead>
+                    <tr>
+                        <th>@ArchivoAdjuntoContratoResource.EtiquetaNombreArchivo</th>
+                        <th>@GenericoResource.GridAcciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="hidden" data-bloqueo="1">
+                        <td data-columna="1"></td>
+                        <td data-columna="2" data-numeroFile="">
+                          <a class="control-table btn btnDelete"><i class="fa fa-trash"></i></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</form>
+<div class="comp-Modal-footer">
+    <button class="btn btn-default" id="btnFrmCancelarConsulta">@GenericoResource.BotonCancelar</button>
+    <button class="btn btn-primary" id="btnFrmGrabarConsulta">@GenericoResource.BotonGrabar</button>
+</div>

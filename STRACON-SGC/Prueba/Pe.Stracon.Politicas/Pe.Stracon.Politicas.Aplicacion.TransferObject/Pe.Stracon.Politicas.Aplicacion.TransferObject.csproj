@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3B488D54-5850-425E-B187-0A232AFA02CC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Pe.Stracon.Politicas.Aplicacion.TransferObject</RootNamespace>
+    <AssemblyName>Pe.Stracon.Politicas.Aplicacion.TransferObject</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Pe.Stracon.Politicas.Aplicacion.TransferObject.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'STRACON_QA|AnyCPU'">
+    <OutputPath>bin\STRACON_QA\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'sgcRelease|AnyCPU'">
+    <OutputPath>bin\sgcRelease\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'sccRelease|AnyCPU'">
+    <OutputPath>bin\sccRelease\</OutputPath>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\Filtro.cs" />
+    <Compile Include="Base\Paginado.cs" />
+    <Compile Include="Base\ValidateModel.cs" />
+    <Compile Include="Request\General\DataUnidadOperativaUsuarioConsultaRequest.cs" />
+    <Compile Include="Request\General\DataUnidadOperativaStaffRequest.cs" />
+    <Compile Include="Request\General\ParametroRequest.cs" />
+    <Compile Include="Request\General\DataUnidadOperativaRequest.cs" />
+    <Compile Include="Request\General\ParametroSeccionRequest.cs" />
+    <Compile Include="Request\General\FiltroTrabajador.cs" />
+    <Compile Include="Request\General\ParametroValorRequest.cs" />
+    <Compile Include="Request\General\PlantillaNotificacionRequest.cs" />
+    <Compile Include="Request\General\TrabajadorRequest.cs" />
+    <Compile Include="Request\General\FiltroUnidadOperativa.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Request\General\TrabajadorSuplenteRequest.cs" />
+    <Compile Include="Request\General\TrabajadorUnidadOperativaRequest.cs" />
+    <Compile Include="Response\General\CodigoValorResponse.cs" />
+    <Compile Include="Response\General\ParametroResponse.cs" />
+    <Compile Include="Response\General\ParametroSeccionResponse.cs" />
+    <Compile Include="Response\General\ParametroValorResponse.cs" />
+    <Compile Include="Response\General\PlantillaNotificacionResponse.cs" />
+    <Compile Include="Response\General\ResultResponse.cs" />
+    <Compile Include="Response\General\TrabajadorDatoMinimoResponse.cs" />
+    <Compile Include="Response\General\TrabajadorResponse.cs" />
+    <Compile Include="Response\General\TrabajadorSuplenteResponse.cs" />
+    <Compile Include="Response\General\TrabajadorUnidadOperativaResponse.cs" />
+    <Compile Include="Response\General\UnidadOperativaUsuarioConsultaResponse.cs" />
+    <Compile Include="Response\General\UnidadOperativaResponse.cs" />
+    <Compile Include="Response\General\UnidadOperativaStaffResponse.cs" />
+    <Compile Include="Response\General\UnidadOperativaNivelResponse.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Pe.Stracon.Politicas.Infraestructura.Core\Pe.Stracon.Politicas.Infraestructura.Core.csproj">
+      <Project>{03570580-69a0-4b8a-bccf-7e1bf8942168}</Project>
+      <Name>Pe.Stracon.Politicas.Infraestructura.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

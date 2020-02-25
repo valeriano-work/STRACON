@@ -1,0 +1,91 @@
+﻿@using Pe.Stracon.Politicas.Presentacion.Recursos.Base
+@using Pe.Stracon.Politicas.Presentacion.Recursos.General
+@using Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes
+@using Pe.Stracon.Politicas.Presentacion.Core.Helpers
+
+@model Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.PlantillaNotificacion.PlantillaNotificacionModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+@{
+    var disabled = (Model.ControlPermisos.ControlTotal || Model.ControlPermisos.Escritura) ? false : true;
+    var disabledEliminar = (Model.ControlPermisos.ControlTotal) ? false : true;
+}
+
+
+<div class="GmdBody-header">
+    <h2>@PlantillaNotificacionResource.EtiquetaTitulo</h2>
+</div>
+<div class="GmdBody-body">
+    <form id="frmBandejaPlantillaNotificacion">
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label for="txtAsunto"> @PlantillaNotificacionResource.EtiquetaAsunto</label>
+                    @Html.TextBox("txtAsunto", null, new { @class = "form-control", @id = "txtAsunto" })
+                </div>
+            </div>
+            <div class="col-sm-3 hidden">
+                <div class="form-group">
+                    <label for="chkPlantillaActiva">@PlantillaNotificacionResource.EtiquetaPlantillaActiva</label>
+                    @Html.DropDownList("slcPlantillaActiva", Model.ListaIndicadorActiva, new { id = "slcPlantillaActiva", @class = "form-control" })
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="form-group">
+                <button class="btn btn-info" id="btnLimpiar" type="reset">@GenericoResource.BotonLimpiar</button>
+                <button class="btn btn-default" id="btnBuscar">@GenericoResource.BotonMostrar</button>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <div class="row">
+        <div class="col-sm-6 text-left">
+            <div class="form-group">
+                <h3>@GenericoResource.EtiquetaResultadosBusqueda</h3>
+            </div>
+        </div>
+    </div>
+    <div id="divGrdResult">
+    </div>
+</div>
+
+@section scripts
+{
+    <script type="text/javascript">
+        ns('Pe.Stracon.Politicas.Presentacion.General.PlantillaNotificacion.Actions')
+        Pe.Stracon.Politicas.Presentacion.General.PlantillaNotificacion.Actions.BuscarBandejaPlantillaNotificacion = '@Url.Action("BuscarBandejaPlantillaNotificacion", "PlantillaNotificacion", new { Area = "General" })';
+        Pe.Stracon.Politicas.Presentacion.General.PlantillaNotificacion.Actions.RegistraPlantillaNotificacion      = '@Url.Action("RegistraPlantillaNotificacion", "PlantillaNotificacion", new { Area = "General" })';
+        Pe.Stracon.Politicas.Presentacion.General.PlantillaNotificacion.Actions.EliminarPlantillaNotificacion = '@Url.Action("EliminarPlantillaNotificacion", "PlantillaNotificacion", new { Area = "General" })';
+        Pe.Stracon.Politicas.Presentacion.General.PlantillaNotificacion.Actions.FormularioPlantillaNotificacion = '@Url.Action("FormularioPlantillaNotificacion", "PlantillaNotificacion", new { Area = "General" })';
+
+        ns('Pe.Stracon.Politicas.Presentacion.General.PlantillaNotificacion.Resources')
+            
+        Pe.Stracon.Politicas.Presentacion.General.PlantillaNotificacion.Resources.GridAsunto = '@Html.Raw(PlantillaNotificacionResource.GridAsunto)';
+        Pe.Stracon.Politicas.Presentacion.General.PlantillaNotificacion.Resources.GridContenido = '@Html.Raw(PlantillaNotificacionResource.GridContenido)';
+        Pe.Stracon.Politicas.Presentacion.General.PlantillaNotificacion.Resources.GridPlantillaActiva = '@Html.Raw(PlantillaNotificacionResource.GridPlantillaActiva)';
+        Pe.Stracon.Politicas.Presentacion.General.PlantillaNotificacion.Resources.GridDestinatario = '@Html.Raw(PlantillaNotificacionResource.GridDestinatario)';
+        Pe.Stracon.Politicas.Presentacion.General.PlantillaNotificacion.Resources.GridDestinatarioCopia = '@Html.Raw(PlantillaNotificacionResource.GridDestinatarioCopia)';
+
+
+        ns('Pe.Stracon.Politicas.Presentacion.Recursos.Validacion')
+        Pe.Stracon.Politicas.Presentacion.Recursos.Validacion.ConfirmacionGuardar = '@Html.Raw(MensajeResource.ConfirmacionGuardar)';
+        Pe.Stracon.Politicas.Presentacion.Recursos.Validacion.EtiquetaConfirmacion = '@MensajeResource.SeGuardoInformacionExito';
+        Pe.Stracon.Politicas.Presentacion.Recursos.Validacion.ConfirmacionEliminacion = '@MensajeResource.ConfirmacionEliminacion';
+        Pe.Stracon.Politicas.Presentacion.Recursos.Validacion.EtiquetaTituloAdvertencia = '@Html.Raw(MensajeResource.EtiquetaTituloAdvertencia)';
+        Pe.Stracon.Politicas.Presentacion.Recursos.Validacion.EtiquetaTituloConfirmar = '@Html.Raw(GenericoResource.EtiquetaTituloConfirmar)';
+        Pe.Stracon.Politicas.Presentacion.Recursos.Validacion.SeleccionarRegistroEliminar = '@Html.Raw(MensajeResource.SeleccionarRegistroEliminar)';
+        Pe.Stracon.Politicas.Presentacion.Recursos.Validacion.MsgEliminacionList = '@Html.Raw(MensajeResource.MsgEliminacionList)';
+        Pe.Stracon.Politicas.Presentacion.Recursos.Validacion.EtiquetaEliminacionExitosa = '@Html.Raw(MensajeResource.SeEliminoInformacionExito)';
+
+        ns('Pe.Stracon.Politicas.Presentacion.General.PlantillaNotificacion.Models')
+        Pe.Stracon.Politicas.Presentacion.General.PlantillaNotificacion.Models.Index = @(Html.Raw(Json.Encode(Model)));
+    </script>
+    @CustomHtmlHelper.RenderViewJs("generalplantillanotificacionformularioplantillanotificacion")
+}

@@ -1,0 +1,159 @@
+﻿@using Pe.Stracon.Politicas.Presentacion.Recursos.Base
+@using Pe.Stracon.Politicas.Presentacion.Recursos.General
+@using Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes
+@using Pe.Stracon.Politicas.Presentacion.Core.Helpers
+@using Pe.Stracon.Politicas.Infraestructura.Core.Context
+@model Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.UnidadOperativa.UnidadOperativaBusqueda
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+@{
+    var disabled = (Model.ControlPermisos.ControlTotal || Model.ControlPermisos.Escritura) ? false : true;
+    var disabledEliminar = (Model.ControlPermisos.ControlTotal) ? false : true;    
+}
+
+@if (Model.EsScc)
+{
+ <input type="hidden" id="hdfEsScc" value="true" />
+}else{
+  <input type="hidden" id="hdfEsScc" value="false" />  
+}
+
+<div class="GmdBody-header">
+    <h2>@UnidadOperativaResource.EtiquetaTituloPrincipal</h2>
+</div>
+<div class="GmdBody-body">
+    <input id="hdnTipo" value ="@Model.Tipo" class="form-control" type="hidden" />
+    <form id="frmUnidadOperativaBusqueda">
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label>
+                        @UnidadOperativaResource.EtiquetaNombre
+                    </label>
+                    <input id="txtNombre" class="form-control" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label>
+                        @UnidadOperativaResource.EtiquetaNivel
+                    </label>
+                    @Html.DropDownList("slcNivel", Model.Niveles, new { id = "slcNivel", @class = "form-control" })
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label>
+                        @UnidadOperativaResource.EtiquetaUnidadSuperior
+                    </label>
+                    @Html.DropDownList("slcUnidadSuperior", Model.UnidadesOperativasPadre, new { id = "slcUnidadSuperior", @class = "form-control" })
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label>
+                        @UnidadOperativaResource.EtiquetaEstado
+                    </label>
+                    @Html.DropDownList("slcEstado", Model.Estado, new { id = "slcEstado", @class = "form-control" })
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <button id="btnLimpiar" class="btn btn-info" type="reset">@GenericoResource.BotonLimpiar</button>
+                <button id="btnBuscar" class="btn btn-default" type="button">@GenericoResource.BotonMostrar</button>
+                <hr />
+            </div>
+        </div>
+    </form>
+    <div class="row">
+        <div class="col-sm-6">
+            <h3>@GenericoResource.EtiquetaResultadosBusqueda</h3>
+        </div>
+        <div class="col-sm-6 text-right">
+            @if (!disabledEliminar)
+            {
+                <button id="btnEliminar" class="btn btn-info">@GenericoResource.BotonEliminar</button>
+            }
+            @if (!disabled)
+            {                
+                <button id="btnAgregar" class="btn btn-primary">@GenericoResource.BotonAñadir</button>
+            }
+        </div>
+    </div>
+    <div id="divGrdResult">
+    </div>
+</div>
+
+@section scripts
+{
+    <script type="text/javascript">
+        ns('Pe.Stracon.Politicas.Presentacion.General.UnidadOperativa.Actions')
+        Pe.Stracon.Politicas.Presentacion.General.UnidadOperativa.Actions.BuscarUnidadOperativa = '@Url.Action("Buscar", "UnidadOperativa", new { Area = "General" })';
+        Pe.Stracon.Politicas.Presentacion.General.UnidadOperativa.Actions.FormularioUnidadOperativa = '@Url.Action("FormularioUnidadOperativa", "UnidadOperativa", new { Area = "General" })';
+        Pe.Stracon.Politicas.Presentacion.General.UnidadOperativa.Actions.BuscarNivelSuperior = '@Url.Action("BuscarNivelSuperior", "UnidadOperativa", new { Area = "General" })';
+        Pe.Stracon.Politicas.Presentacion.General.UnidadOperativa.Actions.BuscarTipoUnidadOperativa = '@Url.Action("BuscarTipoUnidadOperativa", "UnidadOperativa", new { Area = "General" })';
+        Pe.Stracon.Politicas.Presentacion.General.UnidadOperativa.Actions.Registrar = '@Url.Action("Registrar", "UnidadOperativa", new { Area = "General" })';
+        Pe.Stracon.Politicas.Presentacion.General.UnidadOperativa.Actions.Eliminar = '@Url.Action("EliminarUnidadOperativa", "UnidadOperativa", new { Area = "General" })';
+        Pe.Stracon.Politicas.Presentacion.General.UnidadOperativa.Actions.EliminarUnidadOperativaStaff = '@Url.Action("EliminarUnidadOperativaStaff", "UnidadOperativa", new { Area = "General" })';
+
+        Pe.Stracon.Politicas.Presentacion.General.UnidadOperativa.Actions.FormularioUnidadOperativaStaff = '@Url.Action("FormularioUnidadOperativaStaff", "UnidadOperativa", new { Area = "General" })';
+        Pe.Stracon.Politicas.Presentacion.General.UnidadOperativa.Actions.BuscarUnidadOperativaStaff = '@Url.Action("BuscarUnidadOperativaStaff", "UnidadOperativa", new { Area = "General" })';
+        Pe.Stracon.Politicas.Presentacion.General.UnidadOperativa.Actions.RegistrarStaff = '@Url.Action("RegistrarStaff", "UnidadOperativa", new { Area = "General" })';
+        Pe.Stracon.Politicas.Presentacion.General.UnidadOperativa.Actions.BuscarTrabajador = '@Url.Action("BuscarTrabajador", "UnidadOperativa", new { Area = "General" })';
+
+        Pe.Stracon.Politicas.Presentacion.General.UnidadOperativa.Actions.FormularioAsignarResponsable = '@Url.Action("FormularioAsignarResponsable", "UnidadOperativa", new { Area = "General" })';
+        Pe.Stracon.Politicas.Presentacion.General.UnidadOperativa.Actions.RegistrarUsuarioConsultaUnidadOperativa = '@Url.Action("RegistrarUsuarioConsultaUnidadOperativa", "UnidadOperativa", new { Area = "General" })';
+        Pe.Stracon.Politicas.Presentacion.General.UnidadOperativa.Actions.EliminarUsuarioConsultaUnidadOperativa = '@Url.Action("EliminarUsuarioConsultaUnidadOperativa", "UnidadOperativa", new { Area = "General" })';
+        Pe.Stracon.Politicas.Presentacion.General.UnidadOperativa.Actions.BuscarUsuariosConsultaUnidadOperativa = '@Url.Action("BuscarUsuariosConsultaUnidadOperativa", "UnidadOperativa", new { Area = "General" })';
+
+        ns('Pe.Stracon.Politicas.Presentacion.General.UnidadOperativa.DatosConstantes')
+        Pe.Stracon.Politicas.Presentacion.General.UnidadOperativa.DatosConstantes.VisualizacionResponsable = '@Html.Raw(DatosConstantes.TipoVisualizacionUnidadOperativa.Responsable)';
+        Pe.Stracon.Politicas.Presentacion.General.UnidadOperativa.DatosConstantes.VisualizacionRepresentanteDireccion = '@Html.Raw(DatosConstantes.TipoVisualizacionUnidadOperativa.RepresentanteDireccion)';
+
+        ns('Pe.Stracon.Politicas.Presentacion.General.UnidadOperativaResource')
+        Pe.Stracon.Politicas.Presentacion.General.UnidadOperativaResource.GridCodigoIdentificacion = '@Html.Raw(UnidadOperativaResource.GridCodigoIdentificacion)';
+        Pe.Stracon.Politicas.Presentacion.General.UnidadOperativaResource.GridNombre = '@Html.Raw(UnidadOperativaResource.GridNombre)';
+        Pe.Stracon.Politicas.Presentacion.General.UnidadOperativaResource.GridNivel = '@Html.Raw(UnidadOperativaResource.GridNivel)';
+        Pe.Stracon.Politicas.Presentacion.General.UnidadOperativaResource.GridUnidadSuperior = '@Html.Raw(UnidadOperativaResource.GridUnidadSuperior)';
+        Pe.Stracon.Politicas.Presentacion.General.UnidadOperativaResource.GridTipo = '@Html.Raw(UnidadOperativaResource.GridTipo)';
+        Pe.Stracon.Politicas.Presentacion.General.UnidadOperativaResource.GridActiva = '@Html.Raw(UnidadOperativaResource.GridActiva)';
+        Pe.Stracon.Politicas.Presentacion.General.UnidadOperativaResource.GridResponsable = '@Html.Raw(UnidadOperativaResource.GridResponsable)';
+        Pe.Stracon.Politicas.Presentacion.General.UnidadOperativaResource.GridPrimerRepresentante = '@Html.Raw(UnidadOperativaResource.GridPrimerRepresentante)';
+        Pe.Stracon.Politicas.Presentacion.General.UnidadOperativaResource.GridSegundoRepresentante = '@Html.Raw(UnidadOperativaResource.GridSegundoRepresentante)';
+        Pe.Stracon.Politicas.Presentacion.General.UnidadOperativaResource.GridTercerRepresentante = '@Html.Raw(UnidadOperativaResource.GridTercerRepresentante)';
+        Pe.Stracon.Politicas.Presentacion.General.UnidadOperativaResource.GridCuartoRepresentante = '@Html.Raw(UnidadOperativaResource.GridCuartoRepresentante)';
+        Pe.Stracon.Politicas.Presentacion.General.UnidadOperativaResource.GridDireccion = '@Html.Raw(UnidadOperativaResource.GridDireccion)';
+
+        Pe.Stracon.Politicas.Presentacion.General.UnidadOperativaResource.EtiquetaTituloFormulario = '@Html.Raw(UnidadOperativaResource.EtiquetaTituloFormulario)';
+        Pe.Stracon.Politicas.Presentacion.General.UnidadOperativaResource.EtiquetaTituloConfirmar = '@Html.Raw(GenericoResource.EtiquetaTituloConfirmar)';
+        Pe.Stracon.Politicas.Presentacion.General.UnidadOperativaResource.EtiquetaTituloFormularioStaff = '@Html.Raw(UnidadOperativaResource.EtiquetaTituloFormularioStaff)';
+        Pe.Stracon.Politicas.Presentacion.General.UnidadOperativaResource.EtiquetaTituloAsignarResponsable = '@Html.Raw(UnidadOperativaResource.EtiquetaTituloAsignarResponsable)';
+
+        Pe.Stracon.Politicas.Presentacion.General.UnidadOperativaResource.GridUsuario = '@Html.Raw(UnidadOperativaResource.GridUsuario)';
+        Pe.Stracon.Politicas.Presentacion.General.UnidadOperativaResource.GridSistema = '@Html.Raw(UnidadOperativaResource.GridSistema)';
+
+        ns('Pe.Stracon.Politicas.Presentacion.Recursos.Validacion')
+        Pe.Stracon.Politicas.Presentacion.Recursos.Validacion.ConfirmacionGuardar = '@Html.Raw(MensajeResource.ConfirmacionGuardar)';
+        Pe.Stracon.Politicas.Presentacion.Recursos.Validacion.EtiquetaEjecutoNingunProceso = '@MensajeResource.EtiquetaNoEjecutoNingunProceso';
+        Pe.Stracon.Politicas.Presentacion.Recursos.Validacion.EtiquetaErrorRegistro = '@MensajeResource.EtiquetaErrorRegistro';
+        Pe.Stracon.Politicas.Presentacion.Recursos.Validacion.ActualizacionConforme = '@Html.Raw(MensajeResource.SeGuardoInformacionExito)';
+        Pe.Stracon.Politicas.Presentacion.Recursos.Validacion.EtiquetaConfirmacion = '@MensajeResource.SeGuardoInformacionExito';
+        Pe.Stracon.Politicas.Presentacion.Recursos.Validacion.EtiquetEliminacion = '@MensajeResource.ConfirmacionEliminacion';
+        Pe.Stracon.Politicas.Presentacion.Recursos.Validacion.ConfirmacionGuardarUsuario = '@Html.Raw(MensajeResource.ConfirmacionGuardarUsuario)';
+
+                        
+        ns('Pe.Stracon.Politicas.Presentacion.General.UnidadOperativa.Models')
+        Pe.Stracon.Politicas.Presentacion.General.UnidadOperativa.Models.Index = @(Html.Raw(Json.Encode(Model)));
+
+    </script>
+    @CustomHtmlHelper.RenderViewJs("generalunidadoperativaformulariounidadoperativa")
+    @CustomHtmlHelper.RenderViewJs("basebuscadortrabajador")
+    @CustomHtmlHelper.RenderViewJs("generalunidadoperativaformulariounidadoperativastaff")
+    @CustomHtmlHelper.RenderViewJs("generalunidadoperativaformularioasignarresponsable")
+}

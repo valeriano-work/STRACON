@@ -1,0 +1,84 @@
+﻿@using Pe.Stracon.Politicas.Presentacion.Core.Helpers
+@using Pe.Stracon.Politicas.Presentacion.Recursos.Base
+@using Pe.Stracon.Politicas.Presentacion.Recursos.General
+@model Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.ValorParametro.ValorParametroModel
+
+<form id="frmParametroValorGuardar">
+    
+    @for (int i = 0; i < Model.ListaSecciones.Count; i++)
+    {
+        if(i % 2 == 0 || i == 0)
+        {
+            @Html.Raw("<div class=\"row\">")
+        }
+        var seccion = Model.ListaSecciones[i];
+        string valor = string.Empty;
+        string requiere = string.Empty;
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label>@seccion.Nombre</label>
+                @if (Model.ParametroValorActual == null || !Model.ParametroValorActual.RegistroCadena.Any(item => item.Key == seccion.CodigoSeccion.ToString()))
+                {
+                    valor = "";
+                }
+                else
+                {
+                    valor = Model.ParametroValorActual.RegistroCadena[seccion.CodigoSeccion.ToString()];
+                }
+
+                @if (seccion.IndicadorObligatorio)
+                {
+                    requiere = "required ValidarSeccion_" + seccion.CodigoSeccion.ToString();
+                }
+
+                @if (Model.ListaParametroRelacionado.Any(item => item.Key == seccion.CodigoSeccion.ToString()))
+                {
+                    if (!(seccion.IndicadorPermiteModificar || Model.ParametroValorActual == null))
+                    {
+                        @Html.DropDownList("parameterValue_" + seccion.CodigoSeccion, Model.ListaParametroRelacionado[seccion.CodigoSeccion.ToString()], new { id = "txt" + @seccion.CodigoSeccion, @nombre = "parameterValue", @idSeccion = @seccion.CodigoSeccion, @tipoDato = @seccion.CodigoTipoDato, @class = "form-control", @validable = requiere, @disabled = "" })
+                    }
+                    else
+                    {
+                        @Html.DropDownList("parameterValue_" + seccion.CodigoSeccion, Model.ListaParametroRelacionado[seccion.CodigoSeccion.ToString()], new { id = "txt" + @seccion.CodigoSeccion, @nombre = "parameterValue", @idSeccion = @seccion.CodigoSeccion, @tipoDato = @seccion.CodigoTipoDato, @class = "form-control", @validable = requiere })
+                    }
+                }
+                else
+                {
+                    if (!(seccion.IndicadorPermiteModificar || Model.ParametroValorActual == null))
+                    {
+                        @Html.TextBox("parameterValue_" + seccion.CodigoSeccion, valor, new { id = "txt" + @seccion.CodigoSeccion, @nombre = "parameterValue", @idSeccion = @seccion.CodigoSeccion, @tipoDato = @seccion.CodigoTipoDato, @class = "form-control", @validable = requiere, @disabled = "", @maxlength = "255" })
+                    }
+                    else
+                    {
+                        @Html.TextBox("parameterValue_" + seccion.CodigoSeccion, valor, new { id = "txt" + @seccion.CodigoSeccion, @nombre = "parameterValue", @idSeccion = @seccion.CodigoSeccion, @tipoDato = @seccion.CodigoTipoDato, @class = "form-control", @validable = requiere , @maxlength = "255"})
+                    }
+                }
+            </div>
+        </div>
+        if(i % 2 != 0 && i != 0)
+        {
+            @Html.Raw("</div>")
+        }
+        
+    }
+    @if (Model.ListaSecciones.Count % 2 != 0)
+    {
+        @Html.Raw("</div>")
+    }
+
+</form>
+<div class="comp-Modal-footer">
+    <button class="btn btn-default" id="btnCancelar">@GenericoResource.BotonCancelar</button>
+    <button class="btn btn-primary" id="btnGrabar">@GenericoResource.BotonGrabar</button>
+</div>
+@foreach(var seccion in Model.ListaSecciones)
+{
+    <script type="text/javascript">
+        ns('Pe.Stracon.Politicas.Presentacion.General.ValorParametro.Resources.Validacion')
+        Pe.Stracon.Politicas.Presentacion.General.ValorParametro.Resources.Validacion.ValidarSeccion_@seccion.CodigoSeccion = '@seccion.Nombre';
+
+        ns('Pe.Stracon.Politicas.Presentacion.General.ValorParametro.Models')
+        Pe.Stracon.Politicas.Presentacion.General.ValorParametro.Models.Index = @(Html.Raw(Json.Encode(Model)));
+    </script>
+}
+@CustomHtmlHelper.RenderViewJs()

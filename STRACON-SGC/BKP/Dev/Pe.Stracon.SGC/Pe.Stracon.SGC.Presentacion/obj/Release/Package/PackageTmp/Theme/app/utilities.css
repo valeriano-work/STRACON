@@ -1,0 +1,20 @@
+﻿/**********************************************
+File : utilities.css;
+-----------------------------------------------
+Description:
+   - Clases utilitarias.
+-----------------------------------------------
+Assigned to: Sebastian Yabiku        
+/*********************************************/
+
+
+/*----.text-middle*/
+/*********************************************/
+.text-middle th,
+.text-middle td{
+	vertical-align:middle;
+}
+
+.text-uppercase{
+    text-transform: uppercase;
+}

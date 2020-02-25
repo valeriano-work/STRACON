@@ -1,0 +1,48 @@
+﻿@using Pe.Stracon.Politicas.Presentacion.Recursos.Base
+@using Pe.Stracon.Politicas.Presentacion.Recursos.General
+@using Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes
+@using Pe.Stracon.Politicas.Infraestructura.Core.Context
+@model Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.Trabajador.TrabajadorSuplenteModel
+
+<script type="text/javascript">
+    ns('Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.Trabajador.TrabajadorSuplenteModel.Model')
+    Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.Trabajador.TrabajadorSuplenteModel.Model.ListaNombreRepresentante = @(Html.Raw(Json.Encode(Model.TrabajadorSuplente.ListaSuplente)));
+    Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.Trabajador.TrabajadorSuplenteModel.Model.TrabajadorSuplente = @(Html.Raw(Json.Encode(Model.TrabajadorSuplente)));
+</script>
+
+<form id="frmTrabajadorSuplenteRegistro">
+    @Html.Hidden("hdnCodigoTrabajador", Model.Trabajador.CodigoTrabajador, new { id = "hdnCodigoTrabajador" })
+    @Html.Hidden("hdnNombreTrabajador", Model.Trabajador.NombreCompleto, new { id = "hdnNombreTrabajador" })
+    <div class="row">
+        <div class="col-sm-10">
+            <div class="form-group">
+                <label>@TrabajadorResource.EtiquetaSuplente</label>
+                @Html.TextBox("txtSuplente", Model.TrabajadorSuplente.CodigoSuplente.ToString(), new { id = "txtSuplente", @class = "form-control", @validable = "required ValidarSuplente" })
+            </div>
+        </div>
+        <div class="col-sm-2">
+                <label>@TrabajadorResource.EtiquetaActivo</label><br />
+                <input type="checkbox" id="chckActivo" @(Model.TrabajadorSuplente.Activo == false && Model.TrabajadorSuplente.FechaInicioString != null ?  "" : "checked")/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label>@TrabajadorResource.EtiquetaFechaInicio</label>
+                @Html.TextBox("txtFechaInicio", Model.TrabajadorSuplente.FechaInicioString, new { id = "txtFechaInicio", @class = "form-control", @validable = "required ValidarFechaInicio" })
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label>@TrabajadorResource.EtiquetaFechaFin</label>
+                @Html.TextBox("txtFechaFin", Model.TrabajadorSuplente.FechaFinString, new { id = "txtFechaFin", @class = "form-control", @validable = "required ValidarFechaFin" })
+            </div>
+        </div>
+    </div>
+</form>
+
+<div class="comp-Modal-footer">
+    <button class="btn btn-default" id="btnCancelarRegistroSuplente">@GenericoResource.BotonCancelar</button>
+    <button class="btn btn-primary" id="btnGrabarRegistroSuplente">@GenericoResource.BotonGrabar</button>
+</div>
+

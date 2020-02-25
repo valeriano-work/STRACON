@@ -1,0 +1,11 @@
+Resgen "D:\GMD\FUENTES\SGC\Source\Reporte\Recursos\Pe.Stracon.SGC.Reportes\Pe.Stracon.SGC.Reportes.Recursos\BienesContrato\BienesContrato.resx"
+
+D:\GMD\FUENTES\SGC\Source\Reporte\Recursos\Pe.Stracon.SGC.Reportes\Pe.Stracon.SGC.Reportes.Recursos\Comun\GeneralStracon.resx"
+
+D:\GMD\FUENTES\SGC\Source\Reporte\Recursos\Pe.Stracon.SGC.Reportes\Pe.Stracon.SGC.Reportes.Recursos\ContratoEstadio\ContratoEstadio.resx"
+D:\GMD\FUENTES\SGC\Source\Reporte\Recursos\Pe.Stracon.SGC.Reportes\Pe.Stracon.SGC.Reportes.Recursos\ContratoPendienteElaborar\ContratoPendienteElaborar.resx
+D:\GMD\FUENTES\SGC\Source\Reporte\Recursos\Pe.Stracon.SGC.Reportes\Pe.Stracon.SGC.Reportes.Recursos\ContratoVencer\ContratoVencer.resx
+D:\GMD\FUENTES\SGC\Source\Reporte\Recursos\Pe.Stracon.SGC.Reportes\Pe.Stracon.SGC.Reportes.Recursos\HojaRuta\HojaRuta.resx
+D:\GMD\FUENTES\SGC\Source\Reporte\Recursos\Pe.Stracon.SGC.Reportes\Pe.Stracon.SGC.Reportes.Recursos\ListadoContrato\ListadoContrato.resx
+D:\GMD\FUENTES\SGC\Source\Reporte\Recursos\Pe.Stracon.SGC.Reportes\Pe.Stracon.SGC.Reportes.Recursos\TiempoAtencion\TiempoAtencion.resx
+D:\GMD\FUENTES\SGC\Source\Reporte\Recursos\Pe.Stracon.SGC.Reportes\Pe.Stracon.SGC.Reportes.Recursos\TrazabilidadContrato\TrazabilidadContrato.resx

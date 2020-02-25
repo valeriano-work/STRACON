@@ -1,0 +1,111 @@
+﻿@using Pe.Stracon.SGC.Presentacion.Recursos.Base
+@using Pe.Stracon.SGC.Presentacion.Recursos.Contractual
+@using Pe.Stracon.SGC.Presentacion.Recursos.Mensajes
+@using Pe.Stracon.SGC.Presentacion.Core.Helpers
+
+@model Pe.Stracon.SGC.Presentacion.Core.ViewModel.Contractual.FlujoAprobacion.FlujoAprobacionEstadiosBusqueda
+
+<div class="GmdBody-header">
+    <h2> @Html.ActionLink(@FlujoAprobacionResource.EtiquetaTituloPrincipal, "Index" ) <i class="fa fa-angle-right"></i>  @FlujoAprobacionResource.EtiquetatTituloEstadios</h2>
+</div>
+<div class="GmdBody-body">
+    <input id="hdnFlujoAprobacion" name="flujoAprobacion" type="hidden" value="@Model.flujoAprobacionResponse.CodigoFlujoAprobacion">
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="form-group">
+                <label for="slcUnidadOperativa">@FlujoAprobacionResource.EtiquetaUnidadOperativa</label>
+                <h3>@Model.flujoAprobacionResponse.DescripcionUnidadOperativa</h3>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="form-group">
+                <label for="slcTipoServicio">@FlujoAprobacionResource.EtiquetaTipoContrato</label>
+                <h3>@Model.flujoAprobacionResponse.DescripcionTipoContrato</h3>
+            </div>
+        </div>
+        @*<div class="col-sm-3">
+            <div class="form-group">
+                <label for="slcTipoContrato">@FlujoAprobacionResource.EtiquetaFormaEdicion</label>
+                <h3>@Model.flujoAprobacionResponse.DescripcionFormaEdicion</h3>
+            </div>
+        </div>*@
+    </div>
+    <hr />
+    <div class="row">
+        <div class="col-sm-6 text-left">
+            <div class="form-group">
+                <h3>@GenericoResource.EtiquetaResultadosBusqueda</h3>
+            </div>
+        </div>
+        <div class="col-sm-6 text-right">
+            <div class="form-group">
+                <button id="btnEliminarSeleccionado" class="btn btn-info">@GenericoResource.BotonEliminar</button>
+                <button id="btnAgregar" class="btn btn-primary">@GenericoResource.BotonAñadir</button>
+            </div>
+        </div>
+    </div>
+    <div id="divGrdResult">
+    </div>
+    <hr />
+    <div class="col-sm-12 text-right">
+        @Html.ActionLink(@GenericoResource.BtnRegresar, "Index", null, new { @class = "btn btn-default" })
+    </div>
+</div>
+@section scripts
+{
+    <script type="text/javascript">
+        ns('Pe.Stracon.SGC.Presentacion.Contractual.FlujoAprobacion.Actions')
+        Pe.Stracon.SGC.Presentacion.Contractual.FlujoAprobacion.Actions.BuscarBandejaFlujoAprobacionEstadios = '@Url.Action("BuscarBandejaFlujoAprobacionEstadios", "FlujoAprobacion", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.FlujoAprobacion.Actions.FormularioFlujoAprobacionEstadios = '@Url.Action("FormularioFlujoAprobacionEstadios", "FlujoAprobacion", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.FlujoAprobacion.Actions.RegistrarFlujoAprobacionEstadios = '@Url.Action("RegistrarFlujoAprobacionEstadios", "FlujoAprobacion", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.FlujoAprobacion.Actions.EliminarFlujoAprobacionEstadios = '@Url.Action("EliminarFlujoAprobacionEstadios", "FlujoAprobacion", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.FlujoAprobacion.Actions.BuscarTrabajadorUO = '@Url.Action("BuscarTrabajadorUO", "FlujoAprobacion", new { Area = "Contractual" })';
+
+        ns('Pe.Stracon.SGC.Presentacion.Contractual.FlujoAprobacion.Mensaje')
+        @*Pe.Stracon.SCC.Presentacion.Contable.ActividadUnidadOperativa.MensajeMensajeSeleccionarNivel = '@Html.Raw(ActividadUnidadOperativaResource.MensajeSeleccionarNivel)';*@
+
+        ns('Pe.Stracon.SGC.Presentacion.Contractual.FlujoAprobacion.Resources')
+        Pe.Stracon.SGC.Presentacion.Contractual.FlujoAprobacion.Resources.GridOrden = '@Html.Raw(FlujoAprobacionResource.GridOrden)';
+        Pe.Stracon.SGC.Presentacion.Contractual.FlujoAprobacion.Resources.GridEstadio = '@Html.Raw(FlujoAprobacionResource.GridEstadio)';
+        Pe.Stracon.SGC.Presentacion.Contractual.FlujoAprobacion.Resources.GridDiasAtencion = '@Html.Raw(FlujoAprobacionResource.GridDiasAtencion)';
+        Pe.Stracon.SGC.Presentacion.Contractual.FlujoAprobacion.Resources.GridHorasAtencion = '@Html.Raw(FlujoAprobacionResource.GridHorasAtencion)';
+        Pe.Stracon.SGC.Presentacion.Contractual.FlujoAprobacion.Resources.GridAplicaMontoMinimo = '@Html.Raw(FlujoAprobacionResource.GridAplicaMontoMinimo)';
+        Pe.Stracon.SGC.Presentacion.Contractual.FlujoAprobacion.Resources.GridAplicaVersionOficial = '@Html.Raw(FlujoAprobacionResource.GridAplicaVersionOficial)';
+        Pe.Stracon.SGC.Presentacion.Contractual.FlujoAprobacion.Resources.GridAplicaPermiteCarga = '@Html.Raw(FlujoAprobacionResource.GridAplicaPermiteCarga)';
+        Pe.Stracon.SGC.Presentacion.Contractual.FlujoAprobacion.Resources.GridActualizaNumeroContrato = '@Html.Raw(FlujoAprobacionResource.GridActualizaNumeroContrato)';
+        Pe.Stracon.SGC.Presentacion.Contractual.FlujoAprobacion.Resources.GridResponsable = '@Html.Raw(FlujoAprobacionResource.GridResponsable)';
+        Pe.Stracon.SGC.Presentacion.Contractual.FlujoAprobacion.Resources.GridInformados = '@Html.Raw(FlujoAprobacionResource.GridInformados)';
+        Pe.Stracon.SGC.Presentacion.Contractual.FlujoAprobacion.Resources.EtiquetaFormularioFlujoAprobacion = '@Html.Raw(FlujoAprobacionResource.EtiquetaFormularioFlujoAprobacion)';
+        Pe.Stracon.SGC.Presentacion.Contractual.FlujoAprobacion.Resources.EtiquetaFormularioEstadio = '@Html.Raw(FlujoAprobacionResource.EtiquetaFormularioEstadio)'; 
+        Pe.Stracon.SGC.Presentacion.Contractual.FlujoAprobacion.Resources.EtiquetaTituloAdvertencia = '@Html.Raw(MensajeResource.EtiquetaTituloAdvertencia)';
+        Pe.Stracon.SGC.Presentacion.Contractual.FlujoAprobacion.Resources.EtiquetaTituloConfirmar = '@Html.Raw(GenericoResource.EtiquetaTituloConfirmar)';
+        Pe.Stracon.SGC.Presentacion.Contractual.FlujoAprobacion.Resources.ValidarDiasAtencionEntre = '@Html.Raw(FlujoAprobacionResource.ValidarDiasAtencionEntre)';
+        Pe.Stracon.SGC.Presentacion.Contractual.FlujoAprobacion.Resources.ValidarHorasAtencionEntre = '@Html.Raw(FlujoAprobacionResource.ValidarHorasAtencionEntre)';
+        Pe.Stracon.SGC.Presentacion.Contractual.FlujoAprobacion.Resources.EtiquetaIndicadorEsFirmante = '@Html.Raw(FlujoAprobacionResource.EtiquetaIndicadorEsFirmante)';
+        Pe.Stracon.SGC.Presentacion.Contractual.FlujoAprobacion.Resources.EtiquetaIncluirVisto = '@Html.Raw(FlujoAprobacionResource.EtiquetaIncluirVisto)';
+
+        ns('Pe.Stracon.SGC.Presentacion.Recursos.Validacion')
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.MensajeErrorResponsable = '@Html.Raw(FlujoAprobacionResource.MensajeErrorResponsable)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.SeleccionarRegistroEliminar = '@Html.Raw(MensajeResource.SeleccionarRegistroEliminar)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ConfirmacionGuardar = '@Html.Raw(MensajeResource.ConfirmacionGuardar)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.EtiquetaConfirmacion = '@MensajeResource.SeGuardoInformacionExito';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarOrdenPrioridad = '@Html.Raw(FlujoAprobacionResource.EtiquetaOrdenPrioridad)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarDescripcionEstadio = '@Html.Raw(FlujoAprobacionResource.EtiquetaDescripcionEstadio)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarDiasAtencion = '@Html.Raw(FlujoAprobacionResource.EtiquetaDiasAtencion)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarHorasAtencion = '@Html.Raw(FlujoAprobacionResource.EtiquetaHorasAtencion)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarAplicaMontoMinimo = '@Html.Raw(FlujoAprobacionResource.EtiquetaAplicaMontoMinimo)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarDiasAtencionHorasAtencion = '@Html.Raw(GenericoResource.ValidacionAlmenosUno)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarNumeroNegativo = '@Html.Raw(GenericoResource.ValidacionNumeroNegativo)';
+
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.EtiquetaTituloConfirmar = '@Html.Raw(GenericoResource.EtiquetaTituloConfirmar)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.SeleccionarRegistroEliminar = '@Html.Raw(MensajeResource.SeleccionarRegistroEliminar)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.MsgEliminacionList = '@Html.Raw(MensajeResource.MsgEliminacionList)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ConfirmacionEliminacion = '@MensajeResource.ConfirmacionEliminacion';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.EtiquetaEliminacionExitosa = '@Html.Raw(MensajeResource.SeEliminoInformacionExito)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.MensajeValidacionMayores = '@Html.Raw(MensajeResource.MensajeValidacionMayores)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.EtiquetaituloError = '@Html.Raw(MensajeResource.EtiquetaTituloError)';
+        
+
+    </script>
+    @CustomHtmlHelper.RenderViewJs("contractualflujoaprobacionformularioflujoaprobacionestadios")
+}

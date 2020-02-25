@@ -1,0 +1,2109 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="7/3/2015 12:12:53 AM"
+  DTS:CreationName="SSIS.Package.3"
+  DTS:CreatorComputerName="EAESCOBARM"
+  DTS:CreatorName="GMDSA\ehuamanfe"
+  DTS:DTSID="{1BEA39DB-913D-4A25-988A-D50CA6A99D78}"
+  DTS:EnableConfig="True"
+  DTS:ExecutableType="SSIS.Package.3"
+  DTS:LastModifiedProductVersion="11.0.2100.60"
+  DTS:LocaleID="10250"
+  DTS:MaxErrorCount="10000"
+  DTS:ObjectName="NotificacionContratoPorVencer"
+  DTS:PackageType="5"
+  DTS:VersionBuild="83"
+  DTS:VersionGUID="{AB8D63C8-4D57-4AD9-A6D6-F457C7ECD550}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">6</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[10.244.4.21.STRACON_POLITICAS.USR_STRACON_DESARROLLO]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{06482323-F822-4B5E-BCBC-1EED121786FF}"
+      DTS:ObjectName="10.244.4.21.STRACON_POLITICAS.USR_STRACON_DESARROLLO">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=10.240.132.108;User ID=SA;Initial Catalog=STRACON_POLITICAS;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAcYWmXrPmC0eRLkdYMget9gAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAoknBVs9lgkz+CumG0LcM8dP/IUdTV5Xk8ubehGY9dWwAAAAAOgAAAAAIAACAAAAC09m0V3qt1nRaOE6tPZyzBB3eWFPaaYZlMnvkPfHj2bhAAAAB4kfmpfQ9xfsdL98hrTsHKQAAAAAZ+vOWjZjjALZ+dl6+2ScaxnB3oEtp1IBAdAT3PlUwVj4jX1dZF9/kn/2cvlx8PfBV3clq75sX0UCk7BJnF77E</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[10.244.4.21.STRACON_SGC.USR_STRACON_DESARROLLO]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{07E76394-694E-4DA1-9880-3F59AE790035}"
+      DTS:ObjectName="10.244.4.21.STRACON_SGC.USR_STRACON_DESARROLLO">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=azdevsql12.gym.com.pe;User ID=userdeveloper;Initial Catalog=STRACOM_SGC_TEST_2604;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAcYWmXrPmC0eRLkdYMget9gAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAK1nZAWEN/osiBRXJzIgcO/0KBzImRIKcHn5KGAyAtjgAAAAAOgAAAAAIAACAAAAAip+y2zFdFlbzcpBRL0USchNZhQ2oP+VFjNAcuG9mYqBAAAAAiX5+WX9VuKQ+8Gf74kLFvQAAAAAniYW03hHaWDdZibKsUuCXaFqaUajyhcpohM7vSRZrwGIwLoN2Zv8MEhb+SG8dCKc9aT91b0uCs/S24BABeme8</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Configurations>
+    <DTS:Configuration
+      DTS:ConfigurationString="D:\Adexus\TFS\STRACON-SGC\DEV\Pe.Stracon.SGC.DTS\Pe.Stracon.Integracion.ContratoPorVencer\Pe.Stracon.Integracion.ContratoPorVencer\ConfiguracionNotificacionContratoPorVencer.dtsConfig"
+      DTS:ConfigurationType="1"
+      DTS:CreationName=""
+      DTS:DTSID="{DBB3D661-B458-4F17-8F28-4A5672262BB7}"
+      DTS:ObjectName="Configuration" />
+  </DTS:Configurations>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Borramos los Contratos que exceden la fecha limite"
+      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{3d717c27-97e3-474d-9d4f-601fad2f9e1f}"
+      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Borramos los Contratos que exceden la fecha limite"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{07E76394-694E-4DA1-9880-3F59AE790035}"
+          SQLTask:BypassPrepare="False"
+          SQLTask:SqlStatementSource="--DELETE FROM [TMP].[CONTRATO_POR_VENCER]&#xA;--WHERE DIAS_VENCIMIENTO&gt;DIAS_LIMITE&#xA;&#xA;DELETE FROM [TMP].[CONTRATO_POR_VENCER]&#xA;WHERE DIAS_VENCIMIENTO&lt;0" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Cuerpo del Correo"
+      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{54C17F2D-4A1B-427B-BDF6-9E76C7C78CDF}"
+      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Cuerpo del Correo"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{07E76394-694E-4DA1-9880-3F59AE790035}"
+          SQLTask:BypassPrepare="False"
+          SQLTask:SqlStatementSource="DECLARE @TABLA_HTML&#x9;&#x9;&#x9;NVARCHAR(MAX)&#xA;DECLARE @EMISOR&#x9;&#x9;&#x9;&#x9;NVARCHAR(50)&#xA;DECLARE @DESTINATARIO&#x9;&#x9;NVARCHAR(MAX)&#xA;DECLARE @DESTINATARIO_COPIA NVARCHAR(MAX)&#xA;DECLARE @ASUNTO&#x9;&#x9;&#x9;&#x9;NVARCHAR(MAX)&#xA;DECLARE @CONTENIDO&#x9;&#x9;    NVARCHAR(MAX)&#xA;DECLARE @FORMATO_CONTENIDO  NVARCHAR(10)&#xA;DECLARE @IMPORTANCIA&#x9;    NVARCHAR(10)&#xA;&#xA;SET LANGUAGE spanish;&#xA;SET DATEFORMAT  dmy;&#xA;&#xA;SET&#x9;@FORMATO_CONTENIDO = 'html'&#xA;&#xA;SET&#x9;@IMPORTANCIA = 'High'&#xA;&#xA;SET&#x9;&#x9;@TABLA_HTML =&#xA;&#x9;&#x9;N'&lt;br&gt;' +&#xA;&#x9;&#x9;N'&lt;br&gt;' +&#xA;       &#x9;N'&lt;table border=&quot;1px solid #CCCCC&quot; width=&quot;100%&quot; cellspacing=&quot;0&quot; style=&quot;text-align: center; vertical-align: middle&quot;&gt;' +&#xA;       &#x9;N'&lt;tr&gt; &lt;th style=&quot;text-align: center; vertical-align: middle; background-color: #E3E3E3; border-color: black; border: 1px solid&quot;&gt;Unidad Operativa&lt;/th&gt;' +&#xA;        N'&lt;th style=&quot;text-align: center; vertical-align: middle; background-color: #E3E3E3; border-color: black; border: 1px solid&quot;&gt;Número Contrato&lt;/th&gt;' +&#xA;&#x9;&#x9;N'&lt;th style=&quot;text-align: center; vertical-align: middle; background-color: #E3E3E3; border-color: black; border: 1px solid&quot;&gt;Número Adenda&lt;/th&gt;' +&#xA;&#x9;&#x9;N'&lt;th style=&quot;text-align: center; vertical-align: middle; background-color: #E3E3E3; border-color: black; border: 1px solid&quot;&gt;RUC Proveedor&lt;/th&gt;' +&#xA;&#x9;&#x9;N'&lt;th style=&quot;text-align: center; vertical-align: middle; background-color: #E3E3E3; border-color: black; border: 1px solid&quot;&gt;Proveedor&lt;/th&gt;' +&#xA;&#x9;&#x9;N'&lt;th style=&quot;text-align: center; vertical-align: middle; background-color: #E3E3E3; border-color: black; border: 1px solid&quot;&gt;Fecha Vencimiento&lt;/th&gt;' +&#xA;&#x9;&#x9;N'&lt;th style=&quot;text-align: center; vertical-align: middle; background-color: #E3E3E3; border-color: black; border: 1px solid&quot;&gt;Dias Restantes&lt;/th&gt;&lt;/tr&gt;' +&#xA;        CAST ( ( SELECT td = NOMBRE, '',&#xA;                        td = NUMERO_CONTRATO, '',&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;td = NUMERO_ADENDA_CONCATENADO, '',&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;td = NUMERO_DOCUMENTO, '',&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;td = PROVEEDOR, '',&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;td = CONVERT(VARCHAR(50),FECHA_VENCIMIENTO,103), '',&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;td = DIAS_VENCIMIENTO, ''&#xA;                  FROM TMP.CONTRATO_POR_VENCER&#xA;                  FOR XML PATH('tr'), TYPE &#xA;        ) AS NVARCHAR(MAX) ) +      &#xA;        N'&lt;/table&gt;' +        &#xA;        N'&lt;br&gt;'&#xA;&#xA;SET @TABLA_HTML = REPLACE(@TABLA_HTML,'&lt;td&gt;','&lt;td style=&quot;text-align: center; vertical-align: middle; border-color: black; border: 1px solid&quot;&gt;')&#xA;--PRINT @TABLA_HTML&#xA;&#xA;SELECT&#x9;DISTINCT&#xA;&#x9;&#x9;@EMISOR&#x9;&#x9;&#x9;&#x9;= EMISOR,&#xA;&#x9;&#x9;@DESTINATARIO&#x9;&#x9;= DESTINATARIO,&#xA;&#x9;&#x9;@DESTINATARIO_COPIA = DESTINATARIO_COPIA,&#xA;&#x9;&#x9;@ASUNTO&#x9;&#x9;&#x9;&#x9;= ASUNTO,&#xA;&#x9;&#x9;@CONTENIDO&#x9;&#x9;&#x9;= REPLACE(CONTENIDO, '@lista_contratos_por_vencer', @TABLA_HTML)&#xA;FROM&#x9;TMP.CONTRATO_POR_VENCER&#xA;&#xA;&#xA;EXEC&#x9;[MSDB].[DBO].[SP_SEND_DBMAIL]&#x9;@PROFILE_NAME&#x9; = @EMISOR, &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;@RECIPIENTS&#x9;&#x9; = @DESTINATARIO,&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;@BODY&#x9;&#x9;&#x9; = @CONTENIDO,&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;@COPY_RECIPIENTS = @DESTINATARIO_COPIA,&#xA;                                        @BODY_FORMAT     = @FORMATO_CONTENIDO,&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;@SUBJECT         = @ASUNTO,&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;@IMPORTANCE      = @IMPORTANCIA" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Limpiar Tabla de Contratos por Vencer"
+      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{0A6CD6BA-0E05-4AFE-8CF1-4FF65F140FA4}"
+      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Limpiar Tabla de Contratos por Vencer"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{07E76394-694E-4DA1-9880-3F59AE790035}"
+          SQLTask:BypassPrepare="False"
+          SQLTask:SqlStatementSource="DELETE FROM TMP.CONTRATO_POR_VENCER" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Proceso de Notificar"
+      DTS:CreationName="SSIS.Pipeline.3"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{7F6746E1-28F9-495E-98EE-93F3C960E6D3}"
+      DTS:ExecutableType="SSIS.Pipeline.3"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Proceso de Notificar"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Proceso de Notificar\Contratos por Vencer"
+              componentClassID="{165A526D-D5DE-47FF-96A6-F8274C19826B}"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Contratos por Vencer"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SET LANGUAGE spanish;
+SET DATEFORMAT  dmy;
+SELECT	
+	CON.CODIGO_UNIDAD_OPERATIVA,
+	CON.NUMERO_CONTRATO,
+	ISNULL(con.NUMERO_ADENDA_CONCATENADO,'-')AS NUMERO_ADENDA_CONCATENADO,
+	PRO.NUMERO_DOCUMENTO,
+	PRO.NOMBRE										AS PROVEEDOR,
+	CON.FECHA_FIN_VIGENCIA	AS FECHA_VENCIMIENTO,
+    DATEDIFF(DD,GETDATE(),FECHA_FIN_VIGENCIA)		AS CANTIDAD_DIAS
+FROM	CTR.CONTRATO CON
+INNER JOIN CTR.PROVEEDOR PRO ON PRO.CODIGO_PROVEEDOR = CON.CODIGO_PROVEEDOR AND PRO.ESTADO_REGISTRO = '1'
+WHERE	CON.CODIGO_ESTADO = 'V'
+AND DATEDIFF(DD,GETDATE(),FECHA_FIN_VIGENCIA) IN( 30,15,0)</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Proceso de Notificar\Contratos por Vencer.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[10.244.4.21.STRACON_SGC.USR_STRACON_DESARROLLO]"
+                  connectionManagerRefId="Package.ConnectionManagers[10.244.4.21.STRACON_SGC.USR_STRACON_DESARROLLO]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Proceso de Notificar\Contratos por Vencer.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Proceso de Notificar\Contratos por Vencer.Outputs[OLE DB Source Output].Columns[CODIGO_UNIDAD_OPERATIVA]"
+                      dataType="guid"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Proceso de Notificar\Contratos por Vencer.Outputs[OLE DB Source Output].ExternalColumns[CODIGO_UNIDAD_OPERATIVA]"
+                      lineageId="Package\Proceso de Notificar\Contratos por Vencer.Outputs[OLE DB Source Output].Columns[CODIGO_UNIDAD_OPERATIVA]"
+                      name="CODIGO_UNIDAD_OPERATIVA"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Proceso de Notificar\Contratos por Vencer.Outputs[OLE DB Source Output].Columns[NUMERO_CONTRATO]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Proceso de Notificar\Contratos por Vencer.Outputs[OLE DB Source Output].ExternalColumns[NUMERO_CONTRATO]"
+                      length="50"
+                      lineageId="Package\Proceso de Notificar\Contratos por Vencer.Outputs[OLE DB Source Output].Columns[NUMERO_CONTRATO]"
+                      name="NUMERO_CONTRATO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Proceso de Notificar\Contratos por Vencer.Outputs[OLE DB Source Output].Columns[NUMERO_DOCUMENTO]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Proceso de Notificar\Contratos por Vencer.Outputs[OLE DB Source Output].ExternalColumns[NUMERO_DOCUMENTO]"
+                      length="20"
+                      lineageId="Package\Proceso de Notificar\Contratos por Vencer.Outputs[OLE DB Source Output].Columns[NUMERO_DOCUMENTO]"
+                      name="NUMERO_DOCUMENTO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Proceso de Notificar\Contratos por Vencer.Outputs[OLE DB Source Output].Columns[PROVEEDOR]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Proceso de Notificar\Contratos por Vencer.Outputs[OLE DB Source Output].ExternalColumns[PROVEEDOR]"
+                      length="255"
+                      lineageId="Package\Proceso de Notificar\Contratos por Vencer.Outputs[OLE DB Source Output].Columns[PROVEEDOR]"
+                      name="PROVEEDOR"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Proceso de Notificar\Contratos por Vencer.Outputs[OLE DB Source Output].Columns[FECHA_VENCIMIENTO]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Proceso de Notificar\Contratos por Vencer.Outputs[OLE DB Source Output].ExternalColumns[FECHA_VENCIMIENTO]"
+                      lineageId="Package\Proceso de Notificar\Contratos por Vencer.Outputs[OLE DB Source Output].Columns[FECHA_VENCIMIENTO]"
+                      name="FECHA_VENCIMIENTO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Proceso de Notificar\Contratos por Vencer.Outputs[OLE DB Source Output].Columns[CANTIDAD_DIAS]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Proceso de Notificar\Contratos por Vencer.Outputs[OLE DB Source Output].ExternalColumns[CANTIDAD_DIAS]"
+                      lineageId="Package\Proceso de Notificar\Contratos por Vencer.Outputs[OLE DB Source Output].Columns[CANTIDAD_DIAS]"
+                      name="CANTIDAD_DIAS"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Proceso de Notificar\Contratos por Vencer.Outputs[OLE DB Source Output].Columns[NUMERO_ADENDA_CONCATENADO]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Proceso de Notificar\Contratos por Vencer.Outputs[OLE DB Source Output].ExternalColumns[NUMERO_ADENDA_CONCATENADO]"
+                      length="80"
+                      lineageId="Package\Proceso de Notificar\Contratos por Vencer.Outputs[OLE DB Source Output].Columns[NUMERO_ADENDA_CONCATENADO]"
+                      name="NUMERO_ADENDA_CONCATENADO"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Proceso de Notificar\Contratos por Vencer.Outputs[OLE DB Source Output].ExternalColumns[CODIGO_UNIDAD_OPERATIVA]"
+                      dataType="guid"
+                      name="CODIGO_UNIDAD_OPERATIVA" />
+                    <externalMetadataColumn
+                      refId="Package\Proceso de Notificar\Contratos por Vencer.Outputs[OLE DB Source Output].ExternalColumns[NUMERO_CONTRATO]"
+                      dataType="wstr"
+                      length="50"
+                      name="NUMERO_CONTRATO" />
+                    <externalMetadataColumn
+                      refId="Package\Proceso de Notificar\Contratos por Vencer.Outputs[OLE DB Source Output].ExternalColumns[NUMERO_DOCUMENTO]"
+                      dataType="wstr"
+                      length="20"
+                      name="NUMERO_DOCUMENTO" />
+                    <externalMetadataColumn
+                      refId="Package\Proceso de Notificar\Contratos por Vencer.Outputs[OLE DB Source Output].ExternalColumns[PROVEEDOR]"
+                      dataType="wstr"
+                      length="255"
+                      name="PROVEEDOR" />
+                    <externalMetadataColumn
+                      refId="Package\Proceso de Notificar\Contratos por Vencer.Outputs[OLE DB Source Output].ExternalColumns[FECHA_VENCIMIENTO]"
+                      dataType="dbTimeStamp"
+                      name="FECHA_VENCIMIENTO" />
+                    <externalMetadataColumn
+                      refId="Package\Proceso de Notificar\Contratos por Vencer.Outputs[OLE DB Source Output].ExternalColumns[CANTIDAD_DIAS]"
+                      dataType="i4"
+                      name="CANTIDAD_DIAS" />
+                    <externalMetadataColumn
+                      refId="Package\Proceso de Notificar\Contratos por Vencer.Outputs[OLE DB Source Output].ExternalColumns[NUMERO_ADENDA_CONCATENADO]"
+                      dataType="wstr"
+                      length="80"
+                      name="NUMERO_ADENDA_CONCATENADO" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Proceso de Notificar\Contratos por Vencer.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Proceso de Notificar\Contratos por Vencer.Outputs[OLE DB Source Error Output].Columns[CODIGO_UNIDAD_OPERATIVA]"
+                      dataType="guid"
+                      lineageId="Package\Proceso de Notificar\Contratos por Vencer.Outputs[OLE DB Source Error Output].Columns[CODIGO_UNIDAD_OPERATIVA]"
+                      name="CODIGO_UNIDAD_OPERATIVA" />
+                    <outputColumn
+                      refId="Package\Proceso de Notificar\Contratos por Vencer.Outputs[OLE DB Source Error Output].Columns[NUMERO_CONTRATO]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Proceso de Notificar\Contratos por Vencer.Outputs[OLE DB Source Error Output].Columns[NUMERO_CONTRATO]"
+                      name="NUMERO_CONTRATO" />
+                    <outputColumn
+                      refId="Package\Proceso de Notificar\Contratos por Vencer.Outputs[OLE DB Source Error Output].Columns[NUMERO_ADENDA_CONCATENADO]"
+                      dataType="wstr"
+                      length="80"
+                      lineageId="Package\Proceso de Notificar\Contratos por Vencer.Outputs[OLE DB Source Error Output].Columns[NUMERO_ADENDA_CONCATENADO]"
+                      name="NUMERO_ADENDA_CONCATENADO" />
+                    <outputColumn
+                      refId="Package\Proceso de Notificar\Contratos por Vencer.Outputs[OLE DB Source Error Output].Columns[NUMERO_DOCUMENTO]"
+                      dataType="wstr"
+                      length="20"
+                      lineageId="Package\Proceso de Notificar\Contratos por Vencer.Outputs[OLE DB Source Error Output].Columns[NUMERO_DOCUMENTO]"
+                      name="NUMERO_DOCUMENTO" />
+                    <outputColumn
+                      refId="Package\Proceso de Notificar\Contratos por Vencer.Outputs[OLE DB Source Error Output].Columns[PROVEEDOR]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Proceso de Notificar\Contratos por Vencer.Outputs[OLE DB Source Error Output].Columns[PROVEEDOR]"
+                      name="PROVEEDOR" />
+                    <outputColumn
+                      refId="Package\Proceso de Notificar\Contratos por Vencer.Outputs[OLE DB Source Error Output].Columns[FECHA_VENCIMIENTO]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Proceso de Notificar\Contratos por Vencer.Outputs[OLE DB Source Error Output].Columns[FECHA_VENCIMIENTO]"
+                      name="FECHA_VENCIMIENTO" />
+                    <outputColumn
+                      refId="Package\Proceso de Notificar\Contratos por Vencer.Outputs[OLE DB Source Error Output].Columns[CANTIDAD_DIAS]"
+                      dataType="i4"
+                      lineageId="Package\Proceso de Notificar\Contratos por Vencer.Outputs[OLE DB Source Error Output].Columns[CANTIDAD_DIAS]"
+                      name="CANTIDAD_DIAS" />
+                    <outputColumn
+                      refId="Package\Proceso de Notificar\Contratos por Vencer.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Proceso de Notificar\Contratos por Vencer.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Proceso de Notificar\Contratos por Vencer.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Proceso de Notificar\Contratos por Vencer.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Proceso de Notificar\Lista de Contratos por Vencer"
+              componentClassID="{4ADA7EAA-136C-4215-8098-D7A7C27FC0D1}"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Lista de Contratos por Vencer"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[TMP].[CONTRATO_POR_VENCER]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Proceso de Notificar\Lista de Contratos por Vencer.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[10.244.4.21.STRACON_SGC.USR_STRACON_DESARROLLO]"
+                  connectionManagerRefId="Package.ConnectionManagers[10.244.4.21.STRACON_SGC.USR_STRACON_DESARROLLO]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Proceso de Notificar\Lista de Contratos por Vencer.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Proceso de Notificar\Lista de Contratos por Vencer.Inputs[OLE DB Destination Input].Columns[CODIGO_UNIDAD_OPERATIVA]"
+                      cachedDataType="guid"
+                      cachedName="CODIGO_UNIDAD_OPERATIVA"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\Proceso de Notificar\Lista de Contratos por Vencer.Inputs[OLE DB Destination Input].ExternalColumns[CODIGO_UNIDAD_OPERATIVA]"
+                      lineageId="Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Outputs[Merge Join Output].Columns[CODIGO_UNIDAD_OPERATIVA]" />
+                    <inputColumn
+                      refId="Package\Proceso de Notificar\Lista de Contratos por Vencer.Inputs[OLE DB Destination Input].Columns[NOMBRE]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="NOMBRE"
+                      externalMetadataColumnId="Package\Proceso de Notificar\Lista de Contratos por Vencer.Inputs[OLE DB Destination Input].ExternalColumns[NOMBRE]"
+                      lineageId="Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Outputs[Merge Join Output].Columns[NOMBRE]" />
+                    <inputColumn
+                      refId="Package\Proceso de Notificar\Lista de Contratos por Vencer.Inputs[OLE DB Destination Input].Columns[NUMERO_CONTRATO]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="NUMERO_CONTRATO"
+                      externalMetadataColumnId="Package\Proceso de Notificar\Lista de Contratos por Vencer.Inputs[OLE DB Destination Input].ExternalColumns[NUMERO_CONTRATO]"
+                      lineageId="Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Outputs[Merge Join Output].Columns[NUMERO_CONTRATO]" />
+                    <inputColumn
+                      refId="Package\Proceso de Notificar\Lista de Contratos por Vencer.Inputs[OLE DB Destination Input].Columns[NUMERO_DOCUMENTO]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="NUMERO_DOCUMENTO"
+                      externalMetadataColumnId="Package\Proceso de Notificar\Lista de Contratos por Vencer.Inputs[OLE DB Destination Input].ExternalColumns[NUMERO_DOCUMENTO]"
+                      lineageId="Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Outputs[Merge Join Output].Columns[NUMERO_DOCUMENTO]" />
+                    <inputColumn
+                      refId="Package\Proceso de Notificar\Lista de Contratos por Vencer.Inputs[OLE DB Destination Input].Columns[PROVEEDOR]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="PROVEEDOR"
+                      externalMetadataColumnId="Package\Proceso de Notificar\Lista de Contratos por Vencer.Inputs[OLE DB Destination Input].ExternalColumns[PROVEEDOR]"
+                      lineageId="Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Outputs[Merge Join Output].Columns[PROVEEDOR]" />
+                    <inputColumn
+                      refId="Package\Proceso de Notificar\Lista de Contratos por Vencer.Inputs[OLE DB Destination Input].Columns[FECHA_VENCIMIENTO]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="FECHA_VENCIMIENTO"
+                      externalMetadataColumnId="Package\Proceso de Notificar\Lista de Contratos por Vencer.Inputs[OLE DB Destination Input].ExternalColumns[FECHA_VENCIMIENTO]"
+                      lineageId="Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Outputs[Merge Join Output].Columns[FECHA_VENCIMIENTO]" />
+                    <inputColumn
+                      refId="Package\Proceso de Notificar\Lista de Contratos por Vencer.Inputs[OLE DB Destination Input].Columns[CONTENIDO]"
+                      cachedDataType="nText"
+                      cachedName="CONTENIDO"
+                      externalMetadataColumnId="Package\Proceso de Notificar\Lista de Contratos por Vencer.Inputs[OLE DB Destination Input].ExternalColumns[CONTENIDO]"
+                      lineageId="Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Outputs[Merge Join Output].Columns[CONTENIDO]" />
+                    <inputColumn
+                      refId="Package\Proceso de Notificar\Lista de Contratos por Vencer.Inputs[OLE DB Destination Input].Columns[EMISOR]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="EMISOR"
+                      externalMetadataColumnId="Package\Proceso de Notificar\Lista de Contratos por Vencer.Inputs[OLE DB Destination Input].ExternalColumns[EMISOR]"
+                      lineageId="Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Outputs[Merge Join Output].Columns[EMISOR]" />
+                    <inputColumn
+                      refId="Package\Proceso de Notificar\Lista de Contratos por Vencer.Inputs[OLE DB Destination Input].Columns[ASUNTO]"
+                      cachedDataType="nText"
+                      cachedName="ASUNTO"
+                      externalMetadataColumnId="Package\Proceso de Notificar\Lista de Contratos por Vencer.Inputs[OLE DB Destination Input].ExternalColumns[ASUNTO]"
+                      lineageId="Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Outputs[Merge Join Output].Columns[ASUNTO]" />
+                    <inputColumn
+                      refId="Package\Proceso de Notificar\Lista de Contratos por Vencer.Inputs[OLE DB Destination Input].Columns[DESTINATARIO]"
+                      cachedDataType="nText"
+                      cachedName="DESTINATARIO"
+                      externalMetadataColumnId="Package\Proceso de Notificar\Lista de Contratos por Vencer.Inputs[OLE DB Destination Input].ExternalColumns[DESTINATARIO]"
+                      lineageId="Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Outputs[Merge Join Output].Columns[DESTINATARIO]" />
+                    <inputColumn
+                      refId="Package\Proceso de Notificar\Lista de Contratos por Vencer.Inputs[OLE DB Destination Input].Columns[DESTINATARIO_COPIA]"
+                      cachedDataType="nText"
+                      cachedName="DESTINATARIO_COPIA"
+                      externalMetadataColumnId="Package\Proceso de Notificar\Lista de Contratos por Vencer.Inputs[OLE DB Destination Input].ExternalColumns[DESTINATARIO_COPIA]"
+                      lineageId="Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Outputs[Merge Join Output].Columns[DESTINATARIO_COPIA]" />
+                    <inputColumn
+                      refId="Package\Proceso de Notificar\Lista de Contratos por Vencer.Inputs[OLE DB Destination Input].Columns[DIAS_VENCIMIENTO]"
+                      cachedDataType="i4"
+                      cachedName="DIAS_VENCIMIENTO"
+                      externalMetadataColumnId="Package\Proceso de Notificar\Lista de Contratos por Vencer.Inputs[OLE DB Destination Input].ExternalColumns[DIAS_VENCIMIENTO]"
+                      lineageId="Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Outputs[Merge Join Output].Columns[DIAS_VENCIMIENTO]" />
+                    <inputColumn
+                      refId="Package\Proceso de Notificar\Lista de Contratos por Vencer.Inputs[OLE DB Destination Input].Columns[DIAS_LIMITE]"
+                      cachedDataType="i4"
+                      cachedName="DIAS_LIMITE"
+                      externalMetadataColumnId="Package\Proceso de Notificar\Lista de Contratos por Vencer.Inputs[OLE DB Destination Input].ExternalColumns[DIAS_LIMITE]"
+                      lineageId="Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Outputs[Merge Join Output].Columns[DIAS_LIMITE]" />
+                    <inputColumn
+                      refId="Package\Proceso de Notificar\Lista de Contratos por Vencer.Inputs[OLE DB Destination Input].Columns[NUMERO_ADENDA_CONCATENADO]"
+                      cachedDataType="wstr"
+                      cachedLength="80"
+                      cachedName="NUMERO_ADENDA_CONCATENADO"
+                      externalMetadataColumnId="Package\Proceso de Notificar\Lista de Contratos por Vencer.Inputs[OLE DB Destination Input].ExternalColumns[NUMERO_ADENDA_CONCATENADO]"
+                      lineageId="Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Outputs[Merge Join Output].Columns[NUMERO_ADENDA_CONCATENADO]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Proceso de Notificar\Lista de Contratos por Vencer.Inputs[OLE DB Destination Input].ExternalColumns[CODIGO_UNIDAD_OPERATIVA]"
+                      dataType="guid"
+                      name="CODIGO_UNIDAD_OPERATIVA" />
+                    <externalMetadataColumn
+                      refId="Package\Proceso de Notificar\Lista de Contratos por Vencer.Inputs[OLE DB Destination Input].ExternalColumns[NOMBRE]"
+                      dataType="wstr"
+                      length="500"
+                      name="NOMBRE" />
+                    <externalMetadataColumn
+                      refId="Package\Proceso de Notificar\Lista de Contratos por Vencer.Inputs[OLE DB Destination Input].ExternalColumns[NUMERO_CONTRATO]"
+                      dataType="wstr"
+                      length="100"
+                      name="NUMERO_CONTRATO" />
+                    <externalMetadataColumn
+                      refId="Package\Proceso de Notificar\Lista de Contratos por Vencer.Inputs[OLE DB Destination Input].ExternalColumns[NUMERO_DOCUMENTO]"
+                      dataType="wstr"
+                      length="100"
+                      name="NUMERO_DOCUMENTO" />
+                    <externalMetadataColumn
+                      refId="Package\Proceso de Notificar\Lista de Contratos por Vencer.Inputs[OLE DB Destination Input].ExternalColumns[PROVEEDOR]"
+                      dataType="wstr"
+                      length="500"
+                      name="PROVEEDOR" />
+                    <externalMetadataColumn
+                      refId="Package\Proceso de Notificar\Lista de Contratos por Vencer.Inputs[OLE DB Destination Input].ExternalColumns[FECHA_VENCIMIENTO]"
+                      dataType="dbTimeStamp"
+                      name="FECHA_VENCIMIENTO" />
+                    <externalMetadataColumn
+                      refId="Package\Proceso de Notificar\Lista de Contratos por Vencer.Inputs[OLE DB Destination Input].ExternalColumns[CONTENIDO]"
+                      dataType="nText"
+                      name="CONTENIDO" />
+                    <externalMetadataColumn
+                      refId="Package\Proceso de Notificar\Lista de Contratos por Vencer.Inputs[OLE DB Destination Input].ExternalColumns[EMISOR]"
+                      dataType="wstr"
+                      length="500"
+                      name="EMISOR" />
+                    <externalMetadataColumn
+                      refId="Package\Proceso de Notificar\Lista de Contratos por Vencer.Inputs[OLE DB Destination Input].ExternalColumns[ASUNTO]"
+                      dataType="nText"
+                      name="ASUNTO" />
+                    <externalMetadataColumn
+                      refId="Package\Proceso de Notificar\Lista de Contratos por Vencer.Inputs[OLE DB Destination Input].ExternalColumns[DESTINATARIO]"
+                      dataType="nText"
+                      name="DESTINATARIO" />
+                    <externalMetadataColumn
+                      refId="Package\Proceso de Notificar\Lista de Contratos por Vencer.Inputs[OLE DB Destination Input].ExternalColumns[DESTINATARIO_COPIA]"
+                      dataType="nText"
+                      name="DESTINATARIO_COPIA" />
+                    <externalMetadataColumn
+                      refId="Package\Proceso de Notificar\Lista de Contratos por Vencer.Inputs[OLE DB Destination Input].ExternalColumns[DIAS_VENCIMIENTO]"
+                      dataType="i4"
+                      name="DIAS_VENCIMIENTO" />
+                    <externalMetadataColumn
+                      refId="Package\Proceso de Notificar\Lista de Contratos por Vencer.Inputs[OLE DB Destination Input].ExternalColumns[DIAS_LIMITE]"
+                      dataType="i4"
+                      name="DIAS_LIMITE" />
+                    <externalMetadataColumn
+                      refId="Package\Proceso de Notificar\Lista de Contratos por Vencer.Inputs[OLE DB Destination Input].ExternalColumns[NUMERO_ADENDA_CONCATENADO]"
+                      dataType="wstr"
+                      length="80"
+                      name="NUMERO_ADENDA_CONCATENADO" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Proceso de Notificar\Lista de Contratos por Vencer.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Proceso de Notificar\Lista de Contratos por Vencer.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Proceso de Notificar\Lista de Contratos por Vencer.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Proceso de Notificar\Lista de Contratos por Vencer.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Proceso de Notificar\Lista de Contratos por Vencer.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Proceso de Notificar\Lista de Contratos por Vencer.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa"
+              componentClassID="{14D43A4F-D7BD-489D-829E-6DE35750CFE4}"
+              contactInfo="Merge Join;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combine two sorted data flows into one using the FULL, LEFT, or INNER join. We recommend this transformation when data flows can be sorted at their sources."
+              name="Obteniendo el Nombre de Unidad Operativa"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of join to perform."
+                  name="JoinType"
+                  typeConverter="JoinType">2</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the number of columns in the ordering key."
+                  name="NumKeyColumns">1</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the null values are treated as equal values."
+                  name="TreatNullsAsEqual">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Indicates the requested maximum buffers per input before blocking."
+                  name="MaxBuffersPerInput">5</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Inputs[Merge Join Left Input]"
+                  hasSideEffects="true"
+                  name="Merge Join Left Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Inputs[Merge Join Left Input].Columns[CODIGO_UNIDAD_OPERATIVA]"
+                      cachedDataType="guid"
+                      cachedName="CODIGO_UNIDAD_OPERATIVA"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Proceso de Notificar\Ordenar Contratos.Outputs[Sort Output].Columns[CODIGO_UNIDAD_OPERATIVA]" />
+                    <inputColumn
+                      refId="Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Inputs[Merge Join Left Input].Columns[CANTIDAD_DIAS]"
+                      cachedDataType="i4"
+                      cachedName="CANTIDAD_DIAS"
+                      cachedSortKeyPosition="2"
+                      lineageId="Package\Proceso de Notificar\Ordenar Contratos.Outputs[Sort Output].Columns[CANTIDAD_DIAS]" />
+                    <inputColumn
+                      refId="Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Inputs[Merge Join Left Input].Columns[NUMERO_CONTRATO]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="NUMERO_CONTRATO"
+                      lineageId="Package\Proceso de Notificar\Ordenar Contratos.Outputs[Sort Output].Columns[NUMERO_CONTRATO]" />
+                    <inputColumn
+                      refId="Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Inputs[Merge Join Left Input].Columns[NUMERO_DOCUMENTO]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="NUMERO_DOCUMENTO"
+                      lineageId="Package\Proceso de Notificar\Ordenar Contratos.Outputs[Sort Output].Columns[NUMERO_DOCUMENTO]" />
+                    <inputColumn
+                      refId="Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Inputs[Merge Join Left Input].Columns[PROVEEDOR]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="PROVEEDOR"
+                      lineageId="Package\Proceso de Notificar\Ordenar Contratos.Outputs[Sort Output].Columns[PROVEEDOR]" />
+                    <inputColumn
+                      refId="Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Inputs[Merge Join Left Input].Columns[FECHA_VENCIMIENTO]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="FECHA_VENCIMIENTO"
+                      lineageId="Package\Proceso de Notificar\Ordenar Contratos.Outputs[Sort Output].Columns[FECHA_VENCIMIENTO]" />
+                    <inputColumn
+                      refId="Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Inputs[Merge Join Left Input].Columns[NUMERO_ADENDA_CONCATENADO]"
+                      cachedDataType="wstr"
+                      cachedLength="80"
+                      cachedName="NUMERO_ADENDA_CONCATENADO"
+                      cachedSortKeyPosition="3"
+                      lineageId="Package\Proceso de Notificar\Ordenar Contratos.Outputs[Sort Output].Columns[NUMERO_ADENDA_CONCATENADO]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Inputs[Merge Join Right Input]"
+                  hasSideEffects="true"
+                  name="Merge Join Right Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Inputs[Merge Join Right Input].Columns[CODIGO_UNIDAD_OPERATIVA]"
+                      cachedDataType="guid"
+                      cachedName="CODIGO_UNIDAD_OPERATIVA"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Proceso de Notificar\Ordenar Unidades Operativas.Outputs[Sort Output].Columns[CODIGO_UNIDAD_OPERATIVA]" />
+                    <inputColumn
+                      refId="Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Inputs[Merge Join Right Input].Columns[CANTIDAD_DIAS]"
+                      cachedDataType="i4"
+                      cachedName="CANTIDAD_DIAS"
+                      cachedSortKeyPosition="2"
+                      lineageId="Package\Proceso de Notificar\Ordenar Unidades Operativas.Outputs[Sort Output].Columns[CANTIDAD_DIAS]" />
+                    <inputColumn
+                      refId="Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Inputs[Merge Join Right Input].Columns[NOMBRE]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="NOMBRE"
+                      lineageId="Package\Proceso de Notificar\Ordenar Unidades Operativas.Outputs[Sort Output].Columns[NOMBRE]" />
+                    <inputColumn
+                      refId="Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Inputs[Merge Join Right Input].Columns[CONTENIDO]"
+                      cachedDataType="nText"
+                      cachedName="CONTENIDO"
+                      lineageId="Package\Proceso de Notificar\Ordenar Unidades Operativas.Outputs[Sort Output].Columns[CONTENIDO]" />
+                    <inputColumn
+                      refId="Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Inputs[Merge Join Right Input].Columns[EMISOR]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="EMISOR"
+                      lineageId="Package\Proceso de Notificar\Ordenar Unidades Operativas.Outputs[Sort Output].Columns[EMISOR]" />
+                    <inputColumn
+                      refId="Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Inputs[Merge Join Right Input].Columns[ASUNTO]"
+                      cachedDataType="nText"
+                      cachedName="ASUNTO"
+                      lineageId="Package\Proceso de Notificar\Ordenar Unidades Operativas.Outputs[Sort Output].Columns[ASUNTO]" />
+                    <inputColumn
+                      refId="Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Inputs[Merge Join Right Input].Columns[DESTINATARIO]"
+                      cachedDataType="nText"
+                      cachedName="DESTINATARIO"
+                      lineageId="Package\Proceso de Notificar\Ordenar Unidades Operativas.Outputs[Sort Output].Columns[DESTINATARIO]" />
+                    <inputColumn
+                      refId="Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Inputs[Merge Join Right Input].Columns[DESTINATARIO_COPIA]"
+                      cachedDataType="nText"
+                      cachedName="DESTINATARIO_COPIA"
+                      lineageId="Package\Proceso de Notificar\Ordenar Unidades Operativas.Outputs[Sort Output].Columns[DESTINATARIO_COPIA]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Outputs[Merge Join Output]"
+                  isSorted="true"
+                  name="Merge Join Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Outputs[Merge Join Output].Columns[CODIGO_UNIDAD_OPERATIVA]"
+                      dataType="guid"
+                      lineageId="Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Outputs[Merge Join Output].Columns[CODIGO_UNIDAD_OPERATIVA]"
+                      name="CODIGO_UNIDAD_OPERATIVA"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Inputs[Merge Join Left Input].Columns[CODIGO_UNIDAD_OPERATIVA]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Outputs[Merge Join Output].Columns[NOMBRE]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Outputs[Merge Join Output].Columns[NOMBRE]"
+                      name="NOMBRE">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Inputs[Merge Join Right Input].Columns[NOMBRE]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Outputs[Merge Join Output].Columns[NUMERO_CONTRATO]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Outputs[Merge Join Output].Columns[NUMERO_CONTRATO]"
+                      name="NUMERO_CONTRATO">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Inputs[Merge Join Left Input].Columns[NUMERO_CONTRATO]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Outputs[Merge Join Output].Columns[NUMERO_DOCUMENTO]"
+                      dataType="wstr"
+                      length="20"
+                      lineageId="Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Outputs[Merge Join Output].Columns[NUMERO_DOCUMENTO]"
+                      name="NUMERO_DOCUMENTO">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Inputs[Merge Join Left Input].Columns[NUMERO_DOCUMENTO]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Outputs[Merge Join Output].Columns[PROVEEDOR]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Outputs[Merge Join Output].Columns[PROVEEDOR]"
+                      name="PROVEEDOR">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Inputs[Merge Join Left Input].Columns[PROVEEDOR]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Outputs[Merge Join Output].Columns[FECHA_VENCIMIENTO]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Outputs[Merge Join Output].Columns[FECHA_VENCIMIENTO]"
+                      name="FECHA_VENCIMIENTO">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Inputs[Merge Join Left Input].Columns[FECHA_VENCIMIENTO]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Outputs[Merge Join Output].Columns[CONTENIDO]"
+                      dataType="nText"
+                      lineageId="Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Outputs[Merge Join Output].Columns[CONTENIDO]"
+                      name="CONTENIDO">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Inputs[Merge Join Right Input].Columns[CONTENIDO]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Outputs[Merge Join Output].Columns[EMISOR]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Outputs[Merge Join Output].Columns[EMISOR]"
+                      name="EMISOR">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Inputs[Merge Join Right Input].Columns[EMISOR]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Outputs[Merge Join Output].Columns[ASUNTO]"
+                      dataType="nText"
+                      lineageId="Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Outputs[Merge Join Output].Columns[ASUNTO]"
+                      name="ASUNTO">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Inputs[Merge Join Right Input].Columns[ASUNTO]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Outputs[Merge Join Output].Columns[DESTINATARIO]"
+                      dataType="nText"
+                      lineageId="Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Outputs[Merge Join Output].Columns[DESTINATARIO]"
+                      name="DESTINATARIO">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Inputs[Merge Join Right Input].Columns[DESTINATARIO]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Outputs[Merge Join Output].Columns[DESTINATARIO_COPIA]"
+                      dataType="nText"
+                      lineageId="Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Outputs[Merge Join Output].Columns[DESTINATARIO_COPIA]"
+                      name="DESTINATARIO_COPIA">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Inputs[Merge Join Right Input].Columns[DESTINATARIO_COPIA]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Outputs[Merge Join Output].Columns[DIAS_VENCIMIENTO]"
+                      dataType="i4"
+                      lineageId="Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Outputs[Merge Join Output].Columns[DIAS_VENCIMIENTO]"
+                      name="DIAS_VENCIMIENTO">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Inputs[Merge Join Left Input].Columns[CANTIDAD_DIAS]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Outputs[Merge Join Output].Columns[DIAS_LIMITE]"
+                      dataType="i4"
+                      lineageId="Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Outputs[Merge Join Output].Columns[DIAS_LIMITE]"
+                      name="DIAS_LIMITE">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Inputs[Merge Join Right Input].Columns[CANTIDAD_DIAS]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Outputs[Merge Join Output].Columns[NUMERO_ADENDA_CONCATENADO]"
+                      dataType="wstr"
+                      length="80"
+                      lineageId="Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Outputs[Merge Join Output].Columns[NUMERO_ADENDA_CONCATENADO]"
+                      name="NUMERO_ADENDA_CONCATENADO">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Inputs[Merge Join Left Input].Columns[NUMERO_ADENDA_CONCATENADO]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Proceso de Notificar\Ordenar Contratos"
+              componentClassID="{5B1A3FF5-D366-4D75-AD1F-F19A36FCBEDB}"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Ordenar Contratos"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Proceso de Notificar\Ordenar Contratos.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Proceso de Notificar\Ordenar Contratos.Inputs[Sort Input].Columns[CODIGO_UNIDAD_OPERATIVA]"
+                      cachedDataType="guid"
+                      cachedName="CODIGO_UNIDAD_OPERATIVA"
+                      lineageId="Package\Proceso de Notificar\Contratos por Vencer.Outputs[OLE DB Source Output].Columns[CODIGO_UNIDAD_OPERATIVA]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Proceso de Notificar\Ordenar Contratos.Inputs[Sort Input].Columns[NUMERO_CONTRATO]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="NUMERO_CONTRATO"
+                      lineageId="Package\Proceso de Notificar\Contratos por Vencer.Outputs[OLE DB Source Output].Columns[NUMERO_CONTRATO]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Proceso de Notificar\Ordenar Contratos.Inputs[Sort Input].Columns[NUMERO_DOCUMENTO]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="NUMERO_DOCUMENTO"
+                      lineageId="Package\Proceso de Notificar\Contratos por Vencer.Outputs[OLE DB Source Output].Columns[NUMERO_DOCUMENTO]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Proceso de Notificar\Ordenar Contratos.Inputs[Sort Input].Columns[PROVEEDOR]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="PROVEEDOR"
+                      lineageId="Package\Proceso de Notificar\Contratos por Vencer.Outputs[OLE DB Source Output].Columns[PROVEEDOR]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Proceso de Notificar\Ordenar Contratos.Inputs[Sort Input].Columns[FECHA_VENCIMIENTO]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="FECHA_VENCIMIENTO"
+                      lineageId="Package\Proceso de Notificar\Contratos por Vencer.Outputs[OLE DB Source Output].Columns[FECHA_VENCIMIENTO]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Proceso de Notificar\Ordenar Contratos.Inputs[Sort Input].Columns[CANTIDAD_DIAS]"
+                      cachedDataType="i4"
+                      cachedName="CANTIDAD_DIAS"
+                      lineageId="Package\Proceso de Notificar\Contratos por Vencer.Outputs[OLE DB Source Output].Columns[CANTIDAD_DIAS]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">2</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Proceso de Notificar\Ordenar Contratos.Inputs[Sort Input].Columns[NUMERO_ADENDA_CONCATENADO]"
+                      cachedDataType="wstr"
+                      cachedLength="80"
+                      cachedName="NUMERO_ADENDA_CONCATENADO"
+                      lineageId="Package\Proceso de Notificar\Contratos por Vencer.Outputs[OLE DB Source Output].Columns[NUMERO_ADENDA_CONCATENADO]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">3</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Proceso de Notificar\Ordenar Contratos.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Proceso de Notificar\Ordenar Contratos.Outputs[Sort Output].Columns[CODIGO_UNIDAD_OPERATIVA]"
+                      dataType="guid"
+                      lineageId="Package\Proceso de Notificar\Ordenar Contratos.Outputs[Sort Output].Columns[CODIGO_UNIDAD_OPERATIVA]"
+                      name="CODIGO_UNIDAD_OPERATIVA"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Proceso de Notificar\Contratos por Vencer.Outputs[OLE DB Source Output].Columns[CODIGO_UNIDAD_OPERATIVA]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Proceso de Notificar\Ordenar Contratos.Outputs[Sort Output].Columns[NUMERO_CONTRATO]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Proceso de Notificar\Ordenar Contratos.Outputs[Sort Output].Columns[NUMERO_CONTRATO]"
+                      name="NUMERO_CONTRATO">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Proceso de Notificar\Contratos por Vencer.Outputs[OLE DB Source Output].Columns[NUMERO_CONTRATO]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Proceso de Notificar\Ordenar Contratos.Outputs[Sort Output].Columns[NUMERO_DOCUMENTO]"
+                      dataType="wstr"
+                      length="20"
+                      lineageId="Package\Proceso de Notificar\Ordenar Contratos.Outputs[Sort Output].Columns[NUMERO_DOCUMENTO]"
+                      name="NUMERO_DOCUMENTO">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Proceso de Notificar\Contratos por Vencer.Outputs[OLE DB Source Output].Columns[NUMERO_DOCUMENTO]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Proceso de Notificar\Ordenar Contratos.Outputs[Sort Output].Columns[PROVEEDOR]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Proceso de Notificar\Ordenar Contratos.Outputs[Sort Output].Columns[PROVEEDOR]"
+                      name="PROVEEDOR">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Proceso de Notificar\Contratos por Vencer.Outputs[OLE DB Source Output].Columns[PROVEEDOR]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Proceso de Notificar\Ordenar Contratos.Outputs[Sort Output].Columns[FECHA_VENCIMIENTO]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Proceso de Notificar\Ordenar Contratos.Outputs[Sort Output].Columns[FECHA_VENCIMIENTO]"
+                      name="FECHA_VENCIMIENTO">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Proceso de Notificar\Contratos por Vencer.Outputs[OLE DB Source Output].Columns[FECHA_VENCIMIENTO]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Proceso de Notificar\Ordenar Contratos.Outputs[Sort Output].Columns[CANTIDAD_DIAS]"
+                      dataType="i4"
+                      lineageId="Package\Proceso de Notificar\Ordenar Contratos.Outputs[Sort Output].Columns[CANTIDAD_DIAS]"
+                      name="CANTIDAD_DIAS"
+                      sortKeyPosition="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Proceso de Notificar\Contratos por Vencer.Outputs[OLE DB Source Output].Columns[CANTIDAD_DIAS]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Proceso de Notificar\Ordenar Contratos.Outputs[Sort Output].Columns[NUMERO_ADENDA_CONCATENADO]"
+                      dataType="wstr"
+                      length="80"
+                      lineageId="Package\Proceso de Notificar\Ordenar Contratos.Outputs[Sort Output].Columns[NUMERO_ADENDA_CONCATENADO]"
+                      name="NUMERO_ADENDA_CONCATENADO"
+                      sortKeyPosition="3">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Proceso de Notificar\Contratos por Vencer.Outputs[OLE DB Source Output].Columns[NUMERO_ADENDA_CONCATENADO]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Proceso de Notificar\Ordenar Unidades Operativas"
+              componentClassID="{5B1A3FF5-D366-4D75-AD1F-F19A36FCBEDB}"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Ordenar Unidades Operativas"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Proceso de Notificar\Ordenar Unidades Operativas.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Proceso de Notificar\Ordenar Unidades Operativas.Inputs[Sort Input].Columns[CODIGO_UNIDAD_OPERATIVA]"
+                      cachedDataType="guid"
+                      cachedName="CODIGO_UNIDAD_OPERATIVA"
+                      lineageId="Package\Proceso de Notificar\Unidades Operativas.Outputs[OLE DB Source Output].Columns[CODIGO_UNIDAD_OPERATIVA]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Proceso de Notificar\Ordenar Unidades Operativas.Inputs[Sort Input].Columns[NOMBRE]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="NOMBRE"
+                      lineageId="Package\Proceso de Notificar\Unidades Operativas.Outputs[OLE DB Source Output].Columns[NOMBRE]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Proceso de Notificar\Ordenar Unidades Operativas.Inputs[Sort Input].Columns[CONTENIDO]"
+                      cachedDataType="nText"
+                      cachedName="CONTENIDO"
+                      lineageId="Package\Proceso de Notificar\Unidades Operativas.Outputs[OLE DB Source Output].Columns[CONTENIDO]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Proceso de Notificar\Ordenar Unidades Operativas.Inputs[Sort Input].Columns[ASUNTO]"
+                      cachedDataType="nText"
+                      cachedName="ASUNTO"
+                      lineageId="Package\Proceso de Notificar\Unidades Operativas.Outputs[OLE DB Source Output].Columns[ASUNTO]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Proceso de Notificar\Ordenar Unidades Operativas.Inputs[Sort Input].Columns[EMISOR]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="EMISOR"
+                      lineageId="Package\Proceso de Notificar\Unidades Operativas.Outputs[OLE DB Source Output].Columns[EMISOR]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Proceso de Notificar\Ordenar Unidades Operativas.Inputs[Sort Input].Columns[DESTINATARIO]"
+                      cachedDataType="nText"
+                      cachedName="DESTINATARIO"
+                      lineageId="Package\Proceso de Notificar\Unidades Operativas.Outputs[OLE DB Source Output].Columns[DESTINATARIO]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Proceso de Notificar\Ordenar Unidades Operativas.Inputs[Sort Input].Columns[DESTINATARIO_COPIA]"
+                      cachedDataType="nText"
+                      cachedName="DESTINATARIO_COPIA"
+                      lineageId="Package\Proceso de Notificar\Unidades Operativas.Outputs[OLE DB Source Output].Columns[DESTINATARIO_COPIA]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Proceso de Notificar\Ordenar Unidades Operativas.Inputs[Sort Input].Columns[CANTIDAD_DIAS]"
+                      cachedDataType="i4"
+                      cachedName="CANTIDAD_DIAS"
+                      lineageId="Package\Proceso de Notificar\Unidades Operativas.Outputs[OLE DB Source Output].Columns[CANTIDAD_DIAS]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">2</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Proceso de Notificar\Ordenar Unidades Operativas.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Proceso de Notificar\Ordenar Unidades Operativas.Outputs[Sort Output].Columns[CODIGO_UNIDAD_OPERATIVA]"
+                      dataType="guid"
+                      lineageId="Package\Proceso de Notificar\Ordenar Unidades Operativas.Outputs[Sort Output].Columns[CODIGO_UNIDAD_OPERATIVA]"
+                      name="CODIGO_UNIDAD_OPERATIVA"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Proceso de Notificar\Unidades Operativas.Outputs[OLE DB Source Output].Columns[CODIGO_UNIDAD_OPERATIVA]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Proceso de Notificar\Ordenar Unidades Operativas.Outputs[Sort Output].Columns[NOMBRE]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Proceso de Notificar\Ordenar Unidades Operativas.Outputs[Sort Output].Columns[NOMBRE]"
+                      name="NOMBRE">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Proceso de Notificar\Unidades Operativas.Outputs[OLE DB Source Output].Columns[NOMBRE]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Proceso de Notificar\Ordenar Unidades Operativas.Outputs[Sort Output].Columns[CONTENIDO]"
+                      dataType="nText"
+                      lineageId="Package\Proceso de Notificar\Ordenar Unidades Operativas.Outputs[Sort Output].Columns[CONTENIDO]"
+                      name="CONTENIDO">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Proceso de Notificar\Unidades Operativas.Outputs[OLE DB Source Output].Columns[CONTENIDO]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Proceso de Notificar\Ordenar Unidades Operativas.Outputs[Sort Output].Columns[ASUNTO]"
+                      dataType="nText"
+                      lineageId="Package\Proceso de Notificar\Ordenar Unidades Operativas.Outputs[Sort Output].Columns[ASUNTO]"
+                      name="ASUNTO">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Proceso de Notificar\Unidades Operativas.Outputs[OLE DB Source Output].Columns[ASUNTO]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Proceso de Notificar\Ordenar Unidades Operativas.Outputs[Sort Output].Columns[EMISOR]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Proceso de Notificar\Ordenar Unidades Operativas.Outputs[Sort Output].Columns[EMISOR]"
+                      name="EMISOR">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Proceso de Notificar\Unidades Operativas.Outputs[OLE DB Source Output].Columns[EMISOR]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Proceso de Notificar\Ordenar Unidades Operativas.Outputs[Sort Output].Columns[DESTINATARIO]"
+                      dataType="nText"
+                      lineageId="Package\Proceso de Notificar\Ordenar Unidades Operativas.Outputs[Sort Output].Columns[DESTINATARIO]"
+                      name="DESTINATARIO">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Proceso de Notificar\Unidades Operativas.Outputs[OLE DB Source Output].Columns[DESTINATARIO]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Proceso de Notificar\Ordenar Unidades Operativas.Outputs[Sort Output].Columns[DESTINATARIO_COPIA]"
+                      dataType="nText"
+                      lineageId="Package\Proceso de Notificar\Ordenar Unidades Operativas.Outputs[Sort Output].Columns[DESTINATARIO_COPIA]"
+                      name="DESTINATARIO_COPIA">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Proceso de Notificar\Unidades Operativas.Outputs[OLE DB Source Output].Columns[DESTINATARIO_COPIA]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Proceso de Notificar\Ordenar Unidades Operativas.Outputs[Sort Output].Columns[CANTIDAD_DIAS]"
+                      dataType="i4"
+                      lineageId="Package\Proceso de Notificar\Ordenar Unidades Operativas.Outputs[Sort Output].Columns[CANTIDAD_DIAS]"
+                      name="CANTIDAD_DIAS"
+                      sortKeyPosition="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Proceso de Notificar\Unidades Operativas.Outputs[OLE DB Source Output].Columns[CANTIDAD_DIAS]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Proceso de Notificar\Unidades Operativas"
+              componentClassID="{165A526D-D5DE-47FF-96A6-F8274C19826B}"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Unidades Operativas"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">DECLARE @CODIGO_SISTEMA UNIQUEIDENTIFIER
+DECLARE @CONTENIDO NVARCHAR(MAX)
+DECLARE @ASUNTO NVARCHAR(MAX)
+DECLARE @EMISOR NVARCHAR(50)
+DECLARE @DESTINATARIO NVARCHAR(MAX)
+DECLARE @DESTINATARIO_COPIA NVARCHAR(MAX)
+DECLARE @CANTIDAD_DIAS INT
+
+SELECT	@EMISOR = VALOR
+FROM	GRL.FN_LISTAR_VALORES_PARAMETRO('STR',0,'SGC','00034',3)
+WHERE	CODIGO = '01'
+
+SELECT	@CANTIDAD_DIAS = CONVERT(INT,VALOR)
+FROM	GRL.FN_LISTAR_VALORES_PARAMETRO('STR',0,'SGC','00031',3)
+WHERE	CODIGO = '02'
+
+SELECT	@CODIGO_SISTEMA = CODIGO_SISTEMA
+FROM	GRL.SISTEMA
+WHERE	CODIGO_IDENTIFICADOR = 'SGC'
+
+SELECT	@CONTENIDO = CONTENIDO,
+        @ASUNTO = ASUNTO,
+		@DESTINATARIO = DESTINATARIO,
+		@DESTINATARIO_COPIA = DESTINATARIO_COPIA
+FROM	GRL.PLANTILLA_NOTIFICACION
+WHERE	CODIGO_SISTEMA = @CODIGO_SISTEMA
+AND		CODIGO_TIPO_NOTIFICACION = '01'
+
+SELECT	CODIGO_UNIDAD_OPERATIVA,
+		NOMBRE,
+		@CONTENIDO CONTENIDO,
+		@ASUNTO ASUNTO,
+        @EMISOR EMISOR,
+		@DESTINATARIO DESTINATARIO,
+		@DESTINATARIO_COPIA DESTINATARIO_COPIA,
+                                      @CANTIDAD_DIAS CANTIDAD_DIAS
+FROM	GRL.UNIDAD_OPERATIVA
+WHERE	ESTADO_REGISTRO = '1'</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Proceso de Notificar\Unidades Operativas.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[10.244.4.21.STRACON_POLITICAS.USR_STRACON_DESARROLLO]"
+                  connectionManagerRefId="Package.ConnectionManagers[10.244.4.21.STRACON_POLITICAS.USR_STRACON_DESARROLLO]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Proceso de Notificar\Unidades Operativas.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Proceso de Notificar\Unidades Operativas.Outputs[OLE DB Source Output].Columns[CODIGO_UNIDAD_OPERATIVA]"
+                      dataType="guid"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Proceso de Notificar\Unidades Operativas.Outputs[OLE DB Source Output].ExternalColumns[CODIGO_UNIDAD_OPERATIVA]"
+                      lineageId="Package\Proceso de Notificar\Unidades Operativas.Outputs[OLE DB Source Output].Columns[CODIGO_UNIDAD_OPERATIVA]"
+                      name="CODIGO_UNIDAD_OPERATIVA"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Proceso de Notificar\Unidades Operativas.Outputs[OLE DB Source Output].Columns[NOMBRE]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Proceso de Notificar\Unidades Operativas.Outputs[OLE DB Source Output].ExternalColumns[NOMBRE]"
+                      length="255"
+                      lineageId="Package\Proceso de Notificar\Unidades Operativas.Outputs[OLE DB Source Output].Columns[NOMBRE]"
+                      name="NOMBRE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Proceso de Notificar\Unidades Operativas.Outputs[OLE DB Source Output].Columns[CONTENIDO]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Proceso de Notificar\Unidades Operativas.Outputs[OLE DB Source Output].ExternalColumns[CONTENIDO]"
+                      lineageId="Package\Proceso de Notificar\Unidades Operativas.Outputs[OLE DB Source Output].Columns[CONTENIDO]"
+                      name="CONTENIDO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Proceso de Notificar\Unidades Operativas.Outputs[OLE DB Source Output].Columns[ASUNTO]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Proceso de Notificar\Unidades Operativas.Outputs[OLE DB Source Output].ExternalColumns[ASUNTO]"
+                      lineageId="Package\Proceso de Notificar\Unidades Operativas.Outputs[OLE DB Source Output].Columns[ASUNTO]"
+                      name="ASUNTO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Proceso de Notificar\Unidades Operativas.Outputs[OLE DB Source Output].Columns[EMISOR]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Proceso de Notificar\Unidades Operativas.Outputs[OLE DB Source Output].ExternalColumns[EMISOR]"
+                      length="50"
+                      lineageId="Package\Proceso de Notificar\Unidades Operativas.Outputs[OLE DB Source Output].Columns[EMISOR]"
+                      name="EMISOR"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Proceso de Notificar\Unidades Operativas.Outputs[OLE DB Source Output].Columns[DESTINATARIO]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Proceso de Notificar\Unidades Operativas.Outputs[OLE DB Source Output].ExternalColumns[DESTINATARIO]"
+                      lineageId="Package\Proceso de Notificar\Unidades Operativas.Outputs[OLE DB Source Output].Columns[DESTINATARIO]"
+                      name="DESTINATARIO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Proceso de Notificar\Unidades Operativas.Outputs[OLE DB Source Output].Columns[DESTINATARIO_COPIA]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Proceso de Notificar\Unidades Operativas.Outputs[OLE DB Source Output].ExternalColumns[DESTINATARIO_COPIA]"
+                      lineageId="Package\Proceso de Notificar\Unidades Operativas.Outputs[OLE DB Source Output].Columns[DESTINATARIO_COPIA]"
+                      name="DESTINATARIO_COPIA"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Proceso de Notificar\Unidades Operativas.Outputs[OLE DB Source Output].Columns[CANTIDAD_DIAS]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Proceso de Notificar\Unidades Operativas.Outputs[OLE DB Source Output].ExternalColumns[CANTIDAD_DIAS]"
+                      lineageId="Package\Proceso de Notificar\Unidades Operativas.Outputs[OLE DB Source Output].Columns[CANTIDAD_DIAS]"
+                      name="CANTIDAD_DIAS"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Proceso de Notificar\Unidades Operativas.Outputs[OLE DB Source Output].ExternalColumns[CODIGO_UNIDAD_OPERATIVA]"
+                      dataType="guid"
+                      name="CODIGO_UNIDAD_OPERATIVA" />
+                    <externalMetadataColumn
+                      refId="Package\Proceso de Notificar\Unidades Operativas.Outputs[OLE DB Source Output].ExternalColumns[NOMBRE]"
+                      dataType="wstr"
+                      length="255"
+                      name="NOMBRE" />
+                    <externalMetadataColumn
+                      refId="Package\Proceso de Notificar\Unidades Operativas.Outputs[OLE DB Source Output].ExternalColumns[CONTENIDO]"
+                      dataType="nText"
+                      name="CONTENIDO" />
+                    <externalMetadataColumn
+                      refId="Package\Proceso de Notificar\Unidades Operativas.Outputs[OLE DB Source Output].ExternalColumns[ASUNTO]"
+                      dataType="nText"
+                      name="ASUNTO" />
+                    <externalMetadataColumn
+                      refId="Package\Proceso de Notificar\Unidades Operativas.Outputs[OLE DB Source Output].ExternalColumns[EMISOR]"
+                      dataType="wstr"
+                      length="50"
+                      name="EMISOR" />
+                    <externalMetadataColumn
+                      refId="Package\Proceso de Notificar\Unidades Operativas.Outputs[OLE DB Source Output].ExternalColumns[DESTINATARIO]"
+                      dataType="nText"
+                      name="DESTINATARIO" />
+                    <externalMetadataColumn
+                      refId="Package\Proceso de Notificar\Unidades Operativas.Outputs[OLE DB Source Output].ExternalColumns[DESTINATARIO_COPIA]"
+                      dataType="nText"
+                      name="DESTINATARIO_COPIA" />
+                    <externalMetadataColumn
+                      refId="Package\Proceso de Notificar\Unidades Operativas.Outputs[OLE DB Source Output].ExternalColumns[CANTIDAD_DIAS]"
+                      dataType="i4"
+                      name="CANTIDAD_DIAS" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Proceso de Notificar\Unidades Operativas.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Proceso de Notificar\Unidades Operativas.Outputs[OLE DB Source Error Output].Columns[CODIGO_UNIDAD_OPERATIVA]"
+                      dataType="guid"
+                      lineageId="Package\Proceso de Notificar\Unidades Operativas.Outputs[OLE DB Source Error Output].Columns[CODIGO_UNIDAD_OPERATIVA]"
+                      name="CODIGO_UNIDAD_OPERATIVA" />
+                    <outputColumn
+                      refId="Package\Proceso de Notificar\Unidades Operativas.Outputs[OLE DB Source Error Output].Columns[NOMBRE]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Proceso de Notificar\Unidades Operativas.Outputs[OLE DB Source Error Output].Columns[NOMBRE]"
+                      name="NOMBRE" />
+                    <outputColumn
+                      refId="Package\Proceso de Notificar\Unidades Operativas.Outputs[OLE DB Source Error Output].Columns[CONTENIDO]"
+                      dataType="nText"
+                      lineageId="Package\Proceso de Notificar\Unidades Operativas.Outputs[OLE DB Source Error Output].Columns[CONTENIDO]"
+                      name="CONTENIDO" />
+                    <outputColumn
+                      refId="Package\Proceso de Notificar\Unidades Operativas.Outputs[OLE DB Source Error Output].Columns[ASUNTO]"
+                      dataType="nText"
+                      lineageId="Package\Proceso de Notificar\Unidades Operativas.Outputs[OLE DB Source Error Output].Columns[ASUNTO]"
+                      name="ASUNTO" />
+                    <outputColumn
+                      refId="Package\Proceso de Notificar\Unidades Operativas.Outputs[OLE DB Source Error Output].Columns[EMISOR]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Proceso de Notificar\Unidades Operativas.Outputs[OLE DB Source Error Output].Columns[EMISOR]"
+                      name="EMISOR" />
+                    <outputColumn
+                      refId="Package\Proceso de Notificar\Unidades Operativas.Outputs[OLE DB Source Error Output].Columns[DESTINATARIO]"
+                      dataType="nText"
+                      lineageId="Package\Proceso de Notificar\Unidades Operativas.Outputs[OLE DB Source Error Output].Columns[DESTINATARIO]"
+                      name="DESTINATARIO" />
+                    <outputColumn
+                      refId="Package\Proceso de Notificar\Unidades Operativas.Outputs[OLE DB Source Error Output].Columns[DESTINATARIO_COPIA]"
+                      dataType="nText"
+                      lineageId="Package\Proceso de Notificar\Unidades Operativas.Outputs[OLE DB Source Error Output].Columns[DESTINATARIO_COPIA]"
+                      name="DESTINATARIO_COPIA" />
+                    <outputColumn
+                      refId="Package\Proceso de Notificar\Unidades Operativas.Outputs[OLE DB Source Error Output].Columns[CANTIDAD_DIAS]"
+                      dataType="i4"
+                      lineageId="Package\Proceso de Notificar\Unidades Operativas.Outputs[OLE DB Source Error Output].Columns[CANTIDAD_DIAS]"
+                      name="CANTIDAD_DIAS" />
+                    <outputColumn
+                      refId="Package\Proceso de Notificar\Unidades Operativas.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Proceso de Notificar\Unidades Operativas.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Proceso de Notificar\Unidades Operativas.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Proceso de Notificar\Unidades Operativas.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Proceso de Notificar.Paths[Merge Join Output]"
+              endId="Package\Proceso de Notificar\Lista de Contratos por Vencer.Inputs[OLE DB Destination Input]"
+              name="Merge Join Output"
+              startId="Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Outputs[Merge Join Output]" />
+            <path
+              refId="Package\Proceso de Notificar.Paths[OLE DB Source Output1]"
+              endId="Package\Proceso de Notificar\Ordenar Contratos.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\Proceso de Notificar\Contratos por Vencer.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Proceso de Notificar.Paths[OLE DB Source Output]"
+              endId="Package\Proceso de Notificar\Ordenar Unidades Operativas.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\Proceso de Notificar\Unidades Operativas.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Proceso de Notificar.Paths[Sort Output1]"
+              endId="Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Inputs[Merge Join Left Input]"
+              name="Sort Output"
+              startId="Package\Proceso de Notificar\Ordenar Contratos.Outputs[Sort Output]" />
+            <path
+              refId="Package\Proceso de Notificar.Paths[Sort Output]"
+              endId="Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa.Inputs[Merge Join Right Input]"
+              name="Sort Output"
+              startId="Package\Proceso de Notificar\Ordenar Unidades Operativas.Outputs[Sort Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{D7EC7FCA-6375-4FB5-B9F8-FA3052FADABA}"
+      DTS:From="Package\Limpiar Tabla de Contratos por Vencer"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Proceso de Notificar" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{F1C17960-81E3-4D48-BB6B-EA5D369BFFC7}"
+      DTS:From="Package\Proceso de Notificar"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Borramos los Contratos que exceden la fecha limite" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{A5898DDD-B14F-4F95-8589-9D5D19B7B61E}"
+      DTS:From="Package\Borramos los Contratos que exceden la fecha limite"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\Cuerpo del Correo" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="sql11">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="320,42"
+          Id="Package\Borramos los Contratos que exceden la fecha limite"
+          TopLeft="114.714286697154,216.600002771266" />
+        <NodeLayout
+          Size="164,42"
+          Id="Package\Cuerpo del Correo"
+          TopLeft="539.000003610339,212.976469914723" />
+        <NodeLayout
+          Size="261,42"
+          Id="Package\Limpiar Tabla de Contratos por Vencer"
+          TopLeft="138,32" />
+        <NodeLayout
+          Size="173,42"
+          Id="Package\Proceso de Notificar"
+          TopLeft="188,125" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="271.5,74">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,51"
+              Start="0,0"
+              End="0,43.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,43.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="274.607143348577,167">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,49.600002771266"
+              Start="0,0"
+              End="0,42.100002771266">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,42.100002771266" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="434.714286697154,235.788236342994">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="104.285716913185,0"
+              Start="0,0"
+              End="96.7857169131846,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="96.7857169131846,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Proceso de Notificar">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="166,42"
+          Id="Package\Proceso de Notificar\Ordenar Contratos"
+          TopLeft="121,107" />
+        <NodeLayout
+          Size="285,42"
+          Id="Package\Proceso de Notificar\Obteniendo el Nombre de Unidad Operativa"
+          TopLeft="213.57142858116,202.388235285538" />
+        <NodeLayout
+          Size="176,42"
+          Id="Package\Proceso de Notificar\Unidades Operativas"
+          TopLeft="440,14" />
+        <NodeLayout
+          Size="217,42"
+          Id="Package\Proceso de Notificar\Ordenar Unidades Operativas"
+          TopLeft="422,105" />
+        <NodeLayout
+          Size="179,42"
+          Id="Package\Proceso de Notificar\Contratos por Vencer"
+          TopLeft="117,15" />
+        <NodeLayout
+          Size="219,42"
+          Id="Package\Proceso de Notificar\Lista de Contratos por Vencer"
+          TopLeft="249,286" />
+        <EdgeLayout
+          Id="Package\Proceso de Notificar.Paths[Sort Output1]"
+          TopLeft="204.2,148.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="105.638095247827,53.7882352855379"
+              Start="0,0"
+              End="105.638095247827,46.2882352855379">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.0926454105891" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,28.0926454105891"
+                    Point2="0,32.0926454105891"
+                    Point3="4,32.0926454105891" />
+                  <mssgle:LineSegment
+                    End="101.638095247827,32.0926454105891" />
+                  <mssgle:CubicBezierSegment
+                    Point1="101.638095247827,32.0926454105891"
+                    Point2="105.638095247827,32.0926454105891"
+                    Point3="105.638095247827,36.0926454105891" />
+                  <mssgle:LineSegment
+                    End="105.638095247827,46.2882352855379" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Proceso de Notificar.Paths[Sort Output]"
+          TopLeft="530.4,146.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-128.295238085507,55.7882352855379"
+              Start="0,0"
+              End="-128.295238085507,48.2882352855379">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.2859414999745" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,29.2859414999745"
+                    Point2="0,33.2859414999745"
+                    Point3="-4,33.2859414999745" />
+                  <mssgle:LineSegment
+                    End="-124.295238085507,33.2859414999745" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-124.295238085507,33.2859414999745"
+                    Point2="-128.295238085507,33.2859414999745"
+                    Point3="-128.295238085507,37.2859414999745" />
+                  <mssgle:LineSegment
+                    End="-128.295238085507,48.2882352855379" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Proceso de Notificar.Paths[OLE DB Source Output1]"
+          TopLeft="205.25,57">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,50"
+              Start="0,0"
+              End="0,42.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,42.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Proceso de Notificar.Paths[OLE DB Source Output]"
+          TopLeft="529.25,56">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,49"
+              Start="0,0"
+              End="0,41.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,41.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Proceso de Notificar.Paths[Merge Join Output]"
+          TopLeft="357.28571429058,243.988235285538">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,42.0117647144621"
+              Start="0,0"
+              End="0,34.5117647144621">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.5117647144621" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Proceso de Notificar\Unidades Operativas">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Proceso de Notificar\Contratos por Vencer">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Proceso de Notificar\Lista de Contratos por Vencer">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

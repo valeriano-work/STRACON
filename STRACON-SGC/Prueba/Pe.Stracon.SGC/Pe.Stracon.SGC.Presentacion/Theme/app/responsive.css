@@ -1,0 +1,75 @@
+﻿/**********************************************
+File : responsive.css;
+-----------------------------------------------
+Description:
+   - Reglas para modificaciones
+     en vista responsive.
+-----------------------------------------------
+Assigned to: Sebastian Yabiku        
+/*********************************************/
+@media screen and (max-width: 1366px) {
+    .view-home .images img {
+          width: 300px;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .view-home .images img {
+          width: 200px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .view-home .images, .view-home .list{
+        text-align:center;
+        display:block;
+    }
+    .view-home .list {
+        padding:20px 0;
+    }
+    .view-home .images img.image-two {
+        left:25%;
+        margin-left:60px;
+    }
+    .lay-GmdHeader h1 {
+        font-size: 14px;
+        margin-top: 19px;
+    }
+    .comp-BtnUser .btn .name{
+        display:none;
+    }
+    .comp-BtnUser .dropdown-menu:before {
+        left:inherit;
+        right:19px;
+    }
+}
+@media screen and (max-width: 640px) {
+    .view-home .images img.image-two {
+        margin-left:30px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .view-home .images {
+        padding:0px;
+        margin-left:0px;
+    }
+    .view-home .images img {
+        margin:0px!important;
+        position:inherit!important;
+        left:0px!important;
+        top:0px!important;
+        margin-bottom:30px!important;
+        width:100%;
+        z-index:1!important;
+    }
+    .Gmd-logo {
+        display:none;
+    }
+    .lay-GmdHeader h1 {
+        font-size:12px;
+    }
+    .view-home .images h4 {
+        padding-top:0px;
+    }
+    .view-home .list {
+        padding:0px 0;
+    }
+}

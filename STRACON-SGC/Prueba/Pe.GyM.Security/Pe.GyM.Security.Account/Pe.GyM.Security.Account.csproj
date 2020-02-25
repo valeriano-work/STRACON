@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6EB294CD-E9AD-400B-A558-CBF33E200713}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Pe.GyM.Security.Account</RootNamespace>
+    <AssemblyName>Pe.GyM.Security.Account</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Pe.GyM.Security.Account.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'STRACON_QA|AnyCPU'">
+    <OutputPath>bin\STRACON_QA\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Adapter\CuentaUsuarioAdapter.cs" />
+    <Compile Include="Model\Control.cs" />
+    <Compile Include="Model\Empresa.cs" />
+    <Compile Include="Model\Modulo.cs" />
+    <Compile Include="Model\CuentaUsuario.cs" />
+    <Compile Include="Model\Vista.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\SRASecurityService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SSOAuthenticateService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service\CuentaUsuarioService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Service References\SRASecurityService\Pe.GyM.Security.Account.SRASecurityService.BusinessArea.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SRASecurityService\Pe.GyM.Security.Account.SRASecurityService.Company.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SRASecurityService\Pe.GyM.Security.Account.SRASecurityService.Profile.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SRASecurityService\Pe.GyM.Security.Account.SRASecurityService.Role.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SRASecurityService\Pe.GyM.Security.Account.SRASecurityService.SystemSRA.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SRASecurityService\Pe.GyM.Security.Account.SRASecurityService.UserProfile.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SRASecurityService\Pe.GyM.Security.Account.SRASecurityService.UserSRA.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SRASecurityService\SeguridadService.wsdl" />
+    <None Include="Service References\SRASecurityService\SeguridadService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRASecurityService\SeguridadService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRASecurityService\SeguridadService10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRASecurityService\SeguridadService11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRASecurityService\SeguridadService12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRASecurityService\SeguridadService13.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRASecurityService\SeguridadService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRASecurityService\SeguridadService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRASecurityService\SeguridadService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRASecurityService\SeguridadService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRASecurityService\SeguridadService6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRASecurityService\SeguridadService7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRASecurityService\SeguridadService8.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRASecurityService\SeguridadService9.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SSOAuthenticateService\AuthenticateService.wsdl" />
+    <None Include="Service References\SSOAuthenticateService\AuthenticateService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SSOAuthenticateService\AuthenticateService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SSOAuthenticateService\AuthenticateService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SSOAuthenticateService\Pe.GyM.Security.Account.SSOAuthenticateService.UserStatus.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSOAuthenticateService\Pe.GyM.Security.Account.SSOAuthenticateService.WebUser.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\SRASecurityService\" />
+    <WCFMetadataStorage Include="Service References\SSOAuthenticateService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SSOAuthenticateService\AuthenticateService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SSOAuthenticateService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SSOAuthenticateService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SSOAuthenticateService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SRASecurityService\SeguridadService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SRASecurityService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SRASecurityService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SRASecurityService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

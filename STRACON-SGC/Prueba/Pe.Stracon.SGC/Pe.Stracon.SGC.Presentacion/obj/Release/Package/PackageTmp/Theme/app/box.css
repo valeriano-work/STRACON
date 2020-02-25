@@ -1,0 +1,53 @@
+﻿/**********************************************
+File : box.css;
+-----------------------------------------------
+Description:
+   - cajas reutilizables.
+-----------------------------------------------
+Assigned to: Sebastian Yabiku        
+/*********************************************/
+.wrap-MarcoDocumento {
+      border: 1px solid #cacaca;
+      overflow: auto;
+      max-height: 380px;
+}
+.box-MardocumentoA4 {
+    /*width:2480px;*/
+      width: 20cm;
+      padding: 1cm 2cm;
+}
+.box-MarcoDocumento {
+    /*padding: 15px;*/
+    overflow: hidden;
+    overflow-y: auto;    
+}
+.box-MinHeightModal {
+    max-height: 380px;
+    overflow: hidden;
+    overflow-y: auto;
+    padding:5px;
+    border: 1px solid #ccc;
+}
+.box-ParrafosObservacion {
+    height: 170px;
+    max-height: 170px;
+    overflow: hidden;
+    overflow-y: auto;
+    padding:5px;
+    border: 1px solid #ccc;
+}
+.box-heightExacto
+{
+    height:410px;
+}
+/*----.box-Iframe*/
+/**********************************************/
+.box-Iframe, .box-Iframe iframe {
+    width:100%;
+    height:100%;
+}
+    .box-Iframe iframe {
+        border:none;
+        border:1px solid #cacaca;
+        min-height:600px;
+    }

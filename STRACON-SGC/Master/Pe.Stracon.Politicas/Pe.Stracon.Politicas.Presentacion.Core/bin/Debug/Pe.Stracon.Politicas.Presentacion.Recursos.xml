@@ -1,0 +1,1898 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Pe.Stracon.Politicas.Presentacion.Recursos</name>
+    </assembly>
+    <members>
+        <member name="T:Pe.Stracon.Politicas.Presentacion.Recursos.Base.BuscadorTrabajador">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.BuscadorTrabajador.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.BuscadorTrabajador.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.BuscadorTrabajador.EtiquetaNombre">
+            <summary>
+              Looks up a localized string similar to Nombre de Trabajador.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.BuscadorTrabajador.EtiquetaTitulo">
+            <summary>
+              Looks up a localized string similar to Buscar Trabajador.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.BuscadorTrabajador.EtiquetaUsuario">
+            <summary>
+              Looks up a localized string similar to Nombre de Usuario.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.BuscadorTrabajador.GridCorreoElectronico">
+            <summary>
+              Looks up a localized string similar to Correo Electrónico.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.BuscadorTrabajador.GridNombreTrabajador">
+            <summary>
+              Looks up a localized string similar to Nombre de Trabajador.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.BuscadorTrabajador.GridNombreUsuario">
+            <summary>
+              Looks up a localized string similar to Nombre de Usuario.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.BuscadorTrabajador.GridNumeroDocumento">
+            <summary>
+              Looks up a localized string similar to Número de Documento.
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource">
+            <summary>
+              Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.ResourceManager">
+            <summary>
+              Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.Culture">
+            <summary>
+              Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
+              búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.BotonAceptar">
+            <summary>
+              Busca una cadena traducida similar a Aceptar.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.BotonAceptar1">
+            <summary>
+              Busca una cadena traducida similar a Aceptar.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.BotonAgregar">
+            <summary>
+              Busca una cadena traducida similar a Agregar.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.BotonAgregar1">
+            <summary>
+              Busca una cadena traducida similar a Agregar.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.BotonAñadir">
+            <summary>
+              Busca una cadena traducida similar a Añadir.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.BotonAñadir1">
+            <summary>
+              Busca una cadena traducida similar a Añadir.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.BotonAnterior">
+            <summary>
+              Busca una cadena traducida similar a Anterior.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.BotonAplica">
+            <summary>
+              Busca una cadena traducida similar a Aplica.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.BotonAprobar">
+            <summary>
+              Busca una cadena traducida similar a Aprobar.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.BotonAutorizar">
+            <summary>
+              Busca una cadena traducida similar a Autorizar.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.BotonBuscar">
+            <summary>
+              Busca una cadena traducida similar a Buscar.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.BotonBuscar1">
+            <summary>
+              Busca una cadena traducida similar a Buscar.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.BotonBuscarUsuarioAD">
+            <summary>
+              Busca una cadena traducida similar a Buscar Usuario en AD.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.BotonCancelar">
+            <summary>
+              Busca una cadena traducida similar a Cancelar.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.BotonCancelar1">
+            <summary>
+              Busca una cadena traducida similar a Cancelar.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.BotonCerrar">
+            <summary>
+              Busca una cadena traducida similar a Cerrar.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.BotonCerrar1">
+            <summary>
+              Busca una cadena traducida similar a Cerrar.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.BotonCerrarSesion">
+            <summary>
+              Busca una cadena traducida similar a Cerrar Sesión.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.BotonCerrarSesion1">
+            <summary>
+              Busca una cadena traducida similar a Cerrar sesión.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.BotonCopiar">
+            <summary>
+              Busca una cadena traducida similar a Copiar.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.BotonDenegar">
+            <summary>
+              Busca una cadena traducida similar a Denegar.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.BotonEliminar">
+            <summary>
+              Busca una cadena traducida similar a Eliminar.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.BotonEliminar1">
+            <summary>
+              Busca una cadena traducida similar a Eliminar.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.BotonGrabar">
+            <summary>
+              Busca una cadena traducida similar a Grabar.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.BotonGrabar1">
+            <summary>
+              Busca una cadena traducida similar a Grabar.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.BotonLimpiar">
+            <summary>
+              Busca una cadena traducida similar a Limpiar.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.BotonLimpiar1">
+            <summary>
+              Busca una cadena traducida similar a Limpiar.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.BotonMostrar">
+            <summary>
+              Busca una cadena traducida similar a Mostrar.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.BotonMostrar1">
+            <summary>
+              Busca una cadena traducida similar a Mostrar.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.BotonNoAplica">
+            <summary>
+              Busca una cadena traducida similar a No Aplica.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.BotonRechazar">
+            <summary>
+              Busca una cadena traducida similar a Rechazar.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.BotonResponder">
+            <summary>
+              Busca una cadena traducida similar a Responder.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.BotonSiguiente">
+            <summary>
+              Busca una cadena traducida similar a Siguiente.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.BotonVistaPrevia">
+            <summary>
+              Busca una cadena traducida similar a Vista Previa.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.BtnRegresar">
+            <summary>
+              Busca una cadena traducida similar a Regresar.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.BtnRegresar1">
+            <summary>
+              Busca una cadena traducida similar a Regresar.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.EtiquetaActiva">
+            <summary>
+              Busca una cadena traducida similar a ACTIVA.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.EtiquetaActiva1">
+            <summary>
+              Busca una cadena traducida similar a ACTIVA.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.EtiquetaAsignarProyecto">
+            <summary>
+              Busca una cadena traducida similar a Asignar proyecto.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.EtiquetaAsignarResponsable">
+            <summary>
+              Busca una cadena traducida similar a Asignar usuario de consulta.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.EtiquetaAsignarStaff">
+            <summary>
+              Busca una cadena traducida similar a Asignar Staff.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.EtiquetaAsignarSuplente">
+            <summary>
+              Busca una cadena traducida similar a Asignar reemplazo.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.EtiquetaCorreoElectronico">
+            <summary>
+              Busca una cadena traducida similar a Correo Electrónico.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.EtiquetaCorreoElectronico1">
+            <summary>
+              Busca una cadena traducida similar a Correo Electronico.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.EtiquetaEditar">
+            <summary>
+              Busca una cadena traducida similar a Editar.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.EtiquetaEditar1">
+            <summary>
+              Busca una cadena traducida similar a Editar.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.EtiquetaEliminar">
+            <summary>
+              Busca una cadena traducida similar a Eliminar.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.EtiquetaEliminar1">
+            <summary>
+              Busca una cadena traducida similar a Eliminar.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.EtiquetaFecha">
+            <summary>
+              Busca una cadena traducida similar a Fecha.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.EtiquetaFinReporte">
+            <summary>
+              Busca una cadena traducida similar a *** FIN DE {0} ***.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.EtiquetaGridFileUpload">
+            <summary>
+              Busca una cadena traducida similar a Cargar archivo.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.EtiquetaGridFileUpload1">
+            <summary>
+              Busca una cadena traducida similar a Cargar Archivo.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.EtiquetaInactiva">
+            <summary>
+              Busca una cadena traducida similar a INACTIVA.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.EtiquetaInactiva1">
+            <summary>
+              Busca una cadena traducida similar a INACTIVA.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.EtiquetaNo">
+            <summary>
+              Busca una cadena traducida similar a NO.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.EtiquetaNo1">
+            <summary>
+              Busca una cadena traducida similar a NO.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.EtiquetaNombreSistema">
+            <summary>
+              Busca una cadena traducida similar a SISTEMA DE GESTION DE POLÍTICAS DE STRACON.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.EtiquetaNombreSistemaContable">
+            <summary>
+              Busca una cadena traducida similar a SISTEMA DE GESTION DE CIERRE CONTABLE.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.EtiquetaNombreSistemaContractual">
+            <summary>
+              Busca una cadena traducida similar a SISTEMA DE GESTION CONTRACTUAL.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.EtiquetaNotificaciones">
+            <summary>
+              Busca una cadena traducida similar a Notificaciones.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.EtiquetaNotificar">
+            <summary>
+              Busca una cadena traducida similar a Notificar.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.EtiquetaNumero">
+            <summary>
+              Busca una cadena traducida similar a Número.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.EtiquetaResultadosBusqueda">
+            <summary>
+              Busca una cadena traducida similar a Resultados de Búsqueda.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.EtiquetaResultadosBusqueda1">
+            <summary>
+              Busca una cadena traducida similar a Resultados de Búsqueda.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.EtiquetaSeleccionar">
+            <summary>
+              Busca una cadena traducida similar a (SELECCIONAR).
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.EtiquetaSeleccionar1">
+            <summary>
+              Busca una cadena traducida similar a (SELECCIONAR).
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.EtiquetaSi">
+            <summary>
+              Busca una cadena traducida similar a SI.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.EtiquetaSi1">
+            <summary>
+              Busca una cadena traducida similar a SI.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.EtiquetaTelefonoAnexo">
+            <summary>
+              Busca una cadena traducida similar a Anexo.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.EtiquetaTelefonoMovil">
+            <summary>
+              Busca una cadena traducida similar a Teléfono Movil.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.EtiquetaTelefonoTrabajo">
+            <summary>
+              Busca una cadena traducida similar a Teléfono Trabajo.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.EtiquetaTexto">
+            <summary>
+              Busca una cadena traducida similar a Texto.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.EtiquetaTipoParametroComun">
+            <summary>
+              Busca una cadena traducida similar a Común.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.EtiquetaTipoParametroFuncional">
+            <summary>
+              Busca una cadena traducida similar a Funcional.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.EtiquetaTipoParametroSistema">
+            <summary>
+              Busca una cadena traducida similar a Sistema.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.EtiquetaTituloConfirmar">
+            <summary>
+              Busca una cadena traducida similar a Confirmar.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.EtiquetaTituloConfirmar1">
+            <summary>
+              Busca una cadena traducida similar a Confirmar.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.EtiquetaTodos">
+            <summary>
+              Busca una cadena traducida similar a (TODOS).
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.EtiquetaTodos1">
+            <summary>
+              Busca una cadena traducida similar a (TODOS).
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.EtiquetaVencido">
+            <summary>
+              Busca una cadena traducida similar a Vencido.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.EtiquetaVerFirma">
+            <summary>
+              Busca una cadena traducida similar a Ver Firma.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.EtiquetaVerificar">
+            <summary>
+              Busca una cadena traducida similar a Verificar :.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.EtiquetaVigente">
+            <summary>
+              Busca una cadena traducida similar a Vigente.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.GridAcciones">
+            <summary>
+              Busca una cadena traducida similar a Acciones.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.GridAcciones1">
+            <summary>
+              Busca una cadena traducida similar a Acciones.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.GridAgregarVariable">
+            <summary>
+              Busca una cadena traducida similar a AgregarVariable.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.GridAprobar">
+            <summary>
+              Busca una cadena traducida similar a Aprobar.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.GridConsulta">
+            <summary>
+              Busca una cadena traducida similar a Consultar.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.GridControles">
+            <summary>
+              Busca una cadena traducida similar a Controles.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.GridControles1">
+            <summary>
+              Busca una cadena traducida similar a Controles.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.GridCopiar">
+            <summary>
+              Busca una cadena traducida similar a Copiar.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.GridCopiarEstadio">
+            <summary>
+              Busca una cadena traducida similar a Copiar Estadios.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.GridEstadios">
+            <summary>
+              Busca una cadena traducida similar a Estadios.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.GridObservacion">
+            <summary>
+              Busca una cadena traducida similar a Observar.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.GridParrafo">
+            <summary>
+              Busca una cadena traducida similar a Párrafos.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.GridPdf">
+            <summary>
+              Busca una cadena traducida similar a Pdf.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.GridPredecesora">
+            <summary>
+              Busca una cadena traducida similar a Predecesora.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.GridSistema">
+            <summary>
+              Busca una cadena traducida similar a Sistema.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.GridUsuario">
+            <summary>
+              Busca una cadena traducida similar a Usuario.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.NombreSistema">
+            <summary>
+              Busca una cadena traducida similar a SISTEMA DE GESTIÓN CONTRACTUAL.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.TituloEliminar">
+            <summary>
+              Busca una cadena traducida similar a Eliminar Registros.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.ValidacionAlmenosUno">
+            <summary>
+              Busca una cadena traducida similar a Debe ingresar al menos un valor.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.ValidacionNumeroNegativo">
+            <summary>
+              Busca una cadena traducida similar a Ningún Campo puede tener números negativos.
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Presentacion.Recursos.Base.UsuarioAD">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.UsuarioAD.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.UsuarioAD.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.UsuarioAD.EtiquetaAgregarUsuario">
+            <summary>
+              Looks up a localized string similar to Agregar Usuario.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.UsuarioAD.EtiquetaDominio">
+            <summary>
+              Looks up a localized string similar to Dominio.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.UsuarioAD.EtiquetaTitulo">
+            <summary>
+              Looks up a localized string similar to Usuarios de Directorio Activo.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.UsuarioAD.EtiquetaTrabajadorExiste">
+            <summary>
+              Looks up a localized string similar to El Trabajador seleccionado ya se encuentra registrado..
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.UsuarioAD.EtiquetaUsuario">
+            <summary>
+              Looks up a localized string similar to Usuario.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.UsuarioAD.TablaCeldaEmail">
+            <summary>
+              Looks up a localized string similar to Email.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.UsuarioAD.TablaCeldaNombres">
+            <summary>
+              Looks up a localized string similar to Nombres.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.UsuarioAD.TablaCeldaSeleccionar">
+            <summary>
+              Looks up a localized string similar to Sel..
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Base.UsuarioAD.TablaCeldaUsuario">
+            <summary>
+              Looks up a localized string similar to Usuario.
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Presentacion.Recursos.General.PlantillaNotificacionResource">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.PlantillaNotificacionResource.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.PlantillaNotificacionResource.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.PlantillaNotificacionResource.EtiquetaAsunto">
+            <summary>
+              Looks up a localized string similar to Asunto.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.PlantillaNotificacionResource.EtiquetaContenido">
+            <summary>
+              Looks up a localized string similar to Contenido.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.PlantillaNotificacionResource.EtiquetaDestinatario">
+            <summary>
+              Looks up a localized string similar to Destinatario.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.PlantillaNotificacionResource.EtiquetaDestinatarioCopia">
+            <summary>
+              Looks up a localized string similar to Destinatario en Copia.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.PlantillaNotificacionResource.EtiquetaPlantillaActiva">
+            <summary>
+              Looks up a localized string similar to Estado de Notificación.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.PlantillaNotificacionResource.EtiquetaTitulo">
+            <summary>
+              Looks up a localized string similar to Plantilla de Notificaciones.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.PlantillaNotificacionResource.GridAsunto">
+            <summary>
+              Looks up a localized string similar to Asunto.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.PlantillaNotificacionResource.GridContenido">
+            <summary>
+              Looks up a localized string similar to Contenido.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.PlantillaNotificacionResource.GridDestinatario">
+            <summary>
+              Looks up a localized string similar to Destinatario.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.PlantillaNotificacionResource.GridDestinatarioCopia">
+            <summary>
+              Looks up a localized string similar to Destinatario en Copia.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.PlantillaNotificacionResource.GridPlantillaActiva">
+            <summary>
+              Looks up a localized string similar to Notificación Activa.
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Presentacion.Recursos.General.SeccionParametroResource">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.SeccionParametroResource.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.SeccionParametroResource.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.SeccionParametroResource.EtiquetaCodigoIdentificador">
+            <summary>
+              Looks up a localized string similar to Código.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.SeccionParametroResource.EtiquetaDescripcionParametro">
+            <summary>
+              Looks up a localized string similar to Descripción.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.SeccionParametroResource.EtiquetaDlgFormularioSeccionParametrosGenerales">
+            <summary>
+              Looks up a localized string similar to Formulario Sección de Parámetro.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.SeccionParametroResource.EtiquetaDlgMsgEliminar">
+            <summary>
+              Looks up a localized string similar to ¿Esta seguro de eliminar los parámetros seleccionados?.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.SeccionParametroResource.EtiquetaMessageDlgEstaSeguro">
+            <summary>
+              Looks up a localized string similar to ¿Está seguro de querer eliminar los registros realizados?.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.SeccionParametroResource.EtiquetaMessageDlgEstaSeguroGrabar">
+            <summary>
+              Looks up a localized string similar to ¿Esta seguro de querer grabar los cambios realizados?.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.SeccionParametroResource.EtiquetaNombreParametro">
+            <summary>
+              Looks up a localized string similar to Nombre.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.SeccionParametroResource.EtiquetaNombreSeccion">
+            <summary>
+              Looks up a localized string similar to Nombre.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.SeccionParametroResource.EtiquetaNombreSeccionRepetido">
+            <summary>
+              Looks up a localized string similar to Ya existe una sección con el mismo nombre.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.SeccionParametroResource.EtiquetaObligatorio">
+            <summary>
+              Looks up a localized string similar to Obligatorio.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.SeccionParametroResource.EtiquetaParametro">
+            <summary>
+              Looks up a localized string similar to Parámetro.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.SeccionParametroResource.EtiquetaParametroEmpresa">
+            <summary>
+              Looks up a localized string similar to Parámetro de Empresa.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.SeccionParametroResource.EtiquetaParametroEmpresaNo">
+            <summary>
+              Looks up a localized string similar to No.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.SeccionParametroResource.EtiquetaParametroEmpresaSi">
+            <summary>
+              Looks up a localized string similar to Si.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.SeccionParametroResource.EtiquetaParametroEmpresaTodos">
+            <summary>
+              Looks up a localized string similar to Todos.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.SeccionParametroResource.EtiquetaParametroRelacionado">
+            <summary>
+              Looks up a localized string similar to Parámetro Relacionado.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.SeccionParametroResource.EtiquetaPermiteModificar">
+            <summary>
+              Looks up a localized string similar to Permite Modificar.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.SeccionParametroResource.EtiquetaResultadosBusqueda">
+            <summary>
+              Looks up a localized string similar to Resultados de la Busqueda.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.SeccionParametroResource.EtiquetaSeccionRelacionada">
+            <summary>
+              Looks up a localized string similar to Sección Relacionada.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.SeccionParametroResource.EtiquetaSeccionRelacionadaVisible">
+            <summary>
+              Looks up a localized string similar to Sección Relacionada a Mostrar.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.SeccionParametroResource.EtiquetaSistema">
+            <summary>
+              Looks up a localized string similar to Sistema.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.SeccionParametroResource.EtiquetaTipoDato">
+            <summary>
+              Looks up a localized string similar to Tipo de Dato.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.SeccionParametroResource.EtiquetaTipoParametro">
+            <summary>
+              Looks up a localized string similar to Tipo de Parámetro.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.SeccionParametroResource.EtiquetaTituloDlgConfirmar">
+            <summary>
+              Looks up a localized string similar to Confirmar.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.SeccionParametroResource.EtiquetaTituloEliminar">
+            <summary>
+              Looks up a localized string similar to Eliminar Parámetro.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.SeccionParametroResource.EtiquetaTituloPrincipal">
+            <summary>
+              Looks up a localized string similar to  Secciones.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.SeccionParametroResource.GridSeleccionar">
+            <summary>
+              Looks up a localized string similar to Seleccionar.
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Presentacion.Recursos.General.ParametroResource">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.ParametroResource.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.ParametroResource.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.ParametroResource.EtiquetaCodigoIdentificador">
+            <summary>
+              Looks up a localized string similar to Código.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.ParametroResource.EtiquetaDescripcionParametro">
+            <summary>
+              Looks up a localized string similar to Descripción.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.ParametroResource.EtiquetaDlgFormularioParametrosGenerales">
+            <summary>
+              Looks up a localized string similar to Formulario Parámetro.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.ParametroResource.EtiquetaDlgMsgEliminar">
+            <summary>
+              Looks up a localized string similar to ¿Esta seguro de eliminar los parámetros seleccionados?.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.ParametroResource.EtiquetaMessageDlgEstaSeguro">
+            <summary>
+              Looks up a localized string similar to ¿Está seguro de querer eliminar los registros realizados?.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.ParametroResource.EtiquetaMessageDlgEstaSeguroGrabar">
+            <summary>
+              Looks up a localized string similar to ¿Esta seguro de querer grabar los cambios realizados?.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.ParametroResource.EtiquetaNombreParametro">
+            <summary>
+              Looks up a localized string similar to Nombre.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.ParametroResource.EtiquetaParametro">
+            <summary>
+              Looks up a localized string similar to Parámetro.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.ParametroResource.EtiquetaParametroEmpresa">
+            <summary>
+              Looks up a localized string similar to Parámetro de Empresa.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.ParametroResource.EtiquetaParametroEmpresaNo">
+            <summary>
+              Looks up a localized string similar to No.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.ParametroResource.EtiquetaParametroEmpresaSi">
+            <summary>
+              Looks up a localized string similar to Si.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.ParametroResource.EtiquetaParametroEmpresaTodos">
+            <summary>
+              Looks up a localized string similar to Todos.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.ParametroResource.EtiquetaPermiteAgregar">
+            <summary>
+              Looks up a localized string similar to Permite Agregar.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.ParametroResource.EtiquetaPermiteEliminar">
+            <summary>
+              Looks up a localized string similar to Permite Eliminar.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.ParametroResource.EtiquetaPermiteModificar">
+            <summary>
+              Looks up a localized string similar to Permite Modificar.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.ParametroResource.EtiquetaResultadosBusqueda">
+            <summary>
+              Looks up a localized string similar to Resultados de la Busqueda.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.ParametroResource.EtiquetaSecciones">
+            <summary>
+              Looks up a localized string similar to Secciones.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.ParametroResource.EtiquetaSistema">
+            <summary>
+              Looks up a localized string similar to Sistema.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.ParametroResource.EtiquetaTipoParametro">
+            <summary>
+              Looks up a localized string similar to Tipo de Parámetro.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.ParametroResource.EtiquetaTituloDlgBuscarParametrosGenerales">
+            <summary>
+              Looks up a localized string similar to Buscar Parámetros Generales.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.ParametroResource.EtiquetaTituloDlgConfirmar">
+            <summary>
+              Looks up a localized string similar to Confirmar.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.ParametroResource.EtiquetaTituloEliminar">
+            <summary>
+              Looks up a localized string similar to Eliminar Parámetro.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.ParametroResource.EtiquetaTituloPrincipal">
+            <summary>
+              Looks up a localized string similar to Parámetros Generales.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.ParametroResource.GridCodigo">
+            <summary>
+              Looks up a localized string similar to Código.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.ParametroResource.GridNivel">
+            <summary>
+              Looks up a localized string similar to Nivel.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.ParametroResource.GridNombre">
+            <summary>
+              Looks up a localized string similar to Nombre.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.ParametroResource.GridSeleccionar">
+            <summary>
+              Looks up a localized string similar to Seleccionar.
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Presentacion.Recursos.General.UnidadOperativaResource">
+            <summary>
+              Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.UnidadOperativaResource.ResourceManager">
+            <summary>
+              Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.UnidadOperativaResource.Culture">
+            <summary>
+              Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
+              búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.UnidadOperativaResource.EtiquetaActiva">
+            <summary>
+              Busca una cadena traducida similar a Activa.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.UnidadOperativaResource.EtiquetaCargo">
+            <summary>
+              Busca una cadena traducida similar a Cargo.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.UnidadOperativaResource.EtiquetaCodigoIdentificacion">
+            <summary>
+              Busca una cadena traducida similar a Código de Identificación.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.UnidadOperativaResource.EtiquetaCuartoRepresentante">
+            <summary>
+              Busca una cadena traducida similar a Nivel de Escalamiento 4.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.UnidadOperativaResource.EtiquetaDepartamento">
+            <summary>
+              Busca una cadena traducida similar a Departamento.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.UnidadOperativaResource.EtiquetaDireccion">
+            <summary>
+              Busca una cadena traducida similar a Dirección Legal.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.UnidadOperativaResource.EtiquetaEliminarRegistros">
+            <summary>
+              Busca una cadena traducida similar a ¿Está seguro de querer eliminar los registros realizados?.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.UnidadOperativaResource.EtiquetaEstado">
+            <summary>
+              Busca una cadena traducida similar a Estado.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.UnidadOperativaResource.EtiquetaNivel">
+            <summary>
+              Busca una cadena traducida similar a Nivel.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.UnidadOperativaResource.EtiquetaNombre">
+            <summary>
+              Busca una cadena traducida similar a Nombre.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.UnidadOperativaResource.EtiquetaOrganizacion">
+            <summary>
+              Busca una cadena traducida similar a Organización.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.UnidadOperativaResource.EtiquetaParticular">
+            <summary>
+              Busca una cadena traducida similar a Particular.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.UnidadOperativaResource.EtiquetaPrimerRepresentante">
+            <summary>
+              Busca una cadena traducida similar a Nivel de Escalamiento 1.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.UnidadOperativaResource.EtiquetaRepresentanteRepetido">
+            <summary>
+              Busca una cadena traducida similar a Los representantes tienen que ser trabajadores diferentes.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.UnidadOperativaResource.EtiquetaResponsable">
+            <summary>
+              Busca una cadena traducida similar a Responsable.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.UnidadOperativaResource.EtiquetaResultadosBusqueda">
+            <summary>
+              Busca una cadena traducida similar a Resultados de la Busqueda.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.UnidadOperativaResource.EtiquetaSegundoRepresentante">
+            <summary>
+              Busca una cadena traducida similar a Nivel de Escalamiento 2.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.UnidadOperativaResource.EtiquetaSistema">
+            <summary>
+              Busca una cadena traducida similar a Sistema.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.UnidadOperativaResource.EtiquetaSubTipo">
+            <summary>
+              Busca una cadena traducida similar a Sub Tipo.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.UnidadOperativaResource.EtiquetaTercerRepresentante">
+            <summary>
+              Busca una cadena traducida similar a Nivel de Escalamiento 3.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.UnidadOperativaResource.EtiquetaTipo">
+            <summary>
+              Busca una cadena traducida similar a Tipo.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.UnidadOperativaResource.EtiquetaTituloAsignarResponsable">
+            <summary>
+              Busca una cadena traducida similar a Asignar usuarios de consulta.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.UnidadOperativaResource.EtiquetaTituloConfirmar">
+            <summary>
+              Busca una cadena traducida similar a Confirmar.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.UnidadOperativaResource.EtiquetaTituloFormulario">
+            <summary>
+              Busca una cadena traducida similar a Formulario Unidad Operativa.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.UnidadOperativaResource.EtiquetaTituloFormularioStaff">
+            <summary>
+              Busca una cadena traducida similar a Asignar Staff.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.UnidadOperativaResource.EtiquetaTituloNuevaUnidadOperativa">
+            <summary>
+              Busca una cadena traducida similar a Nueva Unidad Operativa.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.UnidadOperativaResource.EtiquetaTituloPrincipal">
+            <summary>
+              Busca una cadena traducida similar a Unidad Operativa.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.UnidadOperativaResource.EtiquetaUnidadSuperior">
+            <summary>
+              Busca una cadena traducida similar a Unidad Superior.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.UnidadOperativaResource.GridActiva">
+            <summary>
+              Busca una cadena traducida similar a Activa.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.UnidadOperativaResource.GridCodigoIdentificacion">
+            <summary>
+              Busca una cadena traducida similar a Código de Identificación.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.UnidadOperativaResource.GridCuartoRepresentante">
+            <summary>
+              Busca una cadena traducida similar a Nivel de Escalamiento 4.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.UnidadOperativaResource.GridDireccion">
+            <summary>
+              Busca una cadena traducida similar a Dirección.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.UnidadOperativaResource.GridNivel">
+            <summary>
+              Busca una cadena traducida similar a Nivel.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.UnidadOperativaResource.GridNombre">
+            <summary>
+              Busca una cadena traducida similar a Nombre.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.UnidadOperativaResource.GridPrimerRepresentante">
+            <summary>
+              Busca una cadena traducida similar a Nivel de Escalamiento 1.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.UnidadOperativaResource.GridResponsable">
+            <summary>
+              Busca una cadena traducida similar a Responsable.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.UnidadOperativaResource.GridSegundoRepresentante">
+            <summary>
+              Busca una cadena traducida similar a Nivel de Escalamiento 2.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.UnidadOperativaResource.GridSistema">
+            <summary>
+              Busca una cadena traducida similar a Sistema.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.UnidadOperativaResource.GridTercerRepresentante">
+            <summary>
+              Busca una cadena traducida similar a Nivel de Escalamiento 3.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.UnidadOperativaResource.GridTipo">
+            <summary>
+              Busca una cadena traducida similar a Tipo.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.UnidadOperativaResource.GridUnidadSuperior">
+            <summary>
+              Busca una cadena traducida similar a Unidad Superior.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.UnidadOperativaResource.GridUsuario">
+            <summary>
+              Busca una cadena traducida similar a Usuario.
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Presentacion.Recursos.General.ValorParametroResource">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.ValorParametroResource.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.ValorParametroResource.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.ValorParametroResource.EtiquetaDlgFormularioParametrosGenerales">
+            <summary>
+              Looks up a localized string similar to Formulario.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.ValorParametroResource.EtiquetaDlgMsgEliminar">
+            <summary>
+              Looks up a localized string similar to ¿Esta seguro de eliminar los parámetros seleccionados?.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.ValorParametroResource.EtiquetaMessageDlgEstaSeguro">
+            <summary>
+              Looks up a localized string similar to ¿Está seguro de querer eliminar los registros realizados?.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.ValorParametroResource.EtiquetaMessageDlgEstaSeguroGrabar">
+            <summary>
+              Looks up a localized string similar to ¿Esta seguro de querer grabar los cambios realizados?.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.ValorParametroResource.EtiquetaNombreParametro">
+            <summary>
+              Looks up a localized string similar to Nombre de Parámetro.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.ValorParametroResource.EtiquetaParametro">
+            <summary>
+              Looks up a localized string similar to Parámetro.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.ValorParametroResource.EtiquetaResultadosBusqueda">
+            <summary>
+              Looks up a localized string similar to Resultados de la Busqueda.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.ValorParametroResource.EtiquetaTituloDlgBuscarParametrosGenerales">
+            <summary>
+              Looks up a localized string similar to Buscar Parámetros Generales.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.ValorParametroResource.EtiquetaTituloDlgConfirmar">
+            <summary>
+              Looks up a localized string similar to Confirmar.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.ValorParametroResource.EtiquetaTituloEliminar">
+            <summary>
+              Looks up a localized string similar to Eliminar Parámetro.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.ValorParametroResource.EtiquetaTituloPrincipal">
+            <summary>
+              Looks up a localized string similar to Valores de Parámetros Generales.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.ValorParametroResource.GridCodigo">
+            <summary>
+              Looks up a localized string similar to Código.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.ValorParametroResource.GridNivel">
+            <summary>
+              Looks up a localized string similar to Nivel.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.ValorParametroResource.GridNombre">
+            <summary>
+              Looks up a localized string similar to Nombre.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.ValorParametroResource.GridSeleccionar">
+            <summary>
+              Looks up a localized string similar to Seleccionar.
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Presentacion.Recursos.General.TrabajadorResource">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.TrabajadorResource.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.TrabajadorResource.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.TrabajadorResource.EtiquetaActivo">
+            <summary>
+              Looks up a localized string similar to Activo.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.TrabajadorResource.EtiquetaAnexo">
+            <summary>
+              Looks up a localized string similar to Anexo.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.TrabajadorResource.EtiquetaApellidoMaterno">
+            <summary>
+              Looks up a localized string similar to Apellido Materno.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.TrabajadorResource.EtiquetaApellidoPaterno">
+            <summary>
+              Looks up a localized string similar to Apellido Paterno.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.TrabajadorResource.EtiquetaCargo">
+            <summary>
+              Looks up a localized string similar to Cargo.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.TrabajadorResource.EtiquetaCodigoIdentificacion">
+            <summary>
+              Looks up a localized string similar to Código Identificación.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.TrabajadorResource.EtiquetaCodigoTipoDocumento">
+            <summary>
+              Looks up a localized string similar to Tipo de Documento.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.TrabajadorResource.EtiquetaCorreoElectronico">
+            <summary>
+              Looks up a localized string similar to Correo Electrónico.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.TrabajadorResource.EtiquetaDepartamento">
+            <summary>
+              Looks up a localized string similar to Departamento.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.TrabajadorResource.EtiquetaEliminarDescripcion">
+            <summary>
+              Looks up a localized string similar to ¿Está seguro de querer eliminar a los trabajadores seleccionados?.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.TrabajadorResource.EtiquetaEmpresaMatriz">
+            <summary>
+              Looks up a localized string similar to Empresa Matriz.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.TrabajadorResource.EtiquetaFechaFin">
+            <summary>
+              Looks up a localized string similar to Fecha de Fin.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.TrabajadorResource.EtiquetaFechaInicio">
+            <summary>
+              Looks up a localized string similar to Fecha de Inicio.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.TrabajadorResource.EtiquetaNo">
+            <summary>
+              Looks up a localized string similar to No.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.TrabajadorResource.EtiquetaNombres">
+            <summary>
+              Looks up a localized string similar to Nombres.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.TrabajadorResource.EtiquetaNumeroDocumentoIdentidad">
+            <summary>
+              Looks up a localized string similar to Número de Documento.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.TrabajadorResource.EtiquetaOrganizacion">
+            <summary>
+              Looks up a localized string similar to Organización.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.TrabajadorResource.EtiquetaProyecto">
+            <summary>
+              Looks up a localized string similar to Proyecto.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.TrabajadorResource.EtiquetaSi">
+            <summary>
+              Looks up a localized string similar to Sí.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.TrabajadorResource.EtiquetaSuplente">
+            <summary>
+              Looks up a localized string similar to Suplente.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.TrabajadorResource.EtiquetaTelefonoMovil">
+            <summary>
+              Looks up a localized string similar to Teléfono Móvil.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.TrabajadorResource.EtiquetaTelefonoPersonal">
+            <summary>
+              Looks up a localized string similar to Teléfono Personal.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.TrabajadorResource.EtiquetaTelefonoTrabajo">
+            <summary>
+              Looks up a localized string similar to Teléfono de Trabajo.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.TrabajadorResource.EtiquetaTituloPrincipal">
+            <summary>
+              Looks up a localized string similar to Trabajador.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.TrabajadorResource.EtiquetaTituloPrincipalSuplente">
+            <summary>
+              Looks up a localized string similar to Asignar Reemplazo a.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.TrabajadorResource.EtiquetaTituloPrincipalTrabajadorUnidadOperativa">
+            <summary>
+              Looks up a localized string similar to Formulario Asignar Proyecto a.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.TrabajadorResource.EtiquetaTodosLosProyectos">
+            <summary>
+              Looks up a localized string similar to Todos los proyectos.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.TrabajadorResource.GridAnexo">
+            <summary>
+              Looks up a localized string similar to Anexo.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.TrabajadorResource.GridApellidoMaterno">
+            <summary>
+              Looks up a localized string similar to Apellido Materno.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.TrabajadorResource.GridApellidoPaterno">
+            <summary>
+              Looks up a localized string similar to Apellido Paterno.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.TrabajadorResource.GridCargo">
+            <summary>
+              Looks up a localized string similar to Cargo.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.TrabajadorResource.GridCodigoIdentificacion">
+            <summary>
+              Looks up a localized string similar to Identificación.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.TrabajadorResource.GridCodigoTipoDocumento">
+            <summary>
+              Looks up a localized string similar to Tipo de Documento.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.TrabajadorResource.GridCorreoElectronico">
+            <summary>
+              Looks up a localized string similar to Correo Electrónico.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.TrabajadorResource.GridDepartamento">
+            <summary>
+              Looks up a localized string similar to Departamento.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.TrabajadorResource.GridNombres">
+            <summary>
+              Looks up a localized string similar to Nombres.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.TrabajadorResource.GridNumeroDocumentoIdentidad">
+            <summary>
+              Looks up a localized string similar to Número de Documento.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.TrabajadorResource.GridOrganizacion">
+            <summary>
+              Looks up a localized string similar to Organización.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.TrabajadorResource.GridTelefonoMovil">
+            <summary>
+              Looks up a localized string similar to Teléfono Móvil.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.TrabajadorResource.GridTelefonoPersonal">
+            <summary>
+              Looks up a localized string similar to Teléfono Personal.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.TrabajadorResource.GridTelefonoTrabajo">
+            <summary>
+              Looks up a localized string similar to Teléfono Trabajo.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.General.TrabajadorResource.MensajeErrorSuplente">
+            <summary>
+              Looks up a localized string similar to Asignar un suplente.
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes.MensajeResource">
+            <summary>
+              Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes.MensajeResource.ResourceManager">
+            <summary>
+              Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes.MensajeResource.Culture">
+            <summary>
+              Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
+              búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes.MensajeResource.ComentarioValido">
+            <summary>
+              Busca una cadena traducida similar a Comentario Válido.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes.MensajeResource.ComentarioValido1">
+            <summary>
+              Busca una cadena traducida similar a Comentario Válido.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes.MensajeResource.ConfirmacionAprobar">
+            <summary>
+              Busca una cadena traducida similar a ¿Está seguro de aprobar las modificaciones realizadas?.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes.MensajeResource.ConfirmacionAutorizar">
+            <summary>
+              Busca una cadena traducida similar a ¿Está seguro de autorizar la solicitud de modificación?.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes.MensajeResource.ConfirmacionDenegar">
+            <summary>
+              Busca una cadena traducida similar a ¿Está seguro de denegar la solicitud de modificación?.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes.MensajeResource.ConfirmacionEliminacion">
+            <summary>
+              Busca una cadena traducida similar a ¿Está seguro de eliminar el registro?.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes.MensajeResource.ConfirmacionEliminacion1">
+            <summary>
+              Busca una cadena traducida similar a ¿Está seguro de eliminar el registro?.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes.MensajeResource.ConfirmacionEliminacionVarios">
+            <summary>
+              Busca una cadena traducida similar a ¿Está seguro de eliminar los registros seleccionados?.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes.MensajeResource.ConfirmacionGuardar">
+            <summary>
+              Busca una cadena traducida similar a ¿Está seguro de grabar los cambios solicitados?.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes.MensajeResource.ConfirmacionGuardar1">
+            <summary>
+              Busca una cadena traducida similar a ¿Está seguro de grabar los cambios solicitados?.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes.MensajeResource.ConfirmacionGuardarUsuario">
+            <summary>
+              Busca una cadena traducida similar a ¿Está seguro de añadir al usuario seleccionado?.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes.MensajeResource.ConfirmacionRechazar">
+            <summary>
+              Busca una cadena traducida similar a ¿Está seguro de rechazar la solicitud de modificación?.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes.MensajeResource.DebeIngresarDato">
+            <summary>
+              Busca una cadena traducida similar a Debe ingresar datos para realizar la búsqueda..
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes.MensajeResource.DebeSeleccionarFecha">
+            <summary>
+              Busca una cadena traducida similar a Debe seleccionar una fecha..
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes.MensajeResource.DebeSeleccionarFecha1">
+            <summary>
+              Busca una cadena traducida similar a Debe seleccionar una fecha..
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes.MensajeResource.DebeSeleccionarRegistro">
+            <summary>
+              Busca una cadena traducida similar a Debe seleccionar un registro..
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes.MensajeResource.DebeSeleccionarRegistro1">
+            <summary>
+              Busca una cadena traducida similar a Debe seleccionar un registro..
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes.MensajeResource.DebeSeleccionarUnArchivo">
+            <summary>
+              Busca una cadena traducida similar a Debe seleccionar un archivo..
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes.MensajeResource.DebeSeleccionarUnRegistro">
+            <summary>
+              Busca una cadena traducida similar a Debe seleccionar sólo un registro..
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes.MensajeResource.DebeSeleccionarUnRegistro1">
+            <summary>
+              Busca una cadena traducida similar a Debe seleccionar sólo un registro..
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes.MensajeResource.ErroralGrabar">
+            <summary>
+              Busca una cadena traducida similar a Se produjo un error al grabar el registro..
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes.MensajeResource.ErrorAlGrabar1">
+            <summary>
+              Busca una cadena traducida similar a Se produjo un error al grabar el registro..
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes.MensajeResource.ErrorCargarViewModel">
+            <summary>
+              Busca una cadena traducida similar a View model no definido..
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes.MensajeResource.ErrorCargarViewModel1">
+            <summary>
+              Busca una cadena traducida similar a View model no definido..
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes.MensajeResource.EtiquetaErrorRegistro">
+            <summary>
+              Busca una cadena traducida similar a Ocurrió un error inesperado. Inténtelo nuevamente.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes.MensajeResource.EtiquetaErrorRegistro1">
+            <summary>
+              Busca una cadena traducida similar a Ocurrió un error inesperado. Inténtelo nuevamente.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes.MensajeResource.EtiquetaNoEjecutoNingunProceso">
+            <summary>
+              Busca una cadena traducida similar a No se ejecuto ningun proceso..
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes.MensajeResource.EtiquetaNoEjecutoNingunProceso1">
+            <summary>
+              Busca una cadena traducida similar a No se ejecuto ningun proceso..
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes.MensajeResource.EtiquetaTituloAdvertencia">
+            <summary>
+              Busca una cadena traducida similar a Advertencia.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes.MensajeResource.EtiquetaTituloAdvertencia1">
+            <summary>
+              Busca una cadena traducida similar a Advertencia.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes.MensajeResource.EtiquetaTituloError">
+            <summary>
+              Busca una cadena traducida similar a Error.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes.MensajeResource.ExistenciaCodigoDemanda">
+            <summary>
+              Busca una cadena traducida similar a Código de Demanda ya existe.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes.MensajeResource.ExistenciaRegistro">
+            <summary>
+              Busca una cadena traducida similar a El registro seleccionado ya está registrado.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes.MensajeResource.FechaRegistroDistinta">
+            <summary>
+              Busca una cadena traducida similar a Fecha de depósito distinto..
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes.MensajeResource.FormatoArchivoValido">
+            <summary>
+              Busca una cadena traducida similar a Debe seleccionar un formato de archivo válido..
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes.MensajeResource.ImportePagoDistinta">
+            <summary>
+              Busca una cadena traducida similar a Importe de pago distinto..
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes.MensajeResource.InformacionIngresarFiltro">
+            <summary>
+              Busca una cadena traducida similar a Debe ingresar al menos un filtro de búsqueda..
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes.MensajeResource.InformacionIngresarFiltro1">
+            <summary>
+              Busca una cadena traducida similar a Debe ingresar al menos un filtro de búsqueda..
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes.MensajeResource.InformacionPreFiltro">
+            <summary>
+              Busca una cadena traducida similar a La información mostrada corresponde a la.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes.MensajeResource.InformacionPreFiltro1">
+            <summary>
+              Busca una cadena traducida similar a La información mostrada corresponde a la.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes.MensajeResource.MensajeException">
+            <summary>
+              Busca una cadena traducida similar a La solicitud no ha podido ser procesada. Comuníquese con el Administrador del Sistema..
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes.MensajeResource.MensajeException1">
+            <summary>
+              Busca una cadena traducida similar a La solicitud no ha podido ser procesada. Comuníquese con el Administrador del Sistema..
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes.MensajeResource.MensajeValidacionMayores">
+            <summary>
+              Busca una cadena traducida similar a Debe Ingresar valores mayores a 0.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes.MensajeResource.MsgEliminacionList">
+            <summary>
+              Busca una cadena traducida similar a ¿Está seguro de eliminar los registros?.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes.MensajeResource.MsgEliminacionList1">
+            <summary>
+              Busca una cadena traducida similar a ¿Está seguro de eliminar los registros?.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes.MensajeResource.MsjValidaEligeArchivo">
+            <summary>
+              Busca una cadena traducida similar a Debe seleccionar un archivo, verifique..
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes.MensajeResource.MsjValidaExtensionArchivo">
+            <summary>
+              Busca una cadena traducida similar a El archivo elegido no tiene la extensión permitida, verifique..
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes.MensajeResource.RegistrosNoCoinciden">
+            <summary>
+              Busca una cadena traducida similar a Los registros seleccionados no coinciden:.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes.MensajeResource.RegistrosNoCoinciden1">
+            <summary>
+              Busca una cadena traducida similar a Los registros seleccionados no coinciden:.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes.MensajeResource.SeAnuloRegistro">
+            <summary>
+              Busca una cadena traducida similar a Se anuló registro con éxito..
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes.MensajeResource.SeAnuloRegistro1">
+            <summary>
+              Busca una cadena traducida similar a Se anuló registro con éxito..
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes.MensajeResource.SeEliminoInformacionExito">
+            <summary>
+              Busca una cadena traducida similar a Eliminación ejecutada con éxito..
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes.MensajeResource.SeEliminoInformacionExito1">
+            <summary>
+              Busca una cadena traducida similar a Eliminación ejecutada con éxito..
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes.MensajeResource.SeEliminoRegistro">
+            <summary>
+              Busca una cadena traducida similar a Se eliminó el(los) registro(s) con éxito..
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes.MensajeResource.SeGuardoInformacionExito">
+            <summary>
+              Busca una cadena traducida similar a Se guardó la información con éxito..
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes.MensajeResource.SeGuardoInformacionExito1">
+            <summary>
+              Busca una cadena traducida similar a Se guardó la información con éxito..
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes.MensajeResource.SeGuardoInformacionExito2">
+            <summary>
+              Busca una cadena traducida similar a Se guardó la información con éxito..
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes.MensajeResource.SeleccionarRegistroEliminar">
+            <summary>
+              Busca una cadena traducida similar a Debe seleccionar al menos un registro para eliminar..
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes.MensajeResource.SeleccionarRegistroEliminar1">
+            <summary>
+              Busca una cadena traducida similar a Debe seleccionar al menos un registro para eliminar..
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes.MensajeResource.SeleccioneFiltro">
+            <summary>
+              Busca una cadena traducida similar a Al menos un parámetro de filtro correcto.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes.MensajeResource.SeleccioneFiltro1">
+            <summary>
+              Busca una cadena traducida similar a Al menos un parámetro de filtro correcto.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes.MensajeResource.SumaryValidacion">
+            <summary>
+              Busca una cadena traducida similar a Verificar :.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes.MensajeResource.ValidarCamposAlMenosUno">
+            <summary>
+              Busca una cadena traducida similar a Debe Seleccionar al Menos Uno de los Siguientes Campos.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,363 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BotonAceptar" xml:space="preserve">
+    <value>Aceptar</value>
+  </data>
+  <data name="BotonAgregar" xml:space="preserve">
+    <value>Agregar</value>
+  </data>
+  <data name="BotonAnterior" xml:space="preserve">
+    <value>Anterior</value>
+  </data>
+  <data name="BotonAplica" xml:space="preserve">
+    <value>Aplica</value>
+  </data>
+  <data name="BotonAprobar" xml:space="preserve">
+    <value>Aprobar</value>
+  </data>
+  <data name="BotonAutorizar" xml:space="preserve">
+    <value>Autorizar</value>
+  </data>
+  <data name="BotonAñadir" xml:space="preserve">
+    <value>Añadir</value>
+  </data>
+  <data name="BotonBuscar" xml:space="preserve">
+    <value>Buscar</value>
+  </data>
+  <data name="BotonCancelar" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="BotonCerrar" xml:space="preserve">
+    <value>Cerrar</value>
+  </data>
+  <data name="BotonCerrarSesion" xml:space="preserve">
+    <value>Cerrar sesión</value>
+  </data>
+  <data name="BotonCopiar" xml:space="preserve">
+    <value>Copiar</value>
+  </data>
+  <data name="BotonDenegar" xml:space="preserve">
+    <value>Denegar</value>
+  </data>
+  <data name="BotonEliminar" xml:space="preserve">
+    <value>Eliminar</value>
+  </data>
+  <data name="BotonEnviar" xml:space="preserve">
+    <value>Enviar</value>
+  </data>
+  <data name="BotonExportar" xml:space="preserve">
+    <value>Exportar</value>
+  </data>
+  <data name="BotonFinalizarContrato" xml:space="preserve">
+    <value>Finalizar Contrato</value>
+  </data>
+  <data name="BotonGrabar" xml:space="preserve">
+    <value>Grabar</value>
+  </data>
+  <data name="BotonLimpiar" xml:space="preserve">
+    <value>Limpiar</value>
+  </data>
+  <data name="BotonMostrar" xml:space="preserve">
+    <value>Mostrar</value>
+  </data>
+  <data name="BotonNoAplica" xml:space="preserve">
+    <value>No Aplica</value>
+  </data>
+  <data name="BotonRechazar" xml:space="preserve">
+    <value>Rechazar</value>
+  </data>
+  <data name="BotonResponder" xml:space="preserve">
+    <value>Responder</value>
+  </data>
+  <data name="BotonSeleccionar" xml:space="preserve">
+    <value>Seleccionar</value>
+  </data>
+  <data name="BotonSiguiente" xml:space="preserve">
+    <value>Siguiente</value>
+  </data>
+  <data name="BotonVistaPrevia" xml:space="preserve">
+    <value>Vista Previa</value>
+  </data>
+  <data name="BtnRegresar" xml:space="preserve">
+    <value>Regresar</value>
+  </data>
+  <data name="EtiquetaActiva" xml:space="preserve">
+    <value>ACTIVA</value>
+  </data>
+  <data name="EtiquetaCopiarPlantilla" xml:space="preserve">
+    <value>Copiar Plantilla</value>
+  </data>
+  <data name="EtiquetaCorreoElectronico" xml:space="preserve">
+    <value>Correo Electronico</value>
+  </data>
+  <data name="EtiquetaDesde" xml:space="preserve">
+    <value>Desde</value>
+  </data>
+  <data name="EtiquetaEditar" xml:space="preserve">
+    <value>Editar</value>
+  </data>
+  <data name="EtiquetaEditarContenidoContrato" xml:space="preserve">
+    <value>Editar contrato</value>
+  </data>
+  <data name="EtiquetaEliminar" xml:space="preserve">
+    <value>Eliminar</value>
+  </data>
+  <data name="EtiquetaFecha" xml:space="preserve">
+    <value>Fecha</value>
+  </data>
+  <data name="EtiquetaFinReporte" xml:space="preserve">
+    <value>*** FIN DE {0} ***</value>
+  </data>
+  <data name="EtiquetaGridFileUpload" xml:space="preserve">
+    <value>Cargar Archivo</value>
+  </data>
+  <data name="EtiquetaHasta" xml:space="preserve">
+    <value>Hasta</value>
+  </data>
+  <data name="EtiquetaImagen" xml:space="preserve">
+    <value>Imagen</value>
+  </data>
+  <data name="EtiquetaInactiva" xml:space="preserve">
+    <value>INACTIVA</value>
+  </data>
+  <data name="EtiquetaNo" xml:space="preserve">
+    <value>NO</value>
+  </data>
+  <data name="EtiquetaNotificaciones" xml:space="preserve">
+    <value>Notificaciones</value>
+  </data>
+  <data name="EtiquetaNotificar" xml:space="preserve">
+    <value>Notificar</value>
+  </data>
+  <data name="EtiquetaNumero" xml:space="preserve">
+    <value>Número</value>
+  </data>
+  <data name="EtiquetaNumeroContrato" xml:space="preserve">
+    <value>Número de Contrato</value>
+  </data>
+  <data name="EtiquetaReenviar" xml:space="preserve">
+    <value>Reenviar</value>
+  </data>
+  <data name="EtiquetaResponder" xml:space="preserve">
+    <value>Responder</value>
+  </data>
+  <data name="EtiquetaResultadosBusqueda" xml:space="preserve">
+    <value>Resultados de Búsqueda</value>
+  </data>
+  <data name="EtiquetaSeleccionar" xml:space="preserve">
+    <value>(SELECCIONAR)</value>
+  </data>
+  <data name="EtiquetaSi" xml:space="preserve">
+    <value>SI</value>
+  </data>
+  <data name="EtiquetaTabla" xml:space="preserve">
+    <value>Tabla</value>
+  </data>
+  <data name="EtiquetaTexto" xml:space="preserve">
+    <value>Texto</value>
+  </data>
+  <data name="EtiquetaTituloConfirmar" xml:space="preserve">
+    <value>Confirmar</value>
+  </data>
+  <data name="EtiquetaTodos" xml:space="preserve">
+    <value>(TODOS)</value>
+  </data>
+  <data name="EtiquetaUnidadOperativa" xml:space="preserve">
+    <value>Unidad Operativa</value>
+  </data>
+  <data name="EtiquetaVencido" xml:space="preserve">
+    <value>Vencido</value>
+  </data>
+  <data name="EtiquetaVerificar" xml:space="preserve">
+    <value>Verificar :</value>
+  </data>
+  <data name="EtiquetaVigente" xml:space="preserve">
+    <value>Vigente</value>
+  </data>
+  <data name="EtiquetaVisualizar" xml:space="preserve">
+    <value>Visualizar</value>
+  </data>
+  <data name="GridAcciones" xml:space="preserve">
+    <value>Acciones</value>
+  </data>
+  <data name="GridAdjunto" xml:space="preserve">
+    <value>Adjuntos</value>
+  </data>
+  <data name="GridAgregarVariable" xml:space="preserve">
+    <value>AgregarVariable</value>
+  </data>
+  <data name="GridAprobar" xml:space="preserve">
+    <value>Aprobar</value>
+  </data>
+  <data name="GridConsulta" xml:space="preserve">
+    <value>Consultar</value>
+  </data>
+  <data name="GridContrato" xml:space="preserve">
+    <value>Contrato</value>
+  </data>
+  <data name="GridControles" xml:space="preserve">
+    <value>Controles</value>
+  </data>
+  <data name="GridCopiar" xml:space="preserve">
+    <value>Copiar</value>
+  </data>
+  <data name="GridCopiarEstadio" xml:space="preserve">
+    <value>Copiar Estadios</value>
+  </data>
+  <data name="GridDescargar" xml:space="preserve">
+    <value>Descargar</value>
+  </data>
+  <data name="GridDetalle" xml:space="preserve">
+    <value>Detalle</value>
+  </data>
+  <data name="GridEstadios" xml:space="preserve">
+    <value>Estadios</value>
+  </data>
+  <data name="GridObservacion" xml:space="preserve">
+    <value>Observar</value>
+  </data>
+  <data name="GridParrafo" xml:space="preserve">
+    <value>Párrafos</value>
+  </data>
+  <data name="GridPdf" xml:space="preserve">
+    <value>PDF</value>
+  </data>
+  <data name="GridPredecesora" xml:space="preserve">
+    <value>Predecesora</value>
+  </data>
+  <data name="GridValorAlquiler" xml:space="preserve">
+    <value>Valor Alquiler</value>
+  </data>
+  <data name="GridVistaPrevia" xml:space="preserve">
+    <value>Vista Previa</value>
+  </data>
+  <data name="NombreSistema" xml:space="preserve">
+    <value>SISTEMA DE GESTIÓN CONTRACTUAL</value>
+  </data>
+  <data name="TituloAdjuntos" xml:space="preserve">
+    <value>Adjuntos</value>
+  </data>
+  <data name="ValidacionAlmenosUno" xml:space="preserve">
+    <value>Debe ingresar al menos un valor</value>
+  </data>
+  <data name="ValidacionNumeroNegativo" xml:space="preserve">
+    <value>Ningún Campo puede tener números negativos</value>
+  </data>
+</root>

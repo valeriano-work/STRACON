@@ -1,0 +1,26 @@
+﻿@using Pe.Stracon.SGC.Presentacion.Recursos.Base
+@using Pe.Stracon.SGC.Presentacion.Recursos.Contractual
+@using Pe.Stracon.SGC.Presentacion.Recursos.Mensajes
+@using Pe.Stracon.SGC.Infraestructura.Core.Context
+@model Pe.Stracon.SGC.Presentacion.Core.ViewModel.Contractual.ArchivoAdjuntoContrato.ArchivoAdjuntoContratoFormulario
+
+<div class="row">
+    <div class="col-sm-12">
+        <div id="divGrdResultAdjuntos"></div>
+    </div>
+</div>
+<div class="comp-Modal-footer">
+    <button id="btnCerrarCargaArchivoAdjunto" class="btn btn-default">@GenericoResource.BotonCerrar</button>
+</div>
+<script type="text/javascript">
+    ns('Pe.Stracon.SGC.Presentacion.Contractual.ReporteContratoCorporativo.Adjuntos.Actions')
+    Pe.Stracon.SGC.Presentacion.Contractual.ReporteContratoCorporativo.Adjuntos.Actions.BuscarArchivoAdjunto = '@Url.Action("BuscarArchivoAdjunto", "SolicitudModificacionContrato", new { Area = "Contractual" })';
+    
+    ns('Pe.Stracon.SGC.Presentacion.Contractual.ReporteContratoCorporativo.Adjuntos.Resources')
+    Pe.Stracon.SGC.Presentacion.Contractual.ReporteContratoCorporativo.Adjuntos.Resources.GridNombreArchivo = '@ArchivoAdjuntoContratoResource.EtiquetaNombreArchivo';
+    Pe.Stracon.SGC.Presentacion.Contractual.ReporteContratoCorporativo.Adjuntos.Resources.GridAcciones = '@Html.Raw(GenericoResource.GridAcciones)';
+  
+    ns('Pe.Stracon.SGC.Presentacion.Contractual.ReporteContratoCorporativo.Adjuntos.Models')
+    Pe.Stracon.SGC.Presentacion.Contractual.ReporteContratoCorporativo.Adjuntos.Models.FormularioCargaAdjuntoContrato = @(Html.Raw(Json.Encode(Model)));
+</script>
+

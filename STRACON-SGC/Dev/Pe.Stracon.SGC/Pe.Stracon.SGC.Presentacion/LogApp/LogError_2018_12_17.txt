@@ -1,0 +1,11 @@
+FechaHora = 17/12/2018 17:23:37
+MensajeError = [Error]
+Error en el servidor remoto: (403) Prohibido.
+DetalleError = [Pila]
+   en System.Net.HttpWebRequest.GetResponse()
+   en Microsoft.SharePoint.Client.SPWebRequestExecutor.Execute()
+   en Microsoft.SharePoint.Client.ClientContext.GetFormDigestInfoPrivate()
+   en Microsoft.SharePoint.Client.ClientContext.EnsureFormDigest()
+   en Microsoft.SharePoint.Client.ClientContext.ExecuteQuery()
+   en Pe.Stracon.SGC.Aplicacion.Service.Contractual.SharePointService.RegistraArchivoSharePoint(String& hayError, String listName, String folderName, String fileName, MemoryStream myFile, String prmSiteURL, NetworkCredential prmCredenciales) en D:\Modulos\Fuentes\STRACON-SGC\Dev\Pe.Stracon.SGC\Pe.Stracon.SGC.Aplicacion.Service\Contractual\SharePointService.cs:línea 172
+__________________________________________________

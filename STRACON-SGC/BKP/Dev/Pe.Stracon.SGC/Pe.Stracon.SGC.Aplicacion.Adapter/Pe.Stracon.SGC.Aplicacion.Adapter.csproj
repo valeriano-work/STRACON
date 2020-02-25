@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E8C1A9FE-B0D3-475C-9440-9242156FCE8F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Pe.Stracon.SGC.Aplicacion.Adapter</RootNamespace>
+    <AssemblyName>Pe.Stracon.SGC.Aplicacion.Adapter</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Pe.Stracon.SGC.Aplicacion.Adapter.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'STRACON_QA|AnyCPU'">
+    <OutputPath>bin\STRACON_QA\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Contractual\BienAdapter.cs" />
+    <Compile Include="Contractual\ConsultaAdapter.cs" />
+    <Compile Include="Contractual\RequerimientoParrafoAdapter.cs" />
+    <Compile Include="Contractual\RequerimientoFirmanteAdapter.cs" />
+    <Compile Include="Contractual\RequerimientoParrafoVariableAdapter.cs" />
+    <Compile Include="Contractual\RequerimientoBienAdapter.cs" />
+    <Compile Include="Contractual\ListadoRequerimientoAdapter.cs" />
+    <Compile Include="Contractual\RequerimientoEstadioAdapter.cs" />
+    <Compile Include="Contractual\RequerimientoDocumentoAdapter.cs" />
+    <Compile Include="Contractual\RequerimientoAdapter.cs" />
+    <Compile Include="Contractual\ContratoAdapter.cs" />
+    <Compile Include="Contractual\ContratoBienAdapter.cs" />
+    <Compile Include="Contractual\ContratoDocumentoAdapter.cs" />
+    <Compile Include="Contractual\ContratoEstadioAdapter.cs" />
+    <Compile Include="Contractual\ContratoFirmanteAdapter.cs" />
+    <Compile Include="Contractual\ContratoParrafoAdapter.cs" />
+    <Compile Include="Contractual\ContratoParrafoVariableAdapter.cs" />
+    <Compile Include="Contractual\ListadoContratoAdapter.cs" />
+    <Compile Include="Contractual\PlantillaRequerimientoParrafoVariableAdapter.cs" />
+    <Compile Include="Contractual\PlantillaRequerimientoParrafoAdapter.cs" />
+    <Compile Include="Contractual\PlantillaRequerimientoAdapter.cs" />
+    <Compile Include="Contractual\PlantillaParrafoAdapter.cs" />
+    <Compile Include="Contractual\PlantillaParrafoVariableAdapter.cs" />
+    <Compile Include="Contractual\ProcesoAuditoriaAdapter.cs" />
+    <Compile Include="Contractual\FlujoAprobacionParticipanteAdapter.cs" />
+    <Compile Include="Contractual\FlujoAprobacionEstadioAdapter.cs" />
+    <Compile Include="Contractual\FlujoAprobacionAdapter.cs" />
+    <Compile Include="Contractual\PlantillaAdapter.cs" />
+    <Compile Include="Contractual\ProveedorAdapter.cs" />
+    <Compile Include="Contractual\VariableAdapter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\Pe.Stracon.Politicas\Pe.Stracon.Politicas.Aplicacion.Core\Pe.Stracon.Politicas.Aplicacion.Core.csproj">
+      <Project>{bcbbb6a6-53fc-4701-97c1-d804d5cba9a8}</Project>
+      <Name>Pe.Stracon.Politicas.Aplicacion.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Pe.Stracon.Politicas\Pe.Stracon.Politicas.Aplicacion.TransferObject\Pe.Stracon.Politicas.Aplicacion.TransferObject.csproj">
+      <Project>{3b488d54-5850-425e-b187-0a232afa02cc}</Project>
+      <Name>Pe.Stracon.Politicas.Aplicacion.TransferObject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pe.Stracon.SGC.Aplicacion.TransferObject\Pe.Stracon.SGC.Aplicacion.TransferObject.csproj">
+      <Project>{e43da679-229c-4103-af10-7fa3584ba914}</Project>
+      <Name>Pe.Stracon.SGC.Aplicacion.TransferObject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pe.Stracon.SGC.Cross.Core\Pe.Stracon.SGC.Cross.Core.csproj">
+      <Project>{f4ece405-25b7-4365-aab3-503c5f8859e6}</Project>
+      <Name>Pe.Stracon.SGC.Cross.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pe.Stracon.SGC.Infraestructura.CommandModel\Pe.Stracon.SGC.Infraestructura.CommandModel.csproj">
+      <Project>{7fa64a98-d0d2-423c-8cac-f9ac49c7cdc0}</Project>
+      <Name>Pe.Stracon.SGC.Infraestructura.CommandModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pe.Stracon.SGC.Infraestructura.Core\Pe.Stracon.SGC.Infraestructura.Core.csproj">
+      <Project>{2b8f9b45-35da-4eea-b07e-f2598b2863ab}</Project>
+      <Name>Pe.Stracon.SGC.Infraestructura.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pe.Stracon.SGC.Infraestructura.QueryModel\Pe.Stracon.SGC.Infraestructura.QueryModel.csproj">
+      <Project>{7280cdd5-08db-4be3-a412-1b1e6d9a5de2}</Project>
+      <Name>Pe.Stracon.SGC.Infraestructura.QueryModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

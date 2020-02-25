@@ -1,0 +1,80 @@
+﻿@using Pe.Stracon.SGC.Presentacion.Recursos.Base
+@using Pe.Stracon.SGC.Presentacion.Recursos.Contractual
+@model Pe.Stracon.SGC.Presentacion.Core.ViewModel.Contractual.FlujoAprobacion.FlujoAprobacionFormulario
+
+<script type="text/javascript">
+    ns('Pe.Stracon.SGC.Presentacion.Core.ViewModel.Contractual.FlujoAprobacion.FlujoAprobacionFormulario.Model')
+    Pe.Stracon.SGC.Presentacion.Core.ViewModel.Contractual.FlujoAprobacion.FlujoAprobacionFormulario.Model.ListaPrimerFirmante = @(Html.Raw(Json.Encode(Model.flujoAprobacionResponse.ListaPrimerFirmante)));
+    Pe.Stracon.SGC.Presentacion.Core.ViewModel.Contractual.FlujoAprobacion.FlujoAprobacionFormulario.Model.ListaSegundoFirmante = @(Html.Raw(Json.Encode(Model.flujoAprobacionResponse.ListaSegundoFirmante)));
+
+    Pe.Stracon.SGC.Presentacion.Core.ViewModel.Contractual.FlujoAprobacion.FlujoAprobacionFormulario.Model.ListaPrimerFirmanteVinculada = @(Html.Raw(Json.Encode(Model.flujoAprobacionResponse.ListaPrimerFirmanteVinculada)));
+    Pe.Stracon.SGC.Presentacion.Core.ViewModel.Contractual.FlujoAprobacion.FlujoAprobacionFormulario.Model.ListaSegundoFirmanteVinculada = @(Html.Raw(Json.Encode(Model.flujoAprobacionResponse.ListaSegundoFirmanteVinculada)));
+</script>
+
+<form id="frmAgregarFlujoAprobacion">
+    <div class="row">
+        <input type="hidden" id="hdnFlujoAprobacion" name="hdnFlujoAprobacion" value="@Model.flujoAprobacionResponse.CodigoFlujoAprobacion" />
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="slcFrmUnidadOperativa">@FlujoAprobacionResource.EtiquetaUnidadOperativa</label>
+                @Html.DropDownList("slcFrmUnidadOperativa", Model.UnidadOperativa, new { @class = "form-control", @id = "slcFrmUnidadOperativa", @validable = "required ValidarUnidadOperativa" })
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label>Aplica Monto Mínimo</label>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label>@GenericoResource.EtiquetaSi</label>
+                        <input type="radio" value="true" name="rbIndicadorAplicaMontoMinimo" @Html.Raw((Model.flujoAprobacionResponse.IndicadorAplicaMontoMinimo) ? "checked" : string.Empty)>
+                    </div>
+                    <div class="col-sm-6">
+                        <label>@GenericoResource.EtiquetaNo</label>
+                        <input type="radio" value="false" name="rbIndicadorAplicaMontoMinimo" @Html.Raw((!Model.flujoAprobacionResponse.IndicadorAplicaMontoMinimo) ? "checked" : string.Empty)>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="form-group">
+                <label for="slcFrmTipoRequerimiento">@FlujoAprobacionResource.EtiquetaTipoContrato</label>
+                @Html.DropDownList("slcFrmTipoServicio", Model.TipoServicio, new { @id = "slcFrmTipoServicio", @validable = "required ValidarTipoServicio", @multiple = "multiple" })
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="txtPrimerFirmante">@FlujoAprobacionResource.EtiquetaPrimerFirmante</label>
+                @Html.TextBox("txtPrimerFirmante", null, new { @class = "form-control", @id = "txtPrimerFirmante" })
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="txtSegundoFirmante">@FlujoAprobacionResource.EtiquetaSegundoFirmante</label>
+                @Html.TextBox("txtSegundoFirmante", null, new { @class = "form-control", @id = "txtSegundoFirmante" })
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="txtPrimerFirmanteVinculada">@FlujoAprobacionResource.EtiquetaPrimerFirmanteVinculada</label>
+                @Html.TextBox("txtPrimerFirmanteVinculada", null, new { @class = "form-control", @id = "txtPrimerFirmanteVinculada" })
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="txtSegundoFirmanteVinculada">@FlujoAprobacionResource.EtiquetaSegundoFirmanteVinculada</label>
+                @Html.TextBox("txtSegundoFirmanteVinculada", null, new { @class = "form-control", @id = "txtSegundoFirmanteVinculada" })
+            </div>
+        </div>
+    </div>
+</form>
+<div class="comp-Modal-footer">
+    <button class="btn btn-default" id="btnFrmFlujoCancelar">@GenericoResource.BotonCancelar</button>
+    <button class="btn btn-primary" id="btnFrmFlujoGrabar">@GenericoResource.BotonGrabar</button>
+</div>

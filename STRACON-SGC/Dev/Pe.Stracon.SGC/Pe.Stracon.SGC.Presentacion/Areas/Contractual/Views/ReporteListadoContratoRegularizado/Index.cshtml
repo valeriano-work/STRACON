@@ -1,0 +1,237 @@
+﻿@using Pe.Stracon.SGC.Presentacion.Recursos.Base
+@using Pe.Stracon.SGC.Presentacion.Recursos.Contractual
+@using Pe.Stracon.SGC.Presentacion.Recursos.Mensajes
+@using Pe.Stracon.SGC.Presentacion.Core.Helpers
+@model Pe.Stracon.SGC.Presentacion.Core.ViewModel.Contractual.ReporteListadoContratoRegularizado.ReporteListadoContratoRegularizadoBusqueda
+
+@{
+    var dataReport = TempData["DataReport"];   
+}
+
+<div class="GmdBody-header">
+    <h2>@ReporteListadoContratoRegularizadoResource.EtiquetaTitulo</h2>
+</div>
+<div class="GmdBody-body">
+    @*<div class="panel-estudio-asignado panel-group" id="divVisualizarFiltroBusqueda" role="tablist" aria-multiselectable="true">
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingOne">
+                <h4 class="panel-title">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#divVisualizarFiltroBusqueda" href="#divAcordionFiltroBusqueda">
+                        <div class="title-form">Reducir / Expandir Filtros</div>
+                    </a>
+                </h4>
+            </div>
+            <div id="divAcordionFiltroBusqueda" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">*@
+                <form id="frmReporteListadoContratoRegularizado">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label>@ReporteListadoContratoRegularizadoResource.EtiquetaDescripcion</label>
+                                @Html.TextBox("Descripcion", @Model.ReporteListadoContratoRegularizado.Descripcion, new { @class = "form-control", @id = "txtDescripcion" })
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label>@ReporteListadoContratoRegularizadoResource.EtiquetaUnidadOperativa</label>
+                                @Html.DropDownList("CodigoUnidadOperativa", @Model.UnidadOperativa, new { @class = "form-control", @id = "slcUnidadOperativa" })
+                                @Html.TextBox("NombreUnidadOperativa", null, new { @class = "form-control hidden", @id = "hdnNombreUnidadOperativa" })
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label>@ReporteListadoContratoRegularizadoResource.EtiquetaTipoServicio</label>
+                                @Html.DropDownList("CodigoTipoServicio", @Model.TipoServicio, new { @class = "form-control", @id = "slcTipoServicio" })
+                                @Html.TextBox("NombreTipoServicio", null, new { @class = "form-control hidden", @id = "hdnNombreTipoServicio" })
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label>@ReporteListadoContratoRegularizadoResource.EtiquetaTipoRequerimiento</label>
+                                @Html.DropDownList("CodigoTipoRequerimiento", @Model.TipoRequerimiento, new { @class = "form-control", @id = "slcTipoRequerimiento" })
+                                @Html.TextBox("NombreTipoRequerimiento", null, new { @class = "form-control hidden", @id = "hdnNombreTipoRequerimiento" })
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label>@ReporteListadoContratoRegularizadoResource.EtiquetaTipoDocumento</label>
+                                @Html.DropDownList("CodigoTipoDocumento", @Model.TipoDocumento, new { @class = "form-control", @id = "slcTipoDocumento" })
+                                @Html.TextBox("NombreTipoDocumento", null, new { @class = "form-control hidden", @id = "hdnNombreTipoDocumento" })
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label>@ReporteListadoContratoRegularizadoResource.EtiquetaEstadoContrato</label>
+                                @Html.DropDownList("CodigoEstadoContrato", @Model.EstadoContrato, new { @class = "form-control", @id = "slcEstadoContrato" })
+                                @Html.TextBox("NombreEstadoContrato", null, new { @class = "form-control hidden", @id = "hdnNombreEstadoContrato" })
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label>@ReporteListadoContratoRegularizadoResource.EtiquetaNumeroContrato</label>
+                                @Html.TextBox("NumeroContrato", @Model.ReporteListadoContratoRegularizado.NumeroContrato, new { @class = "form-control", @id = "txtNumeroContrato" })
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label>@ReporteListadoContratoRegularizadoResource.EtiquetaRucProveedor</label>
+                                @Html.TextBox("NumeroDocumentoProveedor", @Model.ReporteListadoContratoRegularizado.NumeroDocumento, new { @class = "form-control", @id = "txtNumeroDocumento" })
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label>@ReporteListadoContratoRegularizadoResource.EtiquetaRazonSocial</label>
+                                @Html.TextBox("RazonSocial", @Model.ReporteListadoContratoRegularizado.RazonSocial, new { @class = "form-control", @id = "txtRazonSocial" })
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label>@ReporteListadoContratoRegularizadoResource.EtiquetaDesde</label>
+                                <div class="input-group">
+                                    @Html.TextBox("FechaConsultaDesdeString", @Model.ReporteListadoContratoRegularizado.FechaConsultaDesdeString, new { @class = "form-control", @id = "txtContratosDesde" })
+                                    <div class="input-group-addon"><span class="fa fa-calendar"></span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label>@ReporteListadoContratoRegularizadoResource.EtiquetaHasta</label>
+                                <div class="input-group">
+                                    @Html.TextBox("FechaConsultaHastaString", @Model.ReporteListadoContratoRegularizado.FechaConsultaHastaString, new { @class = "form-control", @id = "txtContratosHasta" })
+                                    <div class="input-group-addon"><span class="fa fa-calendar"></span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label>@ListadoContratoResource.EtiquetaBandeja</label>
+                                @Html.TextBox("CodigoTrabajadorResponsable", @Model.ReporteListadoContratoRegularizado.CodigoTrabajadorResponsable, new { @class = "form-control hidden", @id = "hdnCodigoTrabajadorResponsable" })
+                                @Html.TextBox("NombreTrabajadorResponsable", @Model.ReporteListadoContratoRegularizado.NombreTrabajadorResponsable, new { @class = "form-control hidden", @id = "hdnNombreTrabajadorResponsable" })
+                                @Html.TextBox("txtEnBandejaDe", null, new { @class = "form-control", @id = "txtEnBandejaDe" })
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label>@ListadoContratoResource.EtiquetaEstadio</label>
+                                @Html.DropDownList("NombreEstadio", @Model.ListaEstadio, new { @class = "form-control", @id = "slcEstadio" })
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label>@ListadoContratoResource.EtiquetaTipoMoneda</label>
+                                @Html.DropDownList("CodigoMoneda", @Model.Moneda, new { @class = "form-control", @id = "slcMoneda" })
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label>@ReporteListadoContratoRegularizadoResource.EtiquetaMontoAcumuladoInicio</label>
+                                <div class="input-group">
+                                    @Html.TextBox("MontoAcumuladoInicio", @Model.ReporteListadoContratoRegularizado.MontoAcumuladoInicio, new { @class = "form-control", @id = "txtMontoAcumuladoInicio" })
+                                    <div class="input-group-addon"><span class="fa fa-usd"></span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label>@ReporteListadoContratoRegularizadoResource.EtiquetaMontoAcumuladoFin</label>
+                                <div class="input-group">
+                                    @Html.TextBox("MontoAcumuladoFin", @Model.ReporteListadoContratoRegularizado.MontoAcumuladoFin, new { @class = "form-control", @id = "txtMontoAcumuladoFin" })
+                                    <div class="input-group-addon"><span class="fa fa-usd"></span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label for="textContenidoContrato">@ListadoContratoResource.EtiquetaContenidoContrato</label>
+                                @Html.TextBox("ContenidoContrato", @Model.ReporteListadoContratoRegularizado.ContenidoContrato, new { @class = "form-control", @id = "textContenidoContrato" })
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                @*@Html.TextBox("FinalizarAprobacion", null, new { @class = "form-control hidden", @id = "hdnFinalizarAprobacion" })*@
+                                <label>@ListadoContratoResource.EtiquetaFinalizarAprobacion</label>
+                                <div class="row">
+                                    <div class="col-sm-5">
+                                        @if (Model.ReporteListadoContratoRegularizado.IndicadorFinalizarAprobacion == null)
+                                        {
+                                            <input type="radio" value="" name="IndicadorFinalizarAprobacion" checked="checked">
+                                        }
+                                        else
+                                        {
+                                            <input type="radio" value="" name="IndicadorFinalizarAprobacion">
+                                        }
+                                        <label>@ListadoContratoResource.EtiquetaTodos</label>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        @if (Model.ReporteListadoContratoRegularizado.IndicadorFinalizarAprobacion == "A")
+                                        {
+                                            <input type="radio" value="A" name="IndicadorFinalizarAprobacion" checked="checked">
+                                        }
+                                        else
+                                        {
+                                            <input type="radio" value="A" name="IndicadorFinalizarAprobacion">
+                                        }
+                                        <label>@ListadoContratoResource.EtiquetaSi</label>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        @if (Model.ReporteListadoContratoRegularizado.IndicadorFinalizarAprobacion == "NA")
+                                        {
+                                            <input type="radio" value="NA" name="IndicadorFinalizarAprobacion" checked="checked">
+                                        }
+                                        else
+                                        {
+                                            <input type="radio" value="NA" name="IndicadorFinalizarAprobacion">
+                                        }
+                                        <label>@ListadoContratoResource.EtiquetaNo</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <button class="btn btn-info" id="btnLimpiar" type="reset">@GenericoResource.BotonLimpiar</button>
+                            <button class="btn btn-default" id="btnBuscar">@GenericoResource.BotonMostrar</button>
+                        </div>
+                    </div>
+                </div>
+            @*</div>
+        </div>
+    </div>
+    <hr />*@
+    <div id="divContenedorReportView">
+        @Html.Partial("~/Areas/Base/Views/Reporte/ReportViewControl.ascx", dataReport)
+    </div>
+</div>
+@section scripts
+{
+    <script type="text/javascript">
+        ns('Pe.Stracon.SGC.Presentacion.Contractual.ReporteListadoContratoRegularizado.Actions')
+        Pe.Stracon.SGC.Presentacion.Contractual.ReporteListadoContratoRegularizado.Actions.BuscarTrabajador = '@Url.Action("BuscarTrabajador", "ReporteListadoContratoRegularizado", new { Area = "Contractual" })';
+
+        ns('Pe.Stracon.SGC.Presentacion.Recursos.Validacion')
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ConfirmacionGuardar = '@Html.Raw(MensajeResource.ConfirmacionGuardar)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.EtiquetaConfirmacion = '@MensajeResource.SeGuardoInformacionExito';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ConfirmacionEliminacion = '@MensajeResource.ConfirmacionEliminacion';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.EtiquetaTituloAdvertencia = '@Html.Raw(MensajeResource.EtiquetaTituloAdvertencia)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.EtiquetaTituloConfirmar = '@Html.Raw(GenericoResource.EtiquetaTituloConfirmar)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.SeleccionarRegistroEliminar = '@Html.Raw(MensajeResource.SeleccionarRegistroEliminar)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.MsgEliminacionList = '@Html.Raw(MensajeResource.MsgEliminacionList)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.EtiquetaEliminacionExitosa = '@Html.Raw(MensajeResource.SeEliminoInformacionExito)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarUnidadOperativa = '@Html.Raw(ReporteTiempoAtencionResource.EtiquetaUnidadOperativa)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarFechaConsultaDesde = '@Html.Raw(ReporteTiempoAtencionResource.EtiquetaFechaConsultaDesde)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarFechaConsultaHasta = '@Html.Raw(ReporteTiempoAtencionResource.EtiquetaFechaConsultaHasta)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarCamposAlMenosUno = '@Html.Raw(MensajeResource.ValidarCamposAlMenosUno)';
+
+        ns('Pe.Stracon.SGC.Presentacion.Contractual.ReporteListadoContratoRegularizado.Models')
+        Pe.Stracon.SGC.Presentacion.Contractual.ReporteListadoContratoRegularizado.Models.Index = @(Html.Raw(Json.Encode(Model)));
+    </script>
+}

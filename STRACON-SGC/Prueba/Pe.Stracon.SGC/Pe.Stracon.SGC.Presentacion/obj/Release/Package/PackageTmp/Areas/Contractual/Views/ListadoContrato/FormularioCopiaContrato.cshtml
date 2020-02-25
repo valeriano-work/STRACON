@@ -1,0 +1,169 @@
+﻿@using Pe.Stracon.SGC.Presentacion.Recursos.Base
+@using Pe.Stracon.SGC.Presentacion.Recursos.Contractual
+@using Pe.Stracon.SGC.Presentacion.Core.Helpers
+@using Pe.Stracon.SGC.Infraestructura.Core.Context
+@model Pe.Stracon.SGC.Presentacion.Core.ViewModel.Contractual.ListadoContrato.CopiaContratoFormulario
+
+
+@Html.Hidden("hdnNumeroContratoCopia", Model.Contrato.NumeroContrato, new { id = "hdnNumeroContratoCopia" })
+@Html.Hidden("hdnEsFlexible", Model.Contrato.EsFlexible, new { id = "hdnEsFlexible" })
+@Html.Hidden("hdnIndicadorAdhesion", Model.Contrato.IndicadorAdhesion, new { id = "hdnIndicadorAdhesion" })
+
+<form id="frmCopiaContrato" onsubmit="return false;">
+       
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="slcTipoServicio">@ListadoContratoResource.EtiquetaUnidadOperativa</label>
+                @if (Model.Contrato.CodigoUnidadOperativa != null)
+                {
+                    @Html.DropDownListFor(x => x.Contrato.CodigoUnidadOperativa, Model.ListadoUnidadOperativa, new { @class = "form-control", @id = "slcUnidadOperativa2" })
+                }
+                else
+                { 
+                    @Html.DropDownList("slcUnidadOperativa2", @Model.ListadoUnidadOperativa, new { @class = "form-control", @id = "slcUnidadOperativa2" })
+                }
+
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="slcTipoServicio">@ListadoContratoResource.EtiquetaTipoServicio</label>
+                @if (Model.Contrato.CodigoTipoServicio != null)
+                { 
+                    @Html.DropDownListFor(x => x.Contrato.CodigoTipoServicio, Model.TipoServicio, new { @class = "form-control", @id = "slcTipoServicio2" })
+                                }
+                else
+                { 
+                    @Html.DropDownList("slcTipoServicio2", @Model.TipoServicio, new { @class = "form-control", @id = "slcTipoServicio2" })
+                                }
+            </div>
+        </div>        
+        
+        </div>  
+    <div class="row">
+                <div class="col-sm-6">
+            <div class="form-group">
+                <label for="slcTipoRequerimiento">@ListadoContratoResource.EtiquetaTipoRequerimiento</label>
+                @Html.DropDownList("slcTipoRequerimiento2", new List<SelectListItem>(), new { @class = "form-control", @id = "slcTipoRequerimiento2" })
+            </div>
+        </div>      
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="txtFrmProveedor">@ListadoContratoResource.EtiquetaProveedor</label>
+                <div class="form-inline">
+                    <div class="input-group input-group-full">
+                        @Html.Hidden("hdnCodigoProveedorCopia", Model.Contrato.CodigoProveedor, new { id = "hdnCodigoProveedorCopia" })
+                        @Html.Hidden("hdnRucProveedorCopia", null, new { id = "hdnRucProveedorCopia" })
+                        @Html.TextBox("txtFrmProveedorCopia", Model.Contrato.NombreProveedor, new { @class = "form-control", @id = "txtFrmProveedorCopia", @validable = "required ValidarProveedor", @disabled = "" })
+                        <span class="input-group-addon">
+                            <button class="btn btn-default" id="btnBuscarProveedorCopia"><i class="fa fa-search"></i></button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @if (Model.Contrato.CodigoTipoDocumento == DatosConstantes.TipoDocumento.Adenda)
+        {
+         <div class="col-sm-3">
+            <div class="form-group">
+                <label for="txtFrmContratoPrincipal">@ListadoContratoResource.EtiquetaContratoPrincipal</label>
+                <div class="form-inline">
+                    <div class="input-group input-group-full">
+                      
+                            <input id="hdnCodigoContratoPrincipal" name="hdnCodigoContratoPrincipal" type="hidden" value="">
+                            <input class="form-control" disabled="" id="txtFrmContratoPrincipal" name="txtFrmContratoPrincipal" type="text" validable="required ValidarContratoPrincipal" value="">
+                            <span class="input-group-addon">
+                                <button class="btn btn-default" id="btnBuscarContratoPrincipal"><i class="fa fa-search"></i></button>
+                            </span>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+       <div class="col-sm-3">
+            <div class="form-group">
+                <label for="txtFrmContratoPrincipal">@ListadoContratoResource.EtiquetaNumeroAdenda</label>
+              
+                  @Html.TextBox("txtFrmNumeroAdendaConcatenado", Model.Contrato.NumeroAdendaConcatenado, new { disabled = "disabled", id = "txtFrmNumeroAdendaConcatenado", @class = "form-control" })
+                  
+            </div>
+        </div>
+            
+        }
+
+    </div>
+   
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="slcFrmMoneda">@ListadoContratoResource.EtiquetaMoneda</label>
+                @Html.DropDownList("slcFrmMonedaCopia", Model.Moneda, new { @class = "form-control", @id = "slcFrmMonedaCopia", @validable = "required ValidarMoneda" })
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="txtFrmMontoContrato">@ListadoContratoResource.EtiquetaMontoContrato</label>
+                @Html.Hidden("hdnTotalMontoAcumuladoCopia", null, new { id = "hdnTotalMontoAcumuladoCopia" })
+                @Html.TextBox("txtFrmMontoContratoCopia", Model.Contrato.MontoContratoString, new { @class = "form-control", @id = "txtFrmMontoContratoCopia", @validable = "required ValidarMontoContrato", mask = "decimal", maxlength = "10" })
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="txtFrmFechaInicioVigencia">@ListadoContratoResource.EtiquetaFechaInicioVigencia</label>
+                <div class="input-group">
+                    @Html.TextBox("dtpFrmFechaInicioVigenciaCopia", Model.Contrato.FechaInicioVigencia, new { @class = "form-control", @id = "dtpFrmFechaInicioVigenciaCopia", @validable = "required ValidarFechaInicioVigencia" })
+                    <div class="input-group-addon"><span class="fa fa-calendar"></span></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="txtFrmFechaFinVigencia">@ListadoContratoResource.EtiquetaFechaFinVigencia</label>
+                <div class="input-group">
+                    @Html.TextBox("dtpFrmFechaFinVigenciaCopia", Model.Contrato.FechaFinVigencia, new { @class = "form-control", @id = "dtpFrmFechaFinVigenciaCopia", @validable = "required ValidarFechaFinVigencia" })
+                    <div class="input-group-addon"><span class="fa fa-calendar"></span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="txtFrmDescripcion">@ListadoContratoResource.EtiquetaDescripcion</label>
+                @Html.TextBox("txtFrmDescripcionCopia", Model.Contrato.Descripcion, new { @class = "form-control", @id = "txtFrmDescripcionCopia", maxlength = "255", @validable = "required ValidarDescripcion" })
+            </div>
+        </div> 
+        
+        <div class="col-sm-6">
+            <div class="form-group">
+                <div class="col-sm-12">
+                    <label>
+                        @ListadoContratoResource.EtiquetaContratoCorporativo 
+                    </label>
+                </div>
+                <div align="center" class="col-sm-6">
+                    <input type="radio" value="true" name="rdbCorporativoCopia">@GenericoResource.EtiquetaSi
+                </div>
+                <div align="center" class="col-sm-6">
+                    <input type="radio" value="false" name="rdbCorporativoCopia" checked>@GenericoResource.EtiquetaNo
+                </div>
+            </div>
+        </div>
+              
+    </div>    
+
+</form>
+<div class="comp-Modal-footer">
+    <button class="btn btn-default" id="btnFrmContratoCopiaCancelar">@GenericoResource.BotonCancelar</button>
+    <button class="btn btn-primary" id="btnFrmContratoCopiaGenerarContrato">@ListadoContratoResource.EtiquetaBotonGenerarContrato</button>
+</div>
+
+<script type="text/javascript">
+    ns('Pe.Stracon.SGC.Presentacion.Contractual.ListadoContrato.Models')
+    Pe.Stracon.SGC.Presentacion.Contractual.ListadoContrato.Models.FormularioCopiaContrato = @(Html.Raw(Json.Encode(Model)));
+
+</script>

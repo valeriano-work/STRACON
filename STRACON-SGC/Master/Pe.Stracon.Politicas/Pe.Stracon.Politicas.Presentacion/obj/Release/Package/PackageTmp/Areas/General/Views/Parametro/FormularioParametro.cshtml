@@ -1,0 +1,93 @@
+﻿@using Pe.Stracon.Politicas.Presentacion.Core.Helpers
+@using Pe.Stracon.Politicas.Presentacion.Recursos.Base
+@using Pe.Stracon.Politicas.Presentacion.Recursos.General
+@model Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.Parametro.ParametroModel
+
+<form id="frmParametroGuardar">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label>@ParametroResource.EtiquetaParametroEmpresa</label>
+                <div>
+                    @Html.CheckBox("chkParametroEmpresaFormulario", Model.Parametro.IndicadorEmpresa, new { id = "chkParametroEmpresaFormulario" })
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label>@ParametroResource.EtiquetaTipoParametro</label>         
+                 @Html.DropDownList("slcTipoParametroFormulario", Model.ListaTipoParametro, new { id = "slcTipoParametroFormulario", @class = "form-control", @validable = "required ValidarTipoParametro" })
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label>@ParametroResource.EtiquetaSistema</label>
+                @Html.DropDownList("slcSistemaFormulario", Model.ListaSistema, new { id = "slcSistemaFormulario", @class = "form-control" })
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label>@ParametroResource.EtiquetaCodigoIdentificador</label>
+                @Html.TextBox("txtCodigoIdentificadorFormulario", Model.Parametro.CodigoIdentificador, new { id = "txtCodigoIdentificadorFormulario", @type = "text", @class = "form-control", @maxlength = "5", @validable = "required ValidarCodigoIdentificador" })  
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label>@ParametroResource.EtiquetaNombreParametro</label>
+                @Html.TextBox("txtNombreFormularioFormulario", Model.Parametro.Nombre, new { id = "txtNombreFormularioFormulario", @type = "text", @class = "form-control", @maxlength = "255", @validable = "required ValidarNombreParametro" })
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label>@ParametroResource.EtiquetaDescripcionParametro</label>
+                @Html.TextBox("txtDescripcionFormularioFormulario", Model.Parametro.Descripcion, new { id = "txtDescripcionFormularioFormulario", @type = "text", @class = "form-control", @maxlength = "255", @validable = "required ValidarDescripcionParametro"  })
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label>@ParametroResource.EtiquetaPermiteAgregar</label>
+                <div>
+                    @Html.CheckBox("chkPermiteAgregarFormulario", Model.Parametro.IndicadorPermiteAgregar, new { id = "chkPermiteAgregarFormulario" })                
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label>@ParametroResource.EtiquetaPermiteModificar</label>
+                <div>
+                    @Html.CheckBox("chkPermiteModificarFormulario", Model.Parametro.IndicadorPermiteModificar, new { id = "chkPermiteModificarFormulario" })                
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label>@ParametroResource.EtiquetaPermiteEliminar</label>
+                <div>
+                    @Html.CheckBox("chkPermiteEliminarFormulario", Model.Parametro.IndicadorPermiteEliminar, new { id = "chkPermiteEliminarFormulario" })                
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<div class="comp-Modal-footer">
+    <button class="btn btn-default" id="btnCancelar">@GenericoResource.BotonCancelar</button>
+    <button class="btn btn-primary" id="btnGrabar">@GenericoResource.BotonGrabar</button>
+</div>
+
+<script type="text/javascript">
+    ns('Pe.Stracon.Politicas.Presentacion.General.Parametro.Resources.Validacion')
+    Pe.Stracon.Politicas.Presentacion.General.Parametro.Resources.Validacion.ValidarTipoParametro = '@ParametroResource.EtiquetaTipoParametro';
+    Pe.Stracon.Politicas.Presentacion.General.Parametro.Resources.Validacion.ValidarSistema = '@ParametroResource.EtiquetaSistema';
+    Pe.Stracon.Politicas.Presentacion.General.Parametro.Resources.Validacion.ValidarCodigoIdentificador = '@ParametroResource.EtiquetaCodigoIdentificador';
+    Pe.Stracon.Politicas.Presentacion.General.Parametro.Resources.Validacion.ValidarNombreParametro = '@ParametroResource.EtiquetaNombreParametro';
+    Pe.Stracon.Politicas.Presentacion.General.Parametro.Resources.Validacion.ValidarDescripcionParametro = '@ParametroResource.EtiquetaDescripcionParametro';
+</script>
+@CustomHtmlHelper.RenderViewJs()

@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7FA64A98-D0D2-423C-8CAC-F9AC49C7CDC0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Pe.Stracon.SGC.Infraestructura.CommandModel</RootNamespace>
+    <AssemblyName>Pe.Stracon.SGC.Infraestructura.CommandModel</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Pe.Stracon.SGC.Infraestructura.CommandModel.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'STRACON_QA|AnyCPU'">
+    <OutputPath>bin\STRACON_QA\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\BaseEntityMapping.cs" />
+    <Compile Include="Base\Entity.cs" />
+    <Compile Include="Base\TraceAuditAttribute.cs" />
+    <Compile Include="Contractual\BienAlquilerEntity.cs" />
+    <Compile Include="Contractual\BienEntity.cs" />
+    <Compile Include="Contractual\BienRegistroEntity.cs" />
+    <Compile Include="Contractual\ConsultaAdjuntoEntity.cs" />
+    <Compile Include="Contractual\ConsultaEntity.cs" />
+    <Compile Include="Contractual\ConsultaTrazabilidadEntity.cs" />
+    <Compile Include="Contractual\RequerimientoDocumentoAdjuntoResolucionEntity.cs" />
+    <Compile Include="Contractual\RequerimientoDocumentoAdjuntoEntity.cs" />
+    <Compile Include="Contractual\RequerimientoEstadioConsultaEntity.cs" />
+    <Compile Include="Contractual\RequerimientoEstadioObservacionEntity.cs" />
+    <Compile Include="Contractual\RequerimientoFirmanteEntity.cs" />
+    <Compile Include="Contractual\RequerimientoBienEntity.cs" />
+    <Compile Include="Contractual\ContratoBienEntity.cs" />
+    <Compile Include="Contractual\ContratoDocumentoAdjuntoResolucionEntity.cs" />
+    <Compile Include="Contractual\RequerimientoParrafoVariableEntity.cs" />
+    <Compile Include="Contractual\RequerimientoParrafoEntity.cs" />
+    <Compile Include="Contractual\RequerimientoEstadioEntity.cs" />
+    <Compile Include="Contractual\RequerimientoDocumentoEntity.cs" />
+    <Compile Include="Contractual\ContratoDocumentoEntity.cs" />
+    <Compile Include="Contractual\RequerimientoEntity.cs" />
+    <Compile Include="Contractual\ContratoEntity.cs" />
+    <Compile Include="Contractual\ContratoEstadioEntity.cs" />
+    <Compile Include="Contractual\ContratoEstadioConsultaEntity.cs" />
+    <Compile Include="Contractual\ContratoEstadioObservacionEntity.cs" />
+    <Compile Include="Contractual\ContratoFirmanteEntity.cs" />
+    <Compile Include="Contractual\ContratoHitoEntity.cs" />
+    <Compile Include="Contractual\ContratoParrafoEntity.cs" />
+    <Compile Include="Contractual\ContratoParrafoVariableCampoEntity.cs" />
+    <Compile Include="Contractual\ContratoParrafoVariableEntity.cs" />
+    <Compile Include="Contractual\ContratoDocumentoAdjuntoEntity.cs" />
+    <Compile Include="Contractual\FlujoAprobacionTipoContratoEntity.cs" />
+    <Compile Include="Contractual\FlujoAprobacionTipoServicioEntity.cs" />
+    <Compile Include="Contractual\PlantillaRequerimientoParrafoEntity.cs" />
+    <Compile Include="Contractual\PlantillaRequerimientoParrafoVariableEntity.cs" />
+    <Compile Include="Contractual\PlantillaRequerimientoNotaPieEntity.cs" />
+    <Compile Include="Contractual\PlantillaRequerimientoEntity.cs" />
+    <Compile Include="Contractual\PlantillaNotaPieEntity.cs" />
+    <Compile Include="Contractual\PlantillaParrafoEntity.cs" />
+    <Compile Include="Contractual\PlantillaParrafoVariableEntity.cs" />
+    <Compile Include="Contractual\ProcesoAuditoriaEntity.cs" />
+    <Compile Include="Contractual\FlujoAprobacionParticipanteEntity.cs" />
+    <Compile Include="Contractual\FlujoAprobacionEstadioEntity.cs" />
+    <Compile Include="Contractual\FlujoAprobacionEntity.cs" />
+    <Compile Include="Contractual\PlantillaEntity.cs" />
+    <Compile Include="Contractual\ProveedorEntity.cs" />
+    <Compile Include="Contractual\VariableCampoEntity.cs" />
+    <Compile Include="Contractual\VariableEntity.cs" />
+    <Compile Include="Contractual\VariableListaEntity.cs" />
+    <Compile Include="Mapping\Contractual\BienAlquilerMapping.cs" />
+    <Compile Include="Mapping\Contractual\BienMapping.cs" />
+    <Compile Include="Mapping\Contractual\BienRegistroMapping.cs" />
+    <Compile Include="Mapping\Contractual\ConsultaAdjuntoMapping.cs" />
+    <Compile Include="Mapping\Contractual\ConsultaMapping.cs" />
+    <Compile Include="Mapping\Contractual\ConsultaTrazabilidadMapping.cs" />
+    <Compile Include="Mapping\Contractual\ContratoBienMapping.cs" />
+    <Compile Include="Mapping\Contractual\ContratoDocumentoMapping.cs" />
+    <Compile Include="Mapping\Contractual\ContratoEstadioConsultaMapping.cs" />
+    <Compile Include="Mapping\Contractual\ContratoEstadioMapping.cs" />
+    <Compile Include="Mapping\Contractual\ContratoEstadioObservacionMapping.cs" />
+    <Compile Include="Mapping\Contractual\ContratoFirmanteMapping.cs" />
+    <Compile Include="Mapping\Contractual\ContratoHitoMapping.cs" />
+    <Compile Include="Mapping\Contractual\ContratoMapping.cs" />
+    <Compile Include="Mapping\Contractual\ContratoParrafoMapping.cs" />
+    <Compile Include="Mapping\Contractual\ContratoParrafoVariableCampoMapping.cs" />
+    <Compile Include="Mapping\Contractual\FlujoAprobacionTipoContratoMapping.cs" />
+    <Compile Include="Mapping\Contractual\PlantillaRequerimientoMapping.cs" />
+    <Compile Include="Mapping\Contractual\PlantillaNotaPieMapping.cs" />
+    <Compile Include="Mapping\Contractual\VariableListaMapping.cs" />
+    <Compile Include="Mapping\Contractual\ContratoParrafoVariableMapping.cs" />
+    <Compile Include="Mapping\Contractual\ContratoDocumentoAdjuntoMapping.cs" />
+    <Compile Include="Mapping\Contractual\FlujoAprobacionTipoServicioMapping.cs" />
+    <Compile Include="Mapping\Contractual\PlantillaParrafoMapping.cs" />
+    <Compile Include="Mapping\Contractual\PlantillaParrafoVariableMapping.cs" />
+    <Compile Include="Mapping\Contractual\ProcesoAuditoriaMapping.cs" />
+    <Compile Include="Mapping\Contractual\FlujoAprobacionParticipanteMapping.cs" />
+    <Compile Include="Mapping\Contractual\FlujoAprobacionEstadioMapping.cs" />
+    <Compile Include="Mapping\Contractual\FlujoAprobacionMapping.cs" />
+    <Compile Include="Mapping\Contractual\PlantillaMapping.cs" />
+    <Compile Include="Mapping\Contractual\ProveedorMapping.cs" />
+    <Compile Include="Mapping\Contractual\VariableCampoMapping.cs" />
+    <Compile Include="Mapping\Contractual\VariableMapping.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

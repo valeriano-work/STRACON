@@ -1,0 +1,6 @@
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.Stracon.Politicas\Pe.Stracon.Politicas.Infraestructura.QueryModel\bin\Release\Pe.Stracon.Politicas.Infraestructura.QueryModel.dll
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.Stracon.Politicas\Pe.Stracon.Politicas.Infraestructura.QueryModel\bin\Release\Pe.Stracon.Politicas.Infraestructura.QueryModel.pdb
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.Stracon.Politicas\Pe.Stracon.Politicas.Infraestructura.QueryModel\obj\Release\Pe.Stracon.Politicas.Infraestructura.QueryModel.csprojAssemblyReference.cache
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.Stracon.Politicas\Pe.Stracon.Politicas.Infraestructura.QueryModel\obj\Release\Pe.Stracon.Politicas.Infraestructura.QueryModel.csproj.CoreCompileInputs.cache
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.Stracon.Politicas\Pe.Stracon.Politicas.Infraestructura.QueryModel\obj\Release\Pe.Stracon.Politicas.Infraestructura.QueryModel.dll
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.Stracon.Politicas\Pe.Stracon.Politicas.Infraestructura.QueryModel\obj\Release\Pe.Stracon.Politicas.Infraestructura.QueryModel.pdb

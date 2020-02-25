@@ -1,0 +1,127 @@
+﻿@using Pe.Stracon.SGC.Presentacion.Recursos.Base
+@using Pe.Stracon.SGC.Presentacion.Recursos.Contractual
+@using Pe.Stracon.SGC.Presentacion.Recursos.Mensajes
+@using Pe.Stracon.SGC.Presentacion.Core.Helpers
+@model Pe.Stracon.SGC.Presentacion.Core.ViewModel.Contractual.ReporteContratoEliminado.ReporteContratoEliminadoBusqueda
+@using Pe.Stracon.SGC.Infraestructura.Core.Context
+
+@{
+    var dataReport = TempData["DataReport"];
+}
+
+<div class="GmdBody-header">
+    <h2>@ReporteContratoEliminadoResource.EtiquetaTitulo</h2>
+</div>
+<div class="GmdBody-body">
+    <form id="frmReporteContratoEliminado">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label>@ReporteContratoEliminadoResource.EtiquetaDescripcion</label>
+                    @Html.TextBox("Descripcion", @Model.ReporteListadoContrato.Descripcion, new { @class = "form-control", @id = "txtDescripcion" })
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label>@ReporteContratoEliminadoResource.EtiquetaUnidadOperativa</label>
+                    @Html.DropDownList("CodigoUnidadOperativa", @Model.UnidadOperativa, new { @class = "form-control", @id = "slcUnidadOperativa" })
+                    @Html.TextBox("NombreUnidadOperativa", null, new { @class = "form-control hidden", @id = "hdnNombreUnidadOperativa" })
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label>@ReporteContratoEliminadoResource.EtiquetaTipoServicio</label>
+                    @Html.DropDownList("CodigoTipoServicio", @Model.TipoServicio, new { @class = "form-control", @id = "slcTipoServicio" })
+                    @Html.TextBox("NombreTipoServicio", null, new { @class = "form-control hidden", @id = "hdnNombreTipoServicio" })
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label>@ReporteContratoEliminadoResource.EtiquetaTipoRequerimiento</label>
+                    @Html.DropDownList("CodigoTipoRequerimiento", @Model.TipoRequerimiento, new { @class = "form-control", @id = "slcTipoRequerimiento" })
+                    @Html.TextBox("NombreTipoRequerimiento", null, new { @class = "form-control hidden", @id = "hdnNombreTipoRequerimiento" })
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label>@ReporteContratoEliminadoResource.EtiquetaTipoDocumento</label>
+                    @Html.DropDownList("CodigoTipoDocumento", @Model.TipoDocumento, new { @class = "form-control", @id = "slcTipoDocumento" })
+                    @Html.TextBox("NombreTipoDocumento", null, new { @class = "form-control hidden", @id = "hdnNombreTipoDocumento" })
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label>@ReporteContratoEliminadoResource.EtiquetaEstadoContrato</label>
+                    @Html.DropDownList("CodigoEstadoContrato", @Model.EstadoContrato, new { @class = "form-control", @id = "slcEstadoContrato" })
+                    @Html.TextBox("NombreEstadoContrato", null, new { @class = "form-control hidden", @id = "hdnNombreEstadoContrato" })
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label>@ReporteContratoEliminadoResource.EtiquetaNumeroContrato</label>
+                    @Html.TextBox("NumeroContrato", @Model.ReporteListadoContrato.NumeroContrato, new { @class = "form-control", @id = "txtNumeroContrato" })
+                </div>
+            </div>
+           
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label>@ReporteContratoEliminadoResource.EtiquetaDesde</label>
+                    <div class="input-group">
+                        @Html.TextBox("FechaConsultaDesdeString", @Model.ReporteListadoContrato.FechaConsultaDesdeString, new { @class = "form-control", @id = "txtContratosDesde" })
+                        <div class="input-group-addon"><span class="fa fa-calendar"></span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label>@ReporteContratoEliminadoResource.EtiquetaHasta</label>
+                    <div class="input-group">
+                        @Html.TextBox("FechaConsultaHastaString", @Model.ReporteListadoContrato.FechaConsultaHastaString, new { @class = "form-control", @id = "txtContratosHasta" })
+                        <div class="input-group-addon"><span class="fa fa-calendar"></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </form>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="form-group">
+                <button class="btn btn-info" id="btnLimpiar" type="reset">@GenericoResource.BotonLimpiar</button>
+                <button class="btn btn-default" id="btnBuscar">@GenericoResource.BotonMostrar</button>
+            </div>
+        </div>
+    </div>
+    <hr />
+
+    <div id="divContenedorReportView">
+        @Html.Partial("~/Areas/Base/Views/Reporte/ReportViewControl.ascx", dataReport)
+    </div>
+  
+</div>
+@section scripts
+{
+    <script type="text/javascript">
+        ns('Pe.Stracon.SGC.Presentacion.Contractual.ReporteContratoEliminado.Actions')
+      
+        ns('Pe.Stracon.SGC.Presentacion.Recursos.Validacion')
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ConfirmacionGuardar = '@Html.Raw(MensajeResource.ConfirmacionGuardar)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.EtiquetaConfirmacion = '@MensajeResource.SeGuardoInformacionExito';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ConfirmacionEliminacion = '@MensajeResource.ConfirmacionEliminacion';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.EtiquetaTituloAdvertencia = '@Html.Raw(MensajeResource.EtiquetaTituloAdvertencia)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.EtiquetaTituloConfirmar = '@Html.Raw(GenericoResource.EtiquetaTituloConfirmar)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.SeleccionarRegistroEliminar = '@Html.Raw(MensajeResource.SeleccionarRegistroEliminar)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.MsgEliminacionList = '@Html.Raw(MensajeResource.MsgEliminacionList)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.EtiquetaEliminacionExitosa = '@Html.Raw(MensajeResource.SeEliminoInformacionExito)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarUnidadOperativa = '@Html.Raw(ReporteTiempoAtencionResource.EtiquetaUnidadOperativa)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarFechaConsultaDesde = '@Html.Raw(ReporteTiempoAtencionResource.EtiquetaFechaConsultaDesde)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarFechaConsultaHasta = '@Html.Raw(ReporteTiempoAtencionResource.EtiquetaFechaConsultaHasta)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarCamposAlMenosUno = '@Html.Raw(MensajeResource.ValidarCamposAlMenosUno)';
+
+        ns('Pe.Stracon.SGC.Presentacion.Contractual.ReporteContratoEliminado.Models')
+        Pe.Stracon.SGC.Presentacion.Contractual.ReporteContratoEliminado.Models.Index = @(Html.Raw(Json.Encode(Model)));
+    </script>
+}

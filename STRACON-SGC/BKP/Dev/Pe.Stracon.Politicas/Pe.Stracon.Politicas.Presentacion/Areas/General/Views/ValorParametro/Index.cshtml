@@ -1,0 +1,73 @@
+﻿@using Pe.Stracon.Politicas.Presentacion.Recursos.Base
+@using Pe.Stracon.Politicas.Presentacion.Recursos.General
+@using Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes
+
+@model Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.ValorParametro.ValorParametroModel
+@{
+    ViewBag.Title = "Index";
+}
+<div class="GmdBody-header">
+    <h2>@ValorParametroResource.EtiquetaTituloPrincipal</h2>
+</div>
+<div class="GmdBody-body">
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="form-group">
+                <label>@ValorParametroResource.EtiquetaParametro</label>
+                    <div class="input-group input-group-ibtn">
+                        @Html.DropDownList("slcParametro", Model.ListaParametro, new { id = "slcParametro", @class = "form-control" })
+                    </div>                    
+            </div>
+        </div>
+    </div>
+    <div>
+        <hr />
+        <div class="row">
+            <div class="col-sm-6" align ="left">
+                <h3>@GenericoResource.EtiquetaResultadosBusqueda</h3>
+            </div>
+            <div class="col-sm-6" align ="right">
+                <button id="btnEliminar" class="btn btn-info">@GenericoResource.BotonEliminar</button>
+                <button id="btnAgregar" class="btn btn-primary">@GenericoResource.BotonAñadir</button>            
+            </div>
+        </div>
+        <div id="divGrdResult"></div>        
+    </div>
+</div>
+@section scripts
+{
+    <script type="text/javascript">
+        ns('Pe.Stracon.Politicas.Presentacion.General.ValorParametro.Actions')
+        Pe.Stracon.Politicas.Presentacion.General.ValorParametro.Actions.BuscarParametro = '@Url.Action("BuscarParametro", "ValorParametro", new { Area = "General" })';
+        Pe.Stracon.Politicas.Presentacion.General.ValorParametro.Actions.Buscar = '@Url.Action("Buscar", "ValorParametro", new { Area = "General" })';
+        Pe.Stracon.Politicas.Presentacion.General.ValorParametro.Actions.FormularioParametro = '@Url.Action("FormularioParametro", "ValorParametro", new { Area = "General" })';
+        Pe.Stracon.Politicas.Presentacion.General.ValorParametro.Actions.GuardarParametro = '@Url.Action("GuardarParametro", "ValorParametro", new { Area = "General" })';
+        Pe.Stracon.Politicas.Presentacion.General.ValorParametro.Actions.EliminarParametro = '@Url.Action("EliminarParametro", "ValorParametro", new { Area = "General" })';
+
+        ns('Pe.Stracon.Politicas.Presentacion.General.ValorParametro.Resources')
+        Pe.Stracon.Politicas.Presentacion.General.ValorParametro.Resources.BuscarParametrosGenerales         = '@Html.Raw(ValorParametroResource.EtiquetaTituloDlgBuscarParametrosGenerales)';
+        Pe.Stracon.Politicas.Presentacion.General.ValorParametro.Resources.FormularioParametrosGenerales     = '@Html.Raw(ValorParametroResource.EtiquetaDlgFormularioParametrosGenerales)';
+        Pe.Stracon.Politicas.Presentacion.General.ValorParametro.Resources.Confirmar                         = '@Html.Raw(ValorParametroResource.EtiquetaTituloDlgConfirmar)';
+        Pe.Stracon.Politicas.Presentacion.General.ValorParametro.Resources.EstaSeguro                        = '@Html.Raw(ValorParametroResource.EtiquetaMessageDlgEstaSeguro)'; 
+        Pe.Stracon.Politicas.Presentacion.General.ValorParametro.Resources.EstaSeguroGrabar                  = '@Html.Raw(ValorParametroResource.EtiquetaMessageDlgEstaSeguroGrabar)';
+        Pe.Stracon.Politicas.Presentacion.General.ValorParametro.Resources.GridAcciones                      = '@Html.Raw(GenericoResource.GridAcciones)';
+        Pe.Stracon.Politicas.Presentacion.General.ValorParametro.Resources.EtiquetaEditar                    = '@Html.Raw(GenericoResource.EtiquetaEditar)';
+        Pe.Stracon.Politicas.Presentacion.General.ValorParametro.Resources.EtiquetaEliminar                  = '@Html.Raw(GenericoResource.EtiquetaEliminar)';
+        Pe.Stracon.Politicas.Presentacion.General.ValorParametro.Resources.TituloEliminar                    = '@Html.Raw(ValorParametroResource.EtiquetaTituloEliminar)';
+        Pe.Stracon.Politicas.Presentacion.General.ValorParametro.Resources.MsgEliminar                       = '@Html.Raw(ValorParametroResource.EtiquetaDlgMsgEliminar)';
+        Pe.Stracon.Politicas.Presentacion.General.ValorParametro.Resources.EtiquetaTituloAdvertencia         = '@Html.Raw(MensajeResource.EtiquetaTituloAdvertencia)';
+
+
+        ns('Pe.Stracon.Politicas.Presentacion.Recursos.Validacion')
+        Pe.Stracon.Politicas.Presentacion.Recursos.Validacion.ConfirmacionGuardar                       = '@Html.Raw(MensajeResource.ConfirmacionGuardar)';
+        Pe.Stracon.Politicas.Presentacion.Recursos.Validacion.EtiquetaEjecutoNingunProceso              = '@MensajeResource.EtiquetaNoEjecutoNingunProceso';
+        Pe.Stracon.Politicas.Presentacion.Recursos.Validacion.EtiquetaErrorRegistro                     = '@MensajeResource.EtiquetaErrorRegistro';
+        Pe.Stracon.Politicas.Presentacion.Recursos.Validacion.ActualizacionConforme                     = '@Html.Raw(MensajeResource.SeGuardoInformacionExito)';
+        Pe.Stracon.Politicas.Presentacion.Recursos.Validacion.EtiquetaConfirmacion                      = '@MensajeResource.SeGuardoInformacionExito';
+        Pe.Stracon.Politicas.Presentacion.Recursos.Validacion.EtiquetEliminacion                        = '@MensajeResource.ConfirmacionEliminacion';
+        Pe.Stracon.Politicas.Presentacion.Recursos.Validacion.SeleccionarRegistroEliminar               = '@Html.Raw(MensajeResource.SeleccionarRegistroEliminar)';
+
+    </script>
+    <script src="~/Scripts/General/ValorParametro/FormularioParametro/Controller.js"></script>
+}
+

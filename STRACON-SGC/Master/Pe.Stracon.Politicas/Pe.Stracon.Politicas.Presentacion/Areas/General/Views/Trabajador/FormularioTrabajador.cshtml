@@ -1,0 +1,124 @@
+﻿@using Pe.Stracon.Politicas.Presentacion.Recursos.Base
+@using Pe.Stracon.Politicas.Presentacion.Recursos.General
+@using Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes
+@using Pe.Stracon.Politicas.Infraestructura.Core.Context
+
+@model Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.Trabajador.TrabajadorModel
+
+<form id="frmTrabajadorRegistro">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                @Html.Hidden("hdnCodigoTrabajador", Model.Trabajador.CodigoTrabajador, new { id = "hdnCodigoTrabajador" })
+                <label>@TrabajadorResource.EtiquetaCodigoIdentificacion</label>
+                @Html.TextBox("txtNombreRegistro", Model.Trabajador.CodigoIdentificacion, new { id = "txtCodigoIdentificacionRegistro", @class = "form-control", @validable = "required ValidarCodigoIdentificacion", @readonly = "readonly" })
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label>@TrabajadorResource.EtiquetaNombres</label>
+                @Html.TextBox("txtNombresRegistro", Model.Trabajador.Nombres, new { id = "txtNombresRegistro", @class = "form-control" })
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label>@TrabajadorResource.EtiquetaApellidoPaterno</label>
+                @Html.TextBox("txtApellidoPaternoRegistro", Model.Trabajador.ApellidoPaterno, new { id = "txtApellidoPaternoRegistro", @class = "form-control" })
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label>@TrabajadorResource.EtiquetaApellidoMaterno</label>
+                @Html.TextBox("txtApellidoMaternoRegistro", Model.Trabajador.ApellidoMaterno, new { id = "txtApellidoMaternoRegistro", @class = "form-control" })
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label>@TrabajadorResource.EtiquetaCodigoTipoDocumento</label>
+                @Html.DropDownList("slcCodigoTipoDocumentoRegistro", Model.CodigoTipoDocumentoIdentidad, new { id = "slcCodigoTipoDocumentoRegistro", @class = "form-control", @validable = "required ValidarCodigoTipoDocumento" })
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label>@TrabajadorResource.EtiquetaNumeroDocumentoIdentidad</label>
+                @if (Model.Trabajador.CodigoTipoDocumentoIdentidad == DatosConstantes.TipoDocumentoIdentidad.Dni)
+                {
+                    @Html.TextBox("txtNumeroDocumentoIdentidadRegistro", Model.Trabajador.NumeroDocumentoIdentidad, new { id = "txtNumeroDocumentoIdentidadRegistro", @class = "form-control", @maxlength = "8", @type = "number", @validable = "required ValidarNumeroDocumentoIdentidad" })
+                }
+                else if (Model.Trabajador.CodigoTipoDocumentoIdentidad == DatosConstantes.TipoDocumentoIdentidad.Ruc)
+                {
+                    @Html.TextBox("txtNumeroDocumentoIdentidadRegistro", Model.Trabajador.NumeroDocumentoIdentidad, new { id = "txtNumeroDocumentoIdentidadRegistro", @class = "form-control", @maxlength = "15", @type = "number", @validable = "required ValidarNumeroDocumentoIdentidad" })
+                }
+                else
+                {
+                    @Html.TextBox("txtNumeroDocumentoIdentidadRegistro", Model.Trabajador.NumeroDocumentoIdentidad, new { id = "txtNumeroDocumentoIdentidadRegistro", @class = "form-control", @maxlength = "50", @type = "number", @validable = "required ValidarNumeroDocumentoIdentidad" })
+                }
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label>@TrabajadorResource.EtiquetaOrganizacion</label>
+                @Html.TextBox("txtOrganizacionRegistro", Model.Trabajador.Organizacion, new { id = "txtOrganizacionRegistro", @class = "form-control" })
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label>@TrabajadorResource.EtiquetaDepartamento</label>
+                @Html.TextBox("txtDepartamentoRegistro", Model.Trabajador.Departamento, new { id = "txtDepartamentoRegistro", @class = "form-control" })
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label>@TrabajadorResource.EtiquetaCargo</label>
+                @Html.TextBox("txtCargoRegistro", Model.Trabajador.Cargo, new { id = "txtCargoRegistro", @class = "form-control" })
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label>@TrabajadorResource.EtiquetaTelefonoTrabajo</label>
+                @Html.TextBox("txtTelefonoTrabajoRegistro", Model.Trabajador.TelefonoTrabajo, new { id = "txtTelefonoTrabajoRegistro", @class = "form-control" })
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label>@TrabajadorResource.EtiquetaAnexo</label>
+                @Html.TextBox("txtAnexoRegistro", Model.Trabajador.Anexo, new { id = "txtAnexoRegistro", @class = "form-control", @maxlength = "5", @type = "number" })
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label>@TrabajadorResource.EtiquetaTelefonoMovil</label>
+                @Html.TextBox("txtTelefonoMovilRegistro", Model.Trabajador.TelefonoMovil, new { id = "txtTelefonoMovilRegistro", @class = "form-control", @maxlength = "9", @type = "number" })
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label>@TrabajadorResource.EtiquetaTelefonoPersonal</label>
+                @Html.TextBox("txtTelefonoPersonalRegistro", Model.Trabajador.TelefonoPersonal, new { id = "txtTelefonoPersonalRegistro", @class = "form-control", @maxlength = "9", @type = "number" })
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label>@TrabajadorResource.EtiquetaCorreoElectronico</label>
+                @Html.TextBox("txtCorreoElectronicoRegistro", Model.Trabajador.CorreoElectronico, new { id = "txtCorreoElectronicoRegistro", @class = "form-control", @readonly = "readonly" })
+            </div>
+        </div>
+    </div>
+</form>
+<div class="comp-Modal-footer">
+    <button class="btn btn-default" id="btnCancelarRegistro">@GenericoResource.BotonCancelar</button>
+    <button class="btn btn-primary" id="btnGrabarRegistro">@GenericoResource.BotonGrabar</button>
+</div>
+

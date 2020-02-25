@@ -1,0 +1,27 @@
+﻿@using Pe.Stracon.Politicas.Presentacion.Recursos.Base
+@using Pe.Stracon.Politicas.Presentacion.Recursos.General
+@using Pe.Stracon.Politicas.Infraestructura.QueryModel
+@using Pe.Stracon.Politicas.Infraestructura.Core.Context
+
+<form id="frmAsignarResponsable" onsubmit="return false;">    
+    <div class="row">
+       
+        <div class="col-sm-6">
+            <label for="txtNombreUsuario">@UnidadOperativaResource.EtiquetaNombre</label>
+                @Html.TextBox("txtUsuario", "", new { id = "txtUsuario", @class = "form-control", @validable = "required ValidarNombre" })
+          
+        </div>
+        <div class="col-sm-5">
+            <br />
+            <button class="btn btn-primary" id="btnAsignar">@GenericoResource.BotonAñadir</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div id="divResultadoAsignacion"></div>
+        </div>
+    </div>
+</form>
+<div class="comp-Modal-footer">
+    <button class="btn btn-default" id="btnCancelarAsignarUsuario">@GenericoResource.BotonCerrar</button>
+</div>

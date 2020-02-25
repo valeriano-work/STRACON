@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Domain.Implementation.Security.Aggregates.CompanyAgg" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Domain.Implementation.Security.Aggregates.CompanyAgg" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfCompany">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Company" nillable="true" type="tns:Company" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCompany" nillable="true" type="tns:ArrayOfCompany" />
+  <xs:complexType name="Company">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="D_DATE_CREATION" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="D_DATE_MODIFICATION" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="D_DATE_TERMINATE_REGISTER" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="N_ID_AREA" type="xs:int" />
+      <xs:element minOccurs="0" name="N_ID_COMPANY" type="xs:int" />
+      <xs:element minOccurs="0" name="N_ID_COUNTRY" type="xs:int" />
+      <xs:element minOccurs="0" name="N_RUC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="S_ADDRESS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="S_DESCRIPTION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="S_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="S_NAME_SHORT" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="S_OBSERVATION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="S_STATUS_REGISTER" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="S_TERMINAL_CREATION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="S_TERMINAL_MODIFICATION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="S_USER_CREATION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="S_USER_MODIFICATION" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Company" nillable="true" type="tns:Company" />
+</xs:schema>

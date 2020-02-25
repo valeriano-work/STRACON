@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="STRACON_SGC">
+  <ConnectionProperties>
+    <Extension>SQL</Extension>
+    <ConnectString>Data Source=chile;Initial Catalog=STRACON_SGC</ConnectString>
+    <Prompt>Specify a user name and password for data source STRACON_SGC:</Prompt>
+  </ConnectionProperties>
+  <DataSourceID>063f6ed8-c5e2-4b65-a6b8-c596256bcff7</DataSourceID>
+</RptDataSource>

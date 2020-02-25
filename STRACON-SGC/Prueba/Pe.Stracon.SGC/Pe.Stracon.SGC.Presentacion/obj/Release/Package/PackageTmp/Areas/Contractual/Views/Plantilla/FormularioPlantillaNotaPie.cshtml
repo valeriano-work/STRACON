@@ -1,0 +1,78 @@
+﻿@using Pe.Stracon.SGC.Presentacion.Recursos.Base
+@using Pe.Stracon.SGC.Presentacion.Recursos.Contractual
+@using Pe.Stracon.SGC.Presentacion.Recursos.Mensajes
+@using Pe.Stracon.SGC.Presentacion.Core.Helpers
+@model Pe.Stracon.SGC.Presentacion.Core.ViewModel.Contractual.Plantilla.PlantillaNotaPie
+
+<div class="GmdBody-header">
+    <h2>@Html.ActionLink(@PlantillaContratoResource.EtiquetaTituloPrincipal, "Index") <i class="fa fa-angle-right"></i>
+        @Html.ActionLink(@PlantillaContratoResource.EtiquetaTituloNotas, "PlantillaNotaPie") <i class="fa fa-angle-right"></i>
+        @PlantillaContratoResource.EtiquetaFormularioPlantillaNota
+    </h2>
+</div>
+<div class="GmdBody-body">
+    <form id="frmPlantillaNotaPie">
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <input id="hdnCodigoPlantilla" type="hidden" value="@Model.PlantillaNotaPieModel.CodigoPlantilla" />
+                    <input id="hdnCodigoPlantillaNotaPie" type="hidden" value="@Model.PlantillaNotaPieModel.CodigoPlantillaNotaPie" />
+                    <label for="spnFrmOrden">@PlantillaContratoResource.EtiquetaOrden</label>
+                    @Html.TextBox("spnFrmOrden", @Model.PlantillaNotaPieModel.Orden, new { @class = "form-control", @id = "spnFrmOrden" })
+                </div>
+            </div>
+            <div class="col-sm-9">
+                <div class="form-group">
+                    <label for="txtFrmTitulo">@PlantillaContratoResource.GridIdNota</label>
+                    @Html.TextBox("txtFrmTitulo", @Model.PlantillaNotaPieModel.Titulo, new { @class = "form-control", @id = "txtFrmTitulo" })
+                </div>
+            </div>
+        </div>
+        <div class="row">
+           
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <label for="txtFrmContenido">@PlantillaContratoResource.EtiquetaContenido</label>
+                    @Html.TextArea("txtFrmContenido", @Model.PlantillaNotaPieModel.Contenido, new { @class = "form-control", @id = "txtFrmContenido" })
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <div class="comp-Modal-footer">
+        <button class="btn btn-default" id="btnFrmPlantillaCancelar">@GenericoResource.BotonCancelar</button>
+        <button class="btn btn-primary" id="btnFrmPlantillaGrabar">@GenericoResource.BotonGrabar</button>
+    </div>
+</div>
+
+@section scripts
+{
+    <script type="text/javascript">
+        ns('Pe.Stracon.SGC.Presentacion.Contractual.Plantilla.FormularioPlantillaNotaPie.Actions')
+        Pe.Stracon.SGC.Presentacion.Contractual.Plantilla.FormularioPlantillaNotaPie.Actions.PlantillaNotaPie = '@Url.Action("PlantillaNotaPie", "Plantilla", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.Plantilla.FormularioPlantillaNotaPie.Actions.RegistrarNotaPie = '@Url.Action("RegistrarNotaPie", "Plantilla", new { Area = "Contractual" })';
+      @*  Pe.Stracon.SGC.Presentacion.Contractual.Plantilla.FormularioPlantillaNotaPie.Actions.BuscarVariableGlobal = '@Url.Action("BuscarVariableGlobal", "Plantilla", new { Area = "Contractual" })';*@
+              
+        ns('Pe.Stracon.SGC.Presentacion.Contractual.Plantilla.FormularioPlantillaNotaPie.Resources')
+        Pe.Stracon.SGC.Presentacion.Contractual.Plantilla.FormularioPlantillaNotaPie.Resources.EtiquetaFormularioPlantillaNotaPie = '@Html.Raw(PlantillaContratoResource.EtiquetaFormularioPlantillaNota)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Plantilla.FormularioPlantillaNotaPie.Resources.EtiquetaTituloConfirmar = '@Html.Raw(GenericoResource.EtiquetaTituloConfirmar)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Plantilla.FormularioPlantillaNotaPie.Resources.EtiquetaTituloAdvertencia = '@Html.Raw(MensajeResource.EtiquetaTituloAdvertencia)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Plantilla.FormularioPlantillaNotaPie.Resources.GridAtributos = '@Html.Raw(PlantillaContratoResource.GridAtributos)';
+               
+        ns('Pe.Stracon.SGC.Presentacion.Contractual.Plantilla.FormularioPlantillaNotaPie.Mensajes')
+        Pe.Stracon.SGC.Presentacion.Contractual.Plantilla.FormularioPlantillaNotaPie.Mensajes.MsjValidaOrdenParrafo = '@Html.Raw(PlantillaContratoResource.MsjValidaOrdenNota)'
+        Pe.Stracon.SGC.Presentacion.Contractual.Plantilla.FormularioPlantillaNotaPie.Mensajes.MsjValidaTituloParrafo = '@Html.Raw(PlantillaContratoResource.MsjValidaTituloNota)'
+        Pe.Stracon.SGC.Presentacion.Contractual.Plantilla.FormularioPlantillaNotaPie.Mensajes.MsjValidaContenidoParrafo = '@Html.Raw(PlantillaContratoResource.MsjValidaContenidoNota)'
+        
+        ns('Pe.Stracon.SGC.Presentacion.Recursos.Validacion')
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ConfirmacionGuardar = '@Html.Raw(MensajeResource.ConfirmacionGuardar)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.EtiquetaConfirmacion = '@MensajeResource.SeGuardoInformacionExito';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.EtiquetaTituloAdvertencia = '@Html.Raw(MensajeResource.EtiquetaTituloAdvertencia)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.EtiquetaTituloConfirmar = '@Html.Raw(GenericoResource.EtiquetaTituloConfirmar)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarPlantilla = '@Html.Raw(VariablePlantillaResource.EtiquetaPlantilla)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarIdentificador = '@Html.Raw(VariablePlantillaResource.EtiquetaIdentificador)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarNombre = '@Html.Raw(VariablePlantillaResource.EtiquetaNombre)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarTipo = '@Html.Raw(VariablePlantillaResource.EtiquetaTipo)';
+    </script>
+  
+}

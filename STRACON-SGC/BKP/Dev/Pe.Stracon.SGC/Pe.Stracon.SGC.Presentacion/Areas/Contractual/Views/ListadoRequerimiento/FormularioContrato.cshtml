@@ -1,0 +1,175 @@
+﻿@using Pe.Stracon.SGC.Presentacion.Recursos.Base
+@using Pe.Stracon.SGC.Presentacion.Recursos.Contractual
+@model Pe.Stracon.SGC.Presentacion.Core.ViewModel.Contractual.ListadoRequerimiento.ContratoFormulario
+        
+
+<script type="text/javascript">
+    ns('Pe.Stracon.SGC.Presentacion.Contractual.ListadoRequerimiento.Models')
+    Pe.Stracon.SGC.Presentacion.Contractual.ListadoRequerimiento.Models.FormularioContrato = @(Html.Raw(Json.Encode(Model)));
+</script>
+
+<script type="text/javascript">
+    ns('Pe.Stracon.SGC.Presentacion.Core.ViewModel.Contractual.ListadoRequerimiento.ContratoFormulario.Model')
+    Pe.Stracon.SGC.Presentacion.Core.ViewModel.Contractual.ListadoRequerimiento.ContratoFormulario.Model.ListaRequerido = @(Html.Raw(Json.Encode(Model.Contrato.ListaRequerido)));
+</script>
+
+<form id="frmContrato" onsubmit="return false;">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                @Html.Hidden("hdnCodigoContrato", Model.Contrato.CodigoRequerimiento, new { id = "hdnCodigoContrato" })
+                @Html.Hidden("hdnValorEdicion", Model.ValorEdicion, new { id = "hdnValorEdicion" })
+                <label for="slcFrmUnidadOperativa">@ListadoRequerimientoResource.EtiquetaUnidadOperativa</label>
+                @if (Model.NuevoContrato)
+                {
+                    @Html.DropDownList("slcFrmUnidadOperativa", Model.ListadoUnidadOperativa, new { @class = "form-control", @id = "slcFrmUnidadOperativa", @validable = "required ValidarUnidadOperativa" })
+                }
+                else
+                {
+                    @Html.DropDownList("slcFrmUnidadOperativa", Model.ListadoUnidadOperativa, new { @class = "form-control", @id = "slcFrmUnidadOperativa", @validable = "required ValidarUnidadOperativa", @disabled = "disabled" })
+                }
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="slcFrmTipoDocumento">@ListadoRequerimientoResource.EtiquetaTipoDocumento</label>
+                @Html.DropDownList("slcFrmTipoDocumento", Model.TipoDocumento, new { @class = "form-control", @id = "slcFrmTipoDocumento", @validable = "required ValidarTipoDocumento" })
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="slcFrmDocAdjunto">@ListadoRequerimientoResource.EtiquetaDocumentoAdjunto</label>
+                @Html.DropDownList("slcFrmDocAdjunto", Model.TipoDocAdj, new { @class = "form-control", @id = "slcFrmDocAdjunto", @validable = "required ValidarDocAdjunto" })
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="txtFrmDescripcion">@ListadoRequerimientoResource.EtiquetaDesOtros</label>
+                @Html.TextBox("txtDesDocAdj", Model.Contrato.Descripcion, new { @class = "form-control", @id = "txtDesDocAdj", disabled = "", @validable = "required ValidarDescripcion", maxlength = "255" })
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="slcFrmMoneda">@ListadoRequerimientoResource.EtiquetaMoneda</label>
+                @Html.DropDownList("slcFrmMoneda", Model.Moneda, new { @class = "form-control", @id = "slcFrmMoneda", @validable = "required ValidarMoneda" })
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="txtFrmMontoContrato">@ListadoRequerimientoResource.EtiquetaMontoContrato</label>
+                @Html.Hidden("hdnTotalMontoAcumulado", null, new { id = "hdnTotalMontoAcumulado" })
+                @Html.TextBox("txtFrmMontoContrato", Model.Contrato.MontoRequerimientoString, new { @class = "form-control", @id = "txtFrmMontoContrato", @validable = "required ValidarMontoContrato", mask = "decimal", maxlength = "10" })
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="txtFrmFechaInicioVigencia">@ListadoRequerimientoResource.EtiquetaFechaInicioVigencia</label>
+                <div class="input-group">
+                    @Html.TextBox("dtpFrmFechaInicioVigencia", Model.Contrato.FechaInicioVigenciaString, new { @class = "form-control", @id = "dtpFrmFechaInicioVigencia", @validable = "required ValidarFechaInicioVigencia" })
+                    <div class="input-group-addon"><span class="fa fa-calendar"></span></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="txtFrmFechaFinVigencia">@ListadoRequerimientoResource.EtiquetaFechaFinVigencia</label>
+                <div class="input-group">
+                    @Html.TextBox("dtpFrmFechaFinVigencia", Model.Contrato.FechaFinVigenciaString, new { @class = "form-control", @id = "dtpFrmFechaFinVigencia", @validable = "required ValidarFechaFinVigencia" })
+                    <div class="input-group-addon"><span class="fa fa-calendar"></span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="slcFrmModalidadCon">@ListadoRequerimientoResource.EtiquetaModalidadCon</label>
+                @Html.DropDownList("slcFrmModalidadCon", Model.TipoModCon, new { @class = "form-control", @id = "slcFrmModalidadCon", @validable = "required ValidarModalidadCon" })
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="txtFrmDescripcion">@ListadoRequerimientoResource.EtiquetaDesOtros</label>
+                @Html.TextBox("txtDesModCon", Model.Contrato.Descripcion, new { @class = "form-control", @id = "txtDesModCon", disabled = "", @validable = "required ValidarDescripcion", maxlength = "255" })
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="txtFrmDescripcion">@ListadoRequerimientoResource.EtiquetaDescripcion</label>
+                @Html.TextBox("txtFrmDescripcion", Model.Contrato.Descripcion, new { @class = "form-control", @id = "txtFrmDescripcion", maxlength = "255", @validable = "required ValidarDescripcion" })
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="txtRequerido">@ListadoRequerimientoResource.EtiquetaRequerido</label>
+                @Html.TextBox("txtRequerido", null, new { @class = "form-control", @id = "txtRequerido" })
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="txtProveedores">@ListadoRequerimientoResource.EtiquetaProveedor</label>
+                @Html.TextBox("txtProveedores", null, new { @class = "form-control", @id = "txtProveedores" })
+            </div>
+        </div>
+
+        @if (Model.NuevoContrato)
+        {
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        <label>
+                            @PlantillaContratoResource.EtiquetaTipoAdhesion
+                        </label>
+                    </div>
+                    <div align="center" class="col-sm-6">
+                        <input type="radio" value="true" name="rdbAdhesion">@GenericoResource.EtiquetaSi
+                    </div>
+                    <div align="center" class="col-sm-6">
+                        <input type="radio" value="false" name="rdbAdhesion" checked>@GenericoResource.EtiquetaNo
+                    </div>
+                </div>
+            </div>
+        }
+        else
+        {
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        <label>
+                            @PlantillaContratoResource.EtiquetaTipoAdhesion
+                        </label>
+                    </div>
+                    <div align="center" class="col-sm-6">
+                        <input type="radio" value="true" name="rdbAdhesion">@GenericoResource.EtiquetaSi
+                    </div>
+                    <div align="center" class="col-sm-6">
+                        <input type="radio" value="false" name="rdbAdhesion" checked>@GenericoResource.EtiquetaNo
+                    </div>
+                </div>
+            </div>
+        }
+
+    </div>
+</form>
+<div class="comp-Modal-footer">
+    <button class="btn btn-default" id="btnFrmContratoCancelar">@GenericoResource.BotonCancelar</button>
+    @if (Model.NuevoContrato)
+    {
+        <button class="btn btn-primary" id="btnFrmContratoGenerarContrato">@ListadoRequerimientoResource.EtiquetaBotonGenerarContrato</button>
+    }
+    else
+    {
+        <button class="btn btn-primary" id="btnFrmContratoGenerarContrato">Actualizar Contrato</button>
+    }
+</div>

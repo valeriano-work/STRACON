@@ -1,0 +1,72 @@
+FechaHora = 7/10/2019 09:14:43
+MensajeError = [Error]
+RegistrarPlantillaRequerimiento
+DetalleError = [Pila]
+
+__________________________________________________
+FechaHora = 7/10/2019 09:14:44
+MensajeError = [Error]
+Referencia a objeto no establecida como instancia de un objeto.
+DetalleError = [Pila]
+   en Pe.Stracon.SGC.Aplicacion.Service.Contractual.PlantillaRequerimientoService.RegistrarPlantilla(PlantillaRequerimientoRequest data) en D:\Modulos\Fuentes\STRACON-SGC\Dev\Pe.Stracon.SGC\Pe.Stracon.SGC.Aplicacion.Service\Contractual\PlantillaRequerimientoService.cs:línea 172
+__________________________________________________
+FechaHora = 7/10/2019 15:49:19
+MensajeError = [Error]
+RegistrarPlantillaRequerimiento
+DetalleError = [Pila]
+
+__________________________________________________
+FechaHora = 7/10/2019 15:49:19
+MensajeError = [Error]
+Referencia a objeto no establecida como instancia de un objeto.
+DetalleError = [Pila]
+   en Pe.Stracon.SGC.Aplicacion.Service.Contractual.PlantillaRequerimientoService.RegistrarPlantilla(PlantillaRequerimientoRequest data) en D:\Modulos\Fuentes\STRACON-SGC\Dev\Pe.Stracon.SGC\Pe.Stracon.SGC.Aplicacion.Service\Contractual\PlantillaRequerimientoService.cs:línea 172
+__________________________________________________
+FechaHora = 7/10/2019 15:54:11
+MensajeError = [Error]
+RegistrarPlantillaRequerimiento
+DetalleError = [Pila]
+
+__________________________________________________
+FechaHora = 7/10/2019 15:54:11
+MensajeError = [Error]
+Referencia a objeto no establecida como instancia de un objeto.
+DetalleError = [Pila]
+   en Pe.Stracon.SGC.Aplicacion.Service.Contractual.PlantillaRequerimientoService.RegistrarPlantilla(PlantillaRequerimientoRequest data) en D:\Modulos\Fuentes\STRACON-SGC\Dev\Pe.Stracon.SGC\Pe.Stracon.SGC.Aplicacion.Service\Contractual\PlantillaRequerimientoService.cs:línea 172
+__________________________________________________
+FechaHora = 7/10/2019 15:59:18
+MensajeError = [Error]
+RegistrarPlantillaRequerimiento
+DetalleError = [Pila]
+
+__________________________________________________
+FechaHora = 7/10/2019 15:59:18
+MensajeError = [Error]
+Referencia a objeto no establecida como instancia de un objeto.
+DetalleError = [Pila]
+   en Pe.Stracon.SGC.Aplicacion.Service.Contractual.PlantillaRequerimientoService.RegistrarPlantilla(PlantillaRequerimientoRequest data) en D:\Modulos\Fuentes\STRACON-SGC\Dev\Pe.Stracon.SGC\Pe.Stracon.SGC.Aplicacion.Service\Contractual\PlantillaRequerimientoService.cs:línea 172
+__________________________________________________
+FechaHora = 7/10/2019 16:43:15
+MensajeError = [Error]
+RegistrarPlantillaRequerimiento
+DetalleError = [Pila]
+
+__________________________________________________
+FechaHora = 7/10/2019 16:43:15
+MensajeError = [Error]
+Referencia a objeto no establecida como instancia de un objeto.
+DetalleError = [Pila]
+   en Pe.Stracon.SGC.Aplicacion.Service.Contractual.PlantillaRequerimientoService.RegistrarPlantilla(PlantillaRequerimientoRequest data) en D:\Modulos\Fuentes\STRACON-SGC\Dev\Pe.Stracon.SGC\Pe.Stracon.SGC.Aplicacion.Service\Contractual\PlantillaRequerimientoService.cs:línea 172
+__________________________________________________
+FechaHora = 7/10/2019 16:56:25
+MensajeError = [Error]
+RegistrarPlantillaRequerimiento
+DetalleError = [Pila]
+
+__________________________________________________
+FechaHora = 7/10/2019 16:56:25
+MensajeError = [Error]
+Referencia a objeto no establecida como instancia de un objeto.
+DetalleError = [Pila]
+   en Pe.Stracon.SGC.Aplicacion.Service.Contractual.PlantillaRequerimientoService.RegistrarPlantilla(PlantillaRequerimientoRequest data) en D:\Modulos\Fuentes\STRACON-SGC\Dev\Pe.Stracon.SGC\Pe.Stracon.SGC.Aplicacion.Service\Contractual\PlantillaRequerimientoService.cs:línea 172
+__________________________________________________

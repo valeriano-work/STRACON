@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DB02BA48-35C6-4B6B-B345-0D6721661EC2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Pe.Stracon.Politicas.Infraestructura.Repository</RootNamespace>
+    <AssemblyName>Pe.Stracon.Politicas.Infraestructura.Repository</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Pe.Stracon.Politicas.Infraestructura.Repository.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'STRACON_QA|AnyCPU'">
+    <OutputPath>bin\STRACON_QA\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'sgcRelease|AnyCPU'">
+    <OutputPath>bin\sgcRelease\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'sccRelease|AnyCPU'">
+    <OutputPath>bin\sccRelease\</OutputPath>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\ComandRepository.cs" />
+    <Compile Include="Base\QueryRepository.cs" />
+    <Compile Include="Command\General\PlantillaNotificacionEntityRepository.cs" />
+    <Compile Include="Command\General\ParametroSeccionEntityRepository.cs" />
+    <Compile Include="Command\General\ParametroEntityRepository.cs" />
+    <Compile Include="Command\General\ParametroValorEntityRepository.cs" />
+    <Compile Include="Command\General\TrabajadorEntityRepository.cs" />
+    <Compile Include="Command\General\TrabajadorFirmaEntityRepository.cs" />
+    <Compile Include="Command\General\TrabajadorSuplenteEntityRepository.cs" />
+    <Compile Include="Command\General\TrabajadorUnidadOperativaEntityRepository.cs" />
+    <Compile Include="Command\General\UnidadOperativaEntityRepository.cs" />
+    <Compile Include="Command\General\UnidadOperativaUsuarioConsultaEntityRepository.cs" />
+    <Compile Include="Command\General\UnidadOperativaStaffEntityRepository.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Query\General\ParametroLogicRepository.cs" />
+    <Compile Include="Query\General\ParametroSeccionLogicRepository.cs" />
+    <Compile Include="Query\General\ParametroValorLogicRepository.cs" />
+    <Compile Include="Query\General\PlantillaNotificacionLogicRepository.cs" />
+    <Compile Include="Query\General\TrabajadorLogicRepository.cs" />
+    <Compile Include="Query\General\UnidadOperativaLogicRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Pe.Stracon.Politicas.Infraestructura.CommandModel\Pe.Stracon.Politicas.Infraestructura.CommandModel.csproj">
+      <Project>{431a5eab-2f15-4ccc-82b7-f83f6cded2dc}</Project>
+      <Name>Pe.Stracon.Politicas.Infraestructura.CommandModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pe.Stracon.Politicas.Infraestructura.Core\Pe.Stracon.Politicas.Infraestructura.Core.csproj">
+      <Project>{03570580-69a0-4b8a-bccf-7e1bf8942168}</Project>
+      <Name>Pe.Stracon.Politicas.Infraestructura.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pe.Stracon.Politicas.Infraestructura.QueryModel\Pe.Stracon.Politicas.Infraestructura.QueryModel.csproj">
+      <Project>{166d807d-1f6f-4b98-90b8-5ebe7cd8c843}</Project>
+      <Name>Pe.Stracon.Politicas.Infraestructura.QueryModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pe.Stracon.PoliticasCross.Core\Pe.Stracon.PoliticasCross.Core.csproj">
+      <Project>{ebe3280b-dd55-4324-a6fa-83fadc6c007d}</Project>
+      <Name>Pe.Stracon.PoliticasCross.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,118 @@
+﻿@using Pe.Stracon.SGC.Presentacion.Recursos.Base
+@using Pe.Stracon.SGC.Presentacion.Recursos.Contractual
+@using Pe.Stracon.SGC.Presentacion.Recursos.Mensajes
+@using Pe.Stracon.SGC.Presentacion.Core.Helpers
+@model Pe.Stracon.SGC.Presentacion.Core.ViewModel.Contractual.ReporteContratoObservadoAprobado.ReporteContratoObservadoAprobadoBusqueda
+@using Pe.Stracon.SGC.Infraestructura.Core.Context
+
+@{
+    var dataReport = TempData["DataReport"];
+}
+
+<div class="GmdBody-header">
+    <h2>@ReporteContratoObservadoAprobadoResource.EtiquetaTitulo</h2>
+</div>
+<div class="GmdBody-body">
+    <form id="frmReporteContratoObservadoAprobado">
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label>@GenericoResource.EtiquetaUnidadOperativa</label>
+                    @Html.DropDownList("slcUnidadOperativa", @Model.ListaUnidadOperativa, new { @class = "form-control", @id = "slcUnidadOperativa" })
+                    @Html.TextBox("hdnNombreUnidadOperativa",null, new { @class = "form-control hidden", @id = "hdnNombreUnidadOperativa" })
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label>@GenericoResource.EtiquetaNumeroContrato</label>
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <span class="fa fa-search"></span>
+                        </span>
+                        @Html.TextBox("txtNumeroContrato", null, new { @class = "form-control", @id = "txtNumeroContrato", @maxlength = "80", onkeyup = "this.value=this.value.toUpperCase()" })
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label>@ReporteContratoObservadoAprobadoResource.EtiquetaTipoAccion</label>
+                    @Html.DropDownList("slcTipoAccion", @Model.ListaTipoAccion, new { @class = "form-control", @id = "slcTipoAccion" })
+                    @Html.TextBox("hdnNombreTipoAccion", null, new { @class = "form-control hidden", @id = "hdnNombreTipoAccion" })
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label>@GenericoResource.EtiquetaDesde</label>
+                    <div class="input-group">
+                        @Html.TextBox("txtContratosDesde", @Model.ReporteContratoObservadoAprobado.FechaConsultaDesdeString, new { @class = "form-control", @id = "txtContratosDesde" })
+                        <div class="input-group-addon"><span class="fa fa-calendar"></span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label>@GenericoResource.EtiquetaHasta</label>
+                    <div class="input-group">
+                        @Html.TextBox("txtContratosHasta", @Model.ReporteContratoObservadoAprobado.FechaConsultaHastaString, new { @class = "form-control", @id = "txtContratosHasta" })
+                        <div class="input-group-addon"><span class="fa fa-calendar"></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </form>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <button class="btn btn-info" id="btnLimpiar" type="reset">@GenericoResource.BotonLimpiar</button>
+                <button class="btn btn-default" id="btnBuscar">@GenericoResource.BotonMostrar</button>
+            </div>
+        </div>
+        <div class="col-sm-6 text-right">
+            <div class="form-group">
+                <button class="btn btn-primary" id="btnExportar">@GenericoResource.BotonExportar</button>
+            </div>
+        </div>
+    </div>
+    <hr />
+
+    <div id="divGrdResult">
+    </div>
+
+    @*<div id="divContenedorReportView">
+        @Html.Partial("~/Areas/Base/Views/Reporte/ReportViewControl.ascx", dataReport)
+    </div>*@
+
+</div>
+@section scripts
+{
+    <script type="text/javascript">
+        ns('Pe.Stracon.SGC.Presentacion.Contractual.ReporteContratoObservadoAprobado.Actions')
+        Pe.Stracon.SGC.Presentacion.Contractual.ReporteContratoObservadoAprobado.Actions.BuscarContrato             = '@Url.Action("BuscarContratoObservadoAprobado", "ReporteContratoObservadoAprobado", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.ReporteContratoObservadoAprobado.Actions.BuscarNumeroContrato       = '@Url.Action("BuscarNumeroContrato"           , "ReporteContratoObservadoAprobado", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.ReporteContratoObservadoAprobado.Actions.ExportarReporte            = '@Url.Action("ExportarReporte", "ReporteContratoObservadoAprobado", new { Area = "Contractual" })';
+
+        ns('Pe.Stracon.SGC.Presentacion.Contractual.ReporteContratoObservadoAprobado.Models')
+        Pe.Stracon.SGC.Presentacion.Contractual.ReporteContratoObservadoAprobado.Models.Index = @(Html.Raw(Json.Encode(Model)));
+
+        ns('Pe.Stracon.SGC.Presentacion.Contractual.ReporteContratoObservadoAprobado.Resources')
+        Pe.Stracon.SGC.Presentacion.Contractual.ReporteContratoObservadoAprobado.Resources.GridNombreUnidadOperativa = '@Html.Raw(GenericoResource.EtiquetaUnidadOperativa)';
+        Pe.Stracon.SGC.Presentacion.Contractual.ReporteContratoObservadoAprobado.Resources.GridNumeroContrato        = '@Html.Raw(GenericoResource.EtiquetaNumeroContrato)';
+
+        Pe.Stracon.SGC.Presentacion.Contractual.ReporteContratoObservadoAprobado.Resources.GridFechaInicio           = '@Html.Raw(ListadoContratoResource.GridFechaInicio)';
+        Pe.Stracon.SGC.Presentacion.Contractual.ReporteContratoObservadoAprobado.Resources.GridFechaFin              = '@Html.Raw(ListadoContratoResource.GridFechaFin)';
+        Pe.Stracon.SGC.Presentacion.Contractual.ReporteContratoObservadoAprobado.Resources.GridNombreResponsable     = '@Html.Raw(ListadoContratoResource.GridNombreResponsable)';
+        Pe.Stracon.SGC.Presentacion.Contractual.ReporteContratoObservadoAprobado.Resources.GridNumeroAdenda          = '@Html.Raw(ListadoContratoResource.GridNumeroAdenda)';
+        Pe.Stracon.SGC.Presentacion.Contractual.ReporteContratoObservadoAprobado.Resources.GridNombreTipoAccion      = '@Html.Raw(ReporteContratoObservadoAprobadoResource.EtiquetaTipoAccion)';
+        Pe.Stracon.SGC.Presentacion.Contractual.ReporteContratoObservadoAprobado.Resources.GridDetalleAccion         = '@Html.Raw(ReporteContratoObservadoAprobadoResource.EtiquetaDetalleAccion)';
+        Pe.Stracon.SGC.Presentacion.Contractual.ReporteContratoObservadoAprobado.Resources.GridRealizadoPor          = '@Html.Raw(ReporteContratoObservadoAprobadoResource.EtiquetaRealizadoPor)';
+        Pe.Stracon.SGC.Presentacion.Contractual.ReporteContratoObservadoAprobado.Resources.GridFechaAccion           = '@Html.Raw(ReporteContratoObservadoAprobadoResource.EtiquetaFechaAccion)';
+        Pe.Stracon.SGC.Presentacion.Contractual.ReporteContratoObservadoAprobado.Resources.GridRespuesta             = '@Html.Raw(ReporteContratoObservadoAprobadoResource.EtiquetaRepuesta)';
+        Pe.Stracon.SGC.Presentacion.Contractual.ReporteContratoObservadoAprobado.Resources.GridRespondidoPor         = '@Html.Raw(ReporteContratoObservadoAprobadoResource.EtiquetaRespondidoPor)';
+        Pe.Stracon.SGC.Presentacion.Contractual.ReporteContratoObservadoAprobado.Resources.GridFechaRespuesta        = '@Html.Raw(ReporteContratoObservadoAprobadoResource.EtiquetaFechaRepuesta)';
+
+        ns('Pe.Stracon.SGP.Presentacion.Contractual.ReporteContratoObservadoAprobado.Datos')
+        Pe.Stracon.SGP.Presentacion.Contractual.ReporteContratoObservadoAprobado.Datos.SessionUsuario                = @(Html.Raw(Json.Encode(@Pe.GyM.Security.Web.Session.HttpGyMSessionContext.CurrentAccount())));
+
+    </script>
+}

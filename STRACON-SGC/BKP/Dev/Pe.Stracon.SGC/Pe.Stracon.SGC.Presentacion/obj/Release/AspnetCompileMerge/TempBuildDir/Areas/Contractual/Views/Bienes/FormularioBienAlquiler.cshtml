@@ -1,0 +1,39 @@
+﻿@using Pe.Stracon.SGC.Presentacion.Recursos.Base
+@using Pe.Stracon.SGC.Presentacion.Recursos.Contractual
+@model Pe.Stracon.SGC.Presentacion.Core.ViewModel.Contractual.Bienes.BienAlquilerFormulario
+
+<form id="frmBienAlquiler">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="chkSinLimite">@BienesResource.EtiquetaSinLimite</label>
+                @Html.CheckBoxFor(model => model.BienAlquiler.IndicadorSinLimite, new { @id = "chkSinLimite" })
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="txtCantidadLimite">@BienesResource.EtiquetaLimiteHora @ViewBag.unidades</label>
+                @if (!Model.BienAlquiler.IndicadorSinLimite)
+                {
+                    @Html.TextBoxFor(model => model.BienAlquiler.CantidadLimiteString, new { @class = "form-control", @id = "txtCantidadLimite", @mask = "decimal", @maxlength = "8", @validable="required ValidarLimite" })
+                }
+                else
+                {
+                    @Html.TextBox("CantidadLimite", null, new { @class = "form-control", @id = "txtCantidadLimite", @disabled="", @validable="required ValidarLimite" })
+                }
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="txtMontoAlquiler">@BienesResource.EtiquetaTarifaHora @ViewBag.unidad</label>
+                @Html.TextBoxFor(model => model.BienAlquiler.MontoString, new { @class = "form-control", @id = "txtMontoAlquiler", @mask = "decimal", @maxlength = "8", @validable="required ValidarTarifa" })
+            </div>
+        </div>
+    </div>
+</form>
+<div class="comp-Modal-footer">
+    <button class="btn btn-default" id="btnFrmBienAlqCancelar">@GenericoResource.BotonCancelar</button>
+    <button class="btn btn-primary" id="btnFrmBienAlqGrabar">@GenericoResource.BotonGrabar</button>
+</div>

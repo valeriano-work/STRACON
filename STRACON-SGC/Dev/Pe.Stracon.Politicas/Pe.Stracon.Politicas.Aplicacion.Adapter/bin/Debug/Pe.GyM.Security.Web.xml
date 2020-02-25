@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Pe.GyM.Security.Web</name>
+    </assembly>
+    <members>
+        <member name="T:Pe.GyM.Security.Web.Base.QueryStringParams">
+            <summary>
+            
+            </summary>
+        </member>
+        <!-- El comentario XML con formato incorrecto se ha omitido para el miembro "T:Pe.GyM.Security.Web.Filters.AuthorizeEliminarFilter" -->
+        <member name="M:Pe.GyM.Security.Web.Filters.AuthorizeEliminarFilter.OnAuthorization(System.Web.Mvc.AuthorizationContext)">
+            <summary>
+            Metodo aplicado para la autotización del usuario para eliminar
+            </summary>
+            <param name="filterContext">Contexto actual de la petición</param>
+        </member>
+        <!-- El comentario XML con formato incorrecto se ha omitido para el miembro "T:Pe.GyM.Security.Web.Filters.AuthorizeEscrituraFilter" -->
+        <member name="M:Pe.GyM.Security.Web.Filters.AuthorizeEscrituraFilter.OnAuthorization(System.Web.Mvc.AuthorizationContext)">
+            <summary>
+            Metodo aplicado para la autotización del usuario para escritura
+            </summary>
+            <param name="filterContext">Contexto actual de la petición</param>
+        </member>
+        <member name="T:Pe.GyM.Security.Web.Filters.AuthorizeFilter">
+            <summary>
+            Filtro de validación de accesos a peticiones web
+            </summary>
+            <remarks>
+            Creación:       GMD 20150319
+            Modificación:   
+            </remarks>
+        </member>
+        <member name="M:Pe.GyM.Security.Web.Filters.AuthorizeFilter.OnAuthorization(System.Web.Mvc.AuthorizationContext)">
+            <summary>
+            Metodo aplicado para la autotización del usuario al contenido
+            </summary>
+            <param name="filterContext">Contexto actual de la petición</param>
+        </member>
+        <member name="T:Pe.GyM.Security.Web.Session.HttpGyMSessionContext">
+            <summary>
+            Manejador de las session de usuario
+            </summary>
+            <remarks>
+            Creación:       GMD 20150319
+            Modificación:   
+            </remarks>
+        </member>
+        <member name="M:Pe.GyM.Security.Web.Session.HttpGyMSessionContext.CurrentAccount">
+            <summary>
+            Obtiene la sesión actual.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Pe.GyM.Security.Web.Session.HttpGyMSessionContext.SetAccount(Pe.GyM.Security.Account.Model.CuentaUsuario)">
+            <summary>
+            Obtiene la sesión actual
+            </summary>
+            <param name="account"></param>
+        </member>
+        <member name="M:Pe.GyM.Security.Web.Session.HttpGyMSessionContext.LogOut">
+            <summary>
+            Limpia la sesión actual
+            </summary>
+            <returns>url de logue</returns>
+        </member>
+        <member name="M:Pe.GyM.Security.Web.Session.HttpGyMSessionContext.SharedSession(System.String,System.Web.HttpModuleCollection)">
+            <summary>
+            Permite compartir la sessión con otras aplicacines
+            </summary>
+            <param name="applicationName">Identificado de aplicación para compartir sesión</param>
+            <param name="modules">modulos cargados del sistema</param>
+        </member>
+        <member name="T:Pe.GyM.Security.Web.Session.IGyMSessionListener">
+            <summary>
+            
+            </summary>
+        </member>
+    </members>
+</doc>

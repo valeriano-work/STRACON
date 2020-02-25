@@ -1,0 +1,2207 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Pe.Stracon.SGC.Infraestructura.QueryModel</name>
+    </assembly>
+    <members>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.QueryModel.Base.Logic">
+            <summary>
+            Entity Logic
+            </summary>
+            <remarks>
+            Creación:   GMD 22122014 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Base.Logic.NumeroPagina">
+            <summary>
+            Pagina solicitada
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Base.Logic.RegistrosPagina">
+            <summary>
+            Registros por Pagina
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Base.Logic.TotalRegistro">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Base.Logic.NumeroRegistro">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.BienAlquilerLogic">
+            <summary>
+            Representa el objeto Logic de Bien Alquiler
+            </summary>
+            <remarks>
+            Creación :  GMD 20150515 <br />
+            Modificación :           <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.BienAlquilerLogic.CodigoBienAlquiler">
+            <summary>
+            Codigo del Bien de Alquiler
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.BienAlquilerLogic.CodigoBien">
+            <summary>
+            Codigo de Bien
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.BienAlquilerLogic.IndicadorSinLimite">
+            <summary>
+            Indicador Sin Límite
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.BienAlquilerLogic.CantidadLimite">
+            <summary>
+            Cantidad Límite
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.BienAlquilerLogic.Monto">
+            <summary>
+            Monto
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.BienLogic">
+            <summary>
+            Representa el objeto Logic de Bien
+            </summary>
+            <remarks>
+            Creación :  GMD 20150515 <br />
+            Modificación :           <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.BienLogic.CodigoBien">
+            <summary>
+            Código del Bien
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.BienLogic.CodigoTipoBien">
+            <summary>
+            Código del Tipo de Bien
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.BienLogic.CodigoIdentificacion">
+            <summary>
+            Código de Identificación del Bien
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.BienLogic.NumeroSerie">
+            <summary>
+            Número de Serie
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.BienLogic.Descripcion">
+            <summary>
+            Descripción
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.BienLogic.Marca">
+            <summary>
+            Marca
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.BienLogic.Modelo">
+            <summary>
+            Modelo
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.BienLogic.FechaAdquisicion">
+            <summary>
+            Fecha de Adquisición
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.BienLogic.TiempoVida">
+            <summary>
+            Tiempo de Vida
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.BienLogic.ValorResidual">
+            <summary>
+            Valor Residual
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.BienLogic.CodigoTipoTarifa">
+            <summary>
+            Código de Tipo de Tarifa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.BienLogic.CodigoPeriodoAlquiler">
+            <summary>
+            Código Periodo de Alquiler
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.BienLogic.ValorAlquiler">
+            <summary>
+            Valor de Alquiler
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.BienLogic.CodigoMoneda">
+            <summary>
+            Código de Moneda
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.BienLogic.MesInicioAlquiler">
+            <summary>
+            Mes de Inicio de Alquiler
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.BienLogic.AnioInicioAlquiler">
+            <summary>
+            Año de Inicio de Alquiler
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.BienRegistroLogic.CodigoBienRegistro">
+            <summary>
+            Codigo del Bien de Registro
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.BienRegistroLogic.CodigoTipoContenido">
+            <summary>
+            Codigo del Tipo de Contenido
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.BienRegistroLogic.Contenido">
+            <summary>
+            Contenido
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ConsultaAdjuntoLogic">
+            <summary>
+            Representa el objeto Logic de Consulta Adjunto
+            </summary>
+            <remarks>
+            Creación :  GMD 20150515 <br />
+            Modificación :           <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ConsultaAdjuntoLogic.CodigoConsultaAdjunto">
+            <summary>
+            Codigo de Consulta Adjunto
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ConsultaAdjuntoLogic.CodigoConsulta">
+            <summary>
+            Codigo de Consulta
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ConsultaAdjuntoLogic.CodigoArchivo">
+            <summary>
+            Codigo de Archivo
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ConsultaAdjuntoLogic.NombreArchivo">
+            <summary>
+            Nombre de Archivo
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ConsultaAdjuntoLogic.RutaArchivoSharePoint">
+            <summary>
+            Ruta de Archivo en el SharePoint
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ConsultaAdjuntoLogic.UsuarioCreacion">
+            <summary>
+            Usuario de Creación
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ConsultaAdjuntoLogic.FechaCreacion">
+            <summary>
+            Fecha de Creación
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ConsultaAdjuntoLogic.TerminalCreacion">
+            <summary>
+            Terminal de Creación
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ConsultaLogic">
+            <summary>
+            Representa el objeto Logic de Consulta
+            </summary>
+            <remarks>
+            Creación :  GMD 20150515 <br />
+            Modificación :           <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ConsultaLogic.CodigoConsulta">
+            <summary>
+            Codigo de consulta
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ConsultaLogic.CodigoRemitente">
+            <summary>
+            Remitente
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ConsultaLogic.CodigoDestinatario">
+            <summary>
+            Destinatario
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ConsultaLogic.Tipo">
+            <summary>
+            Tipo
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ConsultaLogic.Asunto">
+            <summary>
+            Asunto
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ConsultaLogic.Contenido">
+            <summary>
+            Contenido
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ConsultaLogic.EstadoConsulta">
+            <summary>
+            Estado de consulta
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ConsultaLogic.FechaEnvio">
+            <summary>
+            Fecha de envío
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ConsultaLogic.Respuesta">
+            <summary>
+            Respuesta
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ConsultaLogic.FechaRespuesta">
+            <summary>
+            Fecha de respuesta
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ConsultaLogic.CodigoUnidadOperativa">
+            <summary>
+            Código de Unidad Operativa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ConsultaLogic.CodigoArea">
+            <summary>
+            Código de Area
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ConsultaLogic.DiaSinRespuesta">
+            <summary>
+            Días sin respuesta
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ConsultaLogic.CodigoConsultaRelacionado">
+            <summary>
+            Código de consulta relacionado
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ConsultaLogic.CodigoConsultaOriginal">
+            <summary>
+            Código de consulta original
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ConsultaLogic.CodigoRemitenteOriginal">
+            <summary>
+            Codigo de remitnte original
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ConsultaLogic.VistoRemitenteOriginal">
+            <summary>
+            Visto Remitente Original
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ConsultaTrazabilidadLogic.CodigoConsultaTrazabilidad">
+            <summary>
+            Codigo de consulta Trazabilidad
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ConsultaTrazabilidadLogic.CodigoConsulta">
+            <summary>
+            Código de consulta
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ConsultaTrazabilidadLogic.CodigoRemitente">
+            <summary>
+            Código de Remitente
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ConsultaTrazabilidadLogic.CodigoDestinatario">
+            <summary>
+            Código de destinatario
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ConsultaTrazabilidadLogic.FechaEnvio">
+            <summary>
+            Fecha de envío
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoCorporativoLogic">
+            <summary>
+            Representa el objeto Logic de Listado de Contratos corporativos
+            </summary>
+            <remarks>
+            Creación :  GMD 20170623 <br />
+            Modificación :           <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoCorporativoLogic.CodigoContrato">
+            <summary>
+            Código de Contrato
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoCorporativoLogic.CodigoUnidadOperativa">
+            <summary>
+            Código de Unidad Operativa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoCorporativoLogic.NombreProveedor">
+            <summary>
+            Nombre de Proveedor
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoCorporativoLogic.NumeroContrato">
+            <summary>
+            Número de Contrato
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoCorporativoLogic.NumeroAdendaConcatenado">
+            <summary>
+            Número de adenda
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoCorporativoLogic.Descripcion">
+            <summary>
+            Descripción
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoCorporativoLogic.CodigoTipoServicio">
+            <summary>
+            Código de Tipo de Servicio
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoCorporativoLogic.CodigoTipoRequerimiento">
+            <summary>
+            Código de Tipo de Requerimiento
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoCorporativoLogic.CodigoTipoDocumento">
+            <summary>
+            Código de Tipo de Documento
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoCorporativoLogic.FechaInicioVigencia">
+            <summary>
+            Fecha de Inicio de Vigencia
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoCorporativoLogic.FechaFinVigencia">
+            <summary>
+            Fecha de Fin de Vigencia
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoCorporativoLogic.CodigoEstadoContrato">
+            <summary>
+            Código de Estado de Contrato
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoCorporativoLogic.CodigoEstadoEdicion">
+            <summary>
+            Código de Estado de Edición
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoCorporativoLogic.NombreUnidadOperativa">
+            <summary>
+            Nombre Unidad Operativa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoCorporativoLogic.UsuarioCreacion">
+            <summary>
+            Usuario de creación de contrato
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoCorporativoLogic.FechaCreacion">
+            <summary>
+            Fecha de Creación
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoDocumentoAdjuntoResolucionLogic">
+            <summary>
+            Representa el objeto Logic de Contrato Documento Adjunto
+            </summary>
+            <remarks>
+            Creación :  GMD 20150515 <br />
+            Modificación :           <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoDocumentoAdjuntoResolucionLogic.CodigoContratoDocumentoAdjuntoResolucion">
+            <summary>
+            Codigo de Contrato Documento Adjunto
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoDocumentoAdjuntoResolucionLogic.CodigoContrato">
+            <summary>
+            Codigo de Contrato
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoDocumentoAdjuntoResolucionLogic.CodigoArchivo">
+            <summary>
+            Codigo de Archivo
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoDocumentoAdjuntoResolucionLogic.NombreArchivo">
+            <summary>
+            Nombre de Archivo
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoDocumentoAdjuntoResolucionLogic.RutaArchivoSharePoint">
+            <summary>
+            Ruta de Archivo en el SharePoint
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoDocumentoAdjuntoResolucionLogic.UsuarioCreacion">
+            <summary>
+            Usuario de Creación
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoDocumentoAdjuntoResolucionLogic.FechaCreacion">
+            <summary>
+            Fecha de Creación
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoDocumentoAdjuntoResolucionLogic.TerminalCreacion">
+            <summary>
+            Terminal de Creación
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoDocumentoLogic">
+            <summary>
+            Representa el objeto Logic de Contrato Documento
+            </summary>
+            <remarks>
+            Creación :  GMD 20150515 <br />
+            Modificación :           <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoDocumentoLogic.CodigoContratoDocumento">
+            <summary>
+            Codigo de Contrato Documento
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoDocumentoLogic.CodigoContrato">
+            <summary>
+            Codigo de Contrato
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoDocumentoLogic.NumeroContrato">
+            <summary>
+            Número de Contrato
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoDocumentoLogic.CodigoArchivo">
+            <summary>
+            Codigo de Archivo
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoDocumentoLogic.RutaArchivoSharePoint">
+            <summary>
+            Ruta de Archivo en el SharePoint
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoDocumentoLogic.Contenido">
+            <summary>
+            Contenido
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoDocumentoLogic.IndicadorActual">
+            <summary>
+            Indicador Actual
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoDocumentoLogic.Version">
+            <summary>
+            Version
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoDocumentoLogic.UsuarioCreacion">
+            <summary>
+            Usuario de Creación
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoDocumentoLogic.FechaCreacion">
+            <summary>
+            Fecha de Creación
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoDocumentoLogic.TerminalCreacion">
+            <summary>
+            Terminal de Creación
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoDocumentoLogic.CodigoContratoEstadio">
+            <summary>
+            Codigo de Contrato Estadio
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoEstadioConsultaLogic">
+            <summary>
+            Representa el objeto Logic de Contrato Estadio Consulta
+            </summary>
+            <remarks>
+            Creación :  GMD 20150515 <br />
+            Modificación :           <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoEstadioConsultaLogic.CodigoContratoEstadioConsulta">
+            <summary>
+            Codigo de Contrato Estadio Consulta
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoEstadioConsultaLogic.CodigoContratoEstadio">
+            <summary>
+            Codigo Contrato de Estadio
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoEstadioConsultaLogic.Descripcion">
+            <summary>
+            Descripcion
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoEstadioConsultaLogic.FechaRegistro">
+            <summary>
+            Fecha de Registro
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoEstadioConsultaLogic.CodigoContratoParrafo">
+            <summary>
+            Codigo de Parrafo
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoEstadioConsultaLogic.Destinatario">
+            <summary>
+            Destinatario
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoEstadioConsultaLogic.Respuesta">
+            <summary>
+            Respuesta
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoEstadioConsultaLogic.FechaRespuesta">
+            <summary>
+            Fecha de Respuesta
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoEstadioConsultaLogic.Consultor">
+            <summary>
+            Código de Consultante
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoEstadioLogic">
+            <summary>
+            Representa el objeto Logic de Contrato Estadio
+            </summary>
+            <remarks>
+            Creación :  GMD 20150515 <br />
+            Modificación :           <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoEstadioLogic.CodigoContratoEstadio">
+            <summary>
+            CodigoContratoEstadio
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoEstadioLogic.CodigoContrato">
+            <summary>
+            CodigoContrato
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoEstadioLogic.CodigoFlujoAprobacionEstadio">
+            <summary>
+            CodigoFlujoAprobacionEstadio
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoEstadioLogic.FechaIngreso">
+            <summary>
+            FechaIngreso
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoEstadioLogic.FechaFinalizacion">
+            <summary>
+            FechaFinalizacion
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoEstadioLogic.CodigoResponsable">
+            <summary>
+            CodigoResponsable
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoEstadioLogic.CodigoEstadoContratoEstadio">
+            <summary>
+            CodigoEstadoContratoEstadio
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoEstadioLogic.FechaPrimeraNotificacion">
+            <summary>
+            FechaPrimeraNotificacion
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoEstadioLogic.FechaUltimaNotificacion">
+            <summary>
+            FechaUltimaNotificacion
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoEstadioLogic.NumeroContrato">
+            <summary>
+            Número de Contrato
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoEstadioLogic.CodigoUnidadOperativa">
+            <summary>
+            Codigo de Unidad de Operativa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoEstadioLogic.NombreProveedor">
+            <summary>
+            Nombre de Proveedor
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoEstadioLogic.Informados">
+            <summary>
+            Informados
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoEstadioLogic.DescripcionObservacion">
+            <summary>
+            Descripción de LA observación
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoEstadioLogic.DescripcionContrato">
+            <summary>
+            Descripción del Contrato
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoEstadioLogic.UsuarioCreacion">
+            <summary>
+            Usuario Creación del Contrato
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoEstadioObservacionLogic">
+            <summary>
+            Representa el objeto Logic de Contrato estadio observación
+            </summary>
+            <remarks>
+            Creación :  GMD 20150515 <br />
+            Modificación :           <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoEstadioObservacionLogic.CodigoContratoEstadioObservacion">
+            <summary>
+            Codigo Contrato Estadio de Observacion
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoEstadioObservacionLogic.CodigoContratoEstadio">
+            <summary>
+            Codigo Contrato de Estadio
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoEstadioObservacionLogic.Descripcion">
+            <summary>
+            Descripcion
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoEstadioObservacionLogic.FechaRegistro">
+            <summary>
+            Fecha de Registro
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoEstadioObservacionLogic.CodigoContratoParrafo">
+            <summary>
+            Codigo de Parrafo
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoEstadioObservacionLogic.CodigoArchivo">
+            <summary>
+            Codigo de Archivo
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoEstadioObservacionLogic.RutaArchivoSharepoint">
+            <summary>
+            Ruta Sharepoint
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoEstadioObservacionLogic.CodigoEstadioRetorno">
+            <summary>
+            Codigo Estadio de Retorno
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoEstadioObservacionLogic.Destinatario">
+            <summary>
+            Destinatario
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoEstadioObservacionLogic.CodigoTipoRespuesta">
+            <summary>
+            Codigo Tipo Respuesta
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoEstadioObservacionLogic.Respuesta">
+            <summary>
+            Respuesta
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoEstadioObservacionLogic.FechaRespuesta">
+            <summary>
+            Fecha de Respuesta
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoEstadioObservacionLogic.Observador">
+            <summary>
+            Observador
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoFirmanteLogic">
+            <summary>
+            Representa los datos de firmantes de un contrato
+            </summary>
+            <remarks>
+            Creación:   GMD 20151020 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoFirmanteLogic.CodigoContratoFirmante">
+            <summary>
+            Codigo Contrato Firmante
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoFirmanteLogic.CodigoContratoParrafoVariable">
+            <summary>
+            Codigo Contrato parrafo firmante
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoFirmanteLogic.NombreFirmante">
+            <summary>
+            Nombre de firmante
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoFirmanteLogic.DatoAdicional">
+            <summary>
+            Dato adicional
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoFirmanteLogic.EstadoRegistro">
+            <summary>
+            Estado de Registro
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoObservadoAprobadoLogic">
+            <summary>
+            Representa el objeto Logic de Contrato
+            </summary>
+            <remarks>
+            Creación :  GMD 20150515 <br />
+            Modificación :           <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoObservadoAprobadoLogic.CodigoUnidadOperativa">
+            <summary>
+            CodigoUnidadNegocio
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoObservadoAprobadoLogic.NombreUnidadOperativa">
+            <summary>
+            Nombre de Unidad Operativa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoObservadoAprobadoLogic.CodigoContrato">
+            <summary>
+            CodigoContrato
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoObservadoAprobadoLogic.NumeroContrato">
+            <summary>
+            NumeroContrato
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoObservadoAprobadoLogic.DescripcionContrato">
+            <summary>
+            DescripcionContrato
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoObservadoAprobadoLogic.NumeroAdenda">
+            <summary>
+            NumeroAdenda
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoObservadoAprobadoLogic.FechaInicioVigencia">
+            <summary>
+            FechaInicioVigencia
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoObservadoAprobadoLogic.FechaFinVigencia">
+            <summary>
+            FechaFinVigencia
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoObservadoAprobadoLogic.MontoContrato">
+            <summary>
+            MontoContrato
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoObservadoAprobadoLogic.TipoAccion">
+            <summary>
+            Tipo de Acción
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoObservadoAprobadoLogic.Comentario">
+            <summary>
+            ComentarioObservacion
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoObservadoAprobadoLogic.AccionPor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoObservadoAprobadoLogic.FechaAccion">
+            <summary>
+            FechaObservacion
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoObservadoAprobadoLogic.Respuesta">
+            <summary>
+            Respuesta
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoObservadoAprobadoLogic.FechaRespuesta">
+            <summary>
+            FechaRespuesta
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoObservadoAprobadoLogic.UsuarioRespuesta">
+            <summary>
+            UsuarioRespuesta
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoParrafoLogic">
+            <summary>
+            Representa el objeto Logic de Contrato Parrafo
+            </summary>
+            <remarks>
+            Creación :  GMD 20150515 <br />
+            Modificación :           <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoParrafoLogic.CodigoContratoParrafo">
+            <summary>
+            Codigo de Contrato Parrafo
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoParrafoLogic.CodigoContrato">
+            <summary>
+            Codigo de Contrato
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoParrafoLogic.CodigoPlantillaParrafo">
+            <summary>
+            Codigo de Plantilla Parrafo
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoParrafoLogic.Titulo">
+            <summary>
+            Título del Párrafo
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoParrafoLogic.Contenido">
+            <summary>
+            Contenido del párrafo
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoParrafoLogic.Orden">
+            <summary>
+            Orden del párrafo
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoDocumentoAdjuntoLogic">
+            <summary>
+            Representa el objeto Logic de Contrato Documento Adjunto
+            </summary>
+            <remarks>
+            Creación :  GMD 20150515 <br />
+            Modificación :           <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoDocumentoAdjuntoLogic.CodigoContratoDocumentoAdjunto">
+            <summary>
+            Codigo de Contrato Documento Adjunto
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoDocumentoAdjuntoLogic.CodigoContrato">
+            <summary>
+            Codigo de Contrato
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoDocumentoAdjuntoLogic.CodigoArchivo">
+            <summary>
+            Codigo de Archivo
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoDocumentoAdjuntoLogic.NombreArchivo">
+            <summary>
+            Nombre de Archivo
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoDocumentoAdjuntoLogic.RutaArchivoSharePoint">
+            <summary>
+            Ruta de Archivo en el SharePoint
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoDocumentoAdjuntoLogic.UsuarioCreacion">
+            <summary>
+            Usuario de Creación
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoDocumentoAdjuntoLogic.FechaCreacion">
+            <summary>
+            Fecha de Creación
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoDocumentoAdjuntoLogic.TerminalCreacion">
+            <summary>
+            Terminal de Creación
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.EmpresaVinculadaLogic">
+            <summary>
+            Representa el objeto Logic de Empresa Vinculada
+            </summary>
+            <remarks>
+            Creación :  GMD 20171009 <br />
+            Modificación :           <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.EmpresaVinculadaLogic.CodigoEmpresaVinculada">
+            <summary>
+            Codigo de Empresa Vinculada
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.EmpresaVinculadaLogic.NombreEmpresa">
+            <summary>
+            Nombre de Empresa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.EmpresaVinculadaLogic.NumeroRuc">
+            <summary>
+            Número de RUC
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.PlantillaNotaPieLogic">
+            <summary>
+            Representa los datos de la plantilla Nota Pie
+            </summary>
+            <remarks>
+            Creación:   GMD 20170818 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.PlantillaNotaPieLogic.CodigoPlantillaNotaPie">
+            <summary>
+            Código de Plantilla Nota Pie
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.PlantillaNotaPieLogic.CodigoPlantilla">
+            <summary>
+            Código de Plantilla
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.PlantillaNotaPieLogic.Orden">
+            <summary>
+            Orden
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.PlantillaNotaPieLogic.Titulo">
+            <summary>
+            Título
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.PlantillaNotaPieLogic.Contenido">
+            <summary>
+            Contenido
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.FlujoAprobacionParticipanteLogic">
+            <summary>
+            Representa el objeto Logic de Flujo Aprobacion Participante
+            </summary>
+            <remarks>
+            Creación :  GMD 20150701 <br />
+            Modificación : <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.FlujoAprobacionParticipanteLogic.CodigoFlujoAprobacionEstadio">
+            <summary>
+            Codigo Flujo Aprobacion Estadio
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.FlujoAprobacionParticipanteLogic.CodigoTrabajador">
+            <summary>
+            Codigo de trabajador responsable de estadio.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.FlujoAprobacionParticipanteLogic.CodigoTipoParticipante">
+            <summary>
+            Código del Tipo de Participante.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.FlujoAprobacionParticipanteLogic.IndicadorIncluirVisto">
+            <summary>
+            Indicador de incluir visto
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.FlujoAprobacionParticipanteLogic.IndicadorEsFirmante">
+            <summary>
+            Indicador si es firmante
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.FlujoAprobacionParticipanteLogic.OrdenFirmante">
+            <summary>
+            Orden Firmante
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.FlujoAprobacionTipoContratoLogic">
+            <summary>
+            Representa el objeto Logic de Flujo Aprobación Tipo de Contrato
+            </summary>
+            <remarks>
+            Creación :      GMD 20170621 <br />
+            Modificación :               <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.FlujoAprobacionTipoContratoLogic.CodigoFlujoAprobacionTipoContrato">
+            <summary>
+            Código de Flujo de Aprobación Tipo de Contrato
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.FlujoAprobacionTipoContratoLogic.CodigoFlujoAprobacion">
+            <summary>
+            Código de Flujo de Aprobación
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.FlujoAprobacionTipoContratoLogic.CodigoTipoContrato">
+            <summary>
+            Código de Tipo de Contrato
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.FlujoAprobacionTipoContratoLogic.EstadoRegistro">
+            <summary>
+            Estadro de Registro
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.FlujoAprobacionTipoServicioLogic">
+            <summary>
+            Representa el objeto Logic de Flujo Aprobación Tipo de Servicio
+            </summary>
+            <remarks>
+            Creación :      GMD 20151124 <br />
+            Modificación :               <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.FlujoAprobacionTipoServicioLogic.CodigoFlujoAprobacionTipoServicio">
+            <summary>
+            Código de Flujo de Aprobación Tipo de Servicio
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.FlujoAprobacionTipoServicioLogic.CodigoFlujoAprobacion">
+            <summary>
+            Código de Flujo de Aprobación
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.FlujoAprobacionTipoServicioLogic.CodigoTipoServicio">
+            <summary>
+            Código de Tipo de Servicio
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.FlujoAprobacionTipoServicioLogic.EstadoRegistro">
+            <summary>
+            Estadro de Registro
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ListadoContratoLogic">
+            <summary>
+            Representa el objeto Logic de Listado de Contratos
+            </summary>
+            <remarks>
+            Creación :  GMD 20150601 <br />
+            Modificación :           <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ListadoContratoLogic.CodigoContrato">
+            <summary>
+            Código de Contrato
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ListadoContratoLogic.CodigoUnidadOperativa">
+            <summary>
+            Código de Unidad Operativa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ListadoContratoLogic.CodigoProveedor">
+            <summary>
+            Código de Proveedor
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ListadoContratoLogic.NumeroDocumentoProveedor">
+            <summary>
+            Número de Documento de Proveedor
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ListadoContratoLogic.NombreProveedor">
+            <summary>
+            Nombre de Proveedor
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ListadoContratoLogic.NumeroContrato">
+            <summary>
+            Número de Contrato
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ListadoContratoLogic.Descripcion">
+            <summary>
+            Descripción
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ListadoContratoLogic.CodigoTipoServicio">
+            <summary>
+            Código de Tipo de Servicio
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ListadoContratoLogic.CodigoTipoRequerimiento">
+            <summary>
+            Código de Tipo de Requerimiento
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ListadoContratoLogic.CodigoTipoDocumento">
+            <summary>
+            Código de Tipo de Documento
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ListadoContratoLogic.FechaInicioVigencia">
+            <summary>
+            Fecha de Inicio de Vigencia
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ListadoContratoLogic.FechaInicioVigenciaString">
+            <summary>
+            Fecha de Inicio de Vigencia en cadena de texto
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ListadoContratoLogic.FechaFinVigencia">
+            <summary>
+            Fecha de Fin de Vigencia
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ListadoContratoLogic.FechaFinVigenciaString">
+            <summary>
+            Fecha de Fin de Vigencia en cadena de texto
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ListadoContratoLogic.CodigoMoneda">
+            <summary>
+            Código de Moneda
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ListadoContratoLogic.MontoContrato">
+            <summary>
+            Monto de Contrato
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ListadoContratoLogic.MontoContratoString">
+            <summary>
+            Monto de Contrato en cadena de texto
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ListadoContratoLogic.MontoAcumulado">
+            <summary>
+            Monto Acumulado
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ListadoContratoLogic.MontoAcumuladoString">
+            <summary>
+            Monto Acumulado en cadena de texto
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ListadoContratoLogic.CodigoEstadoContrato">
+            <summary>
+            Código de Estado de Contrato
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ListadoContratoLogic.CodigoPlantilla">
+            <summary>
+            Código de Plantilla
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ListadoContratoLogic.CodigoContratoPrincipal">
+            <summary>
+            Código de Contrato Principal
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ListadoContratoLogic.CodigoEstadoEdicion">
+            <summary>
+            Código de Estado de Edición
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ListadoContratoLogic.ComentarioModificacion">
+            <summary>
+            Comentario de Modificación
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ListadoContratoLogic.RespuestaModificacion">
+            <summary>
+            Respuesta de Modificación
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ListadoContratoLogic.CodigoEstadioActual">
+            <summary>
+            Código de Estadio Actual
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ListadoContratoLogic.CodigoTrabajadorResponsable">
+            <summary>
+            Código de Trabajador de Responsable
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ListadoContratoLogic.NumeroAdenda">
+            <summary>
+            Número de correlativo de adenda
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ListadoContratoLogic.NumeroAdendaConcatenado">
+            <summary>
+            Número de adenda concatenado
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ListadoContratoLogic.CantidadAdenda">
+            <summary>
+            Cantidad de adendas
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ListadoContratoLogic.IndicadorAdhesion">
+            <summary>
+            Indicador Adhesión
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ListadoContratoLogic.FechaCreacion">
+            <summary>
+            Fecha de Creación
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ListadoContratoLogic.FechaCreacionString">
+            <summary>
+            Fecha de Creación string
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ListadoContratoLogic.UsuarioCreacion">
+            <summary>
+            Usuario de creación
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ListadoContratoLogic.FechaCreacionEstadioActual">
+            <summary>
+            Fecha registro actual
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ListadoContratoLogic.NombreEstadioActual">
+            <summary>
+            Nombre de estadio actual
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ListadoContratoLogic.EsFlexible">
+            <summary>
+            Si el contrato es Flexible
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ListadoContratoLogic.FechaResolucion">
+            <summary>
+            La fecha de resolución cuando el estado pasa a Resuelto
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ListadoContratoLogic.FechaResolucionString">
+            <summary>
+            La fecha de resolución pero convertido a String
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ListadoContratoLogic.ValidacionResolucion">
+            <summary>
+            Esta validación debe cumplir lo solicitado y proviene desde un Proc en BBDD CTR.USP_CONTRATO_ORDENADO_SEL
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.PlantillaParrafoLogic">
+            <summary>
+            Representa los datos de la plantilla párrafo
+            </summary>
+            <remarks>
+            Creación:   GMD 20150521 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.PlantillaParrafoLogic.CodigoPlantillaParrafo">
+            <summary>
+            Código de Plantilla Párrafo
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.PlantillaParrafoLogic.CodigoPlantilla">
+            <summary>
+            Código de Plantilla
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.PlantillaParrafoLogic.Orden">
+            <summary>
+            Orden
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.PlantillaParrafoLogic.Titulo">
+            <summary>
+            Título
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.PlantillaParrafoLogic.Contenido">
+            <summary>
+            Contenido
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.PlantillaParrafoVariableLogic">
+            <summary>
+            Representa los datos de plantilla párrafo variable
+            </summary>
+            <remarks>
+            Creación:   GMD 20150529 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.PlantillaParrafoVariableLogic.CodigoPlantillaParrafoVariable">
+            <summary>
+            Código de Plantilla Párrafo Variable
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.PlantillaParrafoVariableLogic.CodigoPlantillaParrafo">
+            <summary>
+            Código de Plantilla Párrafo
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.PlantillaParrafoVariableLogic.CodigoVariable">
+            <summary>
+            Código de Variable
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.PlantillaParrafoVariableLogic.Orden">
+            <summary>
+            Orden
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.PlantillaParrafoVariableLogic.CodigoTipoVariable">
+            <summary>
+            Código de Tipo de Variable
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.PlantillaParrafoVariableLogic.NombreVariable">
+            <summary>
+            Nombre de Variable
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.PlantillaParrafoVariableLogic.IdentificadorVariable">
+            <summary>
+            Identificador de Variable
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.PlantillaParrafoVariableLogic.DescripcionVariable">
+            <summary>
+            Descripcion
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ProcesoAuditoriaLogic">
+            <summary>
+            Representa el objeto Logic de Flujo Aprobacion
+            </summary>
+            <remarks>
+            Creación :  GMD 20150515 <br />
+            Modificación :           <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ProcesoAuditoriaLogic.CodigoAuditoria">
+            <summary>
+            Codigo Auditoria
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ProcesoAuditoriaLogic.CodigoUnidadOperativa">
+            <summary>
+            Codigo Unidad Operativa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ProcesoAuditoriaLogic.FechaPlanificada">
+            <summary>
+            Fecha Planificada
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ProcesoAuditoriaLogic.FechaPlanificadaString">
+            <summary>
+            Fecha Planificada String
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ProcesoAuditoriaLogic.FechaEjecucion">
+            <summary>
+            Fecha Ejecucion String
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ProcesoAuditoriaLogic.FechaEjecucionString">
+            <summary>
+            Fecha Ejecucion String
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ProcesoAuditoriaLogic.CantidadAuditadas">
+            <summary>
+            Cantidad Auditadas
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ProcesoAuditoriaLogic.CantidadObservadas">
+            <summary>
+            Cantidad Observadas
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ProcesoAuditoriaLogic.ResultadoAuditoria">
+            <summary>
+            Resultado Auditoria
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.FlujoAprobacionEstadioLogic">
+            <summary>
+            Representa el objeto Logic de Flujo Aprobacion Estadio
+            </summary>
+            <remarks>
+            Creación :  GMD 20150515 <br />
+            Modificación :           <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.FlujoAprobacionEstadioLogic.CodigoFlujoAprobacionEstadio">
+            <summary>
+            Codigo Flujo Aprobacion Estadio
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.FlujoAprobacionEstadioLogic.CodigoFlujoAprobacion">
+            <summary>
+            Codigo Flujo Aprobacion
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.FlujoAprobacionEstadioLogic.Orden">
+            <summary>
+            Orden
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.FlujoAprobacionEstadioLogic.Descripcion">
+            <summary>
+            Descripcion
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.FlujoAprobacionEstadioLogic.TiempoAtencion">
+            <summary>
+            Tiempo Atencion
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.FlujoAprobacionEstadioLogic.HorasAtencion">
+            <summary>
+            Horas Atencion
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.FlujoAprobacionEstadioLogic.IndicadorVersionOficial">
+            <summary>
+            Indicador Version Oficial
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.FlujoAprobacionEstadioLogic.IndicadorPermiteCarga">
+            <summary>
+            Indicador Permite Carga
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.FlujoAprobacionEstadioLogic.IndicadorNumeroContrato">
+            <summary>
+            Indicador Numero Contrato
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.FlujoAprobacionEstadioLogic.CodigosRepresentante">
+            <summary>
+            Codigos Representante
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.FlujoAprobacionEstadioLogic.CodigoResponsable">
+            <summary>
+            Codigo Responsable
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.FlujoAprobacionEstadioLogic.CodigosInformado">
+            <summary>
+            Codigos Informado
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.FlujoAprobacionEstadioLogic.IndicadorIncluirVisto">
+            <summary>
+            Indicador incluir visto
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.FlujoAprobacionEstadioLogic.CodigosResponsableVinculadas">
+            <summary>
+            Códigos Responsable de Vinculadas
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.FlujoAprobacionEstadioLogic.UsuarioCreacion">
+            <summary>
+            Usuario de creación
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.FlujoAprobacionEstadioLogic.CorreoElectronico">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.FlujoAprobacionLogic">
+            <summary>
+            Representa el objeto Logic de Flujo Aprobacion
+            </summary>
+            <remarks>
+            Creación :  GMD 20150515 <br />
+            Modificación :           <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.FlujoAprobacionLogic.CodigoFlujoAprobacion">
+            <summary>
+            Codigo Flujo Aprobacion
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.FlujoAprobacionLogic.CodigoUnidadOperativa">
+            <summary>
+            Codigo Unidad Operativa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.FlujoAprobacionLogic.IndicadorAplicaMontoMinimo">
+            <summary>
+            Indicador de Aplica Monto Mínimo
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.FlujoAprobacionLogic.CodigoPrimerFirmante">
+            <summary>
+            Código Primer Firmante
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.FlujoAprobacionLogic.CodigoSegundoFirmante">
+            <summary>
+            Código Segundo Firmante
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.FlujoAprobacionLogic.CodigoPrimerFirmanteVinculada">
+            <summary>
+            Código Primer Firmante Vinculada
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.FlujoAprobacionLogic.CodigoSegundoFirmanteVinculada">
+            <summary>
+            Código Segundo Firmante Vinculada
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.PlantillaLogic">
+            <summary>
+            Representa los datos de la plantilla
+            </summary>
+            <remarks>
+            Creación:       GMD 20150518 <br />
+            Modificación:                <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.PlantillaLogic.CodigoPlantilla">
+            <summary>
+            Código de Plantilla
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.PlantillaLogic.Descripcion">
+            <summary>
+            Descripción
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.PlantillaLogic.CodigoTipoContrato">
+            <summary>
+            Código de Tipo de Contrato
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.PlantillaLogic.DescripcionTipoContrato">
+            <summary>
+            Descripción de Tipo de Contrato
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.PlantillaLogic.CodigoTipoDocumentoContrato">
+            <summary>
+            Código de Tipo de Documento de Contrato
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.PlantillaLogic.DescripcionTipoDocumentoContrato">
+            <summary>
+            Descripción de Tipo de Documento de Contrato
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.PlantillaLogic.CodigoEstadoVigencia">
+            <summary>
+            Código de Estado de Vigencia
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.PlantillaLogic.DescripcionEstadoVigencia">
+            <summary>
+            Descripción de Estado de Vigencia
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.PlantillaLogic.IndicadorAdhesion">
+            <summary>
+            Indicador Adhesión
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.PlantillaLogic.FechaInicioVigencia">
+            <summary>
+            Fecha de Inicio de Vigencia en cadena de texto
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.PlantillaLogic.FechaInicioVigenciaDate">
+            <summary>
+            Fecha de Inicio de Vigencia
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.PlantillaLogic.FechaFinVigencia">
+            <summary>
+            Fecha de Fin de Vigencia en cadena de texto
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.PlantillaLogic.FechaFinVigenciaDate">
+            <summary>
+            Fecha de Fin de Vigencia
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.PlantillaLogic.UsuarioCreacion">
+            <summary>
+            Usuario de Creación
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.PlantillaLogic.FechaCreacion">
+            <summary>
+            Fecha de Creación
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.PlantillaLogic.TerminalCreacion">
+            <summary>
+            Terminal de Creación
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.PlantillaLogic.UsuarioModificacion">
+            <summary>
+            Usuario de Modificación
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.PlantillaLogic.FechaModificacion">
+            <summary>
+            Fecha de Modificación
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.PlantillaLogic.TerminalModificacion">
+            <summary>
+            Terminal de Modificación
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoLogic">
+            <summary>
+            Representa el objeto Logic de Contrato
+            </summary>
+            <remarks>
+            Creación :  GMD 20150515 <br />
+            Modificación :           <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoLogic.CodigoContrato">
+            <summary>
+            CodigoContrato
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoLogic.CodigoUnidadOperativa">
+            <summary>
+            CodigoUnidadOperativa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoLogic.CodigoProveedor">
+            <summary>
+            CodigoProveedor
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoLogic.NombreProveedor">
+            <summary>
+            CodigoProveedor
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoLogic.NumeroContrato">
+            <summary>
+            NumeroContrato
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoLogic.Descripcion">
+            <summary>
+            Descripcion
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoLogic.CodigoTipoServicio">
+            <summary>
+            CodigoTipoServicio
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoLogic.CodigoTipoRequerimiento">
+            <summary>
+            CodigoTipoRequerimiento
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoLogic.IndicadorPermiteCarga">
+            <summary>
+            Indicador de si Carga del Estadio 
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoLogic.CodigoTipoDocumento">
+            <summary>
+            CodigoTipoDocumento
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoLogic.FechaInicioVigencia">
+            <summary>
+            FechaInicioVigencia
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoLogic.FechaFinVigencia">
+            <summary>
+            FechaFinVigencia
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoLogic.CodigoMoneda">
+            <summary>
+            CodigoMoneda
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoLogic.MontoContrato">
+            <summary>
+            MontoContrato
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoLogic.MontoAcumulado">
+            <summary>
+            MontoContrato
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoLogic.CodigoEstado">
+            <summary>
+            CodigoEstado
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoLogic.CodigoPlantilla">
+            <summary>
+            CodigoPlantilla
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoLogic.CodigoContratoPrincipal">
+            <summary>
+            CodigoContratoPrincipal
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoLogic.CodigoEstadoEdicion">
+            <summary>
+            CodigoEstadoEdicion
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoLogic.ComentarioModificacion">
+            <summary>
+            ComentarioModificacion
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoLogic.RespuestaModificacion">
+            <summary>
+            RespuestaModificacion
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoLogic.CodigoEstadioActual">
+            <summary>
+            CodigoEstadioActual
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoLogic.DescripcionEstadioActual">
+            <summary>
+            Descripción del estadio actual
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoLogic.CodigoContratoEstadio">
+            <summary>
+            Código de Estadio de Contrato
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoLogic.CodigoFlujoAprobacionEstadio">
+            <summary>
+            Código de Flujo Aprobacion Estadio
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoLogic.CodigoFlujoAprobacion">
+            <summary>
+            Código de Flujo Aprobacion
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoLogic.FechaIngreso">
+            <summary>
+            Fecha de ingreso a proceso del Contrato
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoLogic.DiasPendiente">
+            <summary>
+            Dias pendiente de revision del contrto
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoLogic.FechaUltimaNotificacion">
+            <summary>
+            Fecha de ultima notificación del contrato
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoLogic.EstadioPropioConsulta">
+            <summary>
+            Flag que indica si el contrato es por Consulta o para aprobación
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoLogic.DescripcionContrato">
+            <summary>
+            Descripción del contrato
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoLogic.FechaModificacion">
+            <summary>
+            Fecha de modificación del contrato
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoLogic.UsuarioCreacion">
+            <summary>
+            Usuario de creación
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ProveedorLogic">
+            <summary>
+            Representa el objeto Logic de Proveedor
+            </summary>
+            <remarks>
+            Creación :  GMD 20150515 <br />
+            Modificación :           <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ProveedorLogic.CodigoProveedor">
+            <summary>
+            Codigo Proveedor
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ProveedorLogic.CodigoIdentificacion">
+            <summary>
+            Codigo Identificacion
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ProveedorLogic.Nombre">
+            <summary>
+            Nombre
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ProveedorLogic.NombreComercial">
+            <summary>
+            Nombre Comercial
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ProveedorLogic.TipoDocumento">
+            <summary>
+            Tipo Documento
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ProveedorLogic.NumeroDocumento">
+            <summary>
+            Numero Documento
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ProveedorOracleLogic">
+            <summary>
+            Representa los datos del Proveedor Oracle
+            </summary>
+            <remarks>
+            Creación:       GMD 20150602 <br />
+            Modificación:                <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ProveedorOracleLogic.Ruc">
+            <summary>
+            Número Ruc del Proveedor
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ProveedorOracleLogic.Nombre">
+            <summary>
+            Nombre del Proveedor
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.UnidadOperativaLogic">
+            <summary>
+            Representa el objeto Logic de Unidad Operativa 
+            </summary>
+            <remarks>
+            Creación :  GMD 20150515 <br />
+            Modificación :           <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.UnidadOperativaLogic.CodigoUnidadOperativa">
+            <summary>
+            Codigo Unidad Operativa
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.VariableCampoLogic">
+            <summary>
+            Representa los datos del Campo de Variable
+            </summary>
+            <remarks>
+            Creación:   GMD 20150527 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.VariableCampoLogic.CodigoVariableCampo">
+            <summary>
+            Código de Campo
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.VariableCampoLogic.CodigoVariable">
+            <summary>
+            Código de Variable
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.VariableCampoLogic.Nombre">
+            <summary>
+            Nombre
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.VariableCampoLogic.Orden">
+            <summary>
+            Orden
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.VariableCampoLogic.TipoAlineamiento">
+            <summary>
+            Tipo de Alineamiento
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.VariableCampoLogic.Tamanio">
+            <summary>
+            Tamaño de Columna
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.VariableListaLogic">
+            <summary>
+            Representa el objeto Logic de variable lista
+            </summary>
+            <remarks>
+            Creación :  GMD 20150515 <br />
+            Modificación :           <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.VariableListaLogic.CodigoVariableLista">
+            <summary>
+            Codigo de variable lista
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.VariableListaLogic.CodigoVariable">
+            <summary>
+            Codigo de variable
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.VariableListaLogic.Nombre">
+            <summary>
+            Nombre
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.VariableListaLogic.Descripcion">
+            <summary>
+            Descripcion
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.VariableLogic">
+            <summary>
+            Representa los datos de la Variable
+            </summary>
+            <remarks>
+            Creación:   GMD 20150527 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.VariableLogic.CodigoVariable">
+            <summary>
+            Código de Variable
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.VariableLogic.CodigoPlantilla">
+            <summary>
+            Código de Plantilla
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.VariableLogic.Identificador">
+            <summary>
+            Identificador
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.VariableLogic.Nombre">
+            <summary>
+            Nombre
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.VariableLogic.CodigoTipo">
+            <summary>
+            Código de Tipo de Variable
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.VariableLogic.IndicadorGlobal">
+            <summary>
+            Indicador de Variable Global
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.VariableLogic.DescripcionTipoVariable">
+            <summary>
+            Descripción de Tipo de Variable
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.VariableLogic.IndicadorVariableSistema">
+            <summary>
+            Indicador de Variable de Sistema
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.VariableLogic.Descripcion">
+            <summary>
+            Descripcion
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.QueryModel.ContratoBienLogic">
+            <summary>
+            Representa los datos de bien de un contrato
+            </summary>
+            <remarks>
+            Creación:   GMD 20151020 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.ContratoBienLogic.CodigoContratoBien">
+            <summary>
+            Codigo Contrato Bien
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.ContratoBienLogic.CodigoContrato">
+            <summary>
+            Codigo Contrato
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.ContratoBienLogic.CodigoBien">
+            <summary>
+            Codigo de Bien
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.QueryModel.ContratoBienLogic.EstadoRegistro">
+            <summary>
+            Estado de Registro
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ContratoParrafoVariableLogic">
+            <summary>
+            Representa los datos de parrafo variable
+            </summary>
+            <remarks>
+            Creación:   GMD 20151015 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ContratoParrafoVariableLogic.CodigoContratoParrafoVariable">
+            <summary>
+            Codigo Contrato de Parrafo Variable
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ContratoParrafoVariableLogic.CodigoContratoParrafo">
+            <summary>
+            Codigo Contrato de Parrafo
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ContratoParrafoVariableLogic.CodigoPlantillaParrafo">
+            <summary>
+            Codigo de Plantilla Párrafo
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ContratoParrafoVariableLogic.CodigoVariable">
+            <summary>
+            Codigo de Variable
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ContratoParrafoVariableLogic.ValorTexto">
+            <summary>
+            Valor de Texto
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ContratoParrafoVariableLogic.ValorNumero">
+            <summary>
+            Valor de Numero
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ContratoParrafoVariableLogic.ValorFecha">
+            <summary>
+            Valor de Fecha
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ContratoParrafoVariableLogic.ValorImagen">
+            <summary>
+            ValorImagen
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ContratoParrafoVariableLogic.ValorTabla">
+            <summary>
+            Valor de Tabla
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ContratoParrafoVariableLogic.ValorTablaEditable">
+            <summary>
+            Valor de Tabla Editable
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ContratoParrafoVariableLogic.ValorBien">
+            <summary>
+            Valor de Bien
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ContratoParrafoVariableLogic.ValorBienEditable">
+            <summary>
+            Valor de Bien Editable
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ContratoParrafoVariableLogic.ValorFirmante">
+            <summary>
+            Valor Firmante
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ContratoParrafoVariableLogic.ValorFirmanteEditable">
+            <summary>
+            Valor Firmante Editable
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ContratoParrafoVariableLogic.CodigoTipo">
+            <summary>
+            Codigo de tipo de Variable
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ContratoParrafoVariableLogic.Identificador">
+            <summary>
+            Identificador de Variable
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ContratoParrafoVariableLogic.ValorLista">
+            <summary>
+            Codigo de variable tipo lista
+            </summary>
+        </member>
+    </members>
+</doc>

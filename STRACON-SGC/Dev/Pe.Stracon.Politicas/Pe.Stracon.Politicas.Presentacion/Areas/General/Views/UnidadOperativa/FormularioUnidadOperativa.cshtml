@@ -1,0 +1,214 @@
+﻿@using Pe.Stracon.Politicas.Presentacion.Recursos.Base
+@using Pe.Stracon.Politicas.Presentacion.Recursos.General
+@using Pe.Stracon.Politicas.Infraestructura.QueryModel
+@using Pe.Stracon.Politicas.Infraestructura.Core.Context
+@model Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.UnidadOperativa.UnidadOperativaFormulario
+
+<form id="frmUnidadOperativaRegistro" onsubmit="return false;">    
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                @Html.Hidden("hdnCodigoUnidadOperativa", Model.unidadOperativa.CodigoUnidadOperativa, new { id = "hdnCodigoUnidadOperativa" })    
+                <label for="txtCodigoIdentificacion">@UnidadOperativaResource.EtiquetaCodigoIdentificacion</label>
+                @Html.TextBox("txtCodigoIdentificacion", Model.unidadOperativa.CodigoIdentificacion, new { id = "txtCodigoIdentificacion", @class = "form-control", @validable = "required ValidarCodigoIdentificacion" })
+                 
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="txtNombreUnidadOperativa">@UnidadOperativaResource.EtiquetaNombre</label>
+                @Html.TextBox("txtNombreRegistro", Model.unidadOperativa.Nombre, new { id = "txtNombreRegistro", @class = "form-control", @validable = "required ValidarNombre" })
+
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label>@UnidadOperativaResource.EtiquetaActiva</label>
+                <div>
+                    @Html.CheckBox("chkActivaRegistro", Convert.ToBoolean(Model.unidadOperativa.IndicadorActiva), new { id = "chkActivaRegistro" })
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label>@UnidadOperativaResource.EtiquetaTipo</label>
+                @Html.DropDownList("slcNivelRegistro", Model.Niveles, new { id = "slcNivelRegistro", @class = "form-control", @validable = "required ValidarTipo" })
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label>@UnidadOperativaResource.EtiquetaUnidadSuperior</label>
+                @Html.DropDownList("slcUnidadSuperiorRegistro", Model.UnidadesOperativasPadre, new { id = "slcUnidadSuperiorRegistro", @class = "form-control" })
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label>@UnidadOperativaResource.EtiquetaSubTipo</label>
+                @Html.DropDownList("slcSubTipoRegistro", Model.TiposUnidadOperativa, new { id = "slcSubTipoRegistro", @class = "form-control" })
+            </div>
+        </div>
+    </div>
+    @switch (Model.Tipo)
+    {
+        case DatosConstantes.TipoVisualizacionUnidadOperativa.Responsable:
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>@UnidadOperativaResource.EtiquetaResponsable</label>
+                            <div class="form-inline">
+                                <div class="input-group input-group-full">                            
+                                    @Html.Hidden("hdnCodigoResponsable", Model.unidadOperativa.CodigoResponsable, new { id = "hdnCodigoResponsable" })                                                
+                                    @Html.TextBox("txtResponsableRegistro", Model.unidadOperativa.Responsable.NombreCompleto, new { id = "txtResponsableRegistro", @class = "form-control", @disabled = "" })
+                                    <span class="input-group-addon"><button class="btn btn-default" id="btnBuscarTrabajadorResponsable"><i class="fa fa-search"></i></button></span>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>@UnidadOperativaResource.EtiquetaOrganizacion</label>
+                            @Html.TextBox("txtOrganizacionRegistro", Model.unidadOperativa.Responsable.Organizacion, new { id = "txtOrganizacionRegistro", @class = "form-control", @disabled = "" })
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>@UnidadOperativaResource.EtiquetaDepartamento</label>
+                            @Html.TextBox("txtDepartamentoRegistro", Model.unidadOperativa.Responsable.Departamento, new { id = "txtDepartamentoRegistro", @class = "form-control", @disabled = "" })
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>@UnidadOperativaResource.EtiquetaCargo</label>
+                            @Html.TextBox("txtCargoRegistro", Model.unidadOperativa.Responsable.Cargo, new { id = "txtCargoRegistro", @class = "form-control", @disabled = "" })
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label>@GenericoResource.EtiquetaTelefonoTrabajo</label>
+                                    @Html.TextBox("txtTelefonoTrabajoRegistro", Model.unidadOperativa.Responsable.TelefonoTrabajo, new { id = "txtTelefonoTrabajoRegistro", @class = "form-control", @disabled = "" })
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label>@GenericoResource.EtiquetaTelefonoAnexo</label>
+                                    @Html.TextBox("txtAnexoRegistro", Model.unidadOperativa.Responsable.Anexo, new { id = "txtAnexoRegistro", @class = "form-control", @disabled = "" })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>@GenericoResource.EtiquetaTelefonoMovil</label>
+                            @Html.TextBox("txtCelularRegistro", Model.unidadOperativa.Responsable.TelefonoMovil, new { id = "txtCelularRegistro", @class = "form-control", @disabled = "" })
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>@UnidadOperativaResource.EtiquetaParticular</label>
+                            @Html.TextBox("txtParticularRegistro", Model.unidadOperativa.Responsable.TelefonoPersonal, new { id = "txtParticularRegistro", @class = "form-control", @disabled = "" })
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>@GenericoResource.EtiquetaCorreoElectronico</label>
+                            @Html.TextBox("txtCorreoElectronicoRegistro", Model.unidadOperativa.Responsable.CorreoElectronico, new { id = "txtCorreoElectronicoRegistro", @class = "form-control", @disabled = "" })
+                        </div>
+                    </div>
+                </div>
+            break;
+        case DatosConstantes.TipoVisualizacionUnidadOperativa.RepresentanteDireccion:
+               <div class="row">
+                  <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>@UnidadOperativaResource.EtiquetaPrimerRepresentante</label>
+                            <div class="form-inline">
+                                <div class="input-group input-group-full">                            
+                                    @Html.Hidden("hdnCodigoPrimerRepresentante", Model.unidadOperativa.CodigoPrimerRepresentante, new { id = "hdnCodigoPrimerRepresentante" })                                                
+                                    @Html.TextBox("txtPrimerRepresentanteRegistro", Model.unidadOperativa.PrimerRepresentante.NombreCompleto, new { id = "txtPrimerRepresentanteRegistro", @class = "form-control", @disabled = "" })
+                                    <span class="input-group-addon"><button class="btn btn-default" id="btnBuscarTrabajadorPrimerRepresentante"><i class="fa fa-search"></i></button></span>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>@UnidadOperativaResource.EtiquetaSegundoRepresentante</label>
+                            <div class="form-inline">
+                                <div class="input-group input-group-full">                            
+                                    @Html.Hidden("hdnCodigoSegundoRepresentante", Model.unidadOperativa.CodigoSegundoRepresentante, new { id = "hdnCodigoSegundoRepresentante" })                                                
+                                    @Html.TextBox("txtSegundoRepresentanteRegistro", Model.unidadOperativa.SegundoRepresentante.NombreCompleto, new { id = "txtSegundoRepresentanteRegistro", @class = "form-control", @disabled = "" })
+                                    <span class="input-group-addon"><button class="btn btn-default" id="btnBuscarTrabajadorSegundoRepresentante"><i class="fa fa-search"></i></button></span>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+    
+        <div class="row">
+                  <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>@UnidadOperativaResource.EtiquetaTercerRepresentante</label>
+                            <div class="form-inline">
+                                <div class="input-group input-group-full">                            
+                                    @Html.Hidden("hdnCodigoTercerRepresentante", Model.unidadOperativa.CodigoTercerRepresentante, new { id = "hdnCodigoTercerRepresentante" })                                                
+                                    @Html.TextBox("txtTercerRepresentanteRegistro", Model.unidadOperativa.TercerRepresentante.NombreCompleto, new { id = "txtTercerRepresentanteRegistro", @class = "form-control", @disabled = "" })
+                                    <span class="input-group-addon"><button class="btn btn-default" id="btnBuscarTrabajadorTercerRepresentante"><i class="fa fa-search"></i></button></span>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>@UnidadOperativaResource.EtiquetaCuartoRepresentante</label>
+                            <div class="form-inline">
+                                <div class="input-group input-group-full">                            
+                                    @Html.Hidden("hdnCodigoCuartoRepresentante", Model.unidadOperativa.CodigoCuartoRepresentante, new { id = "hdnCodigoCuartoRepresentante" })                                                
+                                    @Html.TextBox("txtCuartoRepresentanteRegistro", Model.unidadOperativa.CuartoRepresentante.NombreCompleto, new { id = "txtCuartoRepresentanteRegistro", @class = "form-control", @disabled = "" })
+                                    <span class="input-group-addon"><button class="btn btn-default" id="btnBuscarTrabajadorCuartoRepresentante"><i class="fa fa-search"></i></button></span>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+    
+   
+    
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <label>@UnidadOperativaResource.EtiquetaDireccion</label>
+                            @Html.TextBox("txtDireccion", Model.unidadOperativa.Direccion, new { id = "txtDireccion", @class = "form-control", @maxlength = "255" })
+                        </div>
+                    </div>
+                </div>
+            break;
+    }
+</form>
+<div class="comp-Modal-footer">
+    <button class="btn btn-default" id="btnCancelarRegistro">@GenericoResource.BotonCancelar</button>
+    <button class="btn btn-primary" id="btnGrabarRegistro">@GenericoResource.BotonGrabar</button>
+</div>
+
+<script type="text/javascript">
+    ns('Pe.Stracon.Politicas.Presentacion.Recursos.Validacion')
+    Pe.Stracon.Politicas.Presentacion.Recursos.Validacion.ValidarCodigoIdentificacion = '@Html.Raw(UnidadOperativaResource.EtiquetaCodigoIdentificacion)';
+    Pe.Stracon.Politicas.Presentacion.Recursos.Validacion.ValidarNombre               = '@Html.Raw(UnidadOperativaResource.EtiquetaNombre)';
+    Pe.Stracon.Politicas.Presentacion.Recursos.Validacion.ValidarTipo                 = '@Html.Raw(UnidadOperativaResource.EtiquetaTipo)';
+    Pe.Stracon.Politicas.Presentacion.Recursos.Validacion.ValidarSubTipo              = '@Html.Raw(UnidadOperativaResource.EtiquetaSubTipo)';
+    Pe.Stracon.Politicas.Presentacion.Recursos.Validacion.ValidarUnidadSuperior       = '@Html.Raw(UnidadOperativaResource.EtiquetaUnidadSuperior)';
+    Pe.Stracon.Politicas.Presentacion.Recursos.Validacion.ValidarActiva               = '@Html.Raw(UnidadOperativaResource.EtiquetaActiva)';
+    Pe.Stracon.Politicas.Presentacion.Recursos.Validacion.ValidarResponsable          = '@Html.Raw(UnidadOperativaResource.EtiquetaResponsable)';
+    Pe.Stracon.Politicas.Presentacion.Recursos.Validacion.ValidarRepresentante        = '@Html.Raw(UnidadOperativaResource.EtiquetaRepresentanteRepetido)';
+</script>

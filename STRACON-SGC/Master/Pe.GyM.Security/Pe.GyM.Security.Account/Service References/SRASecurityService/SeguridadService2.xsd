@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Domain.Implementation.Security.Aggregates.OptionMAgg" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Domain.Implementation.Security.Aggregates.OptionMAgg" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://10.244.4.20/SRAService/SeguridadService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Domain.Base" />
+  <xs:complexType name="OptionM">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Domain.Base" base="q1:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="N_ID_MODULE" type="xs:int" />
+          <xs:element minOccurs="0" name="N_ID_OPTION" type="xs:int" />
+          <xs:element minOccurs="0" name="N_ID_PARENT" type="xs:int" />
+          <xs:element minOccurs="0" name="S_DESCRIPTION" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="S_LEVEL" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="S_NAME" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="S_STATUS_REGISTER" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="S_URL_OPTION" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OptionM" nillable="true" type="tns:OptionM" />
+</xs:schema>

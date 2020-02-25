@@ -1,0 +1,186 @@
+﻿@using Pe.Stracon.SGC.Presentacion.Recursos.Base
+@using Pe.Stracon.SGC.Presentacion.Recursos.Contractual
+@model Pe.Stracon.SGC.Presentacion.Core.ViewModel.Contractual.ListadoContrato.ContratoParrafoBienFormulario
+
+<script type="text/javascript">
+    @{
+        System.Web.Script.Serialization.JavaScriptSerializer ser = new System.Web.Script.Serialization.JavaScriptSerializer();
+        ser.MaxJsonLength = Int32.MaxValue;
+        var jsonBien = ser.Serialize(Model);
+    }
+    ns('Pe.Stracon.SGC.Presentacion.Contractual.ListadoContrato.FormularioContratoParrafoBien.Models')
+    Pe.Stracon.SGC.Presentacion.Contractual.ListadoContrato.FormularioContratoParrafoBien.Models.FormularioContratoParrafoBien = @Html.Raw(jsonBien)
+
+
+        //INICIO: Agregado por Julio Carrera - Norma Contable
+
+        $(document).ready(function () {
+        $("#hdfNormaContable").val("@Session["CodigoTipoRequerimiento"].ToString()");
+
+        @*@if (Session["CodigoTipoRequerimiento"].Equals("QCAE") || Session["CodigoTipoRequerimiento"].Equals("QCAEM"))
+        {
+            <text>
+        base.chkNormaContable = 1;
+        base.Control.chkNormaContable().val("okkkk");
+            </text>
+            //varAux = 1;
+            //$("hdfNormaContable").val(1);
+            //base.chkNormaContable = 1;
+        }*@
+
+        //$("#lblHoraMinima").hide();
+        //$("#txtFrmHoraMinima").hide();
+        //$("#divNormaContable").hide();
+
+        $("#slcPeriodoAlquiler").empty();
+        $("#slcPeriodoAlquiler").append(new Option(Pe.Stracon.Politicas.Presentacion.Base.GenericoResource.EtiquetaSeleccionar, ""));
+
+        $("#slcFrmTipoTarifa").change(function () {
+            //if ($("#slcFrmTipoTarifa").val() == 'E') {
+            //    $("#txtFrmHoraMinima").show();
+            //    $("#lblHoraMinima").show();
+            //}
+            //else {
+            //    $("#txtFrmHoraMinima").hide();
+            //    $("#lblHoraMinima").hide();
+            //}
+            $("#slcPeriodoAlquiler").empty();
+                $.ajax({
+                    type: 'POST',
+                    url: '@Url.Action("ListarTipoPeriodos")', // we are calling json method
+                    dataType: 'json',
+                    data: { tipoTarifa: $("#slcFrmTipoTarifa").val() },
+                    success: function (states) {
+
+                        $.each(states, function (i, state) {
+                            $("#slcPeriodoAlquiler").append('<option value="' + state.Codigo + '">' +
+                             state.Valor + '</option>');
+                        });
+                    },
+                    error: function (ex) {
+                        alert('Failed to retrieve states.' + ex);
+                    }
+                });
+                return false;
+        })
+
+        $("#slcFrmTipoTarifa").change();
+
+        //$("#chkFrmEquipoMayor").click(function () {
+        //    if ($("#chkFrmEquipoMayor").is(':checked')) {
+        //        chkNormaContable = 1;
+        //        $("#divNormaContable").show();
+        //    } else {
+        //        chkNormaContable = 0;
+        //        $("#divNormaContable").hide();
+        //    }
+        //});
+
+        //$("#chkFrmEquipoMayor").click();
+        //$("#chkFrmEquipoMayor").click();
+
+        });
+    //FIN: Agregado por Julio Carrera - Norma Contable
+
+</script>
+
+<div id="divContenedorContratoParrafoBien">
+    <form id="frmContratoParrafoBien">
+        <div class="row">
+            <div class="col-sm-1">
+                <div class="form-group">
+                    <label for="txtFrmBien">@BienesResource.EtiquetaBien</label>
+                </div>
+            </div>
+            <div class="col-sm-9">
+                <div class="form-group">
+                    @Html.TextBox("txtFrmBien", null, new { @class = "form-control", @id = "txtFrmBien", @validable = "required ValidarBien", maxlength = "50" })
+                </div>
+            </div>
+            <div class="col-sm-2 text-right">
+                <button id="btnAgregrarContratoParrafoBien" class="btn btn-default" type="button">@GenericoResource.BotonAñadir</button>
+            </div>
+        </div>
+
+        @*INICIO: Agregado por Julio Carrera - Norma Contable*@
+        @*@if (Session["CodigoTipoRequerimiento"].Equals("QCAE") || Session["CodigoTipoRequerimiento"].Equals("QCAEM"))*@
+        @if (Session["CodigoTipoRequerimiento"].Equals(true))
+        {
+            <div id="divNormaContable">
+                <div class="row">
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            <label for="txtTipoTarifa">Tipo de tarifa</label>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            @Html.DropDownListFor(model => model.CodigoTipoTarifa, new SelectList(Model.lstTipoTarifa, "Value", "Text"), null, new { @class = "form-control", id = "slcFrmTipoTarifa", @validable = "required ValidarTipoTarifa" })
+                        </div>
+                    </div>
+
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            <label for="txtTipoTarifa">Tipo de período</label>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            @Html.DropDownListFor(model => model.CodigoPeriodoAlquiler, new SelectList(Model.lstPeriodoAlquiler, "Value", "Text"), null, new { @class = "form-control", id = "slcPeriodoAlquiler", @validable = "required ValidarTipoPeriodoAlquiler" })
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            @Html.Label("Horas mínimas", new { id = "lblHoraMinima" })
+                        </div>
+                    </div>
+
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            @Html.TextBox("txtFrmHoraMinima", null, new { @class = "form-control", @id = "txtFrmHoraMinima", @validable = "required ValidarBien", maxlength = "50" })
+                        </div>
+                    </div>
+
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            <label for="txtTipoTarifa">Tarifa</label>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            @Html.TextBox("txtFrmTarifa", null, new { @class = "form-control", @id = "txtFrmTarifa", @validable = "required ValidarBien", maxlength = "50" })
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        }
+        @*<div class="row">
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="chkFrmResponderValido">Equipo Mayor</label>
+                        @Html.CheckBox("chkFrmEquipoMayor", false, new { @id = "chkFrmEquipoMayor" })
+                    </div>
+                </div>
+            </div>*@
+
+        @*FIN: Agregado por Julio Carrera - Norma Contable*@
+        <br />
+        <br />
+        <div id="divGrdResultContratoParrafoBien">
+        </div>
+    </form>
+    <div class="comp-Modal-footer">
+        <button class="btn btn-default" id="btnCancelarContratoParrafoBien">@GenericoResource.BotonCancelar</button>
+        <button class="btn btn-primary" id="btnAceptarContratoParrafoBien">@GenericoResource.BotonAceptar</button>
+    </div>
+</div>

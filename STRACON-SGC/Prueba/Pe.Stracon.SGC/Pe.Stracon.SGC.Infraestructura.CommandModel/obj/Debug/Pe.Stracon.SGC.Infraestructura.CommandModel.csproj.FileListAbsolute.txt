@@ -1,0 +1,13 @@
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.Stracon.SGC\Pe.Stracon.SGC.Infraestructura.CommandModel\bin\Debug\Pe.Stracon.SGC.Infraestructura.CommandModel.XML
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.Stracon.SGC\Pe.Stracon.SGC.Infraestructura.CommandModel\bin\Debug\Pe.Stracon.SGC.Infraestructura.CommandModel.dll
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.Stracon.SGC\Pe.Stracon.SGC.Infraestructura.CommandModel\bin\Debug\Pe.Stracon.SGC.Infraestructura.CommandModel.pdb
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.Stracon.SGC\Pe.Stracon.SGC.Infraestructura.CommandModel\bin\Debug\EntityFramework.dll
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.Stracon.SGC\Pe.Stracon.SGC.Infraestructura.CommandModel\bin\Debug\EntityFramework.SqlServer.dll
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.Stracon.SGC\Pe.Stracon.SGC.Infraestructura.CommandModel\bin\Debug\EntityFramework.xml
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.Stracon.SGC\Pe.Stracon.SGC.Infraestructura.CommandModel\bin\Debug\EntityFramework.SqlServer.xml
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.Stracon.SGC\Pe.Stracon.SGC.Infraestructura.CommandModel\bin\Debug\es\EntityFramework.resources.dll
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.Stracon.SGC\Pe.Stracon.SGC.Infraestructura.CommandModel\bin\Debug\es\EntityFramework.SqlServer.resources.dll
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.Stracon.SGC\Pe.Stracon.SGC.Infraestructura.CommandModel\obj\Debug\Pe.Stracon.SGC.Infraestructura.CommandModel.csproj.CoreCompileInputs.cache
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.Stracon.SGC\Pe.Stracon.SGC.Infraestructura.CommandModel\obj\Debug\Pe.Stracon.SGC.Infraestructura.CommandModel.csproj.CopyComplete
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.Stracon.SGC\Pe.Stracon.SGC.Infraestructura.CommandModel\obj\Debug\Pe.Stracon.SGC.Infraestructura.CommandModel.dll
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.Stracon.SGC\Pe.Stracon.SGC.Infraestructura.CommandModel\obj\Debug\Pe.Stracon.SGC.Infraestructura.CommandModel.pdb

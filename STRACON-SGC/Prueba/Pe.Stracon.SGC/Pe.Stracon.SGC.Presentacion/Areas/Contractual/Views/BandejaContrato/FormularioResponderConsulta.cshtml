@@ -1,0 +1,45 @@
+﻿@using Pe.Stracon.SGC.Presentacion.Recursos.Base
+@using Pe.Stracon.SGC.Presentacion.Recursos.Contractual
+@model Pe.Stracon.SGC.Presentacion.Core.ViewModel.Contractual.BandejaContrato.ObservacionesFormulario
+<input  type="hidden" id="hCodigoContratoEstadioConsulta" value="@ViewBag.Codigo"/>
+<input  type="hidden" id="hFechaConsulta" value="@ViewBag.FechaConsulta"/>
+<input  type="hidden" id="hCodigoContratoParrafo" value="@ViewBag.CodigoContratoParrafo"/>
+<input  type="hidden" id="hDestinatario" value="@ViewBag.Destinatario"/>
+<input  type="hidden" id="hCodigoContratoEstadio" value="@ViewBag.CodigoContratoEstadio"/>
+<div class="row">
+    <div class="col-sm-12">
+        <div class="form-group">
+            <label for="txtDescripConsulta">@BandejaContratoResource.EtiquetaConsulta</label>            
+            <textarea id="txtDescripConsulta" readonly class="form-control" rows="4">@ViewBag.TextoConsulta</textarea>
+        </div>
+    </div>
+</div>
+@if(!Model.Contrato.IndicadorAdhesion == true)
+{
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="form-group">
+                <label>@BandejaContratoResource.EtiquetaParrafoRelacionado</label>
+                        <div id="divContenidoParrafoConsulta" class="box-ParrafosObservacion" >
+                        </div>
+                @*<textarea id="txtParrafoConsulta" readonly class="form-control" rows="4">@ViewBag.TextoParrafo</textarea>*@
+            </div>
+        </div>
+    </div>
+}
+<div class="row">
+    <div class="col-sm-12">
+        <label>@BandejaContratoResource.EtiquetaFormularioResponderConsulta</label>
+        @if (@ViewBag.TipoVista=="C"){//Consulta
+            <textarea id="txtDescripRptaConsulta" class="form-control" readonly rows="4">@ViewBag.TextoRespuesta</textarea>
+        }else{
+            <textarea id="txtDescripRptaConsulta" class="form-control" rows="4">@ViewBag.TextoRespuesta</textarea>
+        }
+    </div>
+</div>
+<div class="comp-Modal-footer">
+    <button class="btn btn-default" id="btnFrmConsultaCancelar">@GenericoResource.BotonCancelar</button>
+    @if (@ViewBag.TipoVista=="E"){//Edición
+            <button class="btn btn-primary" id="btnFrmConsultaResponder">@GenericoResource.BotonResponder</button>
+    }
+</div>

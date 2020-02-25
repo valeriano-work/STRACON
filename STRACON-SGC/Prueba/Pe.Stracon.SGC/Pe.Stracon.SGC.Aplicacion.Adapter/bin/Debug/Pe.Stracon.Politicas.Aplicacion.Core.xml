@@ -1,0 +1,1248 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Pe.Stracon.Politicas.Aplicacion.Core</name>
+    </assembly>
+    <members>
+        <member name="T:Pe.Stracon.Politicas.Aplicacion.Core.Base.IGenericService">
+            <summary>
+            Definición generica de servicios de aplicación
+            </summary>
+            <remarks>
+            Creación:   GMD 22122014 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Aplicacion.Core.Base.ProcessResult`1">
+            <summary>
+            Respuesta unica de los procesos de la capa de aplicación
+            </summary>
+            <remarks>
+            Creación:   GMD 22122014 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.Base.ProcessResult`1.#ctor">
+            <summary>
+            Constructor por defecto
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.Core.Base.ProcessResult`1.IsSuccess">
+            <summary>
+            Indicador del estado de la operación
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.Core.Base.ProcessResult`1.Exception">
+            <summary>
+            Exceción generada en caso de error
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.Core.Base.ProcessResult`1.Result">
+            <summary>
+            Resultado del proceso
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Aplicacion.Core.Factory.EnvironmentFacility">
+            <summary>
+            Facilitador de Entorno
+            </summary>
+            <remarks>
+            Creación:   GMD 22122014 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.Factory.EnvironmentFacility.Init">
+            <summary>
+            Método de Inicio
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Aplicacion.Core.Factory.PersistenceFacility">
+            <summary>
+            Facilitador de la implementación del objeto de persistencia
+            </summary>
+            <remarks>
+            Creación:   GMD 22122014 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.Factory.PersistenceFacility.Init">
+            <summary>
+            Método de Inicio
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Aplicacion.Core.Factory.WindsorControllerFactory">
+            <summary>
+            Factory de injección de controllers
+            </summary>
+            <remarks>
+            Creación:   GMD 22122014 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.Factory.WindsorControllerFactory.#ctor(Castle.MicroKernel.IKernel)">
+            <summary>
+            Controlador de fabrica Windsor
+            </summary>
+            <param name="kernel">Kernel</param>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.Factory.WindsorControllerFactory.ReleaseController(System.Web.Mvc.IController)">
+            <summary>
+            Controaldor de Release
+            </summary>
+            <param name="controller">Kernel</param>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.Factory.WindsorControllerFactory.GetControllerInstance(System.Web.Routing.RequestContext,System.Type)">
+            <summary>
+            Permite obtener un controlador de instacia
+            </summary>
+            <param name="requestContext">Solicitud de Contexto</param>
+            <param name="controllerType">Tipo de contexto</param>
+            <returns>Kernel resuelto por tipo</returns>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Aplicacion.Core.Installers.ApplicationServiceInstaller">
+            <summary>
+            Servicio de Instalador de aplicaciones
+            </summary>
+            <remarks>
+            Creación:   GMD 22122014 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.Installers.ApplicationServiceInstaller.Install(Castle.Windsor.IWindsorContainer,Castle.MicroKernel.SubSystems.Configuration.IConfigurationStore)">
+            <summary>
+            Método para instalar
+            </summary>
+            <param name="container">Contenedor</param>
+            <param name="store">Store</param>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Aplicacion.Core.Installers.ControllersInstaller">
+            <summary>
+            Servicio de Instalador de aplicaciones
+            </summary>
+            <remarks>
+            Creación:   GMD 22122014 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.Installers.ControllersInstaller.Install(Castle.Windsor.IWindsorContainer,Castle.MicroKernel.SubSystems.Configuration.IConfigurationStore)">
+            <summary>
+            Método para instalar
+            </summary>
+            <param name="container">Contenedor</param>
+            <param name="store">Store</param>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Aplicacion.Core.Installers.DomainServiceInstaller">
+            <summary>
+            Servicio de Dominio Instalador
+            </summary>
+            <remarks>
+            Creación:   GMD 22122014 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.Installers.DomainServiceInstaller.Install(Castle.Windsor.IWindsorContainer,Castle.MicroKernel.SubSystems.Configuration.IConfigurationStore)">
+            <summary>
+            Método para instalar
+            </summary>
+            <param name="container">Contenedor</param>
+            <param name="store">Store</param>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Aplicacion.Core.Installers.EnvironmentInstaller">
+            <summary>
+            Instalador de Entorno
+            </summary>
+            <remarks>
+            Creación:   GMD 22122014 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.Installers.EnvironmentInstaller.Install(Castle.Windsor.IWindsorContainer,Castle.MicroKernel.SubSystems.Configuration.IConfigurationStore)">
+            <summary>
+            Instalación
+            </summary>
+            <param name="container">Contenedor</param>
+            <param name="store">Store</param>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Aplicacion.Core.Installers.LoggerInstaller">
+            <summary>
+            Instalador de Logger
+            </summary>
+            <remarks>
+            Creación:   GMD 22122014 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.Installers.LoggerInstaller.Install(Castle.Windsor.IWindsorContainer,Castle.MicroKernel.SubSystems.Configuration.IConfigurationStore)">
+            <summary>
+            Instalación
+            </summary>
+            <param name="container">Contenedor</param>
+            <param name="store">Store</param>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Aplicacion.Core.Installers.PersistenceInstaller">
+            <summary>
+            Instalador persistencia
+            </summary>
+            <remarks>
+            Creación:   GMD 22122014 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.Installers.PersistenceInstaller.Install(Castle.Windsor.IWindsorContainer,Castle.MicroKernel.SubSystems.Configuration.IConfigurationStore)">
+            <summary>
+            Instalación
+            </summary>
+            <param name="container">Contenedor</param>
+            <param name="store">Store</param>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Aplicacion.Core.Installers.RepositoriesInstaller">
+            <summary>
+            Instalador de repositorios
+            </summary>
+            <remarks>
+            Creación:   GMD 22122014 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.Installers.RepositoriesInstaller.Install(Castle.Windsor.IWindsorContainer,Castle.MicroKernel.SubSystems.Configuration.IConfigurationStore)">
+            <summary>
+            Instalación
+            </summary>
+            <param name="container">Contenedor</param>
+            <param name="store">Store</param>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Aplicacion.Core.Message.MensajesSistema">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.Core.Message.MensajesSistema.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.Core.Message.MensajesSistema.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.Core.Message.MensajesSistema.UnidadOperativaMatrizObligatorio">
+            <summary>
+              Looks up a localized string similar to La Empresa Matriz es obligatoria..
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.Core.Message.MensajesSistema.UOCIExiste">
+            <summary>
+              Looks up a localized string similar to Ya existe una Unidad Operativa con el mismo Código de Identificación ..
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.Core.Message.MensajesSistema.UONombreExiste">
+            <summary>
+              Looks up a localized string similar to &quot;Ya existe una Unidad Operativa con el mismo Nombre.&quot;.
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IParametroService">
+            <summary>
+            Definición del servicio de aplicación Parametro
+            </summary>
+            <remarks>
+            Creación:   GMD 22150326 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IParametroService.BuscarParametro(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroRequest)">
+            <summary>
+            Realiza la busqueda de Parametro
+            </summary>
+            <param name="filtro">Filtro de Parametro</param>
+            <returns>Listado de Parametro</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IParametroService.RegistrarParametro(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroRequest)">
+            <summary>
+            Realiza el registro de un de Parametro Valor
+            </summary>
+            <param name="filtro">Parametro Valor a Registrar</param>
+            <returns>Indicador de Error</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IParametroService.EliminarParametro(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroRequest)">
+            <summary>
+            Realiza la eliminación de un Parámetro
+            </summary>
+            <param name="filtro">Parametro Eliminar</param>
+            <returns>Indicador de Error</returns>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IParametroSeccionService">
+            <summary>
+            Definición del servicio de aplicación UnidadOperativaService
+            </summary>
+            <remarks>
+            Creación:   GMD 22150326 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IParametroSeccionService.BuscarParametroSeccion(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroSeccionRequest)">
+            <summary>
+            Realiza la busqueda de Parametro Valor
+            </summary>
+            <param name="filtro">Filtro de Parametro Valor</param>
+            <returns>Listado de unidad operativas encontrados</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IParametroSeccionService.RegistrarParametroSeccion(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroSeccionRequest)">
+            <summary>
+            Realiza el registro de un Parámetro Sección
+            </summary>
+            <param name="filtro">Parámetro Sección a Registrar</param>
+            <returns>Indicador de Error</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IParametroSeccionService.EliminarParametroSeccion(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroSeccionRequest,System.Boolean)">
+            <summary>
+            Realiza la eliminación de una sección de parámetro
+            </summary>
+            <param name="filtro">Sección a Eliminar</param>
+            <returns>Indicador de Error</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IParametroSeccionService.EliminarMasivoParametroSeccion(System.Collections.Generic.List{Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroSeccionRequest})">
+            <summary>
+            Realiza la eliminación masiva de secciones de parámetro
+            </summary>
+            <param name="filtro">Lista de secciones a Eliminar</param>
+            <returns>Indicador de Error</returns>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IParametroValorService">
+            <summary>
+            Definición del servicio de aplicación Parametro Valor Service
+            </summary>
+            <remarks>
+            Creación:   GMD 22150326 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IParametroValorService.BuscarParametroValor(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest)">
+            <summary>
+            Realiza la busqueda de Parametro Valor
+            </summary>
+            <param name="filtro">Filtro de Parametro Valor</param>
+            <returns>Listado de unidad operativas encontrados</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IParametroValorService.BuscarParametroValorDinamico(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest)">
+            <summary>
+            Realiza la busqueda de Parametro Valor
+            </summary>
+            <param name="filtro">Filtro de Parametro Valor</param>
+            <returns>Listado de unidad operativas encontrados</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IParametroValorService.RegistrarParametroValor(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest)">
+            <summary>
+            Realiza el registro de un de Parametro Valor
+            </summary>
+            <param name="filtro">Filtro de Parametro Valor</param>
+            <returns>Indicador de Error</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IParametroValorService.EliminarParametroValor(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest)">
+            <summary>
+            Realiza el eliminar de un de Parametro Valor
+            </summary>
+            <param name="filtro">Filtro de Parametro Valor</param>
+            <returns>Indicador de Error</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IParametroValorService.EliminarMasivoParametroValor(System.Collections.Generic.List{Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest})">
+            <summary>
+            Realiza el eliminar de un de Parametro Valor
+            </summary>
+            <param name="filtro">Lista de Parametro Valor a Eliminar</param>
+            <returns>Indicador de Error</returns>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPlantillaNotificacionService">
+            <summary>
+            Definición del servicio de aplicación Plantilla Notificacion Service
+            </summary>
+            <remarks>
+            Creación:   GMD 22150326 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPlantillaNotificacionService.BuscarPlantillaNotificacion(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.PlantillaNotificacionRequest)">
+            <summary>
+            Realiza la busqueda de Plantilla Notificación
+            </summary>
+            <param name="filtro">Parametros a buscar</param>
+            <returns>Lista de Plantillas de Notificación</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPlantillaNotificacionService.RegistrarPlantillaNotificacion(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.PlantillaNotificacionRequest)">
+            <summary>
+            Registra Plantilla de Notificación
+            </summary>
+            <param name="data">data</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService">
+            <summary>
+            Definición de servicios para Politica
+            </summary>
+            <remarks>
+            Creación:   GMD 20150617 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListarNivelUnidadOperativaDinamico(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest)">
+            <summary>
+            Método para lista el nivel de unidad operativa dinámico
+            </summary>
+            <param name="filtro">Filtro</param>        
+            <returns>Lista de nivel de unidad operativa</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListarNivelUnidadOperativa(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest,System.String)">
+            <summary>
+            Método para Listar el nivel de unidad operativa
+            </summary>
+            <param name="filtro">Filtro</param>
+            <param name="seccion">Sección</param>        
+            <returns>Lista de nivel de unidad operativa</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListarTipoUnidadOperativaDinamico(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest)">
+            <summary>
+            Método para listar el tipo de unidad operativa dinámico 
+            </summary>
+            <param name="filtro">Filtro</param>        
+            <returns>Lista de nivel de unidad operativa dinamica</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListarTipoUnidadOperativa(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest,System.String)">
+            <summary>
+            Método para listar de tipo unidad opeativa
+            </summary>
+            <param name="filtro">Filtro</param>
+            <param name="seccion">Sección</param>        
+            <returns>Lista tipo unidad operativa</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.BuscarTipoUnidadOperativaPorCodigoNivel(System.String)">
+            <summary>
+            Méotodo para buscar el tipo de unidad operativa por código de nivel
+            </summary>
+            <param name="codigoNivel">Código de nivel</param>    
+            <returns>Lista unidad operativa por codigo nivel</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListarTipoDocumentoIdentidadDinamico(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest)">
+            <summary>
+            Método para listar el tipo de documento de identidad dinámico
+            </summary>
+            <param name="filtro">Filtro</param>  
+            <returns>Lista de nivel de unidad operativa</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListarTipoDocumentoIdentidad(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest,System.String)">
+            <summary>
+            Método para lista el tipo de documento de identidad
+            </summary>
+            <param name="filtro">Filtro</param>
+            <param name="seccion">Sección</param>    
+            <returns>Lista tipo de documento identidad</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListarTipoArchivoDinamico(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest)">
+            <summary>
+            Método para lista el tipo de archivo dinámico
+            </summary>
+            <param name="filtro">Filtro</param>     
+            <returns>Lista de tipo de archivo dinamico</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListarTipoArchivo(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest,System.String)">
+            <summary>
+            Método para Listar detipo de archivo
+            </summary>
+            <param name="filtro">Filtro</param>
+            <param name="seccion">Sección</param>    
+            <returns>Lista de tipo de archivo</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListarFormaGeneracionDinamico(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest)">
+            <summary>
+            Méotodo para Listar la forma de generación dinámico
+            </summary>
+            <param name="filtro">Filtro</param>     
+            <returns>Lista de forma generacion dinamica</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListarFormaGeneracion(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest,System.String)">
+            <summary>
+            Método para listar la forma de gneración
+            </summary>
+            <param name="filtro">Filtro</param>
+            <param name="seccion">Sección</param>
+            <returns>Lista de forma de generación</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListarSistemasIntegracionDinamico(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest)">
+            <summary>
+            Método para listar de sistemas de integración dinámico
+            </summary>
+            <param name="filtro">Filtro</param>       
+            <returns>Lista de sistema integracion dinamico</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListarSistemasIntegracion(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest,System.String)">
+            <summary>
+            Método para Listar los sistemas de integración
+            </summary>
+            <param name="filtro">Filtro</param>
+            <param name="seccion">Sección</param>
+            <returns>Lista sistemas de integración</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListarOperacionIntegracionDinamico(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest)">
+            <summary>
+            Método para Listar operación de integración tipo dinámico
+            </summary>
+            <param name="filtro">Filtro</param>      
+            <returns>Lista operacion integracion dinamica</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListarOperacionIntegracion(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest,System.String)">
+            <summary>
+            Método para listar la operación
+            </summary>
+            <param name="filtro">Filtro</param>
+            <param name="seccion">Sección</param>
+            <returns>Lista con operacion</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.BuscarOperacionIntegracionPorCodigoFuenteIntegracion(System.String)">
+            <summary>
+            Método para buscar la operación 
+            </summary>
+            <param name="codigoFuenteIntegracion">Código de fuente de integración</param>
+            <returns>Lista operacion</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListarTipoEvidenciaDinamico(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest)">
+            <summary>
+            Método para listar el tipo de evidencia dínamico
+            </summary>
+            <param name="filtro">Filtro</param>        
+            <returns>Lista tipo evidencia dinamico</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListarTipoEvidencia(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest,System.String)">
+            <summary>
+            Método de Listar el tipo de Evidencia
+            </summary>
+            <param name="filtro">Filtro</param>
+            <param name="seccion">Sección</param>
+            <returns>Lista tipo evidencia</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListarTipoActividadDinamico(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest)">
+            <summary>
+            Método para listar el tipo de actividad dinamico
+            </summary>
+            <param name="filtro">Filtro</param>
+            <returns>Lista tipo actividad dinamica</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListarTipoActividad(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest,System.String)">
+            <summary>
+            Método para listar el tipo de actividad
+            </summary>
+            <param name="filtro">Filtro</param>
+            <param name="seccion">Sección</param>
+            <returns>Lista tipo actividad</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListarEstadoCalendarizacionDinamico(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest)">
+            <summary>
+            Método para listar de manera dinámica los Estados de Calendarización
+            </summary>
+            <param name="filtro">filtro de Parámetro Valor</param>
+            <returns>Lista estado calendarizacion dinamica</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListarEstadoCalendarizacion(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest,System.String)">
+            <summary>
+            Método para listar Código y Descripción de los Estados de Calendarización
+            </summary>
+            <param name="filtro">filtro de Parámetro Valor</param>
+            <param name="seccion">Sección a mostrar</param>
+            <returns>Lista estado calendarizacion</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListarEstadoActividadDinamico(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest)">
+            <summary>
+            Método para listar de manera dinámica los Estados de Actividades
+            </summary>
+            <param name="filtro">filtro de Parámetro Valor</param>
+            <returns>Lista estado actividad dinamica</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListarEstadoActividad(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest,System.String)">
+            <summary>
+            Método para listar Código y Descripción de los Estados de Actividades
+            </summary>
+            <param name="filtro">filtro de Parámetro Valor</param>
+            <param name="seccion">Sección a mostrar</param>
+            <returns>Lista estado actividad</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListarEstadoCumplimientoDinamico(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest)">
+            <summary>
+            Método para listar de manera dinámica los Estados de Cumplimiento de las Actividades
+            </summary>
+            <param name="filtro">filtro de Parámetro Valor</param>
+            <returns>Lista estado cumplimiento dinamico</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListarEstadoCumplimiento(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest,System.String)">
+            <summary>
+            Método para listar Código y Descripción de los Estados de Cumplimiento de las Actividades
+            </summary>
+            <param name="filtro">filtro de Parámetro Valor</param>
+            <param name="seccion">Sección a mostrar</param>
+            <returns>Lista estado de cumplimiento</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListarEstadoEvidenciaDinamico(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest)">
+            <summary>
+            Método para listar de manera dinámica los Estados de Evidencias
+            </summary>
+            <param name="filtro">filtro de Parámetro Valor</param>
+            <returns>Lista estado evidencia dinamico</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListarEstadoEvidencia(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest,System.String)">
+            <summary>
+            Método para listar Código y Descripción de los Estados de Evidencias
+            </summary>
+            <param name="filtro">filtro de Parámetro Valor</param>
+            <param name="seccion">Sección a mostrar</param>
+            <returns>Lista estado evidencia</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListarTipoContratoDinamico(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest)">
+            <summary>
+            Método para listar de manera dinámica los Tipos de Servicio.
+            </summary>
+            <param name="filtro">filtro de Parámetro Valor</param>
+            <returns>Lista tipo servicio dinamico</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListarTipoContrato(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest,System.String)">
+            <summary>
+            Método para listar Código y Descripción de los Tipos de Servicio.
+            </summary>
+            <param name="filtro">filtro de Parámetro Valor</param>
+            <param name="seccion">Sección a mostrar</param>
+            <returns>Lista tipo servicio</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListarTipoServicioDinamico(System.String,Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest)">
+            <summary>
+            Método para listar de manera dinámica los Tipos de Requerimiento.
+            </summary>
+            <param name="filtro">filtro de Parámetro Valor</param>
+            <returns>Lista con tipos de requerimientos</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListarTipoServicio(System.String,Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest,System.String)">
+            <summary>
+            Método para listar Código y Descripción de los Tipos de Requerimiento.
+            </summary>
+            <param name="filtro">filtro de Parámetro Valor</param>
+            <param name="seccion">Sección a mostrar</param>
+            <returns>Lista código y descripción de los tipos de requerimiento</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListarFormaContratoDinamico(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest)">
+            <summary>
+            Método para listar de manera dinámica las Formas de Contrato.
+            </summary>
+            <param name="filtro">filtro de Parámetro Valor</param>
+            <returns>Lista forma contrato dinamico</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListarFormaContrato(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest,System.String)">
+            <summary>
+            Método para listar Código y Descripción de las Formas de Contrato.
+            </summary>
+            <param name="filtro">filtro de Parámetro Valor</param>
+            <param name="seccion">Sección a mostrar</param>
+            <returns>Lista formato contrato</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListarDominioEmpresaDinamico(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest)">
+            <summary>
+            Método para listar de manera dinámica los Dominios de las empresas.
+            </summary>
+            <param name="filtro">filtro de Parámetro Valor</param>
+            <returns>Lista dominio de empresa de forma dinamica</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListarDominioEmpresa(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest,System.String)">
+            <summary>
+            Método para listar Código y Descripción de los Dominios de las empresas.
+            </summary>
+            <param name="filtro">filtro de Parámetro Valor</param>
+            <param name="seccion">Sección a mostrar</param>
+            <returns>Lista de dominios de empresa</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListarRepositorioSharePointDinamico(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest)">
+            <summary>
+            Método para listar de manera dinámica las Rutas de los Repositorios de SharePoint.
+            </summary>
+            <param name="filtro">filtro de Parámetro Valor</param>
+            <returns>Lista de repositorios de sharepoint de forma dinamica </returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListarRepositorioSharePoint(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest,System.String)">
+            <summary>
+            Método para listar Código y Descripción de las Rutas de los Repositorios de SharePoint.
+            </summary>
+            <param name="filtro">filtro de Parámetro Valor</param>
+            <param name="seccion">Sección a mostrar</param>
+            <returns>Lista de repositorios sharepoint</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListarTipoNotificacionContableDinamico(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest)">
+            <summary>
+            Método para listar de manera dinámica los Tipos de Notificación de SCC.
+            </summary>
+            <param name="filtro">filtro de Parámetro Valor</param>
+            <returns>Lista tipos de notificaciones contable de forma dinamica</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListarTipoNotificacionContable(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest,System.String)">
+            <summary>
+            Método para listar Código y Descripción de los Tipos de Notificación de SCC.
+            </summary>
+            <param name="filtro">filtro de Parámetro Valor</param>
+            <param name="seccion">Sección a mostrar</param>
+            <returns>Lista tipos de notificaciones contable</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListarConfiguracionSharePointDinamico(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest)">
+            <summary>
+            Método para listar de manera dinámica la configuraciones de SharePoint.
+            </summary>
+            <param name="filtro">filtro de Parámetro Valor</param>
+            <returns>Lista configuraciones de sharepoint de forma dinamica</returns> 
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListarConfiguracionSharePoint(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest,System.String)">
+            <summary>
+            Método para listar Código y Descripción de la configuraciones de SharePoint.
+            </summary>
+            <param name="filtro">filtro de Parámetro Valor</param>
+            <param name="seccion">Sección a mostrar</param>
+            <returns>Lista configuraciones de sharepoint</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListarCredencialesAccesoDinamico(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest)">
+            <summary>
+            Método para listar de manera dinámica Credenciales de Acceso.
+            </summary>
+            <param name="filtro">filtro de Parámetro Valor</param>
+            <returns>Lista credenciales de forma dinamica</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListarCredencialesAcceso(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest,System.String)">
+            <summary>
+            Método para listar Código y Descripción de las Credenciales de Acceso.
+            </summary>
+            <param name="filtro">filtro de Parámetro Valor</param>
+            <param name="seccion">Sección a mostrar</param>
+            <returns>Lista credenciales de acceso</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListarTipoDocumentoContratoDinamico(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest)">
+            <summary>
+            Método para listar de manera dinámica Tipos de Documentos de Contratos.
+            </summary>
+            <param name="filtro">Filtro de Parámetro Valor</param>
+            <returns>Lista tipos de documentos de contratos dinamicos</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListarTipoDocumentoContrato(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest,System.String)">
+            <summary>
+            Método para listar Código y Descripción de los Tipos de Documentos de Contratos.
+            </summary>
+            <param name="filtro">Filtro de Parámetro Valor</param>
+            <param name="seccion">Sección a mostrar</param>
+            <returns>Lista tipos de documento de contrato de forma dinamica</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListarEstadoVigenciaDinamico(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest)">
+            <summary>
+            Método para listar de manera dinámica Estados de Vigencia.
+            </summary>
+            <param name="filtro">Filtro de Parámetro Valor</param>
+            <returns>Lista estado de vigencia de forma dinamica</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListarEstadoVigencia(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest,System.String)">
+            <summary>
+            Método para listar Código y Descripción de los Estados de Vigencia.
+            </summary>
+            <param name="filtro">Filtro de Parámetro Valor</param>
+            <param name="seccion">Sección a mostrar</param>
+            <returns>Lista estado de vigencia</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListarTipoRespuestaObservacionDinamico(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest)">
+            <summary>
+            ListarTipoRespuestaObservacionDinamico: método dinámico para listar Tipos de Respuesta de Observacion
+            </summary>
+            <param name="filtro">filtro de Parámetro Valor</param>
+            <returns>Lista tipo de respuesta de observación de forma dinamica</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListarTipoRespuestaObservacion(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest,System.String)">
+            <summary>
+            ListarTipoRespuestaObservacion: método para listar Tipos de Respuesta de Observacion
+            </summary>
+            <param name="filtro"> filtro de Parámetro Valor  </param>
+            <param name="seccion"> por defecto la sección 2, se puede cambiar de valor caso sea necesario. </param>
+            <returns>Lista tipo de respuesta de observación</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListarMontoMinimoControlDinamico(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest)">
+            <summary>
+            ListarMontoMinimoControlDinamico: método dinámico para listar los montos mínimos del control de flujo de aprobación.
+            </summary>
+            <param name="filtro">filtro de Parámetro Valor</param>
+            <returns>Lista Monto minimo del control de flujo de aprobación</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListarMontoMinimoControl(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest,System.String)">
+            <summary>
+            ListarMontoMinimoControl: método para listar los montos mínimos del control de flujo de aprobación.
+            </summary>
+            <param name="filtro"> filtro de Parámetro Valor  </param>
+            <param name="seccion"> por defecto la sección 2, se puede cambiar de valor caso sea necesario. </param>
+            <returns>Lista monto minimo de control</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListarEstadoContratoDinamico(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest)">
+            <summary>
+            Método para listar de manera dinámica Estados de Contrato.
+            </summary>
+            <param name="filtro">Filtro de Parámetro Valor</param>
+            <returns>Lista estados de contrato de manera dinamica</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListarEstadoContrato(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest,System.String)">
+            <summary>
+            Método para listar Código y Descripción de los Estados de Contrato.
+            </summary>
+            <param name="filtro">Filtro de Parámetro Valor</param>
+            <param name="seccion">Sección a mostrar</param>
+            <returns>Lista de estado de contrato</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListarEstadoEdicionDinamico(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest)">
+            <summary>
+            Método para listar de manera dinámica Estados de Edición.
+            </summary>
+            <param name="filtro">Filtro de Parámetro Valor</param>
+            <returns>Lista con estados de edicion de forma dinamica</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListarEstadoEdicion(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest,System.String)">
+            <summary>
+            Método para listar Código y Descripción de los Estados de Edición.
+            </summary>
+            <param name="filtro">Filtro de Parámetro Valor</param>
+            <param name="seccion">Sección a mostrar</param>
+            <returns>Lista de estados de edición</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListarMonedaDinamico(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest)">
+            <summary>
+            Método para listar de manera dinámica Moneda.
+            </summary>
+            <param name="filtro">Filtro de Parámetro Valor</param>
+            <returns>Lista moneda de manera dinamica</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListarMoneda(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest,System.String)">
+            <summary>
+            Método para listar Código y Descripción de la Moneda.
+            </summary>
+            <param name="filtro">Filtro de Parámetro Valor</param>
+            <param name="seccion">Sección a mostrar</param>
+            <returns>Lista codigo y descripcion de moneda</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListarRepositorioSharePointDinamicoSGC(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest)">
+            <summary>
+            Método para listar de manera dinámica las Rutas de los Repositorios de SharePoint de SGC.
+            </summary>
+            <param name="filtro">filtro de Parámetro Valor</param>
+            <returns>Lista rutas de repositorios de sharepoint de forma dinamica</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListarRepositorioSharePointSGC(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest,System.String)">
+            <summary>
+            Método para listar Código y Descripción de las Rutas de los Repositorios de SharePoint de SGC.
+            </summary>
+            <param name="filtro">filtro de Parámetro Valor</param>
+            <param name="seccion">Sección a mostrar</param>
+            <returns>Lista codigo y descripcion de rutas de repositorio sharepoint</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListarAlertaVencimientoContratoDinamico(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest)">
+            <summary>
+            ListarAlertaVencimientoContratoDinamico: método dinámico para listar Alertas de Vencimiento de Contrato
+            </summary>
+            <param name="filtro">Filtro de Parámetro Valor</param>
+            <returns>Lista dinámica de Alertas con vencimientos de contrato</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListarAlertaVencimientoContrato(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest,System.String)">
+            <summary>
+            ListarAlertaVencimientoContrato: método que lista Alertas de Vencimiento de Contrato
+            </summary>
+            <param name="filtro">Filtro de Parámetro Valor</param>
+            <param name="seccion">Por defecto la sección 2, se puede cambiar de valor caso sea necesario.</param>
+            <returns>Lista de Alertas con vencimientos de contrato</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListarTipoOrdenDinamico(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest)">
+            <summary>
+            ListarTipoOrdenDinamico: método dinámico para listar Tipo de Orden
+            </summary>
+            <param name="filtro">Filtro de Parámetro Valor</param>
+            <returns>Lista dinámica de Tipo Orden</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListarTipoOrden(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest,System.String)">
+            <summary>
+            ListarTipoOrden: método que lista Tipo Orden
+            </summary>
+            <param name="filtro">Filtro de Parámetro Valor</param>
+            <param name="seccion">Por defecto la sección 2, se puede cambiar de valor caso sea necesario.</param>
+            <returns>Lista de Tipo Orden</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListarMontoAcumuladoParaContratoDinamico(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest)">
+            <summary>
+            ListarMontoAcumuladoParaContratoDinamico: método dinámico para listar Monto Acumulado para contrato
+            </summary>
+            <param name="filtro">Filtro de Parámetro Valor</param>
+            <returns>Lista dinámica de monto acumulado para contrato</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListarMontoAcumuladoParaContrato(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest,System.String)">
+            <summary>
+            ListarMontoAcumuladoParaContrato: método que lista los Montos acumulados para contrato
+            </summary>
+            <param name="filtro">Filtro de Parámetro Valor</param>
+            <param name="seccion">Por defecto la sección 2, se puede cambiar de valor caso sea necesario.</param>
+            <returns>Lista de monto acumulado para contrato</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListaCuentaNotificacionSGC(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest,System.String)">
+            <summary>
+            ListaCuentaNotificacionSGC: método que lista las configuraciones de cuenta de correo
+            </summary>
+            <param name="filtro">Filtro de Parámetro Valor</param>
+            <param name="seccion">Por defecto la sección 2, se puede cambiar de valor caso sea necesario.</param>
+            <returns>Lista de Cuenta de Notificacion SGC</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListaCuentaNotificacionSGCDinamico(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest)">
+            <summary>
+            ListaCuentaNotificacionSGCDinamico: método dinámico que lista las configuraciones de cuenta de correo
+            </summary>
+            <param name="filtro">Filtro de Parámetro Valor</param>
+            <returns>Lista dinámica de Cuenta de Notificacion SGC</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListaCuentaNotificacionSCC(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest,System.String)">
+            <summary>
+            ListaCuentaNotificacionSCC: método que lista las configuraciones de cuenta de correo
+            </summary>
+            <param name="filtro">Filtro de Parámetro Valor</param>
+            <param name="seccion">Por defecto la sección 2, se puede cambiar de valor caso sea necesario.</param>
+            <returns>Lista de Cuenta de Notificacion SGC</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListaCuentaNotificacionSCCDinamico(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest)">
+            <summary>
+            ListaCuentaNotificacionSCCDinamico: método dinámico que lista las configuraciones de cuenta de correo
+            </summary>
+            <param name="filtro">Filtro de Parámetro Valor</param>
+            <returns>Lista dinámica de Cuenta de Notificacion SGC</returns>
+        </member>
+        <!-- El comentario XML con formato incorrecto se ha omitido para el miembro "M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListaUrlSistemas(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest,System.String)" -->
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListaUrlSistemasDinamico(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest)">
+            <summary>
+            ListaUrlSistemasDinamico: método dinámico que lista las URL de los sistemas
+            </summary>
+            <param name="filtro">Filtro de Parámetro Valor</param>
+            <returns>Lista dinámica de URLS de los Sistemas</returns>
+        </member>
+        <!-- El comentario XML con formato incorrecto se ha omitido para el miembro "M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListaTipoTarifaBien(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest,System.String)" -->
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListaTipoTarifaBienDinamico(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest)">
+            <summary>
+            ListaTipoTarifaBienDinamico: método dinámico que lista los Tipos de Tarifa de un bien.
+            </summary>
+            <param name="filtro">Filtro de Parámetro Valor</param>
+            <returns>Lista dinámica de URLS de los Sistemas</returns>
+        </member>
+        <!-- El comentario XML con formato incorrecto se ha omitido para el miembro "M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListaPeriodoAlquilerBien(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest,System.String)" -->
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListaPeriodoAlquilerDinamico(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest)">
+            <summary>
+            ListaPeriodoAlquilerDinamico: método dinámico que lista los periodos de alquiler de un bien.
+            </summary>
+            <param name="filtro">Filtro de Parámetro Valor</param>
+            <returns>Lista los periodos de alquiler de un bien</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListaTipoBien(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest,System.String)">
+            <summary>
+            ListaTipoBien: método que lista los tipos de un bien.
+            </summary>
+            <param name="filtro">Filtro de Parámetro Valor</param>
+            <param name="seccion">Por defecto la sección 2, se puede cambiar de valor caso sea necesario.</param>
+            <returns>Lista los tipos de un bien</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListaTipoBienDinamico(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest)">
+            <summary>
+            ListaTipoBienDinamico: método dinámico que lista los tipos de un bien.
+            </summary>
+            <param name="filtro">Filtro de Parámetro Valor</param>
+            <returns>Lista los tipos de un bien</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListaConfiguracionGeneracionContrato(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest)">
+            <summary>
+            ListaConfiguracionGeneracionContrato: método dinámico que lista las configuraciones en la generación de contratos.
+            </summary>
+            <param name="filtro">Filtro de Parámetro Valor</param>
+            <returns>Lista dinámica de configuraciones en la generación de Contratos.</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListaValor(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest)">
+            <summary>
+            ListaConfiguracionGeneracionContrato: método dinámico que lista los valores.
+            </summary>
+            <param name="filtro">Filtro de Parámetro Valor</param>
+            <returns>Lista dinámica de valores.</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListarTipoConsultaDinamico(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest)">
+            <summary>
+            ListarTipoConsultaDinamico: método dinámico para listar Jerarquías de Tipo de consulta
+            </summary>
+            <param name="filtro">filtro de Parámetro Valor</param>
+            <returns>Lista Dinamica Tipo Consulta</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListarTipoConsulta(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest,System.String)">
+            <summary>
+            ListarTipoConsulta: método para listar tipo de consulta
+            </summary>
+            <param name="filtro"> filtro de Parámetro Valor  </param>
+            <param name="seccion"> por defecto la sección 2, se puede cambiar de valor caso sea necesario. </param>
+            <returns>Lista Unidad Operativa</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListarAreaDinamico(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest)">
+            <summary>
+            ListarAreaDinamico: método dinámico para listar las áreas
+            </summary>
+            <param name="filtro">filtro de Parámetro Valor</param>
+            <returns>Lista Dinamica área</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListarArea(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest,System.String)">
+            <summary>
+            ListarArea: método para listar áreas
+            </summary>
+            <param name="filtro"> filtro de Parámetro Valor  </param>
+            <param name="seccion"> por defecto la sección 2, se puede cambiar de valor caso sea necesario. </param>
+            <returns>Lista Unidad Operativa</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListarEstadoConsultaDinamico(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest)">
+            <summary>
+            ListarEstadoConsultaDinamico: método dinámico para listar los estados de consulta
+            </summary>
+            <param name="filtro">filtro de Parámetro Valor</param>
+            <returns>Lista Dinamica área</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IPoliticaService.ListarEstadoConsulta(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest,System.String)">
+            <summary>
+            ListarEstadoConsulta: método para listar los estados de consulta
+            </summary>
+            <param name="filtro"> filtro de Parámetro Valor  </param>
+            <param name="seccion"> por defecto la sección 2, se puede cambiar de valor caso sea necesario. </param>
+            <returns>Lista Unidad Operativa</returns>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.ITrabajadorService">
+            <summary>
+            Definición de servicios para Trabajador
+            </summary>
+            <remarks>
+            Creación:   GMD 20150327 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.ITrabajadorService.BuscarTrabajador(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.TrabajadorRequest)">
+            <summary>
+            Búsqueda de Trabajador
+            </summary>
+            <param name="filtro">Trabajador Request</param>
+            <returns>Lista con registros</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.ITrabajadorService.ListarTrabajadores(System.Collections.Generic.List{System.Nullable{System.Guid}})">
+            <summary>
+            Lista registros de trabajadores a partir de códigos.
+            </summary>
+            <param name="listaCodigos">Lista de códigos de trabajadores</param>
+            <returns>Listas de trabajadores</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.ITrabajadorService.RegistrarTrabajador(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.TrabajadorRequest)">
+            <summary>
+            Registrar Trabajador
+            </summary>
+            <param name="data">Trabajador Response</param>
+            <returns>Identificador con resultado</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.ITrabajadorService.EliminarTrabajador(System.Collections.Generic.List{Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.TrabajadorRequest})">
+            <summary>
+            Eliminar el registro de trabajadores.
+            </summary>
+            <param name="listaTrabajadores">Lista de trabajadores</param>
+            <returns>Resultado de la operación</returns>
+            <returns>Identificador con resultado</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.ITrabajadorService.BuscarTrabajadorDatoMinimo(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.TrabajadorRequest)">
+            <summary>
+            Búsqueda de Trabajador
+            </summary>
+            <param name="filtro">Trabajador Request</param>
+            <returns>Lista con registros</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.ITrabajadorService.BuscarFirmaTrabajador(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.TrabajadorRequest)">
+            <summary>
+            Búsqueda de la firma de un Trabajador.
+            </summary>
+            <param name="trabajador">Trabajador Request</param>
+            <returns>Lista con Firma Trabajador</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.ITrabajadorService.RegistrarFirmaTrabajador(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.TrabajadorRequest)">
+            <summary>
+            Registrar la firma de un Trabajador.
+            </summary>
+            <param name="trabajador">Trabajador Request</param>
+            <returns>Identificador con resultado</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.ITrabajadorService.NotificaParticipanteCalendarizacion(System.Collections.Generic.List{System.Nullable{System.Guid}},System.String,System.String,System.String,System.String,System.Guid,System.String)">
+            <summary>
+            Notificar inicios y cierres de periodo.
+            </summary>
+            <param name="listaTrabajadores">Lista de trabajaores</param>
+            <param name="CodigoNotificar">tipo de notificacion</param>
+            <param name="AnioPeriodo">Anio de Periodo</param>
+            <param name="MesPeriodo"> Mes del Periodo </param>
+            <param name="codigoSistema">Código del sistema</param>
+            <param name="profileCorreo">Perfil de la cuenta que ejecuta la notificación.</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.ITrabajadorService.RegistrarTrabajadorUnidadOperativa(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.TrabajadorRequest)">
+            <summary>
+            Registrar TrabajadorUnidadOperativa
+            </summary>
+            <param name="data">Trabajador Response</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.ITrabajadorService.ListarTrabajadorUnidadOperativa(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.TrabajadorUnidadOperativaRequest)">
+            <summary>
+            Lista los proyectos asociados a un trabajador.
+            </summary>
+            <param name="codigoTrabajador">Código de trabajador</param>
+            <returns>Lista de proyectos asociados</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.ITrabajadorService.EliminarTrabajadorUnidadOperativa(System.Guid)">
+            <summary>
+            Eliminar trabajador unidad operativa
+            </summary>
+            <param name="codigoTrabajadorUnidadOperativa">CodigoTrabajadorUnidadOperativa</param>
+            <returns>Resultado del registro</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.ITrabajadorService.BuscarTrabajadorSuplente(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.TrabajadorRequest)">
+            <summary>
+            Búsqueda de TrabajadorSuplente
+            </summary>
+            <param name="filtro">Trabajador Request</param>
+            <returns>Lista con resultados de busqueda</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.ITrabajadorService.RegistrarTrabajadorSuplente(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.TrabajadorSuplenteRequest)">
+            <summary>
+            Registrar Trabajador Suplente
+            </summary>
+            <param name="data">TrabajadorSuplente Response</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.ITrabajadorService.EnviarNotificacionFinReemplazo(System.Guid,System.Guid)">
+            <summary>
+            Actualiza el reemplazo al trabajador original
+            </summary>
+            <param name="codigoTrabajador">Codigo de trabajador</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IUnidadOperativaService">
+            <summary>
+            Definición del servicio de aplicación UnidadOperativaService
+            </summary>
+            <remarks>
+            Creación:   GMD 22150326 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IUnidadOperativaService.BuscarUnidadOperativa(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.FiltroUnidadOperativa)">
+            <summary>
+            Realiza la busqueda de unidades operativas
+            </summary>
+            <param name="filtro">Filtro</param>
+            <returns>Listado de Unidad Operativa</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IUnidadOperativaService.BuscarUnidadOperativaProyectoPorEmpresaMatriz(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.FiltroUnidadOperativa)">
+            <summary>
+            Realiza la busqueda de unidades operativas de nivel proyecto por Empresa Matriz
+            </summary>
+            <param name="filtro">Filtro de búsqueda</param>
+            <returns>Listado de Unidad Operativa de nivel proyecto por Empresa Matriz</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IUnidadOperativaService.ListarUnidadesOperativas(System.Collections.Generic.List{System.Nullable{System.Guid}})">
+            <summary>
+            Lista registros de Unidades Operativas a partir de códigos.
+            </summary>
+            <param name="listaCodigos">Lista de códigos de Unidades Operativas</param>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IUnidadOperativaService.ListarUnidadesOperativasPorResponsable(System.String)">
+            <summary>
+            Lista las Unidades Operativas por persona responsable.
+            </summary>
+            <param name="loginResponsable">Código de Identificación del Responsable</param>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IUnidadOperativaService.BuscarUnidadOperativaNivelSuperior(System.String)">
+            <summary>
+            Lista las unidades operativas de un nivel superior al indicado como parámetro.
+            </summary>
+            <param name="codigoNivelUnidadOperativa">Codigo de Nivel de la Unidad Operativa</param>
+            <returns>Listado de unidad operativas encontrados</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IUnidadOperativaService.RegistrarUnidadOperativa(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.DataUnidadOperativaRequest)">
+            <summary>
+            Realiza la insercion de la unidad operativa
+            </summary>
+            <param name="data">Data</param>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IUnidadOperativaService.EliminarUnidadOperativa(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.DataUnidadOperativaRequest)">
+            <summary>
+            Eliminar el registro de la unidad operativa
+            </summary>
+            <param name="entidad">Filtro</param>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IUnidadOperativaService.EliminarUnidadesOperativas(System.Collections.Generic.List{System.String})">
+            <summary>
+            Método para eliminar masivamente Unidades Operativas.
+            </summary>
+            <param name="listaCodigos">Lista de Códigos de Unidades Operativas</param>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IUnidadOperativaService.BuscarUnidadOperativaStaff(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.FiltroUnidadOperativa)">
+            <summary>
+            Realiza la busqueda de unidades operativas staff
+            </summary>
+            <param name="nombre">Nombre entidad buscar</param>
+            <returns>Listado de unidad operativas encontrados</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IUnidadOperativaService.RegistrarUnidadOperativaStaff(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.DataUnidadOperativaStaffRequest)">
+            <summary>
+            Registra una unidad operativa staff
+            </summary>
+            <param name="data">Parámetros de Búsqueda</param>
+            <returns>Resultado del Proceso</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IUnidadOperativaService.EliminarUnidadOperativaStaff(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.DataUnidadOperativaStaffRequest)">
+            <summary>
+            Eliminar staff de unidad operativa
+            </summary>
+            <param name="data">Datos de equipo de unidad operativa</param>
+            <returns></returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IUnidadOperativaService.ObtenerUnidadOperativaPorNivelSuperior(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.FiltroUnidadOperativa)">
+            <summary>
+            Obtener la unidad operativa superior de un nivel específico
+            </summary>
+            <param name="filtro">Obtener código de Unidad Operativa y nivel</param>      
+            <returns>Unidad operativa matriz o superior</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IUnidadOperativaService.RegistrarUnidadOperativaUsuarioConsulta(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.DataUnidadOperativaUsuarioConsultaRequest)">
+            <summary>
+            Registra el usuario de consulta de la unidad operativa
+            </summary>
+            <param name="data">Parámetros de Búsqueda</param>
+            <returns>Resultado del Proceso</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IUnidadOperativaService.EliminarUnidadOperativaUsuarioConsulta(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.DataUnidadOperativaUsuarioConsultaRequest)">
+            <summary>
+            Método para eliminar el usuario de consulta de la Unidad Operativa
+            </summary>
+            <param name="filtro">Datos de la unidad operativa usuario consulta</param>
+            <returns>Resultado de la Operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IUnidadOperativaService.BuscarUsuariosConsultaUnidadOperativa(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.FiltroUnidadOperativa)">
+            <summary>
+            Realiza la búsqueda de los usuarios de consulta de la Unidad Operativa
+            </summary>
+            <param name="filtro">Código de la Unidad Operativa</param>
+            <returns>Listado de usuarios de consulta</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IUnidadOperativaService.ObtenerResponsablesUnidadOperativaPorNivel(System.String,System.String)">
+            <summary>
+            Obtener los responsables por unidad operativa y sus niveles superiores
+            </summary>
+            <param name="codigoUnidadOperativa">Código de la unidad operativa</param>
+            <param name="nombreUnidadOperativa">Nombre de la unidad operativa</param>
+            <returns>Unidades y responsables de niveles superiores</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Core.ServiceContract.IUnidadOperativaService.ListarUnidadesOperativasConsultaPorTrabajador(System.Guid)">
+            <summary>
+            Obtener las unidades operativas para consulta de un trabajador
+            </summary>
+            <param name="codigoTrabajador">Código del trabajador</param>
+            <returns>Listado de unidades operativas</returns>
+        </member>
+    </members>
+</doc>

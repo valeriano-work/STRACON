@@ -1,0 +1,41 @@
+﻿@using Pe.Stracon.SGC.Presentacion.Recursos.Base
+@using Pe.Stracon.SGC.Presentacion.Recursos.Contractual
+@model Pe.Stracon.SGC.Presentacion.Core.ViewModel.Contractual.ListadoContrato.ContratoParrafoBienFormulario
+
+<script type="text/javascript">
+    @{
+        System.Web.Script.Serialization.JavaScriptSerializer ser = new System.Web.Script.Serialization.JavaScriptSerializer();
+        ser.MaxJsonLength = Int32.MaxValue; 
+        var jsonBien = ser.Serialize(Model);
+    }
+    ns('Pe.Stracon.SGC.Presentacion.Contractual.ListadoContrato.FormularioContratoParrafoBien.Models')
+    Pe.Stracon.SGC.Presentacion.Contractual.ListadoContrato.FormularioContratoParrafoBien.Models.FormularioContratoParrafoBien = @Html.Raw(jsonBien)
+</script>
+
+<div id="divContenedorContratoParrafoBien">
+    <form id="frmContratoParrafoBien">
+        <div class="row">
+            <div class="col-sm-1">
+                <div class="form-group">
+                    <label for="txtFrmBien">@BienesResource.EtiquetaBien</label>
+                </div>
+            </div>
+            <div class="col-sm-9">
+                <div class="form-group">
+                    @Html.TextBox("txtFrmBien", null, new { @class = "form-control", @id = "txtFrmBien", @validable = "required ValidarBien", maxlength = "50"  })
+                </div>
+            </div>
+            <div class="col-sm-2 text-right">
+                <button id="btnAgregrarContratoParrafoBien" class="btn btn-default" type="button">@GenericoResource.BotonAñadir</button>
+            </div>
+        </div>
+        <br />
+        <br />
+        <div id="divGrdResultContratoParrafoBien">
+        </div>
+    </form>
+    <div class="comp-Modal-footer">
+        <button class="btn btn-default" id="btnCancelarContratoParrafoBien">@GenericoResource.BotonCancelar</button>
+        <button class="btn btn-primary" id="btnAceptarContratoParrafoBien">@GenericoResource.BotonAceptar</button>
+    </div>
+</div>

@@ -1,0 +1,56 @@
+﻿@using Pe.Stracon.Politicas.Presentacion.Recursos.Base
+@using Pe.Stracon.Politicas.Presentacion.Recursos.General
+@model Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.PlantillaNotificacion.PlantillaNotificacionFormulario
+<form id="frmAgregarrPlantillaNotificacion">
+    <input type="hidden" id="hdnCodigoPlantillaNotificacion" value="@Model.plantillaNotificacionResponse.CodigoPlantillaNotificacion" />
+    <input type="hidden" id="hdnCodigoSistema" value="@Model.plantillaNotificacionResponse.CodigoSistema" />
+    <input type="hidden" id="hdnCodigoTipoNotificacion" value="@Model.plantillaNotificacionResponse.CodigoTipoNotificacion" />
+    <input type="hidden" id="hdnCodigoTipoDestinatario" value="@Model.plantillaNotificacionResponse.CodigoTipoDestinatario" />
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="txtFrmAsunto">@PlantillaNotificacionResource.EtiquetaAsunto</label>
+                @Html.TextBox("txtFrmAsunto", @Model.plantillaNotificacionResponse.Asunto , new { @class="form-control", @id="txtFrmAsunto"})
+            </div>
+        </div>
+        <div class="col-sm-6 hidden">
+            <div class="form-group">
+                <label for="chkFrmPlantillaActiva">@PlantillaNotificacionResource.EtiquetaPlantillaActiva</label>
+                <div>@Html.CheckBox("chkFrmPlantillaActiva", @Model.plantillaNotificacionResponse.IndicadorActiva, new{ @id="chkFrmPlantillaActiva" })</div>
+            </div>
+        </div>
+    </div>
+    @if (Model.plantillaNotificacionResponse.CodigoTipoDestinatario == "S")
+    {
+        @Html.Raw("<div class='row hidden'>")
+    }
+    else
+    {
+        @Html.Raw("<div class='row'>")
+    }
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="txtFrmAsunto">@PlantillaNotificacionResource.EtiquetaDestinatario</label>
+                @Html.TextBox("txtFrmDestinatario", @Model.plantillaNotificacionResponse.Destinatario , new { @class="form-control", @id="txtFrmDestinatario"})
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="chkFrmPlantillaActiva">@PlantillaNotificacionResource.EtiquetaDestinatarioCopia</label>
+                @Html.TextBox("txtFrmDestinatarioCopia", @Model.plantillaNotificacionResponse.DestinatarioCopia, new{ @class="form-control", @id="txtFrmDestinatarioCopia" })
+            </div>
+        </div>
+    @Html.Raw("</div>")
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="form-group">
+                <label for="txtFrmContenido">@PlantillaNotificacionResource.EtiquetaContenido</label>
+                @Html.TextArea("txtFrmContenido", @Model.plantillaNotificacionResponse.Contenido , new { @class="form-control area-notificacion", @id="txtFrmContenido"})
+            </div>
+        </div>
+    </div>
+</form>
+<div class="comp-Modal-footer">
+    <button class="btn btn-default" id="btnFrmFlujoCancelar">@GenericoResource.BotonCancelar</button>
+    <button class="btn btn-primary" id="btnFrmFlujoGrabar">@GenericoResource.BotonGrabar</button>
+</div>

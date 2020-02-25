@@ -1,0 +1,160 @@
+﻿@using Pe.Stracon.SGC.Presentacion.Recursos.Base
+@using Pe.Stracon.SGC.Presentacion.Recursos.Contractual
+@using Pe.Stracon.SGC.Presentacion.Recursos.Mensajes
+@using Pe.Stracon.SGC.Presentacion.Core.Helpers
+@using Pe.Stracon.SGC.Infraestructura.Core.Context
+@{
+    List<SelectListItem> listaTipoConsulta = ViewBag.ListaTipoConsulta;
+    List<SelectListItem> listaArea = ViewBag.ListArea;
+    List<SelectListItem> listaEstadoConsulta = ViewBag.ListEstadoConsulta;
+    List<SelectListItem> listUnidadOperativa = ViewBag.ListUnidadOperativa;
+    var disabled = (ViewBag.ControlPermisos.ControlTotal || ViewBag.ControlPermisos.Escritura) ? false : true;
+}
+
+<div class="GmdBody-header">
+    <h2>Bandeja de Consultas</h2>
+</div>
+<div class="GmdBody-body">
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="form-group">
+                <label>@BandejaContratoResource.EtiquetaRemitente</label>
+                @Html.TextBox("txtRemitente", null, new { @class = "form-control", @id = "txtRemitente" })
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="form-group">
+                <label>@BandejaContratoResource.EtiquetaDestinatario</label>
+                @Html.TextBox("txtDestinatario", null, new { @class = "form-control", @id = "txtDestinatario" })
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="form-group">
+                <label>@BandejaContratoResource.EtiquetaTipoConsulta</label>
+                @Html.DropDownList("slcTipoConsulta", listaTipoConsulta, new { @class = "form-control", @id = "slcTipoConsulta" })
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="form-group">
+                <label>@ConsultaResource.EtiquetaUnidadOperativa</label>
+                @Html.DropDownList("slcUnidadOperativaConsulta", listUnidadOperativa.OrderBy(x => x.Text), new { @class = "form-control", @id = "slcUnidadOperativaConsulta" })
+            </div>
+        </div>
+    </div>
+     <div class="row">
+        <div class="col-sm-3">
+            <div class="form-group">
+                <label>@ConsultaResource.EtiquetaArea</label>
+                @Html.DropDownList("slcAreaConsulta", listaArea, new { @class = "form-control", @id = "slcAreaConsulta" })
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="form-group">
+                <label>@ConsultaResource.EtiquetaEstado</label>
+                @Html.DropDownList("slcEstadoConsulta", listaEstadoConsulta, new { @class = "form-control", @id = "slcEstadoConsulta" })
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-10">
+            <div class="form-group">
+                <button class="btn btn-info" id="btnLimpiarBandejaConsulta" type="reset">@GenericoResource.BotonLimpiar</button>
+                <button class="btn btn-default" id="btnBuscarBandejaConsulta">@GenericoResource.BotonMostrar</button>
+            </div>
+        </div>
+        <div class="col-sm-2 text-right">
+            <div class="form-group">
+                @if (!disabled)
+                {
+                    <button class="btn btn-primary" id="btnAgregarConsulta">@GenericoResource.BotonAñadir</button>
+                }
+            </div>
+        </div>
+    </div>
+    <hr />
+    <div class="row">
+        <div class="col-sm-6 text-left">
+            <div class="form-group">
+                <h3>@GenericoResource.EtiquetaResultadosBusqueda</h3>
+            </div>
+        </div>
+    </div>
+    <div id="divGrdResult">
+    </div>
+</div>
+@section scripts
+{
+    <script type="text/javascript">
+        ns('Pe.Stracon.SGC.Presentacion.Contractual.Consulta.Actions')
+        Pe.Stracon.SGC.Presentacion.Contractual.Consulta.Actions.BandejaIndex = '@Url.Action("Index", "Consulta", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.Consulta.Actions.BuscarConsulta = '@Url.Action("BuscarConsulta", "Consulta", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.Consulta.Actions.FormularioConsulta = '@Url.Action("FormularioConsulta", "Consulta", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.Consulta.Actions.FormularioResponderConsulta = '@Url.Action("FormularioResponderConsulta", "Consulta", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.Consulta.Actions.RegistrarConsulta = '@Url.Action("RegistrarConsulta", "Consulta", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.Consulta.Actions.FormularioReenviarConsulta = '@Url.Action("FormularioReenviarConsulta", "Consulta", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.Consulta.Actions.ReenviarConsulta = '@Url.Action("ReenviarConsulta", "Consulta", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.Consulta.Actions.EliminarConsulta = '@Url.Action("EliminarConsulta", "Consulta", new { Area = "Contractual" })';
+
+        Pe.Stracon.SGC.Presentacion.Contractual.Consulta.Actions.FormularioCargaAdjunto = '@Url.Action("FormularioCargaAdjunto", "Consulta", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.Consulta.Actions.RegistrarArchivoAdjunto = '@Url.Action("RegistrarConsultaAdjunto", "Consulta", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.Consulta.Actions.EliminarArchivoAdjunto = '@Url.Action("EliminarArchivoAdjunto", "Consulta", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.Consulta.Actions.DescargarArchivoAdjunto = '@Url.Action("DescargarArchivoAdjunto", "Consulta", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.Consulta.Actions.BuscarArchivoAdjunto = '@Url.Action("BuscarArchivoAdjunto", "Consulta", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.Consulta.Actions.BuscarTrabajadorUO = '@Url.Action("BuscarTrabajadorUO", "Consulta", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.Consulta.Actions.CargarArchivoAdjunto = '@Url.Action("CargarArchivoAdjunto", "Consulta", new { Area = "Contractual" })';
+
+        ns('Pe.Stracon.SGC.Presentacion.Contractual.BandejaContrato.Mensaje')
+        @*Pe.Stracon.SCC.Presentacion.Contable.ActividadUnidadOperativa.MensajeMensajeSeleccionarNivel = '@Html.Raw(ActividadUnidadOperativaResource.MensajeSeleccionarNivel)';*@
+
+        ns('Pe.Stracon.SGC.Presentacion.Contractual.Consulta.Resources')
+        Pe.Stracon.SGC.Presentacion.Contractual.Consulta.Resources.GridRemitente = '@Html.Raw(BandejaContratoResource.EtiquetaRemitente)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Consulta.Resources.GridDestinatario = '@Html.Raw(BandejaContratoResource.EtiquetaDestinatario)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Consulta.Resources.GridTipo = '@Html.Raw(BandejaContratoResource.EtiquetaTipoConsulta)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Consulta.Resources.GridAsunto = '@Html.Raw(ConsultaResource.GridAsunto)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Consulta.Resources.GridEstado = '@Html.Raw(ConsultaResource.GridEstado)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Consulta.Resources.GridFechaEnvio = '@Html.Raw(ConsultaResource.GridFechaEnvio)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Consulta.Resources.GridDiaSinEnvio = '@Html.Raw(ConsultaResource.GridDiaSinEnvio)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Consulta.Resources.GridAcciones = '@Html.Raw(GenericoResource.GridAcciones)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Consulta.Resources.EtiquetaTituloConsulta = '@Html.Raw(ConsultaResource.EtiquetaTitulo)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Consulta.Resources.TituloEliminar = '@Html.Raw(ListadoContratoResource.EtiquetaDlgTituloEliminar)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Consulta.Resources.ConfirmacionEliminacionRegistro = '@Html.Raw(MensajeResource.ConfirmacionEliminacion)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Consulta.Resources.TituloEliminar = '@Html.Raw(ArchivoAdjuntoContratoResource.EtiquetaDlgTituloEliminar)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Consulta.Resources.ConfirmacionEliminacionRegistro = '@Html.Raw(MensajeResource.ConfirmacionEliminacion)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Consulta.Resources.GridNombreArchivo = '@ArchivoAdjuntoContratoResource.EtiquetaNombreArchivo';
+        Pe.Stracon.SGC.Presentacion.Contractual.Consulta.Resources.GridAcciones = '@Html.Raw(GenericoResource.GridAcciones)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Consulta.Resources.EtiquetaTituloResponderConsulta = '@Html.Raw(ConsultaResource.EtiquetaTituloResponder)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Consulta.Resources.EtiquetaTituloReenviarConsulta = '@Html.Raw(ConsultaResource.EtiquetaTituloReenviar)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Consulta.Resources.EtiquetaVisualizarConsulta = '@Html.Raw(ConsultaResource.EtiquetaVisualizarConsulta)';
+
+        ns('Pe.Stracon.SGC.Presentacion.Recursos.Validacion')
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.SeleccionarRegistroEliminar = '@Html.Raw(MensajeResource.SeleccionarRegistroEliminar)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ConfirmacionGuardar = '@Html.Raw(MensajeResource.ConfirmacionGuardar)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.EtiquetaConfirmacion = '@MensajeResource.SeGuardoInformacionExito';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarDestinatario = '@Html.Raw(BandejaContratoResource.EtiquetaDestinatario)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarTipoConsulta = '@Html.Raw(BandejaContratoResource.EtiquetaTipoConsulta)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarAsunto = '@Html.Raw(ConsultaResource.GridAsunto)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarContenido = '@Html.Raw(ConsultaResource.EtiquetaContenido)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarRespuesta = '@Html.Raw(ConsultaResource.EtiquetaRespuesta)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarAdicional = '@Html.Raw(ConsultaResource.EtiquetaAdicional)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarReenviarA = '@Html.Raw(ConsultaResource.EtiquetaReenviarA)';
+
+        ns('Pe.Stracon.SGC.Presentacion.Contractual.Consulta.Variables')
+        Pe.Stracon.SGC.Presentacion.Contractual.Consulta.Variables.ControlPermisos = @(Html.Raw(Json.Encode(ViewBag.ControlPermisos)));
+
+        ns('Pe.Stracon.SGC.Presentacion.Contractual.Consulta.Enumerados.EstadoConsulta')
+        Pe.Stracon.SGC.Presentacion.Contractual.Consulta.Enumerados.EstadoConsulta.Enviado = '@DatosConstantes.EstadoConsulta.Enviado';
+        Pe.Stracon.SGC.Presentacion.Contractual.Consulta.Enumerados.EstadoConsulta.Reenviado = '@DatosConstantes.EstadoConsulta.Reenviado';
+        Pe.Stracon.SGC.Presentacion.Contractual.Consulta.Enumerados.EstadoConsulta.Contestado = '@DatosConstantes.EstadoConsulta.Contestado';
+        Pe.Stracon.SGC.Presentacion.Contractual.Consulta.Enumerados.EstadoConsulta.NoAplica = '@DatosConstantes.EstadoConsulta.NoAplica';
+
+        ns('Pe.Stracon.SGC.Presentacion.Contractual.Consulta.Enumerados.TipoUsuario')
+        Pe.Stracon.SGC.Presentacion.Contractual.Consulta.Enumerados.TipoUsuario.Destinatario = '@DatosConstantes.TipoUsuario.Destinatario';
+        Pe.Stracon.SGC.Presentacion.Contractual.Consulta.Enumerados.TipoUsuario.Remitente = '@DatosConstantes.TipoUsuario.Remitente';
+
+    </script>
+    @CustomHtmlHelper.RenderViewJs("contractualconsultaformularioconsulta")
+    @CustomHtmlHelper.RenderViewJs("contractualconsultaformularioresponderconsulta")
+    @CustomHtmlHelper.RenderViewJs("contractualconsultaformularioreenviarconsulta")
+    @CustomHtmlHelper.RenderViewJs("contractualconsultaformulariocargaadjunto")
+}
+

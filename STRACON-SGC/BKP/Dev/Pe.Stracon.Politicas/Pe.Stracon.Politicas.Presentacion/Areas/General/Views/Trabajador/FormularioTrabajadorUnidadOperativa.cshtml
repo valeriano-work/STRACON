@@ -1,0 +1,65 @@
+﻿@using Pe.Stracon.Politicas.Presentacion.Recursos.Base
+@using Pe.Stracon.Politicas.Presentacion.Recursos.General
+@using Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes
+@using Pe.Stracon.Politicas.Infraestructura.Core.Context
+
+@model Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.Trabajador.TrabajadorUnidadOperativaModel
+<form id="frmTrabajadorUnidadOperativaRegistro">
+    @Html.Hidden("hdnCodigoTrabajador", Model.Trabajador.CodigoTrabajador, new { id = "hdnCodigoTrabajador" })
+    @Html.Hidden("hdnNombreTrabajador", Model.Trabajador.NombreCompleto, new { id = "hdnNombreTrabajador" })
+    @Html.Hidden("hdnCodigoUnidadOperativaMatriz", Model.Trabajador.CodigoUnidadOperativaMatriz, new { id = "hdnCodigoUnidadOperativaMatriz" })
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="form-group">
+                <label>@TrabajadorResource.EtiquetaEmpresaMatriz</label>
+                @Html.DropDownList("slcFrmUnidadOperativaMatriz", Model.UnidadOperativaMatriz, new { @class = "form-control", @id = "slcFrmUnidadOperativaMatriz", @validable = "required ValidarEmpresaMatriz" })
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="form-group">
+                <div class="col-sm-12">
+                    <label>
+                        @TrabajadorResource.EtiquetaTodosLosProyectos
+                    </label>
+                </div>
+                <div align="center" class="col-sm-6">
+                    <input type="radio" value="true" name="radioTodoProyecto" @Html.Raw((Model.Trabajador.IndicadorTodaUnidadOperativa) ? "checked" : string.Empty)>@TrabajadorResource.EtiquetaSi
+                </div>
+                <div align="center" class="col-sm-6">
+                    <input type="radio" value="false" name="radioTodoProyecto" @Html.Raw((!Model.Trabajador.IndicadorTodaUnidadOperativa) ? "checked" : string.Empty)>@TrabajadorResource.EtiquetaNo
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-5">
+            <div class="form-group">
+                <label>
+                    @TrabajadorResource.EtiquetaProyecto
+                </label>
+                @if (Model.Trabajador.IndicadorTodaUnidadOperativa)
+                {
+                    @Html.DropDownList("slcFrmUnidadOperativa", Model.UnidadOperativa, new { @class = "form-control", @id = "slcFrmUnidadOperativa", @validable = "required ValidarUnidadOperativa", @disabled = "disabled" });
+                }
+                else
+                {
+                    @Html.DropDownList("slcFrmUnidadOperativa", Model.UnidadOperativa, new { @class = "form-control", @id = "slcFrmUnidadOperativa", @validable = "required ValidarUnidadOperativa" });
+                }
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 text-left">
+            <button class="btn btn-primary" id="btnGrabarRegistroUnidadOperativa">@GenericoResource.BotonGrabar</button>
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-sm-12">
+            <div id="divGrdResultUnidadOperativa" @Html.Raw((Model.Trabajador.IndicadorTodaUnidadOperativa) ? "style=display:none" : string.Empty)></div>
+        </div>
+    </div>
+
+</form>
+<div class="comp-Modal-footer">
+    <button class="btn btn-default" id="btnCancelarRegistroUnidadOperativa">@GenericoResource.BotonCerrar</button>
+</div>

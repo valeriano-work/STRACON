@@ -1,0 +1,116 @@
+﻿@using Pe.Stracon.SGC.Presentacion.Recursos.Base
+@using Pe.Stracon.SGC.Presentacion.Recursos.Contractual
+@using Pe.Stracon.SGC.Presentacion.Recursos.Mensajes
+@using Pe.Stracon.SGC.Presentacion.Core.Helpers
+@model Pe.Stracon.SGC.Presentacion.Core.ViewModel.Contractual.ProcesoAuditoria.ProcesoAuditoriaBusqueda
+
+@{
+    var disabled = (Model.ControlPermisos.ControlTotal || Model.ControlPermisos.Escritura) ? false : true;
+    var disabledEliminar = (Model.ControlPermisos.ControlTotal) ? false : true;
+}
+
+<div class="GmdBody-header">
+    <h2>@ProcesoAuditoriaResource.EtiquetaTituloPrincipal</h2>
+</div>
+<div class="GmdBody-body">
+    <form id="frmBandejaProcesoAuditoria">
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label for="slcUnidadOperativa">@ProcesoAuditoriaResource.EtiquetaUnidadOperativa</label>
+                    @Html.DropDownList("slcUnidadOperativa", @Model.UnidadOperativa , new { @class = "form-control", @id = "slcUnidadOperativa" })
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label for="txtGeneradosDesde">@ProcesoAuditoriaResource.EtiquetaAuditoriaPlanificadasDesde</label>
+                    <div class="input-group">
+                        @Html.TextBox("txtGeneradosDesde", null, new { @class = "form-control", @id = "txtGeneradosDesde" })
+                        <div class="input-group-addon"><span class="fa fa-calendar"></span></div>                        
+                    </div>                    
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label for="txtGeneradosHasta">@ProcesoAuditoriaResource.EtiquetaAuditoriaPlanificadasHasta</label>
+                    <div class="input-group">
+                        @Html.TextBox("txtGeneradosHasta", null, new { @class = "form-control", @id = "txtGeneradosHasta" })
+                        <div class="input-group-addon"><span class="fa fa-calendar"></span></div>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="form-group">
+                <button class="btn btn-info" id="btnLimpiar" type="reset">@GenericoResource.BotonLimpiar</button>
+                <button class="btn btn-default" id="btnBuscar">@GenericoResource.BotonMostrar</button>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <div class="row">
+        <div class="col-sm-6 text-left">
+            <div class="form-group">
+                <h3>@GenericoResource.EtiquetaResultadosBusqueda</h3>
+            </div>
+        </div>
+        <div class="col-sm-6 text-right">
+            <div class="form-group">
+                 @if (!disabledEliminar)
+                 {
+                <button id="btnEliminarSeleccionado" class="btn btn-info">@GenericoResource.BotonEliminar</button>
+                 }
+                 @if(!disabled){
+                <button id="btnAgregar" class="btn btn-primary">@GenericoResource.BotonAñadir</button>
+                 }
+            </div>
+        </div>
+    </div>
+    <div id="divGrdResult">
+    </div>
+</div>
+@section scripts
+{
+    <script type="text/javascript">
+        ns('Pe.Stracon.SGC.Presentacion.Contractual.ProcesoAuditoria.Actions')
+        Pe.Stracon.SGC.Presentacion.Contractual.ProcesoAuditoria.Actions.BuscarBandejaProcesoAuditoria = '@Url.Action("BuscarBandejaProcesoAuditoria", "ProcesoAuditoria", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.ProcesoAuditoria.Actions.FormularioProcesoAuditoria = '@Url.Action("FormularioProcesoAuditoria", "ProcesoAuditoria", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.ProcesoAuditoria.Actions.EliminarProcesoAuditoria = '@Url.Action("EliminarProcesoAuditoria", "ProcesoAuditoria", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.ProcesoAuditoria.Actions.RegistrarProcesoAuditoria = '@Url.Action("RegistrarProcesoAuditoria", "ProcesoAuditoria", new { Area = "Contractual" })';
+
+        ns('Pe.Stracon.SGC.Presentacion.Contractual.ProcesoAuditoria.Mensaje')
+        @*Pe.Stracon.SCC.Presentacion.Contable.ActividadUnidadOperativa.MensajeMensajeSeleccionarNivel = '@Html.Raw(ActividadUnidadOperativaResource.MensajeSeleccionarNivel)';*@
+
+        ns('Pe.Stracon.SGC.Presentacion.Contractual.ProcesoAuditoria.Resources')
+        Pe.Stracon.SGC.Presentacion.Contractual.ProcesoAuditoria.Resources.GridUnidadOperativa = '@Html.Raw(ProcesoAuditoriaResource.GridUnidadOperativa)';
+        Pe.Stracon.SGC.Presentacion.Contractual.ProcesoAuditoria.Resources.GridFechaPlanificada = '@Html.Raw(ProcesoAuditoriaResource.GridFechaPlanificada)';
+        Pe.Stracon.SGC.Presentacion.Contractual.ProcesoAuditoria.Resources.GridFechaEjecucion = '@Html.Raw(ProcesoAuditoriaResource.GridFechaEjecucion)';
+        Pe.Stracon.SGC.Presentacion.Contractual.ProcesoAuditoria.Resources.GridCantidadOrdenesAuditadas = '@Html.Raw(ProcesoAuditoriaResource.GridCantidadOrdenesAuditadas)';
+        Pe.Stracon.SGC.Presentacion.Contractual.ProcesoAuditoria.Resources.GridCantidadOrdenesObservadas = '@Html.Raw(ProcesoAuditoriaResource.GridCantidadOrdenesObservadas)';
+        Pe.Stracon.SGC.Presentacion.Contractual.ProcesoAuditoria.Resources.GridResultados = '@Html.Raw(ProcesoAuditoriaResource.GridResultados)';
+        
+        Pe.Stracon.SGC.Presentacion.Contractual.ProcesoAuditoria.Resources.EtiquetaFormularioNuevoProcesoAuditoria = '@Html.Raw(ProcesoAuditoriaResource.EtiquetaFormularioNuevoProcesoAuditoria)';
+        Pe.Stracon.SGC.Presentacion.Contractual.ProcesoAuditoria.Resources.EtiquetaTituloConfirmar = '@Html.Raw(GenericoResource.EtiquetaTituloConfirmar)';
+        Pe.Stracon.SGC.Presentacion.Contractual.ProcesoAuditoria.Resources.EtiquetaTituloAdvertencia = '@Html.Raw(MensajeResource.EtiquetaTituloAdvertencia)';
+
+        ns('Pe.Stracon.SGC.Presentacion.Recursos.Validacion')
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ConfirmacionGuardar = '@Html.Raw(MensajeResource.ConfirmacionGuardar)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.EtiquetaConfirmacion = '@MensajeResource.SeGuardoInformacionExito';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ConfirmacionEliminacion = '@MensajeResource.ConfirmacionEliminacion';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.EtiquetaTituloAdvertencia = '@Html.Raw(MensajeResource.EtiquetaTituloAdvertencia)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.EtiquetaTituloConfirmar = '@Html.Raw(GenericoResource.EtiquetaTituloConfirmar)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.SeleccionarRegistroEliminar = '@Html.Raw(MensajeResource.SeleccionarRegistroEliminar)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.MsgEliminacionList = '@Html.Raw(MensajeResource.MsgEliminacionList)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.EtiquetaEliminacionExitosa = '@Html.Raw(MensajeResource.SeEliminoInformacionExito)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarUnidadOperativa = '@Html.Raw(FlujoAprobacionResource.EtiquetaUnidadOperativa)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarFechaPlanificada = '@Html.Raw(ProcesoAuditoriaResource.EtiquetaFechaPlanificada)';
+
+
+        ns('Pe.Stracon.SGC.Presentacion.Contractual.ProcesoAuditoria.Models')
+        Pe.Stracon.SGC.Presentacion.Contractual.ProcesoAuditoria.Models.Index = @(Html.Raw(Json.Encode(Model)));
+    </script>
+    @CustomHtmlHelper.RenderViewJs("contractualprocesoauditoriaformularioprocesoauditoria")
+}
+

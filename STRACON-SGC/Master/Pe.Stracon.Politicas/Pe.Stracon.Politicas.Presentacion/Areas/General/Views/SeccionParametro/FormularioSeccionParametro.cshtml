@@ -1,0 +1,77 @@
+﻿@using Pe.Stracon.Politicas.Presentacion.Core.Helpers
+@using Pe.Stracon.Politicas.Presentacion.Recursos.Base
+@using Pe.Stracon.Politicas.Presentacion.Recursos.General
+@model Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.SeccionParametro.SeccionParametroModel
+
+<form id="frmSeccionParametroGuardar">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label>@SeccionParametroResource.EtiquetaNombreSeccion</label>                
+                @Html.TextBox("txtNombreFormulario", Model.SeccionParametro.Nombre, new { id = "txtNombreFormulario", @type = "text", @class = "form-control", @maxlength = "255", @validable = "required ValidarNombreSeccion" })                
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label>@SeccionParametroResource.EtiquetaTipoDato</label>         
+                 @Html.DropDownList("slcTipoDatoFormulario", Model.ListaTipoDato, new { id = "slcTipoDatoFormulario", @class = "form-control", @validable = "required ValidarTipoDato" })
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label>@SeccionParametroResource.EtiquetaPermiteModificar</label>
+                <div>
+                    @Html.CheckBox("chkPermiteModificarFormulario", Model.SeccionParametro.IndicadorPermiteModificar, new { id = "chkPermiteModificarFormulario" })   
+                </div>             
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label>@SeccionParametroResource.EtiquetaObligatorio</label>
+                <div>
+                    @Html.CheckBox("chkObligatorioFormulario", Model.SeccionParametro.IndicadorObligatorio, new { id = "chkObligatorioFormulario" }) 
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label>@SeccionParametroResource.EtiquetaParametroRelacionado</label>
+                @Html.DropDownList("slcParametroRelacionadoFormulario", Model.ListaParametroRelacionado, new { id = "slcParametroRelacionadoFormulario", @class = "form-control" })
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label>@SeccionParametroResource.EtiquetaSeccionRelacionada</label>
+                @Html.DropDownList("slcSeccionRelacionadaFormulario", Model.ListaSeccionRelacionada, new { id = "slcSeccionRelacionadaFormulario", @class = "form-control" })
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label>@SeccionParametroResource.EtiquetaSeccionRelacionadaVisible</label>
+                @Html.DropDownList("slcSeccionRelacionadaVisibleFormulario", Model.ListaSeccionRelacionadaVisible, new { id = "slcSeccionRelacionadaVisibleFormulario", @class = "form-control" })
+            </div>
+        </div>        
+    </div>
+    <div class="row">
+    </div>
+</form>
+<div class="comp-Modal-footer">
+    <button class="btn btn-default" id="btnCancelar">@GenericoResource.BotonCancelar</button>
+    <button class="btn btn-primary" id="btnGrabar">@GenericoResource.BotonGrabar</button>
+</div>
+
+<script type="text/javascript">
+    ns('Pe.Stracon.Politicas.Presentacion.General.SeccionParametro.Resources.Validacion')
+    Pe.Stracon.Politicas.Presentacion.General.SeccionParametro.Resources.Validacion.ValidarTipoDato = '@SeccionParametroResource.EtiquetaTipoDato';
+    Pe.Stracon.Politicas.Presentacion.General.SeccionParametro.Resources.Validacion.ValidarNombreSeccion = '@SeccionParametroResource.EtiquetaNombreSeccion';
+    Pe.Stracon.Politicas.Presentacion.General.SeccionParametro.Resources.Validacion.ValidarSeccionRelacionada = '@SeccionParametroResource.EtiquetaSeccionRelacionada';
+    Pe.Stracon.Politicas.Presentacion.General.SeccionParametro.Resources.Validacion.ValidarSeccionRelacionadaVisible = '@SeccionParametroResource.EtiquetaSeccionRelacionadaVisible';
+    Pe.Stracon.Politicas.Presentacion.General.SeccionParametro.Resources.Validacion.ValidarNombreSeccionRepetido = '@SeccionParametroResource.EtiquetaNombreSeccionRepetido';
+</script>
+@CustomHtmlHelper.RenderViewJs()

@@ -1,0 +1,96 @@
+﻿@using Pe.Stracon.SGC.Presentacion.Recursos.Base
+@using Pe.Stracon.SGC.Presentacion.Recursos.Contractual
+@using Pe.Stracon.SGC.Presentacion.Recursos.Mensajes
+@using Pe.Stracon.SGC.Infraestructura.Core.Context
+@using Pe.Stracon.SGC.Presentacion.Core.Helpers
+@model Pe.Stracon.SGC.Presentacion.Core.ViewModel.Contractual.ArchivoAdjuntoContratoResolucion.ArchivoAdjuntoContratoResolucionFormulario
+@{
+    Layout = null;
+    var disabled = (Model.ControlPermisos.ControlTotal || Model.ControlPermisos.Escritura) ? false : true;
+}
+<style>
+</style>
+@if (Model.Contrato.CodigoEstadoContrato == DatosConstantes.EstadoContrato.Resuelto || Model.Contrato.CodigoEstadoContrato == DatosConstantes.EstadoContrato.Vigente)
+{
+    int capacidad = Model.Contrato.ValidacionResolucion;
+    if (!disabled)
+    {
+        if (capacidad == DatosConstantes.TipoValidacionContratoResolucion.Cumple_Carga) //Se carga archivo
+        {
+            <div class="row">
+                <div class="col-sm-8">
+                    <input id="uploadFile" type="text" class="form-control" placeholder="Buscar Archivo ..." readonly="readonly" />
+                </div>
+                <div class="col-sm-4">
+                    <div id="fileInput" class="fileUpload btn btn-primary">
+                        <span>@GenericoResource.BotonSeleccionar</span>
+                        <input type="file" name="MyFile" id="MyFile" class="upload" />
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="txtFechaResolucion">@ArchivoAdjuntoContratoResolucionResource.EtiquetaFechaResolucion</label>
+                        <div class="input-group">
+                            @Html.TextBox("txtFechaResolucion", null, new { @class = "form-control", @id = "txtFechaResolucion" })
+                            <div class="input-group-addon"><span class="fa fa-calendar"></span></div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <br />
+                    <div class="form-group">
+                        <button id="btnAceptarCargaArchivoAdjunto" class="btn btn-default">@GenericoResource.BotonAceptar</button>
+                    </div>
+                </div>
+            </div>
+            <hr />
+        }
+        else if (capacidad == DatosConstantes.TipoValidacionContratoResolucion.Cargado_Modo_Lectura) // se cargo anteriormente, modo lectura
+        {
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="txtFechaResolucion">@ArchivoAdjuntoContratoResolucionResource.EtiquetaFechaResolucion</label>
+                        <div class="input-group">
+                            @Html.TextBox("txtFechaResolucion", Model.Contrato.FechaResolucionString, new { disabled, @class = "form-control", @id = "txtFechaResolucion" })
+                            <div class="input-group-addon"><span class="fa fa-calendar"></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr />
+        }
+    }
+}
+<div class="row">
+    <div class="col-sm-12">
+        <div id="divGrdResultAdjuntos"></div>
+    </div>
+</div>
+<div class="comp-Modal-footer">
+    <button id="btnCerrarCargaArchivoAdjunto" class="btn btn-default">@GenericoResource.BotonCerrar</button>
+</div>
+<script type="text/javascript">
+    ns('Pe.Stracon.SGC.Presentacion.Contractual.ArchivoAdjuntoContratoResolucion.Actions')
+    Pe.Stracon.SGC.Presentacion.Contractual.ArchivoAdjuntoContratoResolucion.Actions.BuscarArchivoAdjuntoResolucion = '@Url.Action("BuscarArchivoAdjuntoResolucion", "ArchivoAdjuntoContratoResolucion", new { Area = "Contractual" })';
+
+    ns('Pe.Stracon.SGC.Presentacion.Contractual.ArchivoAdjuntoContratoResolucion.Resources')
+    Pe.Stracon.SGC.Presentacion.Contractual.ArchivoAdjuntoContratoResolucion.Resources.TituloEliminar = '@Html.Raw(ArchivoAdjuntoContratoResolucionResource.EtiquetaDlgTituloEliminar)';
+    Pe.Stracon.SGC.Presentacion.Contractual.ArchivoAdjuntoContratoResolucion.Resources.ConfirmacionEliminacionRegistro = '@Html.Raw(MensajeResource.ConfirmacionEliminacion)';
+    Pe.Stracon.SGC.Presentacion.Contractual.ArchivoAdjuntoContratoResolucion.Resources.GridNombreArchivo = '@ArchivoAdjuntoContratoResolucionResource.EtiquetaNombreArchivo';
+    Pe.Stracon.SGC.Presentacion.Contractual.ArchivoAdjuntoContratoResolucion.Resources.GridFechaResolucion = '@ArchivoAdjuntoContratoResolucionResource.EtiquetaFechaResolucion';
+    Pe.Stracon.SGC.Presentacion.Contractual.ArchivoAdjuntoContratoResolucion.Resources.GridUsuarioResponsable = '@ArchivoAdjuntoContratoResolucionResource.EtiquetaUsuarioResponsable';
+    Pe.Stracon.SGC.Presentacion.Contractual.ArchivoAdjuntoContratoResolucion.Resources.GridAcciones = '@Html.Raw(GenericoResource.GridAcciones)';
+
+    ns('Pe.Stracon.SGC.Presentacion.Recursos.Validacion')
+    Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarRegistroAdjunto = '@Html.Raw(ArchivoAdjuntoContratoResolucionResource.EtiquetaValidarRegistroAdjunto)';
+    Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarEliminacionAdjunto = '@Html.Raw(ArchivoAdjuntoContratoResolucionResource.EtiquetaValidarEliminacionAdjunto)';
+
+    ns('Pe.Stracon.SGC.Presentacion.Contractual.ArchivoAdjuntoContratoResolucion.Models')
+    Pe.Stracon.SGC.Presentacion.Contractual.ArchivoAdjuntoContratoResolucion.Models.FormularioCargaAdjuntoContratoResolucion = @(Html.Raw(Json.Encode(Model)));
+
+</script>

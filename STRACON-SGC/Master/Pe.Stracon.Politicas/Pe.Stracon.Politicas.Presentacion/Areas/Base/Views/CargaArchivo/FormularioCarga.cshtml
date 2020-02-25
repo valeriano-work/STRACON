@@ -1,0 +1,38 @@
+﻿@{
+    Layout = null;
+}
+<style>
+.fileUpload {
+    position: relative;
+    overflow: hidden;
+}
+
+.fileUpload input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+</style>
+<form id="fmrCargarArchivo">
+    <div class="row">
+        <div class="col-sm-9">
+            <input id="uploadFile" type="text" class="form-control" placeholder="Buscar Archivo ..." readonly="readonly" />
+        </div>
+        <div>
+            <div id="fileInput" class="fileUpload btn btn-primary">
+                <span>Seleccionar</span>
+                <input type="file" name="MyFile" id="MyFile" class="upload" />
+            </div>
+        </div>
+    </div>
+</form>
+<div class="comp-Modal-footer">
+    <button id="btnAceptarCargaArchivo" class="btn btn-default">Aceptar</button>
+    <button id="btnCancelar" class="btn btn-primary">Cancelar</button>
+</div>

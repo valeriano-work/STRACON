@@ -1,0 +1,28 @@
+﻿@using Pe.Stracon.SGC.Presentacion.Recursos.Base
+@using Pe.Stracon.SGC.Presentacion.Recursos.Contractual
+@model Pe.Stracon.SGC.Presentacion.Core.ViewModel.Contractual.VariablePlantilla.VariablePlantillaListaFormulario
+
+<form id="frmVariablePlantillaLista">
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="form-group">
+                <input id="hdnCodigoVariable" type="hidden" value="@Model.VariableLista.CodigoVariable" />
+                <input id="hdnCodigoVariableLista" type="hidden" value="@Model.VariableLista.CodigoVariableLista" />
+                <label for="txtFrmNombre">@VariablePlantillaResource.EtiquetaNombre</label>
+                @Html.TextBox("txtFrmNombre", @Model.VariableLista.Nombre, new { @class = "form-control", @id = "txtFrmNombre", @validable = "required ValidarNombre" })
+            </div>
+        </div>
+        <div class="col-sm-8">
+            <div class="form-group">
+                <label for="txtFrmDescripcion">@VariablePlantillaResource.GridDescripcion</label>
+                @Html.TextBox("txtFrmDescripcion", @Model.VariableLista.Descripcion, new { @class = "form-control", @id = "txtFrmDescripcion", @validable = "required ValidarDescripcion" })
+            </div>
+        </div>
+    </div>
+</form>
+
+<div class="comp-Modal-footer">
+    <button class="btn btn-default" id="btnFrmVariablePlantillaListaCancelar">@GenericoResource.BotonCancelar</button>
+    <button class="btn btn-primary" id="btnFrmVariablePlantillaListaGrabar">@GenericoResource.BotonGrabar</button>
+</div>
+

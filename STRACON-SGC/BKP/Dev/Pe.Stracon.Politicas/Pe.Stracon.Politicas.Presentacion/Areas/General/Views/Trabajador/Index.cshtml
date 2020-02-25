@@ -1,0 +1,162 @@
+﻿@using Pe.Stracon.Politicas.Presentacion.Recursos.Base
+@using Pe.Stracon.Politicas.Presentacion.Recursos.General
+@using Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes
+@using Pe.Stracon.Politicas.Presentacion.Core.Helpers
+@using Pe.Stracon.Politicas.Infraestructura.Core.Context
+
+@model Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.Trabajador.TrabajadorModel
+
+@{
+    var disabled = (Model.ControlPermisos.ControlTotal || Model.ControlPermisos.Escritura) ? false : true;
+    var disabledEliminar = (Model.ControlPermisos.ControlTotal) ? false : true;
+}
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="GmdBody-header">
+    <h2>@TrabajadorResource.EtiquetaTituloPrincipal</h2>
+</div>
+<div class="GmdBody-body">
+    <form id="frmTrabajadorBusqueda">
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label>
+                        @TrabajadorResource.EtiquetaCodigoIdentificacion
+                    </label>
+                    <input id="txtCodigoIdentificacion" class="form-control" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label>
+                        @TrabajadorResource.EtiquetaCodigoTipoDocumento
+                    </label>
+                    @Html.DropDownList("slcCodigoTipoDocumento", Model.CodigoTipoDocumentoIdentidad, new { id = "slcCodigoTipoDocumento", @class = "form-control" })
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label>
+                        @TrabajadorResource.EtiquetaNumeroDocumentoIdentidad
+                    </label>
+                    <input id="txtNumeroDocumentoIdentidad" class="form-control" maxlength="15" />
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label>
+                        @TrabajadorResource.EtiquetaNombres
+                    </label>
+                    <input id="txtNombres" class="form-control" type="text" />
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <button id="btnLimpiar" class="btn btn-info" type="reset">@GenericoResource.BotonLimpiar</button>
+                <button id="btnBuscar" class="btn btn-default" type="button">@GenericoResource.BotonMostrar</button>
+                <hr />
+            </div>
+        </div>
+    </form>
+    <div class="row">
+        <div class="col-sm-6">
+            <h3>@GenericoResource.EtiquetaResultadosBusqueda</h3>
+        </div>
+        <div class="col-sm-6" align="right">
+            @if (!disabledEliminar)
+            {
+                <button id="btnEliminar" class="btn btn-info">@GenericoResource.BotonEliminar</button>
+            }
+            @if (!disabled)
+            {
+                
+                <button id="btnAgregar" class="btn btn-primary">@GenericoResource.BotonAñadir</button>
+            }
+        </div>
+    </div>
+    <div id="divGrdResult">
+    </div>
+</div>
+
+@section scripts
+{
+    <script type="text/javascript">
+        ns('Pe.Stracon.Politicas.Presentacion.General.Trabajador.Actions')
+        Pe.Stracon.Politicas.Presentacion.General.Trabajador.Actions.FormularioTrabajador = '@Url.Action("FormularioTrabajador", "Trabajador", new { Area = "General" })';
+        Pe.Stracon.Politicas.Presentacion.General.Trabajador.Actions.Buscar = '@Url.Action("Buscar", "Trabajador", new { Area = "General" })';
+        Pe.Stracon.Politicas.Presentacion.General.Trabajador.Actions.Registrar = '@Url.Action("Registrar", "Trabajador", new { Area = "General" })';
+        Pe.Stracon.Politicas.Presentacion.General.Trabajador.Actions.Eliminar = '@Url.Action("Eliminar", "Trabajador", new { Area = "General" })';
+        Pe.Stracon.Politicas.Presentacion.General.Trabajador.Actions.RegistrarValidar = '@Url.Action("RegistrarValidar", "Trabajador", new { Area = "General" })';
+        Pe.Stracon.Politicas.Presentacion.General.Trabajador.Actions.CargarFirmaTrabajador = '@Url.Action("CargarFirmaTrabajador", "Trabajador", new { Area = "General" })';
+        Pe.Stracon.Politicas.Presentacion.General.Trabajador.Actions.VerFirmaTrabajador = '@Url.Action("VerFirmaTrabajador", "Trabajador", new { Area = "General" })';
+        Pe.Stracon.Politicas.Presentacion.General.Trabajador.Actions.FormularioTrabajadorUnidadOperativa = '@Url.Action("FormularioTrabajadorUnidadOperativa", "Trabajador", new { Area = "General" })';
+        Pe.Stracon.Politicas.Presentacion.General.Trabajador.Actions.RegistrarTrabajadorUnidadOperativa = '@Url.Action("RegistrarTrabajadorUnidadOperativa", "Trabajador", new { Area = "General" })';
+        Pe.Stracon.Politicas.Presentacion.General.Trabajador.Actions.EliminarTrabajadorUnidadOperativa = '@Url.Action("EliminarTrabajadorUnidadOperativa", "Trabajador", new { Area = "General" })';
+        Pe.Stracon.Politicas.Presentacion.General.Trabajador.Actions.BuscarTrabajadorUnidadOperativa = '@Url.Action("BuscarTrabajadorUnidadOperativa", "Trabajador", new { Area = "General" })';
+        Pe.Stracon.Politicas.Presentacion.General.Trabajador.Actions.FormularioTrabajadorSuplente = '@Url.Action("FormularioTrabajadorSuplente", "Trabajador", new { Area = "General" })';
+        Pe.Stracon.Politicas.Presentacion.General.Trabajador.Actions.BuscarTrabajadorUO = '@Url.Action("BuscarTrabajadorUO", "Trabajador", new { Area = "General" })';
+        Pe.Stracon.Politicas.Presentacion.General.Trabajador.Actions.RegistrarTrabajadorSuplente = '@Url.Action("RegistrarTrabajadorSuplente", "Trabajador", new { Area = "General" })';
+
+        Pe.Stracon.Politicas.Presentacion.General.Trabajador.Actions.BuscarUnidadOperativaProyectoPorEmpresaMatriz = '@Url.Action("BuscarUnidadOperativaProyectoPorEmpresaMatriz", "Trabajador", new { Area = "General" })';
+
+        ns('Pe.Stracon.Politicas.Presentacion.General.Trabajador.Resource')
+        Pe.Stracon.Politicas.Presentacion.General.Trabajador.Resource.GridCodigoIdentificacion = '@Html.Raw(TrabajadorResource.GridCodigoIdentificacion)';
+        Pe.Stracon.Politicas.Presentacion.General.Trabajador.Resource.GridCodigoTipoDocumento = '@Html.Raw(TrabajadorResource.GridCodigoTipoDocumento)';
+        Pe.Stracon.Politicas.Presentacion.General.Trabajador.Resource.GridNumeroDocumentoIdentidad = '@Html.Raw(TrabajadorResource.GridNumeroDocumentoIdentidad)';
+        Pe.Stracon.Politicas.Presentacion.General.Trabajador.Resource.GridApellidoPaterno = '@Html.Raw(TrabajadorResource.GridApellidoPaterno)';
+        Pe.Stracon.Politicas.Presentacion.General.Trabajador.Resource.GridApellidoMaterno = '@Html.Raw(TrabajadorResource.GridApellidoMaterno)';
+        Pe.Stracon.Politicas.Presentacion.General.Trabajador.Resource.GridNombres = '@Html.Raw(TrabajadorResource.GridNombres)';
+        Pe.Stracon.Politicas.Presentacion.General.Trabajador.Resource.GridOrganizacion = '@Html.Raw(TrabajadorResource.GridOrganizacion)';
+        Pe.Stracon.Politicas.Presentacion.General.Trabajador.Resource.GridDepartamento = '@Html.Raw(TrabajadorResource.GridDepartamento)';
+        Pe.Stracon.Politicas.Presentacion.General.Trabajador.Resource.GridCargo = '@Html.Raw(TrabajadorResource.GridCargo)';
+        Pe.Stracon.Politicas.Presentacion.General.Trabajador.Resource.GridTelefonoTrabajo = '@Html.Raw(TrabajadorResource.GridTelefonoTrabajo)';
+        Pe.Stracon.Politicas.Presentacion.General.Trabajador.Resource.GridAnexo = '@Html.Raw(TrabajadorResource.GridAnexo)';
+        Pe.Stracon.Politicas.Presentacion.General.Trabajador.Resource.GridTelefonoMovil = '@Html.Raw(TrabajadorResource.GridTelefonoMovil)';
+        Pe.Stracon.Politicas.Presentacion.General.Trabajador.Resource.GridTelefonoPersonal = '@Html.Raw(TrabajadorResource.GridTelefonoPersonal)';
+        Pe.Stracon.Politicas.Presentacion.General.Trabajador.Resource.GridCorreoElectronico = '@Html.Raw(TrabajadorResource.GridCorreoElectronico)';
+        Pe.Stracon.Politicas.Presentacion.General.Trabajador.Resource.EtiquetaEliminarDescripcion = '@Html.Raw(TrabajadorResource.EtiquetaEliminarDescripcion)';
+        Pe.Stracon.Politicas.Presentacion.General.Trabajador.EtiquetaTituloPrincipal = '@Html.Raw(TrabajadorResource.EtiquetaTituloPrincipal)';
+        Pe.Stracon.Politicas.Presentacion.General.Trabajador.EtiquetaTituloConfirmar = '@Html.Raw(GenericoResource.EtiquetaTituloConfirmar)';
+        Pe.Stracon.Politicas.Presentacion.General.Trabajador.EtiquetaTituloPrincipalTrabajadorUnidadOperativa = '@Html.Raw(TrabajadorResource.EtiquetaTituloPrincipalTrabajadorUnidadOperativa)';
+        Pe.Stracon.Politicas.Presentacion.General.Trabajador.EtiquetaTituloPrincipalSuplente = '@Html.Raw(TrabajadorResource.EtiquetaTituloPrincipalSuplente)';
+        Pe.Stracon.Politicas.Presentacion.General.Trabajador.EtiquetaProyecto = '@Html.Raw(TrabajadorResource.EtiquetaProyecto)';
+
+        ns('Pe.Stracon.Politicas.Presentacion.Recursos.Validacion')
+        Pe.Stracon.Politicas.Presentacion.Recursos.Validacion.ConfirmacionGuardar = '@Html.Raw(MensajeResource.ConfirmacionGuardar)';
+        Pe.Stracon.Politicas.Presentacion.Recursos.Validacion.EtiquetaConfirmacion = '@Html.Raw(MensajeResource.SeGuardoInformacionExito)';
+        Pe.Stracon.Politicas.Presentacion.Recursos.Validacion.ActualizacionConforme = '@Html.Raw(MensajeResource.SeGuardoInformacionExito)';
+        Pe.Stracon.Politicas.Presentacion.Recursos.Validacion.EtiquetEliminacion = '@Html.Raw(MensajeResource.ConfirmacionEliminacion)';
+        Pe.Stracon.Politicas.Presentacion.Recursos.Validacion.ValidarCodigoTipoDocumento = '@Html.Raw(TrabajadorResource.EtiquetaCodigoTipoDocumento)';
+        Pe.Stracon.Politicas.Presentacion.Recursos.Validacion.ValidarCodigoIdentificacion = '@Html.Raw(TrabajadorResource.EtiquetaCodigoIdentificacion)';
+        Pe.Stracon.Politicas.Presentacion.Recursos.Validacion.ValidarNumeroDocumentoIdentidad = '@Html.Raw(TrabajadorResource.EtiquetaNumeroDocumentoIdentidad)';
+        Pe.Stracon.Politicas.Presentacion.Recursos.Validacion.SeleccionarRegistroEliminar = '@Html.Raw(MensajeResource.SeleccionarRegistroEliminar)';
+
+        Pe.Stracon.Politicas.Presentacion.Recursos.Validacion.ValidarSuplente = '@Html.Raw(TrabajadorResource.EtiquetaSuplente)';
+        Pe.Stracon.Politicas.Presentacion.Recursos.Validacion.ValidarFechaInicio = '@Html.Raw(TrabajadorResource.EtiquetaFechaInicio)';
+        Pe.Stracon.Politicas.Presentacion.Recursos.Validacion.ValidarFechaFin = '@Html.Raw(TrabajadorResource.EtiquetaFechaFin)';
+        Pe.Stracon.Politicas.Presentacion.Recursos.Validacion.EtiquetaituloError = '@Html.Raw(MensajeResource.EtiquetaTituloError)';
+        Pe.Stracon.Politicas.Presentacion.Recursos.Validacion.MensajeErrorSuplente = '@Html.Raw(TrabajadorResource.MensajeErrorSuplente)';
+
+        Pe.Stracon.Politicas.Presentacion.Recursos.Validacion.ValidarUnidadOperativa = '@Html.Raw(TrabajadorResource.EtiquetaProyecto)';
+        Pe.Stracon.Politicas.Presentacion.Recursos.Validacion.ValidarEmpresaMatriz = '@Html.Raw(TrabajadorResource.EtiquetaEmpresaMatriz)';
+
+        ns('Pe.Stracon.Politica.Presentacion.General.Trabajador.Enumerados.TipoDocumento')
+        Pe.Stracon.Politica.Presentacion.General.Trabajador.Enumerados.TipoDocumento.Dni = '@DatosConstantes.TipoDocumentoIdentidad.Dni';
+        Pe.Stracon.Politica.Presentacion.General.Trabajador.Enumerados.TipoDocumento.Ruc = '@DatosConstantes.TipoDocumentoIdentidad.Ruc';
+
+                
+        ns('Pe.Stracon.Politicas.Presentacion.General.Trabajador.Models')
+        Pe.Stracon.Politicas.Presentacion.General.Trabajador.Models.Index = @(Html.Raw(Json.Encode(Model)));
+        
+    </script>
+    <script src="~/Scripts/Base/UsuarioAD/Controller.js"></script>
+    <script src="~/Scripts/Base/CargaArchivo/Controller.js"></script>
+
+    @CustomHtmlHelper.RenderViewJs("generaltrabajadorformulariotrabajador")
+    @CustomHtmlHelper.RenderViewJs("generaltrabajadorformulariotrabajadorunidadoperativa")
+    @CustomHtmlHelper.RenderViewJs("generaltrabajadorformulariotrabajadorsuplente")
+}

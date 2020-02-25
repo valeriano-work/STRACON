@@ -1,0 +1,32 @@
+﻿@using Pe.Stracon.Politicas.Presentacion.Recursos.Base
+@{
+    Layout = null;
+    List<SelectListItem> ListaDominios = (List<SelectListItem>)ViewBag.ListaDominios;
+}
+<div class="modal-body">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label>@UsuarioAD.EtiquetaUsuario</label>
+                <input class="form-control" id="txtBuscarUsuarioAD" type="text" />
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label>@UsuarioAD.EtiquetaDominio</label>
+                @Html.DropDownList("slcEmpresaDominio", ListaDominios, new { id = "slcEmpresaDominio", @class = "form-control" })
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 text-right">
+            <button id="btnBuscarUsuarioAD" class="btn btn-default" type="button">@GenericoResource.BotonMostrar</button>
+        </div>
+    </div>
+    <div id="divGrdUsuariosResult">
+    </div>
+</div>
+<div class="modal-footer">
+    <button id="btnCancelarUserAD" class="btn btn-default">@GenericoResource.BotonCancelar</button>
+    <button id="btnAgregarUserAD" class="btn btn-primary">@GenericoResource.BotonAgregar</button>
+</div>

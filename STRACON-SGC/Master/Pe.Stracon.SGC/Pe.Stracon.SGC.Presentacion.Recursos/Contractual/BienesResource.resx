@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CodigoTarifaEscalonado" xml:space="preserve">
+    <value>E</value>
+  </data>
+  <data name="CodigoTarifaFijo" xml:space="preserve">
+    <value>F</value>
+  </data>
+  <data name="EtiquetaAnioInicioAlquiler" xml:space="preserve">
+    <value>Año de Inicio de Alquiler</value>
+  </data>
+  <data name="EtiquetaBien" xml:space="preserve">
+    <value>Bien</value>
+  </data>
+  <data name="EtiquetaCantidadLimiteMayorCero" xml:space="preserve">
+    <value>El Límite de {0} debe ser mayor a cero</value>
+  </data>
+  <data name="EtiquetaCodigoIdentificacion" xml:space="preserve">
+    <value>Código de Identificación</value>
+  </data>
+  <data name="EtiquetaDescripcion" xml:space="preserve">
+    <value>Descripción</value>
+  </data>
+  <data name="EtiquetaDlgTituloEliminar" xml:space="preserve">
+    <value>Eliminar Alquiler</value>
+  </data>
+  <data name="EtiquetaDlgTituloEliminarBien" xml:space="preserve">
+    <value>Eliminar Bien</value>
+  </data>
+  <data name="EtiquetaFechaAdqDesde" xml:space="preserve">
+    <value>Fecha de Adquisición Desde</value>
+  </data>
+  <data name="EtiquetaFechaAdqHasta" xml:space="preserve">
+    <value>Fecha de Adquisición Hasta</value>
+  </data>
+  <data name="EtiquetaFechaAdquisicion" xml:space="preserve">
+    <value>Fecha de Adquisición</value>
+  </data>
+  <data name="EtiquetaLimite" xml:space="preserve">
+    <value>Límite</value>
+  </data>
+  <data name="EtiquetaLimiteHora" xml:space="preserve">
+    <value>Límite de</value>
+  </data>
+  <data name="EtiquetaMarca" xml:space="preserve">
+    <value>Marca</value>
+  </data>
+  <data name="EtiquetaMesInicioAlquiler" xml:space="preserve">
+    <value>Mes de Inicio de Alquiler</value>
+  </data>
+  <data name="EtiquetaModelo" xml:space="preserve">
+    <value>Modelo</value>
+  </data>
+  <data name="EtiquetaMoneda" xml:space="preserve">
+    <value>Moneda</value>
+  </data>
+  <data name="EtiquetaMontoAlquilerMayorCero" xml:space="preserve">
+    <value>La Tarifa por {0} debe ser mayor a cero</value>
+  </data>
+  <data name="EtiquetaNumSerie" xml:space="preserve">
+    <value>Número de Serie</value>
+  </data>
+  <data name="EtiquetaSinLimite" xml:space="preserve">
+    <value>Sin Límite</value>
+  </data>
+  <data name="EtiquetaTarifa" xml:space="preserve">
+    <value>Tipo de Tarifa</value>
+  </data>
+  <data name="EtiquetaTarifaHora" xml:space="preserve">
+    <value>Tarifa por</value>
+  </data>
+  <data name="EtiquetaTiempoVidaUtil" xml:space="preserve">
+    <value>Tiempo de Vida Útil (en horas)</value>
+  </data>
+  <data name="EtiquetaTipoBien" xml:space="preserve">
+    <value>Tipo de Bien</value>
+  </data>
+  <data name="EtiquetaTipoPeriodoAlquiler" xml:space="preserve">
+    <value>Tipo de Periodo de Alquiler</value>
+  </data>
+  <data name="EtiquetaTipoTarifa" xml:space="preserve">
+    <value>Tipo de Tarifa</value>
+  </data>
+  <data name="EtiquetaTituloAlquiler" xml:space="preserve">
+    <value>Tarifas de Alquiler</value>
+  </data>
+  <data name="EtiquetaTituloFormularioAlquiler" xml:space="preserve">
+    <value>Formulario Tarifa de Alquiler</value>
+  </data>
+  <data name="EtiquetaTituloPrincipal" xml:space="preserve">
+    <value>Bienes</value>
+  </data>
+  <data name="EtiquetaValorAlquiler" xml:space="preserve">
+    <value>Valor de Alquiler</value>
+  </data>
+  <data name="EtiquetaValorAlquilerMayorCero" xml:space="preserve">
+    <value>El Valor del Alquiler debe ser mayor a cero</value>
+  </data>
+  <data name="EtiquetaValorResidual" xml:space="preserve">
+    <value>Valor Residual (en horas)</value>
+  </data>
+  <data name="GridCodigoIdentificacion" xml:space="preserve">
+    <value>Código de Identificación</value>
+  </data>
+  <data name="GridDescripcion" xml:space="preserve">
+    <value>Descripción</value>
+  </data>
+  <data name="GridFechaAdquisicion" xml:space="preserve">
+    <value>Fecha de Adquisición</value>
+  </data>
+  <data name="GridInicioAlquiler" xml:space="preserve">
+    <value>Inicio de Alquiler</value>
+  </data>
+  <data name="GridLimiteDe" xml:space="preserve">
+    <value>Límite de @Unidades</value>
+  </data>
+  <data name="GridMarca" xml:space="preserve">
+    <value>Marca</value>
+  </data>
+  <data name="GridModelo" xml:space="preserve">
+    <value>Modelo</value>
+  </data>
+  <data name="GridMoneda" xml:space="preserve">
+    <value>Moneda</value>
+  </data>
+  <data name="GridNumeroSerie" xml:space="preserve">
+    <value>Número de Serie</value>
+  </data>
+  <data name="GridPeriodoAlquiler" xml:space="preserve">
+    <value>Periodo Alquiler</value>
+  </data>
+  <data name="GridResidual" xml:space="preserve">
+    <value>Valor Residual</value>
+  </data>
+  <data name="GridSinLimite" xml:space="preserve">
+    <value>Sin Límite</value>
+  </data>
+  <data name="GridTarifa" xml:space="preserve">
+    <value>Tarifa</value>
+  </data>
+  <data name="GridTarifaPor" xml:space="preserve">
+    <value>Tarifa por @Unidad</value>
+  </data>
+  <data name="GridTipoBien" xml:space="preserve">
+    <value>Tipo de Bien</value>
+  </data>
+  <data name="GridTipoTarifa" xml:space="preserve">
+    <value>Tipo Tarifa</value>
+  </data>
+  <data name="GridValorAlquiler" xml:space="preserve">
+    <value>Valor Alquiler</value>
+  </data>
+  <data name="GridVidaUtil" xml:space="preserve">
+    <value>Tiempo de Vida Útil</value>
+  </data>
+  <data name="MsjAyudaBien" xml:space="preserve">
+    <value>Digite el Código de Identificación, Número de Serie, Descripción, Marca o Modelo del bien</value>
+  </data>
+  <data name="MsjBienNoExiste" xml:space="preserve">
+    <value>El bien no existe..</value>
+  </data>
+  <data name="MsjBuscarBien" xml:space="preserve">
+    <value>Buscando bien..</value>
+  </data>
+  <data name="MsjConfirmaEliminar" xml:space="preserve">
+    <value>¿Esta seguro de eliminar el registro seleccionado?</value>
+  </data>
+  <data name="MsjValidaAgregarBien" xml:space="preserve">
+    <value>Debe buscar un bien para poder agregar a la tabla.</value>
+  </data>
+  <data name="MsjValidaBienAgregado" xml:space="preserve">
+    <value>El bien ya se encuentra registrado.</value>
+  </data>
+  <data name="MsjValidaLimiteHora" xml:space="preserve">
+    <value>Debe ingresar un valor para el Límite..</value>
+  </data>
+  <data name="MsjValidaTarifaHora" xml:space="preserve">
+    <value>Debe ingresar un valor para la Tarifa.</value>
+  </data>
+  <data name="MsjValidaValorResidual" xml:space="preserve">
+    <value>Debe ingresar el valor residual.</value>
+  </data>
+  <data name="MsjValidaVidaMoneda" xml:space="preserve">
+    <value>Debe elegir la moneda para registrar el bien.</value>
+  </data>
+  <data name="MsjValidaVidaUtil" xml:space="preserve">
+    <value>Debe ingresar un tiempo de vida útil válido.</value>
+  </data>
+  <data name="ValidarTiempoVidaMayorCero" xml:space="preserve">
+    <value>El Tiempo de Vida Útil (en horas) debe ser mayor a cero</value>
+  </data>
+</root>

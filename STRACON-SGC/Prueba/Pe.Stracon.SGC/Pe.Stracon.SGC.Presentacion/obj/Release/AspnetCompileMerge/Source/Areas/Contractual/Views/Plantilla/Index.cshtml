@@ -1,0 +1,138 @@
+﻿@using Pe.Stracon.SGC.Presentacion.Recursos.Base
+@using Pe.Stracon.SGC.Presentacion.Recursos.Contractual
+@using Pe.Stracon.SGC.Presentacion.Recursos.Mensajes
+@using Pe.Stracon.SGC.Presentacion.Core.Helpers
+@model Pe.Stracon.SGC.Presentacion.Core.ViewModel.Contractual.Plantilla.PlantillaBusqueda
+
+@{
+    var disabled = (Model.ControlPermisos.ControlTotal || Model.ControlPermisos.Escritura) ? false : true;
+    var disabledEliminar = (Model.ControlPermisos.ControlTotal) ? false : true;
+}
+
+<div class="GmdBody-header">
+    <h2>@PlantillaContratoResource.EtiquetaTituloPrincipal</h2>
+</div>
+<div class="GmdBody-body">
+    <form id="frmPlantillaBusqueda">
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label for="txtDescripcion">@PlantillaContratoResource.EtiquetaDescripcion</label>
+                    @Html.TextBox("txtDescripcion", null, new { @class = "form-control", @id = "txtDescripcion" })
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label for="slcTipoServicio">@PlantillaContratoResource.EtiquetaTipoContrato</label>
+                    @Html.DropDownList("slcTipoServicio", Model.TipoContrato, new { @class = "form-control", @id = "slcTipoServicio" })
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label for="slcTipoDocumentoContrato">@PlantillaContratoResource.EtiquetaTipoDocumento</label>
+                    @Html.DropDownList("slcTipoDocumentoContrato", Model.TipoDocumentoContrato, new { @class = "form-control", @id = "slcTipoDocumentoContrato" })
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label for="slcEstadoVigencia">@PlantillaContratoResource.EtiquetaEstado</label>
+                    @Html.DropDownList("slcEstadoVigencia", Model.EstadoVigencia, new { @class = "form-control", @id = "slcEstadoVigencia" })
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label for="dtpFechaInicioVigencia">@PlantillaContratoResource.EtiquetaInicioVigencia</label>
+                    <div class="input-group">
+                        @Html.TextBox("dtpFechaInicioVigencia", null, new { @class = "form-control", @id = "dtpFechaInicioVigencia" })
+                        <div class="input-group-addon"><span class="fa fa-calendar"></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="form-group">
+                <button class="btn btn-info" id="btnLimpiar" type="reset">@GenericoResource.BotonLimpiar</button>
+                <button class="btn btn-default" id="btnBuscar">@GenericoResource.BotonMostrar</button>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <div>
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>@GenericoResource.EtiquetaResultadosBusqueda</h3>
+            </div>
+            <div class="col-sm-6 text-right">
+                 @if (!disabledEliminar)
+                 {
+                <button id="btnEliminarSeleccionado" class="btn btn-info">@GenericoResource.BotonEliminar</button>
+                 }
+                 @if(!disabled){
+                <button id="btnAgregar" class="btn btn-primary">@GenericoResource.BotonAñadir</button>
+                 }
+            </div>
+        </div>
+        <div class="table-responsive">
+            <div id="divGrdResult">
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts
+{
+    <script type="text/javascript">
+        ns('Pe.Stracon.SGC.Presentacion.Contractual.Plantilla.Actions')
+        Pe.Stracon.SGC.Presentacion.Contractual.Plantilla.Actions.FormularioPlantilla = '@Url.Action("FormularioPlantilla", "Plantilla", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.Plantilla.Actions.BuscarPlantilla = '@Url.Action("BuscarPlantilla", "Plantilla", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.Plantilla.Actions.EliminarPlantilla = '@Url.Action("EliminarPlantilla", "Plantilla", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.Plantilla.Actions.RegistrarPlantilla = '@Url.Action("RegistrarPlantilla", "Plantilla", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.Plantilla.Actions.PlantillaParrafo = '@Url.Action("PlantillaParrafo", "Plantilla", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.Plantilla.Actions.GenerarVistaPreviaPlantilla = '@Url.Action("GenerarVistaPreviaPlantilla", "Plantilla", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.Plantilla.Actions.BuscarPlantillaParrafo = '@Url.Action("BuscarPlantillaParrafo", "Plantilla", new { Area = "Contractual" })';
+
+        Pe.Stracon.SGC.Presentacion.Contractual.Plantilla.Actions.PlantillaNotaPie = '@Url.Action("PlantillaNotaPie", "Plantilla", new { Area = "Contractual" })';
+
+        ns('Pe.Stracon.SGC.Presentacion.Contractual.Plantilla.Resources')
+        Pe.Stracon.SGC.Presentacion.Contractual.Plantilla.Resources.TituloEliminar = '@Html.Raw(PlantillaContratoResource.EtiquetaDlgTituloEliminar)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Plantilla.Resources.GridDescripcion = '@Html.Raw(PlantillaContratoResource.GridDescripcion)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Plantilla.Resources.GridTipoContrato = '@Html.Raw(PlantillaContratoResource.GridTipoContrato)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Plantilla.Resources.GridTipoDe = '@Html.Raw(PlantillaContratoResource.GridTipoDe)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Plantilla.Resources.GridTipoDocumento = '@Html.Raw(PlantillaContratoResource.GridTipoDocumento)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Plantilla.Resources.GridVigente = '@Html.Raw(PlantillaContratoResource.GridVigente)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Plantilla.Resources.GridInicioVigencia = '@Html.Raw(PlantillaContratoResource.GridInicioVigencia)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Plantilla.Resources.GridParrafos = '@Html.Raw(PlantillaContratoResource.GridParrafos)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Plantilla.Resources.GridAdhesion = '@Html.Raw(PlantillaContratoResource.GridAdhesion)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Plantilla.Resources.GridNotasPie = '@Html.Raw(PlantillaContratoResource.GridNotasPie)';       
+
+        Pe.Stracon.SGC.Presentacion.Contractual.Plantilla.Resources.GridSi = '@Html.Raw(GenericoResource.EtiquetaSi)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Plantilla.Resources.GridNo = '@Html.Raw(GenericoResource.EtiquetaNo)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Plantilla.Resources.GridAcciones = '@Html.Raw(GenericoResource.GridAcciones)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Plantilla.Resources.EtiquetaFormularioPlantilla = '@Html.Raw(PlantillaContratoResource.EtiquetaFormularioPlantillaContrato)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Plantilla.Resources.EtiquetaTituloConfirmar = '@Html.Raw(GenericoResource.EtiquetaTituloConfirmar)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Plantilla.Resources.EtiquetaTituloAdvertencia = '@Html.Raw(MensajeResource.EtiquetaTituloAdvertencia)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Plantilla.Resources.ConfirmacionEliminacionRegistro = '@Html.Raw(MensajeResource.ConfirmacionEliminacion)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Plantilla.Resources.ConfirmacionEliminacionRegistros = '@Html.Raw(MensajeResource.MsgEliminacionList)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Plantilla.Resources.TituloCopiarPlantilla = '@Html.Raw(PlantillaContratoResource.TituloCopiarPlantilla)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Plantilla.Resources.ConfirmacionCopiarPlantilla = '@Html.Raw(PlantillaContratoResource.ConfirmacionCopiarPlantilla)';
+
+        ns('Pe.Stracon.SGC.Presentacion.Recursos.Validacion')
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.SeleccionarRegistroEliminar = '@Html.Raw(MensajeResource.SeleccionarRegistroEliminar)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ConfirmacionGuardar = '@Html.Raw(MensajeResource.ConfirmacionGuardar)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.EtiquetaConfirmacion = '@Html.Raw(MensajeResource.SeGuardoInformacionExito)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.EtiquetaEliminacionExitosa = '@Html.Raw(MensajeResource.SeEliminoInformacionExito)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarDescripcion = '@Html.Raw(PlantillaContratoResource.EtiquetaDescripcion)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarTipoContrato = '@Html.Raw(PlantillaContratoResource.EtiquetaTipoContrato)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarTipoRequerimiento = '@Html.Raw(PlantillaContratoResource.EtiquetaTipoRequerimiento)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarTipoDocumentoContrato = '@Html.Raw(PlantillaContratoResource.EtiquetaTipoDocumento)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarFechaInicioVigencia = '@Html.Raw(PlantillaContratoResource.EtiquetaInicioVigencia)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.EtiquetaPlantillaSinParrafo = '@Html.Raw(PlantillaContratoResource.EtiquetaPlantillaSinParrafo)';
+
+        ns('Pe.Stracon.SGC.Presentacion.Contractual.Plantilla.Models')
+        Pe.Stracon.SGC.Presentacion.Contractual.Plantilla.Models.Index = @(Html.Raw(Json.Encode(Model)));
+    </script>
+    @CustomHtmlHelper.RenderViewJs("contractualplantillaformularioplantilla")
+}

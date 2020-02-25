@@ -1,0 +1,420 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Pe.GyM.Security.Account</name>
+    </assembly>
+    <members>
+        <member name="T:Pe.GyM.Security.Account.Adapter.CuentaUsuarioAdapter">
+            <summary>
+            Objecto que representa un control de una vista
+            </summary>
+            <remarks>
+            Creación:       GMD 20150319
+            Modificación:   
+            </remarks>
+        </member>
+        <member name="M:Pe.GyM.Security.Account.Adapter.CuentaUsuarioAdapter.ObtenerCuentaUsuario(Pe.GyM.Security.Account.SSOAuthenticateService.WebUser)">
+            <summary>
+            Genera un objeto CuentaUsuario desde una objeto Web user del SSO
+            </summary>
+            <param name="webUser">Parametro webUser</param>
+            <returns>Cuenta de Usuario</returns>
+        </member>
+        <member name="T:Pe.GyM.Security.Account.Model.Control">
+            <summary>
+            Objecto que representa un control de una vista
+            </summary>
+            <remarks>
+            Creación:       GMD 20150319
+            Modificación:   
+            </remarks>
+        </member>
+        <member name="P:Pe.GyM.Security.Account.Model.Control.Codigo">
+            <summary>
+            Código   
+            </summary>
+        </member>
+        <member name="P:Pe.GyM.Security.Account.Model.Control.Texto">
+            <summary>
+            Texto de etiqueta
+            </summary>   
+        </member>
+        <member name="P:Pe.GyM.Security.Account.Model.Control.Lectura">
+            <summary>
+            Indicador de Lectura
+            </summary>
+        </member>
+        <member name="P:Pe.GyM.Security.Account.Model.Control.Escritura">
+            <summary> 
+            Indicador de Escritura
+            </summary>
+        </member>
+        <member name="P:Pe.GyM.Security.Account.Model.Control.ControlTotal">
+            <summary>  
+            Indicador de Control Total
+            </summary>
+        </member>
+        <member name="T:Pe.GyM.Security.Account.Model.Empresa">
+            <summary>
+            Objecto que representa una Empresa
+            </summary>
+            <remarks>
+            Creación:       GMD 20150319
+            Modificación:   
+            </remarks>
+        </member>
+        <member name="P:Pe.GyM.Security.Account.Model.Empresa.IdCompany">
+            <summary>
+            IdCompany
+            </summary>
+        </member>
+        <member name="P:Pe.GyM.Security.Account.Model.Empresa.IdPais">
+            <summary>
+            IdPais
+            </summary>
+        </member>
+        <member name="P:Pe.GyM.Security.Account.Model.Empresa.IdArea">
+            <summary>
+            IdArea
+            </summary>
+        </member>
+        <member name="P:Pe.GyM.Security.Account.Model.Empresa.Ruc">
+            <summary>
+            Ruc
+            </summary>
+        </member>
+        <member name="P:Pe.GyM.Security.Account.Model.Empresa.Direccion">
+            <summary>
+            Direccion
+            </summary>
+        </member>
+        <member name="P:Pe.GyM.Security.Account.Model.Empresa.Descripcion">
+            <summary>
+            Descripcion
+            </summary>
+        </member>
+        <member name="P:Pe.GyM.Security.Account.Model.Empresa.NombreEmpresa">
+            <summary>
+            Nombre Empresa
+            </summary>
+        </member>
+        <member name="P:Pe.GyM.Security.Account.Model.Empresa.AreaNegocio">
+            <summary>
+            Area Negocio
+            </summary>
+        </member>
+        <member name="T:Pe.GyM.Security.Account.Model.Modulo">
+            <summary>
+            Objecto que representa un modulo de sistema
+            </summary>
+            <remarks>
+            Creación:       GMD 20150319
+            Modificación:   
+            </remarks>
+        </member>
+        <member name="P:Pe.GyM.Security.Account.Model.Modulo.Codigo">
+            <summary>
+            Código de identificación
+            </summary>
+        </member>
+        <member name="P:Pe.GyM.Security.Account.Model.Modulo.CodigoSistema">
+            <summary>
+            Código de sistema
+            </summary>
+        </member>
+        <member name="P:Pe.GyM.Security.Account.Model.Modulo.Nombre">
+            <summary>
+            Nombre 
+            </summary>
+        </member>
+        <member name="P:Pe.GyM.Security.Account.Model.Modulo.Icono">
+            <summary>
+            Icono
+            </summary>
+        </member>
+        <member name="P:Pe.GyM.Security.Account.Model.Modulo.SubModulos">
+            <summary>
+            Modulo hijos asignados
+            </summary>
+        </member>
+        <member name="P:Pe.GyM.Security.Account.Model.Modulo.Vistas">
+            <summary>
+            Vistas asignadas
+            </summary>
+        </member>
+        <member name="P:Pe.GyM.Security.Account.Model.Modulo.EsActual">
+            <summary>
+            Indica si se encuenta como modulo actual
+            </summary>
+        </member>
+        <member name="M:Pe.GyM.Security.Account.Model.Modulo.GetPrincipalView">
+            <summary>
+            Obtiene la vista inicial del modulo
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Pe.GyM.Security.Account.Model.CuentaUsuario">
+            <summary>
+            Objecto que representa una cuenta de usuario
+            </summary>
+            <remarks>
+            Creación:       GMD 20150319
+            Modificación:   
+            </remarks>
+        </member>
+        <member name="P:Pe.GyM.Security.Account.Model.CuentaUsuario.Codigo">
+            <summary>
+            Código
+            </summary>
+        </member>
+        <member name="P:Pe.GyM.Security.Account.Model.CuentaUsuario.Alias">
+            <summary>
+            Alias de logueo
+            </summary>
+        </member>
+        <member name="P:Pe.GyM.Security.Account.Model.CuentaUsuario.Dominio">
+            <summary>
+            Dominio del AD
+            </summary>
+        </member>
+        <member name="P:Pe.GyM.Security.Account.Model.CuentaUsuario.Clave">
+            <summary>
+            Clave de logueo
+            </summary>
+        </member>
+        <member name="P:Pe.GyM.Security.Account.Model.CuentaUsuario.Nombre">
+            <summary>
+            Nombres
+            </summary>
+        </member>
+        <member name="P:Pe.GyM.Security.Account.Model.CuentaUsuario.ApellidoPaterno">
+            <summary>
+            Apellido paterno
+            </summary>
+        </member>
+        <member name="P:Pe.GyM.Security.Account.Model.CuentaUsuario.ApellidoMaterno">
+            <summary>
+            Apellido Materno
+            </summary>
+        </member>
+        <member name="P:Pe.GyM.Security.Account.Model.CuentaUsuario.NombreCompleto">
+            <summary>
+            Nombre Completo
+            </summary>
+        </member>
+        <member name="P:Pe.GyM.Security.Account.Model.CuentaUsuario.Organizacion">
+            <summary>
+            Organización
+            </summary>
+        </member>
+        <member name="P:Pe.GyM.Security.Account.Model.CuentaUsuario.Area">
+            <summary>
+            Departamento de la organización
+            </summary>
+        </member>
+        <member name="P:Pe.GyM.Security.Account.Model.CuentaUsuario.Cargo">
+            <summary>
+            Cargo ocupado
+            </summary>
+        </member>
+        <member name="P:Pe.GyM.Security.Account.Model.CuentaUsuario.TelefonoTrabajo">
+            <summary>
+            Número de teléfeno del trabajo
+            </summary>
+        </member>
+        <member name="P:Pe.GyM.Security.Account.Model.CuentaUsuario.Anexo">
+            <summary>
+            Número de Anexo
+            </summary>
+        </member>
+        <member name="P:Pe.GyM.Security.Account.Model.CuentaUsuario.TelefonoMovil">
+            <summary>
+            Número de celular
+            </summary>
+        </member>
+        <member name="P:Pe.GyM.Security.Account.Model.CuentaUsuario.TelefonoParticular">
+            <summary>
+            Número del teléfono personal
+            </summary>
+        </member>
+        <member name="P:Pe.GyM.Security.Account.Model.CuentaUsuario.CorreoElectronico">
+            <summary>
+            Correo electrónico
+            </summary>
+        </member>
+        <member name="P:Pe.GyM.Security.Account.Model.CuentaUsuario.Imagen">
+            <summary>
+            Foto del usuario
+            </summary>
+        </member>
+        <member name="P:Pe.GyM.Security.Account.Model.CuentaUsuario.Perfil">
+            <summary>
+            Perfil del cuenta
+            </summary>
+        </member>
+        <member name="P:Pe.GyM.Security.Account.Model.CuentaUsuario.Ubigeo">
+            <summary>
+            Zona ubigeo
+            </summary>
+        </member>
+        <member name="P:Pe.GyM.Security.Account.Model.CuentaUsuario.Pais">
+            <summary>
+            País
+            </summary>
+        </member>
+        <member name="P:Pe.GyM.Security.Account.Model.CuentaUsuario.CodigoEmpresa">
+            <summary>
+            Código de la empresa
+            </summary>
+        </member>
+        <member name="P:Pe.GyM.Security.Account.Model.CuentaUsuario.CodigoSistema">
+            <summary>
+            Codigo del sistema
+            </summary>
+        </member>
+        <member name="P:Pe.GyM.Security.Account.Model.CuentaUsuario.CodigoSistemaSra">
+            <summary>
+            Código de sistema según el SRA
+            </summary>
+        </member>
+        <member name="P:Pe.GyM.Security.Account.Model.CuentaUsuario.Modulos">
+            <summary>
+            Modulos asignados en la consulta de acceso a sistema
+            </summary>
+        </member>
+        <member name="P:Pe.GyM.Security.Account.Model.CuentaUsuario.ListEmpresa">
+            <summary>
+            LIstado Empresa
+            </summary>
+        </member>
+        <member name="P:Pe.GyM.Security.Account.Model.CuentaUsuario.NumeroDocumento">
+            <summary>
+            Número de Documento
+            </summary>
+        </member>
+        <member name="P:Pe.GyM.Security.Account.Model.CuentaUsuario.IdEmpresa">
+            <summary>
+            codigo Empresa
+            </summary>
+        </member>
+        <member name="P:Pe.GyM.Security.Account.Model.CuentaUsuario.NombrePuestaIngreso">
+            <summary>
+            Número de Documento
+            </summary>
+        </member>
+        <member name="P:Pe.GyM.Security.Account.Model.CuentaUsuario.CodigoTrabajador">
+            <summary>
+            Código de Trabajador
+            </summary>
+        </member>
+        <member name="P:Pe.GyM.Security.Account.Model.CuentaUsuario.CodigoUnidadOperativaMatriz">
+            <summary>
+            Código de Unidad Operativa Matriz
+            </summary>
+        </member>
+        <member name="T:Pe.GyM.Security.Account.Model.Vista">
+            <summary>
+            Objecto que representa una vista de módulo
+            </summary>
+            <remarks>
+            Creación:       GMD 20150319
+            Modificación:   
+            </remarks>
+        </member>
+        <member name="P:Pe.GyM.Security.Account.Model.Vista.Codigo">
+            <summary>
+            Código de identificación
+            </summary>
+        </member>
+        <member name="P:Pe.GyM.Security.Account.Model.Vista.Nombre">
+            <summary>
+            Nombre 
+            </summary>
+        </member>
+        <member name="P:Pe.GyM.Security.Account.Model.Vista.URL">
+            <summary>
+            URL de acceso
+            </summary>
+        </member>
+        <member name="P:Pe.GyM.Security.Account.Model.Vista.EsPrincipal">
+            <summary>
+            Indicado si es vista principal  
+            </summary>
+        </member>
+        <member name="P:Pe.GyM.Security.Account.Model.Vista.Controles">
+            <summary>
+            Lista de controles asignados
+            </summary>
+        </member>
+        <member name="T:Pe.GyM.Security.Account.Service.CuentaUsuarioService">
+            <summary>
+            Servicio que maneja las funcionalidades asociadas a una cuenta de usuario
+            </summary>
+            <remarks>
+            Creación:       GMD 20150319
+            Modificación:   
+            </remarks>
+        </member>
+        <member name="M:Pe.GyM.Security.Account.Service.CuentaUsuarioService.IniciarSession(System.String,System.String)">
+            <summary>
+            Valida el inicio de sesión de un usuario y si es satisfactorio obtiene sus acceso
+            </summary>
+            <param name="alias">alias de logueo</param>
+            <param name="clave">Contraseña</param>
+            <returns>Cuenta de Usuario</returns>
+        </member>
+        <member name="M:Pe.GyM.Security.Account.Service.CuentaUsuarioService.IniciarSessionPorToken(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="token"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pe.GyM.Security.Account.Service.CuentaUsuarioService.ObtenerUsuarioPorToken(System.String)">
+            <summary>
+            Obtiene la cuenta de usuario asociado al token generado
+            </summary>
+            <param name="token">Token generado</param>
+            <returns>Cuenta de Usuario</returns>
+        </member>
+        <member name="M:Pe.GyM.Security.Account.Service.CuentaUsuarioService.ObtenerPermisos(Pe.GyM.Security.Account.Model.CuentaUsuario,System.String)">
+            <summary>
+            Obtiene los permisos asignados al usuario segun sistema
+            </summary>
+            <param name="usuario">Usuario</param>
+            <param name="codigoSistema">Código del Sistema</param>
+            <returns>Cuenta de Usuario</returns>
+        </member>
+        <member name="M:Pe.GyM.Security.Account.Service.CuentaUsuarioService.ValidarAcceso(System.String)">
+            <summary>
+            Valida el acceso a la url especifica
+            </summary>
+            <param name="url">url a validar</param>
+            <returns>Si tiene acceso</returns>
+        </member>
+        <member name="M:Pe.GyM.Security.Account.Service.CuentaUsuarioService.getUsuarioDeDirectorioActivo(System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="dominio"></param>
+            <param name="tipoFiltro"></param>
+            <param name="criterio"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pe.GyM.Security.Account.Service.CuentaUsuarioService.getRutaDominio(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="Domain"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pe.GyM.Security.Account.Service.CuentaUsuarioService.getLDAPFilter(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="Type"></param>
+            <param name="Filter"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

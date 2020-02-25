@@ -1,0 +1,111 @@
+﻿@using Pe.Stracon.SGC.Presentacion.Recursos.Base
+@using Pe.Stracon.SGC.Presentacion.Recursos.Contractual
+@using Pe.Stracon.SGC.Presentacion.Recursos.Mensajes
+@using Pe.Stracon.SGC.Presentacion.Core.Helpers
+
+@{
+    var ControlPermisos = ViewBag.ControlPermisos;
+    var disabledEscritura = (ControlPermisos.ControlTotal || ControlPermisos.Escritura) ? false : true;
+    var disabledEliminar = (ControlPermisos.ControlTotal) ? false : true;
+}
+
+<input  type="hidden" id="hdnCodigoBien" value="@ViewBag.codigoBien" />
+<div class="GmdBody-header">
+    <h2>@Html.ActionLink(BienesResource.EtiquetaTituloPrincipal, "Index", "Bienes") <i class="fa fa-angle-right"></i>@BienesResource.EtiquetaTituloAlquiler</h2>
+</div>
+<div class="GmdBody-body">
+    <form id="frmBienAlquilerBusqueda">
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label for="">@BienesResource.EtiquetaTipoBien</label>
+                    <h3>@ViewBag.nombreTipoBien</h3>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label for="">@BienesResource.EtiquetaNumSerie</label>
+                    <h3>@ViewBag.numeroSerie</h3>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label for="">@BienesResource.EtiquetaDescripcion</label>
+                    <h3>@ViewBag.descripcion</h3>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label for="lblMarca">@BienesResource.EtiquetaMarca</label>
+                    <h3>@ViewBag.marca</h3>
+                </div>
+            </div>
+        </div>
+    </form>
+    <hr />
+    <div>
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>@GenericoResource.EtiquetaResultadosBusqueda</h3>
+            </div>
+            <div class="col-sm-6 text-right">
+                @if (!disabledEliminar)
+                {
+                    <button id="btnEliminarBienAlq" class="btn btn-info">@GenericoResource.BotonEliminar</button>
+                }
+                @if (!disabledEscritura)
+                {
+                    <button id="btnAgregarBienAlq" class="btn btn-primary">@GenericoResource.BotonAñadir</button>
+                }
+            </div>
+        </div>
+        <div class="table-responsive">
+            <div id="divGrdResultBienAlquiler">
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts
+{
+    <script type="text/javascript">
+        ns('Pe.Stracon.SGC.Presentacion.Contractual.BienAlquiler.Actions')
+        Pe.Stracon.SGC.Presentacion.Contractual.BienAlquiler.Actions.FormularioBienAlquiler = '@Url.Action("FormularioBienAlquiler", "Bienes", new { Area = "Contractual" })'
+        Pe.Stracon.SGC.Presentacion.Contractual.BienAlquiler.Actions.ListaBienAlquilerBandeja = '@Url.Action("ListaBienAlquilerBandeja", "Bienes", new { Area = "Contractual" })'
+        Pe.Stracon.SGC.Presentacion.Contractual.BienAlquiler.Actions.RegistrarBienAlquiler = '@Url.Action("RegistrarBienAlquiler", "Bienes", new { Area = "Contractual" })'
+        Pe.Stracon.SGC.Presentacion.Contractual.BienAlquiler.Actions.EliminarBienAlquiler = '@Url.Action("EliminarBienAlquiler", "Bienes", new { Area = "Contractual" })'
+
+        ns('Pe.Stracon.SGC.Presentacion.Contractual.BienAlquiler.Resources')
+        Pe.Stracon.SGC.Presentacion.Contractual.BienAlquiler.Resources.GridSinLimite = '@Html.Raw(BienesResource.GridSinLimite)';
+        Pe.Stracon.SGC.Presentacion.Contractual.BienAlquiler.Resources.GridLimiteDe = '@Html.Raw(BienesResource.GridLimiteDe)';
+        Pe.Stracon.SGC.Presentacion.Contractual.BienAlquiler.Resources.GridTarifaPor = '@Html.Raw(BienesResource.GridTarifaPor)';
+
+        Pe.Stracon.SGC.Presentacion.Contractual.BienAlquiler.Resources.MsjValidaLimiteHora = '@Html.Raw(BienesResource.MsjValidaLimiteHora)';
+        Pe.Stracon.SGC.Presentacion.Contractual.BienAlquiler.Resources.MsjValidaTarifaHora = '@Html.Raw(BienesResource.MsjValidaTarifaHora)';
+        Pe.Stracon.SGC.Presentacion.Contractual.BienAlquiler.Resources.GridAcciones = '@Html.Raw(GenericoResource.GridAcciones)';
+
+        Pe.Stracon.SGC.Presentacion.Contractual.BienAlquiler.Resources.TituloEliminar = '@Html.Raw(BienesResource.EtiquetaDlgTituloEliminar)';
+        Pe.Stracon.SGC.Presentacion.Contractual.BienAlquiler.Resources.EtiquetaTituloConfirmar = '@Html.Raw(GenericoResource.EtiquetaTituloConfirmar)';
+        Pe.Stracon.SGC.Presentacion.Contractual.BienAlquiler.Resources.MsjConfirmaEliminar = '@Html.Raw(BienesResource.MsjConfirmaEliminar)';
+        Pe.Stracon.SGC.Presentacion.Contractual.BienAlquiler.Resources.EtiquetaTituloAdvertencia = '@Html.Raw(MensajeResource.EtiquetaTituloAdvertencia)';
+        Pe.Stracon.SGC.Presentacion.Contractual.BienAlquiler.Resources.ConfirmacionEliminacionRegistro = '@Html.Raw(MensajeResource.ConfirmacionEliminacion)';
+        Pe.Stracon.SGC.Presentacion.Contractual.BienAlquiler.Resources.ConfirmacionEliminacionRegistros = '@Html.Raw(MensajeResource.MsgEliminacionList)';
+        Pe.Stracon.SGC.Presentacion.Contractual.BienAlquiler.Resources.EtiquetaTituloFormularioAlquiler = '@Html.Raw(BienesResource.EtiquetaTituloFormularioAlquiler)';
+
+        ns('Pe.Stracon.SGC.Presentacion.Contractual.BienAlquiler.Variables')
+        Pe.Stracon.SGC.Presentacion.Contractual.BienAlquiler.Variables.Unidad = '@ViewBag.unidad'
+        Pe.Stracon.SGC.Presentacion.Contractual.BienAlquiler.Variables.Unidades = '@ViewBag.unidades'
+        Pe.Stracon.SGC.Presentacion.Contractual.BienAlquiler.Variables.ControlPermisos = @(Html.Raw(Json.Encode(ViewBag.ControlPermisos)))
+
+        ns('Pe.Stracon.SGC.Presentacion.Recursos.Validacion')
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.SeleccionarRegistroEliminar = '@Html.Raw(MensajeResource.SeleccionarRegistroEliminar)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ConfirmacionGuardar = '@Html.Raw(MensajeResource.ConfirmacionGuardar)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.EtiquetaConfirmacion = '@MensajeResource.SeGuardoInformacionExito';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.EtiquetaEliminacionExitosa = '@Html.Raw(MensajeResource.SeEliminoInformacionExito)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarLimite = '@Html.Raw(BienesResource.EtiquetaLimiteHora)' + ' @ViewBag.unidades';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarTarifa = '@Html.Raw(BienesResource.EtiquetaTarifaHora)' + ' @ViewBag.unidad';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarCantidadLimiteMayorCero = '@Html.Raw(string.Format(BienesResource.EtiquetaCantidadLimiteMayorCero, ViewBag.unidades))';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarMontoAlquilerMayorCero = '@Html.Raw(string.Format(BienesResource.EtiquetaMontoAlquilerMayorCero, ViewBag.unidad))';
+    
+        </script>
+    @CustomHtmlHelper.RenderViewJs("contractualbienesformulariobienalquiler")
+}

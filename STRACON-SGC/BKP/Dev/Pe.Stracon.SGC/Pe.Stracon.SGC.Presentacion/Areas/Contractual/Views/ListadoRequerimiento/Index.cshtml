@@ -1,0 +1,381 @@
+﻿@using Pe.Stracon.SGC.Presentacion.Recursos.Base
+@using Pe.Stracon.SGC.Presentacion.Recursos.Contractual
+@using Pe.Stracon.SGC.Presentacion.Recursos.Mensajes
+@using Pe.Stracon.SGC.Presentacion.Core.Helpers
+@using Pe.Stracon.SGC.Infraestructura.Core.Context
+@using Pe.Stracon.SGC.Aplicacion.Core.Message
+
+@model Pe.Stracon.SGC.Presentacion.Core.ViewModel.Contractual.ListadoRequerimiento.ListadoRequerimientoBusqueda
+
+@{
+    var disabled = (Model.ControlPermisos.ControlTotal || Model.ControlPermisos.Escritura) ? false : true;
+}
+
+<div class="GmdBody-header">
+    <h2>@ListadoRequerimientoResource.EtiquetaTituloPrincipal</h2>
+</div>
+<div class="GmdBody-body">
+
+    <div class="panel-estudio-asignado panel-group" id="divVisualizarFiltroBusqueda" role="tablist" aria-multiselectable="true">
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingOne">
+                <h4 class="panel-title">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#divVisualizarFiltroBusqueda" href="#divAcordionFiltroBusqueda">
+                        <div class="title-form">Reducir / Expandir Filtros</div>
+                    </a>
+                </h4>
+            </div>
+            <div id="divAcordionFiltroBusqueda" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                <form id="frmContratoBusqueda">
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label for="slcTipoServicio">@ListadoRequerimientoResource.EtiquetaUnidadOperativa</label>
+                                @Html.DropDownList("slcUnidadOperativa", @Model.ListadoUnidadOperativa, new { @class = "form-control", @id = "slcUnidadOperativa" })
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label for="slcTipoDocumento">@ListadoRequerimientoResource.EtiquetaTipoDocumento</label>
+                                @Html.DropDownList("slcTipoDocumento", @Model.TipoDocumento, new { @class = "form-control", @id = "slcTipoDocumento" })
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label for="slcEstadoContrato">@ListadoRequerimientoResource.EtiquetaEstadoContrato</label>
+                                @Html.DropDownList("slcEstadoContrato", @Model.EstadoContrato, new { @class = "form-control", @id = "slcEstadoContrato" })
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label for="txtNumeroContrato">@ListadoRequerimientoResource.EtiquetaNumeroContrato</label>
+                                @Html.TextBox("txtNumeroContrato", null, new { @class = "form-control", @id = "txtNumeroContrato" })
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label for="txtDescripcion">@ListadoRequerimientoResource.EtiquetaDescripcion</label>
+                                @Html.TextBox("txtDescripcion", null, new { @class = "form-control", @id = "txtDescripcion" })
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label>@ListadoRequerimientoResource.EtiquetaTipoMoneda</label>
+                                @Html.DropDownList("slcMoneda", @Model.Moneda, new { @class = "form-control", @id = "slcMoneda" })
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label>@ReporteListadoContratoResource.EtiquetaMontoAcumuladoInicio</label>
+                                <div class="input-group">
+                                    @Html.TextBox("txtMontoAcumuladoInicio", @Model.MontoAcumuladoInicio, new { @class = "form-control", @id = "txtMontoAcumuladoInicio" })
+                                    <div class="input-group-addon"><span class="fa fa-usd"></span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label>@ReporteListadoContratoResource.EtiquetaMontoAcumuladoFin</label>
+                                <div class="input-group">
+                                    @Html.TextBox("txtMontoAcumuladoFin", @Model.MontoAcumuladoFin, new { @class = "form-control", @id = "txtMontoAcumuladoFin" })
+                                    <div class="input-group-addon"><span class="fa fa-usd"></span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label for="textContenidoContrato">Usuario Creación</label>
+                                @Html.TextBox("textUsuarioCreacionContrato", null, new { @class = "form-control", @id = "textUsuarioCreacionContrato" })
+                            </div>
+                        </div>
+
+                    </div>
+                
+                </form>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <button class="btn btn-info" id="btnLimpiar" type="reset">@GenericoResource.BotonLimpiar</button>
+                            <button class="btn btn-default" id="btnBuscar">@GenericoResource.BotonMostrar</button>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+    <hr />
+    <div class="row">
+        <div class="col-sm-6 text-left">
+            <div class="form-group">
+                <h3>@GenericoResource.EtiquetaResultadosBusqueda</h3>
+            </div>
+        </div>
+        <div class="col-sm-6 text-right">
+            <div class="form-group">
+              @if (!disabled)
+                {
+                    <button id="btnAgregar" class="btn btn-primary">@GenericoResource.BotonAñadir</button>
+                }
+            </div>
+        </div>
+    </div>
+    <div id="divGrdResult">
+    </div>
+</div>
+
+<style type="text/css">
+    p {
+        margin: 0 0 15px;
+        font-size: 10.5px;
+        color: #565656;
+    }
+</style>
+
+@section scripts
+{
+    <script type="text/javascript">
+        ns('Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Actions')
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Actions.BuscarContrato = '@Url.Action("BuscarContrato", "ListadoRequerimiento", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Actions.BuscarPlantillaFlujoAprobacion = '@Url.Action("BuscarPlantillaFlujoAprobacion", "ListadoRequerimiento", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Actions.BuscarRegistrarProveedorContrato = '@Url.Action("BuscarRegistrarProveedorContrato", "ListadoRequerimiento", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Actions.ObtenerMontoAcumuladoContrato = '@Url.Action("ObtenerMontoAcumuladoContrato", "ListadoRequerimiento", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Actions.BuscarSimboloMoneda = '@Url.Action("BuscarSimboloMoneda", "ListadoRequerimiento", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Actions.BuscarMontoMinimo = '@Url.Action("BuscarMontoMinimo", "ListadoRequerimiento", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Actions.BuscarTipoServicio = '@Url.Action("BuscarTipoServicio", "ListadoRequerimiento", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Actions.BuscarUnidadOperativa = '@Url.Action("BuscarUnidadOperativa", "ListadoRequerimiento", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Actions.FormularioContrato = '@Url.Action("FormularioContrato", "ListadoRequerimiento", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Actions.RegistrarContrato = '@Url.Action("RegistrarContrato", "ListadoRequerimiento", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Actions.EliminarContrato = '@Url.Action("EliminarContrato", "ListadoRequerimiento", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Actions.FormularioContratoParrafo = '@Url.Action("FormularioContratoParrafo", "ListadoRequerimiento", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Actions.BuscarListaParrafo = '@Url.Action("BuscarListaParrafo", "ListadoRequerimiento", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Actions.FormularioContratoVistaPrevia = '@Url.Action("FormularioContratoVistaPrevia", "ListadoRequerimiento", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Actions.BuscarContratoPrincipal = '@Url.Action("BuscarContratoPrincipal", "ListadoRequerimiento", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Actions.FormularioContratoEditar = '@Url.Action("FormularioContratoEditar", "ListadoRequerimiento", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Actions.RegRespuestaAutorizador = '@Url.Action("RegistrarRespuestaAutorizador", "ListadoRequerimiento", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Actions.MostrarContratoDocumento = '@Url.Action("MostrarContratoDocumento", "BandejaContrato", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Actions.FormularioContratoParrafoTabla = '@Url.Action("FormularioContratoParrafoTabla", "ListadoRequerimiento", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Actions.FormularioContratoParrafoBien = '@Url.Action("FormularioContratoParrafoBien", "ListadoRequerimiento", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Actions.FormularioContratoParrafoFirmante = '@Url.Action("FormularioContratoParrafoFirmante", "ListadoRequerimiento", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Actions.ObtenerDescripcionCompletaBien = '@Url.Action("ObtenerDescripcionCompletaBien", "ListadoRequerimiento", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Actions.GenerarVistaPreviaContrato = '@Url.Action("GenerarVistaPreviaContrato", "ListadoRequerimiento", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Actions.RegistrarContratoGeneral = '@Url.Action("RegistrarContratoGeneral", "ListadoRequerimiento", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Actions.RegistrarContratoAdhesion = '@Url.Action("RegistrarContratoAdhesion", "ListadoRequerimiento", new { Area = "Contractual" })';
+        
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Actions.FormularioContratoFlexibleEditar = '@Url.Action("FormularioContratoFlexibleEditar", "ListadoRequerimiento", new { Area = "Contractual" })';
+
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Actions.BuscarTrabajador = '@Url.Action("BuscarTrabajador", "ListadoRequerimiento", new { Area = "Contractual" })';
+
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Actions.BuscarProveedorSAP = '@Url.Action("BuscarProveedorSAP", "ListadoRequerimiento", new { Area = "Contractual" })';
+
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Actions.FormularioCargaAdjunto = '@Url.Action("FormularioCargaAdjunto", "ArchivoAdjuntoContrato", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Actions.RegistrarArchivoAdjunto = '@Url.Action("RegistrarArchivoAdjunto", "ArchivoAdjuntoContrato", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Actions.EliminarArchivoAdjunto = '@Url.Action("EliminarArchivoAdjunto", "ArchivoAdjuntoContrato", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Actions.DescargarArchivoAdjunto = '@Url.Action("DescargarArchivoAdjunto", "ArchivoAdjuntoContrato", new { Area = "Contractual" })';
+
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Actions.FormularioCargaAdjuntoResolucion = '@Url.Action("FormularioCargaAdjuntoResolucion", "ArchivoAdjuntoContratoResolucion", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Actions.RegistrarArchivoAdjuntoResolucion = '@Url.Action("RegistrarArchivoAdjuntoResolucion", "ArchivoAdjuntoContratoResolucion", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Actions.EliminarArchivoAdjuntoResolucion = '@Url.Action("EliminarArchivoAdjuntoResolucion", "ArchivoAdjuntoContratoResolucion", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Actions.DescargarArchivoAdjuntoResolucion = '@Url.Action("DescargarArchivoAdjuntoResolucion", "ArchivoAdjuntoContratoResolucion", new { Area = "Contractual" })';
+
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Actions.FormularioContratoEliminar = '@Url.Action("FormularioContratoEliminar", "ListadoRequerimiento", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Actions.BuscarNumeroContrato = '@Url.Action("BuscarNumeroContrato", "ListadoRequerimiento", new { Area = "Contractual" })';
+
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Actions.ObtenerContrato = '@Url.Action("BuscarContratoPorNumero", "ListadoRequerimiento", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Actions.FormularioCopiaContrato = '@Url.Action("FormularioCopiaContrato", "ListadoRequerimiento", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Actions.RegistrarCopiaContrato = '@Url.Action("RegistrarCopiaContrato", "ListadoRequerimiento", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Actions.FormularioContratoFlexibleCopiar = '@Url.Action("FormularioContratoFlexibleCopiar", "ListadoRequerimiento", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Actions.RegRespuestaGrabarAutorizador = '@Url.Action("RegistrarRespuestaGrabarAutorizador", "ListadoRequerimiento", new { Area = "Contractual" })';
+
+        ns('Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.ListadoRequerimiento.Mensajes')
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.ListadoRequerimiento.Mensajes.MsjValidaRptaAutorizador = '@Html.Raw(ListadoRequerimientoResource.MsjValidaRptaAutorizador)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.ListadoRequerimiento.Mensajes.EstadoEdicionEditado = '@Html.Raw(DatosConstantes.CodigoEstadoEdicion.Editada)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.ListadoRequerimiento.Mensajes.EstadoEdicionSolicitaAu = '@Html.Raw(DatosConstantes.CodigoEstadoEdicion.SolicitudAutorizada)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.ListadoRequerimiento.Mensajes.EdicionRechazada = '@Html.Raw(DatosConstantes.CodigoEstadoEdicion.EdicionRechazada)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.ListadoRequerimiento.Mensajes.MsjConfirmaRptaAutoriza = '@Html.Raw(ListadoRequerimientoResource.MsjConfirmaRptaAutoriza)';
+
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.ListadoRequerimiento.Mensajes.RevisionRechazada = '@Html.Raw(DatosConstantes.CodigoEstadoEdicion.RevisionRechazada)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.ListadoRequerimiento.Mensajes.RevisionRevisada = '@Html.Raw(DatosConstantes.CodigoEstadoEdicion.RevisionRevisada)';
+
+        ns('Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Resources')
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Resources.EtiquetaFormularioContrato = '@Html.Raw(ListadoRequerimientoResource.EtiquetaFormularioContrato)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Resources.EtiquetaFormularioContratoParrafo = '@Html.Raw(ListadoRequerimientoResource.EtiquetaFormularioContratoParrafo)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Resources.EtiquetaFormularioContratoParrafoTabla = '@Html.Raw(ListadoRequerimientoResource.EtiquetaFormularioContratoParrafoTabla)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Resources.EtiquetaFormularioContratoParrafoBien = '@Html.Raw(ListadoRequerimientoResource.EtiquetaFormularioContratoParrafoBien)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Resources.EtiquetaFormularioContratoParrafoFirmante = '@Html.Raw(ListadoRequerimientoResource.EtiquetaFormularioContratoParrafoFirmante)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Resources.EtiquetaFormularioContratoVistaPrevia = '@Html.Raw(ListadoRequerimientoResource.EtiquetaFormularioContratoVistaPrevia)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Resources.GridDescripcion = '@Html.Raw(ListadoRequerimientoResource.GridDescripcion)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Resources.GridNombreUnidadOperativa = '@Html.Raw(ListadoRequerimientoResource.GridNombreUnidadOperativa)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Resources.GridNumeroContrato = '@Html.Raw(ListadoRequerimientoResource.GridNumeroContrato)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Resources.GridProveedor = '@Html.Raw(ListadoRequerimientoResource.GridProveedor)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Resources.GridFechaInicio = '@Html.Raw(ListadoRequerimientoResource.GridFechaInicio)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Resources.GridFechaFin = '@Html.Raw(ListadoRequerimientoResource.GridFechaFin)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Resources.GridTipoServicio = '@Html.Raw(ListadoRequerimientoResource.GridTipoServicio)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Resources.GridTipoRequerimiento = '@Html.Raw(ListadoRequerimientoResource.GridTipoRequerimiento)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Resources.GridTipoDocumento = '@Html.Raw(ListadoRequerimientoResource.GridTipoDocumento)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Resources.GridEstadoContrato = '@Html.Raw(ListadoRequerimientoResource.GridEstadoContrato)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Resources.GridEstadoEdicion = '@Html.Raw(ListadoRequerimientoResource.GridEstadoEdicion)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Resources.GridNombreResponsable = '@Html.Raw(ListadoRequerimientoResource.GridNombreResponsable)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Resources.GridDiasVencimiento = '@Html.Raw(ListadoRequerimientoResource.GridDiasVencimiento)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Resources.GridAcciones = '@Html.Raw(GenericoResource.GridAcciones)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Resources.EtiquetaTituloConfirmar = '@Html.Raw(GenericoResource.EtiquetaTituloConfirmar)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Resources.EtiquetaTituloAdvertencia = '@Html.Raw(MensajeResource.EtiquetaTituloAdvertencia)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Resources.EtiquetaRegistroTabla = '@Html.Raw(ListadoRequerimientoResource.EtiquetaRegistroTabla)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Resources.EtiquetaEliminar = '@Html.Raw(GenericoResource.BotonEliminar)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Resources.ConfirmacionEliminacionRegistro = '@Html.Raw(MensajeResource.ConfirmacionEliminacion)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Resources.ConfirmacionEliminacionRegistros = '@Html.Raw(MensajeResource.MsgEliminacionList)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Resources.TituloEliminar = '@Html.Raw(ListadoRequerimientoResource.EtiquetaDlgTituloEliminar)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Resources.EtiquetaVariableTablaSinColumnas = '@Html.Raw(ListadoRequerimientoResource.EtiquetaVariableTablaSinColumnas)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Resources.EtiquetaVariables = '@Html.Raw(ListadoRequerimientoResource.EtiquetaVariables)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Resources.GridNumeroAdenda = '@Html.Raw(ListadoRequerimientoResource.GridNumeroAdenda)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Resources.GridNombre = '@Html.Raw(ListadoRequerimientoResource.GridNombre)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Resources.GridDatosAdicionales = '@Html.Raw(ListadoRequerimientoResource.GridDatosAdicionales)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Resources.GridFechaResolucion = '@Html.Raw(ListadoRequerimientoResource.GridFechaResolucion)';
+
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Resources.GridUsuarioCreacion = '@Html.Raw(ListadoRequerimientoResource.GridUsuarioCreacion)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Resources.GridFechaCreacion = '@Html.Raw(ListadoRequerimientoResource.GridFechaCreacion)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Resources.GridEstadioActual = '@Html.Raw(ListadoRequerimientoResource.GridEstadioActual)';
+
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Resources.GridMontoAcumulado = '@Html.Raw(ListadoRequerimientoResource.GridMontoAcumulado)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Resources.GridMontoContrato = '@Html.Raw(ListadoRequerimientoResource.GridMontoContrato)';
+
+
+        ns('Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Bien.Resources')
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Bien.Resources.GridCodigoIdentificacion = '@Html.Raw(BienesResource.GridCodigoIdentificacion)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Bien.Resources.GridNumeroSerie = '@Html.Raw(BienesResource.GridNumeroSerie)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Bien.Resources.GridDescripcion = '@Html.Raw(BienesResource.GridDescripcion)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Bien.Resources.GridMarca = '@Html.Raw(BienesResource.GridMarca)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Bien.Resources.GridModelo = '@Html.Raw(BienesResource.GridModelo)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Bien.Resources.GridFechaAdquisicion = '@Html.Raw(BienesResource.GridFechaAdquisicion)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Bien.Resources.GridInicioAlquiler = '@Html.Raw(BienesResource.GridInicioAlquiler)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Bien.Resources.GridTarifa = '@Html.Raw(BienesResource.GridTarifa)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Bien.Resources.MsjAyudaBien = '@Html.Raw(BienesResource.MsjAyudaBien)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Bien.Resources.MsjBienNoExiste = '@Html.Raw(BienesResource.MsjBienNoExiste)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Bien.Resources.MsjBuscarBien = '@Html.Raw(BienesResource.MsjBuscarBien)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Bien.Resources.MsjValidaAgregarBien = '@Html.Raw(BienesResource.MsjValidaAgregarBien)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Bien.Resources.MsjValidaBienAgregado = '@Html.Raw(BienesResource.MsjValidaBienAgregado)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Bien.Resources.GridAcciones = 'Acciones';
+
+        ns('Pe.Stracon.SGC.Presentacion.Recursos.Validacion')
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.EtiquetaPlantillaNoExiste = '@Html.Raw(MensajesSistema.PlantillaNoExiste)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.EtiquetaFlujoAprobacionNoExiste = '@Html.Raw(MensajesSistema.FlujoAprobacionNoExiste)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.EtiquetaPlantillaFlujoAprobacionNoExiste = '@Html.Raw(MensajesSistema.PlantillaFlujoAprobacionNoExiste)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.EtiquetaValidaMoneda = '@Html.Raw(MensajesSistema.ValidaMoneda)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.EtiquetaPlantillaParrafoNoExiste = '@Html.Raw(MensajesSistema.PlantillaParrafoNoExiste)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.SeleccionarRegistroEliminar = '@Html.Raw(MensajeResource.SeleccionarRegistroEliminar)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ConfirmacionGuardar = '@Html.Raw(MensajeResource.ConfirmacionGuardar)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.EtiquetaConfirmacion = '@MensajeResource.SeGuardoInformacionExito';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarUnidadOperativa = '@Html.Raw(ListadoRequerimientoResource.EtiquetaUnidadOperativa)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarTipoServicio = '@Html.Raw(ListadoRequerimientoResource.EtiquetaTipoServicio)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarTipoRequerimiento = '@Html.Raw(ListadoRequerimientoResource.EtiquetaTipoRequerimiento)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarProveedor = '@Html.Raw(ListadoRequerimientoResource.EtiquetaProveedor)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarTipoDocumento = '@Html.Raw(ListadoRequerimientoResource.EtiquetaTipoDocumento)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarContratoPrincipal = '@Html.Raw(ListadoRequerimientoResource.EtiquetaContratoPrincipal)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarMoneda = '@Html.Raw(ListadoRequerimientoResource.EtiquetaMoneda)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarMontoContrato = '@Html.Raw(ListadoRequerimientoResource.EtiquetaMontoContrato)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarMontoContratoMayorCero = '@Html.Raw(ListadoRequerimientoResource.EtiquetaMontoContratoMayorCero)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarFechaInicioVigencia = '@Html.Raw(ListadoRequerimientoResource.EtiquetaFechaInicioVigencia)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarFechaFinVigencia = '@Html.Raw(ListadoRequerimientoResource.EtiquetaFechaFinVigencia)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarDescripcion = '@Html.Raw(ListadoRequerimientoResource.EtiquetaDescripcion)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarRequerido = '@Html.Raw(ListadoRequerimientoResource.EtiquetaRequerido)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarRangoFechas = '@Html.Raw(ListadoRequerimientoResource.EtiquetaValidarRangoFechas)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarModificacionSolicitada = '@Html.Raw(ListadoRequerimientoResource.EtiquetaDescripcionModificacionSolicitada)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarBien = '@Html.Raw(BienesResource.EtiquetaBien)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.EtiquetaInformacionMontoAcumulado = '@Html.Raw(ListadoRequerimientoResource.EtiquetaInformacionMontoAcumulado)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.EtiquetaEliminacionExitosa = '@Html.Raw(MensajeResource.SeEliminoInformacionExito)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.EtiquetaErrorEliminar = '@Html.Raw(MensajeResource.EtiquetaErrorRegistro)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.MensajeValidacionTamanioImagen = '@Html.Raw(ListadoRequerimientoResource.MensajeValidacionTamanioImagen)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.MensajeValidacionTamanioArchivo = '@Html.Raw(ListadoRequerimientoResource.MensajeValidacionTamanioArchivo)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.EtiquetaTituloConfirmar = '@Html.Raw(GenericoResource.EtiquetaTituloConfirmar)';
+
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.EtiquetaContratoExistente = '@Html.Raw(ListadoRequerimientoResource.EtiquetaValidacionNumeroContrato)';
+
+        ns('Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Enumerados.TipoDocumento')
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Enumerados.TipoDocumento.Contrato = '@DatosConstantes.TipoDocumento.Contrato';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Enumerados.TipoDocumento.Adenda = '@DatosConstantes.TipoDocumento.Adenda';
+
+        ns('Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Enumerados.TipoVariable')
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Enumerados.TipoVariable.Texto = '@DatosConstantes.TipoVariable.Texto';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Enumerados.TipoVariable.Numero = '@DatosConstantes.TipoVariable.Numero';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Enumerados.TipoVariable.Fecha = '@DatosConstantes.TipoVariable.Fecha';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Enumerados.TipoVariable.Tabla = '@DatosConstantes.TipoVariable.Tabla';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Enumerados.TipoVariable.Imagen = '@DatosConstantes.TipoVariable.Imagen';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Enumerados.TipoVariable.Lista = '@DatosConstantes.TipoVariable.Lista';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Enumerados.TipoVariable.ListaEquipo = '@DatosConstantes.TipoVariable.ListaEquipo';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Enumerados.TipoVariable.Bien = '@DatosConstantes.TipoVariable.Bien';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Enumerados.TipoVariable.Firmante = '@DatosConstantes.TipoVariable.Firmante';
+
+        ns('Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Enumerados.CodigoEstadoEdicion')
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Enumerados.CodigoEstadoEdicion.EdicionParcial = '@DatosConstantes.CodigoEstadoEdicion.EdicionParcial';
+
+        ns('Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Enumerados.EstadoContrato')
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Enumerados.EstadoContrato.Edicion = '@DatosConstantes.EstadoContrato.Edicion';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Enumerados.EstadoContrato.Aprobacion = '@DatosConstantes.EstadoContrato.Aprobacion';
+
+        ns('Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Enumerados.TipoValidacionContratoResolucion')
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Enumerados.TipoValidacionContratoResolucion.No_Cumple = '@DatosConstantes.TipoValidacionContratoResolucion.No_Cumple';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Enumerados.TipoValidacionContratoResolucion.Cumple_Carga = '@DatosConstantes.TipoValidacionContratoResolucion.Cumple_Carga';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Enumerados.TipoValidacionContratoResolucion.Cargado_Modo_Lectura = '@DatosConstantes.TipoValidacionContratoResolucion.Cargado_Modo_Lectura';
+
+        ns('Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Enumerados.TipoRegistro')
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Enumerados.TipoRegistro.Parcial = '@DatosConstantes.TipoRegistro.Parcial';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Enumerados.TipoRegistro.Total = '@DatosConstantes.TipoRegistro.Total';
+
+        ns('Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Enumerados.Formato')
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Enumerados.Formato.FormatoNumeroAdenda = '@DatosConstantes.Formato.FormatoNumeroAdenda';
+
+        ns('Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Enumerados.IdentificadorVariableDefecto')
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Enumerados.IdentificadorVariableDefecto.PrimerRepresentanteEmpresa = '@DatosConstantes.IdentificadorVariableDefecto.PrimerRepresentanteEmpresa';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Enumerados.IdentificadorVariableDefecto.DniPrimerRepresentanteEmpresa = '@DatosConstantes.IdentificadorVariableDefecto.DniPrimerRepresentanteEmpresa';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Enumerados.IdentificadorVariableDefecto.SegundoRepresentanteEmpresa = '@DatosConstantes.IdentificadorVariableDefecto.SegundoRepresentanteEmpresa';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Enumerados.IdentificadorVariableDefecto.DniSegundoRepresentanteEmpresa = '@DatosConstantes.IdentificadorVariableDefecto.DniSegundoRepresentanteEmpresa';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Enumerados.IdentificadorVariableDefecto.FirmaSGC = '@DatosConstantes.IdentificadorVariableDefecto.FirmaSGC';
+
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Enumerados.IdentificadorVariableDefecto.PlazoVigenciaDesde = '@DatosConstantes.IdentificadorVariableDefecto.PlazoVigenciaDesde';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Enumerados.IdentificadorVariableDefecto.FechaInicioContrato = '@DatosConstantes.IdentificadorVariableDefecto.FechaInicioContrato';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Enumerados.IdentificadorVariableDefecto.PlazoVigenciaHasta = '@DatosConstantes.IdentificadorVariableDefecto.PlazoVigenciaHasta';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Enumerados.IdentificadorVariableDefecto.FechaFinContrato = '@DatosConstantes.IdentificadorVariableDefecto.FechaFinContrato';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Enumerados.IdentificadorVariableDefecto.MonedaContrato = '@DatosConstantes.IdentificadorVariableDefecto.MonedaContrato';
+        Pe.Stracon.SGC.Presentacion.Contractual.Requerimiento.Enumerados.IdentificadorVariableDefecto.MontoContrato = '@DatosConstantes.IdentificadorVariableDefecto.MontoContrato';
+
+        ns('Pe.Stracon.SGC.Presentacion.Contractual.ListadoContrato.BuscarNumeroContrato.Resource')
+        Pe.Stracon.SGC.Presentacion.Contractual.ListadoContrato.BuscarNumeroContrato.Resource.MensajeIngresarNumero = '@Html.Raw(BuscarNumeroContratoResource.MensajeIngresarNumero)';
+        Pe.Stracon.SGC.Presentacion.Contractual.ListadoContrato.BuscarNumeroContrato.Resource.MensajeNumeroContratoInvalido = '@Html.Raw(BuscarNumeroContratoResource.MensajeNumeroContratoInvalido)';
+        Pe.Stracon.SGC.Presentacion.Contractual.ListadoContrato.BuscarNumeroContrato.Resource.MensajeValidaEstado = '@Html.Raw(BuscarNumeroContratoResource.MensajeValidaEstado)';
+        Pe.Stracon.SGC.Presentacion.Contractual.ListadoContrato.BuscarNumeroContrato.Resource.TituloBuscarContrato = '@Html.Raw(BuscarNumeroContratoResource.TituloBuscarContrato)';
+
+        ns('Pe.Stracon.SGC.Presentacion.Contractual.ListadoContrato.BuscarNumeroContrato.Constantes')
+        Pe.Stracon.SGC.Presentacion.Contractual.ListadoContrato.BuscarNumeroContrato.Constantes.EstadoContratoEdicion = '@Html.Raw(DatosConstantes.EstadoContrato.Edicion)';
+        Pe.Stracon.SGC.Presentacion.Contractual.ListadoContrato.BuscarNumeroContrato.Constantes.EstadoContratoEnRevision = '@Html.Raw(DatosConstantes.EstadoContrato.Aprobacion)';
+        Pe.Stracon.SGC.Presentacion.Contractual.ListadoContrato.BuscarNumeroContrato.Constantes.EstadoContratoVigente = '@Html.Raw(DatosConstantes.EstadoContrato.Vigente)';
+        Pe.Stracon.SGC.Presentacion.Contractual.ListadoContrato.BuscarNumeroContrato.Constantes.EstadoContratoVencido = '@Html.Raw(DatosConstantes.EstadoContrato.Vencido)';
+        Pe.Stracon.SGC.Presentacion.Contractual.ListadoContrato.BuscarNumeroContrato.Constantes.EstadoContratoResuelto = '@Html.Raw(DatosConstantes.EstadoContrato.Resuelto)';
+
+        Pe.Stracon.SGC.Presentacion.Contractual.ListadoContrato.BuscarNumeroContrato.Constantes.TipoDocumentoContrato = '@Html.Raw(DatosConstantes.TipoDocumento.Contrato)';
+        Pe.Stracon.SGC.Presentacion.Contractual.ListadoContrato.BuscarNumeroContrato.Constantes.TipoDocumentoAdenda = '@Html.Raw(DatosConstantes.TipoDocumento.Adenda)';
+
+        ns('Pe.Stracon.SGC.Presentacion.Contractual.ListadoRequerimiento.Models')
+        Pe.Stracon.SGC.Presentacion.Contractual.ListadoRequerimiento.Models.Index = @(Html.Raw(Json.Encode(Model)));
+
+    </script>
+
+    @CustomHtmlHelper.RenderViewJs("contractuallistadorequerimientoformulariocontrato")
+    @CustomHtmlHelper.RenderViewJs("basebuscadorproveedor")
+    @CustomHtmlHelper.RenderViewJs("contractuallistadorequerimientobuscarcontratoprincipal")
+    @CustomHtmlHelper.RenderViewJs("contractuallistadorequerimientoformulariocontratoparrafo")
+    @CustomHtmlHelper.RenderViewJs("contractuallistadorequerimientoformulariocontratovistaprevia")
+    @CustomHtmlHelper.RenderViewJs("contractuallistadorequerimientoformulariocontratoparrafotabla")
+    @CustomHtmlHelper.RenderViewJs("contractuallistadorequerimientoformulariocontratoparrafobien")
+    @CustomHtmlHelper.RenderViewJs("contractuallistadorequerimientoformulariocontratoparrafofirmante")
+    @CustomHtmlHelper.RenderViewJs("contractualarchivoadjuntorequerimientoformularioarchivoadjunto")
+    @CustomHtmlHelper.RenderViewJs("contractualarchivoadjuntocontratoresolucionformularioarchivoadjuntoresolucion")
+    @CustomHtmlHelper.RenderViewJs("basecargaarchivo")
+    @CustomHtmlHelper.RenderViewJs("contractuallistadorequerimientoformulariocontratoeliminar")
+    @CustomHtmlHelper.RenderViewJs("contractuallistadorequerimientobuscarnumerocontrato")
+    @CustomHtmlHelper.RenderViewJs("contractuallistadorequerimientoformulariocontratoflexiblecopiar")
+
+    @CustomHtmlHelper.RenderViewJs("contractuallistadorequerimientoformulariocopiacontrato")
+}

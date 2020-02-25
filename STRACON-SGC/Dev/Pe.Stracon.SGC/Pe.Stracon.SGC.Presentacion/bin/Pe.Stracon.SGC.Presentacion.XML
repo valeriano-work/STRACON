@@ -1,0 +1,181 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Pe.Stracon.SGC.Presentacion</name>
+    </assembly>
+    <members>
+        <member name="T:Pe.Stracon.SGC.Presentacion.BundleConfig">
+            <summary>
+            BundleConfig.
+            </summary>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Presentacion.BundleConfig.RegisterBundles(System.Web.Optimization.BundleCollection)">
+            <summary>
+            Registra los Bundles.
+            </summary>
+            <param name="bundles"></param>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Presentacion.App_Start.Startup">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Presentacion.App_Start.Startup.Configuration(Owin.IAppBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="app"></param>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Presentacion.Areas.Base.Views.Reporte.ReportViewControl">
+            <summary>
+            Clase de Report View Control
+            </summary>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Presentacion.Areas.Base.Views.Reporte.ReportViewControl.Page_Init(System.Object,System.EventArgs)">
+            <summary>
+            Método para inicializar la página
+            </summary>
+            <param name="sender">Envio</param>
+            <param name="e">Evento</param>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Presentacion.Areas.Base.Views.Reporte.ReportViewControl.Page_Load(System.Object,System.EventArgs)">
+            <summary>
+            Método para cargar la página
+            </summary>
+            <param name="sender">Envio</param>
+            <param name="e">Evento</param>
+        </member>
+        <member name="F:Pe.Stracon.SGC.Presentacion.Areas.Base.Views.Reporte.ReportViewControl.form1">
+            <summary>
+            Control form1.
+            </summary>
+            <remarks>
+            Campo generado automáticamente.
+            Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+            </remarks>
+        </member>
+        <member name="F:Pe.Stracon.SGC.Presentacion.Areas.Base.Views.Reporte.ReportViewControl.ScriptManager1">
+            <summary>
+            Control ScriptManager1.
+            </summary>
+            <remarks>
+            Campo generado automáticamente.
+            Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+            </remarks>
+        </member>
+        <member name="F:Pe.Stracon.SGC.Presentacion.Areas.Base.Views.Reporte.ReportViewControl.ReportViewer">
+            <summary>
+            Control ReportViewer.
+            </summary>
+            <remarks>
+            Campo generado automáticamente.
+            Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+            </remarks>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Presentacion.Areas.Contractual.ContractualAreaRegistration">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Presentacion.Areas.Contractual.ContractualAreaRegistration.AreaName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Presentacion.Areas.Contractual.ContractualAreaRegistration.RegisterArea(System.Web.Mvc.AreaRegistrationContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Presentacion.Areas._Base.BaseAreaRegistration">
+            <summary>
+            
+            </summary>f
+        </member>
+        <member name="P:Pe.Stracon.SGC.Presentacion.Areas._Base.BaseAreaRegistration.AreaName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Presentacion.Areas._Base.BaseAreaRegistration.RegisterArea(System.Web.Mvc.AreaRegistrationContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Presentacion.MvcApplication">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Presentacion.MvcApplication.Application_Start">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Presentacion.MvcApplication.Application_End">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Presentacion.MvcApplication.Application_AcquireRequestState(System.Object,System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Presentacion.MvcApplication.Session_Start(System.Object,System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Presentacion.Hubs.Chat">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Presentacion.Hubs.Chat.Send(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Presentacion.FilterConfig">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Presentacion.FilterConfig.RegisterGlobalFilters(System.Web.Mvc.GlobalFilterCollection)">
+            <summary>
+            
+            </summary>
+            <param name="filters"></param>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Presentacion.RouteConfig">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Presentacion.RouteConfig.RegisterRoutes(System.Web.Routing.RouteCollection)">
+            <summary>
+            
+            </summary>
+            <param name="routes"></param>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Presentacion.WebApiConfig">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Presentacion.WebApiConfig.Register(System.Web.Http.HttpConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="config"></param>
+        </member>
+    </members>
+</doc>

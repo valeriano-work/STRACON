@@ -1,0 +1,197 @@
+﻿@using Pe.Stracon.SGC.Presentacion.Recursos.Base
+@using Pe.Stracon.SGC.Presentacion.Recursos.Contractual
+@using Pe.Stracon.SGC.Presentacion.Recursos.Mensajes
+@using Pe.Stracon.SGC.Presentacion.Core.Helpers
+@model Pe.Stracon.SGC.Presentacion.Core.ViewModel.Contractual.Bienes.BienesBusqueda
+
+@{
+    var disabledEscritura = (Model.ControlPermisos.ControlTotal || Model.ControlPermisos.Escritura) ? false : true;
+    var disabledEliminar = (Model.ControlPermisos.ControlTotal) ? false : true;
+}
+
+<div class="GmdBody-header">
+    <h2>@BienesResource.EtiquetaTituloPrincipal</h2>
+</div>
+<div class="GmdBody-body">
+    <form id="frmBienBusqueda">
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label for="txtCodigoIdentificacion">@BienesResource.EtiquetaCodigoIdentificacion</label>
+                    @Html.TextBox("txtCodigoIdentificacion", null, new { @class = "form-control", @id = "txtCodigoIdentificacion" })
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label for="slcTipoBien">@BienesResource.EtiquetaTipoBien</label>
+                    @Html.DropDownList("slcTipoBien", Model.TipoBien, new { @class = "form-control", @id = "slcTipoBien" })
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label for="txtNumeroSerie">@BienesResource.EtiquetaNumSerie</label>
+                    @Html.TextBox("txtNumeroSerie", null, new { @class = "form-control", @id = "txtNumeroSerie" })
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label for="txtDescripcion">@BienesResource.EtiquetaDescripcion</label>
+                    @Html.TextBox("txtDescripcion", null, new { @class = "form-control", @id = "txtDescripcion" })
+                </div>
+            </div>
+            @*<div class="col-sm-3">
+                <div class="form-group">
+                    <label for="txtMarca">@BienesResource.EtiquetaMarca</label>
+                    @Html.TextBox("txtMarca", null, new { @class = "form-control", @id = "txtMarca" })
+                </div>
+            </div>*@
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label for="txtMarca">@BienesResource.EtiquetaMarca</label>
+                    @Html.TextBox("txtMarca", null, new { @class = "form-control", @id = "txtMarca" })
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label for="txtModelo">@BienesResource.EtiquetaModelo</label>
+                    @Html.TextBox("txtModelo", null, new { @class = "form-control", @id = "txtModelo" })
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label for="txtFechaDesde">@BienesResource.EtiquetaFechaAdqDesde</label>
+                    <div class="input-group">
+                        @Html.TextBox("txtFechaDesde", null, new { @class = "form-control", @id = "txtFechaDesde" })
+                        <div class="input-group-addon"><span class="fa fa-calendar"></span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label for="txtFechaHasta">@BienesResource.EtiquetaFechaAdqHasta</label>
+                    <div class="input-group">
+                        @Html.TextBox("txtFechaHasta", null, new { @class = "form-control", @id = "txtFechaHasta" })
+                        <div class="input-group-addon"><span class="fa fa-calendar"></span></div>
+                    </div>
+                </div>
+            </div>
+            @*<div class="col-sm-3">
+                <div class="form-group">
+                    <label for="slcTipoTarifa">@BienesResource.EtiquetaTarifa</label>
+                    @Html.DropDownList("slcTipoTarifa", Model.TipoTarifa, new { @class = "form-control", @id = "slcTipoTarifa" })
+                </div>
+            </div>*@
+        </div>
+    </form>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="form-group">
+                <button class="btn btn-info" id="btnLimpiarBienes" type="reset">@GenericoResource.BotonLimpiar</button>
+                <button class="btn btn-default" id="btnBuscarBienes">@GenericoResource.BotonMostrar</button>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <div>
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>@GenericoResource.EtiquetaResultadosBusqueda</h3>
+            </div>
+            <div class="col-sm-6 text-right">
+                <div class="form-group">
+                    @if (!disabledEliminar)
+                    {
+                    <button id="btnEliminarBien" class="btn btn-info">@GenericoResource.BotonEliminar</button>
+                    }
+
+                    <button class="btn btn-info" id="btnSincronizar">Sincronizar SAP</button>
+
+                    @if (!disabledEscritura)
+                    {
+                        <button id="btnAgregarBien" class="btn btn-primary">@GenericoResource.BotonAñadir</button>
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="table-responsive">
+            <div id="divGrdResult">
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts
+{
+    <script type="text/javascript">
+        ns('Pe.Stracon.SGC.Presentacion.Contractual.Bienes.Actions')
+        Pe.Stracon.SGC.Presentacion.Contractual.Bienes.Actions.ListarBandejaBienes = '@Url.Action("ListaBienesBandeja", "Bienes", new { Area = "Contractual" })'
+        Pe.Stracon.SGC.Presentacion.Contractual.Bienes.Actions.FormularioBienes = '@Url.Action("FormularioBienes", "Bienes", new { Area = "Contractual" })'
+        Pe.Stracon.SGC.Presentacion.Contractual.Bienes.Actions.RegistrarBienes = '@Url.Action("RegistrarBienes", "Bienes", new { Area = "Contractual" })'
+        Pe.Stracon.SGC.Presentacion.Contractual.Bienes.Actions.PeriodoAlquilerPorTarifa = '@Url.Action("PeriodoAlquilerPorTarifa", "Bienes", new { Area = "Contractual" })'
+        Pe.Stracon.SGC.Presentacion.Contractual.Bienes.Actions.BandejaBienAlquiler = '@Url.Action("BandejaBienAlquiler", "Bienes", new { Area = "Contractual" })'
+        Pe.Stracon.SGC.Presentacion.Contractual.Bienes.Actions.ListaBienAlquilerBandeja = '@Url.Action("ListaBienAlquilerBandeja", "Bienes", new { Area = "Contractual" })'
+        Pe.Stracon.SGC.Presentacion.Contractual.Bienes.Actions.RetornaDatosBienRegistro = '@Url.Action("RetornaDatosBienRegistro", "Bienes", new { Area = "Contractual" })'
+        Pe.Stracon.SGC.Presentacion.Contractual.Bienes.Actions.EliminarBien = '@Url.Action("EliminarBien", "Bienes", new { Area = "Contractual" })'
+        Pe.Stracon.SGC.Presentacion.Contractual.Bienes.Actions.SincronizarServicioAmt = '@Url.Action("SincronizarServicioAmt", "Bienes", new { Area = "Contractual" })'
+        Pe.Stracon.SGC.Presentacion.Contractual.Bienes.Actions.SincronizarServicioSAP = '@Url.Action("SincronizarServicioSAP", "Bienes", new { Area = "Contractual" })'
+
+        ns('Pe.Stracon.SGC.Presentacion.Contractual.Bienes.Resources')
+        Pe.Stracon.SGC.Presentacion.Contractual.Bienes.Resources.GridCodigoIdentificacion = '@Html.Raw(BienesResource.GridCodigoIdentificacion)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Bienes.Resources.GridTipoBien = '@Html.Raw(BienesResource.GridTipoBien)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Bienes.Resources.GridNumeroSerie = '@Html.Raw(BienesResource.GridNumeroSerie)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Bienes.Resources.GridDescripcion = '@Html.Raw(BienesResource.GridDescripcion)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Bienes.Resources.GridMarca = '@Html.Raw(BienesResource.GridMarca)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Bienes.Resources.GridModelo = '@Html.Raw(BienesResource.GridModelo)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Bienes.Resources.GridVidaUtil = '@Html.Raw(BienesResource.GridVidaUtil)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Bienes.Resources.GridFechaAdquisicion = '@Html.Raw(BienesResource.GridFechaAdquisicion)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Bienes.Resources.GridTipoTarifa = '@Html.Raw(BienesResource.GridTipoTarifa)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Bienes.Resources.GridPeriodoAlquiler = '@Html.Raw(BienesResource.GridPeriodoAlquiler)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Bienes.Resources.GridValorAlquiler = '@Html.Raw(BienesResource.GridValorAlquiler)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Bienes.Resources.GridMoneda = '@Html.Raw(BienesResource.GridMoneda)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Bienes.Resources.GridResidual = '@Html.Raw(BienesResource.GridResidual)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Bienes.Resources.GridInicioAlquiler = '@Html.Raw(BienesResource.GridInicioAlquiler)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Bienes.Resources.GridAcciones = '@Html.Raw(GenericoResource.GridAcciones)';
+
+        Pe.Stracon.SGC.Presentacion.Contractual.Bienes.Resources.EtiquetaTituloConfirmar = '@Html.Raw(GenericoResource.EtiquetaTituloConfirmar)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Bienes.Resources.EtiquetaTituloAdvertencia = '@Html.Raw(MensajeResource.EtiquetaTituloAdvertencia)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Bienes.Resources.TituloEliminar = '@Html.Raw(BienesResource.EtiquetaDlgTituloEliminarBien)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Bienes.Resources.ConfirmacionEliminacionRegistro = '@Html.Raw(MensajeResource.ConfirmacionEliminacion)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Bienes.Resources.ConfirmacionEliminacionRegistros = '@Html.Raw(MensajeResource.MsgEliminacionList)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Bienes.Resources.CodigoTarifaFijo = '@Html.Raw(BienesResource.CodigoTarifaFijo)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Bienes.Resources.CodigoTarifaEscalonado = '@Html.Raw(BienesResource.CodigoTarifaEscalonado)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Bienes.Resources.MsjValidaVidaUtil = '@Html.Raw(BienesResource.MsjValidaVidaUtil)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Bienes.Resources.MsjValidaVidaMoneda = '@Html.Raw(BienesResource.MsjValidaVidaMoneda)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Bienes.Resources.MsjConfirmaEliminar = '@Html.Raw(BienesResource.MsjConfirmaEliminar)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Bienes.Resources.ValidarMesInicioAlquiler = '@Html.Raw(BienesResource.EtiquetaMesInicioAlquiler)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Bienes.Resources.ValidarAnioInicioAlquiler = '@Html.Raw(BienesResource.EtiquetaAnioInicioAlquiler)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Bienes.Resources.EtiquetaSeleccionar = '@Html.Raw(GenericoResource.EtiquetaSeleccionar)';
+
+        ns('Pe.Stracon.SGC.Presentacion.Recursos.Validacion')
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.SeleccionarRegistroEliminar = '@Html.Raw(MensajeResource.SeleccionarRegistroEliminar)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ConfirmacionGuardar = '@Html.Raw(MensajeResource.ConfirmacionGuardar)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.EtiquetaConfirmacion = '@MensajeResource.SeGuardoInformacionExito';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarCodigoIdentificacion = '@Html.Raw(BienesResource.EtiquetaCodigoIdentificacion)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarTipoBien = '@Html.Raw(BienesResource.EtiquetaTipoBien)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarNumeroSerie = '@Html.Raw(BienesResource.EtiquetaNumSerie)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarDescripcion = '@Html.Raw(BienesResource.EtiquetaDescripcion)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarMarca = '@Html.Raw(BienesResource.EtiquetaMarca)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarModelo = '@Html.Raw(BienesResource.EtiquetaModelo)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarFechaAdquisicion = '@Html.Raw(BienesResource.EtiquetaFechaAdquisicion)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarTiempoVidaUtil = '@Html.Raw(BienesResource.EtiquetaTiempoVidaUtil)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarValorResidual = '@Html.Raw(BienesResource.EtiquetaValorResidual)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarTipoTarifa = '@Html.Raw(BienesResource.EtiquetaTipoTarifa)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarTipoPeriodoAlquiler = '@Html.Raw(BienesResource.EtiquetaTipoPeriodoAlquiler)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarValorAlquiler = '@Html.Raw(BienesResource.EtiquetaValorAlquiler)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarMoneda = '@Html.Raw(BienesResource.EtiquetaMoneda)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarMesInicioAlquiler = '@Html.Raw(BienesResource.EtiquetaMesInicioAlquiler)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarAnioInicioAlquiler = '@Html.Raw(BienesResource.EtiquetaAnioInicioAlquiler)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarValorAlquilerMayorCero = '@Html.Raw(BienesResource.EtiquetaValorAlquilerMayorCero)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarTiempoVidaMayorCero = '@Html.Raw(BienesResource.ValidarTiempoVidaMayorCero)';
+    
+        ns('Pe.Stracon.SGC.Presentacion.Contractual.Bienes.Models')
+        Pe.Stracon.SGC.Presentacion.Contractual.Bienes.Models.Index = @(Html.Raw(Json.Encode(Model)));
+        
+        </script>
+    @CustomHtmlHelper.RenderViewJs("contractualbienesformulariobienes")
+}

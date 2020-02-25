@@ -1,0 +1,1740 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Pe.Stracon.SGC.Aplicacion.Core</name>
+    </assembly>
+    <members>
+        <member name="T:Pe.Stracon.SGC.Aplicacion.Core.Base.ConvertFormat">
+            <summary>
+             Clase de Conversión de Formatos
+            </summary>
+            <remarks>
+            Creación:   GMD 20150519 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.Base.ConvertFormat.DatetimeFormatString(System.Nullable{System.DateTime},System.String)">
+            <summary>
+            Permite convertir el formato DateTime
+            </summary>
+            <param name="value">valor</param>
+            <param name="format">Formato</param>
+            <returns>Retorna formato DateTime</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.Base.ConvertFormat.RetornarFechaPorDefault(System.String,System.String)">
+            <summary>
+            Permite retornar fecha por defecto
+            </summary>
+            <param name="fecha">Fecha en cadena</param>
+            <param name="format">Formato de conversión</param>
+            <returns>Fecha por Defecto</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.Base.ConvertFormat.DatetimeFormatedNull(System.Nullable{System.DateTime},System.String)">
+            <summary>
+            Permite dar formato día/mes/año a valor DateTime
+            </summary>
+            <param name="date">Fecha</param>
+            <param name="format">Formato</param>
+            <returns>Cadena con formato fecha</returns>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Aplicacion.Core.Base.IGenericService">
+            <summary>
+            Definición generica de servicios de aplicación
+            </summary>
+            <remarks>
+            Creación:   GMD 22122014 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Aplicacion.Core.Base.IProveedorService">
+            <summary>
+            Servicio que representa los Proveedores
+            </summary>
+            <remarks>
+            Creación:       GMD 20150602 <br />
+            Modificación:                <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.Base.IProveedorService.BuscarProveedorOracle(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Base.ProveedorRequest)">
+            <summary>
+            Realiza la búsqueda de Proveedores del Servicio Web
+            </summary>
+            <param name="filtro">Filtro de búsqueda</param>
+            <returns>Lista de Proveedores del Servicio Web</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.Base.IProveedorService.BuscarProveedorSAP(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Base.ProveedorRequest)">
+            <summary>
+            Realiza la búsqueda de Proveedores del Servicio Web -SAP
+            </summary>
+            <param name="filtro">Filtro de búsqueda</param>
+            <returns>Lista de Proveedores del Servicio Web - SAP</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.Base.IProveedorService.BuscarRegistrarProveedorContrato(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Base.ProveedorRequest)">
+            <summary>
+            Realiza la búsqueda de un Proveedor y si no existe lo registra
+            </summary>
+            <param name="filtro">Filtro de búsqueda</param>
+            <returns>Registro de Proveedor encontrado o registrado</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.Base.IProveedorService.BuscarProveedor(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Base.ProveedorRequest)">
+            <summary>
+            Realiza la búsqueda de Proveedores
+            </summary>
+            <param name="filtro">Filtro de búsqueda</param>
+            <returns>Lista de Proveedores</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.Base.IProveedorService.BuscarProveedorNombreRuc(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Base.ProveedorRequest)">
+            <summary>
+            Realiza la búsqueda de Proveedores
+            </summary>
+            <param name="filtro">Filtro de búsqueda</param>
+            <returns>Lista de Proveedores</returns>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Aplicacion.Core.Base.ProcessResult`1">
+            <summary>
+            Respuesta unica de los procesos de la capa de aplicación
+            </summary>
+            <remarks>
+            Creación:   GMD 22122014 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.Base.ProcessResult`1.#ctor">
+            <summary>
+            Constructor por defecto
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Aplicacion.Core.Base.ProcessResult`1.IsSuccess">
+            <summary>
+            Indicador del estado de la operación
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Aplicacion.Core.Base.ProcessResult`1.Exception">
+            <summary>
+            Exceción generada en caso de error
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Aplicacion.Core.Base.ProcessResult`1.Result">
+            <summary>
+            Resultado del proceso
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Aplicacion.Core.Factory.PersistenceFacility">
+            <summary>
+            Facilitador de la implementación del objeto de persistencia
+            </summary>
+            <remarks>
+            Creación:   GMD 22122014 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Aplicacion.Core.Factory.WindsorControllerFactory">
+            <summary>
+            Factory de injección de controllers
+            </summary>
+            <remarks>
+            Creación:   GMD 22122014 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.Installers.EnvironmentInstaller.Install(Castle.Windsor.IWindsorContainer,Castle.MicroKernel.SubSystems.Configuration.IConfigurationStore)">
+            <summary>
+            Instalación
+            </summary>
+            <param name="container">Contenedor</param>
+            <param name="store">Store</param>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Aplicacion.Core.Message.MensajesSistema">
+            <summary>
+              Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Aplicacion.Core.Message.MensajesSistema.ResourceManager">
+            <summary>
+              Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Aplicacion.Core.Message.MensajesSistema.Culture">
+            <summary>
+              Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
+              búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Aplicacion.Core.Message.MensajesSistema.CopiarEstadioIgual">
+            <summary>
+              Busca una cadena traducida similar a No se puede copiar los estadios de un mismo registro.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Aplicacion.Core.Message.MensajesSistema.CopiarEstadioNoExiste">
+            <summary>
+              Busca una cadena traducida similar a El registro no existe.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Aplicacion.Core.Message.MensajesSistema.CopiarEstadioNoTiene">
+            <summary>
+              Busca una cadena traducida similar a Elija otro registro, este no contiene estadios.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Aplicacion.Core.Message.MensajesSistema.EtiquetaError">
+            <summary>
+              Busca una cadena traducida similar a Ocurrió un error inesperado. Inténtelo nuevamente..
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Aplicacion.Core.Message.MensajesSistema.FirmanteNoValido">
+            <summary>
+              Busca una cadena traducida similar a Los firmantes ya están completos o el orden de firmante ya existe..
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Aplicacion.Core.Message.MensajesSistema.FlujoAprobacionEstadioDescripcionExiste">
+            <summary>
+              Busca una cadena traducida similar a Ya existe un estadio con la misma Descripción..
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Aplicacion.Core.Message.MensajesSistema.FlujoAprobacionEstadioExiste">
+            <summary>
+              Busca una cadena traducida similar a Ya existe un estadio con los mismos datos de Orden de Prioridad y Descripción.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Aplicacion.Core.Message.MensajesSistema.FlujoAprobacionEstadioOrdenExiste">
+            <summary>
+              Busca una cadena traducida similar a Ya existe un estadio con el mismo orden de prioridad.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Aplicacion.Core.Message.MensajesSistema.FlujoAprobacionExiste">
+            <summary>
+              Busca una cadena traducida similar a Ya existe un flujo de aprobación con los mismos datos..
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Aplicacion.Core.Message.MensajesSistema.FlujoAprobacionFormaEdicionNoExiste">
+            <summary>
+              Busca una cadena traducida similar a No se ha configurado un Flujo de Aprobación para la Forma de Edición {0}..
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Aplicacion.Core.Message.MensajesSistema.FlujoAprobacionNoExiste">
+            <summary>
+              Busca una cadena traducida similar a No existe un Flujo de Aprobación con la Unidad Operativa, Tipo de Contrato, Tipo de Requerimiento ingresado..
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Aplicacion.Core.Message.MensajesSistema.FlujoAprobacionNoExisteReporte">
+            <summary>
+              Busca una cadena traducida similar a No existe un Flujo de Aprobación con la Unidad Operativa, Tipo de Contrato, Tipo de Requerimiento y Forma de Edición ingresado..
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Aplicacion.Core.Message.MensajesSistema.FlujoAprobacionOrdenIgualUno">
+            <summary>
+              Busca una cadena traducida similar a Debe establecer un Orden mayor a 1..
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Aplicacion.Core.Message.MensajesSistema.PlantillaExiste">
+            <summary>
+              Busca una cadena traducida similar a No puede registrar una combinación ya existente..
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Aplicacion.Core.Message.MensajesSistema.PlantillaFechaInicioVigenciaMenor">
+            <summary>
+              Busca una cadena traducida similar a No puede registrar una Fecha de Inicio de Vigencia menor a la que ya existe..
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Aplicacion.Core.Message.MensajesSistema.PlantillaFechaInicioVigenciIncorrecto">
+            <summary>
+              Busca una cadena traducida similar a El formato de la Fecha de Inicio de Vigencia es incorrecto..
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Aplicacion.Core.Message.MensajesSistema.PlantillaFlujoAprobacionNoExiste">
+            <summary>
+              Busca una cadena traducida similar a No existe una Plantilla ni un Flujo de Aprobación para la combinación ingresada..
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Aplicacion.Core.Message.MensajesSistema.PlantillaNoEliminar">
+            <summary>
+              Busca una cadena traducida similar a No se puede eliminar, existen contratos asociados a esta plantilla..
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Aplicacion.Core.Message.MensajesSistema.PlantillaNoExiste">
+            <summary>
+              Busca una cadena traducida similar a No existe una Plantilla con el Tipo de Servicio, Tipo de Requerimiento, Tipo de Documento y Tipo Adhesión ingresado..
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Aplicacion.Core.Message.MensajesSistema.PlantillaNoModificar">
+            <summary>
+              Busca una cadena traducida similar a No se puede modificar, existen contratos asociados a esta plantilla..
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Aplicacion.Core.Message.MensajesSistema.PlantillaNotaOrdenExiste">
+            <summary>
+              Busca una cadena traducida similar a El orden de la nota ya se encuentra registrado para esta plantilla..
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Aplicacion.Core.Message.MensajesSistema.PlantillaParrafoExiste">
+            <summary>
+              Busca una cadena traducida similar a Ya existe un Párrafo con el mismo Orden y Título para la Plantilla..
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Aplicacion.Core.Message.MensajesSistema.PlantillaParrafoNoExiste">
+            <summary>
+              Busca una cadena traducida similar a No existe un Párrafo para la Plantilla seleccionada..
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Aplicacion.Core.Message.MensajesSistema.PlantillaParrafoOrdenExiste">
+            <summary>
+              Busca una cadena traducida similar a El Orden del Párrafo ya se encuentra registrada para esta Plantilla..
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Aplicacion.Core.Message.MensajesSistema.PlantillaParrafoTituloExiste">
+            <summary>
+              Busca una cadena traducida similar a El Título del Párrafo ya se encuentra registrada para esta Plantilla..
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Aplicacion.Core.Message.MensajesSistema.ProcesoAuditoriaExiste">
+            <summary>
+              Busca una cadena traducida similar a Unidad Operativa Y  Fecha planificada, no pueden tener datos iguales..
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Aplicacion.Core.Message.MensajesSistema.ValidaMoneda">
+            <summary>
+              Busca una cadena traducida similar a El tipo de moneda seleccionado no es el mismo que del contrato principal, para evitar errores en el monto acumulado debe seleccionar el tipo de moneda correcto..
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IBienService">
+            <summary>
+            Servicio que representa los Contratos
+            </summary>
+            <remarks>
+            Creación:       GMD 20150710 <br />
+            Modificación: <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IBienService.ListarBienes(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.BienRequest,System.Collections.Generic.List{Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.CodigoValorResponse},System.Collections.Generic.List{Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.CodigoValorResponse},System.Collections.Generic.List{Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.CodigoValorResponse},System.Collections.Generic.List{Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.CodigoValorResponse})">
+            <summary>
+            Método que retorna la Lista de Bienes
+            </summary>
+            <param name="filtro">objeto request del tipo Bien</param>
+            <returns>Lista de Bienes</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IBienService.RegistraEditaBien(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.BienRequest)">
+            <summary>
+            Método que registra y/o Edita un Bien
+            </summary>
+            <param name="objRqst">objeto request del tipo Bien</param>
+            <returns>Retorna entero, 1 transacción Ok.</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IBienService.RetornaBienPorId(System.Guid)">
+            <summary>
+            Retorna información del bien.
+            </summary>
+            <param name="codigoBien">código del bien</param>
+            <returns>Información del bien</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IBienService.RetornaBienAlquilerPorId(System.Guid)">
+            <summary>
+            Retorna información del bien alquiler por código.
+            </summary>
+            <param name="codigoBienAlquiler">código del bien alquiler</param>
+            <returns>Información del bien alquiler por código</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IBienService.ListarBienAlquiler(System.Guid)">
+            <summary>
+            Método que retorna la Lista de Bienes Alquiler
+            </summary>
+            <param name="filtro">objeto request del tipo Bien</param>
+            <returns>Lista de Bienes</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IBienService.RegistraEditaBienAlquiler(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.BienAlquilerRequest)">
+            <summary>
+            Método que registra y/o Edita un Bien Alquiler
+            </summary>
+            <param name="objRqst">objeto request del tipo BienAlquiler</param>
+            <returns>Retorna entero, 1 transacción Ok.</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IBienService.PeriodoAlquilerPorTarifa(System.String)">
+            <summary>
+             Retorna los periodos de alquiler.
+            </summary>
+            <param name="tipoTarifa">Código del Tipo de Tarifa</param>
+            <returns>Periodos de alquiler</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IBienService.ListaBienRegistro(System.String)">
+            <summary>
+            Retorna la lista del descripciones de campos del bien.
+            </summary>
+            <param name="tipoContenido">código del tipo de contenido</param>
+            <returns></returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IBienService.ObtenerDescripcionCompletaBien(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.BienRequest)">
+            <summary>
+            Retorna la lista de bienes con su descripción completa.
+            </summary>
+            <param name="filtro">Filtro de Búsqueda</param>
+            <returns>Lista de bienes con su descripción completa</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IBienService.EliminarBien(System.Collections.Generic.List{System.Object})">
+            <summary>
+            Elimina uno o muchos Bien
+            </summary>
+            <param name="listaCodigosBien">Lista de Códigos de Bien a eliminar</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IBienService.EliminarBienAlquiler(System.Collections.Generic.List{System.Object})">
+            <summary>
+            Elimina uno o muchos Bien Alquiler
+            </summary>
+            <param name="listaCodigosBienAlquiler">Lista de Códigos de Bien Alquiler a eliminar</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IBienService.SincronizarBienesServicioAmt">
+            <summary>
+            Sincronizar bienes de servicio Amt
+            </summary>
+            <returns>Registro de nuevos equipos de Amt</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IBienService.SincronizarBienesServicioSAP">
+            <summary>
+            Sincronizar bienes de servicio SAP
+            </summary>
+            <returns>Registro de nuevos equipos de SAP</returns>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IConsultaService">
+            <summary>
+            Servicio que representa las consultas
+            </summary>
+            <remarks>
+            Creación:       GMD 20150710 <br />
+            Modificación: <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IConsultaService.ListadoConsulta(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.ConsultaRequest)">
+            <summary>
+            Realiza la búsqueda de consultas
+            </summary>
+            <param name="filtro">Filtro de búsqueda</param>
+            <returns>Listado de contratos</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IConsultaService.ConsultaPorId(System.Guid)">
+            <summary>
+            Retorna información de la consulta.
+            </summary>
+            <param name="codigoBien">código de la consulta</param>
+            <returns>Información de la consulta</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IConsultaService.RegistrarConsulta(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.ConsultaRequest)">
+            <summary>
+            Registra / Edita Consulta
+            </summary>
+            <param name="data"></param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IConsultaService.ReenviarConsulta(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.ConsultaRequest)">
+            <summary>
+            Reenvia Consulta
+            </summary>
+            <param name="data"></param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IConsultaService.EliminarConsulta(System.Collections.Generic.List{System.Object})">
+            <summary>
+            Eliminar Consulta
+            </summary>
+            <param name="listaCodigoContrato">Lista de Códigos de consultas a Eliminar</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IConsultaService.BuscarConsultaAdjunto(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.ConsultaAdjuntoRequest)">
+            <summary>
+            Método para retornar los documentos adjuntos por Contrato
+            </summary>
+            <param name="request">Filtro</param>
+            <returns>Documentos adjuntos al contrato</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IConsultaService.RegistrarConsultaAdjunto(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.ConsultaAdjuntoRequest)">
+            <summary>
+            Método para registra los documentos adjuntos de la consulta
+            </summary>
+            <param name="request">Filtro</param>
+            <returns>Documentos adjuntos al contrato</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IConsultaService.EliminarConsultaAdjunto(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.ConsultaAdjuntoRequest)">
+            <summary>
+            Método que elimina los documentos adjuntos al Contrato
+            </summary>
+            <param name="request">Filtro</param>
+            <returns>Documentos adjuntos al contrato</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IConsultaService.ObtenerArchivoAdjunto(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.ConsultaAdjuntoRequest)">
+            <summary>
+            Metodo que retorna los bytes para la generación del archivo PDF.
+            </summary>
+            <param name="codigoContrato">Código del Contrato</param>
+            <param name="codigoContratoEstadio">código del Contrato - estadio.</param>
+            <param name="NombreArchivoContrato">Nombre del archivo a descargar</param>
+            <returns>Bytes para generar pdf</returns>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IContratoCorporativoService">
+            <summary>
+            Servicio que representa el contrato corporativo service
+            </summary>
+            <remarks>
+            Creación:       GMD 20170623 <br />
+            Modificación: <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IContratoCorporativoService.BuscarContratoCorporativo(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.ContratoCorporativoRequest)">
+            <summary>
+            Realiza la búsqueda de contratos corporativos
+            </summary>
+            <param name="filtro">Filtro de búsqueda</param>
+            <returns>Listado de contratos</returns>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IRequerimientoService">
+            <summary>
+            Servicio que representa los Requerimientos
+            </summary>
+            <remarks>
+            Creación:       GMD 20150525 <br />
+            Modificación:                <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IRequerimientoService.ListarUnidadOperativaResponsable(System.Guid)">
+            <summary>
+            lista las unidades operativas por responsable
+            </summary>
+            <param name="codigoResponsable">código de responsable</param>
+            <returns>Lista con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IRequerimientoService.BuscarBandejaProcesosRequerimiento(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.RequerimientoRequest,System.Collections.Generic.List{Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.CodigoValorResponse},System.Collections.Generic.List{Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.CodigoValorResponse})">
+            <summary>
+            Método para recuperar los registros de la bandeja de proceso.
+            </summary>
+            <param name="filtro">Objeto Requerimiento Request</param>
+            <param name="lstTipoServicio">Lista de Tipos de Servicio</param>
+            <param name="lstTipoRqto">Lista de Tipo de Requerimiento</param>
+            <returns>Lista con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IRequerimientoService.BuscarBandejaRequerimientosObservacion(System.Guid)">
+            <summary>
+            Método para recuperar los registros de la bandeja de proceso de Requerimientos con observaciones
+            </summary>
+            <param name="CodigoRequerimientoEstadio">Codigo de Requerimiento estadio.</param>
+            <returns>Lista con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IRequerimientoService.RegistraRequerimientoEstadioObservacion(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.RequerimientoEstadioObservacionRequest)">
+            <summary>
+            Registra una Observación del Requerimiento por Estadío.
+            </summary>
+            <param name="objParm">Objeto request RequerimientoEstadioObservacionRequest</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IRequerimientoService.RespondeRequerimientoEstadioObservacion(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.RequerimientoEstadioObservacionRequest)">
+            <summary>
+            Responde la Observación del Requerimiento por Estadío.
+            </summary>
+            <param name="objParm">Objeto request RequerimientoEstadioObservacionRequest</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IRequerimientoService.RegistraRequerimientoEstadioConsulta(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.RequerimientoEstadioConsultaRequest)">
+            <summary>
+            Registra una Consulta del Requerimiento por Estadío.
+            </summary>
+            <param name="objParm">Objeto request RequerimientoEstadioConsultaRequest</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IRequerimientoService.BuscarBandejaRequerimientosConsultas(System.Guid)">
+            <summary>
+            Método para recuperar los registros de la bandeja de proceso de Requerimientos con consultas
+            </summary>
+            <param name="CodigoRequerimientoEstadio">Codigo de Requerimiento estadio.</param>
+            <returns>Lista con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IRequerimientoService.ObtieneRequerimientoEstadioObservacionPorID(System.Guid)">
+            <summary>
+            Metodo para obtener datos de Requerimiento Estadio Observacion por el ID
+            </summary>
+            <param name="CodigoRequerimientoEstadioObservacion">Id del Codigo Requerimiento Estadio Observacion </param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IRequerimientoService.ObtieneRequerimientoEstadioConsultaPorID(System.Guid)">
+            <summary>
+            Metodo para obtener datos de Requerimiento Estadio Consulta por el ID
+            </summary>
+            <param name="CodigoRequerimientoEstadioConsulta">Id del Codigo Requerimiento Estadio Consulta </param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IRequerimientoService.ApruebaRequerimientoEstadio(System.Guid,System.Guid,System.String,System.String)">
+            <summary>
+            Metodo para aprobar cada Requerimiento según su estadío.
+            </summary>
+            <param name="codigoRequerimiento">Código de Requerimiento </param>
+            <param name="codigoRequerimientoEstadio">Código de Requerimiento Estadío</param>
+            <param name="login"></param>
+            <param name="MotivoAprobacion">Motivo de Aprobación</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IRequerimientoService.RetornaParrafosPorRequerimiento(System.Guid)">
+            <summary>
+            Método para retornar los párrafos por Requerimiento
+            </summary>
+            <param name="CodigoRequerimiento">Código de Requerimiento</param>
+            <returns>Parrafos por Requerimiento</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IRequerimientoService.RegistraRequerimientoEstadio(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.RequerimientoEstadioRequest)">
+            <summary>
+            Registra una Observación del Requerimiento por Estadío.
+            </summary>
+            <param name="objParm">Objeto request RequerimientoEstadioObservacionRequest</param>
+            <returns></returns> 
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IRequerimientoService.RetornaEstadioRequerimientoObservacion(System.Guid)">
+            <summary>
+            Método para retornar los párrafos por Requerimiento
+            </summary>
+            <param name="CodigoRequerimientoEstadio">Código de Requerimiento</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IRequerimientoService.RetornaResponsablesFlujoEstadio(System.Guid,System.Guid)">
+            <summary>
+            Método que retorna los responsable por flujo de aprobación.
+            </summary>
+            <param name="codigoFlujoAprobacion">código del flujo de aprobación.</param>
+            <param name="codigoRequerimiento"></param>
+            <returns>Responsable por flujo de aprobación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IRequerimientoService.ListaBandejaSolicitudRequerimientos(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.RequerimientoRequest)">
+            <summary>
+            Método para listar los documentos de la bandeja de solicitud.
+            </summary>
+            <param name="filtro">filtro </param>
+            <returns>Lista con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IRequerimientoService.ObtieneRequerimientoPorID(System.Guid)">
+            <summary>
+            Metodo para obtener datos de Requerimiento Estadio Observacion por el ID
+            </summary>
+            <param name="codigoRequerimiento">Id del Codigo Requerimiento Estadio Observacion </param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IRequerimientoService.RegistraRespuestaRequerimiento(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.RequerimientoRequest)">
+            <summary>
+            Registra la Respuesta de la Solicitud de Modificacion del Requerimiento
+            </summary>
+            <param name="objRequerimiento">Objeto request de Requerimiento</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IRequerimientoService.RegistraRespuestaRequerimientoRevision(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.RequerimientoRequest)">
+            <summary>
+            Registra la Respuesta de la Solicitud de Modificacion del Requerimiento para pasar a revisión
+            </summary>
+            <param name="objRequerimiento">Objeto request de Requerimiento</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IRequerimientoService.RegistrarRespuestaGrabarRequerimiento(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.RequerimientoRequest)">
+            <summary>
+            Registra la Respuesta de la Soliitud de Modificacion del Requerimiento
+            </summary>
+            <param name="objRequerimiento">Objeto request de Requerimiento</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IRequerimientoService.DocumentosPorRequerimiento(System.Guid)">
+            <summary>
+            Método para retornar los documentos PDf por Requerimiento
+            </summary>
+            <param name="CodigoRequerimiento">Código de Requerimiento</param>
+            <returns>Documentos PDF por Requerimiento</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IRequerimientoService.BuscarRequerimientoDocumentoAdjunto(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.RequerimientoDocumentoAdjuntoRequest)">
+            <summary>
+            Método para retornar los documentos adjuntos por Requerimiento
+            </summary>
+            <param name="request">Filtro</param>
+            <returns>Documentos adjuntos al Requerimiento</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IRequerimientoService.ObtenerArchivoAdjunto(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.RequerimientoDocumentoAdjuntoRequest)">
+            <summary>
+            Metodo que retorna los bytes para la generación del archivo PDF.
+            </summary>
+            <param name="request">Request del adjunto</param>
+            <returns>Bytes para generar pdf</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IRequerimientoService.RegistrarRequerimientoDocumentoAdjunto(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.RequerimientoDocumentoAdjuntoRequest)">
+            <summary>
+            Método para retornar los documentos adjuntos por Requerimiento
+            </summary>
+            <param name="request">Filtro</param>
+            <returns>Documentos adjuntos al Requerimiento</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IRequerimientoService.EliminarRequerimientoDocumentoAdjunto(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.RequerimientoDocumentoAdjuntoRequest)">
+            <summary>
+            Método que elimina los documentos adjuntos al Requerimiento
+            </summary>
+            <param name="request">Filtro</param>
+            <returns>Documentos adjuntos al Requerimiento</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IRequerimientoService.BuscarRequerimientoDocumentoAdjuntoResolucion(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.RequerimientoDocumentoAdjuntoResolucionRequest)">
+            <summary>
+            Método para retornar los documentos adjuntos por Requerimiento
+            </summary>
+            <param name="request">Filtro</param>
+            <returns>Documentos adjuntos al Requerimiento</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IRequerimientoService.ObtenerArchivoAdjuntoResolucion(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.RequerimientoDocumentoAdjuntoResolucionRequest)">
+            <summary>
+            Metodo que retorna los bytes para la generación del archivo PDF.
+            </summary>
+            <param name="request">Request del adjunto</param>
+            <returns>Bytes para generar pdf</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IRequerimientoService.RegistrarRequerimientoDocumentoAdjuntoResolucion(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.RequerimientoDocumentoAdjuntoResolucionRequest)">
+            <summary>
+            Método para retornar los documentos adjuntos por Requerimiento
+            </summary>
+            <param name="request">Filtro</param>
+            <returns>Documentos adjuntos al Requerimiento</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IRequerimientoService.EliminarRequerimientoDocumentoAdjuntoResolucion(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.RequerimientoDocumentoAdjuntoResolucionRequest)">
+            <summary>
+            Método que elimina los documentos adjuntos al Requerimiento
+            </summary>
+            <param name="request">Filtro</param>
+            <returns>Documentos adjuntos al Requerimiento</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IRequerimientoService.RetornaDirectorioFile(System.Guid,System.String,System.String,System.Nullable{System.DateTime},System.Boolean,System.Collections.Generic.List{Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.CodigoValorResponse})">
+            <summary>
+            Retorna la ruta del directorio SharePoint para escribir el archivo.
+            </summary>
+            <param name="codigoRequerimiento">Código del Requerimiento</param>
+            <param name="nombreUnidadOperativa">código de la unidad operativa</param>
+            <param name="nombreFile">Nombre del archivo</param>
+            <param name="fechaInicioVigencia">Fecha de Inicio de Vigencia</param>
+            <param name="esAdjunto">Indica que un documento es adjunto</param>
+            <param name="lstPrmRepositorioShp">Lista del repositorio de SharePoint</param>
+            <returns>Ruta de directorio de sharepoint</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IRequerimientoService.RegistraRequerimientoDocumentoCargaArchivo(Pe.Stracon.SGC.Aplicacion.TransferObject.Response.Contractual.RequerimientoDocumentoResponse)">
+            <summary>
+            Metodo para cargar un Archivo a un estadio de Requerimiento.
+            </summary>
+            <param name="objRsp">Objeto Requerimiento Documento Response</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IRequerimientoService.GenerarContenidoRequerimiento(System.Guid,System.Nullable{System.Guid},System.String@,System.String)">
+            <summary>
+            Metodo que retorna los bytes para la generación del archivo PDF.
+            </summary>
+            <param name="codigoRequerimiento">Código del Requerimiento</param>
+            <param name="NombreArchivoRequerimiento">Nombre del archivo a descargar</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IRequerimientoService.RetornaRequerimientoPorId(System.Guid)">
+            <summary>
+            Retorna información del Requerimiento.
+            </summary>
+            <param name="codigoRequerimiento">código de Requerimiento</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IRequerimientoService.ObtenerRequerimientoAnteriorObservacion(System.Guid,System.String@)">
+            <summary>
+            Metodo que retorna los bytes del Requerimiento reemplazado en la observación.
+            </summary>
+            <param name="codigoRequerimientoEstadioObservacion">Código de la observación del estadio Requerimiento</param>
+            <param name="nombreArchivoRequerimiento">Nombre del archivo a descargar</param>
+            <returns>Documento de Requerimiento que reemplazo la Observación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IRequerimientoService.ObtenerRequerimientoReemplazanteObservacion(System.Guid,System.String@)">
+            <summary>
+            Metodo que retorna los bytes del Requerimiento reemplazante en la observación.
+            </summary>
+            <param name="codigoRequerimientoEstadioObservacion">Código de la observación del estadio Requerimiento</param>
+            <param name="nombreArchivoRequerimiento">Nombre del archivo a descargar</param>
+            <returns>Documento de Requerimiento que reemplazo la Observación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IRequerimientoService.ObtenerListaRevisoresStracon(Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.RequerimientoEntity,Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.FlujoAprobacionEstadioEntity,System.String)">
+            <summary>
+            Obtiene la lista de revisores del Requerimiento
+            </summary>
+            <param name="Requerimiento">Entidad del Requerimiento</param>
+            <param name="entidadFlujoAprobacionEstadio">Entidad flujo aprobacion estadio</param>
+            <param name="login">Usuario actual</param>
+            <returns>Lista de revisores</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IRequerimientoService.ObtenerListaFirmantesStracon(Pe.Stracon.SGC.Aplicacion.TransferObject.Response.Contractual.RequerimientoResponse)">
+            <summary>
+            Obtiene la lista de firmantes del Requerimiento
+            </summary>
+            <param name="Requerimiento">Entidad Requerimiento</param>
+            <returns>Lista de firmantes</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IRequerimientoService.BuscarListadoRequerimiento(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.ListadoRequerimientoRequest)">
+            <summary>
+            Realiza la búsqueda del listado de Requerimientos
+            </summary>
+            <param name="filtro">Filtro de búsqueda</param>
+            <returns>Lista de Requerimientos</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IRequerimientoService.BuscarListadoRequerimientoOrden(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.ListadoRequerimientoRequest)">
+            <summary>
+            
+            </summary>
+            <param name="filtro"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IRequerimientoService.RegistrarRequerimiento(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.RequerimientoRequest)">
+            <summary>
+            Registra o actualiza un Requerimiento general
+            </summary>
+            <param name="dataRequerimiento">Datos a registrar de Requerimiento</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IRequerimientoService.RegistrarListadoRequerimiento(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.RequerimientoRequest)">
+            <summary>
+            Registra o actualiza un listado Requerimiento
+            </summary>
+            <param name="dataRequerimiento">Datos a registrar de Requerimiento</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IRequerimientoService.RegistrarListadoRequerimientoAdhesion(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.RequerimientoRequest)">
+            <summary>
+            Registra el documento del Requerimiento de adhesión
+            </summary>
+            <param name="dataRequerimiento">Datos a registrar de Requerimiento</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IRequerimientoService.EliminarListadoRequerimiento(System.Collections.Generic.List{System.Object})">
+            <summary>
+            Eliminar uno o muchos listado Requerimiento
+            </summary>
+            <param name="listaCodigoRequerimiento">Lista de Códigos de Requerimientos</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IRequerimientoService.ListadoRequerimientoPrincipal(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.ListadoRequerimientoRequest)">
+            <summary>
+            Realiza la búsqueda de listado Requerimientos principales
+            </summary>
+            <param name="filtro">Filtro de búsqueda</param>
+            <returns>Listado de Requerimientos</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IRequerimientoService.ObtenerMontoAcumuladoRequerimiento(System.String)">
+            <summary>
+            Obtiene el Monto Acumulado del Requerimiento Principal más sus Adendas
+            </summary>
+            <param name="codigoRequerimientoPrincipal">Código de Requerimiento Principal</param>
+            <returns>Registro con el Monto Acumulado del Requerimiento Principal más sus Adendas</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IRequerimientoService.EliminarRequerimiento(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.ListadoRequerimientoRequest)">
+            <summary>
+            Eliminar Requerimiento
+            </summary>
+            <param name="filtro">Datos del Requerimiento</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IRequerimientoService.BuscarRequerimiento(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.ListadoRequerimientoRequest)">
+            <summary>
+            Realiza la búsqueda de Requerimientos
+            </summary>
+            <param name="filtro">Filtro de búsqueda</param>
+            <returns>Listado de Requerimientos</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IRequerimientoService.RegistrarCopiaRequerimiento(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.RequerimientoRequest)">
+            <summary>
+            Registrar la copia de un Requerimiento
+            </summary>
+            <param name="dataRequerimiento">Datos del Requerimiento</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IRequerimientoService.Obtener_Tipo_Requerimiento(System.Guid)">
+            <summary>
+            Obtiene el tipo de Requerimiento segun la Unidad Operativa S11-SGC
+            </summary>
+            <param name="CodigoUnidadOperativa"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IRequerimientoService.BuscarBandejaProcesosRequerimientoOrdenado(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.RequerimientoRequest,System.Collections.Generic.List{Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.CodigoValorResponse},System.Collections.Generic.List{Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.CodigoValorResponse})">
+            <summary>
+            Método para recuperar los registros ordenados de la bandeja de proceso.
+            </summary>
+            <param name="filtro">Objeto Requerimiento Request</param>
+            <param name="lstTipoRequerimiento">Lista de Tipos de Servicio</param>
+            <param name="lstTipoServicio">Lista de Tipo de Requerimiento</param>
+            <returns>Registros de bandeja de procesos</returns>                
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IRequerimientoService.ObtenerVariablesRequerimientoParrafo(System.String)">
+            <summary>
+            Obtiene listado de variables de los parrafos de  un Requerimiento
+            </summary>
+            <param name="codigoRequerimiento">Código de Requerimiento</param>
+            <returns>Lista de variables de parrafos de Requerimiento</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IRequerimientoService.GenerarPdfDesdeHtml(System.String,System.String,System.String,System.Nullable{System.Guid},System.Nullable{System.Guid},System.Collections.Generic.List{Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.TrabajadorResponse},System.Collections.Generic.List{System.String},System.String,System.Boolean,System.String,System.Int32,System.Int32)">
+            <summary>
+            Permite generar un pdf desde un html
+            </summary>
+            <param name="htmlCuerpo">script de html</param>
+            <param name="htmlPie">script de html del pie de pagina</param>
+            <param name="codigoRequerimiento">Código Requerimiento</param>
+            <param name="linksRef">links de referencia</param>
+            <param name="indicadorHtml">Indicador si cuerpo va a ser parseado como Html</param>
+            <returns>Pdf en un arreglo de bytes</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IRequerimientoService.ObtenerEmpresaVinculadaPorProveedor(System.Nullable{System.Guid})">
+            <summary>
+            Obtiene la empresa vinculada por proveedor
+            </summary>
+            <param name="codigoProveedor">Código del proveedor</param>
+            <returns>Empresa vinculada por proveedor</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IRequerimientoService.ListaBandejaRevisionRequerimientos(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.RequerimientoRequest)">
+            <summary>
+            Método para listar los documentos de la bandeja de revisión de Requerimientos.
+            </summary>
+            <param name="NumeroRequerimiento">número del Requerimiento</param>
+            <param name="UnidadOperativa">unidad operativa</param>
+            <param name="NombreProveedor">nombre del proveedor</param>
+            <param name="NumdocPrv">numero documento del proveedor</param>
+            <returns>Lista de Requerimientos para revisión</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IRequerimientoService.ActualizarRequerimiento(System.Guid,System.String)">
+            <summary>
+            Actualizar Requerimiento
+            </summary>
+            <param name="CodigoRequerimiento"></param>
+            <param name="TipoRequerimiento"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IRequerimientoService.BuscarNumeroRequerimiento(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.ReporteRequerimientoObservadoAprobadoRequest)">
+            <summary>
+            Realiza la búsqueda de Proveedores
+            </summary>
+            <param name="filtro">Filtro de búsqueda</param>
+            <returns>Lista de Proveedores</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IRequerimientoService.BuscarRequerimientoObservadoAprobado(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.ReporteRequerimientoObservadoAprobadoRequest)">
+            <summary>
+            Realiza la búsqueda de Proveedores
+            </summary>
+            <param name="filtro">Filtro de búsqueda</param>
+            <returns>Lista de Proveedores</returns>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IContratoService">
+            <summary>
+            Servicio que representa los Contratos
+            </summary>
+            <remarks>
+            Creación:       GMD 20150525 <br />
+            Modificación:                <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IContratoService.ListarUnidadOperativaResponsable(System.Guid)">
+            <summary>
+            lista las unidades operativas por responsable
+            </summary>
+            <param name="codigoResponsable">código de responsable</param>
+            <returns>Lista con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IContratoService.BuscarBandejaProcesosContrato(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.ContratoRequest,System.Collections.Generic.List{Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.CodigoValorResponse},System.Collections.Generic.List{Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.CodigoValorResponse})">
+            <summary>
+            Método para recuperar los registros de la bandeja de proceso.
+            </summary>
+            <param name="filtro">Objeto Contrato Request</param>
+            <param name="lstTipoServicio">Lista de Tipos de Servicio</param>
+            <param name="lstTipoRqto">Lista de Tipo de Requerimiento</param>
+            <returns>Lista con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IContratoService.BuscarBandejaContratosObservacion(System.Guid)">
+            <summary>
+            Método para recuperar los registros de la bandeja de proceso de contratos con observaciones
+            </summary>
+            <param name="CodigoContratoEstadio">Codigo de Contrato estadio.</param>
+            <returns>Lista con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IContratoService.RegistraContratoEstadioObservacion(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.ContratoEstadioObservacionRequest)">
+            <summary>
+            Registra una Observación del Contrato por Estadío.
+            </summary>
+            <param name="objParm">Objeto request ContratoEstadioObservacionRequest</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IContratoService.RespondeContratoEstadioObservacion(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.ContratoEstadioObservacionRequest)">
+            <summary>
+            Responde la Observación del Contrato por Estadío.
+            </summary>
+            <param name="objParm">Objeto request ContratoEstadioObservacionRequest</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IContratoService.RegistraContratoEstadioConsulta(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.ContratoEstadioConsultaRequest)">
+            <summary>
+            Registra una Consulta del Contrato por Estadío.
+            </summary>
+            <param name="objParm">Objeto request ContratoEstadioConsultaRequest</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IContratoService.BuscarBandejaContratosConsultas(System.Guid)">
+            <summary>
+            Método para recuperar los registros de la bandeja de proceso de contratos con consultas
+            </summary>
+            <param name="CodigoContratoEstadio">Codigo de Contrato estadio.</param>
+            <returns>Lista con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IContratoService.ObtieneContratoEstadioObservacionPorID(System.Guid)">
+            <summary>
+            Metodo para obtener datos de Contrato Estadio Observacion por el ID
+            </summary>
+            <param name="CodigoContratoEstadioObservacion">Id del Codigo Contrato Estadio Observacion </param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IContratoService.ObtieneContratoEstadioConsultaPorID(System.Guid)">
+            <summary>
+            Metodo para obtener datos de Contrato Estadio Consulta por el ID
+            </summary>
+            <param name="CodigoContratoEstadioConsulta">Id del Codigo Contrato Estadio Consulta </param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IContratoService.ApruebaContratoEstadio(System.Guid,System.Guid,System.String,System.String)">
+            <summary>
+            Metodo para aprobar cada contrato según su estadío.
+            </summary>
+            <param name="codigoContrato">Código de Contrato </param>
+            <param name="codigoContratoEstadio">Código de Contrato Estadío</param>
+            <param name="login"></param>
+            <param name="MotivoAprobacion">Motivo de Aprobación</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IContratoService.RetornaParrafosPorContrato(System.Guid)">
+            <summary>
+            Método para retornar los párrafos por contrato
+            </summary>
+            <param name="CodigoContrato">Código de Contrato</param>
+            <returns>Parrafos por contrato</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IContratoService.RegistraContratoEstadio(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.ContratoEstadioRequest)">
+            <summary>
+            Registra una Observación del Contrato por Estadío.
+            </summary>
+            <param name="objParm">Objeto request ContratoEstadioObservacionRequest</param>
+            <returns></returns> 
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IContratoService.RetornaEstadioContratoObservacion(System.Guid)">
+            <summary>
+            Método para retornar los párrafos por contrato
+            </summary>
+            <param name="CodigoContrato">Código de Contrato</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IContratoService.RetornaResponsablesFlujoEstadio(System.Guid,System.Guid)">
+            <summary>
+            Método que retorna los responsable por flujo de aprobación.
+            </summary>
+            <param name="codigoFlujoAprobacion">código del flujo de aprobación.</param>
+            <param name="codigoContrato"></param>
+            <returns>Responsable por flujo de aprobación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IContratoService.ListaBandejaSolicitudContratos(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.ContratoRequest)">
+            <summary>
+            Método para listar los documentos de la bandeja de solicitud.
+            </summary>
+            <param name="filtro">filtro </param>
+            <returns>Lista con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IContratoService.ObtieneContratoPorID(System.Guid)">
+            <summary>
+            Metodo para obtener datos de Contrato Estadio Observacion por el ID
+            </summary>
+            <param name="codigoContrato">Id del Codigo Contrato Estadio Observacion </param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IContratoService.RegistraRespuestaContrato(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.ContratoRequest)">
+            <summary>
+            Registra la Respuesta de la Solicitud de Modificacion del Contrato
+            </summary>
+            <param name="objContrato">Objeto request de Contrato</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IContratoService.RegistraRespuestaContratoRevision(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.ContratoRequest)">
+            <summary>
+            Registra la Respuesta de la Solicitud de Modificacion del Contrato para pasar a revisión
+            </summary>
+            <param name="objContrato">Objeto request de Contrato</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IContratoService.RegistrarRespuestaGrabarContrato(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.ContratoRequest)">
+            <summary>
+            Registra la Respuesta de la Soliitud de Modificacion del Contrato
+            </summary>
+            <param name="objContrato">Objeto request de Contrato</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IContratoService.DocumentosPorContrato(System.Guid)">
+            <summary>
+            Método para retornar los documentos PDf por Contrato
+            </summary>
+            <param name="CodigoContrato">Código de Contrato</param>
+            <returns>Documentos PDF por Contrato</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IContratoService.BuscarContratoDocumentoAdjunto(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.ContratoDocumentoAdjuntoRequest)">
+            <summary>
+            Método para retornar los documentos adjuntos por Contrato
+            </summary>
+            <param name="request">Filtro</param>
+            <returns>Documentos adjuntos al contrato</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IContratoService.ObtenerArchivoAdjunto(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.ContratoDocumentoAdjuntoRequest)">
+            <summary>
+            Metodo que retorna los bytes para la generación del archivo PDF.
+            </summary>
+            <param name="request">Request del adjunto</param>
+            <returns>Bytes para generar pdf</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IContratoService.RegistrarContratoDocumentoAdjunto(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.ContratoDocumentoAdjuntoRequest)">
+            <summary>
+            Método para retornar los documentos adjuntos por Contrato
+            </summary>
+            <param name="request">Filtro</param>
+            <returns>Documentos adjuntos al contrato</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IContratoService.EliminarContratoDocumentoAdjunto(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.ContratoDocumentoAdjuntoRequest)">
+            <summary>
+            Método que elimina los documentos adjuntos al Contrato
+            </summary>
+            <param name="request">Filtro</param>
+            <returns>Documentos adjuntos al contrato</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IContratoService.BuscarContratoDocumentoAdjuntoResolucion(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.ContratoDocumentoAdjuntoResolucionRequest)">
+            <summary>
+            Método para retornar los documentos adjuntos por Contrato
+            </summary>
+            <param name="request">Filtro</param>
+            <returns>Documentos adjuntos al contrato</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IContratoService.ObtenerArchivoAdjuntoResolucion(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.ContratoDocumentoAdjuntoResolucionRequest)">
+            <summary>
+            Metodo que retorna los bytes para la generación del archivo PDF.
+            </summary>
+            <param name="request">Request del adjunto</param>
+            <returns>Bytes para generar pdf</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IContratoService.RegistrarContratoDocumentoAdjuntoResolucion(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.ContratoDocumentoAdjuntoResolucionRequest)">
+            <summary>
+            Método para retornar los documentos adjuntos por Contrato
+            </summary>
+            <param name="request">Filtro</param>
+            <returns>Documentos adjuntos al contrato</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IContratoService.EliminarContratoDocumentoAdjuntoResolucion(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.ContratoDocumentoAdjuntoResolucionRequest)">
+            <summary>
+            Método que elimina los documentos adjuntos al Contrato
+            </summary>
+            <param name="request">Filtro</param>
+            <returns>Documentos adjuntos al contrato</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IContratoService.RetornaDirectorioFile(System.Guid,System.String,System.String,System.Nullable{System.DateTime},System.Boolean,System.Collections.Generic.List{Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.CodigoValorResponse})">
+            <summary>
+            Retorna la ruta del directorio SharePoint para escribir el archivo.
+            </summary>
+            <param name="codigoContrato">Código del contrato</param>
+            <param name="nombreUnidadOperativa">código de la unidad operativa</param>
+            <param name="nombreFile">Nombre del archivo</param>
+            <param name="fechaInicioVigencia">Fecha de Inicio de Vigencia</param>
+            <param name="esAdjunto">Indica que un documento es adjunto</param>
+            <param name="lstPrmRepositorioShp">Lista del repositorio de SharePoint</param>
+            <returns>Ruta de directorio de sharepoint</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IContratoService.RegistraContratoDocumentoCargaArchivo(Pe.Stracon.SGC.Aplicacion.TransferObject.Response.Contractual.ContratoDocumentoResponse)">
+            <summary>
+            Metodo para cargar un Archivo a un estadio de contrato.
+            </summary>
+            <param name="objRsp">Objeto Contrato Documento Response</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IContratoService.GenerarContenidoContrato(System.Guid,System.Nullable{System.Guid},System.String@,System.String)">
+            <summary>
+            Metodo que retorna los bytes para la generación del archivo PDF.
+            </summary>
+            <param name="codigoContrato">Código del Contrato</param>
+            <param name="NombreArchivoContrato">Nombre del archivo a descargar</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IContratoService.RetornaContratoPorId(System.Guid)">
+            <summary>
+            Retorna información del contrato.
+            </summary>
+            <param name="codigoContrato">código de contrato</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IContratoService.ObtenerContratoAnteriorObservacion(System.Guid,System.String@)">
+            <summary>
+            Metodo que retorna los bytes del contrato reemplazado en la observación.
+            </summary>
+            <param name="codigoContratoEstadioObservacion">Código de la observación del estadio Contrato</param>
+            <param name="nombreArchivoContrato">Nombre del archivo a descargar</param>
+            <returns>Documento de contrato que reemplazo la Observación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IContratoService.ObtenerContratoReemplazanteObservacion(System.Guid,System.String@)">
+            <summary>
+            Metodo que retorna los bytes del contrato reemplazante en la observación.
+            </summary>
+            <param name="codigoContratoEstadioObservacion">Código de la observación del estadio Contrato</param>
+            <param name="nombreArchivoContrato">Nombre del archivo a descargar</param>
+            <returns>Documento de contrato que reemplazo la Observación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IContratoService.ObtenerListaRevisoresStracon(Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoEntity,Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.FlujoAprobacionEstadioEntity,System.String)">
+            <summary>
+            Obtiene la lista de revisores del contrato
+            </summary>
+            <param name="contrato">Entidad del contrato</param>
+            <param name="entidadFlujoAprobacionEstadio">Entidad flujo aprobacion estadio</param>
+            <param name="login">Usuario actual</param>
+            <returns>Lista de revisores</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IContratoService.ObtenerListaFirmantesStracon(Pe.Stracon.SGC.Aplicacion.TransferObject.Response.Contractual.ContratoResponse)">
+            <summary>
+            Obtiene la lista de firmantes del contrato
+            </summary>
+            <param name="contrato">Entidad Contrato</param>
+            <returns>Lista de firmantes</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IContratoService.BuscarListadoContrato(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.ListadoContratoRequest)">
+            <summary>
+            Realiza la búsqueda del listado de contratos
+            </summary>
+            <param name="filtro">Filtro de búsqueda</param>
+            <returns>Lista de contratos</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IContratoService.BuscarListadoContratoOrden(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.ListadoContratoRequest)">
+            <summary>
+            
+            </summary>
+            <param name="filtro"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IContratoService.RegistrarContrato(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.ContratoRequest)">
+            <summary>
+            Registra o actualiza un contrato general
+            </summary>
+            <param name="dataContrato">Datos a registrar de Contrato</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IContratoService.RegistrarListadoContrato(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.ContratoRequest)">
+            <summary>
+            Registra o actualiza un listado contrato
+            </summary>
+            <param name="dataContrato">Datos a registrar de Contrato</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IContratoService.RegistrarListadoContratoAdhesion(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.ContratoRequest)">
+            <summary>
+            Registra el documento del contrato de adhesión
+            </summary>
+            <param name="dataContrato">Datos a registrar de Contrato</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IContratoService.EliminarListadoContrato(System.Collections.Generic.List{System.Object})">
+            <summary>
+            Eliminar uno o muchos listado contrato
+            </summary>
+            <param name="listaCodigoContrato">Lista de Códigos de Contratos</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IContratoService.ListadoContratoPrincipal(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.ListadoContratoRequest)">
+            <summary>
+            Realiza la búsqueda de listado contratos principales
+            </summary>
+            <param name="filtro">Filtro de búsqueda</param>
+            <returns>Listado de contratos</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IContratoService.ObtenerMontoAcumuladoContrato(System.String)">
+            <summary>
+            Obtiene el Monto Acumulado del Contrato Principal más sus Adendas
+            </summary>
+            <param name="codigoContratoPrincipal">Código de Contrato Principal</param>
+            <returns>Registro con el Monto Acumulado del Contrato Principal más sus Adendas</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IContratoService.EliminarContrato(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.ListadoContratoRequest)">
+            <summary>
+            Eliminar Contrato
+            </summary>
+            <param name="filtro">Datos del contrato</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IContratoService.BuscarContrato(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.ListadoContratoRequest)">
+            <summary>
+            Realiza la búsqueda de contratos
+            </summary>
+            <param name="filtro">Filtro de búsqueda</param>
+            <returns>Listado de contratos</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IContratoService.RegistrarCopiaContrato(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.ContratoRequest)">
+            <summary>
+            Registrar la copia de un contrato
+            </summary>
+            <param name="dataContrato">Datos del Contrato</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IContratoService.Obtener_Tipo_Contrato(System.Guid)">
+            <summary>
+            Obtiene el tipo de Contrato segun la Unidad Operativa S11-SGC
+            </summary>
+            <param name="CodigoUnidadOperativa"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IContratoService.BuscarBandejaProcesosContratoOrdenado(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.ContratoRequest,System.Collections.Generic.List{Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.CodigoValorResponse},System.Collections.Generic.List{Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.CodigoValorResponse})">
+            <summary>
+            Método para recuperar los registros ordenados de la bandeja de proceso.
+            </summary>
+            <param name="filtro">Objeto Contrato Request</param>
+            <param name="lstTipoContrato">Lista de Tipos de Servicio</param>
+            <param name="lstTipoServicio">Lista de Tipo de Requerimiento</param>
+            <returns>Registros de bandeja de procesos</returns>                
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IContratoService.ObtenerVariablesContratoParrafo(System.String)">
+            <summary>
+            Obtiene listado de variables de los parrafos de  un contrato
+            </summary>
+            <param name="codigoContrato">Código de Contrato</param>
+            <returns>Lista de variables de parrafos de contrato</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IContratoService.GenerarPdfDesdeHtml(System.String,System.String,System.String,System.Nullable{System.Guid},System.Nullable{System.Guid},System.Collections.Generic.List{Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.TrabajadorResponse},System.Collections.Generic.List{System.String},System.String,System.Boolean,System.String,System.Int32,System.Int32)">
+            <summary>
+            Permite generar un pdf desde un html
+            </summary>
+            <param name="htmlCuerpo">script de html</param>
+            <param name="htmlPie">script de html del pie de pagina</param>
+            <param name="codigoContrato">Código contrato</param>
+            <param name="linksRef">links de referencia</param>
+            <param name="indicadorHtml">Indicador si cuerpo va a ser parseado como Html</param>
+            <returns>Pdf en un arreglo de bytes</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IContratoService.ObtenerEmpresaVinculadaPorProveedor(System.Nullable{System.Guid})">
+            <summary>
+            Obtiene la empresa vinculada por proveedor
+            </summary>
+            <param name="codigoProveedor">Código del proveedor</param>
+            <returns>Empresa vinculada por proveedor</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IContratoService.ListaBandejaRevisionContratos(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.ContratoRequest)">
+            <summary>
+            Método para listar los documentos de la bandeja de revisión de contratos.
+            </summary>
+            <param name="NumeroContrato">número del contrato</param>
+            <param name="UnidadOperativa">unidad operativa</param>
+            <param name="NombreProveedor">nombre del proveedor</param>
+            <param name="NumdocPrv">numero documento del proveedor</param>
+            <returns>Lista de contratos para revisión</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IContratoService.ActualizarContrato(System.Guid,System.String)">
+            <summary>
+            Actualizar contrato
+            </summary>
+            <param name="CodigoContrato"></param>
+            <param name="TipoContrato"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IContratoService.BuscarNumeroContrato(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.ReporteContratoObservadoAprobadoRequest)">
+            <summary>
+            Realiza la búsqueda de Proveedores
+            </summary>
+            <param name="filtro">Filtro de búsqueda</param>
+            <returns>Lista de Proveedores</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IContratoService.BuscarContratoObservadoAprobado(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.ReporteContratoObservadoAprobadoRequest)">
+            <summary>
+            Realiza la búsqueda de Proveedores
+            </summary>
+            <param name="filtro">Filtro de búsqueda</param>
+            <returns>Lista de Proveedores</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.ISharePointService.RetornaCredencialesServer">
+            <summary>
+            Retorna las credenciales de acceso al SharePoint
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.ISharePointService.DescargaArchivoPorId(System.String@,System.Int64,System.String)">
+            <summary>
+            Retorna el arreglo de bytes del documento SharePoint
+            </summary>
+            <param name="hayError">Cadena para ver si hay errores al retornar el documento.</param>
+            <param name="idItem">Código del Archivo en el SharePoint</param>
+            <param name="siteUrl">URL del Site SharePoint</param>
+            <param name="listName">Lista de biblioteca.</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.ISharePointService.RetornaSiteUrlSharePoint">
+            <summary>
+            Retorna el Site del Servidor SharePoint configurado
+            </summary>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.ISharePointService.RegistraArchivoSharePoint(System.String@,System.String,System.String,System.String,System.IO.MemoryStream,System.String,Microsoft.SharePoint.Client.SharePointOnlineCredentials)">
+            <summary>
+            Registra un nuevo archivo en el servidor de SharePoint
+            </summary>        
+            <param name="hayError">variable que contiene el mensaje de error al registrar</param>
+            <param name="listName">biblioteca de donde se encontrará el archivo</param>
+            <param name="folderName">nombre de carpeta del archivo</param>
+            <param name="fileName">nombre del archivo</param>
+            <param name="myFile">stream del archivo</param>
+            <param name="prmSiteURL">URL del servidor SharePoint</param>
+            <param name="prmCredenciales">Credenciales de acceso al servidor SharePoint</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.ISharePointService.EliminaArchivoSharePoint(System.Collections.Generic.List{System.Int32},System.String,System.String@)">
+            <summary>
+            Método para eliminar los archivos del repositorio SharePoint.
+            </summary>
+            <param name="lstArchivosSHP">lista que contiene los ID de los archivos</param>
+            <param name="listName">nombre del directorio dentro del cual se buscan los archivos</param>
+            <param name="hayError">parámetro para capturar los errores del procedimiento</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IVariableService">
+            <summary>
+            Interfaz que define el servicio de variable
+            </summary>
+            <remarks>
+            Creación:       GMD 20150527 <br />
+            Modificación:                <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IVariableService.BuscarVariable(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.VariableRequest)">
+            <summary>
+            Realiza la busqueda de variables 
+            </summary>
+            <param name="filtro">Campo por el cual filtrar</param>
+            <returns>Lista de variables</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IVariableService.ObtenerValorDefecto(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.ValorPorDefectoRequest,Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.UnidadOperativaResponse)">
+            <summary>
+            Realiza la busqueda de indicadores del sistema
+            </summary>
+            <param name="filtro">Campo por el cual filtrar</param>
+            <param name="unidadOperativa">Unidad Operativa</param>
+            <returns>Registro con resultados</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IVariableService.RegistrarVariable(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.VariableRequest)">
+            <summary>
+            Registrar Variable
+            </summary>
+            <param name="filtro">Variable a registrar</param>
+            <returns>Indicador de conformidad
+            0: Registro satisfactorio
+            2: Identificador repetido
+            3: Nombre repetido
+            -1: Ocurrio un Error Inesperado</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IVariableService.EliminarVariablePlantilla(System.Collections.Generic.List{System.Object})">
+            <summary>
+            Eliminar una o muchas actividades de Variable plantilla
+            </summary>
+            <param name="listaCodigoFlujoAprobacionEstadio">Lista de códigos a eliminar</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IVariableService.ListarTipoVariable">
+            <summary>
+            Lista los tipos de variable definidos para las plantillas
+            </summary>
+            <returns>Lista de Tipos de Variable</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IVariableService.BuscarVariableCampo(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.VariableCampoRequest)">
+            <summary>
+            Realiza la búsqueda de Campos de Variable
+            </summary>
+            <param name="filtro">Filtro de Búsqueda</param>
+            <returns>Lista de Campos de Variable</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IVariableService.RegistrarVariableCampo(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.VariableCampoRequest)">
+            <summary>
+            Registra los datos del Campo de Variable
+            </summary>
+            <param name="datos">Datos del Campo a Registrar</param>
+            <returns>Código de resultado de operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IVariableService.EliminarVariableCampo(System.Collections.Generic.List{Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.VariableCampoRequest})">
+            <summary>
+            Método para eliminar campos de variable
+            </summary>
+            <param name="listaCodigos">Lista de Códigos de Campos de Variable</param>
+            <returns>Código de resultado de operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IVariableService.ListarTipoAlineamiento">
+            <summary>
+            Lista los tipos de alineamiento definidos para las columnas de un tabla
+            </summary>
+            <returns>Lista de Tipos de Alineamiento</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IVariableService.RegistrarVariableLista(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.VariableListaRequest)">
+            <summary>
+            Registra los datos del Lista de Variable
+            </summary>
+            <param name="datos">Datos del Lista a Registrar</param>
+            <returns>Código de resultado de operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IVariableService.EliminarVariableLista(System.Collections.Generic.List{Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.VariableListaRequest})">
+            <summary>
+            Método para eliminar lista de variable
+            </summary>
+            <param name="listaCodigos">Lista de Códigos de Lista de Variable</param>
+            <returns>Código de resultado de operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Core.ServiceContract.IVariableService.BuscarVariableLista(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.VariableListaRequest)">
+            <summary>
+            Realiza la búsqueda de Lista de Variable
+            </summary>
+            <param name="filtro">Filtro de Búsqueda</param>
+            <returns>Lista de Variable Lista</returns>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Application.Core.ServiceContract.IPlantillaRequerimientoService">
+            <summary>
+            Interfaz que define el servicio de plantilla
+            </summary>
+            <remarks>
+            Creación:       <br />
+            Modificación:                <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Application.Core.ServiceContract.IPlantillaRequerimientoService.BuscarPlantilla(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.PlantillaRequerimientoRequest)">
+            <summary>
+            Realiza la búsqueda de plantillas
+            </summary>
+            <param name="filtro">Filtro de búsqueda</param>
+            <returns>Lista de plantillas</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Application.Core.ServiceContract.IPlantillaRequerimientoService.RegistrarPlantilla(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.PlantillaRequerimientoRequest)">
+            <summary>
+            Registra o actualiza una plantilla
+            </summary>
+            <param name="data">Datos a registrar</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Application.Core.ServiceContract.IPlantillaRequerimientoService.EliminarPlantilla(System.Collections.Generic.List{System.Object})">
+            <summary>
+            Eliminar una o muchas plantillas
+            </summary>
+            <param name="listaCodigosPlantilla">Lista de Códigos de Plantilla a eliminar</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Application.Core.ServiceContract.IPlantillaRequerimientoService.BuscarPlantillaParrafo(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.PlantillaRequerimientoParrafoRequest)">
+            <summary>
+            Realiza la búsqueda de plantilla párrafo
+            </summary>
+            <param name="filtro">Filtro de búsqueda</param>
+            <returns>Lista de plantilla párrafo</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Application.Core.ServiceContract.IPlantillaRequerimientoService.RegistrarPlantillaParrafo(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.PlantillaRequerimientoParrafoRequest)">
+            <summary>
+            Registra o actualiza un párrafo
+            </summary>
+            <param name="data">Datos a registrar</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Application.Core.ServiceContract.IPlantillaRequerimientoService.BuscarVariableGlobal(System.String)">
+            <summary>
+            Realiza la búsqueda de variables globales
+            </summary>
+            <param name="codigoPlantilla">Código de Plantilla</param>
+            <returns>Lista de variables globales</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Application.Core.ServiceContract.IPlantillaRequerimientoService.EliminarPlantillaParrafo(System.Collections.Generic.List{System.Object})">
+            <summary>
+            Eliminar una o muchas plantilla párrafo
+            </summary>
+            <param name="listaCodigosPlantillaParrafo">Lista de Códigos de Plantilla Párrafo a eliminar</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Application.Core.ServiceContract.IPlantillaRequerimientoService.BuscarPlantillaParrafoVariableCodigoPlantillaParrafo(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.PlantillaRequerimientoParrafoVariableRequest)">
+            <summary>
+            Realiza la búsqueda de plantilla párrafo variable
+            </summary>
+            <param name="filtro">Filtro de búsqueda</param>
+            <returns>Lista de plantilla párrafo variable</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Application.Core.ServiceContract.IPlantillaRequerimientoService.BuscarNotasPiePorPlantilla(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.PlantillaRequerimientoNotaPieRequest)">
+            <summary>
+            Realiza la búsqueda de notas al pie por plantilla
+            </summary>
+            <param name="filtro">Filtro de búsqueda</param>
+            <returns>Listado de notas al pie</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Application.Core.ServiceContract.IPlantillaRequerimientoService.RegistrarNotaPie(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.PlantillaRequerimientoNotaPieRequest)">
+            <summary>
+            Registra o actualiza una nota al pie
+            </summary>
+            <param name="data">Datos a registrar</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Application.Core.ServiceContract.IPlantillaRequerimientoService.EliminarNotas(System.Collections.Generic.List{System.Guid})">
+            <summary>
+            Elimina uno o muchas notas al pie
+            </summary>
+            <param name="listaCodigosNotas">Lista de notas a eliminar</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Application.Core.ServiceContract.IProcesoAuditoriaService.BuscarBandejaProcesoAuditoria(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.ProcesoAuditoriaRequest)">
+            <summary>
+            Busca Bandeja Proceso Auditoria
+            </summary>
+            <param name="filtro"></param>
+            <returns>Lista con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Application.Core.ServiceContract.IProcesoAuditoriaService.RegistrarProcesoAuditoria(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.ProcesoAuditoriaRequest)">
+            <summary>
+            Registra o Actualiza un Proceso Auditoria
+            </summary>
+            <param name="data"></param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Application.Core.ServiceContract.IProcesoAuditoriaService.EliminarProcesoAuditoria(System.Collections.Generic.List{System.Object})">
+            <summary>
+            Eliminar una o muchos Procesos de Auditoria
+            </summary>
+            <param name="listaCodigoProcesoAuditoria"></param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Application.Core.ServiceContract.IFlujoAprobacionService.BuscarBandejaFlujoAprobacion(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.FlujoAprobacionRequest)">
+            <summary>
+            Busca Bandeja Flujo Aprobacion
+            </summary>
+            <param name="filtro">campos de busqueda</param>
+            <returns>Clase Flujo aprobacion con los datos de busqueda</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Application.Core.ServiceContract.IFlujoAprobacionService.RegistrarFlujoAprobacion(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.FlujoAprobacionRequest)">
+            <summary>
+            Registra o Actualiza un Flujo Aprobacion
+            </summary>
+            <param name="data">Datos a registrar</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Application.Core.ServiceContract.IFlujoAprobacionService.EliminarFlujoAprobacion(System.Collections.Generic.List{System.Object})">
+            <summary>
+            Eliminar una o muchas actividades de flujo de aprobacion
+            </summary>
+            <param name="listaCodigoFlujoAprobacion">Lista de códigos a eliminar</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Application.Core.ServiceContract.IFlujoAprobacionService.BuscarBandejaFlujoAprobacionEstadio(System.String,System.String,System.Boolean)">
+            <summary>
+            Busca Bandeja Flujo Aprobacion Estadio
+            </summary>
+            <param name="filtro">campos de busqueda</param>
+            <returns>Clase Flujo aprobacion con los datos de busqueda</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Application.Core.ServiceContract.IFlujoAprobacionService.RegistrarFlujoAprobacionEstadio(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.FlujoAprobacionEstadioRequest,System.Collections.Generic.List{Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.FlujoAprobacionEstadioRequest},System.Collections.Generic.List{Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.FlujoAprobacionEstadioRequest},System.Collections.Generic.List{Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.FlujoAprobacionEstadioRequest})">
+            <summary>
+            Registra / Edita Flujo Aprobacion Estadios
+            </summary>
+            <param name="data">Datos de estadio</param>
+            <param name="responsable">Responsable de estadio</param>
+            <param name="informados">Informados de estadio</param>
+            <param name="responsableVinculadas">Responsable de vinculadas</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Application.Core.ServiceContract.IFlujoAprobacionService.EliminarFlujoAprobacionEstadio(System.Collections.Generic.List{System.Object})">
+            <summary>
+            Eliminar una o muchas actividades de flujo de aprobacion estadio
+            </summary>
+            <param name="listaCodigoFlujoAprobacion">Lista de códigos a eliminar</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Application.Core.ServiceContract.IFlujoAprobacionService.BuscarFlujoAprobacionParticipante(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.FlujoAprobacionRequest)">
+            <summary>
+            Busca Bandeja Flujo Aprobacion participante
+            </summary>
+            <param name="filtro">filtro</param>
+            <returns>Registros de flujo aprobacion participante</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Application.Core.ServiceContract.IFlujoAprobacionService.BuscarFlujoAprobacionEstadioDescripcion(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.FlujoAprobacionEstadioRequest)">
+            <summary>
+            Busca los Estadios de Flujo de Aprobación Estadio
+            </summary>
+            <param name="filtro">Filtro de búsqueda</param>
+            <returns>Clase Flujo aprobación con los datos de busqueda</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Application.Core.ServiceContract.IFlujoAprobacionService.ActualizarTrabajadorOriginalFlujo(System.Guid)">
+            <summary>
+            Actualiza el reemplazo al trabajador original
+            </summary>
+            <param name="codigoTrabajador">Codigo de trabajador</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Application.Core.ServiceContract.IPlantillaService">
+            <summary>
+            Interfaz que define el servicio de plantilla
+            </summary>
+            <remarks>
+            Creación:       GMD 20150518 <br />
+            Modificación:                <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Application.Core.ServiceContract.IPlantillaService.BuscarPlantilla(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.PlantillaRequest)">
+            <summary>
+            Realiza la búsqueda de plantillas
+            </summary>
+            <param name="filtro">Filtro de búsqueda</param>
+            <returns>Lista de plantillas</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Application.Core.ServiceContract.IPlantillaService.RegistrarPlantilla(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.PlantillaRequest)">
+            <summary>
+            Registra o actualiza una plantilla
+            </summary>
+            <param name="data">Datos a registrar</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Application.Core.ServiceContract.IPlantillaService.EliminarPlantilla(System.Collections.Generic.List{System.Object})">
+            <summary>
+            Eliminar una o muchas plantillas
+            </summary>
+            <param name="listaCodigosPlantilla">Lista de Códigos de Plantilla a eliminar</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Application.Core.ServiceContract.IPlantillaService.BuscarPlantillaParrafo(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.PlantillaParrafoRequest)">
+            <summary>
+            Realiza la búsqueda de plantilla párrafo
+            </summary>
+            <param name="filtro">Filtro de búsqueda</param>
+            <returns>Lista de plantilla párrafo</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Application.Core.ServiceContract.IPlantillaService.RegistrarPlantillaParrafo(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.PlantillaParrafoRequest)">
+            <summary>
+            Registra o actualiza un párrafo
+            </summary>
+            <param name="data">Datos a registrar</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Application.Core.ServiceContract.IPlantillaService.BuscarVariableGlobal(System.String)">
+            <summary>
+            Realiza la búsqueda de variables globales
+            </summary>
+            <param name="codigoPlantilla">Código de Plantilla</param>
+            <returns>Lista de variables globales</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Application.Core.ServiceContract.IPlantillaService.EliminarPlantillaParrafo(System.Collections.Generic.List{System.Object})">
+            <summary>
+            Eliminar una o muchas plantilla párrafo
+            </summary>
+            <param name="listaCodigosPlantillaParrafo">Lista de Códigos de Plantilla Párrafo a eliminar</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Application.Core.ServiceContract.IPlantillaService.BuscarPlantillaParrafoVariableCodigoPlantillaParrafo(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.PlantillaParrafoVariableRequest)">
+            <summary>
+            Realiza la búsqueda de plantilla párrafo variable
+            </summary>
+            <param name="filtro">Filtro de búsqueda</param>
+            <returns>Lista de plantilla párrafo variable</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Application.Core.ServiceContract.IPlantillaService.BuscarNotasPiePorPlantilla(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.PlantillaNotaPieRequest)">
+            <summary>
+            Realiza la búsqueda de notas al pie por plantilla
+            </summary>
+            <param name="filtro">Filtro de búsqueda</param>
+            <returns>Listado de notas al pie</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Application.Core.ServiceContract.IPlantillaService.RegistrarNotaPie(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.PlantillaNotaPieRequest)">
+            <summary>
+            Registra o actualiza una nota al pie
+            </summary>
+            <param name="data">Datos a registrar</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Application.Core.ServiceContract.IPlantillaService.EliminarNotas(System.Collections.Generic.List{System.Guid})">
+            <summary>
+            Elimina uno o muchas notas al pie
+            </summary>
+            <param name="listaCodigosNotas">Lista de notas a eliminar</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+    </members>
+</doc>

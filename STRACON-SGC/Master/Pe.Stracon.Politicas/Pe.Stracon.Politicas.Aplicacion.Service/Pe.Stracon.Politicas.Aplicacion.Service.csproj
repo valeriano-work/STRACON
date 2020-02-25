@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C3A413D7-1D0A-4D4E-A228-B7F9FEA194B3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Pe.Stracon.Politicas.Aplicacion.Service</RootNamespace>
+    <AssemblyName>Pe.Stracon.Politicas.Aplicacion.Service</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Pe.Stracon.Politicas.Aplicacion.Service.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'STRACON_QA|AnyCPU'">
+    <OutputPath>bin\STRACON_QA\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'sgcRelease|AnyCPU'">
+    <OutputPath>bin\sgcRelease\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'sccRelease|AnyCPU'">
+    <OutputPath>bin\sccRelease\</OutputPath>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Pe.Stracon.SGC.Presentacion.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Librerias\SGC\Pe.Stracon.SGC.Presentacion.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20715.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\GenericService.cs" />
+    <Compile Include="General\ParametroService.cs" />
+    <Compile Include="General\ParametroSeccionService.cs" />
+    <Compile Include="General\ParametroValorService.cs" />
+    <Compile Include="General\PlantillaNotificacionService.cs" />
+    <Compile Include="General\PoliticaService.cs" />
+    <Compile Include="General\TrabajadorService.cs" />
+    <Compile Include="General\UnidadOperativaService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Pe.GyM.Security\Pe.GyM.Security.Account\Pe.GyM.Security.Account.csproj">
+      <Project>{6eb294cd-e9ad-400b-a558-cbf33e200713}</Project>
+      <Name>Pe.GyM.Security.Account</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pe.Stracon.Politicas.Aplicacion.Adapter\Pe.Stracon.Politicas.Aplicacion.Adapter.csproj">
+      <Project>{bdb3df2a-e0f7-4d06-b120-346663e5215b}</Project>
+      <Name>Pe.Stracon.Politicas.Aplicacion.Adapter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pe.Stracon.Politicas.Aplicacion.Core\Pe.Stracon.Politicas.Aplicacion.Core.csproj">
+      <Project>{bcbbb6a6-53fc-4701-97c1-d804d5cba9a8}</Project>
+      <Name>Pe.Stracon.Politicas.Aplicacion.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pe.Stracon.Politicas.Aplicacion.TransferObject\Pe.Stracon.Politicas.Aplicacion.TransferObject.csproj">
+      <Project>{3b488d54-5850-425e-b187-0a232afa02cc}</Project>
+      <Name>Pe.Stracon.Politicas.Aplicacion.TransferObject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pe.Stracon.Politicas.Infraestructura.CommandModel\Pe.Stracon.Politicas.Infraestructura.CommandModel.csproj">
+      <Project>{431a5eab-2f15-4ccc-82b7-f83f6cded2dc}</Project>
+      <Name>Pe.Stracon.Politicas.Infraestructura.CommandModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pe.Stracon.Politicas.Infraestructura.Core\Pe.Stracon.Politicas.Infraestructura.Core.csproj">
+      <Project>{03570580-69a0-4b8a-bccf-7e1bf8942168}</Project>
+      <Name>Pe.Stracon.Politicas.Infraestructura.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pe.Stracon.Politicas.Infraestructura.QueryModel\Pe.Stracon.Politicas.Infraestructura.QueryModel.csproj">
+      <Project>{166d807d-1f6f-4b98-90b8-5ebe7cd8c843}</Project>
+      <Name>Pe.Stracon.Politicas.Infraestructura.QueryModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pe.Stracon.PoliticasCross.Core\Pe.Stracon.PoliticasCross.Core.csproj">
+      <Project>{ebe3280b-dd55-4324-a6fa-83fadc6c007d}</Project>
+      <Name>Pe.Stracon.PoliticasCross.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

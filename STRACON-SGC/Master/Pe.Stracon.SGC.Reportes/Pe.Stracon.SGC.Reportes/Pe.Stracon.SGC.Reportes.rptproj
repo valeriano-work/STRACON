@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<Project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ToolsVersion="2.0">
+  <State>$base64$PFNvdXJjZUNvbnRyb2xJbmZvIHhtbG5zOnhzZD0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zOmRkbDI9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDAzL2VuZ2luZS8yIiB4bWxuczpkZGwyXzI9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDAzL2VuZ2luZS8yLzIiIHhtbG5zOmRkbDEwMF8xMDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDA4L2VuZ2luZS8xMDAvMTAwIiB4bWxuczpkZGwyMDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDEwL2VuZ2luZS8yMDAiIHhtbG5zOmRkbDIwMF8yMDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDEwL2VuZ2luZS8yMDAvMjAwIiB4bWxuczpkZGwzMDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDExL2VuZ2luZS8zMDAiIHhtbG5zOmRkbDMwMF8zMDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDExL2VuZ2luZS8zMDAvMzAwIiB4bWxuczpkZGw0MDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDEyL2VuZ2luZS80MDAiIHhtbG5zOmRkbDQwMF80MDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDEyL2VuZ2luZS80MDAvNDAwIiB4bWxuczpkd2Q9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vRGF0YVdhcmVob3VzZS9EZXNpZ25lci8xLjAiPg0KICA8RW5hYmxlZD5mYWxzZTwvRW5hYmxlZD4NCiAgPFByb2plY3ROYW1lPjwvUHJvamVjdE5hbWU+DQogIDxBdXhQYXRoPjwvQXV4UGF0aD4NCiAgPExvY2FsUGF0aD48L0xvY2FsUGF0aD4NCiAgPFByb3ZpZGVyPjwvUHJvdmlkZXI+DQo8L1NvdXJjZUNvbnRyb2xJbmZvPg==</State>
+  <DataSources>
+    <ProjectItem>
+      <Name>STRACON_POLITICAS.rds</Name>
+      <FullPath>STRACON_POLITICAS.rds</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>STRACON_SGC.rds</Name>
+      <FullPath>STRACON_SGC.rds</FullPath>
+    </ProjectItem>
+  </DataSources>
+  <DataSets />
+  <Reports>
+    <ProjectItem>
+      <Name>BienesContrato.rdl</Name>
+      <FullPath>BienesContrato.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Consulta.rdl</Name>
+      <FullPath>Consulta.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>ContratoEliminado.rdl</Name>
+      <FullPath>ContratoEliminado.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>ContratoPendienteElaborar.rdl</Name>
+      <FullPath>ContratoPendienteElaborar.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>ContratoPorEstadio.rdl</Name>
+      <FullPath>ContratoPorEstadio.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>ContratoPorFinalizar.rdl</Name>
+      <FullPath>ContratoPorFinalizar.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>ContratoPorVencer.rdl</Name>
+      <FullPath>ContratoPorVencer.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>EstadioActualContrato.rdl</Name>
+      <FullPath>EstadioActualContrato.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>HojaRuta.rdl</Name>
+      <FullPath>HojaRuta.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>ListadoContrato.rdl</Name>
+      <FullPath>ListadoContrato.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Plantilla Horizontal.rdl</Name>
+      <FullPath>Plantilla Horizontal.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Plantilla Vertical.rdl</Name>
+      <FullPath>Plantilla Vertical.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>TiempoAtencion.rdl</Name>
+      <FullPath>TiempoAtencion.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>ContratoObservadoAprobado.rdl</Name>
+      <FullPath>ContratoObservadoAprobado.rdl</FullPath>
+    </ProjectItem>
+  </Reports>
+  <Configurations>
+    <Configuration>
+      <Name>Debug</Name>
+      <Platform>Win32</Platform>
+      <Options>
+        <OutputPath>bin\Debug</OutputPath>
+        <TargetServerVersion>SSRS2008R2</TargetServerVersion>
+        <TargetServerURL>http://10.240.132.108/ReportServer</TargetServerURL>
+        <TargetFolder>Pe.Stracon.SGC.Reportes</TargetFolder>
+        <TargetDataSourceFolder>Data Sources</TargetDataSourceFolder>
+        <TargetDatasetFolder>Datasets</TargetDatasetFolder>
+        <TargetReportPartFolder>Report Parts</TargetReportPartFolder>
+        <StartItem>BienesContrato.rdl</StartItem>
+      </Options>
+    </Configuration>
+    <Configuration>
+      <Name>DebugLocal</Name>
+      <Platform>Win32</Platform>
+      <Options>
+        <OutputPath>bin\DebugLocal</OutputPath>
+        <TargetServerVersion>SSRS2008R2</TargetServerVersion>
+        <TargetFolder>Pe.Stracon.SGC.Reportes</TargetFolder>
+        <TargetDataSourceFolder>Data Sources</TargetDataSourceFolder>
+        <TargetDatasetFolder>Datasets</TargetDatasetFolder>
+        <TargetReportPartFolder>Report Parts</TargetReportPartFolder>
+      </Options>
+    </Configuration>
+    <Configuration>
+      <Name>Release</Name>
+      <Platform>Win32</Platform>
+      <Options>
+        <OutputPath>bin\Release</OutputPath>
+        <TargetServerVersion>SSRS2008R2</TargetServerVersion>
+        <TargetFolder>Pe.Stracon.SGC.Reportes</TargetFolder>
+        <TargetDataSourceFolder>Data Sources</TargetDataSourceFolder>
+        <TargetDatasetFolder>Datasets</TargetDatasetFolder>
+        <TargetReportPartFolder>Report Parts</TargetReportPartFolder>
+      </Options>
+    </Configuration>
+  </Configurations>
+</Project>

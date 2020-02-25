@@ -1,0 +1,1892 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Pe.Stracon.SGC.Infraestructura.CommandModel</name>
+    </assembly>
+    <members>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.CommandModel.Base.BaseEntityMapping`1">
+            <summary>
+            Clase base para el mapping de entidades
+            </summary>
+            <remarks>
+            Creación:   GMD 20150107 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.CommandModel.Base.BaseEntityMapping`1.ConfigureAuditMapping(System.Boolean)">
+            <summary>
+            Permite configurar los atributos del registro de auditoria.
+            </summary>
+            <param name="isAuditContex">Indicador si es un contexto de auditoria</param>
+            <returns>Indicador si la entidad tiene registro de auditoria</returns>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.CommandModel.Base.Entity">
+            <summary>
+            Clase base para las entidades
+            </summary>
+            <remarks>
+            Creación:   GMD 20150107 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Base.Entity.EstadoRegistro">
+            <summary>
+            Estado de Registro
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Base.Entity.UsuarioCreacion">
+            <summary>
+            Usuario de Creación
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Base.Entity.FechaCreacion">
+            <summary>
+            Fecha de Creación 
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Base.Entity.TerminalCreacion">
+            <summary>
+            Terminal de Creación 
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Base.Entity.UsuarioModificacion">
+            <summary>
+            Usuario de Modificación
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Base.Entity.FechaModificacion">
+            <summary>
+            Fecha de Modificación 
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Base.Entity.TerminalModificacion">
+            <summary>
+            Terminal de Modificación
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.CommandModel.Base.TraceAuditAttribute">
+            <summary>
+            Define si una entidad va registrar auditoria o no
+            </summary>
+            <remarks>
+            Creación:   GMD 22122014 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.BienAlquilerEntity">
+            <summary>
+            Clase que representa la entidad BIEN_ALQUILER
+            </summary>
+            <remarks>
+            Creación:   GMD 20150710 <br />
+            Modificación: <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.BienAlquilerEntity.CodigoBienAlquiler">
+            <summary>
+            Codigo del Bien de Alquiler
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.BienAlquilerEntity.CodigoBien">
+            <summary>
+            Codigo de Bien
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.BienAlquilerEntity.IndicadorSinLimite">
+            <summary>
+            Indicador Sin Límite
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.BienAlquilerEntity.CantidadLimite">
+            <summary>
+            Cantidad Límite
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.BienAlquilerEntity.Monto">
+            <summary>
+            Monto
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.BienEntity">
+            <summary>
+            Clase que representa la entidad bien
+            </summary>
+            <remarks>
+            Creación:   GMD 20150710 <br />
+            Modificación: <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.BienEntity.CodigoBien">
+            <summary>
+            Codigo del Bien
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.BienEntity.CodigoTipoBien">
+            <summary>
+            Código del Tipo de Bien
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.BienEntity.CodigoIdentificacion">
+            <summary>
+            Código de Identificación
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.BienEntity.NumeroSerie">
+            <summary>
+            Número de Serie
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.BienEntity.Descripcion">
+            <summary>
+            Descripción
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.BienEntity.Marca">
+            <summary>
+            Marca
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.BienEntity.Modelo">
+            <summary>
+            Modelo
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.BienEntity.FechaAdquisicion">
+            <summary>
+            Fecha de Adquisición
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.BienEntity.TiempoVida">
+            <summary>
+            Tiempo de Vida
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.BienEntity.ValorResidual">
+            <summary>
+            Valor Residual
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.BienEntity.CodigoTipoTarifa">
+            <summary>
+            Código de Tipo de Tarifa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.BienEntity.CodigoPeriodoAlquiler">
+            <summary>
+            Código Periodo de Alquiler
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.BienEntity.ValorAlquiler">
+            <summary>
+            Valor de Alquiler
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.BienEntity.CodigoMoneda">
+            <summary>
+            Código de Moneda
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.BienEntity.MesInicioAlquiler">
+            <summary>
+            Mes de Inicio de Alquiler
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.BienEntity.AnioInicioAlquiler">
+            <summary>
+            Año de Inicio de Alquiler
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.BienRegistroEntity">
+            <summary>
+            Clase que representa la entidad Bien Registro
+            </summary>
+            <remarks>
+            Creación :  GMD 20150511 <br />
+            Modificación :           <br />
+            </remarks>  
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.BienRegistroEntity.CodigoBienRegistro">
+            <summary>
+            Codigo del Bien de Registro
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.BienRegistroEntity.CodigoTipoContenido">
+            <summary>
+            Codigo del Tipo de Contenido
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.BienRegistroEntity.Contenido">
+            <summary>
+            Contenido
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ConsultaAdjuntoEntity">
+            <summary>
+            Clase que representa la entidad Consulta Adjunto
+            </summary>
+            <remarks>
+            Creación:   GMD 20150525 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ConsultaAdjuntoEntity.CodigoConsultaAdjunto">
+            <summary>
+            Codigo Contrato Documento Adjunto
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ConsultaAdjuntoEntity.CodigoConsulta">
+            <summary>
+            Codigo de Consulta
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ConsultaAdjuntoEntity.CodigoArchivo">
+            <summary>
+            Codigo de Archivo
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ConsultaAdjuntoEntity.NombreArchivo">
+            <summary>
+            Nombre del Archivo
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ConsultaAdjuntoEntity.RutaArchivoSharePoint">
+            <summary>
+            ruta del archivo sharepoint
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ConsultaEntity">
+            <summary>
+            Clase que representa la entidad Consulta
+            </summary>
+            <remarks>
+            Creación:   GMD 20150710 <br />
+            Modificación: <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ConsultaEntity.CodigoConsulta">
+            <summary>
+            Codigo de consulta
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ConsultaEntity.CodigoRemitente">
+            <summary>
+            Remitente
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ConsultaEntity.CodigoDestinatario">
+            <summary>
+            Destinatario
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ConsultaEntity.Tipo">
+            <summary>
+            Tipo
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ConsultaEntity.Asunto">
+            <summary>
+            Asunto
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ConsultaEntity.Contenido">
+            <summary>
+            Contenido
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ConsultaEntity.EstadoConsulta">
+            <summary>
+            Estado de consulta
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ConsultaEntity.FechaEnvio">
+            <summary>
+            Fecha de envío
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ConsultaEntity.Respuesta">
+            <summary>
+            Respuesta
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ConsultaEntity.FechaRespuesta">
+            <summary>
+            Fecha de respuesta
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ConsultaEntity.CodigoUnidadOperativa">
+            <summary>
+            Código de unidad operativa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ConsultaEntity.CodigoArea">
+            <summary>
+            Código de área
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ConsultaEntity.EsValido">
+            <summary>
+            Es válido
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ConsultaEntity.CodigoConsultaRelacionado">
+            <summary>
+            Código de consulta relacionado
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ConsultaEntity.CodigoConsultaOriginal">
+            <summary>
+            Código de consulta original
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ConsultaEntity.VistoRemitenteOriginal">
+            <summary>
+            Visto remitente original
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ConsultaTrazabilidadEntity">
+            <summary>
+            Clase que representa la entidad consulta
+            </summary>
+            <remarks>
+            Creación:   GMD 20150710 <br />
+            Modificación: <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ConsultaTrazabilidadEntity.CodigoConsultaTrazabilidad">
+            <summary>
+            Codigo de consulta Trazabilidad
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ConsultaTrazabilidadEntity.CodigoConsulta">
+            <summary>
+            Código de consulta
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ConsultaTrazabilidadEntity.CodigoRemitente">
+            <summary>
+            Código de Remitente
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ConsultaTrazabilidadEntity.CodigoDestinatario">
+            <summary>
+            Código de destinatario
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ConsultaTrazabilidadEntity.FechaEnvio">
+            <summary>
+            Fecha de envío
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoBienEntity">
+            <summary>
+            Clase que representa la entidad Contrato Bien
+            </summary>
+            <remarks>
+            Creación :  GMD 20150511 <br />
+            Modificación :           <br />
+            </remarks>  
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoBienEntity.CodigoContratoBien">
+            <summary>
+            Codigo de Contrato de Bien
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoBienEntity.CodigoContrato">
+            <summary>
+            Codigo de Contrato
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoBienEntity.CodigoBien">
+            <summary>
+            Codigo de Bien
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoDocumentoAdjuntoResolucionEntity">
+            <summary>
+            Clase que representa la entidad Contrato Documento Adjunto
+            </summary>
+            <remarks>
+            Creación:   GMD 20150525 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoDocumentoAdjuntoResolucionEntity.CodigoContratoDocumentoAdjuntoResolucion">
+            <summary>
+            Codigo Contrato Documento Adjunto
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoDocumentoAdjuntoResolucionEntity.CodigoContrato">
+            <summary>
+            Codigo de Contrato
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoDocumentoAdjuntoResolucionEntity.CodigoArchivo">
+            <summary>
+            Codigo de Archivo
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoDocumentoAdjuntoResolucionEntity.NombreArchivo">
+            <summary>
+            Nombre del Archivo
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoDocumentoAdjuntoResolucionEntity.RutaArchivoSharePoint">
+            <summary>
+            ruta del archivo sharepoint
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoDocumentoEntity">
+            <summary>
+            Clase que representa la entidad Contrato Documento
+            </summary>
+            <remarks>
+            Creación:   GMD 20150525 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoDocumentoEntity.CodigoContratoDocumento">
+            <summary>
+            Codigo Contrato Documento
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoDocumentoEntity.CodigoContrato">
+            <summary>
+            Codigo de Contrato
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoDocumentoEntity.CodigoArchivo">
+            <summary>
+            Codigo de Archivo
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoDocumentoEntity.RutaArchivoSharePoint">
+            <summary>
+            ruta del archivo sharepoint
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoDocumentoEntity.IndicadorActual">
+            <summary>
+            Indicador Actual
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoDocumentoEntity.Version">
+            <summary>
+            Version
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoDocumentoEntity.Contenido">
+            <summary>
+            Contenido del documento
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoDocumentoEntity.ContenidoBusqueda">
+            <summary>
+            Contenido del documento de Busqueda
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoEntity">
+            <summary>
+            Clase que representa la entidad Contrato
+            </summary>
+            <remarks>
+            Creación:   GMD 20150525 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoEntity.CodigoContrato">
+            <summary>
+            Código de Contrato
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoEntity.CodigoUnidadOperativa">
+            <summary>
+            Código de Unidad Operativa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoEntity.CodigoProveedor">
+            <summary>
+            Código de Proveedor
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoEntity.NumeroContrato">
+            <summary>
+            Número de Contrato
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoEntity.Descripcion">
+            <summary>
+            Descripción
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoEntity.CodigoTipoServicio">
+            <summary>
+            Código de Tipo de Servicio
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoEntity.CodigoTipoRequerimiento">
+            <summary>
+            Código de Tipo de Requerimiento
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoEntity.CodigoTipoDocumento">
+            <summary>
+            Código de Tipo de Documento
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoEntity.IndicadorVersionOficial">
+            <summary>
+            Indicador de Versión Oficial
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoEntity.FechaInicioVigencia">
+            <summary>
+            Fecha de Inicio de Vigencia
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoEntity.FechaFinVigencia">
+            <summary>
+            Fecha de Fin de Vigencia
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoEntity.CodigoMoneda">
+            <summary>
+            Código de Moneda
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoEntity.MontoContrato">
+            <summary>
+            Monto de Contrato
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoEntity.MontoAcumulado">
+            <summary>
+            Monto Acumulado
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoEntity.CodigoEstado">
+            <summary>
+            Código de Estado
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoEntity.CodigoPlantilla">
+            <summary>
+            Código de Plantilla
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoEntity.CodigoContratoPrincipal">
+            <summary>
+            Código de Contrato Principal
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoEntity.CodigoEstadoEdicion">
+            <summary>
+            Código de Estado de Edición
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoEntity.ComentarioModificacion">
+            <summary>
+            Comentario de Modificación
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoEntity.RespuestaModificacion">
+            <summary>
+            Respuesta de Modificación
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoEntity.CodigoFlujoAprobacion">
+            <summary>
+            Código de Flujo de Aprobación
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoEntity.CodigoEstadioActual">
+            <summary>
+            Código de Estadio Actual
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoEntity.NumeroAdenda">
+            <summary>
+            Número de correlativo de adenda
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoEntity.NumeroAdendaConcatenado">
+            <summary>
+            Número de adenda concantenado
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoEntity.EsFlexible">
+            <summary>
+            Si el contrato es flexible
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoEntity.EsCorporativo">
+            <summary>
+            Si el contrato es corporativo
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoEntity.CodigoContratoOriginal">
+            <summary>
+            Código de Contrato Original (se registra cuando se realiza la copia del contrato)
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoEstadioEntity">
+            <summary>
+            Clase que representa la entidad Contrato Estadio
+            </summary>
+            <remarks>
+            Creación :  GMD 20150511 <br />
+            Modificación :           <br />
+            </remarks>  
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoEstadioEntity.CodigoContratoEstadio">
+            <summary>
+            Codigo de Contrato de Estadio
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoEstadioEntity.CodigoContrato">
+            <summary>
+            Codigo de Contrato
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoEstadioEntity.CodigoFlujoAprobacionEstadio">
+            <summary>
+            Codigo Flujo de Aprobacion Estadio
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoEstadioEntity.FechaIngreso">
+            <summary>
+            Fecha de Ingreso
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoEstadioEntity.FechaFinalizacion">
+            <summary>
+            Fecha de Finalizacion
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoEstadioEntity.CodigoResponsable">
+            <summary>
+            Codigo de Responsable
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoEstadioEntity.CodigoEstadoContratoEstadio">
+            <summary>
+            Estado del Contrato Estadio.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoEstadioEntity.FechaPrimeraNotificacion">
+            <summary>
+            Fecha de Primera Notificacion
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoEstadioEntity.FechaUltimaNotificacion">
+            <summary>
+            Fecha de Ultima Notificacion
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoEstadioConsultaEntity">
+            <summary>
+            Clase que representa la entidad  Estadio Consulta
+            </summary>
+            <remarks>
+            Creación :  GMD 20150511 <br />
+            Modificación :           <br />
+            </remarks>  
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoEstadioConsultaEntity.CodigoContratoEstadioConsulta">
+            <summary>
+            Codigo Contrato Estadio de Consulta
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoEstadioConsultaEntity.CodigoContratoEstadio">
+            <summary>
+            Codigo Contrato de Estadio
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoEstadioConsultaEntity.Descripcion">
+            <summary>
+            Descripcion
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoEstadioConsultaEntity.FechaRegistro">
+            <summary>
+            Fecha de Registro
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoEstadioConsultaEntity.CodigoContratoParrafo">
+            <summary>
+            Codigo de Parrafo
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoEstadioConsultaEntity.Destinatario">
+            <summary>
+            Destinatario
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoEstadioConsultaEntity.Respuesta">
+            <summary>
+            Respuesta
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoEstadioConsultaEntity.FechaRespuesta">
+            <summary>
+            Fecha de Respuesta
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoEstadioObservacionEntity">
+            <summary>
+            Clase que representa la entidad Contrato Estadio Observación
+            </summary>
+            <remarks>
+            Creación:   GMD 20150525 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoEstadioObservacionEntity.CodigoContratoEstadioObservacion">
+            <summary>
+            Codigo de Contrato de Estadio de Observacion
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoEstadioObservacionEntity.CodigoContratoEstadio">
+            <summary>
+            Codigo Contrato de Estadio
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoEstadioObservacionEntity.Descripcion">
+            <summary>
+            Descripcion
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoEstadioObservacionEntity.FechaRegistro">
+            <summary>
+            Fecha de Registro
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoEstadioObservacionEntity.CodigoContratoParrafo">
+            <summary>
+            Codigo de Parrafo
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoEstadioObservacionEntity.CodigoArchivo">
+            <summary>
+            Codigo de Archivo
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoEstadioObservacionEntity.RutaArchivoSharepoint">
+            <summary>
+            Ruta de Archivo de Sharepoint
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoEstadioObservacionEntity.CodigoEstadioRetorno">
+            <summary>
+            Codigo Estadio de Retorno
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoEstadioObservacionEntity.Destinatario">
+            <summary>
+            Destinatario
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoEstadioObservacionEntity.CodigoTipoRespuesta">
+            <summary>
+            Codigo Tipo de Respuesta
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoEstadioObservacionEntity.Respuesta">
+            <summary>
+            Respuesta
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoEstadioObservacionEntity.FechaRespuesta">
+            <summary>
+            Fecha de Respuesta
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoFirmanteEntity">
+            <summary>
+            Clase que representa la entidad Contrato Firmante
+            </summary>
+            <remarks>
+            Creación:   GMD 20150710 <br />
+            Modificación: <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoFirmanteEntity.CodigoContratoFirmante">
+            <summary>
+            Código contrato firmante
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoFirmanteEntity.CodigoContratoParrafoVariable">
+            <summary>
+            Código de contrato párrafo variable
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoFirmanteEntity.NombreFirmante">
+            <summary>
+            Nombre de firmante
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoFirmanteEntity.DatoAdicional">
+            <summary>
+            Datos adicionales del firmante
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoHitoEntity">
+            <summary>
+            Clase que representa la entidad Flujo Contrato-Hito
+            </summary>
+            <remarks>
+            Creación:   GMD 20150525 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoHitoEntity.CodigoContratoHito">
+            <summary>
+            Codigo Contrato Hito
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoHitoEntity.CodigoContrato">
+            <summary>
+            Codigo de Contrato
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoHitoEntity.CodigoTipoHito">
+            <summary>
+            Codigo Tipo de Hito
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoHitoEntity.Descripcion">
+            <summary>
+            Descripcion
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoHitoEntity.FechaLimite">
+            <summary>
+            Fecha Limite
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoParrafoEntity">
+            <summary>
+            Clase que representa la entidad Contrato Parrafo
+            </summary>
+            <remarks>
+            Creación :  GMD 20150511 <br />
+            Modificación :           <br />
+            </remarks> 
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoParrafoEntity.CodigoContratoParrafo">
+            <summary>
+            Codigo de ContratoParrafo
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoParrafoEntity.CodigoContrato">
+            <summary>
+            Codigo de Contrato
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoParrafoEntity.CodigoPlantillaParrafo">
+            <summary>
+            Codigo de PlantillaParrafo
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoParrafoEntity.ContenidoParrafo">
+            <summary>
+            Contenido
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoParrafoVariableCampoEntity">
+            <summary>
+            Clase que representa la entidad Contrato Parrafo Variable Campo
+            </summary>
+            <remarks>
+            Creación :  GMD 20150511 <br />
+            Modificación :           <br />
+            </remarks> 
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoParrafoVariableCampoEntity.CodigoContratoParrafoVariableCampo">
+            <summary>
+            Codigo Contrato Parrafo Variable Campo
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoParrafoVariableCampoEntity.CodigoContratoParrafoVariable">
+            <summary>
+            Codigo Contrato Parrafo Variable
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoParrafoVariableCampoEntity.CodigoVariableCampo">
+            <summary>
+            Codigo Variabl eCampo
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoParrafoVariableCampoEntity.NumeroFila">
+            <summary>
+            NumeroFila
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoParrafoVariableCampoEntity.Valor">
+            <summary>
+            Valor
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoParrafoVariableEntity">
+            <summary>
+            Clase que representa la entidad Contrato Parrafo Variable
+            </summary>
+            <remarks>
+            Creación :  GMD 20150511 <br />
+            Modificación :           <br />
+            </remarks> 
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoParrafoVariableEntity.CodigoContratoParrafoVariable">
+            <summary>
+            Codigo Contrato de Parrafo Variable
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoParrafoVariableEntity.CodigoContratoParrafo">
+            <summary>
+            Codigo Contrato de Parrafo
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoParrafoVariableEntity.CodigoVariable">
+            <summary>
+            Codigo de Variable
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoParrafoVariableEntity.ValorTexto">
+            <summary>
+            Valor de Texto
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoParrafoVariableEntity.ValorNumero">
+            <summary>
+            Valor de Numero
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoParrafoVariableEntity.ValorFecha">
+            <summary>
+            Valor de Fecha
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoParrafoVariableEntity.ValorImagen">
+            <summary>
+            ValorImagen
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoParrafoVariableEntity.ValorTabla">
+            <summary>
+            Valor de Tabla
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoParrafoVariableEntity.ValorTablaEditable">
+            <summary>
+            Valor de Tabla Editable
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoParrafoVariableEntity.ValorBien">
+            <summary>
+            Valor de Bien
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoParrafoVariableEntity.ValorBienEditable">
+            <summary>
+            Valor de Bien Editable
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoParrafoVariableEntity.ValorFirmante">
+            <summary>
+            Valor de Firmante
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoParrafoVariableEntity.ValorFirmanteEditable">
+            <summary>
+            Valor de Firmante Editable
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoParrafoVariableEntity.ValorLista">
+            <summary>
+            Codigo de valor de la variable tipo lista
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoDocumentoAdjuntoEntity">
+            <summary>
+            Clase que representa la entidad Contrato Documento Adjunto
+            </summary>
+            <remarks>
+            Creación:   GMD 20150525 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoDocumentoAdjuntoEntity.CodigoContratoDocumentoAdjunto">
+            <summary>
+            Codigo Contrato Documento Adjunto
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoDocumentoAdjuntoEntity.CodigoContrato">
+            <summary>
+            Codigo de Contrato
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoDocumentoAdjuntoEntity.CodigoArchivo">
+            <summary>
+            Codigo de Archivo
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoDocumentoAdjuntoEntity.NombreArchivo">
+            <summary>
+            Nombre del Archivo
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoDocumentoAdjuntoEntity.RutaArchivoSharePoint">
+            <summary>
+            ruta del archivo sharepoint
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.FlujoAprobacionTipoContratoEntity">
+            <summary>
+            Clase que representa la entidad Flujo Aprobación Tipo de Contrato
+            </summary>
+            <remarks>
+            Creación:       GMD 20170621 <br />
+            Modificación:                <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.FlujoAprobacionTipoContratoEntity.CodigoFlujoAprobacionTipoContrato">
+            <summary>
+            Código de Flujo de Aprobación Tipo de Contrato
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.FlujoAprobacionTipoContratoEntity.CodigoFlujoAprobacion">
+            <summary>
+            Código de Flujo de Aprobación
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.FlujoAprobacionTipoContratoEntity.CodigoTipoContrato">
+            <summary>
+            Código de Tipo de Servicio
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.FlujoAprobacionTipoServicioEntity">
+            <summary>
+            Clase que representa la entidad Flujo Aprobación Tipo de Servicio
+            </summary>
+            <remarks>
+            Creación:       GMD 20151124 <br />
+            Modificación:                <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.FlujoAprobacionTipoServicioEntity.CodigoFlujoAprobacionTipoServicio">
+            <summary>
+            Código de Flujo de Aprobación Tipo de Servicio
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.FlujoAprobacionTipoServicioEntity.CodigoFlujoAprobacion">
+            <summary>
+            Código de Flujo de Aprobación
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.FlujoAprobacionTipoServicioEntity.CodigoTipoServicio">
+            <summary>
+            Código de Tipo de Servicio
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.PlantillaNotaPieEntity">
+            <summary>
+            Implementación de la entidad para plantilla nota pie
+            </summary>
+            <remarks>
+            Creación:   GMD 20170822 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.PlantillaNotaPieEntity.CodigoPlantillaNotaPie">
+            <summary>
+            Código de Plantilla Nota Pie
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.PlantillaNotaPieEntity.CodigoPlantilla">
+            <summary>
+            Código de Plantilla
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.PlantillaNotaPieEntity.Orden">
+            <summary>
+            Orden
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.PlantillaNotaPieEntity.Titulo">
+            <summary>
+            Título
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.PlantillaNotaPieEntity.Contenido">
+            <summary>
+            Contenido
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.PlantillaParrafoEntity">
+            <summary>
+            Implementación de la entidad para plantilla párrafo
+            </summary>
+            <remarks>
+            Creación:   GMD 20150521 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.PlantillaParrafoEntity.CodigoPlantillaParrafo">
+            <summary>
+            Código de Plantilla Párrafo
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.PlantillaParrafoEntity.CodigoPlantilla">
+            <summary>
+            Código de Plantilla
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.PlantillaParrafoEntity.Orden">
+            <summary>
+            Orden
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.PlantillaParrafoEntity.Titulo">
+            <summary>
+            Título
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.PlantillaParrafoEntity.Contenido">
+            <summary>
+            Contenido
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.PlantillaParrafoVariableEntity">
+            <summary>
+            Implementación de la entidad para Plantilla Párrafo Variable
+            </summary>
+            <remarks>
+            Creación:   GMD 20150529 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.PlantillaParrafoVariableEntity.CodigoPlantillaParrafoVariable">
+            <summary>
+            Código de Plantilla Párrafo Variable
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.PlantillaParrafoVariableEntity.CodigoPlantillaParrafo">
+            <summary>
+            Código de Plantilla Párrafo
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.PlantillaParrafoVariableEntity.CodigoVariable">
+            <summary>
+            Código de Variable
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.PlantillaParrafoVariableEntity.Orden">
+            <summary>
+            Orden
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ProcesoAuditoriaEntity">
+            <summary>
+            Clase que representa la entidad Flujo Aprobacion
+            </summary>
+            <remarks>
+            Creación:   GMD 20150508 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ProcesoAuditoriaEntity.CodigoAuditoria">
+            <summary>
+            Codigo Auditoria
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ProcesoAuditoriaEntity.CodigoUnidadOperativa">
+            <summary>
+            Codigo Unidad Operativa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ProcesoAuditoriaEntity.FechaPlanificada">
+            <summary>
+            Fecha Planificada
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ProcesoAuditoriaEntity.FechaEjecucion">
+            <summary>
+            Fecha Ejecucion
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ProcesoAuditoriaEntity.CantidadAuditadas">
+            <summary>
+            Cantidad Auditadas
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ProcesoAuditoriaEntity.CantidadObservadas">
+            <summary>
+            Cantidad Observadas
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ProcesoAuditoriaEntity.ResultadoAuditoria">
+            <summary>
+            Resultado Auditoria
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.FlujoAprobacionParticipanteEntity">
+            <summary>
+            Clase que representa la entidad Flujo Aprobacion Participante
+            </summary>
+            <remarks>
+            Creación:   GMD 20150508 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.FlujoAprobacionParticipanteEntity.CodigoFlujoAprobacionParticipante">
+            <summary>
+            Codigo Flujo Aprobacion Participante
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.FlujoAprobacionParticipanteEntity.CodigoFlujoAprobacionEstadio">
+            <summary>
+            Codigo Flujo Aprobacion Estadio
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.FlujoAprobacionParticipanteEntity.CodigoTrabajador">
+            <summary>
+            Codigo Trabajador
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.FlujoAprobacionParticipanteEntity.CodigoTipoParticipante">
+            <summary>
+            Codigo Tipo Participante
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.FlujoAprobacionParticipanteEntity.CodigoTrabajadorOriginal">
+            <summary>
+            Codigo Participante Original
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.FlujoAprobacionEstadioEntity">
+            <summary>
+            Clase que representa la entidad Flujo Aprobacion Estadio
+            </summary>
+            <remarks>
+            Creación:   GMD 20150508 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.FlujoAprobacionEstadioEntity.CodigoFlujoAprobacionEstadio">
+            <summary>
+            Codigo Flujo Aprobacion Estadio
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.FlujoAprobacionEstadioEntity.CodigoFlujoAprobacion">
+            <summary>
+            Codigo Flujo Aprobacion
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.FlujoAprobacionEstadioEntity.Orden">
+            <summary>
+            Orden
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.FlujoAprobacionEstadioEntity.Descripcion">
+            <summary>
+            Descripcion
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.FlujoAprobacionEstadioEntity.TiempoAtencion">
+            <summary>
+            Tiempo Atencion
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.FlujoAprobacionEstadioEntity.HorasAtencion">
+            <summary>
+            Horas Atencion
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.FlujoAprobacionEstadioEntity.IndicadorVersionOficial">
+            <summary>
+            Indicador Version Oficial
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.FlujoAprobacionEstadioEntity.IndicadorPermiteCarga">
+            <summary>
+            Indicador Permite Carga
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.FlujoAprobacionEstadioEntity.IndicadorNumeroContrato">
+            <summary>
+            Indicador Numero Contrato
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.FlujoAprobacionEstadioEntity.IndicadorIncluirVisto">
+            <summary>
+            Incluir visto
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.FlujoAprobacionEntity">
+            <summary>
+            Clase que representa la entidad Flujo Aprobacion
+            </summary>
+            <remarks>
+            Creación:   GMD 20150508 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.FlujoAprobacionEntity.CodigoFlujoAprobacion">
+            <summary>
+            Codigo Flujo Aprobacion
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.FlujoAprobacionEntity.CodigoUnidadOperativa">
+            <summary>
+            Codigo Unidad Operativa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.FlujoAprobacionEntity.IndicadorAplicaMontoMinimo">
+            <summary>
+            Indicador de Aplica Monto Mínimo
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.FlujoAprobacionEntity.CodigoPrimerFirmante">
+            <summary>
+            Código de primer firmante
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.FlujoAprobacionEntity.CodigoSegundoFirmante">
+            <summary>
+            Código de Segundo Firmante
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.FlujoAprobacionEntity.CodigoPrimerFirmanteOriginal">
+            <summary>
+            Código de primer firmante Original
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.FlujoAprobacionEntity.CodigoSegundoFirmanteOriginal">
+            <summary>
+            Código de Segundo Firmante Original
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.FlujoAprobacionEntity.CodigoPrimerFirmanteVinculada">
+            <summary>
+            Código de primer firmante Vinculada
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.FlujoAprobacionEntity.CodigoSegundoFirmanteVinculada">
+            <summary>
+            Código de Segundo firmante Vinculada
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.PlantillaEntity">
+            <summary>
+            Implementación de la entidad para plantilla
+            </summary>
+            <remarks>
+            Creación:   GMD 20150519 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.PlantillaEntity.CodigoPlantilla">
+            <summary>
+            Código de Plantilla
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.PlantillaEntity.Descripcion">
+            <summary>
+            Descripción
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.PlantillaEntity.CodigoTipoContrato">
+            <summary>
+            Código de Tipo de Contrato
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.PlantillaEntity.CodigoTipoDocumentoContrato">
+            <summary>
+            Código de Tipo de Documento de Contrato
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.PlantillaEntity.CodigoEstadoVigencia">
+            <summary>
+            Código de Estado de Vigencia
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.PlantillaEntity.IndicadorAdhesion">
+            <summary>
+            Indicador Adhesión
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.PlantillaEntity.FechaInicioVigencia">
+            <summary>
+            Fecha de Inicio de Vigencia
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.PlantillaEntity.FechaFinVigencia">
+            <summary>
+            Fecha de Fin de Vigencia
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ProveedorEntity">
+            <summary>
+            Clase que representa la entidad Proveedor
+            </summary>
+            <remarks>
+            Creación :  GMD 20150511 <br />
+            Modificación :           <br />
+            </remarks> 
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ProveedorEntity.CodigoProveedor">
+            <summary>
+            Codigo Proveedor
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ProveedorEntity.CodigoIdentificacion">
+            <summary>
+            Codigo Identificacion
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ProveedorEntity.Nombre">
+            <summary>
+            Nombre
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ProveedorEntity.NombreComercial">
+            <summary>
+            Nombre Comercial
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ProveedorEntity.TipoDocumento">
+            <summary>
+            Tipo Documento
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ProveedorEntity.NumeroDocumento">
+            <summary>
+            Numero Documento
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.VariableCampoEntity">
+            <summary>
+            Implementación de la entidad para Campo de Variable
+            </summary>
+            <remarks>
+            Creación:   GMD 20150627 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.VariableCampoEntity.CodigoVariableCampo">
+            <summary>
+            Código de Campo
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.VariableCampoEntity.CodigoVariable">
+            <summary>
+            Código de Variable
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.VariableCampoEntity.Nombre">
+            <summary>
+            Nombre de Campo
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.VariableCampoEntity.Orden">
+            <summary>
+            Orden
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.VariableCampoEntity.TipoAlineamiento">
+            <summary>
+            Tipo de Alineamiento
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.VariableCampoEntity.Tamanio">
+            <summary>
+            Tamaño de Columna
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.VariableEntity">
+            <summary>
+            Implementación de la entidad para Variable
+            </summary>
+            <remarks>
+            Creación:   GMD 20150527 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.VariableEntity.CodigoVariable">
+            <summary>
+            Código de Variable
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.VariableEntity.CodigoPlantilla">
+            <summary>
+            Código de Plantilla
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.VariableEntity.Identificador">
+            <summary>
+            Identificador
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.VariableEntity.Nombre">
+            <summary>
+            Nombre
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.VariableEntity.CodigoTipo">
+            <summary>
+            Código de Tipo de Variable
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.VariableEntity.IndicadorGlobal">
+            <summary>
+            Indicador de Variable Global
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.VariableEntity.IndicadorVariableSistema">
+            <summary>
+            Indicador de Variable de Sistema
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.VariableEntity.Descripcion">
+            <summary>
+            Descripcion
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.VariableListaEntity">
+            <summary>
+            Implementación de la entidad para Lista de Variable
+            </summary>
+            <remarks>
+            Creación:   GMD 20150627 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.VariableListaEntity.CodigoVariableLista">
+            <summary>
+            Código de Lista
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.VariableListaEntity.CodigoVariable">
+            <summary>
+            Código de Variable
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.VariableListaEntity.Nombre">
+            <summary>
+            Nombre de Campo
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.VariableListaEntity.Descripcion">
+            <summary>
+            Descripcion
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.CommandModel.Mapping.Contractual.BienAlquilerMapping">
+            <summary>
+            Implementación del mapeo de la entidad Bien Alquiler
+            </summary>
+            <remarks>
+            Creación:   GMD 20150527 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.CommandModel.Mapping.Contractual.BienMapping">
+            <summary>
+            Implementación del mapeo de la entidad Bien
+            </summary>
+            <remarks>
+            Creación:   GMD 20150527 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.CommandModel.Mapping.Contractual.BienRegistroMapping">
+            <summary>
+            Implementación del mapeo de la entidad Bien Registro
+            </summary>
+            <remarks>
+            Creación:   GMD 20150527 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.CommandModel.Mapping.Contractual.ConsultaAdjuntoMapping">
+            <summary>
+            Implementación del mapeo de la consulta adjunto
+            </summary>
+            <remarks>
+            Creación:   GMD 20150527 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.CommandModel.Mapping.Contractual.ConsultaAdjuntoMapping.#ctor">
+            <summary>
+            Constructo de la clase
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.CommandModel.Mapping.Contractual.ConsultaMapping">
+            <summary>
+            Implementación del mapeo de la entidad Consulta
+            </summary>
+            <remarks>
+            Creación:   GMD 20150527 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.CommandModel.Mapping.Contractual.ConsultaTrazabilidadMapping">
+            <summary>
+            Implementación del mapeo de la entidad ConsultaUsuario
+            </summary>
+            <remarks>
+            Creación:   GMD 20150527 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.CommandModel.Mapping.Contractual.ContratoBienMapping">
+            <summary>
+            Implementación del mapeo de la entidad Contrato Bien
+            </summary>
+            <remarks>
+            Creación:   GMD 20150527 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.CommandModel.Mapping.Contractual.ContratoDocumentoMapping">
+            <summary>
+            Implementación del mapeo de la entidad Contrato Documento
+            </summary>
+            <remarks>
+            Creación:   GMD 20150527 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.CommandModel.Mapping.Contractual.ContratoEstadioConsultaMapping">
+            <summary>
+            Implementación del mapeo de la entidad Contrato Estadio Consulta 
+            </summary>
+            <remarks>
+            Creación:   GMD 20150527 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.CommandModel.Mapping.Contractual.ContratoEstadioMapping">
+            <summary>
+            Implementación del mapeo de la entidad Contrato Estadio
+            </summary>
+            <remarks>
+            Creación:   GMD 20150527 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.CommandModel.Mapping.Contractual.ContratoEstadioObservacionMapping">
+            <summary>
+            Implementación del mapeo de la entidad Contrato Estadio Observación
+            </summary>
+            <remarks>
+            Creación:   GMD 20150527 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.CommandModel.Mapping.Contractual.ContratoFirmanteMapping">
+            <summary>
+            Implementación del mapeo de la entidad ContratoFirmante
+            </summary>
+            <remarks>
+            Creación:   GMD 20150527 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.CommandModel.Mapping.Contractual.ContratoHitoMapping">
+            <summary>
+            Implementación del mapeo de la entidad Contrato Hito 
+            </summary>
+            <remarks>
+            Creación:   GMD 20150527 <br />
+            Modificación:            <br />
+            </remarks> 
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.CommandModel.Mapping.Contractual.ContratoMapping">
+            <summary>
+            Implementación del mapeo de la entidad Contrato
+            </summary>
+            <remarks>
+            Creación:   GMD 20150527 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.CommandModel.Mapping.Contractual.ContratoParrafoMapping">
+            <summary>
+            Implementación del mapeo de la entidad Contrato Parrafo
+            </summary>
+            <remarks>
+            Creación:   GMD 20150527 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.CommandModel.Mapping.Contractual.ContratoParrafoVariableCampoMapping">
+            <summary>
+            Implementación del mapeo de la entidad Contrato Parrafo Variable
+            </summary>
+            <remarks>
+            Creación:   GMD 20150527 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.CommandModel.Mapping.Contractual.FlujoAprobacionTipoContratoMapping">
+            <summary>
+            Implementación del mapeo de la entidad Flujo Aprobacion Contrato
+            </summary>
+            <remarks>
+            Creación:   GMD 20170621 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.CommandModel.Mapping.Contractual.PlantillaNotaPieMapping">
+            <summary>
+            Implementación del mapeo de la entidad Plantilla Nota Pie
+            </summary>
+            <remarks>
+            Creación:   GMD 20170822 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.CommandModel.Mapping.Contractual.VariableListaMapping">
+            <summary>
+            Implementación del mapeo de la entidad Contrato Parrafo Variable
+            </summary>
+            <remarks>
+            Creación:   GMD 20150527 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.CommandModel.Mapping.Contractual.ContratoParrafoVariableMapping">
+            <summary>
+            Implementación del mapeo de la entidad Contrato Parrafo Variable
+            </summary>
+            <remarks>
+            Creación:   GMD 20150527 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.CommandModel.Mapping.Contractual.ContratoDocumentoAdjuntoMapping">
+            <summary>
+            Implementación del mapeo de la entidad Contrato Documento
+            </summary>
+            <remarks>
+            Creación:   GMD 20150527 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.CommandModel.Mapping.Contractual.ContratoDocumentoAdjuntoMapping.#ctor">
+            <summary>
+            Constructo de la clase
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.CommandModel.Mapping.Contractual.FlujoAprobacionTipoServicioMapping">
+            <summary>
+            Implementación del mapeo de la entidad Flujo Aprobación Tipo de Servicio
+            </summary>
+            <remarks>
+            Creación:       GMD 20151124 <br />
+            Modificación:                <br />
+            </remarks>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.CommandModel.Mapping.Contractual.PlantillaParrafoMapping">
+            <summary>
+            Implementación del mapeo de la entidad Plantilla Párrafo
+            </summary>
+            <remarks>
+            Creación:   GMD 20150522 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.CommandModel.Mapping.Contractual.PlantillaParrafoVariableMapping">
+            <summary>
+            Implementación del mapeo de la entidad Plantilla Párrafo Variable
+            </summary>
+            <remarks>
+            Creación:   GMD 20150529 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.CommandModel.Mapping.Contractual.ProcesoAuditoriaMapping">
+            <summary>
+            Implementación del mapeo de la entidad Flujo Aprobacion
+            </summary>
+            <remarks>
+            Creación:   GMD 20150511 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.CommandModel.Mapping.Contractual.FlujoAprobacionParticipanteMapping">
+            <summary>
+            Implementación del mapeo de la entidad Flujo Aprobacion Participante
+            </summary>
+            <remarks>
+            Creación:   GMD 20150511 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.CommandModel.Mapping.Contractual.FlujoAprobacionEstadioMapping">
+            <summary>
+            Implementación del mapeo de la entidad Flujo Aprobacion Estadio
+            </summary>
+            <remarks>
+            Creación:   GMD 20150511 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.CommandModel.Mapping.Contractual.FlujoAprobacionEstadioMapping.#ctor">
+            <summary>
+            Contructor de la clase
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.CommandModel.Mapping.Contractual.FlujoAprobacionMapping">
+            <summary>
+            Implementación del mapeo de la entidad Flujo Aprobacion
+            </summary>
+            <remarks>
+            Creación:   GMD 20150511 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.CommandModel.Mapping.Contractual.PlantillaMapping">
+            <summary>
+            Implementación del mapeo de la entidad Plantilla
+            </summary>
+            <remarks>
+            Creación:   GMD 20150519 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.CommandModel.Mapping.Contractual.PlantillaMapping.#ctor">
+            <summary>
+            Constructor de la clase
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.CommandModel.Mapping.Contractual.ProveedorMapping">
+            <summary>
+            Implementación del mapeo de la entidad Proveedor
+            </summary>
+            <remarks>
+            Creación:   GMD 20150527 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.CommandModel.Mapping.Contractual.VariableCampoMapping">
+            <summary>
+            Implementación del mapeo de la entidad Campo de Variable
+            </summary>
+            <remarks>
+            Creación:   GMD 20150527 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.CommandModel.Mapping.Contractual.VariableMapping">
+            <summary>
+            Implementación del mapeo de la entidad Variable
+            </summary>
+            <remarks>
+            Creación:   GMD 20150527 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+    </members>
+</doc>

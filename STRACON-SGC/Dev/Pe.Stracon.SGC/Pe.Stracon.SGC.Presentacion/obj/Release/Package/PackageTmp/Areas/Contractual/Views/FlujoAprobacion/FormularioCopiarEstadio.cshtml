@@ -1,0 +1,38 @@
+﻿@using Pe.Stracon.SGC.Presentacion.Recursos.Base
+@using Pe.Stracon.SGC.Presentacion.Recursos.Contractual
+@model Pe.Stracon.SGC.Presentacion.Core.ViewModel.Contractual.FlujoAprobacion.FlujoAprobacionFormularioCopiarEstadio
+<form id="frmCopiarEstadio">
+    <div class="row">
+        <div class="col-sm-12">
+            <br />
+            <h3>Copiar Desde:</h3>
+            <div class="row">
+                <input type="hidden" id="hdnFrmFlujoAprobacion" value="@Model.flujoAprobacionResponse.CodigoFlujoAprobacion"/>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="slcFrmCopiarUnidadOperativa">@FlujoAprobacionResource.EtiquetaUnidadOperativa</label>
+                        @Html.DropDownList("slcFrmCopiarUnidadOperativa", Model.UnidadOperativa, new { @class = "form-control", @id = "slcFrmCopiarUnidadOperativa", @validable = "required ValidarUnidadOperativa"})
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="slcFrmCopiarTipoServicio">@FlujoAprobacionResource.EtiquetaTipoServicio</label>
+                        @Html.DropDownList("slcFrmCopiarTipoServicio", Model.TipoServicio, new { @class = "form-control", @id = "slcFrmCopiarTipoServicio", @validable = "required ValidarTipoServicio"})
+                    </div>
+                </div>
+            </div>
+            <div class="row">               
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="slcFrmCopiarFormaEdicion">@FlujoAprobacionResource.EtiquetaFormaEdicion</label>
+                        @Html.DropDownList("slcFrmCopiarFormaEdicion", Model.TipoContrato, new { @class = "form-control", @id = "slcFrmCopiarFormaEdicion", @validable = "required ValidarTipoFormaEdicion"})
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<div class="comp-Modal-footer">
+    <button class="btn btn-default" id="btnFrmFlujoCopiarCancelar">@GenericoResource.BotonCancelar</button>
+    <button class="btn btn-primary" id="btnFrmFlujoCopiar">@GenericoResource.BotonCopiar</button>
+</div>

@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://10.244.4.20/SRAService/SeguridadService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Domain.Implementation.Security.Aggregates.UserSraAgg" />
+  <xs:import schemaLocation="http://10.244.4.20/SRAService/SeguridadService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Domain.Implementation.Security.Aggregates.ProfileAgg" />
+  <xs:import schemaLocation="http://10.244.4.20/SRAService/SeguridadService.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/Domain.Implementation.Security.Aggregates.SystemSRAAgg" />
+  <xs:import schemaLocation="http://10.244.4.20/SRAService/SeguridadService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Domain.Implementation.Security.Aggregates.RoleAgg" />
+  <xs:import schemaLocation="http://10.244.4.20/SRAService/SeguridadService.svc?xsd=xsd11" namespace="http://schemas.datacontract.org/2004/07/Domain.Implementation.Security.Aggregates.BusinessAreaAgg" />
+  <xs:import schemaLocation="http://10.244.4.20/SRAService/SeguridadService.svc?xsd=xsd12" namespace="http://schemas.datacontract.org/2004/07/Domain.Implementation.Security.Aggregates.CompanyAgg" />
+  <xs:import schemaLocation="http://10.244.4.20/SRAService/SeguridadService.svc?xsd=xsd13" namespace="http://schemas.datacontract.org/2004/07/Domain.Implementation.Security.Aggregates.UserProfileAgg" />
+  <xs:element name="Logeo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="s_login" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="s_password" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="n_system" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LogeoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Domain.Implementation.Security.Aggregates.UserSraAgg" minOccurs="0" name="LogeoResult" nillable="true" type="q1:UserSRA" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserService">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="s_login" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="s_password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserServiceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Domain.Implementation.Security.Aggregates.UserSraAgg" minOccurs="0" name="GetUserServiceResult" nillable="true" type="q2:UserSRA" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserResponsibleAll">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserResponsibleAllResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Domain.Implementation.Security.Aggregates.UserSraAgg" minOccurs="0" name="GetUserResponsibleAllResult" nillable="true" type="q3:ArrayOfUserSRA" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserAccessService">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="s_login" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="n_profile" type="xs:int" />
+        <xs:element minOccurs="0" name="n_system" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserAccessServiceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Domain.Implementation.Security.Aggregates.ProfileAgg" minOccurs="0" name="GetUserAccessServiceResult" nillable="true" type="q4:Profile" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUsersBySystemId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="N_ID_SYSTEM" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUsersBySystemIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Domain.Implementation.Security.Aggregates.UserSraAgg" minOccurs="0" name="GetUsersBySystemIdResult" nillable="true" type="q5:ArrayOfUserSRA" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Insert">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdUsuario" type="xs:int" />
+        <xs:element minOccurs="0" name="sName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sLastName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sLogin" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sEmail" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sUserCreation" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sTerminalCreation" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Domain.Implementation.Security.Aggregates.UserSraAgg" minOccurs="0" name="InsertResult" nillable="true" type="q6:UserSRA" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserServiceBySysten">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="s_user_red" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="s_domain_red" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="s_password" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="s_token" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserServiceBySystenResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Domain.Implementation.Security.Aggregates.UserSraAgg" minOccurs="0" name="GetUserServiceBySystenResult" nillable="true" type="q7:UserSRA" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserServiceBySystenxProfile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID_USER" type="xs:int" />
+        <xs:element minOccurs="0" name="s_token" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserServiceBySystenxProfileResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserServiceAD">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="s_user_red" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="s_domain_red" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="s_password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserServiceADResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Domain.Implementation.Security.Aggregates.UserSraAgg" minOccurs="0" name="GetUserServiceADResult" nillable="true" type="q8:UserSRA" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSystemByUserId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idUser" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSystemByUserIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Domain.Implementation.Security.Aggregates.SystemSRAAgg" minOccurs="0" name="GetSystemByUserIdResult" nillable="true" type="q9:ArrayOfSystemSRA" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="List_SystemSRA_x_Token">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idUser" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="List_SystemSRA_x_TokenResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Domain.Implementation.Security.Aggregates.SystemSRAAgg" minOccurs="0" name="List_SystemSRA_x_TokenResult" nillable="true" type="q10:ArrayOfSystemSRA" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="List_RolesXnSystem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="n_system" type="xs:int" />
+        <xs:element minOccurs="0" name="n_role" type="xs:int" />
+        <xs:element minOccurs="0" name="s_status" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="List_RolesXnSystemResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Domain.Implementation.Security.Aggregates.RoleAgg" minOccurs="0" name="List_RolesXnSystemResult" nillable="true" type="q11:ArrayOfRole" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="List_BusinessArea">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="n_id_area" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="List_BusinessAreaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Domain.Implementation.Security.Aggregates.BusinessAreaAgg" minOccurs="0" name="List_BusinessAreaResult" nillable="true" type="q12:ArrayOfBusinessArea" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="List_Company">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="n_id_company" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="List_CompanyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Domain.Implementation.Security.Aggregates.CompanyAgg" minOccurs="0" name="List_CompanyResult" nillable="true" type="q13:ArrayOfCompany" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="List_CompanyXsLogin">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="s_login" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="List_CompanyXsLoginResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Domain.Implementation.Security.Aggregates.CompanyAgg" minOccurs="0" name="List_CompanyXsLoginResult" nillable="true" type="q14:ArrayOfCompany" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertUserProfileAsDesactivate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdUsuario" type="xs:int" />
+        <xs:element minOccurs="0" name="IdProfile" type="xs:int" />
+        <xs:element minOccurs="0" name="sUserCreation" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sTerminalCreation" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertUserProfileAsDesactivateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Domain.Implementation.Security.Aggregates.UserProfileAgg" minOccurs="0" name="InsertUserProfileAsDesactivateResult" nillable="true" type="q15:UserProfile" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteUserProfile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdUserProfile" type="xs:int" />
+        <xs:element minOccurs="0" name="sUserModification" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sTerminalModification" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteUserProfileResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserByLoginAD">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="s_login" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="s_domain" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserByLoginADResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Domain.Implementation.Security.Aggregates.UserSraAgg" minOccurs="0" name="GetUserByLoginADResult" nillable="true" type="q16:UserSRA" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertUserAD">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sLogin" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sDomain" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sUserCreation" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sTerminalCreation" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertUserADResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Domain.Implementation.Security.Aggregates.UserSraAgg" minOccurs="0" name="InsertUserADResult" nillable="true" type="q17:UserSRA" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

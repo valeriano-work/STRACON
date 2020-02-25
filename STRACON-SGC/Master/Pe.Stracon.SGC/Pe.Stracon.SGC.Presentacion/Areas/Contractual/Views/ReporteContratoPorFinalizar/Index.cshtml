@@ -1,0 +1,101 @@
+﻿@using Pe.Stracon.SGC.Presentacion.Recursos.Base
+@using Pe.Stracon.SGC.Presentacion.Recursos.Contractual
+@using Pe.Stracon.SGC.Presentacion.Recursos.Mensajes
+@using Pe.Stracon.SGC.Presentacion.Core.Helpers
+@model Pe.Stracon.SGC.Presentacion.Core.ViewModel.Contractual.ReporteContratoPorFinalizar.ReporteContratoPorFinalizarBusqueda
+
+@{
+    var dataReport = TempData["DataReport"];
+}
+
+<div class="GmdBody-header">
+    <h2>@ReporteContratoPorFinalizarResource.EtiquetaTitulo</h2>
+</div>
+<div class="GmdBody-body">
+    <form id="frmReporteContratoPorFinalizar">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label>@ReporteContratoPorFinalizarResource.EtiquetaUnidadOperativa</label>
+                    @Html.DropDownList("CodigoUnidadOperativa", @Model.ListaUnidadOperativa, new { @class = "form-control", @id = "slcUnidadOperativa" })
+                    @Html.TextBox("NombreUnidadOperativa", null, new { @class = "form-control hidden", @id = "hdnNombreUnidadOperativa" })
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label>@ReporteContratoPorFinalizarResource.EtiquetaTipoContrato</label>
+                    @Html.DropDownList("CodigoTipoContrato", Model.ListaTipoContrato.OrderBy(x => x.Text), new { @class = "form-control", @id = "slcTipoContrato" })
+                    @Html.TextBox("DescripcionTipoContrato", null, new { @class = "form-control hidden", @id = "hdnDescripcionTipoContrato" })
+                </div>
+            </div>
+            <div class="col-sm-5">
+                <div class="form-group">
+                    <label>@ReporteContratoPorFinalizarResource.EtiquetaTipoServicio</label>
+                    @Html.DropDownList("CodigoTipoServicio", Model.ListaTipoServicio, new { @class = "form-control", @id = "slcTipoServicio" })
+                    @Html.TextBox("DescripcionTipoServicio", null, new { @class = "form-control hidden", @id = "hdnDescripcionTipoServicio" })
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label for="txtNumeroContrato">@ReporteContratoPorFinalizarResource.EtiquetaNumeroContrato</label>
+                    @Html.TextBox("NumeroContrato", null, new { @class = "form-control", @id = "txtNumeroContrato" })
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label>@ReporteContratoPorFinalizarResource.EtiquetaUltimoEstadioAprobado</label>
+                    <div class="row">
+                        @Html.TextBox("DescripcionIndicadorUltimoEstadioAprobado", null, new { @class = "form-control hidden", @id = "hdnDescripcionIndicadorUltimoEstadioAprobados" })
+                        <div class="col-sm-6">
+                            @if (Model.ReporteContratoPorFinalizar.IndicadorUltimoEstadioAprobado == "U")
+                            {
+                                <input type="radio" value="U" name="IndicadorUltimoEstadioAprobado" validable="required IndicadorUltimoEstadioAprobado" checked="checked">
+                            }
+                            else
+                            {
+                                <input type="radio" value="U" name="IndicadorUltimoEstadioAprobado" validable="required IndicadorUltimoEstadioAprobado">
+                            }
+                            <label>@ReporteContratoPorFinalizarResource.EtiquetaUltimoEstadio</label>
+                        </div>
+                        <div class="col-sm-6">
+                            @if (Model.ReporteContratoPorFinalizar.IndicadorUltimoEstadioAprobado == "A")
+                            {
+                                <input type="radio" value="A" name="IndicadorUltimoEstadioAprobado" validable="required IndicadorUltimoEstadioAprobado" checked="checked">
+                            }
+                            else
+                            {
+                                <input type="radio" value="A" name="IndicadorUltimoEstadioAprobado" validable="required IndicadorUltimoEstadioAprobado">
+                            }
+                            <label>@ReporteContratoPorFinalizarResource.EtiquetaAprobados</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="form-group">
+                <button class="btn btn-info" id="btnLimpiar" type="reset">@GenericoResource.BotonLimpiar</button>
+                <button class="btn btn-default" id="btnBuscar">@GenericoResource.BotonMostrar</button>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <div id="divContenedorReportView">
+        @Html.Partial("~/Areas/Base/Views/Reporte/ReportViewControl.ascx", dataReport)
+    </div>
+</div>
+@section scripts{
+    <script type="text/javascript">
+        ns('Pe.Stracon.SGC.Presentacion.Contractual.ReporteContratoPorFinalizar.Resources')
+        Pe.Stracon.SGC.Presentacion.Contractual.ReporteContratoPorFinalizar.Resources.EtiquetaUltimoEstadio = '@Html.Raw(ReporteContratoPorFinalizarResource.EtiquetaUltimoEstadio)';
+        Pe.Stracon.SGC.Presentacion.Contractual.ReporteContratoPorFinalizar.Resources.EtiquetaAprobados = '@Html.Raw(ReporteContratoPorFinalizarResource.EtiquetaAprobados)';
+
+        ns('Pe.Stracon.SGC.Presentacion.Recursos.Validacion')
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarIndicadorUltimoEstadioAprobado = '@Html.Raw(ReporteContratoPorFinalizarResource.EtiquetaUltimoEstadioAprobado)';
+    </script>
+}
+

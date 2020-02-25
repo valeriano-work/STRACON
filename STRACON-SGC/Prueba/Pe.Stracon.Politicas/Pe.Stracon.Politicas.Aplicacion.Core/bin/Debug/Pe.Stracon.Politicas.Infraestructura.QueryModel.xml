@@ -1,0 +1,767 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Pe.Stracon.Politicas.Infraestructura.QueryModel</name>
+    </assembly>
+    <members>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.QueryModel.Base.Logic">
+            <summary>
+            Entity Logic
+            </summary>
+            <remarks>
+            Creación:   GMD 22122014 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.Base.Logic.NumeroPagina">
+            <summary>
+            Pagina solicitada
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.Base.Logic.RegistrosPagina">
+            <summary>
+            Registros por Pagina
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.ParametroLogic">
+            <summary>
+            Representa los datos de Parametro
+            </summary>
+            <remarks>
+            Creación:   GMD 27032015 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.ParametroLogic.CodigoParametro">
+            <summary>
+            Código de parametro
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.ParametroLogic.CodigoIdentificador">
+            <summary>
+            Código Identificador 
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.ParametroLogic.IndicadorEmpresa">
+            <summary>
+            Identificador Empresa 
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.ParametroLogic.CodigoEmpresa">
+            <summary>
+            Código Empresa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.ParametroLogic.CodigoEmpresaIdentificador">
+            <summary>
+            Código Identificador de Empresa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.ParametroLogic.NombreEmpresa">
+            <summary>
+            Nombre de Empresa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.ParametroLogic.CodigoSistema">
+            <summary>
+            Código Sistema 
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.ParametroLogic.CodigoSistemaIdentificador">
+            <summary>
+            Código Identificador de Sistema
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.ParametroLogic.NombreSistema">
+            <summary>
+            Nombre de Sistema
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.ParametroLogic.TipoParametro">
+            <summary>
+            Tipo de Parámetro 
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.ParametroLogic.Nombre">
+            <summary>
+            Nombre del Parametro
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.ParametroLogic.Descripcion">
+            <summary>
+            Descripción del Parametro
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.ParametroLogic.IndicadorPermiteAgregar">
+            <summary>
+            Indicador Permite Agregar 
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.ParametroLogic.IndicadorPermiteModificar">
+            <summary>
+            Indicador Permite Modificar 
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.ParametroLogic.IndicadorPermiteEliminar">
+            <summary>
+            Indicador Permite Eliminar 
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.ParametroLogic.EstadoRegistro">
+            <summary>
+            Estadro de Registro
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.ParametroSeccionLogic">
+            <summary>
+            Representa los datos de Parametro de Sección
+            </summary>
+            <remarks>
+            Creación:   GMD 27032015 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.ParametroSeccionLogic.CodigoParametro">
+            <summary>
+            Código de Parametro
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.ParametroSeccionLogic.CodigoSeccion">
+            <summary>
+            Código de Sección
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.ParametroSeccionLogic.IndicadorSistema">
+            <summary>
+            Indicador de sistema
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.ParametroSeccionLogic.Nombre">
+            <summary>
+            Nombre de Sección
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.ParametroSeccionLogic.CodigoTipoDato">
+            <summary>
+            Código de Tipo de Dato
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.ParametroSeccionLogic.DescripcionTipoDato">
+            <summary>
+            Descripción de Tipo de Dato
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.ParametroSeccionLogic.IndicadorPermiteModificar">
+            <summary>
+            Indicador de Permite Modificar
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.ParametroSeccionLogic.IndicadorObligatorio">
+            <summary>
+            Indicador de Sección Obligatorio
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.ParametroSeccionLogic.CodigoParametroRelacionado">
+            <summary>
+            Código de Parametro Relacionado
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.ParametroSeccionLogic.NombreParametroRelacionado">
+            <summary>
+            Nombre de Parámetro Relacionado
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.ParametroSeccionLogic.CodigoSeccionRelacionado">
+            <summary>
+            Código de Sección Relacionada
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.ParametroSeccionLogic.NombreSeccionRelacionado">
+            <summary>
+            Nombre de Sección Relacionada
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.ParametroSeccionLogic.CodigoSeccionRelacionadoMostrar">
+            <summary>
+            Código de Sección Relacionada a Mostrar
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.ParametroSeccionLogic.NombreSeccionRelacionadoMostrar">
+            <summary>
+            Nombre de Sección Relacionada a Mostrar
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.ParametroSeccionLogic.EstadoRegistro">
+            <summary>
+            Estadro de Registro
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.ParametroValorLogic">
+            <summary>
+            Representa los datos de Parametro de Valor
+            </summary>
+            <remarks>
+            Creación:   GMD 27032015 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.ParametroValorLogic.CodigoParametro">
+            <summary>
+            Código de parametro
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.ParametroValorLogic.CodigoIdentificador">
+            <summary>
+            Código Identificador 
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.ParametroValorLogic.IndicadorEmpresa">
+            <summary>
+            Identificador Empresa 
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.ParametroValorLogic.CodigoEmpresa">
+            <summary>
+            Código de Empresa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.ParametroValorLogic.CodigoSistema">
+            <summary>
+            Código Sistema 
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.ParametroValorLogic.TipoParametro">
+            <summary>
+            Tipo de Parámetro
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.ParametroValorLogic.CodigoSeccion">
+            <summary>
+            Código de Sección 
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.ParametroValorLogic.CodigoValor">
+            <summary>
+            Código de Valor
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.ParametroValorLogic.CodigoTipoDato">
+            <summary>
+            Código de Tipo de Dato
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.ParametroValorLogic.Valor">
+            <summary>
+            Valor
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.ParametroValorLogic.EstadoRegistro">
+            <summary>
+            Estadro de Registro
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.PlantillaNotificacionLogic">
+            <summary>
+            Representa los datos de Plantilla Notificacion
+            </summary>
+            <remarks>
+            Creación:   GMD 27032015 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.PlantillaNotificacionLogic.CodigoPlantillaNotificacion">
+            <summary>
+            CodigoPlantillaNotificacion
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.PlantillaNotificacionLogic.CodigoSistema">
+            <summary>
+            CodigoSistema
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.PlantillaNotificacionLogic.CodigoTipoNotificacion">
+            <summary>
+            CodigoTipoNotificacion
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.PlantillaNotificacionLogic.Asunto">
+            <summary>
+            Asunto
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.PlantillaNotificacionLogic.IndicadorActiva">
+            <summary>
+            IndicadorActiva
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.PlantillaNotificacionLogic.Contenido">
+            <summary>
+            Contenido
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.PlantillaNotificacionLogic.CodigoTipoDestinatario">
+            <summary>
+            Codigo Tipo Destinatario
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.PlantillaNotificacionLogic.Destinatario">
+            <summary>
+            Destinatario
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.PlantillaNotificacionLogic.DestinatarioCopia">
+            <summary>
+            Destinatario Copia
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.TrabajadorLogic">
+            <summary>
+            Representa los datos de Trabajador
+            </summary>
+            <remarks>
+            Creación:   GMD 22150326 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.TrabajadorLogic.CodigoTrabajador">
+            <summary>
+            Código Trabajador
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.TrabajadorLogic.CodigoIdentificacion">
+            <summary>
+            Código Identificación
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.TrabajadorLogic.CodigoTipoDocumentoIdentidad">
+            <summary>
+            Código Tipo Documento Identidad
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.TrabajadorLogic.NumeroDocumentoIdentidad">
+            <summary>
+            Número Documento IDentidad
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.TrabajadorLogic.ApellidoPaterno">
+            <summary>
+            Apelllido Paterno
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.TrabajadorLogic.ApellidoMaterno">
+            <summary>
+            Apellido Materno
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.TrabajadorLogic.Nombres">
+            <summary>
+            Nombres
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.TrabajadorLogic.NombreCompleto">
+            <summary>
+            Nombre Completo
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.TrabajadorLogic.Organizacion">
+            <summary>
+            Organización
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.TrabajadorLogic.Departamento">
+            <summary>
+            Departamento
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.TrabajadorLogic.Cargo">
+            <summary>
+            Cargo
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.TrabajadorLogic.TelefonoTrabajo">
+            <summary>
+            Télefono Trabajo
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.TrabajadorLogic.Anexo">
+            <summary>
+            Anexo
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.TrabajadorLogic.TelefonoMovil">
+            <summary>
+            Teléfono Móvil
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.TrabajadorLogic.TelefonoPersonal">
+            <summary>
+            Télefono Personal
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.TrabajadorLogic.CorreoElectronico">
+            <summary>
+            Correo Eléctronico
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.TrabajadorLogic.EstadoRegistro">
+            <summary>
+            Estado de Registro
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.TrabajadorLogic.Dominio">
+            <summary>
+            Dominio de trabajador.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.TrabajadorLogic.FirmaTrabajador">
+            <summary>
+            Firma de trabajador
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.TrabajadorLogic.CodigoFirma">
+            <summary>
+            Código de Firma de Trabajador
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.TrabajadorLogic.IndicadorTodaUnidadOperativa">
+            <summary>
+            Indica si el trabajador esta asociado a todas las unidad operativas o solo a algunas
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.TrabajadorLogic.IndicadorTieneFoto">
+            <summary>
+            Indicador si el usuario tiene Foto
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.TrabajadorLogic.CodigoUnidadOperativaMatriz">
+            <summary>
+            Código de unidad operativa matriz
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.TrabajadorSuplenteLogic.CodigoTrabajador">
+            <summary>
+            Codigo del trabajador
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.TrabajadorSuplenteLogic.CodigoSuplente">
+            <summary>
+            Código de Suplente
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.TrabajadorSuplenteLogic.FechaInicio">
+            <summary>
+            Fecha de Inicio
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.TrabajadorSuplenteLogic.FechaFin">
+            <summary>
+            Fecha Fin
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.TrabajadorSuplenteLogic.Activo">
+            <summary>
+            Es Activo
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.TrabajadorSuplenteLogic.Ejecutado">
+            <summary>
+            Ejecutado
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.TrabajadorSuplenteLogic.PerfilAgregados">
+            <summary>
+            Perfiles agregados al suplente al SRA
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.TrabajadorUnidadOperativaLogic">
+            <summary>
+            Representa los datos de TrabajadorUnidadOperativa
+            </summary>
+            <remarks>
+            Creación:   GMD 22150326 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.TrabajadorUnidadOperativaLogic.CodigoTrabajadorUnidadOperativa">
+            <summary>
+            Código de TrabajadorUnidadOperativa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.TrabajadorUnidadOperativaLogic.CodigoUnidadOperativaMatriz">
+            <summary>
+            Código de Unidad Operativa Matriz
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.TrabajadorUnidadOperativaLogic.CodigoTrabajador">
+            <summary>
+            Código de trabajador
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.TrabajadorUnidadOperativaLogic.CodigoUnidadOperativa">
+            <summary>
+            Código unidad operativa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.TrabajadorUnidadOperativaLogic.EstadoRegistro">
+            <summary>
+            Estado de registro
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.TrabajadorUnidadOperativaLogic.NombreUnidadOperativa">
+            <summary>
+            Nombre de unidad operativa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.TrabajadorUnidadOperativaLogic.FechaCreacion">
+            <summary>
+            Fecha de creacion
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.UnidadOperativaLogic">
+            <summary>
+            Representa los datos generales de la unidad operativa
+            </summary>
+            <remarks>
+            Creación:   GMD 22150326 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.UnidadOperativaLogic.CodigoUnidadOperativa">
+            <summary>
+            Código de unidad operativa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.UnidadOperativaLogic.CodigoIdentificacion">
+            <summary>
+            Código de identificación de la unidad operativa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.UnidadOperativaLogic.Nombre">
+            <summary>
+            Nombre 
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.UnidadOperativaLogic.CodigoNivelJerarquia">
+            <summary>
+            Código de Nivel de Jerarquía
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.UnidadOperativaLogic.DescripcionNivelJerarquia">
+            <summary>
+            Descripción de Nivel de Jerarquía
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.UnidadOperativaLogic.NivelJerarquia">
+            <summary>
+            Valor del Nivel de Jerarquía
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.UnidadOperativaLogic.CodigoUnidadOperativaPadre">
+            <summary>
+            Código de unidad operativa padre
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.UnidadOperativaLogic.NombreUnidadOperativaPadre">
+            <summary>
+            Nombre de unidad operativa padre
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.UnidadOperativaLogic.CodigoTipoUnidadOperativa">
+            <summary>
+            Tipo de unidad operativa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.UnidadOperativaLogic.IndicadorActiva">
+            <summary>
+            Indicador de activación 
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.UnidadOperativaLogic.CodigoResponsable">
+            <summary>
+            Código del responsable
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.UnidadOperativaLogic.NombreResponsable">
+            <summary>
+            Nombre del responsable
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.UnidadOperativaLogic.CodigoPrimerRepresentante">
+            <summary>
+            Código del primer representante
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.UnidadOperativaLogic.NombrePrimerRepresentante">
+            <summary>
+            Nombre del primer representante
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.UnidadOperativaLogic.CodigoSegundoRepresentante">
+            <summary>
+            Código del segundo representante
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.UnidadOperativaLogic.NombreSegundoRepresentante">
+            <summary>
+            Nombre del segundo representante
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.UnidadOperativaLogic.CodigoTercerRepresentante">
+            <summary>
+            Código del tercer representante
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.UnidadOperativaLogic.NombreTercerRepresentante">
+            <summary>
+            Nombre del tercer representante
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.UnidadOperativaLogic.CodigoCuartoRepresentante">
+            <summary>
+            Código del cuarto representante
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.UnidadOperativaLogic.NombreCuartoRepresentante">
+            <summary>
+            Nombre del cuarto representante
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.UnidadOperativaLogic.Direccion">
+            <summary>
+            Dirección
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.UnidadOperativaLogic.LogoUnidadOperativa">
+            <summary>
+            Logo Unidad Operativo
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.UnidadOperativaNivelLogic">
+            <summary>
+            Representa los datos de la unidad operativa por niveles
+            </summary>
+            <remarks>
+            Creación:   GMD 20161129 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.UnidadOperativaNivelLogic.CodigoNivelJerarquia">
+            <summary>
+            Código de Nivel de Jerarquía
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.UnidadOperativaNivelLogic.CodigoUnidadOperativaNivel1">
+            <summary>
+            Código Unidad Operativa Matriz
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.UnidadOperativaNivelLogic.CodigoResponsableNivel1">
+            <summary>
+            Código responsable Matriz
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.UnidadOperativaNivelLogic.CodigoUnidadOperativaNivel2">
+            <summary>
+            Código Unidad Operativa Nivel Empresa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.UnidadOperativaNivelLogic.CodigoResponsableNivel2">
+            <summary>
+            Código responsable Nivel Empresa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.UnidadOperativaNivelLogic.CodigoUnidadOperativaNivel3">
+            <summary>
+            Código Unidad Operativa Nivel Proyecto
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.UnidadOperativaNivelLogic.CodigoResponsableNivel3">
+            <summary>
+            Código responsable Nivel Proyecto
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.UnidadOperativaUsuarioConsultaLogic">
+            <summary>
+            Representa los datos de la unidad operativa usuario consulta
+            </summary>
+            <remarks>
+            Creación:   GMD 20161122 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.UnidadOperativaUsuarioConsultaLogic.CodigoUnidadUsuarioConsulta">
+            <summary>
+            Código de Identificación de la unidad operativa usuario consulta
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.UnidadOperativaUsuarioConsultaLogic.CodigoUnidadOperativa">
+            <summary>
+            Código de unidad operativa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.UnidadOperativaUsuarioConsultaLogic.CodigoTrabajador">
+            <summary>
+            Código del trabajador
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.UnidadOperativaUsuarioConsultaLogic.NombreCompleto">
+            <summary>
+            Nombre completo del trabajador
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.UnidadOperativaUsuarioConsultaLogic.EstadoRegistro">
+            <summary>
+            Estado del registro
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.UnidadOperativaUsuarioConsultaLogic.NombreUnidadOperativa">
+            <summary>
+            Nombre de la unidad operativa
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.UnidadOperativaStaffLogic">
+            <summary>
+            Representa los datos generales de la unidad operativa staff
+            </summary>
+            <remarks>
+            Creación:   GMD 22150326 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.UnidadOperativaStaffLogic.CodigoUnidadOperativa">
+            <summary>
+            Código de unidad operativa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.UnidadOperativaStaffLogic.CodigoUnidadOperativaStaff">
+            <summary>
+            Código de Identificación de la unidad operativa Staff
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.UnidadOperativaStaffLogic.CodigoSistema">
+            <summary>
+            Nivel asociado
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.UnidadOperativaStaffLogic.CodigoTrabajador">
+            <summary>
+            CodigoTrabajador
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.UnidadOperativaStaffLogic.NombreCompleto">
+            <summary>
+            NombreCompleto
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.UnidadOperativaStaffLogic.NombreSistema">
+            <summary>
+            Descripción del Nivel asociado
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.QueryModel.General.UnidadOperativaStaffLogic.EstadoRegistro">
+            <summary>
+            Descripción del Nivel asociado
+            </summary>
+        </member>
+    </members>
+</doc>

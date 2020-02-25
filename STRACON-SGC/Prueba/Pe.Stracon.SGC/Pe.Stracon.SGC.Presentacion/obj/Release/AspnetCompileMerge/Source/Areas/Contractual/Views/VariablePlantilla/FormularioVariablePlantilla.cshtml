@@ -1,0 +1,55 @@
+﻿@using Pe.Stracon.SGC.Presentacion.Recursos.Base
+@using Pe.Stracon.SGC.Presentacion.Recursos.Contractual
+@model Pe.Stracon.SGC.Presentacion.Core.ViewModel.Contractual.VariablePlantilla.VariablePlantillaFormulario
+<form id="frmAgregarVariablePlantilla">
+    <input type="hidden" value="@Model.variableResponse.CodigoVariable" id="hdnCodigoVariable" />
+    <div class="row">        
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="chkFrmTodasPlantillas">@VariablePlantillaResource.EtiquetaAplicaTodasPlantillas</label>
+                <div>@Html.CheckBox("chkFrmTodasPlantillas", (bool)@Model.variableResponse.IndicadorGlobal , new { @id = "chkFrmTodasPlantillas"})</div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="slcFrmPlantilla">@VariablePlantillaResource.EtiquetaPlantilla</label>
+                @Html.DropDownList("slcFrmPlantilla", @Model.Plantilla, new { @class = "form-control", @id = "slcFrmPlantilla", @validable = "required ValidarPlantilla"})
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="txtFrmIdentificador">@VariablePlantillaResource.EtiquetaIdentificador</label>               
+                <div class="input-group">
+                    <div class="input-group-addon">##</div>
+                    @Html.TextBox("txtFrmIdentificador", @Model.variableResponse.IdentificadorSinAlmohadilla, new { @class = "form-control", @id = "txtFrmIdentificador", @validable = "required ValidarIdentificador"})                      
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="txtFrmNombre">@VariablePlantillaResource.EtiquetaNombre</label>
+                @Html.TextBox("txtFrmNombre", @Model.variableResponse.Nombre, new { @class = "form-control", @id = "txtFrmNombre", @validable = "required ValidarNombre"})
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="form-group">
+                <label for="slcFrmTipo">@VariablePlantillaResource.EtiquetaTipo</label>
+                @Html.DropDownList("slcFrmTipo", @Model.Tipo, new { @class = "form-control", @id = "slcFrmTipo", @validable = "required ValidarTipo"})
+            </div>
+        </div>
+        <div class="col-sm-8">
+            <div class="form-group">
+                <label for="txtFrmDescripcion">@VariablePlantillaResource.EtiquetaDescripcion</label>
+                @Html.TextBox("txtFrmDescripcion", @Model.variableResponse.Descripcion, new { @class = "form-control", @id = "txtFrmDescripcion", @maxlength = 255})
+            </div>
+        </div>
+    </div>
+</form>
+<div class="comp-Modal-footer">
+    <button class="btn btn-default" id="btnFrmCancelar">@GenericoResource.BotonCancelar</button>
+    <button class="btn btn-primary" id="btnFrmGrabar">@GenericoResource.BotonGrabar</button>
+</div>

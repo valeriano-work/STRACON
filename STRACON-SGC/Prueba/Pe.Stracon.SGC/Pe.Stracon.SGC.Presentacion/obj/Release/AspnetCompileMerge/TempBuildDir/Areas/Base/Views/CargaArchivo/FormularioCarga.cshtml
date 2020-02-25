@@ -1,0 +1,35 @@
+﻿@using Pe.Stracon.SGC.Presentacion.Recursos.Base
+@{
+    Layout = null;
+}
+<style>
+/*.fileUpload {
+    position: relative;
+    overflow: hidden;           
+}
+.fileUpload input.upload {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+        cursor: pointer;
+        opacity: 0;
+        filter: alpha(opacity=0);            
+}*/
+</style>
+<div class="row">
+<div class="col-sm-9">
+    <input id="uploadFile" type="text" class="form-control" placeholder="Buscar Archivo ..." readonly="readonly"/>
+</div>
+<div>
+    <div id="fileInput" class="fileUpload btn btn-primary">
+        <span>@GenericoResource.BotonSeleccionar</span>
+        <input type="file" name="MyFile" id="MyFile" class="upload" />
+    </div>
+</div>
+</div>
+<div class="comp-Modal-footer">
+    <button id="btnAceptarCargaArchivo" class="btn btn-default">@GenericoResource.BotonAceptar</button>    
+</div>

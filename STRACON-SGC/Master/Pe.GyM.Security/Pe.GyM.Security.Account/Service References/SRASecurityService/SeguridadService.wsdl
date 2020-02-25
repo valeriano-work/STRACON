@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SeguridadService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://10.244.4.20/SRAService/SeguridadService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://10.244.4.20/SRAService/SeguridadService.svc?xsd=xsd10" namespace="DistributedServices.Base" />
+      <xsd:import schemaLocation="http://10.244.4.20/SRAService/SeguridadService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://10.244.4.20/SRAService/SeguridadService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Domain.Implementation.Security.Aggregates.UserSraAgg" />
+      <xsd:import schemaLocation="http://10.244.4.20/SRAService/SeguridadService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Domain.Base" />
+      <xsd:import schemaLocation="http://10.244.4.20/SRAService/SeguridadService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Domain.Implementation.Security.Aggregates.ProfileAgg" />
+      <xsd:import schemaLocation="http://10.244.4.20/SRAService/SeguridadService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Domain.Implementation.Security.Aggregates.RoleAgg" />
+      <xsd:import schemaLocation="http://10.244.4.20/SRAService/SeguridadService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Domain.Implementation.Security.Aggregates.PermissionAgg" />
+      <xsd:import schemaLocation="http://10.244.4.20/SRAService/SeguridadService.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Domain.Implementation.Security.Aggregates.ActionSRAAgg" />
+      <xsd:import schemaLocation="http://10.244.4.20/SRAService/SeguridadService.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/Domain.Implementation.Security.Aggregates.OptionMAgg" />
+      <xsd:import schemaLocation="http://10.244.4.20/SRAService/SeguridadService.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/Domain.Implementation.Security.Aggregates.SystemSRAAgg" />
+      <xsd:import schemaLocation="http://10.244.4.20/SRAService/SeguridadService.svc?xsd=xsd11" namespace="http://schemas.datacontract.org/2004/07/Domain.Implementation.Security.Aggregates.BusinessAreaAgg" />
+      <xsd:import schemaLocation="http://10.244.4.20/SRAService/SeguridadService.svc?xsd=xsd12" namespace="http://schemas.datacontract.org/2004/07/Domain.Implementation.Security.Aggregates.CompanyAgg" />
+      <xsd:import schemaLocation="http://10.244.4.20/SRAService/SeguridadService.svc?xsd=xsd13" namespace="http://schemas.datacontract.org/2004/07/Domain.Implementation.Security.Aggregates.UserProfileAgg" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISeguridadService_Logeo_InputMessage">
+    <wsdl:part name="parameters" element="tns:Logeo" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadService_Logeo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LogeoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadService_Logeo_ApplicationServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q1="DistributedServices.Base" name="detail" element="q1:ApplicationServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadService_GetUserService_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserService" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadService_GetUserService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadService_GetUserService_ApplicationServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q2="DistributedServices.Base" name="detail" element="q2:ApplicationServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadService_GetUserResponsibleAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserResponsibleAll" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadService_GetUserResponsibleAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserResponsibleAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadService_GetUserResponsibleAll_ApplicationServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q3="DistributedServices.Base" name="detail" element="q3:ApplicationServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadService_GetUserAccessService_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserAccessService" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadService_GetUserAccessService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserAccessServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadService_GetUserAccessService_ApplicationServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q4="DistributedServices.Base" name="detail" element="q4:ApplicationServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadService_GetUsersBySystemId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersBySystemId" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadService_GetUsersBySystemId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersBySystemIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadService_GetUsersBySystemId_ApplicationServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q5="DistributedServices.Base" name="detail" element="q5:ApplicationServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadService_Insert_InputMessage">
+    <wsdl:part name="parameters" element="tns:Insert" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadService_Insert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadService_Insert_ApplicationServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q6="DistributedServices.Base" name="detail" element="q6:ApplicationServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadService_GetUserServiceBySysten_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserServiceBySysten" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadService_GetUserServiceBySysten_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserServiceBySystenResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadService_GetUserServiceBySysten_ApplicationServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q7="DistributedServices.Base" name="detail" element="q7:ApplicationServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadService_GetUserServiceBySystenxProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserServiceBySystenxProfile" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadService_GetUserServiceBySystenxProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserServiceBySystenxProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadService_GetUserServiceBySystenxProfile_ApplicationServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q8="DistributedServices.Base" name="detail" element="q8:ApplicationServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadService_GetUserServiceAD_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserServiceAD" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadService_GetUserServiceAD_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserServiceADResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadService_GetUserServiceAD_ApplicationServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q9="DistributedServices.Base" name="detail" element="q9:ApplicationServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadService_GetSystemByUserId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSystemByUserId" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadService_GetSystemByUserId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSystemByUserIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadService_GetSystemByUserId_ApplicationServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q10="DistributedServices.Base" name="detail" element="q10:ApplicationServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadService_List_SystemSRA_x_Token_InputMessage">
+    <wsdl:part name="parameters" element="tns:List_SystemSRA_x_Token" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadService_List_SystemSRA_x_Token_OutputMessage">
+    <wsdl:part name="parameters" element="tns:List_SystemSRA_x_TokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadService_List_SystemSRA_x_Token_ApplicationServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q11="DistributedServices.Base" name="detail" element="q11:ApplicationServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadService_List_RolesXnSystem_InputMessage">
+    <wsdl:part name="parameters" element="tns:List_RolesXnSystem" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadService_List_RolesXnSystem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:List_RolesXnSystemResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadService_List_RolesXnSystem_ApplicationServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q12="DistributedServices.Base" name="detail" element="q12:ApplicationServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadService_List_BusinessArea_InputMessage">
+    <wsdl:part name="parameters" element="tns:List_BusinessArea" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadService_List_BusinessArea_OutputMessage">
+    <wsdl:part name="parameters" element="tns:List_BusinessAreaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadService_List_BusinessArea_ApplicationServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q13="DistributedServices.Base" name="detail" element="q13:ApplicationServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadService_List_Company_InputMessage">
+    <wsdl:part name="parameters" element="tns:List_Company" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadService_List_Company_OutputMessage">
+    <wsdl:part name="parameters" element="tns:List_CompanyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadService_List_Company_ApplicationServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q14="DistributedServices.Base" name="detail" element="q14:ApplicationServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadService_List_CompanyXsLogin_InputMessage">
+    <wsdl:part name="parameters" element="tns:List_CompanyXsLogin" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadService_List_CompanyXsLogin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:List_CompanyXsLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadService_List_CompanyXsLogin_ApplicationServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q15="DistributedServices.Base" name="detail" element="q15:ApplicationServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadService_InsertUserProfileAsDesactivate_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertUserProfileAsDesactivate" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadService_InsertUserProfileAsDesactivate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertUserProfileAsDesactivateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadService_InsertUserProfileAsDesactivate_ApplicationServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q16="DistributedServices.Base" name="detail" element="q16:ApplicationServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadService_DeleteUserProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUserProfile" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadService_DeleteUserProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUserProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadService_DeleteUserProfile_ApplicationServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q17="DistributedServices.Base" name="detail" element="q17:ApplicationServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadService_GetUserByLoginAD_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByLoginAD" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadService_GetUserByLoginAD_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByLoginADResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadService_GetUserByLoginAD_ApplicationServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q18="DistributedServices.Base" name="detail" element="q18:ApplicationServiceError" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadService_InsertUserAD_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertUserAD" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadService_InsertUserAD_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertUserADResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadService_InsertUserAD_ApplicationServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q19="DistributedServices.Base" name="detail" element="q19:ApplicationServiceError" />
+  </wsdl:message>
+  <wsdl:portType name="ISeguridadService">
+    <wsdl:operation name="Logeo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISeguridadService/Logeo" message="tns:ISeguridadService_Logeo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISeguridadService/LogeoResponse" message="tns:ISeguridadService_Logeo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISeguridadService/LogeoApplicationServiceErrorFault" name="ApplicationServiceErrorFault" message="tns:ISeguridadService_Logeo_ApplicationServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserService">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISeguridadService/GetUserService" message="tns:ISeguridadService_GetUserService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISeguridadService/GetUserServiceResponse" message="tns:ISeguridadService_GetUserService_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISeguridadService/GetUserServiceApplicationServiceErrorFault" name="ApplicationServiceErrorFault" message="tns:ISeguridadService_GetUserService_ApplicationServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserResponsibleAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISeguridadService/GetUserResponsibleAll" message="tns:ISeguridadService_GetUserResponsibleAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISeguridadService/GetUserResponsibleAllResponse" message="tns:ISeguridadService_GetUserResponsibleAll_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISeguridadService/GetUserResponsibleAllApplicationServiceErrorFault" name="ApplicationServiceErrorFault" message="tns:ISeguridadService_GetUserResponsibleAll_ApplicationServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserAccessService">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISeguridadService/GetUserAccessService" message="tns:ISeguridadService_GetUserAccessService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISeguridadService/GetUserAccessServiceResponse" message="tns:ISeguridadService_GetUserAccessService_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISeguridadService/GetUserAccessServiceApplicationServiceErrorFault" name="ApplicationServiceErrorFault" message="tns:ISeguridadService_GetUserAccessService_ApplicationServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersBySystemId">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISeguridadService/GetUsersBySystemId" message="tns:ISeguridadService_GetUsersBySystemId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISeguridadService/GetUsersBySystemIdResponse" message="tns:ISeguridadService_GetUsersBySystemId_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISeguridadService/GetUsersBySystemIdApplicationServiceErrorFault" name="ApplicationServiceErrorFault" message="tns:ISeguridadService_GetUsersBySystemId_ApplicationServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Insert">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISeguridadService/Insert" message="tns:ISeguridadService_Insert_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISeguridadService/InsertResponse" message="tns:ISeguridadService_Insert_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISeguridadService/InsertApplicationServiceErrorFault" name="ApplicationServiceErrorFault" message="tns:ISeguridadService_Insert_ApplicationServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserServiceBySysten">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISeguridadService/GetUserServiceBySysten" message="tns:ISeguridadService_GetUserServiceBySysten_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISeguridadService/GetUserServiceBySystenResponse" message="tns:ISeguridadService_GetUserServiceBySysten_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISeguridadService/GetUserServiceBySystenApplicationServiceErrorFault" name="ApplicationServiceErrorFault" message="tns:ISeguridadService_GetUserServiceBySysten_ApplicationServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserServiceBySystenxProfile">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISeguridadService/GetUserServiceBySystenxProfile" message="tns:ISeguridadService_GetUserServiceBySystenxProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISeguridadService/GetUserServiceBySystenxProfileResponse" message="tns:ISeguridadService_GetUserServiceBySystenxProfile_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISeguridadService/GetUserServiceBySystenxProfileApplicationServiceErrorFault" name="ApplicationServiceErrorFault" message="tns:ISeguridadService_GetUserServiceBySystenxProfile_ApplicationServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserServiceAD">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISeguridadService/GetUserServiceAD" message="tns:ISeguridadService_GetUserServiceAD_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISeguridadService/GetUserServiceADResponse" message="tns:ISeguridadService_GetUserServiceAD_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISeguridadService/GetUserServiceADApplicationServiceErrorFault" name="ApplicationServiceErrorFault" message="tns:ISeguridadService_GetUserServiceAD_ApplicationServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSystemByUserId">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISeguridadService/GetSystemByUserId" message="tns:ISeguridadService_GetSystemByUserId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISeguridadService/GetSystemByUserIdResponse" message="tns:ISeguridadService_GetSystemByUserId_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISeguridadService/GetSystemByUserIdApplicationServiceErrorFault" name="ApplicationServiceErrorFault" message="tns:ISeguridadService_GetSystemByUserId_ApplicationServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="List_SystemSRA_x_Token">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISeguridadService/List_SystemSRA_x_Token" message="tns:ISeguridadService_List_SystemSRA_x_Token_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISeguridadService/List_SystemSRA_x_TokenResponse" message="tns:ISeguridadService_List_SystemSRA_x_Token_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISeguridadService/List_SystemSRA_x_TokenApplicationServiceErrorFault" name="ApplicationServiceErrorFault" message="tns:ISeguridadService_List_SystemSRA_x_Token_ApplicationServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="List_RolesXnSystem">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISeguridadService/List_RolesXnSystem" message="tns:ISeguridadService_List_RolesXnSystem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISeguridadService/List_RolesXnSystemResponse" message="tns:ISeguridadService_List_RolesXnSystem_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISeguridadService/List_RolesXnSystemApplicationServiceErrorFault" name="ApplicationServiceErrorFault" message="tns:ISeguridadService_List_RolesXnSystem_ApplicationServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="List_BusinessArea">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISeguridadService/List_BusinessArea" message="tns:ISeguridadService_List_BusinessArea_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISeguridadService/List_BusinessAreaResponse" message="tns:ISeguridadService_List_BusinessArea_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISeguridadService/List_BusinessAreaApplicationServiceErrorFault" name="ApplicationServiceErrorFault" message="tns:ISeguridadService_List_BusinessArea_ApplicationServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="List_Company">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISeguridadService/List_Company" message="tns:ISeguridadService_List_Company_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISeguridadService/List_CompanyResponse" message="tns:ISeguridadService_List_Company_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISeguridadService/List_CompanyApplicationServiceErrorFault" name="ApplicationServiceErrorFault" message="tns:ISeguridadService_List_Company_ApplicationServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="List_CompanyXsLogin">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISeguridadService/List_CompanyXsLogin" message="tns:ISeguridadService_List_CompanyXsLogin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISeguridadService/List_CompanyXsLoginResponse" message="tns:ISeguridadService_List_CompanyXsLogin_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISeguridadService/List_CompanyXsLoginApplicationServiceErrorFault" name="ApplicationServiceErrorFault" message="tns:ISeguridadService_List_CompanyXsLogin_ApplicationServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertUserProfileAsDesactivate">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISeguridadService/InsertUserProfileAsDesactivate" message="tns:ISeguridadService_InsertUserProfileAsDesactivate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISeguridadService/InsertUserProfileAsDesactivateResponse" message="tns:ISeguridadService_InsertUserProfileAsDesactivate_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISeguridadService/InsertUserProfileAsDesactivateApplicationServiceErrorFault" name="ApplicationServiceErrorFault" message="tns:ISeguridadService_InsertUserProfileAsDesactivate_ApplicationServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserProfile">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISeguridadService/DeleteUserProfile" message="tns:ISeguridadService_DeleteUserProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISeguridadService/DeleteUserProfileResponse" message="tns:ISeguridadService_DeleteUserProfile_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISeguridadService/DeleteUserProfileApplicationServiceErrorFault" name="ApplicationServiceErrorFault" message="tns:ISeguridadService_DeleteUserProfile_ApplicationServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByLoginAD">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISeguridadService/GetUserByLoginAD" message="tns:ISeguridadService_GetUserByLoginAD_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISeguridadService/GetUserByLoginADResponse" message="tns:ISeguridadService_GetUserByLoginAD_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISeguridadService/GetUserByLoginADApplicationServiceErrorFault" name="ApplicationServiceErrorFault" message="tns:ISeguridadService_GetUserByLoginAD_ApplicationServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertUserAD">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISeguridadService/InsertUserAD" message="tns:ISeguridadService_InsertUserAD_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISeguridadService/InsertUserADResponse" message="tns:ISeguridadService_InsertUserAD_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISeguridadService/InsertUserADApplicationServiceErrorFault" name="ApplicationServiceErrorFault" message="tns:ISeguridadService_InsertUserAD_ApplicationServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ISeguridadService" type="tns:ISeguridadService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Logeo">
+      <soap:operation soapAction="http://tempuri.org/ISeguridadService/Logeo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ApplicationServiceErrorFault">
+        <soap:fault use="literal" name="ApplicationServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserService">
+      <soap:operation soapAction="http://tempuri.org/ISeguridadService/GetUserService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ApplicationServiceErrorFault">
+        <soap:fault use="literal" name="ApplicationServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserResponsibleAll">
+      <soap:operation soapAction="http://tempuri.org/ISeguridadService/GetUserResponsibleAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ApplicationServiceErrorFault">
+        <soap:fault use="literal" name="ApplicationServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserAccessService">
+      <soap:operation soapAction="http://tempuri.org/ISeguridadService/GetUserAccessService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ApplicationServiceErrorFault">
+        <soap:fault use="literal" name="ApplicationServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersBySystemId">
+      <soap:operation soapAction="http://tempuri.org/ISeguridadService/GetUsersBySystemId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ApplicationServiceErrorFault">
+        <soap:fault use="literal" name="ApplicationServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Insert">
+      <soap:operation soapAction="http://tempuri.org/ISeguridadService/Insert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ApplicationServiceErrorFault">
+        <soap:fault use="literal" name="ApplicationServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserServiceBySysten">
+      <soap:operation soapAction="http://tempuri.org/ISeguridadService/GetUserServiceBySysten" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ApplicationServiceErrorFault">
+        <soap:fault use="literal" name="ApplicationServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserServiceBySystenxProfile">
+      <soap:operation soapAction="http://tempuri.org/ISeguridadService/GetUserServiceBySystenxProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ApplicationServiceErrorFault">
+        <soap:fault use="literal" name="ApplicationServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserServiceAD">
+      <soap:operation soapAction="http://tempuri.org/ISeguridadService/GetUserServiceAD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ApplicationServiceErrorFault">
+        <soap:fault use="literal" name="ApplicationServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetSystemByUserId">
+      <soap:operation soapAction="http://tempuri.org/ISeguridadService/GetSystemByUserId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ApplicationServiceErrorFault">
+        <soap:fault use="literal" name="ApplicationServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="List_SystemSRA_x_Token">
+      <soap:operation soapAction="http://tempuri.org/ISeguridadService/List_SystemSRA_x_Token" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ApplicationServiceErrorFault">
+        <soap:fault use="literal" name="ApplicationServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="List_RolesXnSystem">
+      <soap:operation soapAction="http://tempuri.org/ISeguridadService/List_RolesXnSystem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ApplicationServiceErrorFault">
+        <soap:fault use="literal" name="ApplicationServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="List_BusinessArea">
+      <soap:operation soapAction="http://tempuri.org/ISeguridadService/List_BusinessArea" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ApplicationServiceErrorFault">
+        <soap:fault use="literal" name="ApplicationServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="List_Company">
+      <soap:operation soapAction="http://tempuri.org/ISeguridadService/List_Company" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ApplicationServiceErrorFault">
+        <soap:fault use="literal" name="ApplicationServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="List_CompanyXsLogin">
+      <soap:operation soapAction="http://tempuri.org/ISeguridadService/List_CompanyXsLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ApplicationServiceErrorFault">
+        <soap:fault use="literal" name="ApplicationServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertUserProfileAsDesactivate">
+      <soap:operation soapAction="http://tempuri.org/ISeguridadService/InsertUserProfileAsDesactivate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ApplicationServiceErrorFault">
+        <soap:fault use="literal" name="ApplicationServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserProfile">
+      <soap:operation soapAction="http://tempuri.org/ISeguridadService/DeleteUserProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ApplicationServiceErrorFault">
+        <soap:fault use="literal" name="ApplicationServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByLoginAD">
+      <soap:operation soapAction="http://tempuri.org/ISeguridadService/GetUserByLoginAD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ApplicationServiceErrorFault">
+        <soap:fault use="literal" name="ApplicationServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertUserAD">
+      <soap:operation soapAction="http://tempuri.org/ISeguridadService/InsertUserAD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ApplicationServiceErrorFault">
+        <soap:fault use="literal" name="ApplicationServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SeguridadService">
+    <wsdl:port name="BasicHttpBinding_ISeguridadService" binding="tns:BasicHttpBinding_ISeguridadService">
+      <soap:address location="http://10.244.4.20/SRAService/SeguridadService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

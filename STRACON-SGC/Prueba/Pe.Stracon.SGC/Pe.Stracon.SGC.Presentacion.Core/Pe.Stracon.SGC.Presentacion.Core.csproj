@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{63310A76-AEB4-4EFB-89AB-67C6DACBA901}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Pe.Stracon.SGC.Presentacion.Core</RootNamespace>
+    <AssemblyName>Pe.Stracon.SGC.Presentacion.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Pe.Stracon.SGC.Presentacion.Core.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'STRACON_QA|AnyCPU'">
+    <OutputPath>bin\STRACON_QA\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Json">
+      <HintPath>..\packages\Json.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Office.Client.Policy, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SharePointOnline.CSOM.16.1.8316.1200\lib\net45\Microsoft.Office.Client.Policy.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Client.TranslationServices, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SharePointOnline.CSOM.16.1.8316.1200\lib\net45\Microsoft.Office.Client.TranslationServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.SharePoint.Tools, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SharePointOnline.CSOM.16.1.8316.1200\lib\net45\Microsoft.Office.SharePoint.Tools.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Online.SharePoint.Client.Tenant, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SharePointOnline.CSOM.16.1.8316.1200\lib\net45\Microsoft.Online.SharePoint.Client.Tenant.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ProjectServer.Client, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SharePointOnline.CSOM.16.1.8316.1200\lib\net45\Microsoft.ProjectServer.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.ProcessingObjectModel.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.WebForms.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SharePointOnline.CSOM.16.1.8316.1200\lib\net45\Microsoft.SharePoint.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.DocumentManagement, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SharePointOnline.CSOM.16.1.8316.1200\lib\net45\Microsoft.SharePoint.Client.DocumentManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Publishing, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SharePointOnline.CSOM.16.1.8316.1200\lib\net45\Microsoft.SharePoint.Client.Publishing.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Runtime, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SharePointOnline.CSOM.16.1.8316.1200\lib\net45\Microsoft.SharePoint.Client.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Runtime.Windows, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SharePointOnline.CSOM.16.1.8316.1200\lib\net45\Microsoft.SharePoint.Client.Runtime.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Search, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SharePointOnline.CSOM.16.1.8316.1200\lib\net45\Microsoft.SharePoint.Client.Search.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Search.Applications, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SharePointOnline.CSOM.16.1.8316.1200\lib\net45\Microsoft.SharePoint.Client.Search.Applications.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Taxonomy, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SharePointOnline.CSOM.16.1.8316.1200\lib\net45\Microsoft.SharePoint.Client.Taxonomy.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.UserProfiles, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SharePointOnline.CSOM.16.1.8316.1200\lib\net45\Microsoft.SharePoint.Client.UserProfiles.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.WorkflowServices, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SharePointOnline.CSOM.16.1.8316.1200\lib\net45\Microsoft.SharePoint.Client.WorkflowServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.6\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Librerias\SGC\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages">
+      <HintPath>..\..\..\..\..\Librerias\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\Base\BuscadorProveedorController.cs" />
+    <Compile Include="Controllers\Base\CargaArchivoController.cs" />
+    <Compile Include="Controllers\Base\ErrorController.cs" />
+    <Compile Include="Controllers\Base\GenericController.cs" />
+    <Compile Include="Controllers\Base\LogOutController.cs" />
+    <Compile Include="Controllers\Base\PrincipalController.cs" />
+    <Compile Include="Controllers\Base\ReportController.cs" />
+    <Compile Include="Controllers\Base\UploadDocument.cs" />
+    <Compile Include="Controllers\Contractual\ActividadesGestionContractualController.cs" />
+    <Compile Include="Controllers\Contractual\ArchivoAdjuntoContratoResolucionController.cs" />
+    <Compile Include="Controllers\Contractual\ArchivoAdjuntoContratoController.cs" />
+    <Compile Include="Controllers\Contractual\BandejaContratoController.cs" />
+    <Compile Include="Controllers\Contractual\BienesController.cs" />
+    <Compile Include="Controllers\Contractual\ConsultaController.cs" />
+    <Compile Include="Controllers\Contractual\ReporteBienesContratoController.cs" />
+    <Compile Include="Controllers\Contractual\ReporteConsultaController.cs" />
+    <Compile Include="Controllers\Contractual\ReporteContratoObservadoAprobadoController.cs" />
+    <Compile Include="Controllers\Contractual\ReporteContratoCorporativoController.cs" />
+    <Compile Include="Controllers\Contractual\ReporteContratoEliminadoController.cs" />
+    <Compile Include="Controllers\Contractual\ReporteContratoPorEstadioController.cs" />
+    <Compile Include="Controllers\Contractual\ReporteContratoPorFinalizarController.cs" />
+    <Compile Include="Controllers\Contractual\ReporteContratoPorVencerController.cs" />
+    <Compile Include="Controllers\Contractual\ReporteEstadioActualContratoController.cs" />
+    <Compile Include="Controllers\Contractual\ReporteHojaRutaController.cs" />
+    <Compile Include="Controllers\Contractual\ReporteListadoContratoController.cs" />
+    <Compile Include="Controllers\Contractual\ReporteTiempoAtencionController.cs" />
+    <Compile Include="Controllers\Contractual\ReporteTiempoEjecucionController.cs" />
+    <Compile Include="Controllers\Contractual\ProcesoAuditoriaController.cs" />
+    <Compile Include="Controllers\Contractual\ReporteContratoPendienteElaborarController.cs" />
+    <Compile Include="Controllers\Contractual\SolicitudModificacionContratoController.cs" />
+    <Compile Include="Controllers\Contractual\ListadoContratoController.cs" />
+    <Compile Include="Controllers\Contractual\FlujoAprobacionController.cs" />
+    <Compile Include="Controllers\Contractual\PlantillaController.cs" />
+    <Compile Include="Controllers\Contractual\SolicitudRevisionContratoController.cs" />
+    <Compile Include="Controllers\Contractual\VariablePlantillaController.cs" />
+    <Compile Include="Helpers\CustomHtmlHelper.cs" />
+    <Compile Include="Helpers\SharepointEN.cs" />
+    <Compile Include="Helpers\SharepointHelper.cs" />
+    <Compile Include="LogEN.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reporte\ReporteCredencial.cs" />
+    <Compile Include="ViewModel\Base\CargarArchivoViewModel.cs" />
+    <Compile Include="ViewModel\Base\GenericViewModel.cs" />
+    <Compile Include="ViewModel\Base\ReporteViewModel.cs" />
+    <Compile Include="ViewModel\Base\TrabajadorSuplenteModel.cs" />
+    <Compile Include="ViewModel\Contractual\ActividadesGestionContractual\ActividadesGestionContractualModel.cs" />
+    <Compile Include="ViewModel\Contractual\ArchivoAdjuntoContratoResolucion\ArchivoAdjuntoContratoResolucionFormulario.cs" />
+    <Compile Include="ViewModel\Contractual\ArchivoAdjuntoContrato\ArchivoAdjuntoContratoFormulario.cs" />
+    <Compile Include="ViewModel\Contractual\BandejaContrato\BandejaContratoFormulario.cs" />
+    <Compile Include="ViewModel\Contractual\BandejaContrato\BandejaContratoBusqueda.cs" />
+    <Compile Include="ViewModel\Contractual\BandejaContrato\ConsultasBusqueda.cs" />
+    <Compile Include="ViewModel\Contractual\BandejaContrato\ObservacionesFormulario.cs" />
+    <Compile Include="ViewModel\Contractual\BandejaContrato\ObservacionesBusqueda.cs" />
+    <Compile Include="ViewModel\Contractual\Bienes\BienAlquilerFormulario.cs" />
+    <Compile Include="ViewModel\Contractual\Bienes\BienesBusqueda.cs" />
+    <Compile Include="ViewModel\Contractual\Bienes\BienesFormulario.cs" />
+    <Compile Include="ViewModel\Contractual\Consulta\ConsultaFormulario.cs" />
+    <Compile Include="ViewModel\Contractual\Consulta\FormularioCargaAdjunto.cs" />
+    <Compile Include="ViewModel\Contractual\FlujoAprobacion\FlujoAprobacionFormularioCopiarEstadio.cs" />
+    <Compile Include="ViewModel\Contractual\FlujoAprobacion\FlujoAprobacionFormulario.cs" />
+    <Compile Include="ViewModel\Contractual\FlujoAprobacion\FlujoAprobacionEstadiosBusqueda.cs" />
+    <Compile Include="ViewModel\Contractual\ListadoContrato\ContratoFormulario.cs" />
+    <Compile Include="ViewModel\Contractual\ListadoContrato\ContratoParrafoBienFormulario.cs" />
+    <Compile Include="ViewModel\Contractual\ListadoContrato\ContratoParrafoFirmanteFormulario.cs" />
+    <Compile Include="ViewModel\Contractual\ListadoContrato\ContratoParrafoFormulario.cs" />
+    <Compile Include="ViewModel\Contractual\ListadoContrato\ContratoParrafoTablaFormulario.cs" />
+    <Compile Include="ViewModel\Contractual\ListadoContrato\ContratoVistaPreviaFormulario.cs" />
+    <Compile Include="ViewModel\Contractual\ListadoContrato\CopiaContratoFormulario.cs" />
+    <Compile Include="ViewModel\Contractual\ListadoContrato\ContratoFormularioEditar.cs" />
+    <Compile Include="ViewModel\Contractual\Plantilla\PlantillaNotaPie.cs" />
+    <Compile Include="ViewModel\Contractual\Plantilla\PlantillaNotaPieBusqueda.cs" />
+    <Compile Include="ViewModel\Contractual\ProcesoAuditoria\ProcesoAuditoriaFormulario.cs" />
+    <Compile Include="ViewModel\Contractual\ProcesoAuditoria\ProcesoAuditoriaBusqueda.cs" />
+    <Compile Include="ViewModel\Contractual\ReporteBienesContrato\ReporteBienesContratoBusqueda.cs" />
+    <Compile Include="ViewModel\Contractual\ReporteConsulta\ReporteConsultaBusqueda.cs" />
+    <Compile Include="ViewModel\Contractual\ReporteContratoCorporativo\ReporteContratoCorporativoBusqueda.cs" />
+    <Compile Include="ViewModel\Contractual\ReporteContratoEliminado\ReporteContratoEliminadoBusqueda.cs" />
+    <Compile Include="ViewModel\Contractual\ReporteContratoObservadoAprobado\ReporteContratoObservadoAprobadoBusqueda.cs" />
+    <Compile Include="ViewModel\Contractual\ReporteContratoPendienteElaborar\ReporteContratoPendienteElaborarBusqueda.cs" />
+    <Compile Include="ViewModel\Contractual\ReporteContratoPorEstadio\ReporteContratoPorEstadioBusqueda.cs" />
+    <Compile Include="ViewModel\Contractual\ReporteContratoPorFinalizar\ReporteContratoPorFinalizarBusqueda.cs" />
+    <Compile Include="ViewModel\Contractual\ReporteContratoPorVencer\ReporteContratoPorVencerBusqueda.cs" />
+    <Compile Include="ViewModel\Contractual\ReporteEstadioActualContrato\ReporteEstadioActualContratoBusqueda.cs" />
+    <Compile Include="ViewModel\Contractual\ReporteHojaRuta\ReporteHojaRutaBusqueda.cs" />
+    <Compile Include="ViewModel\Contractual\ReporteListadoContrato\ReporteListadoContratoBusqueda.cs" />
+    <Compile Include="ViewModel\Contractual\ReporteTiempoAtencion\ReporteTiempoAtencionBusqueda.cs" />
+    <Compile Include="ViewModel\Contractual\ReporteTiempoEjecucion\ReporteTiempoEjecucionBusqueda.cs" />
+    <Compile Include="ViewModel\Contractual\SolicitudModificacionContrato\SolicitudModificacionContratoAutorizarFormulario.cs" />
+    <Compile Include="ViewModel\Contractual\SolicitudModificacionContrato\SolicitudModificacionContratoBusqueda.cs" />
+    <Compile Include="ViewModel\Contractual\SolicitudModificacionContrato\SolicitudModificacionContratoAprobarFormulario.cs" />
+    <Compile Include="ViewModel\Contractual\FlujoAprobacion\FlujoAprobacionBusqueda.cs" />
+    <Compile Include="ViewModel\Contractual\FlujoAprobacion\FlujoAprobacionEstadiosFormulario.cs" />
+    <Compile Include="ViewModel\Contractual\ListadoContrato\ListadoContratoBusqueda.cs" />
+    <Compile Include="ViewModel\Contractual\Plantilla\PlantillaParrafoFormulario.cs" />
+    <Compile Include="ViewModel\Contractual\Plantilla\PlantillaParrafoBusqueda.cs" />
+    <Compile Include="ViewModel\Contractual\Plantilla\PlantillaBusqueda.cs" />
+    <Compile Include="ViewModel\Contractual\Plantilla\PlantillaFormulario.cs" />
+    <Compile Include="ViewModel\Contractual\SolicitudRevisionContrato\SolicitudRevisionContratoBusqueda.cs" />
+    <Compile Include="ViewModel\Contractual\VariablePlantilla\VariablePlantillaBusqueda.cs" />
+    <Compile Include="ViewModel\Contractual\VariablePlantilla\VariablePlantillaCampoBusqueda.cs" />
+    <Compile Include="ViewModel\Contractual\VariablePlantilla\VariablePlantillaCampoFormulario.cs" />
+    <Compile Include="ViewModel\Contractual\VariablePlantilla\VariablePlantillaFormulario.cs" />
+    <Compile Include="ViewModel\Contractual\VariablePlantilla\VariablePlantillaListaFormulario.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\Pe.GyM.Security\Pe.GyM.Security.Account\Pe.GyM.Security.Account.csproj">
+      <Project>{6eb294cd-e9ad-400b-a558-cbf33e200713}</Project>
+      <Name>Pe.GyM.Security.Account</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Pe.GyM.Security\Pe.GyM.Security.Web\Pe.GyM.Security.Web.csproj">
+      <Project>{75b1b3b0-087b-4916-9340-ca136f11e670}</Project>
+      <Name>Pe.GyM.Security.Web</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Pe.Stracon.Politicas\Pe.Stracon.Politicas.Aplicacion.Core\Pe.Stracon.Politicas.Aplicacion.Core.csproj">
+      <Project>{bcbbb6a6-53fc-4701-97c1-d804d5cba9a8}</Project>
+      <Name>Pe.Stracon.Politicas.Aplicacion.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Pe.Stracon.Politicas\Pe.Stracon.Politicas.Aplicacion.TransferObject\Pe.Stracon.Politicas.Aplicacion.TransferObject.csproj">
+      <Project>{3b488d54-5850-425e-b187-0a232afa02cc}</Project>
+      <Name>Pe.Stracon.Politicas.Aplicacion.TransferObject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pe.Stracon.SGC.Aplicacion.Core\Pe.Stracon.SGC.Aplicacion.Core.csproj">
+      <Project>{6c16878c-cd5a-415c-b8e6-d385a55ef0d9}</Project>
+      <Name>Pe.Stracon.SGC.Aplicacion.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pe.Stracon.SGC.Aplicacion.Service\Pe.Stracon.SGC.Aplicacion.Service.csproj">
+      <Project>{C457683F-294C-48DF-8E41-5F5A96E8DF6D}</Project>
+      <Name>Pe.Stracon.SGC.Aplicacion.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pe.Stracon.SGC.Aplicacion.TransferObject\Pe.Stracon.SGC.Aplicacion.TransferObject.csproj">
+      <Project>{e43da679-229c-4103-af10-7fa3584ba914}</Project>
+      <Name>Pe.Stracon.SGC.Aplicacion.TransferObject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pe.Stracon.SGC.Cross.Core\Pe.Stracon.SGC.Cross.Core.csproj">
+      <Project>{f4ece405-25b7-4365-aab3-503c5f8859e6}</Project>
+      <Name>Pe.Stracon.SGC.Cross.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pe.Stracon.SGC.Infraestructura.Core\Pe.Stracon.SGC.Infraestructura.Core.csproj">
+      <Project>{2b8f9b45-35da-4eea-b07e-f2598b2863ab}</Project>
+      <Name>Pe.Stracon.SGC.Infraestructura.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pe.Stracon.SGC.Presentacion.Recursos\Pe.Stracon.SGC.Presentacion.Recursos.csproj">
+      <Project>{b681f6fd-f206-4ceb-aee7-5ae437d202eb}</Project>
+      <Name>Pe.Stracon.SGC.Presentacion.Recursos</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,59 @@
+﻿@using Pe.Stracon.SGC.Presentacion.Recursos.Base
+@using Pe.Stracon.SGC.Presentacion.Recursos.Contractual
+@using Pe.Stracon.SGC.Presentacion.Recursos.Mensajes
+@using Pe.Stracon.SGC.Infraestructura.Core.Context
+@model Pe.Stracon.SGC.Presentacion.Core.ViewModel.Contractual.ArchivoAdjuntoContrato.ArchivoAdjuntoContratoFormulario
+@{
+    Layout = null;
+
+    var disabled = (Model.ControlPermisos.ControlTotal || Model.ControlPermisos.Escritura) ? false : true;
+
+}
+<style>
+</style>
+@if (Model.Contrato.CodigoEstadoContrato == DatosConstantes.EstadoContrato.Edicion || Model.Contrato.CodigoEstadoContrato == DatosConstantes.EstadoContrato.Aprobacion
+    || Model.Contrato.CodigoEstadoContrato == DatosConstantes.EstadoContrato.Vencido || Model.Contrato.CodigoEstadoContrato == DatosConstantes.EstadoContrato.Vigente)
+{
+    if (!disabled)
+    {
+    <div class="row">
+        <div class="col-sm-8">
+            <input id="uploadFile" type="text" class="form-control" placeholder="Buscar Archivo ..." readonly="readonly" />
+        </div>
+        <div class="col-sm-4">
+            <div id="fileInput" class="fileUpload btn btn-primary">
+                <span>@GenericoResource.BotonSeleccionar</span>
+                <input type="file" name="MyFile" id="MyFile" class="upload" />
+            </div>
+            <button id="btnAceptarCargaArchivoAdjunto" class="btn btn-default">@GenericoResource.BotonAceptar</button>
+        </div>
+    </div>
+    <hr />
+    }
+}
+<div class="row">
+    <div class="col-sm-12">
+        <div id="divGrdResultAdjuntos"></div>
+    </div>
+</div>
+<div class="comp-Modal-footer">
+    <button id="btnCerrarCargaArchivoAdjunto" class="btn btn-default">@GenericoResource.BotonCerrar</button>
+</div>
+<script type="text/javascript">
+    ns('Pe.Stracon.SGC.Presentacion.Contractual.ArchivoAdjuntoContrato.Actions')
+    Pe.Stracon.SGC.Presentacion.Contractual.ArchivoAdjuntoContrato.Actions.BuscarArchivoAdjunto = '@Url.Action("BuscarArchivoAdjunto", "ArchivoAdjuntoContrato", new { Area = "Contractual" })';
+    
+    ns('Pe.Stracon.SGC.Presentacion.Contractual.ArchivoAdjuntoContrato.Resources')
+    Pe.Stracon.SGC.Presentacion.Contractual.ArchivoAdjuntoContrato.Resources.TituloEliminar = '@Html.Raw(ArchivoAdjuntoContratoResource.EtiquetaDlgTituloEliminar)';
+    Pe.Stracon.SGC.Presentacion.Contractual.ArchivoAdjuntoContrato.Resources.ConfirmacionEliminacionRegistro = '@Html.Raw(MensajeResource.ConfirmacionEliminacion)';
+    Pe.Stracon.SGC.Presentacion.Contractual.ArchivoAdjuntoContrato.Resources.GridNombreArchivo = '@ArchivoAdjuntoContratoResource.EtiquetaNombreArchivo';
+    Pe.Stracon.SGC.Presentacion.Contractual.ArchivoAdjuntoContrato.Resources.GridAcciones = '@Html.Raw(GenericoResource.GridAcciones)';
+
+    ns('Pe.Stracon.SGC.Presentacion.Recursos.Validacion')
+    Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarRegistroAdjunto = '@Html.Raw(ArchivoAdjuntoContratoResource.EtiquetaValidarRegistroAdjunto)';
+    Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarEliminacionAdjunto = '@Html.Raw(ArchivoAdjuntoContratoResource.EtiquetaValidarEliminacionAdjunto)';
+
+    ns('Pe.Stracon.SGC.Presentacion.Contractual.ArchivoAdjuntoContrato.Models')
+    Pe.Stracon.SGC.Presentacion.Contractual.ArchivoAdjuntoContrato.Models.FormularioCargaAdjuntoContrato = @(Html.Raw(Json.Encode(Model)));
+
+</script>

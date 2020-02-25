@@ -1,0 +1,108 @@
+FechaHora = 4/10/2019 18:25:40
+MensajeError = [Error]
+RegistrarPlantilla
+DetalleError = [Pila]
+
+__________________________________________________
+FechaHora = 4/10/2019 18:25:40
+MensajeError = [Error]
+Procedure or function 'USP_PLANTILLA_TIPO_SEL' expects parameter '@CODIGO_TIPO_DOCUMENTO', which was not supplied.
+DetalleError = [Pila]
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   en System.Data.SqlClient.SqlDataReader.get_MetaData()
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   en System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   en System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<Reader>b__c(DbCommand t, DbCommandInterceptionContext`1 c)
+   en System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   en System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.Reader(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   en System.Data.Entity.Internal.InterceptableDbCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   en System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   en System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, ExecutionOptions executionOptions, Object[] parameters)
+   en System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass65`1.<ExecuteStoreQueryReliably>b__64()
+   en System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   en System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass65`1.<ExecuteStoreQueryReliably>b__63()
+   en System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   en System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQueryReliably[TElement](String commandText, String entitySetName, ExecutionOptions executionOptions, Object[] parameters)
+   en System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, ExecutionOptions executionOptions, Object[] parameters)
+   en System.Data.Entity.Internal.InternalContext.<>c__DisplayClass14`1.<ExecuteSqlQuery>b__13()
+   en System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   en System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   en System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   en Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.PlantillaRequerimientoLogicRepository.BuscarPlantillaTipo(Boolean indicadorAdhesion) en D:\Modulos\Fuentes\STRACON-SGC\Dev\Pe.Stracon.SGC\Pe.Stracon.SGC.Infraestructura.Repository\Query\Contractual\PlantillaRequerimientoLogicRepository.cs:línea 63
+   en Pe.Stracon.SGC.Aplicacion.Service.Contractual.PlantillaRequerimientoService.RegistrarPlantilla(PlantillaRequerimientoRequest data) en D:\Modulos\Fuentes\STRACON-SGC\Dev\Pe.Stracon.SGC\Pe.Stracon.SGC.Aplicacion.Service\Contractual\PlantillaRequerimientoService.cs:línea 160
+__________________________________________________
+FechaHora = 4/10/2019 18:26:13
+MensajeError = [Error]
+RegistrarPlantilla
+DetalleError = [Pila]
+
+__________________________________________________
+FechaHora = 4/10/2019 18:26:13
+MensajeError = [Error]
+Procedure or function 'USP_PLANTILLA_TIPO_SEL' expects parameter '@CODIGO_TIPO_DOCUMENTO', which was not supplied.
+DetalleError = [Pila]
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   en System.Data.SqlClient.SqlDataReader.get_MetaData()
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   en System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   en System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<Reader>b__c(DbCommand t, DbCommandInterceptionContext`1 c)
+   en System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   en System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.Reader(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   en System.Data.Entity.Internal.InterceptableDbCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   en System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   en System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, ExecutionOptions executionOptions, Object[] parameters)
+   en System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass65`1.<ExecuteStoreQueryReliably>b__64()
+   en System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   en System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass65`1.<ExecuteStoreQueryReliably>b__63()
+   en System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   en System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQueryReliably[TElement](String commandText, String entitySetName, ExecutionOptions executionOptions, Object[] parameters)
+   en System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, ExecutionOptions executionOptions, Object[] parameters)
+   en System.Data.Entity.Internal.InternalContext.<>c__DisplayClass14`1.<ExecuteSqlQuery>b__13()
+   en System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   en System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   en System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   en Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.PlantillaRequerimientoLogicRepository.BuscarPlantillaTipo(Boolean indicadorAdhesion) en D:\Modulos\Fuentes\STRACON-SGC\Dev\Pe.Stracon.SGC\Pe.Stracon.SGC.Infraestructura.Repository\Query\Contractual\PlantillaRequerimientoLogicRepository.cs:línea 63
+   en Pe.Stracon.SGC.Aplicacion.Service.Contractual.PlantillaRequerimientoService.RegistrarPlantilla(PlantillaRequerimientoRequest data) en D:\Modulos\Fuentes\STRACON-SGC\Dev\Pe.Stracon.SGC\Pe.Stracon.SGC.Aplicacion.Service\Contractual\PlantillaRequerimientoService.cs:línea 160
+__________________________________________________
+FechaHora = 4/10/2019 18:36:21
+MensajeError = [Error]
+RegistrarPlantilla
+DetalleError = [Pila]
+
+__________________________________________________
+FechaHora = 4/10/2019 18:36:21
+MensajeError = [Error]
+Referencia a objeto no establecida como instancia de un objeto.
+DetalleError = [Pila]
+   en Pe.Stracon.SGC.Aplicacion.Service.Contractual.PlantillaRequerimientoService.RegistrarPlantilla(PlantillaRequerimientoRequest data) en D:\Modulos\Fuentes\STRACON-SGC\Dev\Pe.Stracon.SGC\Pe.Stracon.SGC.Aplicacion.Service\Contractual\PlantillaRequerimientoService.cs:línea 172
+__________________________________________________
+FechaHora = 4/10/2019 18:44:12
+MensajeError = [Error]
+RegistrarPlantillaRequerimiento
+DetalleError = [Pila]
+
+__________________________________________________
+FechaHora = 4/10/2019 18:44:12
+MensajeError = [Error]
+Referencia a objeto no establecida como instancia de un objeto.
+DetalleError = [Pila]
+   en Pe.Stracon.SGC.Aplicacion.Service.Contractual.PlantillaRequerimientoService.RegistrarPlantilla(PlantillaRequerimientoRequest data) en D:\Modulos\Fuentes\STRACON-SGC\Dev\Pe.Stracon.SGC\Pe.Stracon.SGC.Aplicacion.Service\Contractual\PlantillaRequerimientoService.cs:línea 172
+__________________________________________________

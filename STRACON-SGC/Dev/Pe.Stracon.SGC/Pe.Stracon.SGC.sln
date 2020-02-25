@@ -1,0 +1,399 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2050
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1_Presentacion", "1_Presentacion", "{226F524B-F68E-4C24-AE08-B5F58B6F687F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2_Aplicacion", "2_Aplicacion", "{A3A16B95-E52F-4BFF-96EF-3AF43B0A3327}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3_Dominio", "3_Dominio", "{2B428116-2331-4806-BA22-638F600E461D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4_Infraestructura", "4_Infraestructura", "{DC136FAA-2FED-4E51-B9E4-48CDAB1BA56D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5_Cross", "5_Cross", "{BEA2AFFA-CF79-4736-A341-4C603266F55F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pe.GyM.Security.Account", "..\Pe.GyM.Security\Pe.GyM.Security.Account\Pe.GyM.Security.Account.csproj", "{6EB294CD-E9AD-400B-A558-CBF33E200713}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pe.GyM.Security.Web", "..\Pe.GyM.Security\Pe.GyM.Security.Web\Pe.GyM.Security.Web.csproj", "{75B1B3B0-087B-4916-9340-CA136F11E670}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GyMSecurity", "GyMSecurity", "{A2293ED2-BAE2-4F04-B3DE-B8F9FB747463}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pe.Stracon.Politicas", "Pe.Stracon.Politicas", "{4A879A5A-07A4-47EA-866B-909F25CD766C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pe.Stracon.Politicas.Infraestructura.CommandModel", "..\Pe.Stracon.Politicas\Pe.Stracon.Politicas.Infraestructura.CommandModel\Pe.Stracon.Politicas.Infraestructura.CommandModel.csproj", "{431A5EAB-2F15-4CCC-82B7-F83F6CDED2DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pe.Stracon.Politicas.Infraestructura.QueryModel", "..\Pe.Stracon.Politicas\Pe.Stracon.Politicas.Infraestructura.QueryModel\Pe.Stracon.Politicas.Infraestructura.QueryModel.csproj", "{166D807D-1F6F-4B98-90B8-5EBE7CD8C843}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pe.Stracon.Politicas.Infraestructura.Core", "..\Pe.Stracon.Politicas\Pe.Stracon.Politicas.Infraestructura.Core\Pe.Stracon.Politicas.Infraestructura.Core.csproj", "{03570580-69A0-4B8A-BCCF-7E1BF8942168}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pe.Stracon.Politicas.Aplicacion.Core", "..\Pe.Stracon.Politicas\Pe.Stracon.Politicas.Aplicacion.Core\Pe.Stracon.Politicas.Aplicacion.Core.csproj", "{BCBBB6A6-53FC-4701-97C1-D804D5CBA9A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pe.Stracon.Politicas.Aplicacion.Service", "..\Pe.Stracon.Politicas\Pe.Stracon.Politicas.Aplicacion.Service\Pe.Stracon.Politicas.Aplicacion.Service.csproj", "{C3A413D7-1D0A-4D4E-A228-B7F9FEA194B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pe.Stracon.Politicas.Infraestructura.Repository", "..\Pe.Stracon.Politicas\Pe.Stracon.Politicas.Infraestructura.Repository\Pe.Stracon.Politicas.Infraestructura.Repository.csproj", "{DB02BA48-35C6-4B6B-B345-0D6721661EC2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pe.Stracon.PoliticasCross.Core", "..\Pe.Stracon.Politicas\Pe.Stracon.PoliticasCross.Core\Pe.Stracon.PoliticasCross.Core.csproj", "{EBE3280B-DD55-4324-A6FA-83FADC6C007D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pe.Stracon.Politicas.Aplicacion.TransferObject", "..\Pe.Stracon.Politicas\Pe.Stracon.Politicas.Aplicacion.TransferObject\Pe.Stracon.Politicas.Aplicacion.TransferObject.csproj", "{3B488D54-5850-425E-B187-0A232AFA02CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pe.Stracon.Politicas.Aplicacion.Adapter", "..\Pe.Stracon.Politicas\Pe.Stracon.Politicas.Aplicacion.Adapter\Pe.Stracon.Politicas.Aplicacion.Adapter.csproj", "{BDB3DF2A-E0F7-4D06-B120-346663E5215B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pe.Stracon.SGC.Cross.Core", "Pe.Stracon.SGC.Cross.Core\Pe.Stracon.SGC.Cross.Core.csproj", "{F4ECE405-25B7-4365-AAB3-503C5F8859E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pe.Stracon.SGC.Infraestructura.Core", "Pe.Stracon.SGC.Infraestructura.Core\Pe.Stracon.SGC.Infraestructura.Core.csproj", "{2B8F9B45-35DA-4EEA-B07E-F2598B2863AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pe.Stracon.SGC.Infraestructura.CommandModel", "Pe.Stracon.SGC.Infraestructura.CommandModel\Pe.Stracon.SGC.Infraestructura.CommandModel.csproj", "{7FA64A98-D0D2-423C-8CAC-F9AC49C7CDC0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pe.Stracon.SGC.Infraestructura.QueryModel", "Pe.Stracon.SGC.Infraestructura.QueryModel\Pe.Stracon.SGC.Infraestructura.QueryModel.csproj", "{7280CDD5-08DB-4BE3-A412-1B1E6D9A5DE2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pe.Stracon.SGC.Infraestructura.Repository", "Pe.Stracon.SGC.Infraestructura.Repository\Pe.Stracon.SGC.Infraestructura.Repository.csproj", "{678335AE-4782-4752-BEBB-708402046DFE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pe.Stracon.SGC.Dominio.Core", "Pe.Stracon.SGC.Dominio.Core\Pe.Stracon.SGC.Dominio.Core.csproj", "{40CDC85F-33ED-412E-9974-A7B8C6AEAD28}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pe.Stracon.SGC.Dominio.Model", "Pe.Stracon.SGC.Dominio.Model\Pe.Stracon.SGC.Dominio.Model.csproj", "{C1BBE827-C78F-44AE-ABC7-4ACC65CBB7F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pe.Stracon.SGC.Dominio.Service", "Pe.Stracon.SGC.Dominio.Service\Pe.Stracon.SGC.Dominio.Service.csproj", "{4C87707F-F069-4CA7-8B5A-AB32ABD64F84}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pe.Stracon.SGC.Aplicacion.Adapter", "Pe.Stracon.SGC.Aplicacion.Adapter\Pe.Stracon.SGC.Aplicacion.Adapter.csproj", "{E8C1A9FE-B0D3-475C-9440-9242156FCE8F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pe.Stracon.SGC.Aplicacion.Core", "Pe.Stracon.SGC.Aplicacion.Core\Pe.Stracon.SGC.Aplicacion.Core.csproj", "{6C16878C-CD5A-415C-B8E6-D385A55EF0D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pe.Stracon.SGC.Aplicacion.Service", "Pe.Stracon.SGC.Aplicacion.Service\Pe.Stracon.SGC.Aplicacion.Service.csproj", "{C457683F-294C-48DF-8E41-5F5A96E8DF6D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pe.Stracon.SGC.Aplicacion.TransferObject", "Pe.Stracon.SGC.Aplicacion.TransferObject\Pe.Stracon.SGC.Aplicacion.TransferObject.csproj", "{E43DA679-229C-4103-AF10-7FA3584BA914}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pe.Stracon.SGC.Presentacion", "Pe.Stracon.SGC.Presentacion\Pe.Stracon.SGC.Presentacion.csproj", "{2600EAE4-99E4-4DF3-8DA0-FD16111B0B22}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "6_Distribucion", "6_Distribucion", "{9826280B-41D6-4D27-9D7A-71B310F5B2F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pe.Stracon.SGC.Infraestructura.Proxy", "Pe.Stracon.SGC.Infraestructura.Proxy\Pe.Stracon.SGC.Infraestructura.Proxy.csproj", "{92229C7E-B04E-4B57-B239-61D72676ADF0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pe.Stracon.SGC.Presentacion.Core", "Pe.Stracon.SGC.Presentacion.Core\Pe.Stracon.SGC.Presentacion.Core.csproj", "{63310A76-AEB4-4EFB-89AB-67C6DACBA901}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pe.Stracon.SGC.Presentacion.Recursos", "Pe.Stracon.SGC.Presentacion.Recursos\Pe.Stracon.SGC.Presentacion.Recursos.csproj", "{B681F6FD-F206-4CEB-AEE7-5AE437D202EB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		STRACON_QA|Any CPU = STRACON_QA|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6EB294CD-E9AD-400B-A558-CBF33E200713}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EB294CD-E9AD-400B-A558-CBF33E200713}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EB294CD-E9AD-400B-A558-CBF33E200713}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EB294CD-E9AD-400B-A558-CBF33E200713}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EB294CD-E9AD-400B-A558-CBF33E200713}.STRACON_QA|Any CPU.ActiveCfg = STRACON_QA|Any CPU
+		{6EB294CD-E9AD-400B-A558-CBF33E200713}.STRACON_QA|Any CPU.Build.0 = STRACON_QA|Any CPU
+		{75B1B3B0-087B-4916-9340-CA136F11E670}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75B1B3B0-087B-4916-9340-CA136F11E670}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75B1B3B0-087B-4916-9340-CA136F11E670}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75B1B3B0-087B-4916-9340-CA136F11E670}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75B1B3B0-087B-4916-9340-CA136F11E670}.STRACON_QA|Any CPU.ActiveCfg = STRACON_QA|Any CPU
+		{75B1B3B0-087B-4916-9340-CA136F11E670}.STRACON_QA|Any CPU.Build.0 = STRACON_QA|Any CPU
+		{431A5EAB-2F15-4CCC-82B7-F83F6CDED2DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{431A5EAB-2F15-4CCC-82B7-F83F6CDED2DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{431A5EAB-2F15-4CCC-82B7-F83F6CDED2DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{431A5EAB-2F15-4CCC-82B7-F83F6CDED2DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{431A5EAB-2F15-4CCC-82B7-F83F6CDED2DC}.STRACON_QA|Any CPU.ActiveCfg = STRACON_QA|Any CPU
+		{431A5EAB-2F15-4CCC-82B7-F83F6CDED2DC}.STRACON_QA|Any CPU.Build.0 = STRACON_QA|Any CPU
+		{166D807D-1F6F-4B98-90B8-5EBE7CD8C843}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{166D807D-1F6F-4B98-90B8-5EBE7CD8C843}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{166D807D-1F6F-4B98-90B8-5EBE7CD8C843}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{166D807D-1F6F-4B98-90B8-5EBE7CD8C843}.Release|Any CPU.Build.0 = Release|Any CPU
+		{166D807D-1F6F-4B98-90B8-5EBE7CD8C843}.STRACON_QA|Any CPU.ActiveCfg = STRACON_QA|Any CPU
+		{166D807D-1F6F-4B98-90B8-5EBE7CD8C843}.STRACON_QA|Any CPU.Build.0 = STRACON_QA|Any CPU
+		{03570580-69A0-4B8A-BCCF-7E1BF8942168}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03570580-69A0-4B8A-BCCF-7E1BF8942168}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03570580-69A0-4B8A-BCCF-7E1BF8942168}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03570580-69A0-4B8A-BCCF-7E1BF8942168}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03570580-69A0-4B8A-BCCF-7E1BF8942168}.STRACON_QA|Any CPU.ActiveCfg = STRACON_QA|Any CPU
+		{03570580-69A0-4B8A-BCCF-7E1BF8942168}.STRACON_QA|Any CPU.Build.0 = STRACON_QA|Any CPU
+		{BCBBB6A6-53FC-4701-97C1-D804D5CBA9A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCBBB6A6-53FC-4701-97C1-D804D5CBA9A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCBBB6A6-53FC-4701-97C1-D804D5CBA9A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCBBB6A6-53FC-4701-97C1-D804D5CBA9A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCBBB6A6-53FC-4701-97C1-D804D5CBA9A8}.STRACON_QA|Any CPU.ActiveCfg = STRACON_QA|Any CPU
+		{BCBBB6A6-53FC-4701-97C1-D804D5CBA9A8}.STRACON_QA|Any CPU.Build.0 = STRACON_QA|Any CPU
+		{C3A413D7-1D0A-4D4E-A228-B7F9FEA194B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3A413D7-1D0A-4D4E-A228-B7F9FEA194B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3A413D7-1D0A-4D4E-A228-B7F9FEA194B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3A413D7-1D0A-4D4E-A228-B7F9FEA194B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3A413D7-1D0A-4D4E-A228-B7F9FEA194B3}.STRACON_QA|Any CPU.ActiveCfg = STRACON_QA|Any CPU
+		{C3A413D7-1D0A-4D4E-A228-B7F9FEA194B3}.STRACON_QA|Any CPU.Build.0 = STRACON_QA|Any CPU
+		{DB02BA48-35C6-4B6B-B345-0D6721661EC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB02BA48-35C6-4B6B-B345-0D6721661EC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB02BA48-35C6-4B6B-B345-0D6721661EC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB02BA48-35C6-4B6B-B345-0D6721661EC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB02BA48-35C6-4B6B-B345-0D6721661EC2}.STRACON_QA|Any CPU.ActiveCfg = STRACON_QA|Any CPU
+		{DB02BA48-35C6-4B6B-B345-0D6721661EC2}.STRACON_QA|Any CPU.Build.0 = STRACON_QA|Any CPU
+		{EBE3280B-DD55-4324-A6FA-83FADC6C007D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBE3280B-DD55-4324-A6FA-83FADC6C007D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBE3280B-DD55-4324-A6FA-83FADC6C007D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBE3280B-DD55-4324-A6FA-83FADC6C007D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBE3280B-DD55-4324-A6FA-83FADC6C007D}.STRACON_QA|Any CPU.ActiveCfg = STRACON_QA|Any CPU
+		{EBE3280B-DD55-4324-A6FA-83FADC6C007D}.STRACON_QA|Any CPU.Build.0 = STRACON_QA|Any CPU
+		{3B488D54-5850-425E-B187-0A232AFA02CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B488D54-5850-425E-B187-0A232AFA02CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B488D54-5850-425E-B187-0A232AFA02CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B488D54-5850-425E-B187-0A232AFA02CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B488D54-5850-425E-B187-0A232AFA02CC}.STRACON_QA|Any CPU.ActiveCfg = STRACON_QA|Any CPU
+		{3B488D54-5850-425E-B187-0A232AFA02CC}.STRACON_QA|Any CPU.Build.0 = STRACON_QA|Any CPU
+		{BDB3DF2A-E0F7-4D06-B120-346663E5215B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDB3DF2A-E0F7-4D06-B120-346663E5215B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDB3DF2A-E0F7-4D06-B120-346663E5215B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDB3DF2A-E0F7-4D06-B120-346663E5215B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDB3DF2A-E0F7-4D06-B120-346663E5215B}.STRACON_QA|Any CPU.ActiveCfg = STRACON_QA|Any CPU
+		{BDB3DF2A-E0F7-4D06-B120-346663E5215B}.STRACON_QA|Any CPU.Build.0 = STRACON_QA|Any CPU
+		{F4ECE405-25B7-4365-AAB3-503C5F8859E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4ECE405-25B7-4365-AAB3-503C5F8859E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4ECE405-25B7-4365-AAB3-503C5F8859E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4ECE405-25B7-4365-AAB3-503C5F8859E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4ECE405-25B7-4365-AAB3-503C5F8859E6}.STRACON_QA|Any CPU.ActiveCfg = STRACON_QA|Any CPU
+		{F4ECE405-25B7-4365-AAB3-503C5F8859E6}.STRACON_QA|Any CPU.Build.0 = STRACON_QA|Any CPU
+		{2B8F9B45-35DA-4EEA-B07E-F2598B2863AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B8F9B45-35DA-4EEA-B07E-F2598B2863AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B8F9B45-35DA-4EEA-B07E-F2598B2863AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B8F9B45-35DA-4EEA-B07E-F2598B2863AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B8F9B45-35DA-4EEA-B07E-F2598B2863AB}.STRACON_QA|Any CPU.ActiveCfg = STRACON_QA|Any CPU
+		{2B8F9B45-35DA-4EEA-B07E-F2598B2863AB}.STRACON_QA|Any CPU.Build.0 = STRACON_QA|Any CPU
+		{7FA64A98-D0D2-423C-8CAC-F9AC49C7CDC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FA64A98-D0D2-423C-8CAC-F9AC49C7CDC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FA64A98-D0D2-423C-8CAC-F9AC49C7CDC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FA64A98-D0D2-423C-8CAC-F9AC49C7CDC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FA64A98-D0D2-423C-8CAC-F9AC49C7CDC0}.STRACON_QA|Any CPU.ActiveCfg = STRACON_QA|Any CPU
+		{7FA64A98-D0D2-423C-8CAC-F9AC49C7CDC0}.STRACON_QA|Any CPU.Build.0 = STRACON_QA|Any CPU
+		{7280CDD5-08DB-4BE3-A412-1B1E6D9A5DE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7280CDD5-08DB-4BE3-A412-1B1E6D9A5DE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7280CDD5-08DB-4BE3-A412-1B1E6D9A5DE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7280CDD5-08DB-4BE3-A412-1B1E6D9A5DE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7280CDD5-08DB-4BE3-A412-1B1E6D9A5DE2}.STRACON_QA|Any CPU.ActiveCfg = STRACON_QA|Any CPU
+		{7280CDD5-08DB-4BE3-A412-1B1E6D9A5DE2}.STRACON_QA|Any CPU.Build.0 = STRACON_QA|Any CPU
+		{678335AE-4782-4752-BEBB-708402046DFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{678335AE-4782-4752-BEBB-708402046DFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{678335AE-4782-4752-BEBB-708402046DFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{678335AE-4782-4752-BEBB-708402046DFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{678335AE-4782-4752-BEBB-708402046DFE}.STRACON_QA|Any CPU.ActiveCfg = STRACON_QA|Any CPU
+		{678335AE-4782-4752-BEBB-708402046DFE}.STRACON_QA|Any CPU.Build.0 = STRACON_QA|Any CPU
+		{40CDC85F-33ED-412E-9974-A7B8C6AEAD28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40CDC85F-33ED-412E-9974-A7B8C6AEAD28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40CDC85F-33ED-412E-9974-A7B8C6AEAD28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40CDC85F-33ED-412E-9974-A7B8C6AEAD28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40CDC85F-33ED-412E-9974-A7B8C6AEAD28}.STRACON_QA|Any CPU.ActiveCfg = STRACON_QA|Any CPU
+		{40CDC85F-33ED-412E-9974-A7B8C6AEAD28}.STRACON_QA|Any CPU.Build.0 = STRACON_QA|Any CPU
+		{C1BBE827-C78F-44AE-ABC7-4ACC65CBB7F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1BBE827-C78F-44AE-ABC7-4ACC65CBB7F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1BBE827-C78F-44AE-ABC7-4ACC65CBB7F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1BBE827-C78F-44AE-ABC7-4ACC65CBB7F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1BBE827-C78F-44AE-ABC7-4ACC65CBB7F4}.STRACON_QA|Any CPU.ActiveCfg = STRACON_QA|Any CPU
+		{C1BBE827-C78F-44AE-ABC7-4ACC65CBB7F4}.STRACON_QA|Any CPU.Build.0 = STRACON_QA|Any CPU
+		{4C87707F-F069-4CA7-8B5A-AB32ABD64F84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C87707F-F069-4CA7-8B5A-AB32ABD64F84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C87707F-F069-4CA7-8B5A-AB32ABD64F84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C87707F-F069-4CA7-8B5A-AB32ABD64F84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C87707F-F069-4CA7-8B5A-AB32ABD64F84}.STRACON_QA|Any CPU.ActiveCfg = STRACON_QA|Any CPU
+		{4C87707F-F069-4CA7-8B5A-AB32ABD64F84}.STRACON_QA|Any CPU.Build.0 = STRACON_QA|Any CPU
+		{E8C1A9FE-B0D3-475C-9440-9242156FCE8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8C1A9FE-B0D3-475C-9440-9242156FCE8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8C1A9FE-B0D3-475C-9440-9242156FCE8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8C1A9FE-B0D3-475C-9440-9242156FCE8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8C1A9FE-B0D3-475C-9440-9242156FCE8F}.STRACON_QA|Any CPU.ActiveCfg = STRACON_QA|Any CPU
+		{E8C1A9FE-B0D3-475C-9440-9242156FCE8F}.STRACON_QA|Any CPU.Build.0 = STRACON_QA|Any CPU
+		{6C16878C-CD5A-415C-B8E6-D385A55EF0D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C16878C-CD5A-415C-B8E6-D385A55EF0D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C16878C-CD5A-415C-B8E6-D385A55EF0D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C16878C-CD5A-415C-B8E6-D385A55EF0D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C16878C-CD5A-415C-B8E6-D385A55EF0D9}.STRACON_QA|Any CPU.ActiveCfg = STRACON_QA|Any CPU
+		{6C16878C-CD5A-415C-B8E6-D385A55EF0D9}.STRACON_QA|Any CPU.Build.0 = STRACON_QA|Any CPU
+		{C457683F-294C-48DF-8E41-5F5A96E8DF6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C457683F-294C-48DF-8E41-5F5A96E8DF6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C457683F-294C-48DF-8E41-5F5A96E8DF6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C457683F-294C-48DF-8E41-5F5A96E8DF6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C457683F-294C-48DF-8E41-5F5A96E8DF6D}.STRACON_QA|Any CPU.ActiveCfg = STRACON_QA|Any CPU
+		{C457683F-294C-48DF-8E41-5F5A96E8DF6D}.STRACON_QA|Any CPU.Build.0 = STRACON_QA|Any CPU
+		{E43DA679-229C-4103-AF10-7FA3584BA914}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E43DA679-229C-4103-AF10-7FA3584BA914}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E43DA679-229C-4103-AF10-7FA3584BA914}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E43DA679-229C-4103-AF10-7FA3584BA914}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E43DA679-229C-4103-AF10-7FA3584BA914}.STRACON_QA|Any CPU.ActiveCfg = STRACON_QA|Any CPU
+		{E43DA679-229C-4103-AF10-7FA3584BA914}.STRACON_QA|Any CPU.Build.0 = STRACON_QA|Any CPU
+		{2600EAE4-99E4-4DF3-8DA0-FD16111B0B22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2600EAE4-99E4-4DF3-8DA0-FD16111B0B22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2600EAE4-99E4-4DF3-8DA0-FD16111B0B22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2600EAE4-99E4-4DF3-8DA0-FD16111B0B22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2600EAE4-99E4-4DF3-8DA0-FD16111B0B22}.STRACON_QA|Any CPU.ActiveCfg = STRACON_QA|Any CPU
+		{2600EAE4-99E4-4DF3-8DA0-FD16111B0B22}.STRACON_QA|Any CPU.Build.0 = STRACON_QA|Any CPU
+		{92229C7E-B04E-4B57-B239-61D72676ADF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92229C7E-B04E-4B57-B239-61D72676ADF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92229C7E-B04E-4B57-B239-61D72676ADF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92229C7E-B04E-4B57-B239-61D72676ADF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92229C7E-B04E-4B57-B239-61D72676ADF0}.STRACON_QA|Any CPU.ActiveCfg = Release|Any CPU
+		{92229C7E-B04E-4B57-B239-61D72676ADF0}.STRACON_QA|Any CPU.Build.0 = Release|Any CPU
+		{63310A76-AEB4-4EFB-89AB-67C6DACBA901}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63310A76-AEB4-4EFB-89AB-67C6DACBA901}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63310A76-AEB4-4EFB-89AB-67C6DACBA901}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63310A76-AEB4-4EFB-89AB-67C6DACBA901}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63310A76-AEB4-4EFB-89AB-67C6DACBA901}.STRACON_QA|Any CPU.ActiveCfg = STRACON_QA|Any CPU
+		{63310A76-AEB4-4EFB-89AB-67C6DACBA901}.STRACON_QA|Any CPU.Build.0 = STRACON_QA|Any CPU
+		{B681F6FD-F206-4CEB-AEE7-5AE437D202EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B681F6FD-F206-4CEB-AEE7-5AE437D202EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B681F6FD-F206-4CEB-AEE7-5AE437D202EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B681F6FD-F206-4CEB-AEE7-5AE437D202EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B681F6FD-F206-4CEB-AEE7-5AE437D202EB}.STRACON_QA|Any CPU.ActiveCfg = STRACON_QA|Any CPU
+		{B681F6FD-F206-4CEB-AEE7-5AE437D202EB}.STRACON_QA|Any CPU.Build.0 = STRACON_QA|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6EB294CD-E9AD-400B-A558-CBF33E200713} = {A2293ED2-BAE2-4F04-B3DE-B8F9FB747463}
+		{75B1B3B0-087B-4916-9340-CA136F11E670} = {A2293ED2-BAE2-4F04-B3DE-B8F9FB747463}
+		{431A5EAB-2F15-4CCC-82B7-F83F6CDED2DC} = {4A879A5A-07A4-47EA-866B-909F25CD766C}
+		{166D807D-1F6F-4B98-90B8-5EBE7CD8C843} = {4A879A5A-07A4-47EA-866B-909F25CD766C}
+		{03570580-69A0-4B8A-BCCF-7E1BF8942168} = {4A879A5A-07A4-47EA-866B-909F25CD766C}
+		{BCBBB6A6-53FC-4701-97C1-D804D5CBA9A8} = {4A879A5A-07A4-47EA-866B-909F25CD766C}
+		{C3A413D7-1D0A-4D4E-A228-B7F9FEA194B3} = {4A879A5A-07A4-47EA-866B-909F25CD766C}
+		{DB02BA48-35C6-4B6B-B345-0D6721661EC2} = {4A879A5A-07A4-47EA-866B-909F25CD766C}
+		{EBE3280B-DD55-4324-A6FA-83FADC6C007D} = {4A879A5A-07A4-47EA-866B-909F25CD766C}
+		{3B488D54-5850-425E-B187-0A232AFA02CC} = {4A879A5A-07A4-47EA-866B-909F25CD766C}
+		{BDB3DF2A-E0F7-4D06-B120-346663E5215B} = {4A879A5A-07A4-47EA-866B-909F25CD766C}
+		{F4ECE405-25B7-4365-AAB3-503C5F8859E6} = {BEA2AFFA-CF79-4736-A341-4C603266F55F}
+		{2B8F9B45-35DA-4EEA-B07E-F2598B2863AB} = {DC136FAA-2FED-4E51-B9E4-48CDAB1BA56D}
+		{7FA64A98-D0D2-423C-8CAC-F9AC49C7CDC0} = {DC136FAA-2FED-4E51-B9E4-48CDAB1BA56D}
+		{7280CDD5-08DB-4BE3-A412-1B1E6D9A5DE2} = {DC136FAA-2FED-4E51-B9E4-48CDAB1BA56D}
+		{678335AE-4782-4752-BEBB-708402046DFE} = {DC136FAA-2FED-4E51-B9E4-48CDAB1BA56D}
+		{40CDC85F-33ED-412E-9974-A7B8C6AEAD28} = {2B428116-2331-4806-BA22-638F600E461D}
+		{C1BBE827-C78F-44AE-ABC7-4ACC65CBB7F4} = {2B428116-2331-4806-BA22-638F600E461D}
+		{4C87707F-F069-4CA7-8B5A-AB32ABD64F84} = {2B428116-2331-4806-BA22-638F600E461D}
+		{E8C1A9FE-B0D3-475C-9440-9242156FCE8F} = {A3A16B95-E52F-4BFF-96EF-3AF43B0A3327}
+		{6C16878C-CD5A-415C-B8E6-D385A55EF0D9} = {A3A16B95-E52F-4BFF-96EF-3AF43B0A3327}
+		{C457683F-294C-48DF-8E41-5F5A96E8DF6D} = {A3A16B95-E52F-4BFF-96EF-3AF43B0A3327}
+		{E43DA679-229C-4103-AF10-7FA3584BA914} = {A3A16B95-E52F-4BFF-96EF-3AF43B0A3327}
+		{2600EAE4-99E4-4DF3-8DA0-FD16111B0B22} = {226F524B-F68E-4C24-AE08-B5F58B6F687F}
+		{92229C7E-B04E-4B57-B239-61D72676ADF0} = {DC136FAA-2FED-4E51-B9E4-48CDAB1BA56D}
+		{63310A76-AEB4-4EFB-89AB-67C6DACBA901} = {226F524B-F68E-4C24-AE08-B5F58B6F687F}
+		{B681F6FD-F206-4CEB-AEE7-5AE437D202EB} = {226F524B-F68E-4C24-AE08-B5F58B6F687F}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FD5988A7-3C32-4434-8576-3B1902BBA656}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 28
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://dev.azure.com/stracon
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ..\\Pe.GyM.Security\\Pe.GyM.Security.Account\\Pe.GyM.Security.Account.csproj
+		SccProjectTopLevelParentUniqueName1 = Pe.Stracon.SGC.sln
+		SccProjectName1 = ../Pe.GyM.Security/Pe.GyM.Security.Account
+		SccLocalPath1 = ..\\Pe.GyM.Security\\Pe.GyM.Security.Account
+		SccProjectUniqueName2 = ..\\Pe.GyM.Security\\Pe.GyM.Security.Web\\Pe.GyM.Security.Web.csproj
+		SccProjectTopLevelParentUniqueName2 = Pe.Stracon.SGC.sln
+		SccProjectName2 = ../Pe.GyM.Security/Pe.GyM.Security.Web
+		SccLocalPath2 = ..\\Pe.GyM.Security\\Pe.GyM.Security.Web
+		SccProjectUniqueName3 = ..\\Pe.Stracon.Politicas\\Pe.Stracon.Politicas.Infraestructura.CommandModel\\Pe.Stracon.Politicas.Infraestructura.CommandModel.csproj
+		SccProjectTopLevelParentUniqueName3 = Pe.Stracon.SGC.sln
+		SccProjectName3 = ../Pe.Stracon.Politicas/Pe.Stracon.Politicas.Infraestructura.CommandModel
+		SccLocalPath3 = ..\\Pe.Stracon.Politicas\\Pe.Stracon.Politicas.Infraestructura.CommandModel
+		SccProjectUniqueName4 = ..\\Pe.Stracon.Politicas\\Pe.Stracon.Politicas.Infraestructura.QueryModel\\Pe.Stracon.Politicas.Infraestructura.QueryModel.csproj
+		SccProjectTopLevelParentUniqueName4 = Pe.Stracon.SGC.sln
+		SccProjectName4 = ../Pe.Stracon.Politicas/Pe.Stracon.Politicas.Infraestructura.QueryModel
+		SccLocalPath4 = ..\\Pe.Stracon.Politicas\\Pe.Stracon.Politicas.Infraestructura.QueryModel
+		SccProjectUniqueName5 = ..\\Pe.Stracon.Politicas\\Pe.Stracon.Politicas.Infraestructura.Core\\Pe.Stracon.Politicas.Infraestructura.Core.csproj
+		SccProjectTopLevelParentUniqueName5 = Pe.Stracon.SGC.sln
+		SccProjectName5 = ../Pe.Stracon.Politicas/Pe.Stracon.Politicas.Infraestructura.Core
+		SccLocalPath5 = ..\\Pe.Stracon.Politicas\\Pe.Stracon.Politicas.Infraestructura.Core
+		SccProjectUniqueName6 = ..\\Pe.Stracon.Politicas\\Pe.Stracon.Politicas.Aplicacion.TransferObject\\Pe.Stracon.Politicas.Aplicacion.TransferObject.csproj
+		SccProjectTopLevelParentUniqueName6 = Pe.Stracon.SGC.sln
+		SccProjectName6 = ../Pe.Stracon.Politicas/Pe.Stracon.Politicas.Aplicacion.TransferObject
+		SccLocalPath6 = ..\\Pe.Stracon.Politicas\\Pe.Stracon.Politicas.Aplicacion.TransferObject
+		SccProjectUniqueName7 = ..\\Pe.Stracon.Politicas\\Pe.Stracon.PoliticasCross.Core\\Pe.Stracon.PoliticasCross.Core.csproj
+		SccProjectTopLevelParentUniqueName7 = Pe.Stracon.SGC.sln
+		SccProjectName7 = ../Pe.Stracon.Politicas/Pe.Stracon.PoliticasCross.Core
+		SccLocalPath7 = ..\\Pe.Stracon.Politicas\\Pe.Stracon.PoliticasCross.Core
+		SccProjectUniqueName8 = ..\\Pe.Stracon.Politicas\\Pe.Stracon.Politicas.Aplicacion.Core\\Pe.Stracon.Politicas.Aplicacion.Core.csproj
+		SccProjectTopLevelParentUniqueName8 = Pe.Stracon.SGC.sln
+		SccProjectName8 = ../Pe.Stracon.Politicas/Pe.Stracon.Politicas.Aplicacion.Core
+		SccLocalPath8 = ..\\Pe.Stracon.Politicas\\Pe.Stracon.Politicas.Aplicacion.Core
+		SccProjectUniqueName9 = ..\\Pe.Stracon.Politicas\\Pe.Stracon.Politicas.Aplicacion.Adapter\\Pe.Stracon.Politicas.Aplicacion.Adapter.csproj
+		SccProjectTopLevelParentUniqueName9 = Pe.Stracon.SGC.sln
+		SccProjectName9 = ../Pe.Stracon.Politicas/Pe.Stracon.Politicas.Aplicacion.Adapter
+		SccLocalPath9 = ..\\Pe.Stracon.Politicas\\Pe.Stracon.Politicas.Aplicacion.Adapter
+		SccProjectUniqueName10 = ..\\Pe.Stracon.Politicas\\Pe.Stracon.Politicas.Aplicacion.Service\\Pe.Stracon.Politicas.Aplicacion.Service.csproj
+		SccProjectTopLevelParentUniqueName10 = Pe.Stracon.SGC.sln
+		SccProjectName10 = ../Pe.Stracon.Politicas/Pe.Stracon.Politicas.Aplicacion.Service
+		SccLocalPath10 = ..\\Pe.Stracon.Politicas\\Pe.Stracon.Politicas.Aplicacion.Service
+		SccProjectUniqueName11 = ..\\Pe.Stracon.Politicas\\Pe.Stracon.Politicas.Infraestructura.Repository\\Pe.Stracon.Politicas.Infraestructura.Repository.csproj
+		SccProjectTopLevelParentUniqueName11 = Pe.Stracon.SGC.sln
+		SccProjectName11 = ../Pe.Stracon.Politicas/Pe.Stracon.Politicas.Infraestructura.Repository
+		SccLocalPath11 = ..\\Pe.Stracon.Politicas\\Pe.Stracon.Politicas.Infraestructura.Repository
+		SccProjectUniqueName12 = Pe.Stracon.SGC.Aplicacion.Adapter\\Pe.Stracon.SGC.Aplicacion.Adapter.csproj
+		SccProjectTopLevelParentUniqueName12 = Pe.Stracon.SGC.sln
+		SccProjectName12 = Pe.Stracon.SGC.Aplicacion.Adapter
+		SccLocalPath12 = Pe.Stracon.SGC.Aplicacion.Adapter
+		SccProjectUniqueName13 = Pe.Stracon.SGC.Aplicacion.Core\\Pe.Stracon.SGC.Aplicacion.Core.csproj
+		SccProjectTopLevelParentUniqueName13 = Pe.Stracon.SGC.sln
+		SccProjectName13 = Pe.Stracon.SGC.Aplicacion.Core
+		SccLocalPath13 = Pe.Stracon.SGC.Aplicacion.Core
+		SccProjectUniqueName14 = Pe.Stracon.SGC.Aplicacion.Service\\Pe.Stracon.SGC.Aplicacion.Service.csproj
+		SccProjectTopLevelParentUniqueName14 = Pe.Stracon.SGC.sln
+		SccProjectName14 = Pe.Stracon.SGC.Aplicacion.Service
+		SccLocalPath14 = Pe.Stracon.SGC.Aplicacion.Service
+		SccProjectUniqueName15 = Pe.Stracon.SGC.Aplicacion.TransferObject\\Pe.Stracon.SGC.Aplicacion.TransferObject.csproj
+		SccProjectTopLevelParentUniqueName15 = Pe.Stracon.SGC.sln
+		SccProjectName15 = Pe.Stracon.SGC.Aplicacion.TransferObject
+		SccLocalPath15 = Pe.Stracon.SGC.Aplicacion.TransferObject
+		SccProjectUniqueName16 = Pe.Stracon.SGC.Cross.Core\\Pe.Stracon.SGC.Cross.Core.csproj
+		SccProjectTopLevelParentUniqueName16 = Pe.Stracon.SGC.sln
+		SccProjectName16 = Pe.Stracon.SGC.Cross.Core
+		SccLocalPath16 = Pe.Stracon.SGC.Cross.Core
+		SccProjectUniqueName17 = Pe.Stracon.SGC.Dominio.Core\\Pe.Stracon.SGC.Dominio.Core.csproj
+		SccProjectTopLevelParentUniqueName17 = Pe.Stracon.SGC.sln
+		SccProjectName17 = Pe.Stracon.SGC.Dominio.Core
+		SccLocalPath17 = Pe.Stracon.SGC.Dominio.Core
+		SccProjectUniqueName18 = Pe.Stracon.SGC.Dominio.Model\\Pe.Stracon.SGC.Dominio.Model.csproj
+		SccProjectTopLevelParentUniqueName18 = Pe.Stracon.SGC.sln
+		SccProjectName18 = Pe.Stracon.SGC.Dominio.Model
+		SccLocalPath18 = Pe.Stracon.SGC.Dominio.Model
+		SccProjectUniqueName19 = Pe.Stracon.SGC.Dominio.Service\\Pe.Stracon.SGC.Dominio.Service.csproj
+		SccProjectTopLevelParentUniqueName19 = Pe.Stracon.SGC.sln
+		SccProjectName19 = Pe.Stracon.SGC.Dominio.Service
+		SccLocalPath19 = Pe.Stracon.SGC.Dominio.Service
+		SccProjectUniqueName20 = Pe.Stracon.SGC.Infraestructura.CommandModel\\Pe.Stracon.SGC.Infraestructura.CommandModel.csproj
+		SccProjectTopLevelParentUniqueName20 = Pe.Stracon.SGC.sln
+		SccProjectName20 = Pe.Stracon.SGC.Infraestructura.CommandModel
+		SccLocalPath20 = Pe.Stracon.SGC.Infraestructura.CommandModel
+		SccProjectUniqueName21 = Pe.Stracon.SGC.Infraestructura.Core\\Pe.Stracon.SGC.Infraestructura.Core.csproj
+		SccProjectTopLevelParentUniqueName21 = Pe.Stracon.SGC.sln
+		SccProjectName21 = Pe.Stracon.SGC.Infraestructura.Core
+		SccLocalPath21 = Pe.Stracon.SGC.Infraestructura.Core
+		SccProjectUniqueName22 = Pe.Stracon.SGC.Infraestructura.Proxy\\Pe.Stracon.SGC.Infraestructura.Proxy.csproj
+		SccProjectTopLevelParentUniqueName22 = Pe.Stracon.SGC.sln
+		SccProjectName22 = Pe.Stracon.SGC.Infraestructura.Proxy
+		SccLocalPath22 = Pe.Stracon.SGC.Infraestructura.Proxy
+		SccProjectUniqueName23 = Pe.Stracon.SGC.Infraestructura.QueryModel\\Pe.Stracon.SGC.Infraestructura.QueryModel.csproj
+		SccProjectTopLevelParentUniqueName23 = Pe.Stracon.SGC.sln
+		SccProjectName23 = Pe.Stracon.SGC.Infraestructura.QueryModel
+		SccLocalPath23 = Pe.Stracon.SGC.Infraestructura.QueryModel
+		SccProjectUniqueName24 = Pe.Stracon.SGC.Infraestructura.Repository\\Pe.Stracon.SGC.Infraestructura.Repository.csproj
+		SccProjectTopLevelParentUniqueName24 = Pe.Stracon.SGC.sln
+		SccProjectName24 = Pe.Stracon.SGC.Infraestructura.Repository
+		SccLocalPath24 = Pe.Stracon.SGC.Infraestructura.Repository
+		SccProjectUniqueName25 = Pe.Stracon.SGC.Presentacion\\Pe.Stracon.SGC.Presentacion.csproj
+		SccProjectTopLevelParentUniqueName25 = Pe.Stracon.SGC.sln
+		SccProjectName25 = Pe.Stracon.SGC.Presentacion
+		SccLocalPath25 = Pe.Stracon.SGC.Presentacion
+		SccProjectUniqueName26 = Pe.Stracon.SGC.Presentacion.Core\\Pe.Stracon.SGC.Presentacion.Core.csproj
+		SccProjectTopLevelParentUniqueName26 = Pe.Stracon.SGC.sln
+		SccProjectName26 = Pe.Stracon.SGC.Presentacion.Core
+		SccLocalPath26 = Pe.Stracon.SGC.Presentacion.Core
+		SccProjectUniqueName27 = Pe.Stracon.SGC.Presentacion.Recursos\\Pe.Stracon.SGC.Presentacion.Recursos.csproj
+		SccProjectTopLevelParentUniqueName27 = Pe.Stracon.SGC.sln
+		SccProjectName27 = Pe.Stracon.SGC.Presentacion.Recursos
+		SccLocalPath27 = Pe.Stracon.SGC.Presentacion.Recursos
+	EndGlobalSection
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+EndGlobal

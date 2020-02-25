@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="cd71c9f1-3562-446f-8e6e-9e003cec4de4" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.244.4.20/SSO/Service/AuthenticateService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AuthenticateService.wsdl" MetadataType="Wsdl" ID="71f47f20-44f3-457e-bbb5-87d0157b1143" SourceId="1" SourceUrl="http://10.244.4.20/SSO/Service/AuthenticateService.svc?wsdl" />
+    <MetadataFile FileName="AuthenticateService.xsd" MetadataType="Schema" ID="ed3554db-5a30-4c4a-94f2-984a26b88c51" SourceId="1" SourceUrl="http://10.244.4.20/SSO/Service/AuthenticateService.svc?xsd=xsd2" />
+    <MetadataFile FileName="AuthenticateService.disco" MetadataType="Disco" ID="af237928-3a9d-4982-9831-745c078d04a7" SourceId="1" SourceUrl="http://10.244.4.20/SSO/Service/AuthenticateService.svc?disco" />
+    <MetadataFile FileName="AuthenticateService1.xsd" MetadataType="Schema" ID="8067f6dd-25cd-4138-a1cd-b9af8f195ee6" SourceId="1" SourceUrl="http://10.244.4.20/SSO/Service/AuthenticateService.svc?xsd=xsd0" />
+    <MetadataFile FileName="AuthenticateService2.xsd" MetadataType="Schema" ID="85a25626-eb47-41ef-875a-ec475b3e98c9" SourceId="1" SourceUrl="http://10.244.4.20/SSO/Service/AuthenticateService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,223 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Pe.Stracon.Politicas.Aplicacion.Adapter</name>
+    </assembly>
+    <members>
+        <member name="T:Pe.Stracon.Politicas.Aplicacion.Adapter.General.ParametroSeccionAdapter">
+            <summary>
+            Adaptador de Parámetro Sección
+            </summary>
+            <remarks>
+            Creación:   GMD 20150327 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Adapter.General.ParametroSeccionAdapter.ObtenerParametroSeccionResponse(Pe.Stracon.Politicas.Infraestructura.QueryModel.General.ParametroSeccionLogic)">
+            <summary>
+            Obtiene un response de Sección Parámetro apartir de su logic
+            </summary>
+            <param name="parametroLogic">Entidad de Sección Parámetro</param>
+            <returns>Response de Sección Parámetro</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Adapter.General.ParametroSeccionAdapter.ObtenerParametroSeccionEntity(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroSeccionRequest)">
+            <summary>
+            Obtiene un entity de Parámetro Sección apartir de su request
+            </summary>
+            <param name="parametroSeccionRequest">Request de Parámetro Sección</param>
+            <returns>Entity del Parámetro Sección</returns>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Aplicacion.Adapter.General.ParametroValorAdapter">
+            <summary>
+            Adaptador de Parámetro Valor
+            </summary>
+            <remarks>
+            Creación:   GMD 20150327 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Adapter.General.ParametroValorAdapter.ObtenerParametroValorTexto(System.String,System.String)">
+            <summary>
+            Obtiene el valor del Parámetro en tipo texto (string)
+            </summary>
+            <param name="codigoTipoDato">Código del tipo de dato</param>
+            <param name="valor">Valor</param>
+            <returns>Valor</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Adapter.General.ParametroValorAdapter.ObtenerParametroValorObjeto(System.String,System.String)">
+            <summary>
+            Adapta el valor obtenido en tipo de dato string al tipo de dato configurado en tipo Object
+            </summary>
+            <param name="codigoTipoDato">Código de Tipo de Dato</param>
+            <param name="valor">Valor</param>
+            <returns>Objeto con su tipo de dato</returns>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Aplicacion.Adapter.General.ParametroAdapter">
+            <summary>
+            Adaptador de Parámetro
+            </summary>
+            <remarks>
+            Creación:   GMD 20150327 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Adapter.General.ParametroAdapter.ObtenerParametroResponse(Pe.Stracon.Politicas.Infraestructura.QueryModel.General.ParametroLogic)">
+            <summary>
+            Obtiene un response de Parámetro apartir de su logic
+            </summary>
+            <param name="parametroLogic">Entidad de Parámetro</param>
+            <returns>Response de Parámetro</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Adapter.General.ParametroAdapter.ObtenerParametroEntity(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroRequest)">
+            <summary>
+            Obtiene un entity de Parámetro apartir de su request
+            </summary>
+            <param name="parametroRequest">Request de Parámetro</param>
+            <returns>Entity del Parámetro</returns>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Aplicacion.Adapter.General.PlantillaNotificacionAdapter">
+            <summary>
+            Adaptador de Plantilla Notificacion
+            </summary>
+            <remarks>
+            Creación:   GMD 20150327 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Adapter.General.PlantillaNotificacionAdapter.ObtenerPlantillaNotificacionResponse(Pe.Stracon.Politicas.Infraestructura.QueryModel.General.PlantillaNotificacionLogic)">
+            <summary>
+            Obtener Plantilla Notificacion Response
+            </summary>
+            <param name="plantillaNotificacionLogic">plantilla Notificacion Logic</param>
+            <returns>Lista con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Adapter.General.PlantillaNotificacionAdapter.RegistrarPlantillaNotificacion(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.PlantillaNotificacionRequest)">
+            <summary>
+            Registra Plantilla de Notificaciones
+            </summary>
+            <param name="plantillaNotificacionRequest">Plantilla Notificacion Request</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Aplicacion.Adapter.General.TrabajadorAdapter">
+            <summary>
+            Adaptador de Trabajador
+            </summary>
+            <remarks>
+            Creación:   GMD 20150327 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Adapter.General.TrabajadorAdapter.ObtenerTrabajadorPaginado(Pe.Stracon.Politicas.Infraestructura.QueryModel.General.TrabajadorLogic,System.Collections.Generic.List{Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.CodigoValorResponse})">
+            <summary>
+            Obtiene un response de trabajador páginado
+            </summary>
+            <param name="trabajadorLogic">Trabajador</param>
+            <param name="listaTipoDocumento">Tipo de documento</param>
+            <returns>REsponse de trabajador</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Adapter.General.TrabajadorAdapter.ObtenerTrabajadorEntity(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.TrabajadorRequest)">
+            <summary>
+            Obtiene una entidad de tipo trabajador
+            </summary>
+            <param name="data">Data</param>
+            <returns>Entity de Trabajador</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Adapter.General.TrabajadorAdapter.ObtenerTrabajadorSuplenteEntity(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.TrabajadorSuplenteRequest)">
+            <summary>
+            Obtiene una entidad de tipo trabajador
+            </summary>
+            <param name="data">Data</param>
+            <returns>Entity de Trabajador</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Adapter.General.TrabajadorAdapter.ObtenerTrabajadorUnidadOperativaEntity(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.TrabajadorUnidadOperativaRequest)">
+            <summary>
+            Obtiene una entidad de tipo trabajador
+            </summary>
+            <param name="data">Data</param>
+            <returns>Entity de Trabajador</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Adapter.General.TrabajadorAdapter.ObtenerTrabajadorDatoMinimo(Pe.Stracon.Politicas.Infraestructura.QueryModel.General.TrabajadorLogic)">
+            <summary>
+            Obtiene el trabajador de dato minímo
+            </summary>
+            <param name="trabajadorLogic">Trabajador</param>
+            <returns>Response de dato minímo</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Adapter.General.TrabajadorAdapter.ObtenerTrabajadorUnidadOperativaResponse(Pe.Stracon.Politicas.Infraestructura.QueryModel.General.TrabajadorUnidadOperativaLogic)">
+            <summary>
+            Obtiene el trabajador de dato minímo
+            </summary>
+            <param name="trabajadorUnidadOperativaLogic">Trabajador</param>
+            <returns>Response de dato minímo</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Adapter.General.TrabajadorAdapter.ObtenerTrabajadorSuplenteResponse(Pe.Stracon.Politicas.Infraestructura.QueryModel.General.TrabajadorSuplenteLogic)">
+            <summary>
+            Obtiene el trabajador suplente
+            </summary>
+            <param name="trabajadorSuplenteLogic">TrabajadorSuplenteLogic</param>
+            <returns>Response de trabajador suplente</returns>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Aplicacion.Adapter.General.UnidadOperativaAdapter">
+            <summary>
+            Adaptador de Unidad Operativa
+            </summary>
+            <remarks>
+            Creación:   GMD 20150327 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Adapter.General.UnidadOperativaAdapter.ObtenerUnidadOperativaResponse(Pe.Stracon.Politicas.Infraestructura.QueryModel.General.UnidadOperativaLogic,System.Collections.Generic.List{System.Object},System.Collections.Generic.List{System.Object})">
+            <summary>
+            Obtiene un response de Unidad Operativa
+            </summary>
+            <param name="unidadOperativaLogic"></param>
+            <param name="niveles"></param>
+            <param name="tipos"></param>
+            <returns>Lista con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Adapter.General.UnidadOperativaAdapter.ObtenerUnidadOperativaEntity(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.DataUnidadOperativaRequest)">
+            <summary>
+            Obtiene una entidad de Unidad Operativa
+            </summary>
+            <param name="data">Data</param>
+            <returns>Entity de Unidad Operativa</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Adapter.General.UnidadOperativaAdapter.ObtenerUnidadOperativaStaffResponse(Pe.Stracon.Politicas.Infraestructura.QueryModel.General.UnidadOperativaStaffLogic)">
+            <summary>
+            Obtiene un response de Unidad Operativa staff
+            </summary>
+            <param name="unidadOperativaLogic"></param>
+            <param name="niveles"></param>
+            <param name="tipos"></param>
+            <returns>Lista con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Adapter.General.UnidadOperativaAdapter.ObtenerUnidadOperativaStaffEntity(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.DataUnidadOperativaStaffRequest)">
+            <summary>
+            Obtiene una entidad de Unidad Operativa
+            </summary>
+            <param name="data">Data</param>
+            <returns>Entity de Unidad Operativa</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Adapter.General.UnidadOperativaAdapter.ObtenerUnidadOperativaUsuarioConsultaEntity(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.DataUnidadOperativaUsuarioConsultaRequest)">
+            <summary>
+            Obtiene una entidad de Unidad Operativa Usuario Consulta
+            </summary>
+            <param name="data">Data Unidad Operativa Usuario Consulta</param>
+            <returns>Entity de Unidad Operativa Usuario Consulta</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Adapter.General.UnidadOperativaAdapter.ObtenerUnidadOperativaUsuarioConsultaResponse(Pe.Stracon.Politicas.Infraestructura.QueryModel.General.UnidadOperativaUsuarioConsultaLogic)">
+            <summary>
+            Obtiene un response de Unidad Operativa Usuario Consulta
+            </summary>
+            <param name="unidadOperativaUsuarioConsultaLogic">Logic unidad operativa usuario consulta</param>       
+            <returns>Lista con el resultado</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.Adapter.General.UnidadOperativaAdapter.ObtenerUnidadOperativaNivelResponse(Pe.Stracon.Politicas.Infraestructura.QueryModel.General.UnidadOperativaNivelLogic)">
+            <summary>
+            Obtiene un response de Unidad Operativa Nivel
+            </summary>
+            <param name="unidadNivelLogic">Unidad Operativa Nivel Logic</param>       
+            <returns>Unidad operativa nivel response</returns>
+        </member>
+    </members>
+</doc>

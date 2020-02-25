@@ -1,0 +1,7 @@
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.GyM.Security\Pe.GyM.Security.Account\bin\Release\Pe.GyM.Security.Account.dll.config
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.GyM.Security\Pe.GyM.Security.Account\bin\Release\Pe.GyM.Security.Account.dll
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.GyM.Security\Pe.GyM.Security.Account\bin\Release\Pe.GyM.Security.Account.pdb
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.GyM.Security\Pe.GyM.Security.Account\obj\Release\Pe.GyM.Security.Account.csprojAssemblyReference.cache
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.GyM.Security\Pe.GyM.Security.Account\obj\Release\Pe.GyM.Security.Account.csproj.CoreCompileInputs.cache
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.GyM.Security\Pe.GyM.Security.Account\obj\Release\Pe.GyM.Security.Account.dll
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.GyM.Security\Pe.GyM.Security.Account\obj\Release\Pe.GyM.Security.Account.pdb

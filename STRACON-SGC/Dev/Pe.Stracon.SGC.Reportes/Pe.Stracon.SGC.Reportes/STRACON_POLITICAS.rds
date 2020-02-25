@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="STRACON_POLITICAS">
+  <ConnectionProperties>
+    <Extension>SQL</Extension>
+    <ConnectString>Data Source=chile;Initial Catalog=STRACON_POLITICAS</ConnectString>
+  </ConnectionProperties>
+  <DataSourceID>faf2ef25-54d1-4a77-84d6-5e50ea2c48dc</DataSourceID>
+</RptDataSource>

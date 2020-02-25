@@ -1,0 +1,649 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Pe.Stracon.SGC.Aplicacion.Adapter</name>
+    </assembly>
+    <members>
+        <member name="T:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.BienAdapter">
+            <summary>
+            Implementacion del adaptador de Bien
+            </summary>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.BienAdapter.ObtenerBienResponseDeLogic(Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.BienLogic,System.Collections.Generic.List{Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.CodigoValorResponse},System.Collections.Generic.List{Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.CodigoValorResponse},System.Collections.Generic.List{Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.CodigoValorResponse},System.Collections.Generic.List{Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.CodigoValorResponse})">
+            <summary>
+            Obtiene la entidad response de una entidad Logic
+            </summary>
+            <param name="objLogic">objeto logic</param>
+            <param name="lstTipoBien">lista con los tipos de bien</param>
+            <param name="lstTipoTarifa">lista tipos de tarifa</param>
+            <param name="lstMoneda">listas de moneda</param>
+            <returns>Entidad Response de entidad Logic</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.BienAdapter.ObtenerBienEntityDeRequest(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.BienRequest)">
+            <summary>
+            Obtiene la entidad de una entidad request
+            </summary>
+            <param name="objRqst">objeto request</param>
+            <returns>Entidad de objeto Bien</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.BienAdapter.ObtenerBienResponseDeEntity(Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.BienEntity)">
+            <summary>
+            Obtiene el responde Bien de una entidad Bien
+            </summary>
+            <param name="objEnt">Objeti entidad</param>
+            <returns>Entidad Response de objeto Bien</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.BienAdapter.ObtenerBienAlquilerResponseDeEntity(Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.BienAlquilerEntity)">
+            <summary>
+            Obtiene el responde Bien de una entidad Bien
+            </summary>
+            <param name="objEnt">Objeti entidad</param>
+            <returns>Entidad Response de objeto Bien Alquiler</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.BienAdapter.ObtenerBienAlquilerResponseDeLogic(Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.BienAlquilerLogic)">
+            <summary>
+            Obtiene el responde Bien de una entidad Bien
+            </summary>
+            <param name="objEnt">Objeti entidad</param>
+            <returns>Entidad Response de objeto Bien Alquiler</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.BienAdapter.ObtenerBienAlquilerEntityDeRequest(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.BienAlquilerRequest)">
+            <summary>
+            Obtiene la entidad BienAlquiler de una entidad request
+            </summary>
+            <param name="objRqst">objeto request bienAlquiler</param>
+            <returns>Entidad de objeto Bien Alquiler</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.BienAdapter.ObtenerBienRegistroResponseDeLogic(Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.BienRegistroLogic)">
+            <summary>
+            Obtiene la entidad Bien Registro response de una entidad logic
+            </summary>
+            <param name="objRqst">objeto Response bienRegistro</param>
+            <returns>Entidad BienRegistroResponse</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.BienAdapter.ObtenerDescripcionCompletaBien(Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.BienLogic,System.Collections.Generic.List{Pe.Stracon.SGC.Aplicacion.TransferObject.Response.Contractual.BienAlquilerResponse},System.Collections.Generic.List{Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.CodigoValorResponse})">
+            <summary>
+            Realiza la adaptación de campos para la búsqueda
+            </summary>
+            <param name="bienLogic">Entidad Lógica Bien</param>
+            <returns>Clase Bien Response con los datos de búsqueda</returns>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.ConsultaAdapter">
+            <summary>
+            Implementación del Adaptador de Consulta
+            </summary>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.ConsultaAdapter.ObtenerConsultaResponse(Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ConsultaLogic,System.Collections.Generic.List{Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.CodigoValorResponse},System.Collections.Generic.List{Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.CodigoValorResponse},System.Collections.Generic.List{Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.CodigoValorResponse},System.Guid,System.Collections.Generic.List{Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.TrabajadorDatoMinimoResponse})">
+            <summary>
+            Realiza la adaptación de campos para la búsqueda
+            </summary>
+            <param name="data">Datos a adaptar</param>
+            <returns>Objeto ConsultaResponse</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.ConsultaAdapter.ObtenerConsultaResponseDeEntity(Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ConsultaEntity,System.Collections.Generic.List{Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.TrabajadorDatoMinimoResponse})">
+            <summary>
+            Obtiene el responde Bien de una entidad Consulta
+            </summary>
+            <param name="objEnt">Objeti entidad</param>
+            <returns>Entidad Response de objeto Bien</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.ConsultaAdapter.ObtenerConsultaEntity(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.ConsultaRequest)">
+            <summary>
+            Realiza la adaptación de campos para registrar o actualizar
+            </summary>
+            <param name="data">Datos a registrar o actualizar</param>
+            <returns>Entidad Datos a registrar</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.ConsultaAdapter.ObtenerConsultaAdjuntoResponseDeLogic(Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ConsultaAdjuntoLogic,System.String)">
+            <summary>
+            Obtiene la entidad response ConsultaAdjuntoResponse de la Entidad ConsultaAdjuntoLogic
+            </summary>
+            <param name="logic">entidad logic del Documento Adjunto de la consulta</param>
+            <returns>Response de el Documento Adjunto al Contrato</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.ConsultaAdapter.ObtenerConsultaAdjuntoEntityDeRequest(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.ConsultaAdjuntoRequest)">
+            <summary>
+            Obtiene la entidad response ConsultaAdjuntoEntity de la Entidad ConsultaAdjuntoRequest
+            </summary>
+            <param name="request">Request del Documento Adjunto al Contrato</param>
+            <returns>Entity del Documento Adjunto al Contrato</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.ConsultaAdapter.ObtenerConsultaAdjuntoEntityDeLogic(Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ConsultaAdjuntoLogic)">
+            <summary>
+            Obtiene la entidad response ConsultaAdjuntoEntity de la Entidad ConsultaAdjuntoRequest
+            </summary>
+            <param name="request">Request del Documento Adjunto al Contrato</param>
+            <returns>Entity del Documento Adjunto al Contrato</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.ConsultaAdapter.ObtenerConsultaEntityDeLogic(Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ConsultaLogic)">
+            <summary>
+            Realiza la adaptación de campos para registrar o actualizar
+            </summary>
+            <param name="data">Datos a registrar o actualizar</param>
+            <returns>Entidad Datos a registrar</returns>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.ContratoAdapter">
+            <summary>
+            Implementacion del adaptador de Contrato
+            </summary>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.ContratoAdapter.ObtenerContratoResponseDeLogic(Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoLogic,System.Collections.Generic.List{Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.UnidadOperativaResponse},System.Collections.Generic.List{Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.CodigoValorResponse},System.Collections.Generic.List{Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.CodigoValorResponse},System.Collections.Generic.List{Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.CodigoValorResponse},System.Collections.Generic.List{Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.CodigoValorResponse})">
+            <summary>
+            Obtiene la entidad ContratoResponse de la Entidad Logica ContratoLogic
+            </summary>
+            <param name="contrato">Entidad Logic</param>
+            <param name="listaUnidadOperativa">Lista de Unidades Operativas</param>
+            <param name="lstTipoRequerimiento">Lista de Tipo de Contrato</param>
+            <param name="lstTipoServicio">Lista de Tipos de Servicio</param>
+            <param name="lstEstadoEdicion"></param>
+            <param name="lstTipoDocumento"></param>
+            <returns>Entidad logica contratologic</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.ContratoAdapter.ObtenerContratoEstadioResponseDeLogic(Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoEstadioObservacionLogic,System.Collections.Generic.List{Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.TrabajadorResponse},System.Collections.Generic.List{Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.CodigoValorResponse})">
+            <summary>
+            Obtiene la entidad ContratoEstadioObservacionResponse de la Entidad Logica ContratoEstadioObservacionLogic
+            </summary>
+            <param name="objLogic">Objeto logic ContratoEstadioObservacionLogic</param>
+            <param name="lstTrbajador">Listado de trabajadores</param>
+            <param name="lstTipoRespuesta"></param>
+            <returns>Entidad Logica de Contrato Estadio Observación Logic</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.ContratoAdapter.ObtenerContratoEstadioResponseDeLogic(Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoEstadioConsultaLogic,System.Collections.Generic.List{Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.TrabajadorResponse})">
+            <summary>
+            Obtiene la entidad ContratoEstadioConsultaResponse de la Entidad Logica ContratoEstadioObservacionLogic
+            </summary>
+            <param name="objLogic">Objeto logic ContratoEstadioConsultaLogic</param>
+            <param name="lstTrbajador">Listado de trabajadores</param>
+            <returns>Entidad Logica de Contrato estadio observación logic</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.ContratoAdapter.ObtenerContratoEstadioObservacionEntityDeRequest(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.ContratoEstadioObservacionRequest)">
+            <summary>
+            Obtiene la entidad ContratoEstadioObservacionEntity de la Entidad ContratoEstadioObservacionRequest
+            </summary>
+            <param name="objRqst">Entidad ContratoEstadioObservacion</param>
+            <returns>Entidad de Contrato Estadio Observacion Request</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.ContratoAdapter.ObtenerContratoEstadioConsultEntityDeRequest(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.ContratoEstadioConsultaRequest)">
+            <summary>
+            Obtiene la entidad ContratoEstadioObservacionEntity de la Entidad ContratoEstadioObservacionRequest
+            </summary>
+            <param name="objRqst">Entidad ContratoEstadioObservacion</param>
+            <returns>Entidad Contrato Estadio Observación request</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.ContratoAdapter.ObtenerContratoEstadioObservacionResponseDeEntity(Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoEstadioObservacionEntity)">
+            <summary>
+            Obtiene la entidad ContratoEstadioObservacionResponse de la Entidad ContratoEstadioObservacionLogic
+            </summary>
+            <param name="objEnt">Objeto entidad ContratoEstadioObservacionEntity</param>
+            <returns>Entidad Contrato estadio observación Logic</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.ContratoAdapter.ObtenerContratoEstadioConsultaResponseDeEntity(Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoEstadioConsultaEntity)">
+            <summary>
+            Obtiene la entidad ContratoEstadioConsultaResponse de la Entidad ContratoEstadioEntityLogic
+            </summary>
+            <param name="objEnt">Objeto entidad ContratoEstadioConsultaEntity</param>
+            <returns>Entidad Contrato estadio </returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.ContratoAdapter.ObtenerContratoEstadioEntityDeRequest(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.ContratoEstadioRequest)">
+            <summary>
+            Obtiene la entidad ContratoEstadioEntity de la Entidad ContratoEstadioRequest
+            </summary>
+            <param name="objRqst">Objeto request ContratoEstadioRequest</param>
+            <returns>Entidad Contrato Estadio</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.ContratoAdapter.ObtenerContratoParrafoResponseDeLogic(Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoParrafoLogic)">
+            <summary>
+            Obtiene la entidad ContratoParrafoResponse de la Entidad ContratoParrafoLogic
+            </summary>
+            <param name="objLogic">Objeto logic de ContratoParrafoLogic</param>
+            <returns>Objeto Response Contrato Parrafo</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.ContratoAdapter.ObtenerFlujoAprobacionEstadioResponseDeLogic(Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.FlujoAprobacionEstadioLogic,System.Collections.Generic.List{Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.TrabajadorResponse})">
+            <summary>
+            Obtiene la entidad FlujoAprobacionEstadioResponse de la Entidad FlujoAprobacionEstadioLogic
+            </summary>
+            <param name="objLogic">objeto logic de Flujo Aprobación Estadio</param>
+            <param name="lstTrbajador">lista de trabajadores</param>
+            <returns>Entidad Flujo Aprobacion Estadio</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.ContratoAdapter.ObtenerContratoResponseDeEntity(Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoEntity,Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ProveedorEntity)">
+            <summary>
+            Obtiene la entidad response ContratoResponse de la Entidad ContratoEntity
+            </summary>
+            <param name="objEnt"></param>
+            <param name="objProv"></param>
+            <returns>Entidad Contrato</returns>            
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.ContratoAdapter.ObtenerContratoDocumentoResponseDeLogic(Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoDocumentoLogic)">
+            <summary>
+            Obtiene la entidad response ContratoDocumentoResponse de la Entidad ContratoDocumentoLogic
+            </summary>
+            <param name="objLogic">entidad logic ContratoDocumentoLogic</param>
+            <returns>Objeto Response de Contrato Documento</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.ContratoAdapter.ObtenerContratoDocumentoAdjuntoResponseDeLogic(Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoDocumentoAdjuntoLogic)">
+            <summary>
+            Obtiene la entidad response ContratoDocumentoAdjuntoResponse de la Entidad ContratoDocumentoAdjuntoLogic
+            </summary>
+            <param name="logic">entidad logic del Documento Adjunto al Contrato</param>
+            <returns>Response de el Documento Adjunto al Contrato</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.ContratoAdapter.ObtenerContratoDocumentoAdjuntoResolucionResponseDeLogic(Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoDocumentoAdjuntoResolucionLogic,System.String)">
+            <summary>
+            Transforma la info de logic a response para Documento Adjunto Resolución S09-SGC-01
+            </summary>
+            <param name="logic"></param>
+            <param name="nombrecompleto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.ContratoAdapter.ObtenerContratoDocumentoAdjuntoEntityDeRequest(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.ContratoDocumentoAdjuntoRequest)">
+            <summary>
+            Obtiene la entidad response ContratoDocumentoAdjuntoEntity de la Entidad ContratoDocumentoAdjuntoRequest
+            </summary>
+            <param name="request">Request del Documento Adjunto al Contrato</param>
+            <returns>Entity del Documento Adjunto al Contrato</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.ContratoAdapter.ObtenerContratoDocumentoAdjuntoResolucionEntityDeRequest(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.ContratoDocumentoAdjuntoResolucionRequest)">
+            <summary>
+            Obtiene el contrato dle documento. S09-SGC-01
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.ContratoAdapter.ObtenerContratoDocumentoLogicDeResponse(Pe.Stracon.SGC.Aplicacion.TransferObject.Response.Contractual.ContratoDocumentoResponse)">
+            <summary>
+            Obtiene la entidad logic ContratoDocumentoLogic de la Entidad ContratoDocumentoResponse
+            </summary>
+            <param name="objRsp">entidad response ContratoDocumentoResponse</param>
+            <returns>Entidad Contrato Documento</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.ContratoAdapter.ObtenerUnidadOperativaResponseDeLogic(Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.UnidadOperativaLogic)">
+            <summary>
+            Obtiene un registro de Unidades Operativas
+            </summary>
+            <param name="objLogic">Objeto logic de Unidad Operativa</param>
+            <returns>Objeto Response de Unidad Operativa</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.ContratoAdapter.ObtenerContratoEstadioResponsableResponseDeLogic(Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoEstadioLogic)">
+            <summary>
+            Obtiene la entidad response ContratoEstadioResponse de la Entidad ContratoEstadioLogic
+            </summary>
+            <param name="objLogic">entidad logic ContratoEstadioLogic</param>
+            <returns>Entidad Contrato Estadio</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.ContratoAdapter.ObtenerNumeroContratoPaginado(Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoLogic)">
+            <summary>
+            
+            </summary>
+            <param name="objRqst"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.ContratoAdapter.ObtenerContratoObservadoAprobadoPaginado(Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoObservadoAprobadoLogic)">
+            <summary>
+            
+            </summary>
+            <param name="objRqst"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.ContratoBienAdapter">
+            <summary>
+            Implementación del Adaptador de Listado Contrato
+            </summary>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.ContratoBienAdapter.RegistrarContratoBien(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.ContratoBienRequest)">
+            <summary>
+            Realiza la adaptación de campos para registrar o actualizar
+            </summary>
+            <param name="data">Datos a registrar o actualizar</param>
+            <returns>Entidad Contrato Bien con los datos a registrar</returns>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.ContratoDocumentoAdapter">
+            <summary>
+            Implementación del Adaptador de Contrato Documento
+            </summary>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.ContratoDocumentoAdapter.RegistrarContratoDocumento(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.ContratoDocumentoRequest)">
+            <summary>
+            Realiza la adaptación de campos para registrar o actualizar
+            </summary>
+            <param name="data">Datos a registrar o actualizar</param>
+            <returns>Entidad Contrato Documento con los datos a registrar</returns>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.ContratoEstadioAdapter">
+            <summary>
+            Implementación del Adaptador de Contrato Estadio
+            </summary>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.ContratoEstadioAdapter.RegistrarContratoEstadio(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.ContratoEstadioRequest)">
+            <summary>
+            Realiza la adaptación de campos para registrar o actualizar
+            </summary>
+            <param name="data">Datos a registrar o actualizar</param>
+            <returns>Entidad Contrato Estadio con los datos a registrar</returns>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.ContratoFirmanteAdapter">
+            <summary>
+            Implementación del Adaptador de ContratoFirmante 
+            </summary>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.ContratoFirmanteAdapter.RegistrarContratoFirmante(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.ContratoFirmanteRequest)">
+            <summary>
+            Realiza la adaptación de campos para registrar o actualizar
+            </summary>
+            <param name="data">Datos a registrar o actualizar</param>
+            <returns>Entidad Contrato Bien con los datos a registrar</returns>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.ContratoParrafoAdapter">
+            <summary>
+            Implementación del Adaptador de Contrato Párrafo
+            </summary>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.ContratoParrafoAdapter.RegistrarContratoParrafo(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.ContratoParrafoRequest)">
+            <summary>
+            Realiza la adaptación de campos para registrar o actualizar
+            </summary>
+            <param name="data">Datos a registrar o actualizar</param>
+            <returns>Entidad Contrato Párrafo con los datos a registrar</returns>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.ContratoParrafoVariableAdapter">
+            <summary>
+            Implementación del Adaptador de Contrato Párrafo Variable
+            </summary>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.ContratoParrafoVariableAdapter.RegistrarContratoParrafoVariable(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.ContratoParrafoVariableRequest)">
+            <summary>
+            Realiza la adaptación de campos para registrar o actualizar
+            </summary>
+            <param name="data">Datos a registrar o actualizar</param>
+            <returns>Entidad Contrato Párrafo Variable con los datos a registrar</returns>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.ListadoContratoAdapter">
+            <summary>
+            Implementación del Adaptador de Listado Contrato
+            </summary>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.ListadoContratoAdapter.ObtenerListadoContratoPaginado(Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ListadoContratoLogic,System.Collections.Generic.List{Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.CodigoValorResponse},System.Collections.Generic.List{Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.CodigoValorResponse},System.Collections.Generic.List{Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.CodigoValorResponse},System.Collections.Generic.List{Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.CodigoValorResponse},System.Collections.Generic.List{Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.CodigoValorResponse},System.Collections.Generic.List{Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.TrabajadorDatoMinimoResponse},System.Collections.Generic.List{Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.UnidadOperativaResponse})">
+            <summary>
+            Realiza la adaptación de campos para la búsqueda
+            </summary>
+            <param name="listadoContratoLogic">Entidad Lógica Listado Contrato</param>
+            <param name="tipoServicio">Lista de Tipos de Servicios</param>
+            <param name="tipoRequerimiento">Lista de Tipos de Requerimientos</param>
+            <param name="tipoDocumentoContrato">Lista de Documentos de Contratos</param>
+            <param name="estadoContrato">Lista de Estados de Contratos</param>
+            <param name="listaTrabajador">Lista de Trabajador</param>
+            <param name="listaUnidadOperativa">Lista de Unidad Operativa</param>
+            <returns>Clase Listado Contrato Response con los datos de búsqueda</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.ListadoContratoAdapter.ObtenerBusquedaContrato(Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ListadoContratoLogic)">
+            <summary>
+            Realiza la adaptación de campos para la búsqueda
+            </summary>
+            <param name="listadoContratoLogic">Entidad Lógica Listado Contrato</param>     
+            <returns>Clase Listado Contrato Response con los datos de búsqueda</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.ListadoContratoAdapter.RegistrarContrato(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.ContratoRequest)">
+            <summary>
+            Realiza la adaptación de campos para registrar o actualizar
+            </summary>
+            <param name="data">Datos a registrar o actualizar</param>
+            <returns>Entidad Contrato con los datos a registrar</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.ListadoContratoAdapter.RegistrarCopiaContrato(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.ContratoRequest)">
+            <summary>
+            Realiza la adaptación de campos para registrar o actualizar
+            </summary>
+            <param name="data">Datos a registrar o actualizar</param>
+            <returns>Entidad Contrato con los datos a registrar</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.ListadoContratoAdapter.ObtenerContratoParrafoVariable(Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ContratoParrafoVariableLogic)">
+            <summary>
+            Realiza la adaptación de campos para la búsqueda
+            </summary>
+            <param name="data">Datos a adaptar</param>
+            <returns>Objeto ContratoParafoResponse</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.ListadoContratoAdapter.ObtenerContratoBienResponse(Pe.Stracon.SGC.Infraestructura.QueryModel.ContratoBienLogic)">
+            <summary>
+            Realiza la adaptación de campos para la búsqueda
+            </summary>
+            <param name="data">Datos a adaptar</param>
+            <returns>Objeto ContratoParrafoVariableResponse</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.ListadoContratoAdapter.ObtenerContratoFirmanteResponse(Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoFirmanteLogic)">
+            <summary>
+            Realiza la adaptación de campos para la búsqueda
+            </summary>
+            <param name="data">Datos a adaptar</param>
+            <returns>Objeto ContratoParrafoFirmanteResponse</returns>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.PlantillaParrafoAdapter">
+            <summary>
+            Implementacion del Adaptador de Plantilla Párrafo
+            </summary>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.PlantillaParrafoAdapter.ObtenerPlantillaParrafoPaginado(Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.PlantillaParrafoLogic)">
+            <summary>
+            Realiza la adaptación de campos para la búsqueda
+            </summary>
+            <param name="plantillaParrafoLogic">Entidad Lógica Plantilla Párrafo</param>
+            <returns>Clase Plantilla Párrafo Response con los datos de búsqueda</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.PlantillaParrafoAdapter.RegistrarPlantillaParrafo(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.PlantillaParrafoRequest)">
+            <summary>
+            Realiza la adaptación de campos para registrar o actualizar
+            </summary>
+            <param name="data">Datos a registrar o actualizar</param>
+            <returns>Entidad Plantilla Párrafo con los datos a registrar</returns>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.PlantillaParrafoVariableAdapter">
+            <summary>
+            Implementacion del Adaptador de Plantilla Párrafo Variable
+            </summary>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.PlantillaParrafoVariableAdapter.ObtenerPlantillaParrafoVariable(Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.PlantillaParrafoVariableLogic)">
+            <summary>
+            Realiza la adaptación de campos para la búsqueda
+            </summary>
+            <param name="plantillaParrafoVariableLogic">Entidad lógica Plantilla Párrafo Variable para la búsqueda</param>
+            <returns>Clase Plantilla Párrafo Variable Response con los datos de búsqueda</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.PlantillaParrafoVariableAdapter.RegistrarPlantillaParrafoVariable(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.PlantillaParrafoVariableRequest)">
+            <summary>
+            Realiza la adaptación de campos para registrar o actualizar
+            </summary>
+            <param name="data">Datos a registrar o actualizar</param>
+            <returns>Entidad Plantilla Párrafo Variable con los datos a registrar</returns>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.ProcesoAuditoriaAdapter">
+            <summary>
+            Implementacion del adaptador de Flujo Aprobacion
+            </summary>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.ProcesoAuditoriaAdapter.RegistrarFlujoAuditoria(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.ProcesoAuditoriaRequest)">
+            <summary>
+            Realiza la adaptación de campos para registrar o actualizar
+            </summary>
+            <param name="data"></param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.ProcesoAuditoriaAdapter.ObtenerProcesoAuditoria(Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ProcesoAuditoriaLogic,System.Collections.Generic.List{Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.UnidadOperativaResponse})">
+            <summary>
+            Obtiene Proceso de Auditoria
+            </summary>
+            <param name="procesoAuditoriaLogic">Proceso Auditoria Logic</param>
+            <param name="unidadOperativa">Unidad Operativa</param>
+            <returns>Proceso de Auditoria</returns>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.FlujoAprobacionParticipanteAdapter">
+            <summary>
+            Implementacion del adaptador de Flujo Aprobacion
+            </summary>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.FlujoAprobacionParticipanteAdapter.RegistrarFlujoAprobacionParticipante(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.FlujoAprobacionParticipanteRequest)">
+            <summary>
+            Realiza la adaptación de campos para registrar o actualizar
+            </summary>
+            <param name="data">Datos a registrar o actualizar</param>
+            <returns>Entidad Datos a registrar</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.FlujoAprobacionParticipanteAdapter.ObtenerFlujoAprobacionParticipanteResponse(Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.FlujoAprobacionParticipanteLogic)">
+            <summary>
+            Realiza la adaptación de campos para listar de logic a response
+            </summary>
+            <param name="data">Datos a listar</param>
+            <returns>Entidad Datos a registrar</returns>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.FlujoAprobacionEstadioAdapter">
+            <summary>
+            Implementacion del adaptador de Flujo Aprobacion
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.FlujoAprobacionEstadioAdapter.trabajadorService">
+            <summary>
+            Servicio de trabajador
+            </summary>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.FlujoAprobacionEstadioAdapter.RegistrarFlujoAprobacionEstadio(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.FlujoAprobacionEstadioRequest)">
+            <summary>
+            Realiza la adaptación de campos para registrar o actualizar
+            </summary>
+            <param name="data">Datos a registrar o actualizar</param>
+            <returns>Entidad Datos a registrar</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.FlujoAprobacionEstadioAdapter.ObtenerFlujoAprobacionEstadio(Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.FlujoAprobacionEstadioLogic,System.Collections.Generic.List{Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.TrabajadorResponse},System.Collections.Generic.List{Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.TrabajadorResponse},System.Collections.Generic.List{Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.TrabajadorResponse})">
+            <summary>
+            Realiza la adaptación de campos para la búsqueda
+            </summary>
+            <param name="flujoAprobacionEstadioLogic">Entidad Logica de flujo aprobacion</param>
+            <param name="listaRepresentantes">Lista representantes</param>
+            <param name="listaInformados">Lista Informados</param>
+            <param name="listaResponsablesVinculadas">Responsables vinculadas</param>
+            <returns>Clase Flujo Aprobacion con los datos de búsqueda</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.FlujoAprobacionEstadioAdapter.ObtenerFlujoAprobacionEstadioDescripcion(Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.FlujoAprobacionEstadioLogic)">
+            <summary>
+            Realiza la adaptación de campos para la búsqueda
+            </summary>
+            <param name="flujoAprobacionEstadioLogic">Entidad Lógica de Flujo de Aprobación</param>
+            <returns>Clase Flujo Aprobación con los datos de búsqueda</returns>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.FlujoAprobacionAdapter">
+            <summary>
+            Implementacion del adaptador de Flujo Aprobacion
+            </summary>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.FlujoAprobacionAdapter.ObtenerFlujoAprobacion(Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.FlujoAprobacionLogic,System.Collections.Generic.List{Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.FlujoAprobacionTipoContratoLogic},System.Collections.Generic.List{Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.UnidadOperativaResponse},System.Collections.Generic.List{Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.CodigoValorResponse})">
+            <summary>
+            Realiza la adaptación de campos para la búsqueda
+            </summary>
+            <param name="flujoAprobacionLogic">Entidad Logica de flujo aprobacion</param>
+            <param name="flujoAprobacionTipoServicioLogic">Entidad Logica de flujo aprobacion tipo de servicio</param>
+            <param name="unidadOperativa">Lista Unidad Operativa</param>
+            <param name="tipoServicio">Lista Tipo Servicio</param>
+            <returns>Clase Flujo Aprobacion con los datos de búsqueda</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.FlujoAprobacionAdapter.RegistrarFlujoAprobacion(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.FlujoAprobacionRequest)">
+            <summary>
+            Realiza la adaptación de campos para registrar o actualizar
+            </summary>
+            <param name="data">Datos a registrar o actualizar</param>
+            <returns>Entidad Datos a registrar</returns>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.PlantillaAdapter">
+            <summary>
+            Implementacion del Adaptador de Plantilla
+            </summary>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.PlantillaAdapter.ObtenerPlantillaPaginado(Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.PlantillaLogic,System.Collections.Generic.List{Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.CodigoValorResponse},System.Collections.Generic.List{Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.CodigoValorResponse},System.Collections.Generic.List{Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.CodigoValorResponse})">
+            <summary>
+            Realiza la adaptación de campos para la búsqueda
+            </summary>
+            <param name="plantillaLogic">Entidad Lógica Plantilla</param>
+            <param name="tipoServicio">Lista de Tipos de Servicios</param>
+            <param name="tipoDocumentoContrato">Lista de Documentos de Contratos</param>
+            <param name="estadoVigencia">Lista de Estados de Vigencia</param>
+            <returns>Clase Plantilla Response con los datos de búsqueda</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.PlantillaAdapter.RegistrarPlantilla(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.PlantillaRequest)">
+            <summary>
+            Realiza la adaptación de campos para registrar o actualizar
+            </summary>
+            <param name="data">Datos a registrar o actualizar</param>
+            <returns>Entidad Plantilla con los datos a registrar</returns>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.ProveedorAdapter">
+            <summary>
+            Implementacion del Adaptador de Proveedor
+            </summary>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.ProveedorAdapter.ObtenerProveedorPaginado(Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ProveedorLogic)">
+            <summary>
+            Realiza la adaptación de campos para la búsqueda
+            </summary>
+            <param name="listadoContratoLogic">Entidad Lógica Proveedor</param>
+            <returns>Clase Proveedor Response con los datos de búsqueda</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.ProveedorAdapter.ObtenerProveedor(Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ProveedorLogic)">
+            <summary>
+            Realiza la adaptación de campos para la búsqueda
+            </summary>
+            <param name="plantillaLogic">Entidad Lógica Proveedor</param>
+            <returns>Clase Proveedor Response con los datos de búsqueda</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.ProveedorAdapter.RegistrarProveedor(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Base.ProveedorRequest)">
+            <summary>
+            Realiza la adaptación de campos para registrar o actualizar
+            </summary>
+            <param name="data">Datos a registrar o actualizar</param>
+            <returns>Entidad Proveedor con los datos a registrar</returns>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.VariableAdapter">
+            <summary>
+            Implementacion del adaptador de Variable
+            </summary>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.VariableAdapter.ObtenerVariable(Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.VariableLogic,System.Collections.Generic.List{Pe.Stracon.SGC.Aplicacion.TransferObject.Response.Contractual.PlantillaResponse},System.Collections.Generic.List{Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.CodigoValorResponse})">
+            <summary>
+            Realiza la adaptación de campos logic a response
+            </summary>
+            <param name="variableLogic">Lista de variables tipo Logic</param>
+            <returns>Lista de variables tipo response</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.VariableAdapter.ObtenerVariableEntityDesdeVariableRequest(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.VariableRequest)">
+            <summary>
+            Realiza la adaptación de los campos del request al entity de variable
+            </summary>
+            <param name="variableRequest">Request de Variable</param>
+            <returns>Entity de Variable</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.VariableAdapter.ObtenerVariableCampo(Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.VariableCampoLogic,System.Collections.Generic.List{Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.CodigoValorResponse})">
+            <summary>
+            Adaptador de Campo de Variable
+            </summary>
+            <param name="variableCampoLogic">Entidad Lógica de Campo de Variable</param>
+            <returns>Entidad Response de Campo de Variable</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.VariableAdapter.ObtenerVariableCampoEntity(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.VariableCampoRequest)">
+            <summary>
+            Obtiene la entidad de Campo de Variable
+            </summary>
+            <param name="variableCampoRequest">Request de Campo de Variable</param>
+            <returns>Entidad de Campo de Variable</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.VariableAdapter.ObtenerVariableLista(Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.VariableListaLogic)">
+            <summary>
+            Adaptador de Lista de Variable
+            </summary>
+            <param name="variableListaLogic">Entidad Lógica de Lista de Variable</param>
+            <returns>Entidad Response de Lista de Variable</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Aplicacion.Adapter.Contractual.VariableAdapter.ObtenerVariableListaEntity(Pe.Stracon.SGC.Aplicacion.TransferObject.Request.Contractual.VariableListaRequest)">
+            <summary>
+            Obtiene la entidad de Campo de Variable
+            </summary>
+            <param name="variableCampoRequest">Request de Campo de Variable</param>
+            <returns>Entidad de Campo de Variable</returns>
+        </member>
+    </members>
+</doc>

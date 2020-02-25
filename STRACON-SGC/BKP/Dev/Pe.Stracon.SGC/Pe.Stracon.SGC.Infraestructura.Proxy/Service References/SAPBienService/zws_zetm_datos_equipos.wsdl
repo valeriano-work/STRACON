@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsoap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="urn:sap-com:document:sap:rfc:functions" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" targetNamespace="urn:sap-com:document:sap:rfc:functions" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation>
+    <sidl:sidl xmlns:sidl="http://www.sap.com/2007/03/sidl" />
+  </wsdl:documentation>
+  <wsp:UsingPolicy wsdl:required="true" />
+  <wsp:Policy wsu:Id="BN__ZWS_ZETM_DATOS_EQUIPOS">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sapattahnd:Enabled xmlns:sapattahnd="http://www.sap.com/710/features/attachment/">false</sapattahnd:Enabled>
+        <saptrnbnd:OptimizedMimeSerialization xmlns:saptrnbnd="http://schemas.xmlsoap.org/ws/2004/09/policy/optimizedmimeserialization" wsp:Optional="true" />
+        <wsaw:UsingAddressing xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsp:Optional="true" />
+      </wsp:All>
+      <wsp:All>
+        <sapattahnd:Enabled xmlns:sapattahnd="http://www.sap.com/710/features/attachment/">false</sapattahnd:Enabled>
+        <saptrnbnd:OptimizedXMLTransfer uri="http://xml.sap.com/2006/11/esi/esp/binxml" xmlns:saptrnbnd="http://www.sap.com/webas/710/soap/features/transportbinding/" wsp:Optional="true" />
+        <wsaw:UsingAddressing xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsp:Optional="true" />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="BN__ZWS_ZETM_DATOS_EQUIPOS_soap12">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sapattahnd:Enabled xmlns:sapattahnd="http://www.sap.com/710/features/attachment/">false</sapattahnd:Enabled>
+        <saptrnbnd:OptimizedMimeSerialization xmlns:saptrnbnd="http://schemas.xmlsoap.org/ws/2004/09/policy/optimizedmimeserialization" wsp:Optional="true" />
+        <wsaw:UsingAddressing xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsp:Optional="true" />
+      </wsp:All>
+      <wsp:All>
+        <sapattahnd:Enabled xmlns:sapattahnd="http://www.sap.com/710/features/attachment/">false</sapattahnd:Enabled>
+        <saptrnbnd:OptimizedXMLTransfer uri="http://xml.sap.com/2006/11/esi/esp/binxml" xmlns:saptrnbnd="http://www.sap.com/webas/710/soap/features/transportbinding/" wsp:Optional="true" />
+        <wsaw:UsingAddressing xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsp:Optional="true" />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="IF__ZWS_ZETM_DATOS_EQUIPOS">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sapsession:Session xmlns:sapsession="http://www.sap.com/webas/630/soap/features/session/">
+          <sapsession:enableSession>false</sapsession:enableSession>
+        </sapsession:Session>
+        <sapcentraladmin:CentralAdministration xmlns:sapcentraladmin="http://www.sap.com/webas/700/soap/features/CentralAdministration/" wsp:Optional="true">
+          <sapcentraladmin:BusinessApplicationID>000D3A02B85E1EE8B4C54B02B3BDA178</sapcentraladmin:BusinessApplicationID>
+        </sapcentraladmin:CentralAdministration>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="OP__ZETM_DATOS_EQUIPOS">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <saptrhnw05:required xmlns:saptrhnw05="http://www.sap.com/NW05/soap/features/transaction/">no</saptrhnw05:required>
+        <sapcomhnd:enableCommit xmlns:sapcomhnd="http://www.sap.com/NW05/soap/features/commit/">false</sapcomhnd:enableCommit>
+        <sapblock:enableBlocking xmlns:sapblock="http://www.sap.com/NW05/soap/features/blocking/">true</sapblock:enableBlocking>
+        <saprmnw05:enableWSRM xmlns:saprmnw05="http://www.sap.com/NW05/soap/features/wsrm/">false</saprmnw05:enableWSRM>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema attributeFormDefault="qualified" targetNamespace="urn:sap-com:document:sap:rfc:functions">
+      <xsd:simpleType name="char1">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="1" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char10">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="10" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char100">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="100" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char18">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="18" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char20">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="20" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char220">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="220" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char25">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="25" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char30">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="30" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char32">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="32" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char4">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="4" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char40">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="40" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char50">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="50" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="date10">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="10" />
+          <xsd:pattern value="\d\d\d\d-\d\d-\d\d" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="numeric3">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="3" />
+          <xsd:pattern value="\d*" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="numeric6">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="6" />
+          <xsd:pattern value="\d*" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:complexType name="ZST_DATOS_EQUIPOS_TEST">
+        <xsd:sequence>
+          <xsd:element name="BUKRS" type="tns:char4" />
+          <xsd:element name="TIDNR" type="tns:char25" />
+          <xsd:element name="EQUNR" type="tns:char18" />
+          <xsd:element name="EQKTX" type="tns:char40" />
+          <xsd:element name="HERST" type="tns:char30" />
+          <xsd:element name="TYPBZ" type="tns:char20" />
+          <xsd:element name="SERGE" type="tns:char30" />
+          <xsd:element name="ANSDT" type="tns:date10" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ZST_DATOS_EQUIPOS">
+        <xsd:sequence>
+          <xsd:element name="HERST" type="tns:char30" />
+          <xsd:element name="TYPBZ" type="tns:char20" />
+          <xsd:element name="SERGE" type="tns:char30" />
+          <xsd:element name="TIDNR" type="tns:char25" />
+          <xsd:element name="EQKTX" type="tns:char40" />
+          <xsd:element name="ANSDT" type="tns:date10" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="BAPIRET2">
+        <xsd:sequence>
+          <xsd:element name="TYPE" type="tns:char1" />
+          <xsd:element name="ID" type="tns:char20" />
+          <xsd:element name="NUMBER" type="tns:numeric3" />
+          <xsd:element name="MESSAGE" type="tns:char220" />
+          <xsd:element name="LOG_NO" type="tns:char20" />
+          <xsd:element name="LOG_MSG_NO" type="tns:numeric6" />
+          <xsd:element name="MESSAGE_V1" type="tns:char50" />
+          <xsd:element name="MESSAGE_V2" type="tns:char50" />
+          <xsd:element name="MESSAGE_V3" type="tns:char50" />
+          <xsd:element name="MESSAGE_V4" type="tns:char50" />
+          <xsd:element name="PARAMETER" type="tns:char32" />
+          <xsd:element name="ROW" type="xsd:int" />
+          <xsd:element name="FIELD" type="tns:char30" />
+          <xsd:element name="SYSTEM" type="tns:char10" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ZTT_DATOS_EQUIPOS_TEST">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:ZST_DATOS_EQUIPOS_TEST" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ZTT_DATOS_EQUIPOS">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:ZST_DATOS_EQUIPOS" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="BAPIRET2_TAB">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:BAPIRET2" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="ZETM_DATOS_EQUIPOS">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="I_MARCA_DESC" type="tns:char100" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZETM_DATOS_EQUIPOSResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="T_RESULTADO" type="tns:ZTT_DATOS_EQUIPOS" />
+            <xsd:element name="T_RESULTADO_TEST" type="tns:ZTT_DATOS_EQUIPOS_TEST" />
+            <xsd:element name="T_RETURN" type="tns:BAPIRET2_TAB" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ZETM_DATOS_EQUIPOS">
+    <wsdl:part name="parameters" element="tns:ZETM_DATOS_EQUIPOS" />
+  </wsdl:message>
+  <wsdl:message name="ZETM_DATOS_EQUIPOSResponse">
+    <wsdl:part name="parameter" element="tns:ZETM_DATOS_EQUIPOSResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ZWS_ZETM_DATOS_EQUIPOS">
+    <wsdl:documentation>
+      <sapdoc:sapdoc xmlns:sapdoc="urn:sap:esi:documentation">
+        <sapdoc:docitem docURL="http://stns4prd.stracon.com.pe:8004/sap/bc/esdt/docu/sd_text?sap-client=300&amp;sd_name=ZWS_ZETM_DATOS_EQUIPOS" />
+      </sapdoc:sapdoc>
+    </wsdl:documentation>
+    <wsp:Policy>
+      <wsp:PolicyReference URI="#IF__ZWS_ZETM_DATOS_EQUIPOS" />
+    </wsp:Policy>
+    <wsdl:operation name="ZETM_DATOS_EQUIPOS">
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP__ZETM_DATOS_EQUIPOS" />
+      </wsp:Policy>
+      <wsdl:input message="tns:ZETM_DATOS_EQUIPOS" />
+      <wsdl:output message="tns:ZETM_DATOS_EQUIPOSResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ZWS_ZETM_DATOS_EQUIPOS" type="tns:ZWS_ZETM_DATOS_EQUIPOS">
+    <wsp:Policy>
+      <wsp:PolicyReference URI="#BN__ZWS_ZETM_DATOS_EQUIPOS" />
+    </wsp:Policy>
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ZETM_DATOS_EQUIPOS">
+      <soap:operation soapAction="urn:sap-com:document:sap:rfc:functions:ZWS_ZETM_DATOS_EQUIPOS:ZETM_DATOS_EQUIPOSRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ZWS_ZETM_DATOS_EQUIPOS_soap12" type="tns:ZWS_ZETM_DATOS_EQUIPOS">
+    <wsp:Policy>
+      <wsp:PolicyReference URI="#BN__ZWS_ZETM_DATOS_EQUIPOS_soap12" />
+    </wsp:Policy>
+    <wsoap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ZETM_DATOS_EQUIPOS">
+      <wsoap12:operation soapAction="urn:sap-com:document:sap:rfc:functions:ZWS_ZETM_DATOS_EQUIPOS:ZETM_DATOS_EQUIPOSRequest" style="document" />
+      <wsdl:input>
+        <wsoap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <wsoap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ZWS_ZETM_DATOS_EQUIPOS">
+    <wsdl:port name="ZWS_ZETM_DATOS_EQUIPOS" binding="tns:ZWS_ZETM_DATOS_EQUIPOS">
+      <soap:address location="http://stns4prd.stracon.com.pe:8004/sap/bc/srt/rfc/sap/zws_zetm_datos_equipos/300/zws_zetm_datos_equipos/zws_zetm_datos_equipos" />
+    </wsdl:port>
+    <wsdl:port name="ZWS_ZETM_DATOS_EQUIPOS_soap12" binding="tns:ZWS_ZETM_DATOS_EQUIPOS_soap12">
+      <wsoap12:address location="http://stns4prd.stracon.com.pe:8004/sap/bc/srt/rfc/sap/zws_zetm_datos_equipos/300/zws_zetm_datos_equipos/zws_zetm_datos_equipos" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

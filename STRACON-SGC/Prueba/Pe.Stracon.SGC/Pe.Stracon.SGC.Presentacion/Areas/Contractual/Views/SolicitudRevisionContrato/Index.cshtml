@@ -1,0 +1,103 @@
+﻿@using Pe.Stracon.SGC.Presentacion.Recursos.Base
+@using Pe.Stracon.SGC.Presentacion.Recursos.Contractual
+@using Pe.Stracon.SGC.Presentacion.Recursos.Mensajes
+@using Pe.Stracon.SGC.Presentacion.Core.Helpers
+
+@model Pe.Stracon.SGC.Presentacion.Core.ViewModel.Contractual.SolicitudRevisionContrato.SolicitudRevisionContratoBusqueda
+
+<div class="GmdBody-header">
+    <h2>@SolicitudRevisionContratoResource.EtiquetaTituloPrincipal</h2>
+</div>
+<div class="GmdBody-body">
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="form-group">
+                <label for="txtNumeroContrato">@SolicitudRevisionContratoResource.EtiquetaNumeroContrato</label>
+                @Html.TextBox("txtNumeroContrato", null, new { @class="form-control", @id="txtNumeroContrato" })
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <div class="form-group">
+                <label>@BandejaContratoResource.EtiquetaRUCProveedor</label>
+                @Html.TextBox("txtNumeroRUC", null, new { @class="form-control", @id="txtNumeroRUC"})
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="form-group">
+                <label for="txtProveedor">@SolicitudRevisionContratoResource.EtiquetaProveedor</label>
+                @Html.TextBox("txtProveedor", null, new { @class="form-control", @id="txtProveedor" })
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="form-group">
+                <label for="txtUnidadOperativa">@SolicitudRevisionContratoResource.EtiquetaUnidadOperativa</label>
+                @Html.DropDownList("slcUnidadOrganizacional", Model.UnidadesOperativas, new { @class = "form-control", @id = "slcUnidadOrganizacional" })
+            </div>
+        </div>           
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="form-group">
+                <button class="btn btn-info" id="btnLimpiar" type="reset">@GenericoResource.BotonLimpiar</button>
+                <button class="btn btn-default" id="btnBuscar">@GenericoResource.BotonMostrar</button>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <div class="row">
+        <div class="col-sm-6 text-left">
+            <div class="form-group">
+                <h3><small>@GenericoResource.EtiquetaResultadosBusqueda</small></h3>
+            </div>
+        </div>
+    </div>
+    <div id="divGrdResult">
+    </div>
+</div>
+
+@section scripts
+{
+    <script type="text/javascript">
+        ns('Pe.Stracon.SGC.Presentacion.Contractual.SolicitudRevisionContrato.Actions')
+        Pe.Stracon.SGC.Presentacion.Contractual.SolicitudRevisionContrato.Actions.BuscarBandejaSolicitudRevisionContrato = '@Url.Action("BuscarBandejaSolicitudRevisionContrato", "SolicitudRevisionContrato", new { Area = "Contractual" })';                      
+        Pe.Stracon.SGC.Presentacion.Contractual.SolicitudRevisionContrato.Actions.FormularioCargaAdjunto = '@Url.Action("FormularioSolicitudRevisionContratoAdjuntos", "SolicitudRevisionContrato", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.SolicitudRevisionContrato.Actions.DescargarArchivoAdjunto = '@Url.Action("DescargarArchivoAdjunto", "SolicitudRevisionContrato", new { Area = "Contractual" })';
+        
+        Pe.Stracon.SGC.Presentacion.Contractual.SolicitudRevisionContrato.Actions.FormularioSolicitudRevisionContratoAprobar = '@Url.Action("FormularioSolicitudRevisionContratoAprobar", "SolicitudRevisionContrato", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.SolicitudRevisionContrato.Actions.RegistraRespuestaContrato = '@Url.Action("RegistrarRespuestaContrato", "SolicitudRevisionContrato", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.SolicitudRevisionContrato.Actions.FormularioRevisionRechazar = '@Url.Action("FormularioRevisionRechazar", "SolicitudRevisionContrato", new { Area = "Contractual" })';
+
+        ns('Pe.Stracon.SGC.Presentacion.Contractual.SolicitudRevisionContrato.Resources')
+        Pe.Stracon.SGC.Presentacion.Contractual.SolicitudRevisionContrato.Resources.GridUnidadOperativa = '@Html.Raw(SolicitudRevisionContratoResource.GridUnidadOperativa)';
+        Pe.Stracon.SGC.Presentacion.Contractual.SolicitudRevisionContrato.Resources.GridProveedor = '@Html.Raw(SolicitudRevisionContratoResource.GridProveedor)';
+        Pe.Stracon.SGC.Presentacion.Contractual.SolicitudRevisionContrato.Resources.GridNumeroContrato = '@Html.Raw(SolicitudRevisionContratoResource.GridNumeroContrato)';
+        Pe.Stracon.SGC.Presentacion.Contractual.SolicitudRevisionContrato.Resources.GridTipo = '@Html.Raw(SolicitudRevisionContratoResource.GridTipo)';
+        Pe.Stracon.SGC.Presentacion.Contractual.SolicitudRevisionContrato.Resources.GridEstado = '@Html.Raw(SolicitudRevisionContratoResource.GridEstado)';
+        Pe.Stracon.SGC.Presentacion.Contractual.SolicitudRevisionContrato.Resources.EtiquetaFormularioContrato = '@Html.Raw(SolicitudRevisionContratoResource.EtiquetaFormularioContrato)';        
+        Pe.Stracon.SGC.Presentacion.Contractual.SolicitudRevisionContrato.Resources.EtiquetaTituloAdvertencia = '@Html.Raw(MensajeResource.EtiquetaTituloAdvertencia)';
+        Pe.Stracon.SGC.Presentacion.Contractual.SolicitudRevisionContrato.Resources.EtiquetaTituloConfirmar = '@Html.Raw(GenericoResource.EtiquetaTituloConfirmar)';      
+        Pe.Stracon.SGC.Presentacion.Contractual.SolicitudRevisionContrato.Resources.GridUsuarioCreacion = '@Html.Raw(SolicitudRevisionContratoResource.GridUsuarioCreacion)';
+        Pe.Stracon.SGC.Presentacion.Contractual.SolicitudRevisionContrato.Resources.GridFechaIngreso = '@Html.Raw(SolicitudRevisionContratoResource.GridFechaIngreso)';
+        Pe.Stracon.SGC.Presentacion.Contractual.SolicitudRevisionContrato.Resources.CodigoRevisionAprobada = '@SolicitudRevisionContratoResource.CodigoRevisionAprobada';
+        Pe.Stracon.SGC.Presentacion.Contractual.SolicitudRevisionContrato.Resources.CodigoRevisionRechazada = '@SolicitudRevisionContratoResource.CodigoRevisionRechazada';
+
+        Pe.Stracon.SGC.Presentacion.Contractual.SolicitudRevisionContrato.Resources.MensajeMotivoRechazo = '@Html.Raw(SolicitudRevisionContratoResource.MensajeMotivoRechazo)';
+        Pe.Stracon.SGC.Presentacion.Contractual.SolicitudRevisionContrato.Resources.RechazoRevision = '@Html.Raw(SolicitudRevisionContratoResource.RechazoRevision)';
+        Pe.Stracon.SGC.Presentacion.Contractual.SolicitudRevisionContrato.Resources.PreguntaRechazo = '@SolicitudRevisionContratoResource.PreguntaRechazo';
+        Pe.Stracon.SGC.Presentacion.Contractual.SolicitudRevisionContrato.Resources.TituloMotivoRechazo = '@SolicitudRevisionContratoResource.TituloMotivoRechazo';
+      
+        ns('Pe.Stracon.SGC.Presentacion.Recursos.Validacion')
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.SeleccionarRegistroEliminar = '@Html.Raw(MensajeResource.SeleccionarRegistroEliminar)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ConfirmacionGuardar = '@Html.Raw(MensajeResource.ConfirmacionGuardar)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.EtiquetaConfirmacion = '@MensajeResource.SeGuardoInformacionExito';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ConfirmacionDenegar = '@Html.Raw(MensajeResource.ConfirmacionDenegar)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ConfirmacionAutorizar = '@Html.Raw(MensajeResource.ConfirmacionAutorizar)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ConfirmacionRechazar = '@Html.Raw(MensajeResource.ConfirmacionRechazar)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ConfirmacionAprobar = '@Html.Raw(MensajeResource.ConfirmacionAprobar)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.EtiquetaErrorEliminar = '@Html.Raw(MensajeResource.EtiquetaErrorRegistro)';
+    </script>
+  
+    @CustomHtmlHelper.RenderViewJs("contractualsolicitudrevisioncontratoformulariosolicitudrevisioncontratoadjuntos")
+    @CustomHtmlHelper.RenderViewJs("contractualsolicitudrevisioncontratoformulariosolicitudrevisioncontratoaprobar")      
+    @CustomHtmlHelper.RenderViewJs("contractualsolicitudrevisioncontratoformulariorevisionrechazar")    
+}

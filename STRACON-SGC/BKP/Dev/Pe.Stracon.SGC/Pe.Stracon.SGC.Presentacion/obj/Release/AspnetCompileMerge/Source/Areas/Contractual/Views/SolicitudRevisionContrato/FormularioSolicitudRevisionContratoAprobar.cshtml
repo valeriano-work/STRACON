@@ -1,0 +1,30 @@
+﻿@using Pe.Stracon.SGC.Presentacion.Recursos.Base
+@using Pe.Stracon.SGC.Presentacion.Recursos.Contractual
+
+<input type="hidden" id="hcodigoDeContrato" value="@ViewBag.CodigoContrato" />
+<input type="hidden" id="hcontenidoPrevio" value="@ViewBag.RutaPrimerFile" />
+<input type="hidden" id="hcontenidoModificado" value="@ViewBag.RutaSegundoFile" />
+<div class="row">
+    <div class="col-sm-12">
+        <div class="form-group">
+            <label>@SolicitudRevisionContratoResource.EtiquetaDescripcionModificacionSolicitada</label>
+            <br/>
+            <b>@ViewBag.MotivoSolicitud</b>
+        </div>
+    </div>
+</div>
+<div class="row">
+   
+    <div class="col-sm-12">
+        <div class="form-group">
+            <label>@SolicitudRevisionContratoResource.EtiquetaContratoModificado</label>
+            <div class="box-MinHeightModal" id="frmPdfPrevio">
+            </div>            
+        </div>
+    </div>
+</div>
+<div class="comp-Modal-footer">
+    <button class="btn btn-info" id="btnCancelarAprobacion">@GenericoResource.BotonCancelar</button>
+    <button class="btn btn-default" id="btnFrmSolRechazar">@GenericoResource.BotonRechazar</button>
+    <button class="btn btn-primary" id="btnFrmSolAprobar">@GenericoResource.BotonAprobar</button>
+</div>

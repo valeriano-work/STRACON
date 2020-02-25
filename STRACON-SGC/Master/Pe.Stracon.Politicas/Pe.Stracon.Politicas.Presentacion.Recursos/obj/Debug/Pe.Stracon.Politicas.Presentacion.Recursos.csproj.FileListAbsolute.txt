@@ -1,0 +1,17 @@
+D:\Modulos\Fuentes\STRACON-SGC\Master\Pe.Stracon.Politicas\Pe.Stracon.Politicas.Presentacion.Recursos\bin\Debug\Pe.Stracon.Politicas.Presentacion.Recursos.XML
+D:\Modulos\Fuentes\STRACON-SGC\Master\Pe.Stracon.Politicas\Pe.Stracon.Politicas.Presentacion.Recursos\bin\Debug\Pe.Stracon.Politicas.Presentacion.Recursos.dll
+D:\Modulos\Fuentes\STRACON-SGC\Master\Pe.Stracon.Politicas\Pe.Stracon.Politicas.Presentacion.Recursos\bin\Debug\Pe.Stracon.Politicas.Presentacion.Recursos.pdb
+D:\Modulos\Fuentes\STRACON-SGC\Master\Pe.Stracon.Politicas\Pe.Stracon.Politicas.Presentacion.Recursos\obj\Debug\Pe.Stracon.Politicas.Presentacion.Recursos.Base.BuscadorTrabajador.resources
+D:\Modulos\Fuentes\STRACON-SGC\Master\Pe.Stracon.Politicas\Pe.Stracon.Politicas.Presentacion.Recursos\obj\Debug\Pe.Stracon.Politicas.Presentacion.Recursos.Base.GenericoResource.resources
+D:\Modulos\Fuentes\STRACON-SGC\Master\Pe.Stracon.Politicas\Pe.Stracon.Politicas.Presentacion.Recursos\obj\Debug\Pe.Stracon.Politicas.Presentacion.Recursos.Base.UsuarioAD.resources
+D:\Modulos\Fuentes\STRACON-SGC\Master\Pe.Stracon.Politicas\Pe.Stracon.Politicas.Presentacion.Recursos\obj\Debug\Pe.Stracon.Politicas.Presentacion.Recursos.General.PlantillaNotificacionResource.resources
+D:\Modulos\Fuentes\STRACON-SGC\Master\Pe.Stracon.Politicas\Pe.Stracon.Politicas.Presentacion.Recursos\obj\Debug\Pe.Stracon.Politicas.Presentacion.Recursos.General.SeccionParametroResource.resources
+D:\Modulos\Fuentes\STRACON-SGC\Master\Pe.Stracon.Politicas\Pe.Stracon.Politicas.Presentacion.Recursos\obj\Debug\Pe.Stracon.Politicas.Presentacion.Recursos.General.ParametroResource.resources
+D:\Modulos\Fuentes\STRACON-SGC\Master\Pe.Stracon.Politicas\Pe.Stracon.Politicas.Presentacion.Recursos\obj\Debug\Pe.Stracon.Politicas.Presentacion.Recursos.General.ValorParametroResource.resources
+D:\Modulos\Fuentes\STRACON-SGC\Master\Pe.Stracon.Politicas\Pe.Stracon.Politicas.Presentacion.Recursos\obj\Debug\Pe.Stracon.Politicas.Presentacion.Recursos.General.TrabajadorResource.resources
+D:\Modulos\Fuentes\STRACON-SGC\Master\Pe.Stracon.Politicas\Pe.Stracon.Politicas.Presentacion.Recursos\obj\Debug\Pe.Stracon.Politicas.Presentacion.Recursos.General.UnidadOperativaResource.resources
+D:\Modulos\Fuentes\STRACON-SGC\Master\Pe.Stracon.Politicas\Pe.Stracon.Politicas.Presentacion.Recursos\obj\Debug\Pe.Stracon.Politicas.Presentacion.Recursos.Mensajes.MensajeResource.resources
+D:\Modulos\Fuentes\STRACON-SGC\Master\Pe.Stracon.Politicas\Pe.Stracon.Politicas.Presentacion.Recursos\obj\Debug\Pe.Stracon.Politicas.Presentacion.Recursos.csproj.GenerateResource.cache
+D:\Modulos\Fuentes\STRACON-SGC\Master\Pe.Stracon.Politicas\Pe.Stracon.Politicas.Presentacion.Recursos\obj\Debug\Pe.Stracon.Politicas.Presentacion.Recursos.csproj.CoreCompileInputs.cache
+D:\Modulos\Fuentes\STRACON-SGC\Master\Pe.Stracon.Politicas\Pe.Stracon.Politicas.Presentacion.Recursos\obj\Debug\Pe.Stracon.Politicas.Presentacion.Recursos.dll
+D:\Modulos\Fuentes\STRACON-SGC\Master\Pe.Stracon.Politicas\Pe.Stracon.Politicas.Presentacion.Recursos\obj\Debug\Pe.Stracon.Politicas.Presentacion.Recursos.pdb

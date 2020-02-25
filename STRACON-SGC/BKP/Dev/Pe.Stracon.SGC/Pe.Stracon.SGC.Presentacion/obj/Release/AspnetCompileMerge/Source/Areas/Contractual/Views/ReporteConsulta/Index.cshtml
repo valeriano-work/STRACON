@@ -1,0 +1,93 @@
+﻿    @using Pe.Stracon.SGC.Presentacion.Recursos.Base
+@using Pe.Stracon.SGC.Presentacion.Recursos.Contractual
+@using Pe.Stracon.SGC.Presentacion.Recursos.Mensajes
+@using Pe.Stracon.SGC.Presentacion.Core.Helpers
+@model Pe.Stracon.SGC.Presentacion.Core.ViewModel.Contractual.ReporteConsulta.ReporteConsultaBusqueda
+
+@{
+    var dataReport = TempData["DataReport"];
+}
+
+<div class="GmdBody-header">
+    <h2>@ReporteConsultaResource.EtiquetaTitulo</h2>
+</div>
+<div class="GmdBody-body">
+    <form id="frmReporteConsulta">
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label>@ReporteConsultaResource.EtiquetaRemitente</label>
+                    @Html.TextBox("CodigoRemitente", @Model.ReporteConsulta.CodigoRemitente, new { @class = "form-control hidden", @id = "hdnCodigoRemitente" })
+                    @Html.TextBox("NombreRemitente", @Model.ReporteConsulta.NombreRemitente, new { @class = "form-control hidden", @id = "hdnNombreRemitente" })
+                    @Html.TextBox("txtRemitente", null, new { @class = "form-control", @id = "txtRemitente" })
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label>@ReporteConsultaResource.EtiquetaDestinatario</label>
+                    @Html.TextBox("CodigoDestinatario", @Model.ReporteConsulta.CodigoDestinatario, new { @class = "form-control hidden", @id = "hdnCodigoDestinatario" })
+                    @Html.TextBox("NombreDestinatario", @Model.ReporteConsulta.NombreDestinatario, new { @class = "form-control hidden", @id = "hdnNombreDestinatario" })
+                    @Html.TextBox("txtDestinatario", null, new { @class = "form-control", @id = "txtDestinatario" })
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label>@ReporteConsultaResource.EtiquetaTipoConsulta</label>
+                    @Html.DropDownList("CodigoTipoConsulta", Model.ListaTipoConsulta, new { @class = "form-control", @id = "slcTipoConsulta" })
+                    @Html.TextBox("DescripcionTipoConsulta", null, new { @class = "form-control hidden", @id = "hdnDescripcionTipoConsulta" })
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label>@ReporteConsultaResource.EtiquetaUnidadOperativa</label>
+                    @Html.DropDownList("CodigoUnidadOperativa", Model.ListaUnidadOperativa.OrderBy(x => x.Text), new { @class = "form-control", @id = "slcUnidadOperativa" })
+                    @Html.TextBox("NombreUnidadOperativa", null, new { @class = "form-control hidden", @id = "hdnNombreUnidadOperativa" })
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label>@ReporteConsultaResource.EtiquetaAreaEmpresa</label>
+                    @Html.DropDownList("CodigoAreaEmpresa", Model.ListaAreaEmpresa, new { @class = "form-control", @id = "slcAreaEmpresa" })
+                    @Html.TextBox("DescripcionAreaEmpresa", null, new { @class = "form-control hidden", @id = "hdnDescripcionAreaEmpresa" })
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label>@ReporteConsultaResource.EtiquetaEstado</label>
+                    @Html.DropDownList("CodigoEstadoConsulta", Model.ListaEstadoConsulta, new { @class = "form-control", @id = "slcEstadoConsulta" })
+                    @Html.TextBox("DescripcionEstadoConsulta", null, new { @class = "form-control hidden", @id = "hdnDescripcionEstadoConsulta" })
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="form-group">
+                <button class="btn btn-info" id="btnLimpiar" type="reset">@GenericoResource.BotonLimpiar</button>
+                <button class="btn btn-default" id="btnBuscar">@GenericoResource.BotonMostrar</button>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <div id="divContenedorReportView">
+        @Html.Partial("~/Areas/Base/Views/Reporte/ReportViewControl.ascx", dataReport)
+    </div>
+</div>
+@section scripts{
+    <script type="text/javascript">
+        ns('Pe.Stracon.SGC.Presentacion.Contractual.ReporteConsulta.Actions')
+        Pe.Stracon.SGC.Presentacion.Contractual.ReporteConsulta.Actions.BuscarTrabajador = '@Url.Action("BuscarTrabajador", "ReporteConsulta", new { Area = "Contractual" })';
+
+        ns('Pe.Stracon.SGC.Presentacion.Contractual.ReporteContratoPorFinalizar.Resources')
+        Pe.Stracon.SGC.Presentacion.Contractual.ReporteContratoPorFinalizar.Resources.EtiquetaUltimoEstadio = '@Html.Raw(ReporteContratoPorFinalizarResource.EtiquetaUltimoEstadio)';
+        Pe.Stracon.SGC.Presentacion.Contractual.ReporteContratoPorFinalizar.Resources.EtiquetaAprobados = '@Html.Raw(ReporteContratoPorFinalizarResource.EtiquetaAprobados)';
+
+        ns('Pe.Stracon.SGC.Presentacion.Recursos.Validacion')
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarIndicadorUltimoEstadioAprobado = '@Html.Raw(ReporteContratoPorFinalizarResource.EtiquetaUltimoEstadioAprobado)';
+
+        ns('Pe.Stracon.SGC.Presentacion.Contractual.ReporteConsulta.Models')
+        Pe.Stracon.SGC.Presentacion.Contractual.ReporteConsulta.Models.Index = @(Html.Raw(Json.Encode(Model)));
+    </script>
+}

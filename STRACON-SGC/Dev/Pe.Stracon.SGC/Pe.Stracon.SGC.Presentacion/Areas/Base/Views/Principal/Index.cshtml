@@ -1,0 +1,59 @@
+﻿@using Pe.Stracon.SGC.Presentacion.Recursos.Base;
+@using Pe.GyM.Security.Web.Session;
+@using Pe.Stracon.SGC.Presentacion.Core.Helpers
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var user = HttpGyMSessionContext.CurrentAccount();
+    Styles.Render("~/Scripts/Base/owl-carousel/owl.theme.css");
+}
+<div class="GmdBody-header">
+    <h2>@PrincipalResource.EtiquetaTitulo</h2>
+</div>
+<div class="GmdBody-body">
+    <div class="view-home view-homeSGC">
+        <div class="bs-callout bs-callout-danger">
+            <p>@Html.Raw(PrincipalResource.DescripcionSistema.Replace("@usuario", user.NombreCompleto.Trim() ))</p>
+        </div>
+        <div class="wrap-images">
+            <div class="list">
+                <h1>@PrincipalResource.EtiquetaSuptitulo</h1>
+                <ul>
+                    <li><i class="fa fa-check"></i>@PrincipalResource.EtiquetaConfiguracion</li>
+                    <li><i class="fa fa-check"></i>@PrincipalResource.EtiquetaNotificacionesAutomaticas</li>
+                </ul>
+                <ul>
+                    <li><i class="fa fa-check"></i>@PrincipalResource.EtiquetaGestion</li>
+                    <li><i class="fa fa-check"></i>@PrincipalResource.EtiquetaReportes</li>
+                </ul>
+            </div>
+            <div class="box">
+                <div>     
+                    <div class="item"><img src="~/Theme/images/1.jpg" /></div>
+                    <div class="item"><img class="image-two" src="~/Theme/images/2.jpg" /></div>
+                    <div class="item"><img src="~/Theme/images/3.jpg" />    </div>
+                    <div class="item"><img src="~/Theme/images/4_report.jpg" /></div>
+                </div>
+            </div>            
+        </div>
+    </div>
+</div>
+@section scripts
+{
+    @Scripts.Render("~/Scripts/Base/owl-carousel/owl.carousel.min.js")
+    <script>
+        $(document).ready(function () {
+
+            //$("#owl-demo").owlCarousel({
+            //    autoPlay: 5000,
+            //    paginationNumbers:true,
+                
+            //    items: 4,
+            //    itemsDesktop: [1199, 3],
+            //    itemsDesktopSmall: [979, 3]
+            //});
+
+        });
+
+    </script>
+}
+

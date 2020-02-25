@@ -1,0 +1,100 @@
+﻿@using Pe.Stracon.SGC.Presentacion.Recursos.Base
+@using Pe.Stracon.SGC.Presentacion.Recursos.Contractual
+@using Pe.Stracon.SGC.Infraestructura.Core.Context
+@model Pe.Stracon.SGC.Presentacion.Core.ViewModel.Contractual.FlujoAprobacion.FlujoAprobacionEstadiosFormulario
+
+<script type="text/javascript">
+    ns('Pe.Stracon.SGC.Presentacion.Core.ViewModel.Contractual.FlujoAprobacion.FlujoAprobacionEstadiosFormulario.Model')
+    Pe.Stracon.SGC.Presentacion.Core.ViewModel.Contractual.FlujoAprobacion.FlujoAprobacionEstadiosFormulario.Model.ListaNombreInformado = @(Html.Raw(Json.Encode(Model.flujoAprobacionEstadioResponse.ListaNombreInformado)));
+    Pe.Stracon.SGC.Presentacion.Core.ViewModel.Contractual.FlujoAprobacion.FlujoAprobacionEstadiosFormulario.Model.ListaNombreRepresentante = @(Html.Raw(Json.Encode(Model.flujoAprobacionEstadioResponse.ListaNombreRepresentante)));
+    Pe.Stracon.SGC.Presentacion.Core.ViewModel.Contractual.FlujoAprobacion.FlujoAprobacionEstadiosFormulario.Model.ListaNombreResponsableVinculadas = @(Html.Raw(Json.Encode(Model.flujoAprobacionEstadioResponse.ListaNombreResponsableVinculadas)));
+ 
+</script>
+
+<form id="frmAgregarFlujoAprobacionEstadio">
+    <div class="row">
+        <input type="hidden" id="hdnFlujoAprobacionEstadio" name="hdnFlujoAprobacionEstadio" value="@Model.flujoAprobacionEstadioResponse.CodigoFlujoAprobacionEstadio" />
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="txtOrdenPrioridad">@FlujoAprobacionResource.EtiquetaOrdenPrioridad</label>
+                @Html.TextBox("txtOrdenPrioridad", @Model.flujoAprobacionEstadioResponse.Orden, new { @class = "form-control", @id = "txtOrdenPrioridad", @validable = "required ValidarOrdenPrioridad" })
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="txtDescripcionEstadio">@FlujoAprobacionResource.EtiquetaDescripcionEstadio</label>
+                @Html.TextBox("txtDescripcionEstadio", @Model.flujoAprobacionEstadioResponse.Descripcion, new { @class = "form-control", @id = "txtDescripcionEstadio", @validable = "required ValidarDescripcionEstadio" })
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="txtDiasAtencion">@FlujoAprobacionResource.EtiquetaDiasAtencion</label>
+                @Html.TextBox("txtDiasAtencion", @Model.flujoAprobacionEstadioResponse.TiempoAtencion, new { @class = "form-control", @id = "txtDiasAtencion" })
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="txtHorasAtencion">@FlujoAprobacionResource.EtiquetaHorasAtencion</label>
+                @Html.TextBox("txtHorasAtencion", @Model.flujoAprobacionEstadioResponse.HorasAtencion, new { @class = "form-control", @id = "txtHorasAtencion" })
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="chkIndicadorVersionOficial">@FlujoAprobacionResource.EtiquetaVersionOficial</label>
+                <div>
+                    @Html.CheckBox("chkIndicadorVersionOficial", @Model.flujoAprobacionEstadioResponse.IndicadorVersionOficial, new { @id = "chkIndicadorVersionOficial" })
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="chkIndicadorPermiteCarga">@FlujoAprobacionResource.EtiquetaPermiteCarga</label>
+                <div>
+                    @Html.CheckBox("chkIndicadorPermiteCarga", @Model.flujoAprobacionEstadioResponse.IndicadorPermiteCarga, new { @id = "chkIndicadorPermiteCarga" })
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="chkIndicadorIncluirVisto">@FlujoAprobacionResource.EtiquetaIncluirVisto</label>
+                <div>
+                    @Html.CheckBox("chkIndicadorIncluirVisto", @Model.flujoAprobacionEstadioResponse.IndicadorIncluirVisto != null ? @Model.flujoAprobacionEstadioResponse.IndicadorIncluirVisto.Value : false, new { @id = "chkIndicadorIncluirVisto" })
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="txtResponsable">@FlujoAprobacionResource.EtiquetaResponsable</label>
+                @Html.TextBox("txtResponsable", null, new { @class = "form-control", @id = "txtResponsable" })
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="txtInformados">@FlujoAprobacionResource.EtiquetaInformados</label>
+                @Html.TextBox("txtInformados", null, new { @class = "form-control", @id = "txtInformados" })
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="txtResponsableVinculadas">Responsable de Vinculadas</label>
+                @Html.TextBox("txtResponsableVinculadas", null, new { @class = "form-control", @id = "txtResponsableVinculadas" })
+            </div>
+        </div>       
+    </div>
+
+</form>
+<div class="comp-Modal-footer">
+    <button class="btn btn-default" id="btnFrmFlujoCancelar">@GenericoResource.BotonCancelar</button>
+    <button class="btn btn-primary" id="btnFrmFlujoGrabar">@GenericoResource.BotonGrabar</button>
+</div>

@@ -1,0 +1,61 @@
+﻿@using Pe.Stracon.SGC.Presentacion.Recursos.Base
+@using Pe.Stracon.SGC.Presentacion.Recursos.Contractual
+@using Pe.Stracon.SGC.Presentacion.Recursos.Base
+@using Pe.Stracon.SGC.Presentacion.Recursos.Contractual
+@using Pe.Stracon.SGC.Presentacion.Recursos.Mensajes
+@using Pe.Stracon.SGC.Presentacion.Core.Helpers
+@using Pe.Stracon.SGC.Infraestructura.Core.Context
+@using Pe.Stracon.SGC.Aplicacion.Core.Message
+
+<div class="GmdBody-header">
+    <h2>@ListadoContratoResource.EtiquetaFormularioContrato</h2>
+</div>
+<div class="GmdBody-body">
+    <input type="hidden" id="hdnCodigoContrato" value="@ViewBag.CodigoDeContrato"/>
+    <form id="frmContrato" onsubmit="return false;">
+      
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <label>@Html.Raw(ListadoContratoResource.EtiquetaContenidoContrato)</label>
+                    <textarea class="form-control Lay-Height150" id="txtFrmContenidoContrato" ></textarea>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="comp-Modal-footer">
+        <button class="btn btn-default" id="btnFrmContratoVistaPreviaEdit">@GenericoResource.BotonVistaPrevia</button>
+        <button class="btn btn-default" id="btnFrmContratoCancelarEdit">@GenericoResource.BotonCancelar</button>
+        <button class="btn btn-primary" id="btnFrmContratoGrabarEdit">@GenericoResource.BotonGrabar</button>
+        <button class="btn btn-primary" id="btnFrmContratoEnviarEdit">@GenericoResource.BotonEnviar</button>
+    </div>
+</div>
+@section scripts
+{
+    <script type="text/javascript">
+        ns('Pe.Stracon.SGC.Presentacion.Contractual.Contrato.ListadoContrato.Models')
+        Pe.Stracon.SGC.Presentacion.Contractual.Contrato.ListadoContrato.Models.EdicionContratoFlexible = @Html.Raw(Json.Encode(ViewBag))
+
+        ns('Pe.Stracon.SGC.Presentacion.Contractual.Contrato.ListadoContrato.Mensajes')
+        Pe.Stracon.SGC.Presentacion.Contractual.Contrato.ListadoContrato.Mensajes.MsjValidaRptaAutorizador = '@Html.Raw(ListadoContratoResource.MsjValidaRptaAutorizador)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Contrato.ListadoContrato.Mensajes.EstadoEdicionEditado = '@Html.Raw(DatosConstantes.CodigoEstadoEdicion.Editada)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Contrato.ListadoContrato.Mensajes.EstadoEdicionSolicitaAu = '@Html.Raw(DatosConstantes.CodigoEstadoEdicion.SolicitudAutorizada)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Contrato.ListadoContrato.Mensajes.EdicionRechazada = '@Html.Raw(DatosConstantes.CodigoEstadoEdicion.EdicionRechazada)';
+        Pe.Stracon.SGC.Presentacion.Contractual.Contrato.ListadoContrato.Mensajes.MsjConfirmaRptaAutoriza = '@Html.Raw(ListadoContratoResource.MsjConfirmaRptaAutoriza)';
+
+        ns('Pe.Stracon.SGC.Presentacion.Contractual.Contrato.Actions')
+        Pe.Stracon.SGC.Presentacion.Contractual.Contrato.Actions.GenerarVistaPreviaContrato = '@Url.Action("GenerarVistaPreviaContrato", "ListadoContrato", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.Contrato.Actions.RegRespuestaAutorizador = '@Url.Action("RegistrarRespuestaAutorizador", "ListadoContrato", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.Contrato.Actions.RegRespuestaGrabarAutorizador = '@Url.Action("RegistrarRespuestaGrabarAutorizador", "ListadoContrato", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.Contrato.Actions.ListadoContrato = '@Url.Action("Index", "ListadoContrato", new { Area = "Contractual" })';
+
+        ns('Pe.Stracon.SGC.Presentacion.Recursos.Validacion')
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.EtiquetaTituloConfirmar = '@Html.Raw(GenericoResource.EtiquetaTituloConfirmar)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ConfirmacionGuardar = '@Html.Raw(MensajeResource.ConfirmacionGuardar)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.EtiquetaConfirmacion = '@MensajeResource.SeGuardoInformacionExito';
+
+        ns('Pe.Stracon.SGC.Presentacion.Contractual.Contrato.Resources')
+        Pe.Stracon.SGC.Presentacion.Contractual.Contrato.Resources.EtiquetaFormularioContrato = '@Html.Raw(ListadoContratoResource.EtiquetaFormularioContrato)';
+    </script>   
+    @CustomHtmlHelper.RenderViewJs("contractuallistadocontratoformulariocontratoflexibleeditar")
+}

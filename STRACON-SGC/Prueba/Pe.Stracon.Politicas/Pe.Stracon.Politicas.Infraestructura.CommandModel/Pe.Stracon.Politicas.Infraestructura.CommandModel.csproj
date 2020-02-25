@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{431A5EAB-2F15-4CCC-82B7-F83F6CDED2DC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Pe.Stracon.Politicas.Infraestructura.CommandModel</RootNamespace>
+    <AssemblyName>Pe.Stracon.Politicas.Infraestructura.CommandModel</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Pe.Stracon.Politicas.Infraestructura.CommandModel.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'STRACON_QA|AnyCPU'">
+    <OutputPath>bin\STRACON_QA\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'sgcRelease|AnyCPU'">
+    <OutputPath>bin\sgcRelease\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'sccRelease|AnyCPU'">
+    <OutputPath>bin\sccRelease\</OutputPath>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\..\..\..\..\Librerias\SGC\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\..\..\..\..\Librerias\SGC\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\BaseEntityMapping.cs" />
+    <Compile Include="Base\Entity.cs" />
+    <Compile Include="Base\TraceAuditAttribute.cs" />
+    <Compile Include="General\DepartamentoEntity.cs" />
+    <Compile Include="General\DistritoEntity.cs" />
+    <Compile Include="General\PaisEntity.cs" />
+    <Compile Include="General\ParametroEntity.cs" />
+    <Compile Include="General\ParametroSeccionEntity.cs" />
+    <Compile Include="General\ParametroValorEntity.cs" />
+    <Compile Include="General\PlantillaNotificacionEntity.cs" />
+    <Compile Include="General\ProvinciaEntity.cs" />
+    <Compile Include="General\SistemaEntity.cs" />
+    <Compile Include="General\TipoDatoEntity.cs" />
+    <Compile Include="General\TrabajadorEntity.cs" />
+    <Compile Include="General\TrabajadorFirmaEntity.cs" />
+    <Compile Include="General\TrabajadorSuplenteEntity.cs" />
+    <Compile Include="General\TrabajadorUnidadOperativaEntity.cs" />
+    <Compile Include="General\UnidadOperativaEntity.cs" />
+    <Compile Include="General\UnidadOperativaUsuarioConsultaEntity.cs" />
+    <Compile Include="General\UnidadOperativaStaffEntity.cs" />
+    <Compile Include="General\ZonaHorariaEntity.cs" />
+    <Compile Include="Mapping\General\PlantillaNotificacionMapping.cs" />
+    <Compile Include="Mapping\General\DepartamentoMapping.cs" />
+    <Compile Include="Mapping\General\DistritoMapping.cs" />
+    <Compile Include="Mapping\General\PaisMapping.cs" />
+    <Compile Include="Mapping\General\ParametroMapping.cs" />
+    <Compile Include="Mapping\General\ParametroSeccionMapping.cs" />
+    <Compile Include="Mapping\General\ParametroValorMapping.cs" />
+    <Compile Include="Mapping\General\ProvinciaMapping.cs" />
+    <Compile Include="Mapping\General\SistemaMapping.cs" />
+    <Compile Include="Mapping\General\TrabajadorFirmaMapping.cs" />
+    <Compile Include="Mapping\General\TrabajadorMapping.cs" />
+    <Compile Include="Mapping\General\TrabajadorSuplenteMapping.cs" />
+    <Compile Include="Mapping\General\TrabajadorUnidadOperativaMapping.cs" />
+    <Compile Include="Mapping\General\UnidadOperativaMapping.cs" />
+    <Compile Include="Mapping\General\UnidadOperativaUsuarioConsultaMapping.cs" />
+    <Compile Include="Mapping\General\UnidadOperativaStaffMapping.cs" />
+    <Compile Include="Mapping\General\ZonaHorariaMapping.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

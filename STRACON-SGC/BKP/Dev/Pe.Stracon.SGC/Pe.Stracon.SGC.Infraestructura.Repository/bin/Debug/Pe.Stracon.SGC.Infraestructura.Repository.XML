@@ -1,0 +1,1511 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Pe.Stracon.SGC.Infraestructura.Repository</name>
+    </assembly>
+    <members>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.Repository.Base.ComandRepository`1">
+            <summary>
+            Repository base for all wite model
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.Repository.Command.Contractual.BienAlquilerEntityRepository">
+            <summary>
+            Implementación del Repositorio de Contrato 
+            </summary>
+            <remarks>
+            Creación :GMD 20150710 <br />
+            Modificación :<br />
+            </remarks>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.Repository.Command.Contractual.BienEntityRepository">
+            <summary>
+            Implementación del Repositorio de Contrato 
+            </summary>
+            <remarks>
+            Creación :      GMD 20150710 <br />
+            Modificación :               <br />
+            </remarks>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.Repository.Command.Contractual.ConsultaAdjuntoEntityRepository">
+            <summary>
+            Implementación del Repositorio de ConsultaAdjunto
+            </summary>
+            <remarks>
+            Creación :GMD 20150710 <br />
+            Modificación :<br />
+            </remarks>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.Repository.Command.Contractual.ConsultaEntityRepository">
+            <summary>
+            Implementación del Repositorio de Consulta 
+            </summary>
+            <remarks>
+            Creación :GMD 20150710 <br />
+            Modificación :<br />
+            </remarks>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.Repository.Command.Contractual.ConsultaTrazabilidadEntityRepository">
+            <summary>
+            Implementación del Repositorio de Consulta Usuario 
+            </summary>
+            <remarks>
+            Creación :GMD 20150710 <br />
+            Modificación :<br />
+            </remarks>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.Repository.Command.Contractual.ContratoBienEntityRepository">
+            <summary>
+            Implementación del Repositorio de Contrato Bien
+            </summary>
+            <remarks>
+            Creación :      GMD 20150803 <br />
+            Modificación :               <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.Repository.Command.Contractual.ContratoBienEntityRepository.entornoActualAplicacion">
+            <summary>
+            Interfaz para el manejo de auditoría
+            </summary>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Command.Contractual.ContratoBienEntityRepository.RegistrarContratoBien(Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoBienEntity)">
+            <summary>
+            Realiza la inserción de registros de Contrato Bien
+            </summary>
+            <param name="data">Datos a registrar</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.Repository.Command.Contractual.ContratoEntityRepository">
+            <summary>
+            Implementación del Repositorio de Contrato 
+            </summary>
+            <remarks>
+            Creación :      GMD 20150527 <br />
+            Modificación :               <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.Repository.Command.Contractual.ContratoEntityRepository.entornoActualAplicacion">
+            <summary>
+            Interfaz para el manejo de auditoría
+            </summary>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Command.Contractual.ContratoEntityRepository.RegistrarContrato(Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoEntity)">
+            <summary>
+            Realiza la inserción de contratos
+            </summary>
+            <param name="data">Datos a registrar</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Command.Contractual.ContratoEntityRepository.EditarContrato(Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoEntity)">
+            <summary>
+            Realiza la edición de un contrato
+            </summary>
+            <param name="data">Datos a registrar</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Command.Contractual.ContratoEntityRepository.ConsultaNumeroContrato(Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoEntity)">
+            <summary>
+            Metodo para consultar si el numero de contrato ya existe.
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.Repository.Command.Contractual.ContratoEstadioConsultaEntityRepository">
+            <summary>
+            Implementación del Repositorio de Contrato Estadio Observacion
+            </summary>
+            <remarks>
+            Creación :  GMD 20150527 <br />
+            Modificación :           <br />
+            </remarks>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.Repository.Command.Contractual.ContratoEstadioEntityRepository">
+            <summary>
+            Implementación del Repositorio de Contrato Estadio
+            </summary>
+            <remarks>
+            Creación :      GMD 20150529 <br />
+            Modificación :               <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.Repository.Command.Contractual.ContratoEstadioEntityRepository.entornoActualAplicacion">
+            <summary>
+            Interfaz para el manejo de auditoría
+            </summary>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Command.Contractual.ContratoEstadioEntityRepository.RegistrarContratoEstadio(Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoEstadioEntity)">
+            <summary>
+            Realiza la inserción de registros de Contrato Estadio
+            </summary>
+            <param name="data">Datos a registrar</param>
+            <returns>Indicador con el resultado de la operacion</returns>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.Repository.Command.Contractual.ContratoEstadioObservacionEntityRepository">
+            <summary>
+            Implementación del Repositorio de Contrato Estadio Observacion
+            </summary>
+            <remarks>
+            Creación :  GMD 20150527 <br />
+            Modificación :           <br />
+            </remarks>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.Repository.Command.Contractual.ContratoDocumentoEntityRepository">
+            <summary>
+            Implementación del Repositorio de Contrato Documento
+            </summary>
+            <remarks>
+            Creación :      GMD 20150611 <br />
+            Modificación :               <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.Repository.Command.Contractual.ContratoDocumentoEntityRepository.entornoActualAplicacion">
+            <summary>
+            Interfaz para el manejo de auditoría
+            </summary>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Command.Contractual.ContratoDocumentoEntityRepository.RegistrarContratoDocumento(Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoDocumentoEntity)">
+            <summary>
+            Realiza la inserción de registros de Contrato Documento
+            </summary>
+            <param name="data">Datos a registrar</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.Repository.Command.Contractual.ContratoFirmanteEntityRepository">
+            <summary>
+            Implementación del Repositorio de ContratoFirmante
+            </summary>
+            <remarks>
+            Creación :      GMD 20150710 <br />
+            Modificación :               <br />
+            </remarks>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.Repository.Command.Contractual.ContratoParrafoEntityRepository">
+            <summary>
+            Implementación del Repositorio de Contrato Párrafo
+            </summary>
+            <remarks>
+            Creación :      GMD 20150612 <br />
+            Modificación :               <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.Repository.Command.Contractual.ContratoParrafoEntityRepository.entornoActualAplicacion">
+            <summary>
+            Interfaz para el manejo de auditoría
+            </summary>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Command.Contractual.ContratoParrafoEntityRepository.RegistrarContratoParrafo(Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoParrafoEntity)">
+            <summary>
+            Realiza la inserción de registros de Contrato Párrafo
+            </summary>
+            <param name="data">Datos a registrar</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Command.Contractual.ContratoParrafoEntityRepository.EliminarContenidoContrato(System.Guid)">
+            <summary>
+            Elimina el contenido de un contrato
+            </summary>
+            <param name="CodigoContrato">Código de contrato</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.Repository.Command.Contractual.ContratoParrafoVariableEntityRepository">
+            <summary>
+            Implementación del Repositorio de Contrato Párrafo Variable
+            </summary>
+            <remarks>
+            Creación :      GMD 20150612 <br />
+            Modificación :               <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.Repository.Command.Contractual.ContratoParrafoVariableEntityRepository.entornoActualAplicacion">
+            <summary>
+            Interfaz para el manejo de auditoría
+            </summary>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Command.Contractual.ContratoParrafoVariableEntityRepository.RegistrarContratoParrafoVariable(Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.ContratoParrafoVariableEntity)">
+            <summary>
+            Realiza la inserción de registros de Contrato Párrafo Variable
+            </summary>
+            <param name="data">Datos a registrar</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.Repository.Command.Contractual.ContratoDocumentoAdjuntoEntityRepository">
+            <summary>
+            Implementación del Repositorio de Contrato Documento Adjunto
+            </summary>
+            <remarks>
+            Creación :      GMD 20151014 <br />
+            Modificación :               <br />
+            </remarks>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.Repository.Command.Contractual.FlujoAprobacionTipoContratoEntityRepository">
+            <summary>
+            Implementación del Repositorio de Flujo Aprobación Tipo Contrato
+            </summary>
+            <remarks>
+            Creación :      GMD 20150612 <br />
+            Modificación :               <br />
+            </remarks>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.Repository.Command.Contractual.FlujoAprobacionTipoServicioEntityRepository">
+            <summary>
+            Implementación del Repositorio de Flujo de Aprobación Tipo de Servicio
+            </summary>
+            <remarks>
+            Creación :      GMD 20151124 <br />
+            Modificación :               <br />
+            </remarks>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.Repository.Command.Contractual.PlantillaRequerimientoEntityRepository">
+            <summary>
+            Implementación del Repositorio de Plantilla
+            </summary>
+            <remarks>
+            Creación :      GMD 20150519 <br />
+            Modificación :               <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.Repository.Command.Contractual.PlantillaRequerimientoEntityRepository.entornoActualAplicacion">
+            <summary>
+            Interfaz para el manejo de auditoría
+            </summary>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Command.Contractual.PlantillaRequerimientoEntityRepository.ActualizarPlantillaEstadoVigencia">
+            <summary>
+            Realiza la actualización del Estado de Vigencia de la Plantilla
+            </summary>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Command.Contractual.PlantillaRequerimientoEntityRepository.CopiarPlantilla(System.Guid,System.String,System.DateTime,System.String,System.String)">
+            <summary>
+            Copia una plantilla
+            </summary>
+            <param name="codigoPlantillaCopiar">Código de la plantilla a copiar</param>
+            <param name="descripcion">Descripción de la nueva plantilla</param>
+            <param name="fechaInicioVigencia">Fecha de inicio de vigencia</param>
+            <param name="usuarioCreacion">Usuario de creación</param>
+            <param name="terminalCreacion">Terminal de creación</param>
+            <returns></returns>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.Repository.Command.Contractual.PlantillaNotaPieEntityRepository">
+            <summary>
+            Implementación del Repositorio de Plantilla Nota Pie
+            </summary>
+            <remarks>
+            Creación :  GMD 20170822 <br />
+            Modificación :           <br />
+            </remarks>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.Repository.Command.Contractual.VariableCampoEntityRepository">
+            <summary>
+            Implementación de Repositorio de Campo de Variable
+            </summary>
+            <remarks>
+            Creación :      GMD 20150519 <br />
+            Modificación :               <br />
+            </remarks>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.Repository.Command.Contractual.VariableEntityRepository">
+            <summary>
+            Implementación del Repositorio de Variable
+            </summary>
+            <remarks>
+            Creación :      GMD 20150612 <br />
+            Modificación :               <br />
+            </remarks>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.Repository.Command.Contractual.PlantillaParrafoEntityRepository">
+            <summary>
+            Implementación del Repositorio de Plantilla Párrafo
+            </summary>
+            <remarks>
+            Creación :  GMD 20150521 <br />
+            Modificación :           <br />
+            </remarks>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.Repository.Command.Contractual.PlantillaParrafoVariableEntityRepository">
+            <summary>
+            Implementación del Repositorio de Plantilla Párrafo Variable
+            </summary>
+            <remarks>
+            Creación :  GMD 20150529 <br />
+            Modificación :           <br />
+            </remarks>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.Repository.Command.Contractual.ProcesoAuditoriaEntityRepository">
+            <summary>
+            Implementación del Repositorio de Proceso Auditoria
+            </summary>
+            <remarks>
+            Creación :      GMD 20150612 <br />
+            Modificación :               <br />
+            </remarks>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.Repository.Command.Contractual.FlujoAprobacionParticipanteEntityRepository">
+            <summary>
+            Implementación del Repositorio de Flujo Aprobación participante
+            </summary>
+            <remarks>
+            Creación :      GMD 20150612 <br />
+            Modificación :               <br />
+            </remarks>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.Repository.Command.Contractual.FlujoAprobacionEstadioEntityRepository">
+            <summary>
+            Implementación del Repositorio de Flujo Aprobación Estadio
+            </summary>
+            <remarks>
+            Creación :      GMD 20150612 <br />
+            Modificación :               <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Command.Contractual.FlujoAprobacionEstadioEntityRepository.ActualizaIndicadorVersionOficial(System.Guid)">
+            <summary>
+            Actualiza indicador version oficial
+            </summary>
+            <param name="codigoFlujoAprobacion">Código flujo aprobación</param>
+            <returns>lista con registros</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Command.Contractual.FlujoAprobacionEstadioEntityRepository.ActualizaIndicadorNumeroContrato(System.Guid)">
+            <summary>
+            Actualiza indicador número contrato
+            </summary>
+            <param name="codigoFlujoAprobacion">Código flujo aprobación</param>
+            <returns>lista con registros</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Command.Contractual.FlujoAprobacionEstadioEntityRepository.DesplazarOrden(Pe.Stracon.SGC.Infraestructura.CommandModel.Contractual.FlujoAprobacionEstadioEntity,System.String)">
+            <summary>
+            Desplaza orden de registro
+            </summary>
+            <param name="entidad">Entidad</param>
+            <param name="flagRegistrarregistrar">Flag registrar</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.Repository.Command.Contractual.FlujoAprobacionEntityRepository">
+            <summary>
+            Implementación del Repositorio de Flujo Aprobación
+            </summary>
+            <remarks>
+            Creación :      GMD 20150612 <br />
+            Modificación :               <br />
+            </remarks>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.Repository.Command.Contractual.PlantillaEntityRepository">
+            <summary>
+            Implementación del Repositorio de Plantilla
+            </summary>
+            <remarks>
+            Creación :      GMD 20150519 <br />
+            Modificación :               <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.Repository.Command.Contractual.PlantillaEntityRepository.entornoActualAplicacion">
+            <summary>
+            Interfaz para el manejo de auditoría
+            </summary>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Command.Contractual.PlantillaEntityRepository.ActualizarPlantillaEstadoVigencia">
+            <summary>
+            Realiza la actualización del Estado de Vigencia de la Plantilla
+            </summary>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Command.Contractual.PlantillaEntityRepository.CopiarPlantilla(System.Guid,System.String,System.String,System.String,System.DateTime,System.String,System.String,System.Boolean)">
+            <summary>
+            Copia una plantilla
+            </summary>
+            <param name="codigoPlantillaCopiar">Código de la plantilla a copiar</param>
+            <param name="descripcion">Descripción de la nueva plantilla</param>
+            <param name="codigoTipoContrato">Tipo de contrato de la nueva plantilla</param>
+            <param name="codigoTipoDocumento">Tipo de documento de la nueva plantilla</param>
+            <param name="fechaInicioVigencia">Fecha de inicio de vigencia</param>
+            <param name="usuarioCreacion">Usuario de creación</param>
+            <param name="terminalCreacion">Terminal de creación</param>
+            <returns></returns>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.Repository.Command.Contractual.ProveedorEntityRepository">
+            <summary>
+            Implementación del Repositorio de Proveedor
+            </summary>
+            <remarks>
+            Creación :      GMD 20150612 <br />
+            Modificación :               <br />
+            </remarks>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.Repository.Command.Contractual.VariableListaEntityRepository">
+            <summary>
+            Implementación de Repositorio de Lista de Variable
+            </summary>
+            <remarks>
+            Creación :      GMD 20150519 <br />
+            Modificación :               <br />
+            </remarks>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.BienLogicRepository">
+            <summary>
+            Implementación del repositorio de Bienes
+            </summary>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.BienLogicRepository.ListaBandejaBien(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Retorna la lista de los bienes.
+            </summary>
+            <param name="tipoBien">Tipo de bien</param>
+            <param name="numeroSerie">número de serie</param>
+            <param name="descripcion">descripción de bienes</param>
+            <param name="marca">marca del bien</param>
+            <param name="modelo">modelo del bien</param>
+            <param name="fechaDesde">rango de fecha inicial de adquisición del bien</param>
+            <param name="fechaHasta">rango de fecha final de adquisición del bien</param>
+            <param name="tipoTarifa">Tipo de tarifa del bien</param>
+            <returns>Lista de Bienes</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.BienLogicRepository.RegistraHSTBienRegistro(System.String,System.String,System.String,System.String)">
+            <summary>
+            Retorna 1 si transacció nok.
+            </summary>
+            <param name="codigoBien">código del bien</param>
+            <returns>Flag de proceso</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.BienLogicRepository.ListaBienAlquiler(System.Guid)">
+            <summary>
+            Retorna la lista del alquiler de bienes.
+            </summary>
+            <param name="codigoBien">código del bien</param>
+            <returns>Lista de alquiler de bienes</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.BienLogicRepository.ListaBienRegistro(System.String)">
+            <summary>
+            Retorna la lista del descripciones de campos del bien.
+            </summary>
+            <param name="tipoContenido">código del tipo de contenido</param>
+            <returns></returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.BienLogicRepository.ObtenerDescripcionCompletaBien(System.String)">
+            <summary>
+            Retorna la lista de bienes con su descripción completa.
+            </summary>
+            <param name="descripcion">Descripción del bien</param>
+            <returns>Lista de bienes con su descripción completa</returns>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ConsultaAdjuntoLogicRepository">
+            <summary>
+            Implementación del repositorio Consulta Adjunto
+            </summary>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ConsultaAdjuntoLogicRepository.BuscarConsultaAdjunto(System.Nullable{System.Guid},System.Nullable{System.Guid},System.Nullable{System.Int32},System.String,System.String)">
+            <summary>
+            Permite buscar los documentos adjuntos de una consulta
+            </summary>
+            <param name="codigoContratoDocumentoAdjunto">Código del Documento adjunto al contrato</param>
+            <param name="codigoContrato">Código del Contrato</param>
+            <param name="codigoArchivo">Código de Archivo</param>
+            <param name="nombreArchivo">Nombre de Archivo</param>
+            <param name="estadoRegistro">Estado de Registro</param>
+            <returns>Lista documentos adjuntos del contrato</returns>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ConsultaLogicRepository">
+            <summary>
+            Implementación del repositorio de Consulta
+            </summary>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ConsultaLogicRepository.ListaConsulta(System.Nullable{System.Guid},System.Nullable{System.Guid},System.String,System.Nullable{System.Guid},System.String,System.Nullable{System.Guid},System.Nullable{System.Guid},System.String,System.Int32,System.Int32)">
+            <summary>
+            Retorna la lista de consulta.
+            </summary>
+            <param name="codigoRemitente">Codigo de Remitente</param>
+            <param name="codigoDestinatario">Código de destinatario</param>
+            <param name="CodigoTipoConsulta">Código de tipo de consulta</param>
+            <param name="codigoUnidadOperativa">Código de unidad operativa</param>
+            <param name="codigoArea">Código de área</param>
+            <param name="codigoConsulta">Código de consulta</param>
+            <param name="codigoUsuarioSesion">Código de usuario de sesion</param>
+            <returns>Lista de consultas</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ConsultaLogicRepository.NotificarConsulta(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Envia correo de consulta
+            </summary>
+            <param name="asunto">Asunto</param>
+            <param name="textoNotificar">Texto a notificar</param>
+            <param name="cuentaNotificar">Cuenta a notificar</param>
+            <param name="cuentasCopias">Cuentas a copiar en el correo</param>
+            <param name="profileCorreo">Perfil del correo</param>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ConsultaLogicRepository.ListaConsultaSimple(System.Nullable{System.Guid},System.Nullable{System.Guid},System.String,System.Nullable{System.Guid},System.String,System.Nullable{System.Guid},System.String)">
+            <summary>
+            Retorna la lista de consulta.
+            </summary>
+            <param name="codigoRemitente">Codigo de Remitente</param>
+            <param name="codigoDestinatario">Código de destinatario</param>
+            <param name="CodigoTipoConsulta">Código de tipo de consulta</param>
+            <param name="codigoUnidadOperativa">Código de unidad operativa</param>
+            <param name="codigoArea">Código de área</param>
+            <param name="codigoConsulta">Código de consulta</param>
+            <param name="codigoUsuarioSesion">Código de usuario de sesion</param>
+            <returns>Lista de consultas</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ContratoCorporativoLogicRepository.BuscarContratosCorporativos(System.Nullable{System.Guid},System.String,System.String,System.String,System.String,System.String,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.String,System.Int32,System.Int32)">
+            <summary>
+            Realiza la búsqueda de Contratos
+            </summary>     
+            <param name="codigoUnidadOperativa">Código de unidad operativa</param>    
+            <param name="codigoTipoServicio">Código de Tipo de Servicio</param>
+            <param name="codigoTipoRequerimiento">Código de Tipo de Requerimiento</param>
+            <param name="codigoTipoDocumento">Código de Tipo de Documento</param>
+            <param name="codigoEstado">Código de Estado de contrato</param>
+            <param name="numeroContrato">Número de Contrato</param>  
+            <param name="descripcion">Descripción de Contrato</param> 
+            <param name="fechaInicioVigencia">Fecha inicio de vigencia</param>
+            <param name="fechaFinVigencia">Fecah fin de vigencia</param>
+            <param name="nombreProveedor">Proveedor</param>
+            <param name="numeroPagina">Total de Páginas</param>
+            <param name="registroPagina">Total de Registros por Página</param>
+            <returns>Lista de contratos</returns>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ContratoDocumentoAdjuntoResolucionLogicRepository">
+            <summary>
+            Implementación del repositorio Contrato Documento Adjunto
+            </summary>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ContratoDocumentoAdjuntoResolucionLogicRepository.BuscarContratoDocumentoAdjuntoResolucion(System.Nullable{System.Guid},System.Nullable{System.Guid},System.Nullable{System.Int32},System.String,System.String)">
+            <summary>
+            Permite buscar los documentos adjuntos de un contrato
+            </summary>
+            <param name="codigoContratoDocumentoAdjuntoResolucion">Código del Documento adjunto al contrato</param>
+            <param name="codigoContrato">Código del Contrato</param>
+            <param name="codigoArchivo">Código de Archivo</param>
+            <param name="nombreArchivo">Nombre de Archivo</param>
+            <param name="estadoRegistro">Estado de Registro</param>
+            <returns>Lista documentos adjuntos del contrato</returns>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ContratoDocumentoLogicRepository">
+            <summary>
+            Implementación del repositorio Contrato Documento
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ContratoLogicRepository">
+            <summary>
+            Implementación del repositorio de Contrato
+            </summary>  
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ContratoLogicRepository.ListaBandejaContratos(System.Guid,System.Nullable{System.Guid},System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Metodo para listar los contrato por usuario.
+            </summary>
+            <param name="CodigoResponsable">Codigo de trabajador que consulta</param>
+            <param name="UnidadOperativa">Código de Unidad Operativa</param>
+            <param name="NombreProveedor">Nombre del proveedor</param>
+            <param name="NumdocPrv">Número de documento del proveedor</param>
+            <param name="TipoServicio">Tipo de Servicio</param>
+            <param name="TipoReq">Tipo de Requerimiento</param>
+            <returns>Lista de bandeja de contratos</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ContratoLogicRepository.ListaBandejaContratosObservacion(System.Guid)">
+            <summary>
+            Metodo para listar las Observaciones por Contrato por Estadio.
+            </summary>
+            <param name="CodigoContratoEstadio">Código de Contrato Estadio</param>
+            <returns>Lista de bandeja de contratos por observaciones</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ContratoLogicRepository.ListaBandejaContratosConsultas(System.Guid)">
+            <summary>
+            Metodo para listar las Consultas por Contrato por Estadio.
+            </summary>
+            <param name="CodigoContratoEstadio">Código de Contrato Estadio</param>
+            <returns>Lista de consultas por contrato</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ContratoLogicRepository.ApruebaContratoEstadio(System.Guid,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Método para aprobar cada contrato según su estadío.
+            </summary>
+            <param name="codigoContratoEstadio">Código de Contrato Estadío</param>
+            <param name="codigoIdentificacionUO">Código de Identificación UO</param>
+            <param name="UserUpdate">Usuario que actualiza</param>
+            <param name="TerminalUpdate">Terminal desde donde se ejecuta.</param>
+            <param name="codigoUsuarioCreacionContrato">Código usuario creación de contrato</param>
+            <param name="MotivoAprobacion"></param>
+            <returns>Lista de estadios aprobados</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ContratoLogicRepository.RetornaParrafosPorContrato(System.Guid)">
+            <summary>
+            Método para retornar los párrafos por contrato
+            </summary>
+            <param name="CodigoContrato">Código de Contrato</param>
+            <returns>Parrafos por contrato</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ContratoLogicRepository.RetornaEstadioContratoObservacion(System.Guid)">
+            <summary>
+            Método que retorna los estadio del contrato para su observación.
+            </summary>
+            <param name="CodigoContratoEstadio">Código del Estadío del Contrato</param>
+            <returns>Estadios de contrato</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ContratoLogicRepository.Responder_Consulta(System.Guid,System.String,System.String,System.String)">
+            <summary>
+            Responder la Consulta que me han hecho
+            </summary>
+            <param name="codigoContratoEstadioConsulta"></param>
+            <param name="Respuesta"></param>
+            <param name="UsuarioModificacion"></param>
+            <param name="TerminalModificacion"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ContratoLogicRepository.ObservaEstadioContrato(System.Guid,System.Guid,System.Guid,System.Guid,System.Guid,System.String,System.String)">
+            <summary>
+            Método para generar un nuevo Estadio de contrato cada vez que es observado.
+            </summary>
+            <param name="codigoContratoEstadio"></param>
+            <param name="codigoContratoEstadioObservado">Código de Contrato Estadio Observado</param>
+            <param name="codigoContrato"> Código de Contrato </param>
+            <param name="codigoFlujoEstadioRetorno">Código Flujo Estadio Retorno </param>
+            <param name="codigoResponsable">Código de Responsable </param>
+            <param name="UserUpdate">Usuario que actualiza</param>
+            <param name="TerminalUpdate">Terminal desde donde de actualiza</param>
+            <returns>Estadios de contrato segun observación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ContratoLogicRepository.RetornaResponsablesFlujoEstadio(System.Guid,System.Guid)">
+            <summary>
+            Método que retorna los responsable por flujo de aprobación.
+            </summary>
+            <param name="codigoFlujoAprobacion">código del flujo de aprobación.</param>
+            <param name="codigoContrato"></param>
+            <returns>Responsable del flujo del estadio</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ContratoLogicRepository.ListaBandejaSolicitudContratos(System.String,System.Nullable{System.Guid},System.String,System.String)">
+            <summary>
+            Método para listar los documentos de la bandeja de solicitud.
+            </summary>
+            <param name="NumeroContrato">número del contrato</param>
+            <param name="UnidadOperativa">unidad operativa</param>
+            <param name="NombreProveedor">nombre del proveedor</param>
+            <param name="NumdocPrv">numero documento del proveedor</param>
+            <returns>Documentos de la bandeja de solicitud</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ContratoLogicRepository.DocumentosPorContrato(System.Guid)">
+            <summary>
+            Método para retornar los documentos PDf por Contrato
+            </summary>
+            <param name="CodigoContrato">Código de Contrato</param>
+            <returns>Documentos pdf por contrato</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ContratoLogicRepository.RegistraContratoDocumentoCargaArchivo(Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ContratoDocumentoLogic,System.String,System.String)">
+            <summary>
+            Metodo para cargar un Archivo a un estadio de contrato.
+            </summary>
+            <param name="objLogic">Objeto Contrato Documento Logic</param>
+            <param name="User">Usuario que ejecuta la transaccion</param>
+            <param name="Terminal">Terminal desde donde se ejecuta la transaccion</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ContratoLogicRepository.ListarContratoDocumento(System.Guid)">
+            <summary>
+            Método para retornar registros de Contrato Documento
+            </summary>
+            <param name="CodigoContrato">Llave primaria código contrato</param>
+            <returns>Lista de registros</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ContratoLogicRepository.ListarContratoEstadio(System.Nullable{System.Guid},System.Nullable{System.Guid},System.Nullable{System.Guid},System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.Guid},System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Int32,System.Int32)">
+            <summary>
+            Lista los Estadios de los Contratos
+            </summary>
+            <param name="codigoContratoEstadio">Codigo de Contrato Estadio</param>
+            <param name="codigoContrato">Código de contrato</param>
+            <param name="codigoFlujoAprobEsta">Código de flujo de aprobación</param>
+            <param name="fechaIngreso">Fecha de ingreso</param>
+            <param name="fechaFinaliz">Fecha de finalización</param>
+            <param name="codigoResponsable">Código de responsable</param>
+            <param name="codigoEstadoContratoEst">Código de Estados de Contrato Estadio</param>
+            <param name="fechaPrimera">Fecha de primera notificación</param>
+            <param name="fechaUltima">Fecha de última notificación</param>
+            <param name="PageNumero">número de página</param>
+            <param name="PageSize">tamaño por página</param>
+            <returns>Estadios de los contratos</returns>        
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ContratoLogicRepository.ListarUnidadOperativaResponsable(System.Guid)">
+            <summary>
+            Método para retornar las unidades operativas del responsable.
+            </summary>
+            <param name="codigoTrabajador">Código del Trabjador</param>
+            <returns>Lista de registros</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ContratoLogicRepository.EstadoAnteriorContratoEstadio(System.Guid,System.Guid)">
+            <summary>
+            Retorna el participante y el codigo del flujo de aprobacion anterior del contrato estadio.
+            </summary>
+            <param name="codigoContratoEstadio">Codigo de Contrato Estadio</param>
+            <param name="codigoContrato">Código de contrato</param>
+            <returns>Participante y el código del flujo de aprobación</returns>        
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ContratoLogicRepository.NotificaBandejaContratos(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Notifica las acciones de contratos.
+            </summary>        
+            <param name="asunto">Asunto de la notificación</param>
+            <param name="textoNotificar">contenido de la notificación</param>
+            <param name="cuentaNotificar">cuentas destino a notificar</param>
+            <param name="cuentaCopias">cuentas de copia del correo</param>
+            <param name="profileCorreo">profile de la configuración de correo</param>
+            <returns>Acciones del contrato</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ContratoLogicRepository.InformacionNotificacionContratoEstadio(System.Guid,System.String)">
+            <summary>
+            Retorna los parámetros necesarios para enviar la notificación
+            </summary>
+            <param name="codigoContratoEstadio">Código de Contrato estadio</param>
+            <param name="TipoNotificacion">Tipo de notificación</param>
+            <returns>Parametros necesarios para enviar la notifación</returns>     
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ContratoLogicRepository.ListadoContratoEstadioResponsable(System.Guid)">
+            <summary>
+            Lista de contratos estadios por responsable
+            </summary>        
+            <param name="codigoContrato">Codigo de Contrato</param>
+            <returns>Listado de contrato estadio</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ContratoLogicRepository.RegistraAdendaContratoVencido(System.Guid,System.String,System.String,System.Int32,System.String)">
+            <summary>
+            Registrar adenda con contrato vencido
+            </summary>
+            <param name="unidadOperativa">Código Unidad Operativa</param>
+            <param name="numeroContrato">Número contrato</param>
+            <param name="descripcion">Descripción</param>
+            <param name="numeroAdenda">Número de adenda</param>
+            <param name="numeroAdendaConcatenado">Número de adenda concatenado</param>
+            <returns>Registro de adenda en tabla temporal</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ContratoLogicRepository.ListaBandejaContratosOrdenado(System.Guid,System.Nullable{System.Guid},System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            Método para listar los contrato por usuario.
+            </summary>
+            <param name="CodigoResponsable">Codigo de trabajador que consulta</param>
+            <param name="UnidadOperativa">Código de Unidad Operativa</param>
+            <param name="NombreProveedor">Nombre del proveedor</param>
+            <param name="NumdocPrv">Número de documento del proveedor</param>
+            <param name="TipoServicio">Tipo de Servicio</param>
+            <param name="TipoReq">Tipo de Requerimiento</param>
+            <param name="nombreEstadio">Nombre de estadio</param>
+            <param name="indicadorFinalizarAprobacion">Indicador de finalizar aprobación</param>
+            <param name="columnaOrden">Columna para ordenar</param>
+            <param name="tipoOrden">Tipo de ordenamiento</param>
+            <param name="numeroPagina">Número de página</param>
+            <param name="registroPagina">Número de registros por página</param>
+            <returns>Lista de bandeja de contratos</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ContratoLogicRepository.ObtenerContratoEstadioEdicion(System.Guid,System.Nullable{System.Guid})">
+            <summary>
+            Metodo para obtener el estadio de edición de un flujo de aprobación de un contrato
+            </summary>
+            <param name="codigoContrato">Código contrato</param>
+            <param name="codigoFlujoAprobacion">Código flujo de aprobación</param>     
+            <returns>Código de contrato estadio de edición</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ContratoLogicRepository.ObtenerResponsableContratoEstadioEdicion(System.Guid,System.Guid,System.Guid)">
+            <summary>
+            Metodo para obtener el responsable de edición de un estadio
+            </summary>
+            <param name="codigoContratoEstadio">Código contrato estadio</param>
+            <param name="codigoEstadioRetorno">Código estadio retorno</param>   
+            <param name="codigoResposable">Código responsale</param>   
+            <returns>Código responsable de estadio de edición</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ContratoLogicRepository.ObtenerEmpresaVinculadaPorProveedor(System.Nullable{System.Guid})">
+            <summary>
+            Método para obtener la empresa vinculada por proveedor
+            </summary>
+            <param name="codigoProveedor">Código de proveedor</param>       
+            <returns>Datos de empresa vinculada</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ContratoLogicRepository.ListaBandejaRevisionContratos(System.String,System.Nullable{System.Guid},System.String,System.String)">
+            <summary>
+            Método para listar los contratos aprobados en la solicitud de modificación.
+            </summary>
+            <param name="NumeroContrato">número del contrato</param>
+            <param name="UnidadOperativa">unidad operativa</param>
+            <param name="NombreProveedor">nombre del proveedor</param>
+            <param name="NumdocPrv">numero documento del proveedor</param>
+            <returns>Listado de contratos para revisión</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ContratoLogicRepository.BuscarNumeroContrato(System.Nullable{System.Guid},System.String,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="codigoUnidadOperativa"></param>
+            <param name="numeroContrato"></param>
+            <param name="numeroPagina"></param>
+            <param name="registroPagina"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ContratoLogicRepository.BuscarContratoObservadoAprobado(System.Nullable{System.Guid},System.Nullable{System.Guid},System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.String,System.Int32,System.Int32)">
+            <summary>
+            Reporte Observado Aprobado
+            </summary>
+            <param name="codigoUnidadOperativa"></param>
+            <param name="codigoContrato"></param>
+            <param name="tipoAccion"></param>
+            <param name="fechaInicio"></param>
+            <param name="fechaFin"></param>
+            <param name="nombreBaseDatoPolitica"></param>
+            <param name="numeroPagina"></param>
+            <param name="registroPagina"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ContratoDocumentoAdjuntoLogicRepository">
+            <summary>
+            Implementación del repositorio Contrato Documento Adjunto
+            </summary>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ContratoDocumentoAdjuntoLogicRepository.BuscarContratoDocumentoAdjunto(System.Nullable{System.Guid},System.Nullable{System.Guid},System.Nullable{System.Int32},System.String,System.String)">
+            <summary>
+            Permite buscar los documentos adjuntos de un contrato
+            </summary>
+            <param name="codigoContratoDocumentoAdjunto">Código del Documento adjunto al contrato</param>
+            <param name="codigoContrato">Código del Contrato</param>
+            <param name="codigoArchivo">Código de Archivo</param>
+            <param name="nombreArchivo">Nombre de Archivo</param>
+            <param name="estadoRegistro">Estado de Registro</param>
+            <returns>Lista documentos adjuntos del contrato</returns>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ListadoRequerimientoLogicRepository">
+            <summary>
+            Implementación del repositorio Requerimiento
+            </summary>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ListadoRequerimientoLogicRepository.BuscarListadoRequerimiento(System.Nullable{System.Guid},System.Nullable{System.Guid},System.Nullable{System.Guid},System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Nullable{System.Boolean},System.Collections.Generic.List{System.Nullable{System.Guid}},System.String,System.String,System.Nullable{System.Guid},System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            Realiza la búsqueda de Requerimientos
+            </summary>
+            <param name="codigoRequerimiento">Código de Requerimiento</param>
+            <param name="codigoUnidadOperativa">Código de unidad operativa</param>
+            <param name="codigoPlantilla">Código de plantilla</param>
+            <param name="codigoTipoServicio">Código de Tipo de Servicio</param>
+            <param name="codigoTipoRequerimiento">Código de Tipo de Requerimiento</param>
+            <param name="codigoTipoDocumento">Código de Tipo de Documento</param>
+            <param name="codigoEstadoVigencia">Código de Estado de Vigencia</param>
+            <param name="numeroRequerimiento">Número de Requerimiento</param>
+            <param name="numeroAdendaConcatenado">Número de adenda concatenado</param>
+            <param name="numeroDocumento">Número de Documento</param>
+            <param name="nombreProveedor">Nombre de Proveedor</param>
+            <param name="descripcion">Descripción de Requerimiento</param>
+            <param name="indicadorTodaUnidadOperativa">Indicador toda unidad operativa</param>
+            <param name="listaUnidadOperativaAcceso">Lista de unidades operativas en acceso</param>
+            <param name="codigoEstadoEdicion">Estado de Edición</param>
+            <param name="codigoTrabajadorResponsable">Código de Trabajador Responsable</param>
+            <param name="nombreEstadio">Nombre de Estadio</param>
+            <param name="indicadorFinalizarAprobacion">Indicador de Finalizar Aprobación</param>
+            <param name="numeroPagina">Total de Páginas</param>
+            <param name="registroPagina">Total de Registros por Página</param>
+            <returns>Lista de contratos</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ListadoRequerimientoLogicRepository.BuscarListadoRequerimientoOrden(System.Nullable{System.Guid},System.Nullable{System.Guid},System.Nullable{System.Guid},System.String,System.String,System.String,System.String,System.Nullable{System.Boolean},System.Collections.Generic.List{System.Nullable{System.Guid}},System.String,System.String,System.Nullable{System.Guid},System.String,System.String,System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.String,System.String,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="codigoRequerimiento"></param>
+            <param name="codigoUnidadOperativa"></param>
+            <param name="codigoPlantilla"></param>
+            <param name="codigoTipoServicio"></param>
+            <param name="codigoTipoRequerimiento"></param>
+            <param name="codigoTipoDocumento"></param>
+            <param name="codigoEstadoVigencia"></param>
+            <param name="numeroRequerimiento"></param>
+            <param name="numeroAdendaConcatenado"></param>
+            <param name="numeroDocumento"></param>
+            <param name="nombreProveedor"></param>
+            <param name="descripcion"></param>
+            <param name="indicadorTodaUnidadOperativa"></param>
+            <param name="listaUnidadOperativaAcceso"></param>
+            <param name="codigoEstadoEdicion"></param>
+            <param name="descripcionRequerimiento"></param>
+            <param name="codigoTrabajadorResponsable"></param>
+            <param name="nombreEstadio"></param>
+            <param name="indicadorFinalizarAprobacion"></param>
+            <param name="columnaOrden"></param>
+            <param name="tipoOrden"></param>
+            <param name="numeroPagina"></param>
+            <param name="registroPagina"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ListadoRequerimientoLogicRepository.ListadoRequerimientoPrincipal(System.String,System.String,System.String)">
+            <summary>
+            Realiza la búsqueda de Requerimientos principales
+            </summary>
+            <param name="numeroRequerimiento">Número de Requerimiento</param>
+            <param name="descripcion">Descripción de Requerimiento</param>
+            <returns>Lista de Requerimientos</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ListadoRequerimientoLogicRepository.ObtenerMontoAcumuladoRequerimiento(System.Guid)">
+            <summary>
+            Obtiene el Monto Acumulado del Requerimiento Principal más sus Adendas
+            </summary>
+            <param name="codigoRequerimientoPrincipal">Código de Requerimiento Principal</param>
+            <returns>Registro con el Monto Acumulado del Requerimiento Principal más sus Adendas</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ListadoRequerimientoLogicRepository.ObtenerVariablesRequerimientoParrafo(System.Guid)">
+            <summary>
+            Obtiene las variables del parrafo
+            </summary>
+            <param name="codigoRequerimiento">Código de Requerimiento</param>
+            <returns>Lista de variables de los parrafos de un contrato</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ListadoRequerimientoLogicRepository.ObtenerBienesRequerimiento(System.Guid)">
+            <summary>
+            Obtiene los bienes de un contrato
+            </summary>
+            <param name="codigoRequerimiento">Código de Requerimiento</param>
+            <returns>Lista de variables de los parrafos de un contrato</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ListadoRequerimientoLogicRepository.ObtenerFirmantesRequerimiento(System.Guid)">
+            <summary>
+            Obtiene los firmantes de un contrato
+            </summary>
+            <param name="codigoRequerimiento">Código de Requerimiento</param>
+            <returns>Lista de firmantes de los parrafos de un contrato</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ListadoRequerimientoLogicRepository.BuscarRequerimiento(System.Nullable{System.Guid},System.Nullable{System.Guid},System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Realiza la búsqueda de Requerimientos sin paginación
+            </summary>
+            <param name="codigoRequerimiento">Código de Requerimiento</param>
+            <param name="codigoTipoServicio">Código de Tipo de Servicio</param>
+            <param name="codigoTipoRequerimiento">Código de Tipo de Requerimiento</param>
+            <param name="codigoTipoDocumento">Código de Tipo de Documento</param>
+            <param name="codigoEstadoVigencia">Código de Estado de Vigencia</param>
+            <param name="numeroRequerimiento">Número de Requerimiento</param>
+            <param name="numeroDocumento">Número de Documento</param>
+            <param name="nombreProveedor">Nombre de Proveedor</param>
+            <param name="descripcion">Descripción de Requerimiento</param>
+            <returns>Lista de contratos</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ListadoRequerimientoLogicRepository.BuscarCorrelativoRequerimiento(System.Nullable{System.Guid},System.String,System.String)">
+            <summary>
+            Buscar contratos correlativos
+            </summary>
+            <param name="codigoUnidadOperativa">Código unidad operativa</param>
+            <param name="codigoTipoRequerimiento">Código tipo de requerimiento</param>
+            <param name="codigoTipoDocumento">Código tipo de documento</param>
+            <returns>Listado de contratos</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ListadoRequerimientoLogicRepository.EliminarRequerimiento(System.Guid,System.String,System.String,System.String)">
+            <summary>
+            Eliminar un contrato
+            </summary>
+            <param name="codigoRequerimiento">Código de contrato</param>     
+            <param name="motivoEliminacion">Motivo de eliminación</param>
+            <param name="usuarioSesion">Nombre de usuario</param>
+            <param name="terminal">Terminal de usuario</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.PlantillaRequerimientoLogicRepository">
+            <summary>
+            Implementación del repositorio Plantilla
+            </summary>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.PlantillaRequerimientoLogicRepository.BuscarPlantilla(System.Nullable{System.Guid},System.String,System.String,System.Nullable{System.Boolean},System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Int32,System.Int32)">
+            <summary>
+            Permite la búsqueda de plantillas
+            </summary>
+            <param name="codigoPlantilla">Código de Plantilla</param>
+            <param name="descripcion">Descripción</param>     
+            <param name="codigoEstadoVigencia">Código de Estado de Vigencia</param>
+            <param name="indicadorAdhesion">Indicador de Adhesión</param>
+            <param name="fechaInicioVigencia">Fecha de Inicio de Vigencia</param>
+            <param name="fechaFinVigencia">Fecha de Fin de Vigencia</param>
+            <param name="numeroPagina">Total de Páginas</param>
+            <param name="registroPagina">Total de Registros por Página</param>
+            <returns>Lista de plantillas</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.PlantillaRequerimientoLogicRepository.BuscarPlantillaTipo(System.Boolean)">
+            <summary>
+            Realiza la búsqueda de plantillas de acuerdo a los tipos de servicios, requerimientos y documentos de contrato
+            </summary>
+            <param name="indicadorAdhesion">Indicador de Adhesión</param>
+            <returns>Lista de plantillas de acuerdo a los tipos de servicios, requerimientos, documentos de contrato y adhesión</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.PlantillaRequerimientoLogicRepository.BuscarPlantillaParrafo(System.Nullable{System.Guid},System.Nullable{System.Guid},System.Nullable{System.Byte},System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            Permite la búsqueda de plantilla párrafo
+            </summary>
+            <param name="codigoPlantillaParrafo">Código de Plantilla Párrafo</param>
+            <param name="codigoPlantilla">Código de Plantilla</param>
+            <param name="orden">Orden</param>
+            <param name="titulo">Título</param>
+            <param name="contenido">Contenido</param>
+            <param name="numeroPagina">Total de Páginas</param>
+            <param name="registroPagina">Total de Registros por Página</param>
+            <returns>Lista de plantilla párrafo</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.PlantillaRequerimientoLogicRepository.BuscarPlantillaParrafoOrdenTitulo(System.Guid,System.Byte,System.String)">
+            <summary>
+            Permite la búsqueda de párrafos de una plantilla de acuerdo al orden y título
+            </summary>
+            <param name="codigoPlantilla">Código de Plantilla</param>
+            <param name="orden">Orden</param>
+            <param name="titulo">Título</param>
+            <returns>Lista de párrafos de una plantilla de acuerdo al orden y título</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.PlantillaRequerimientoLogicRepository.BuscarPlantillaParrafoVariableCodigoPlantillaParrafo(System.Guid)">
+            <summary>
+            Permite la búsqueda de variables de un párrafo de acuerdo al código de plantilla párrafo
+            </summary>
+            <param name="codigoPlantillaParrafo">Código de Plantilla Párrafo</param>
+            <returns>Lista de variables de un párrafo de acuerdo al código de párrafo</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.PlantillaRequerimientoLogicRepository.BuscarNotasPiePorPlantilla(System.Nullable{System.Guid},System.Nullable{System.Guid},System.Int32,System.Int32)">
+            <summary>
+            Permite la búsqueda de notas al pie por plantilla
+            </summary> 
+            <param name="codigoPlantillaNotaPie">Código plantilla nota pie</param>
+            <param name="codigoPlantilla">Código de Plantilla</param>    
+            <param name="numeroPagina">Total de Páginas</param>
+            <param name="registroPagina">Total de Registros por Página</param>
+            <returns>Lista de plantilla párrafo</returns>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ListadoContratoLogicRepository">
+            <summary>
+            Implementación del repositorio Contrato
+            </summary>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ListadoContratoLogicRepository.BuscarListadoContrato(System.Nullable{System.Guid},System.Nullable{System.Guid},System.Nullable{System.Guid},System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Nullable{System.Boolean},System.Collections.Generic.List{System.Nullable{System.Guid}},System.String,System.String,System.Nullable{System.Guid},System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            Realiza la búsqueda de Contratos
+            </summary>
+            <param name="codigoContrato">Código de Contrato</param>
+            <param name="codigoUnidadOperativa">Código de unidad operativa</param>
+            <param name="codigoPlantilla">Código de plantilla</param>
+            <param name="codigoTipoServicio">Código de Tipo de Servicio</param>
+            <param name="codigoTipoRequerimiento">Código de Tipo de Requerimiento</param>
+            <param name="codigoTipoDocumento">Código de Tipo de Documento</param>
+            <param name="codigoEstadoVigencia">Código de Estado de Vigencia</param>
+            <param name="numeroContrato">Número de Contrato</param>
+            <param name="numeroAdendaConcatenado">Número de adenda concatenado</param>
+            <param name="numeroDocumento">Número de Documento</param>
+            <param name="nombreProveedor">Nombre de Proveedor</param>
+            <param name="descripcion">Descripción de Contrato</param>
+            <param name="indicadorTodaUnidadOperativa">Indicador toda unidad operativa</param>
+            <param name="listaUnidadOperativaAcceso">Lista de unidades operativas en acceso</param>
+            <param name="codigoEstadoEdicion">Estado de Edición</param>
+            <param name="codigoTrabajadorResponsable">Código de Trabajador Responsable</param>
+            <param name="nombreEstadio">Nombre de Estadio</param>
+            <param name="indicadorFinalizarAprobacion">Indicador de Finalizar Aprobación</param>
+            <param name="numeroPagina">Total de Páginas</param>
+            <param name="registroPagina">Total de Registros por Página</param>
+            <returns>Lista de contratos</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ListadoContratoLogicRepository.BuscarListadoContratoOrden(System.Nullable{System.Guid},System.Nullable{System.Guid},System.Nullable{System.Guid},System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Nullable{System.Boolean},System.Collections.Generic.List{System.Nullable{System.Guid}},System.String,System.String,System.Nullable{System.Guid},System.String,System.String,System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.String,System.String,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="codigoContrato"></param>
+            <param name="codigoUnidadOperativa"></param>
+            <param name="codigoPlantilla"></param>
+            <param name="codigoTipoServicio"></param>
+            <param name="codigoTipoRequerimiento"></param>
+            <param name="codigoTipoDocumento"></param>
+            <param name="codigoEstadoVigencia"></param>
+            <param name="numeroContrato"></param>
+            <param name="numeroAdendaConcatenado"></param>
+            <param name="numeroDocumento"></param>
+            <param name="nombreProveedor"></param>
+            <param name="descripcion"></param>
+            <param name="indicadorTodaUnidadOperativa"></param>
+            <param name="listaUnidadOperativaAcceso"></param>
+            <param name="codigoEstadoEdicion"></param>
+            <param name="descripcionContrato"></param>
+            <param name="codigoTrabajadorResponsable"></param>
+            <param name="nombreEstadio"></param>
+            <param name="indicadorFinalizarAprobacion"></param>
+            <param name="columnaOrden"></param>
+            <param name="tipoOrden"></param>
+            <param name="numeroPagina"></param>
+            <param name="registroPagina"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ListadoContratoLogicRepository.ListadoContratoPrincipal(System.String,System.String,System.String)">
+            <summary>
+            Realiza la búsqueda de Contratos principales
+            </summary>
+            <param name="numeroContrato">Número de Contrato</param>
+            <param name="descripcion">Descripción de Contrato</param>
+            <returns>Lista de Contratos</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ListadoContratoLogicRepository.ObtenerMontoAcumuladoContrato(System.Guid)">
+            <summary>
+            Obtiene el Monto Acumulado del Contrato Principal más sus Adendas
+            </summary>
+            <param name="codigoContratoPrincipal">Código de Contrato Principal</param>
+            <returns>Registro con el Monto Acumulado del Contrato Principal más sus Adendas</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ListadoContratoLogicRepository.ObtenerVariablesContratoParrafo(System.Guid)">
+            <summary>
+            Obtiene las variables del parrafo
+            </summary>
+            <param name="codigoContrato">Código de Contrato</param>
+            <returns>Lista de variables de los parrafos de un contrato</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ListadoContratoLogicRepository.ObtenerBienesContrato(System.Guid)">
+            <summary>
+            Obtiene los bienes de un contrato
+            </summary>
+            <param name="codigoContrato">Código de Contrato</param>
+            <returns>Lista de variables de los parrafos de un contrato</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ListadoContratoLogicRepository.ObtenerFirmantesContrato(System.Guid)">
+            <summary>
+            Obtiene los firmantes de un contrato
+            </summary>
+            <param name="codigoContrato">Código de Contrato</param>
+            <returns>Lista de firmantes de los parrafos de un contrato</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ListadoContratoLogicRepository.BuscarContrato(System.Nullable{System.Guid},System.Nullable{System.Guid},System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Realiza la búsqueda de Contratos sin paginación
+            </summary>
+            <param name="codigoContrato">Código de Contrato</param>
+            <param name="codigoTipoServicio">Código de Tipo de Servicio</param>
+            <param name="codigoTipoRequerimiento">Código de Tipo de Requerimiento</param>
+            <param name="codigoTipoDocumento">Código de Tipo de Documento</param>
+            <param name="codigoEstadoVigencia">Código de Estado de Vigencia</param>
+            <param name="numeroContrato">Número de Contrato</param>
+            <param name="numeroDocumento">Número de Documento</param>
+            <param name="nombreProveedor">Nombre de Proveedor</param>
+            <param name="descripcion">Descripción de Contrato</param>
+            <returns>Lista de contratos</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ListadoContratoLogicRepository.BuscarCorrelativoContrato(System.Nullable{System.Guid},System.String,System.String)">
+            <summary>
+            Buscar contratos correlativos
+            </summary>
+            <param name="codigoUnidadOperativa">Código unidad operativa</param>
+            <param name="codigoTipoRequerimiento">Código tipo de requerimiento</param>
+            <param name="codigoTipoDocumento">Código tipo de documento</param>
+            <returns>Listado de contratos</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.ListadoContratoLogicRepository.EliminarContrato(System.Guid,System.String,System.String,System.String)">
+            <summary>
+            Eliminar un contrato
+            </summary>
+            <param name="codigoContrato">Código de contrato</param>     
+            <param name="motivoEliminacion">Motivo de eliminación</param>
+            <param name="usuarioSesion">Nombre de usuario</param>
+            <param name="terminal">Terminal de usuario</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.PlantillaLogicRepository">
+            <summary>
+            Implementación del repositorio Plantilla
+            </summary>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.PlantillaLogicRepository.BuscarPlantilla(System.Nullable{System.Guid},System.String,System.String,System.String,System.String,System.Nullable{System.Boolean},System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Int32,System.Int32)">
+            <summary>
+            Permite la búsqueda de plantillas
+            </summary>
+            <param name="codigoPlantilla">Código de Plantilla</param>
+            <param name="descripcion">Descripción</param>
+            <param name="codigoTipoServicio">Código de Tipo de Servicio</param>
+            <param name="codigoTipoRequerimiento">Código de Tipo de Requerimiento</param>
+            <param name="codigoTipoDocumentoContrato">Código de Tipo de Documento de Contrato</param>
+            <param name="codigoEstadoVigencia">Código de Estado de Vigencia</param>
+            <param name="indicadorAdhesion">Indicador de Adhesión</param>
+            <param name="fechaInicioVigencia">Fecha de Inicio de Vigencia</param>
+            <param name="fechaFinVigencia">Fecha de Fin de Vigencia</param>
+            <param name="numeroPagina">Total de Páginas</param>
+            <param name="registroPagina">Total de Registros por Página</param>
+            <returns>Lista de plantillas</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.PlantillaLogicRepository.BuscarPlantillaTipo(System.String,System.String,System.Boolean)">
+            <summary>
+            Realiza la búsqueda de plantillas de acuerdo a los tipos de servicios, requerimientos y documentos de contrato
+            </summary>
+            <param name="tipoContrato">Código de Tipo de Servicio</param>
+            <param name="tipoRequerimiento">Código de Tipo de Requerimiento</param>
+            <param name="tipoDocumentoContrato">Código de Tipo de Documento de Contrato</param>
+            <param name="indicadorAdhesion">Indicador de Adhesión</param>
+            <returns>Lista de plantillas de acuerdo a los tipos de servicios, requerimientos, documentos de contrato y adhesión</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.PlantillaLogicRepository.BuscarPlantillaParrafo(System.Nullable{System.Guid},System.Nullable{System.Guid},System.Nullable{System.Byte},System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            Permite la búsqueda de plantilla párrafo
+            </summary>
+            <param name="codigoPlantillaParrafo">Código de Plantilla Párrafo</param>
+            <param name="codigoPlantilla">Código de Plantilla</param>
+            <param name="orden">Orden</param>
+            <param name="titulo">Título</param>
+            <param name="contenido">Contenido</param>
+            <param name="numeroPagina">Total de Páginas</param>
+            <param name="registroPagina">Total de Registros por Página</param>
+            <returns>Lista de plantilla párrafo</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.PlantillaLogicRepository.BuscarPlantillaParrafoOrdenTitulo(System.Guid,System.Byte,System.String)">
+            <summary>
+            Permite la búsqueda de párrafos de una plantilla de acuerdo al orden y título
+            </summary>
+            <param name="codigoPlantilla">Código de Plantilla</param>
+            <param name="orden">Orden</param>
+            <param name="titulo">Título</param>
+            <returns>Lista de párrafos de una plantilla de acuerdo al orden y título</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.PlantillaLogicRepository.BuscarPlantillaParrafoVariableCodigoPlantillaParrafo(System.Guid)">
+            <summary>
+            Permite la búsqueda de variables de un párrafo de acuerdo al código de plantilla párrafo
+            </summary>
+            <param name="codigoPlantillaParrafo">Código de Plantilla Párrafo</param>
+            <returns>Lista de variables de un párrafo de acuerdo al código de párrafo</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.PlantillaLogicRepository.BuscarNotasPiePorPlantilla(System.Nullable{System.Guid},System.Nullable{System.Guid},System.Int32,System.Int32)">
+            <summary>
+            Permite la búsqueda de notas al pie por plantilla
+            </summary> 
+            <param name="codigoPlantillaNotaPie">Código plantilla nota pie</param>
+            <param name="codigoPlantilla">Código de Plantilla</param>    
+            <param name="numeroPagina">Total de Páginas</param>
+            <param name="registroPagina">Total de Registros por Página</param>
+            <returns>Lista de plantilla párrafo</returns>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.VariableCampoLogicRepository">
+            <summary>
+            Implementación de Variable Campo
+            </summary>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.VariableCampoLogicRepository.BuscarCampo(System.Nullable{System.Guid},System.Nullable{System.Guid},System.String,System.Nullable{System.Byte})">
+            <summary>
+            Busca campos de variable
+            </summary>
+            <param name="codigoVariableCampo">Código de Campo</param>
+            <param name="codigoVariable">Código de Variable</param>
+            <param name="nombre">Nombre</param>
+            <param name="orden">Orden</param>
+            <returns>Lista de Campos</returns>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.VariableListaLogicRepository">
+            <summary>
+            Implementación de Variable Lista
+            </summary>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.VariableListaLogicRepository.BuscarLista(System.Nullable{System.Guid},System.Nullable{System.Guid},System.String)">
+            <summary>
+            Busca lista de variable
+            </summary>
+            <param name="codigoVariableLista">Codigo de variable lista</param>
+            <param name="codigoVariable">Codigo de variable</param>
+            <param name="nombre">Nombre de lista</param>
+            <returns>Lista de opciones de la variable</returns>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.VariableLogicRepository">
+            <summary>
+            Implementación del repositorio Variable
+            </summary>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.VariableLogicRepository.BuscarVariableGlobal(System.Nullable{System.Guid})">
+            <summary>
+            Permite la búsqueda de variables de acuerdo al indicador global
+            </summary>
+            <returns>Lista de variables de acuerdo al indicador global</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Repository.Query.Contractual.VariableLogicRepository.BuscarVariable(System.Nullable{System.Guid},System.String,System.String,System.String,System.Nullable{System.Boolean},System.Nullable{System.Guid},System.Nullable{System.Boolean})">
+            <summary>
+            Realiza la busqueda de variables 
+            </summary>
+            <param name="codigoVariable">Código de variable</param>
+            <param name="identificador">Identificador</param>
+            <param name="nombre">Nombre</param>
+            <param name="codigoTipo">Código de Tipo</param>
+            <param name="indicadorGlobal">Indicador Global</param>
+            <param name="codigoPlantilla">Código de plantilla</param>
+            <returns>Lista de variables</returns>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.Core.QueryContract.Contractual.ProveedorLogicRepository">
+            <summary>
+            Implementación del repositorio Proveedor
+            </summary>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Core.QueryContract.Contractual.ProveedorLogicRepository.BuscarProveedorOracle(System.Nullable{System.Guid},System.String,System.String,System.String,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            Realiza la búsqueda de Proveedores del Servicio Web
+            </summary>
+            <param name="codigoProveedor">Código de Proveedor</param>
+            <param name="codigoIdentificacion">Código de Identificacion</param>
+            <param name="nombre">Nombre</param>
+            <param name="nombreComercial">Nombre Comercial</param>
+            <param name="tipoDocumento">Tipo de Documento</param>
+            <param name="numeroDocumento">Número de Documento</param>
+            <param name="numeroPagina">Número de Página</param>
+            <param name="registroPagina">Registros por Página</param>
+            <returns>Lista de Proveedores del Servicio Web</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Core.QueryContract.Contractual.ProveedorLogicRepository.BuscarProveedorSAP(System.Nullable{System.Guid},System.String,System.String,System.String,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            Realiza la búsqueda de Proveedores del Servicio Web
+            </summary>
+            <param name="codigoProveedor">Código de Proveedor</param>
+            <param name="codigoIdentificacion">Código de Identificacion</param>
+            <param name="nombre">Nombre</param>
+            <param name="nombreComercial">Nombre Comercial</param>
+            <param name="tipoDocumento">Tipo de Documento</param>
+            <param name="numeroDocumento">Número de Documento</param>
+            <param name="numeroPagina">Número de Página</param>
+            <param name="registroPagina">Registros por Página</param>
+            <returns>Lista de Proveedores del Servicio Web</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Core.QueryContract.Contractual.ProveedorLogicRepository.RegistrarProveedorContrato(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Realiza el registro de proveedores
+            </summary>        
+            <param name="codigoIdentificacion">Código de Identificacion</param>
+            <param name="nombre">Nombre</param>
+            <param name="nombreComercial">Nombre Comercial</param>
+            <param name="tipoDocumento">Tipo de Documento</param>
+            <param name="numeroDocumento">Número de Documento</param>
+            <param name="numeroPagina">Número de Página</param>
+            <param name="registroPagina">Registros por Página</param>
+            <returns>Registro de Proveedor encontrado o registrado</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Core.QueryContract.Contractual.ProveedorLogicRepository.BuscarProveedor(System.Nullable{System.Guid},System.String,System.String,System.String,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            Realiza la búsqueda de Proveedores del Servicio Web
+            </summary>
+            <param name="codigoProveedor">Código de Proveedor</param>
+            <param name="codigoIdentificacion">Código de Identificacion</param>
+            <param name="nombre">Nombre</param>
+            <param name="nombreComercial">Nombre Comercial</param>
+            <param name="tipoDocumento">Tipo de Documento</param>
+            <param name="numeroDocumento">Número de Documento</param>
+            <param name="numeroPagina">Número de Página</param>
+            <param name="registroPagina">Registros por Página</param>
+            <returns>Lista de Proveedores del Servicio Web</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Core.QueryContract.Contractual.ProveedorLogicRepository.BuscarProveedorNombreRuc(System.Nullable{System.Guid},System.String,System.String,System.String,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="codigoProveedor"></param>
+            <param name="codigoIdentificacion"></param>
+            <param name="nombre"></param>
+            <param name="nombreComercial"></param>
+            <param name="tipoDocumento"></param>
+            <param name="numeroDocumento"></param>
+            <param name="numeroPagina"></param>
+            <param name="registroPagina"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ProcesoAuditoriaLogicRepository">
+            <summary>
+            Implementación del repositorio Flujo Aprobacion
+            </summary>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ProcesoAuditoriaLogicRepository.BuscarBandejaProcesoAuditoria(System.Nullable{System.Guid},System.Nullable{System.Guid},System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.String)">
+            <summary>
+            Realiza la busqueda de Proceso Auditoria
+            </summary>
+            <param name="codigoAuditoria">Código de auditoria</param>
+            <param name="codigoUnidadOperativa">Código de unidad operativa</param>
+            <param name="fechaPlanificada">Fecha planificada</param>
+            <param name="fechaEjecucion">Fecha de Ejecución</param>
+            <param name="estadoRegistro">Estado de registro</param>
+            <returns>Procesos de Auditoria</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.ProcesoAuditoriaLogicRepository.RepiteProcesoAuditoria(System.Guid,System.DateTime)">
+            <summary>
+            Verifica si se repite un proceso de Auditoria
+            </summary>
+            <param name="codigoUnidadOperativa">Código de Unidad Operativa</param>
+            <param name="fechaPlanificada">Fecha Planificada</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.FlujoAprobacionLogicRepository">
+            <summary>
+            Implementación del repositorio Flujo Aprobacion
+            </summary>
+        </member>
+        <!-- El comentario XML con formato incorrecto se ha omitido para el miembro "M:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.FlujoAprobacionLogicRepository.BuscarBandejaFlujoAprobacion(System.Nullable{System.Guid},System.Nullable{System.Guid},System.Nullable{System.Boolean},System.String)" -->
+        <member name="M:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.FlujoAprobacionLogicRepository.BuscarBandejaFlujoAprobacionEstadio(System.Nullable{System.Guid},System.Nullable{System.Guid})">
+            <summary>
+            Realiza la búsqueda de Flujo Aprobacion Estadio
+            </summary>
+            <param name="codigoFlujoAprobacionEstadio">Codigo Flujo Aprobacion Estadio</param>
+            <param name="codigoFlujoAprobacion">Codigo Flujo Aprobacion</param>
+            <returns>registros Flujo aprobacion con los datos de busqueda</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.FlujoAprobacionLogicRepository.EliminaParticipante(System.Guid)">
+            <summary>
+            Elimina Participante 
+            </summary>
+            <param name="codigoFlujoAprobacionEstadio">codigo Flujo Aprobacion Estadio</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.FlujoAprobacionLogicRepository.RepiteFlujoAprobacionEstadioOrden(System.Guid,System.Byte)">
+            <summary>
+            Valida Registro o edicion de campo Orden
+            </summary>
+            <param name="CodigoFlujoAprobacion">Codigo Flujo Aprobacion</param>
+            <param name="orden">orden</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.FlujoAprobacionLogicRepository.RepiteFlujoAprobacionEstadioDescripcion(System.Guid,System.String)">
+            <summary>
+            Valida Registro o edicion de campo Descripcion
+            </summary>
+            <param name="CodigoFlujoAprobacion">Codigo Flujo Aprobacion</param>
+            <param name="descripcion">descripcion</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.FlujoAprobacionLogicRepository.CopiarEstadio(System.Guid,System.Guid,System.String,System.String)">
+            <summary>
+            Copia estadios
+            </summary>
+            <param name="codigoFlujoAprobacionHasta">codigo Flujo Aprobacion Hasta</param>
+            <param name="codigoFlujoAprobacionADesde">codigo Flujo AprobacionA Desde</param>
+            <returns>Indicador con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.FlujoAprobacionLogicRepository.BuscarFlujoAprobacionTipoServicio(System.Nullable{System.Guid},System.Nullable{System.Guid},System.String,System.String)">
+            <summary>
+            Realiza la búsqueda de Flujo Aprobación Tipo de Servicio
+            </summary>
+            <param name="codigoFlujoAprobacionTipoServicio">Código Flujo Aprobación Tipo de Servicio</param>
+            <param name="codigoFlujoAprobacion">Código de Flujo de Aprobación</param>
+            <param name="codigoTipoServicio">Código de Tipo de Servicio</param>
+            <param name="estadoRegistro">Estado de Registro</param>
+            <returns>Lista de Flujo Aprobación Tipo de Servicio</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.FlujoAprobacionLogicRepository.BuscarFlujoAprobacionParticipante(System.Nullable{System.Guid})">
+            <summary>
+            Realiza la búsqueda de Flujo Aprobacion Participante
+            </summary>
+            <param name="CodigoFlujoAprobacion">Codigo Flujo Aprobacion</param>
+            <returns>registros Flujo aprobacion con los datos de busqueda</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.FlujoAprobacionLogicRepository.BuscarFlujoAprobacionEstadioDescripcion(System.String,System.String)">
+            <summary>
+            Realiza la búsqueda de Estadios de Flujo de Aprobación Estadio
+            </summary>
+            <param name="descripcion">Descripción de Estadio</param>
+            <param name="estadoRegistro">Estado de Registro</param>
+            <returns>Lista de Estadios de Flujo de Aprobación Estadio</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.FlujoAprobacionLogicRepository.ActualizarTrabajadorOriginalFlujo(System.Guid)">
+            <summary>
+            Actualiza el reemplazo al trabajador original
+            </summary>
+            <param name="codigoTrabajador">Codigo de trabajador</param>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.FlujoAprobacionLogicRepository.BuscarFlujoAprobacionTipoContrato(System.Nullable{System.Guid},System.Nullable{System.Guid},System.String,System.String)">
+            <summary>
+            Realiza la búsqueda de Flujo Aprobación Tipo de Contrato
+            </summary>
+            <param name="codigoFlujoAprobacionTipoContrato">Código Flujo Aprobación Tipo de contrato</param>
+            <param name="codigoFlujoAprobacion">Código de Flujo de Aprobación</param>
+            <param name="codigoTipoContrato">Código de Tipo de Contrato</param>
+            <param name="estadoRegistro">Estado de Registro</param>
+            <returns>Lista de Flujo Aprobación Tipo de Contrato</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.QueryModel.Contractual.FlujoAprobacionLogicRepository.ObtenerResponsableSiguienteEstadioFlujoAprobacion(System.Guid,System.Byte,System.Guid,System.Guid)">
+            <summary>
+            Obtener el responsable del siguiente estadio de flujo de aprobación
+            </summary>
+            <param name="codigoFlujoAprobacion">Codigo Flujo Aprobacion</param>
+            <param name="orden">orden</param>        
+            <param name="codigoFlujoAprobacionEstadio">Código flujo de aprobación estadio</param>
+            <param name="codigoContratoEstadio">Código contrato estadio</param>
+            <returns>Código de responsable</returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,50 @@
+﻿@using Pe.Stracon.Politicas.Presentacion.Recursos.Base
+@using Pe.Stracon.Politicas.Presentacion.Recursos.General
+@using Pe.Stracon.Politicas.Infraestructura.QueryModel
+@using Pe.Stracon.Politicas.Infraestructura.Core.Context
+@model Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.UnidadOperativa.UnidadOperativaStaffFormulario
+
+<form id="frmUnidadOperativaStaffRegistro" onsubmit="return false;">    
+    <div class="row">
+        <div class="col-sm-5">
+            <div class="form-group">
+                <label>@UnidadOperativaResource.EtiquetaSistema</label>
+                @Html.DropDownList("slcCodigoSistema", Model.ListaSistema, new { id = "slcCodigoSistema", @class = "form-control", @validable = "required ValidarSistema" })
+            </div>
+        </div>
+        <div class="col-sm-5">
+            <div class="form-group">
+                <label for="txtNombreUsuario">@UnidadOperativaResource.EtiquetaNombre</label>
+                @Html.TextBox("txtUsuario", "", new { id = "txtUsuario", @class = "form-control", @validable = "required ValidarNombre" })
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <br />
+            <button class="btn btn-primary" id="btnGrabarRegistroUnidadOperativaStaff">@GenericoResource.BotonGrabar</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div id="divGrdResultUnidadOperativaStaff"></div>
+        </div>
+    </div>
+</form>
+<div class="comp-Modal-footer">
+    <button class="btn btn-default" id="btnCancelarRegistro">@GenericoResource.BotonCancelar</button>
+</div>
+<script type="text/javascript">
+    ns('Pe.Stracon.Politicas.Presentacion.General.UnidadOperativaResource');
+    Pe.Stracon.Politicas.Presentacion.General.UnidadOperativaResource.EtiquetaTituloFormularioStaff = '@Html.Raw(UnidadOperativaResource.EtiquetaTituloFormularioStaff)';
+
+
+</script>
+
+
+@*@section scripts
+{
+    <script type="text/javascript">        
+        ns('Pe.Stracon.Politicas.Presentacion.General.UnidadOperativaResource')
+        Pe.Stracon.Politicas.Presentacion.Base.GenericoResource.GridSistema = '@Html.Raw(UnidadOperativaResource.GridSistema)';
+        Pe.Stracon.Politicas.Presentacion.Base.GenericoResource.GridUsuario = '@Html.Raw(UnidadOperativaResource.GridUsuario)';       
+    </script>
+}*@

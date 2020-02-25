@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Pe.Stracon.Politicas.Presentacion</name>
+    </assembly>
+    <members>
+        <member name="T:Pe.Stracon.Politicas.Presentacion.BundleConfig">
+            <summary>
+            Controlador que muestra la vista inicial de Auth
+            </summary>
+            <remarks>
+            Creación:       GMD 20150430 <br />
+            Modificación:       <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.BundleConfig.RegisterBundles(System.Web.Optimization.BundleCollection)">
+            <summary>
+            Regitro de Auth
+            </summary>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.BundleConfig.GenerateDynamicScriptBundle(System.Web.Optimization.BundleCollection,System.IO.DirectoryInfo,System.String)">
+            <summary>
+            Generar dinamicamente el scrtip del bundle
+            </summary>
+            <param name="bundles"></param>
+            <param name="directory">Direcctorio</param>
+            <param name="pathDirectories">Mapeo de Direcctorios</param>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Presentacion.FilterConfig">
+            <summary>
+            Controlador que muestra la configuración del filtro
+            </summary>
+            <remarks>
+            Creación:       GMD 20150430 <br />
+            Modificación:       <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.FilterConfig.RegisterGlobalFilters(System.Web.Mvc.GlobalFilterCollection)">
+            <summary>
+            Metodo para Registrar Filtros GLobales
+            </summary>
+            <param name="filters">Filtro de Colección</param>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Presentacion.RouteConfig">
+            <summary>
+            Controlador que muestra la configuración de la ruta
+            </summary>
+            <remarks>
+            Creación:       GMD 20150430 <br />
+            Modificación:       <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.RouteConfig.RegisterRoutes(System.Web.Routing.RouteCollection)">
+            <summary>
+            Método para Registrar Routes
+            </summary>
+            <param name="routes">Routes</param>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Presentacion.WebApiConfig">
+            <summary>
+            Controlador que muestra la configración de la aplicación web
+            </summary>
+            <remarks>
+            Creación:       GMD 20150430 <br />
+            Modificación:       <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.WebApiConfig.Register(System.Web.Http.HttpConfiguration)">
+            <summary>
+            Clase para registrar
+            </summary>
+            <param name="config">configuración</param>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Presentacion.Areas.General.GeneralAreaRegistration">
+            <summary>
+            Controlador que muestra el registro del área general
+            </summary>
+            <remarks>
+            Creación:       GMD 20150430 <br />
+            Modificación:       <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Areas.General.GeneralAreaRegistration.AreaName">
+            <summary>
+            Método de tipo carácter de nombre de área
+            </summary>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Areas.General.GeneralAreaRegistration.RegisterArea(System.Web.Mvc.AreaRegistrationContext)">
+            <summary>
+            Método publico de registro de área
+            </summary>
+            <param name="context">Context</param>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Presentacion.Areas.Base.BaseAreaRegistration">
+            <summary>
+            Controlador que muestra la base de área de registración
+            </summary>
+            <remarks>
+            Creación:       GMD 20150430 <br />
+            Modificación:       <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Areas.Base.BaseAreaRegistration.AreaName">
+            <summary>
+            Método de tipo carácter de nombre de área
+            </summary>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Areas.Base.BaseAreaRegistration.RegisterArea(System.Web.Mvc.AreaRegistrationContext)">
+            <summary>
+            Método publico de registro de área
+            </summary>
+            <param name="context">Context</param>
+        </member>
+    </members>
+</doc>

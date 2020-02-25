@@ -1,0 +1,281 @@
+﻿@using Pe.Stracon.SGC.Presentacion.Core.Helpers
+@using Pe.Stracon.SGC.Presentacion.Recursos.Base
+@using Pe.Stracon.SGC.Presentacion.Recursos.Contractual
+@using Pe.Stracon.SGC.Infraestructura.Core.Context
+@model Pe.Stracon.SGC.Presentacion.Core.ViewModel.Contractual.ListadoContrato.ContratoParrafoFormulario
+
+<script type="text/javascript">
+    ns('Pe.Stracon.SGC.Presentacion.Contractual.ListadoContrato.FormularioContratoParrafo.Models');
+    Pe.Stracon.SGC.Presentacion.Contractual.ListadoContrato.FormularioContratoParrafo.Models.FormularioContratoParrafo = @(Html.Raw(Json.Encode(Model)));  
+</script>
+<input type="hidden" id="hdnCodigoContrato" />
+<form id="frmContratoParrafo" onsubmit="return false;"> 
+    <div id="tabParrafo">
+        @if (Model.ListaPlantillaParrafo != null)
+        {
+            Model.ListaVariablePorDefecto = Model.ListaVariablePorDefecto.Where(p => p.Codigo.ToString() != DatosConstantes.IdentificadorVariableDefecto.PrimerRepresentanteEmpresa && p.Codigo.ToString() != DatosConstantes.IdentificadorVariableDefecto.DniPrimerRepresentanteEmpresa && p.Codigo.ToString() != DatosConstantes.IdentificadorVariableDefecto.SegundoRepresentanteEmpresa && p.Codigo.ToString() != DatosConstantes.IdentificadorVariableDefecto.DniSegundoRepresentanteEmpresa && p.Codigo.ToString() != DatosConstantes.IdentificadorVariableDefecto.FirmaSGC).ToList();
+            
+            <ul>
+                @foreach (var tituloParrafo in Model.ListaPlantillaParrafo)
+                {
+                    <li><a href="#tabs-@tituloParrafo.CodigoPlantillaParrafo"><b>@tituloParrafo.Titulo</b></a></li>
+                }
+                <li><a href="#tabs-FinalizarContrato"><b>@ListadoContratoResource.EtiquetaFinalizarContrato</b></a></li>
+            </ul>
+                foreach (var opcion in Model.ListaPlantillaParrafo)
+                {
+                                        
+            <div id="tabs-@opcion.CodigoPlantillaParrafo">
+                @Html.Raw("<div id=\"divDialog" + opcion.CodigoPlantillaParrafo + "\">")
+                @*@Html.Raw("<form id=\"frmContratoParrafo" + opcion.CodigoPlantillaParrafo + "\">")*@
+                <div class="row">
+                    <div class="col-sm-4">
+                        <label><b>@ListadoContratoResource.EtiquetaVariables</b></label>
+                        <div class="box-MinHeightModal">
+                            @if (opcion.ListaPlantillaParrafoVariable != null)
+                            {
+                                var variablePorPlantilla = opcion.ListaPlantillaParrafoVariable;
+
+                                variablePorPlantilla = variablePorPlantilla.Where(p => p.IdentificadorVariable.ToString() != DatosConstantes.IdentificadorVariableDefecto.PrimerRepresentanteEmpresa && p.IdentificadorVariable.ToString() != DatosConstantes.IdentificadorVariableDefecto.DniPrimerRepresentanteEmpresa && p.IdentificadorVariable.ToString() != DatosConstantes.IdentificadorVariableDefecto.SegundoRepresentanteEmpresa && p.IdentificadorVariable.ToString() != DatosConstantes.IdentificadorVariableDefecto.DniSegundoRepresentanteEmpresa && p.IdentificadorVariable.ToString() != DatosConstantes.IdentificadorVariableDefecto.FirmaSGC).ToList();
+
+                                int i = 0;
+                                int j = 0;
+                                while (i < variablePorPlantilla.Count)
+                                {
+                                    j = i;
+                                    for (int contadorMayor = 1; contadorMayor <= 2; contadorMayor++)
+                                    {
+                                        i = j;
+                                <div class="row">
+
+                                    @for (int contador = 1; contador <= 2 && i < variablePorPlantilla.Count; contador++)
+                                    {
+                                        var plantillaParrafoVariable = variablePorPlantilla[i];
+                                        
+                                        
+                                        
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                @if (contadorMayor == 1)
+                                                {
+                                                    switch (plantillaParrafoVariable.CodigoTipoVariable)
+                                                    {
+                                                        case DatosConstantes.TipoVariable.Imagen:
+                                                    <label for="uplFrm">@plantillaParrafoVariable.NombreVariable</label>
+                                                            break;
+                                                        case DatosConstantes.TipoVariable.Tabla:
+                                                        case DatosConstantes.TipoVariable.Bien:
+                                                    <label for="btnFrm">@plantillaParrafoVariable.NombreVariable</label>
+                                                            break;
+                                                        case DatosConstantes.TipoVariable.Lista:
+                                                    <label for="slcFrm">@plantillaParrafoVariable.NombreVariable</label>
+                                                            break;
+                                                        default:
+                                                    <label for="txtFrm">@plantillaParrafoVariable.NombreVariable</label>
+                                                            break;
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    var variableGrabada = Model.ListaValoresVariableParrafo.Where(p => p.CodigoPlantillaParrafo == plantillaParrafoVariable.CodigoPlantillaParrafo &&
+                                                                                                                                p.CodigoVariable == plantillaParrafoVariable.CodigoVariable
+                                                                ).FirstOrDefault();
+
+                                                    string valorVariable = string.Empty;
+
+                                                    if (variableGrabada != null)
+                                                    {
+                                                        switch (variableGrabada.CodigoTipo)
+                                                        {
+                                                            case DatosConstantes.TipoVariable.Texto:
+                                                                valorVariable = variableGrabada.ValorTexto;
+                                                                break;
+                                                            case DatosConstantes.TipoVariable.Fecha:
+                                                                valorVariable = variableGrabada.ValorFechaString;
+                                                                break;
+                                                            case DatosConstantes.TipoVariable.Numero:
+                                                                valorVariable = variableGrabada.ValorNumero.ToString();
+                                                                break;
+                                                            case DatosConstantes.TipoVariable.Tabla:
+                                                                valorVariable = variableGrabada.ValorTabla;
+                                                                break;
+                                                            case DatosConstantes.TipoVariable.Bien:
+                                                                valorVariable = variableGrabada.ValorBien;
+                                                                break;
+                                                            case DatosConstantes.TipoVariable.Lista:
+                                                                valorVariable = variableGrabada.ValorLista.Value.ToString();
+                                                                break;
+                                                        }
+                                                    }
+
+                                                    switch (plantillaParrafoVariable.CodigoTipoVariable)
+                                                    {
+                                                        case DatosConstantes.TipoVariable.Imagen:
+                                                    <div>
+                                                        <div id="fileInput" class="fileUpload btn btn-default"
+                                                            data-toggle="tooltip" data-placement="top" title="" data-original-title="Peso máximo 20 kb.">
+                                                            <input type="file" class="upload" id='@string.Format("uplFrm{0}", plantillaParrafoVariable.CodigoPlantillaParrafoVariable)'
+                                                               identificadorControl ='@string.Format("variable{0}", plantillaParrafoVariable.CodigoPlantillaParrafo)'
+                                                               tipoVariable ='@plantillaParrafoVariable.CodigoTipoVariable'
+                                                               identificadorVariable ='@plantillaParrafoVariable.IdentificadorVariable'
+                                                               idPlantillaParrafoVariable ='@plantillaParrafoVariable.CodigoPlantillaParrafoVariable',
+                                                               idValidacion = '@plantillaParrafoVariable.CodigoPlantillaParrafoVariable.ToString().Replace("-", "_")',
+                                                               validable = '@string.Format("required Validar_{0}", @plantillaParrafoVariable.CodigoPlantillaParrafoVariable.ToString().Replace("-", "_").ToString())' 
+                                                               title='@plantillaParrafoVariable.DescripcionVariable' toggle="tooltip" data-placement="top" />
+                                                            <span>Seleccionar</span>
+                                                        </div>
+                                                    </div>
+                                                            break;
+                                                        case DatosConstantes.TipoVariable.Tabla:
+                                                        case DatosConstantes.TipoVariable.Bien:
+                                                        case DatosConstantes.TipoVariable.Firmante:
+                                                    @Html.TextBox("btnFrm" + plantillaParrafoVariable.CodigoPlantillaParrafoVariable, "",
+                                                        new
+                                                        {
+                                                            id = "btnFrm" + plantillaParrafoVariable.CodigoPlantillaParrafoVariable,
+                                                            @class = "btn btn-default",
+                                                            type = "button",
+                                                            tipoVariable = plantillaParrafoVariable.CodigoTipoVariable,
+                                                            identificadorControl = "variable" + plantillaParrafoVariable.CodigoPlantillaParrafo,
+                                                            identificadorVariable = plantillaParrafoVariable.IdentificadorVariable,
+                                                            idPlantillaParrafoVariable = plantillaParrafoVariable.CodigoPlantillaParrafoVariable,
+                                                            codigoVariable = plantillaParrafoVariable.CodigoVariable,
+                                                            idValidacion = plantillaParrafoVariable.CodigoPlantillaParrafoVariable.ToString().Replace("-", "_"),
+                                                            @validable = "required Validar_" + plantillaParrafoVariable.CodigoPlantillaParrafoVariable.ToString().Replace("-", "_").ToString(),
+                                                            title = plantillaParrafoVariable.DescripcionVariable, toggle = "tooltip", placement = "top"
+                                                        })
+                                                            break;
+                                                        case DatosConstantes.TipoVariable.Lista:
+
+                                                            <div>
+                                                                <select class="form-control" id='@("slcFrm" + plantillaParrafoVariable.CodigoPlantillaParrafoVariable)'
+                                                                                tipoVariable = '@plantillaParrafoVariable.CodigoTipoVariable'
+                                                                                identificadorControl = '@("variable" + plantillaParrafoVariable.CodigoPlantillaParrafo)'
+                                                                                identificadorVariable = '@(plantillaParrafoVariable.IdentificadorVariable)'
+                                                                                idPlantillaParrafoVariable = '@(plantillaParrafoVariable.CodigoPlantillaParrafoVariable)'
+                                                                                idValidacion = '@(plantillaParrafoVariable.CodigoPlantillaParrafoVariable.ToString().Replace("-", "_"))'
+                                                                                validable = '@string.Format("required Validar_{0}", @plantillaParrafoVariable.CodigoPlantillaParrafoVariable.ToString().Replace("-", "_").ToString())' 
+                                                                                title='@plantillaParrafoVariable.DescripcionVariable' toggle="tooltip" data-placement="top">
+
+                                                                    <option value="" data-descripcion="">@GenericoResource.EtiquetaSeleccionar</option>
+                                                                    @if (plantillaParrafoVariable.ListaOpcionesVariable != null && plantillaParrafoVariable.ListaOpcionesVariable.Count > 0)
+                                                                    {
+                                                                        foreach (var x in plantillaParrafoVariable.ListaOpcionesVariable)
+                                                                        {
+                                                                            if (valorVariable != string.Empty && valorVariable == x.CodigoVariableLista.ToString())
+                                                                            {
+                                                                        <option value="@x.CodigoVariableLista.ToString()" data-descripcion="@x.Descripcion" selected>@x.Nombre</option>
+                                                                            }
+                                                                            else
+                                                                            {
+                                                                        <option value="@x.CodigoVariableLista.ToString()" data-descripcion="@x.Descripcion">@x.Nombre</option>
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                </select>
+                                                            </div>
+
+                                                            break;
+
+                                                        default:
+                                                            string valorPorDefecto = "";
+                                                            foreach (var item in Model.ListaVariablePorDefecto)
+                                                            {
+                                                                if (plantillaParrafoVariable.IdentificadorVariable == item.Codigo.ToString())
+                                                                {
+                                                                    valorPorDefecto = item.Valor != null ? item.Valor.ToString() : "";
+                                                                }
+                                                            }
+
+                                                    @Html.TextBox("txtFrm" + plantillaParrafoVariable.CodigoPlantillaParrafoVariable, (valorVariable != string.Empty) ? valorVariable : valorPorDefecto,
+                                                            new
+                                                            {
+                                                                id = "txtFrm" + plantillaParrafoVariable.CodigoPlantillaParrafoVariable,
+                                                                @class = "form-control",
+                                                                tipoVariable = plantillaParrafoVariable.CodigoTipoVariable,
+                                                                identificadorControl = "variable" + plantillaParrafoVariable.CodigoPlantillaParrafo,
+                                                                identificadorVariable = plantillaParrafoVariable.IdentificadorVariable,
+                                                                idPlantillaParrafoVariable = plantillaParrafoVariable.CodigoPlantillaParrafoVariable,
+                                                                idValidacion = plantillaParrafoVariable.CodigoPlantillaParrafoVariable.ToString().Replace("-", "_"),
+                                                                @validable = "required Validar_" + plantillaParrafoVariable.CodigoPlantillaParrafoVariable.ToString().Replace("-", "_").ToString(),
+                                                                title = plantillaParrafoVariable.DescripcionVariable, toggle = "tooltip", placement = "top"
+                                                            })
+                                                            break;
+                                                    }
+                                                }
+                                            </div>
+                                        </div>
+                                                i++;
+                                    }
+                                </div>
+                                    }
+                                }
+                            }
+                        </div>
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <label><b>@ListadoContratoResource.EtiquetaVistaPrevia</b></label>
+                                <div class="form-group">
+                                    <div class="wrap-MarcoDocumento">
+                                        @Html.Raw("<div id=\"divParrafo" + opcion.CodigoPlantillaParrafo + "\" class=\"box-MarcoDocumento box-MardocumentoA4\">")
+                                        @Html.Raw(opcion.Contenido)
+                                        @Html.Raw("</div>")
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @*@Html.Raw("</form>")*@
+                @Html.Raw("</div>")
+            </div>
+                }
+            <div id="tabs-FinalizarContrato">
+                <div class="row">
+                    <div class="col-sm-11">
+                        <div class="box-heightExacto">
+                            <div class="form-group">
+                                <label for="chkFrmSolicitarModificacion">@FlujoAprobacionResource.EtiquetaSolicitarModificacion</label>
+                                <div>
+                                    @Html.CheckBox("chkFrmSolicitarModificacion", false, new { @id = "chkFrmSolicitarModificacion" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="txtFrmModificacionSolicitada">@FlujoAprobacionResource.EtiquetaDescripcionModificacionSolicitada</label>
+                                @Html.TextArea("txtFrmModificacionSolicitada", null, new { @class = "form-control", @id = "txtFrmModificacionSolicitada", disabled = "disabled", @validable = "required ValidarModificacionSolicitada", @rows = "6", @maxlength = 1000 })
+                            </div>
+                            <button class="btn btn-primary" id="btnFrmContratoVistaPreviaGrabar">@GenericoResource.BotonFinalizarContrato</button>
+                        </div>
+                    </div>
+                    <div class="col-sm-7">
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</form>
+<div class="comp-Modal-footer">
+    <button class="btn btn-default" id="btnFrmContratoParrafoCancelar">@GenericoResource.BotonCancelar</button>
+    <button class="btn btn-default" id="btnFrmContratoParrafoAnterior">@GenericoResource.BotonAnterior</button>
+    <button class="btn btn-primary" id="btnFrmContratoParrafoSiguiente">@GenericoResource.BotonSiguiente</button>
+    <button class="btn btn-default" id="btnFrmContratoParrafoGrabarParcialmente">@GenericoResource.BotonGrabar</button>
+    <button class="btn btn-default" id="btnFrmContratoParrafoVistaPrevia">@GenericoResource.BotonVistaPrevia</button>
+</div>
+
+@foreach (var parrafo in Model.ListaPlantillaParrafo)
+{
+    foreach (var variable in parrafo.ListaPlantillaParrafoVariable)
+    {
+    <script type="text/javascript">
+        ns('Pe.Stracon.SGC.Presentacion.Recursos.ValidacionVariable')
+        Pe.Stracon.SGC.Presentacion.Recursos.ValidacionVariable.Validar_@variable.CodigoPlantillaParrafoVariable.ToString().Replace("-", "_").ToString() = '@Html.Raw(variable.NombreVariable)';
+    </script>
+    }
+}
+<script type="text/javascript">
+    ns('Pe.Stracon.SGC.Presentacion.Recursos.ValidacionVariable')
+    Pe.Stracon.SGC.Presentacion.Recursos.ValidacionVariable.ValidarModificacionSolicitada = '@Html.Raw(ListadoContratoResource.EtiquetaDescripcionModificacionSolicitada)';
+</script>
+@CustomHtmlHelper.RenderViewJs()

@@ -1,0 +1,198 @@
+﻿@using Pe.Stracon.SGC.Presentacion.Recursos.Base
+@using Pe.Stracon.SGC.Presentacion.Recursos.Contractual
+@model Pe.Stracon.SGC.Presentacion.Core.ViewModel.Contractual.Bienes.BienesFormulario
+
+<form id="frmBien">
+    <input type="hidden" id="hdnFrmCodigoBien" value="@Model.Bien.CodigoBien" />
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="form-group">
+                <label for="txtFrmCodigoIdentificacion">@BienesResource.EtiquetaCodigoIdentificacion</label>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="form-group">
+                <label for="slcFrmTipoBien">@BienesResource.EtiquetaTipoBien</label>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="form-group">
+                <label for="txtFrmNumeroSerie">@BienesResource.EtiquetaNumSerie</label>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="form-group">
+                @Html.TextBox("txtFrmCodigoIdentificacion", Model.Bien.CodigoIdentificacion, new { @class = "form-control", @id = "txtFrmCodigoIdentificacion", @validable = "required ValidarCodigoIdentificacion", maxlength = "50" })
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="form-group">
+                @Html.DropDownListFor(model => model.Bien.CodigoTipoBien, new SelectList(Model.lstTipoBien, "Value", "Text"), null, new { @class = "form-control", id = "slcFrmTipoBien", @validable = "required ValidarTipoBien" })
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="form-group">
+                @Html.TextBox("txtFrmNumeroSerie", Model.Bien.NumeroSerie, new { @class = "form-control", @id = "txtFrmNumeroSerie", @validable = "required ValidarNumeroSerie" })
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="form-group">
+                <label for="txtFrmDescripcion">@BienesResource.EtiquetaDescripcion</label>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="form-group">
+                <label for="txtFrmMarca">@BienesResource.EtiquetaMarca</label>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="form-group">
+                <label for="txtFrmModelo">@BienesResource.EtiquetaModelo</label>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="form-group">
+                @Html.TextBox("txtFrmDescripcion", Model.Bien.Descripcion, new { @class = "form-control text-uppercase", @id = "txtFrmDescripcion", @validable = "required ValidarDescripcion" })
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="form-group">
+                @Html.TextBox("txtFrmMarca", Model.Bien.Marca, new { @class = "form-control text-uppercase", @id = "txtFrmMarca", @validable = "required ValidarMarca" })
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="form-group">
+                @Html.TextBox("txtFrmModelo", Model.Bien.Modelo, new { @class = "form-control text-uppercase", @id = "txtFrmModelo", @validable = "required ValidarModelo" })
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="form-group">
+                <label for="txtFrmFechaAdq">@BienesResource.EtiquetaFechaAdquisicion</label>
+            </div>
+        </div>
+     @*   <div class="col-sm-4">
+            <div class="form-group">
+                <label for="txtFrmVidaUtil">@BienesResource.EtiquetaTiempoVidaUtil</label>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="form-group">
+                <label for="txtFrmValorResidual">@BienesResource.EtiquetaValorResidual</label>
+            </div>
+        </div>*@
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="form-group">
+                <div class="input-group">
+                    @Html.TextBox("txtFrmFechaAdq", Model.Bien.FechaAdquisicion, new { @class = "form-control", @id = "txtFrmFechaAdq", @validable = "required ValidarFechaAdquisicion" })
+                    <div class="input-group-addon"><span class="fa fa-calendar"></span></div>
+                </div>
+            </div>
+        </div>
+      @*  <div class="col-sm-4">
+            <div class="form-group">
+                @Html.TextBox("txtFrmVidaUtil", Model.Bien.TiempoVidaString, new { @class = "form-control", @id = "txtFrmVidaUtil", @validable = "required ValidarTiempoVidaUtil", mask = "decimal", maxlength = "8" })
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="form-group">
+                @Html.TextBox("txtFrmValorResidual", Model.Bien.ValorResidualString, new { @class = "form-control", @id = "txtFrmValorResidual", @validable = "required ValidarValorResidual", mask = "decimal", maxlength = "8" })
+            </div>
+        </div>*@
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="form-group">
+                <label for="slcFrmTipoTarifa">@BienesResource.EtiquetaTipoTarifa</label>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="form-group">
+                <label for="slcPeriodoAlquiler">@BienesResource.EtiquetaTipoPeriodoAlquiler</label>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="form-group">
+                <label for="txtValorAlquiler">@BienesResource.EtiquetaValorAlquiler</label>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="form-group">
+                @Html.DropDownListFor(model => model.Bien.CodigoTipoTarifa, new SelectList(Model.lstTipoTarifa, "Value", "Text"), null, new { @class = "form-control", id = "slcFrmTipoTarifa", @validable = "required ValidarTipoTarifa" })
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="form-group">
+                @Html.DropDownListFor(model => model.Bien.CodigoPeriodoAlquiler, new SelectList(Model.lstPeriodoAlquiler, "Value", "Text"), null, new { @class = "form-control", id = "slcPeriodoAlquiler", @validable = "required ValidarTipoPeriodoAlquiler" })
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="form-group">
+                @if (Model.Bien.CodigoTipoTarifa == @BienesResource.CodigoTarifaFijo)
+                {
+                    @Html.TextBox("txtValorAlquiler", Model.Bien.ValorAlquilerString, new { @class = "form-control", @id = "txtValorAlquiler", @validable = "required ValidarValorAlquiler", mask = "decimal", maxlength = "8" })
+                }
+                else
+                {
+                    @Html.TextBox("txtValorAlquiler", Model.Bien.ValorAlquilerString, new { @class = "form-control", @id = "txtValorAlquiler", disabled = "", @validable = "required ValidarValorAlquiler", mask = "decimal", maxlength = "8" })
+                }
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="form-group">
+                <label for="slcMoneda">@BienesResource.EtiquetaMoneda</label>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="form-group">
+                <label for="slcMesInicioAlquiler">@BienesResource.EtiquetaMesInicioAlquiler</label>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="form-group">
+                <label for="spnFrmAnioInicioAlquiler">@BienesResource.EtiquetaAnioInicioAlquiler</label>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="form-group">
+                @Html.DropDownListFor(model => model.Bien.CodigoMoneda, new SelectList(Model.lstMoneda, "Value", "Text"), null, new { @class = "form-control", id = "slcMoneda", @validable = "required ValidarMoneda" })
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="form-group">
+                @Html.DropDownListFor(model => model.Bien.MesInicioAlquiler, new SelectList(Model.lstMesInicioAlquiler, "Value", "Text"), null, new { @class = "form-control", id = "slcFrmMesInicioAlquiler", @validable = "required ValidarMesInicioAlquiler" })
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="form-group">
+                @Html.TextBox("spnFrmAnioInicioAlquiler", Model.Bien.AnioInicioAlquiler, new { @class = "form-control", @id = "spnFrmAnioInicioAlquiler", @validable = "required ValidarAnioInicioAlquiler", maxlength = "4" })
+            </div>
+        </div>
+    </div>
+</form>
+<div class="comp-Modal-footer">
+    <button class="btn btn-default" id="btnFrmBienCancelar">@GenericoResource.BotonCancelar</button>
+    <button class="btn btn-primary" id="btnFrmBienGrabar">@GenericoResource.BotonGrabar</button>
+</div>
+<script type="text/javascript">
+    ns('Pe.Stracon.SGC.Presentacion.Contractual.Bienes.ListasBienRegistro')
+    Pe.Stracon.SGC.Presentacion.Contractual.Bienes.ListasBienRegistro.ListaNSeries = @Html.Raw(Json.Encode(Model.lstNumeroSerie) + ";")
+    Pe.Stracon.SGC.Presentacion.Contractual.Bienes.ListasBienRegistro.ListaDescrip = @Html.Raw(Json.Encode(Model.lstDescripcion) + ";")
+    Pe.Stracon.SGC.Presentacion.Contractual.Bienes.ListasBienRegistro.ListaMarca = @Html.Raw(Json.Encode(Model.lstMarca) + ";")
+    Pe.Stracon.SGC.Presentacion.Contractual.Bienes.ListasBienRegistro.ListaModelo = @Html.Raw(Json.Encode(Model.lstModelo) + ";")
+</script>

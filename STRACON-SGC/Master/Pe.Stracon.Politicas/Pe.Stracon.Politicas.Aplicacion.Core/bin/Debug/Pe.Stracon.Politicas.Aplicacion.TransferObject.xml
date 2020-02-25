@@ -1,0 +1,1673 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Pe.Stracon.Politicas.Aplicacion.TransferObject</name>
+    </assembly>
+    <members>
+        <member name="T:Pe.Stracon.Politicas.Aplicacion.TransferObject.Base.Filtro">
+            <summary>
+            Base para los DTOS filtros
+            </summary>
+            <remarks>
+            Creación:   GMD 22122014 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.TransferObject.Base.Filtro.#ctor">
+            <summary>
+            Constructor de filtro
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Base.Filtro.NumeroPagina">
+            <summary>
+            Pagina solicitada
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Base.Filtro.RegistrosPagina">
+            <summary>
+            Registros por Pagina
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Aplicacion.TransferObject.Base.Paginado">
+            <summary>
+            Campos de Paginacion
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Base.Paginado.FilasTotal">
+            <summary>
+            Filas totales
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Base.Paginado.NumeroFila">
+            <summary>
+            Numero de filas
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Base.Paginado.IdentificadorFila">
+            <summary>
+            Identificador de fila
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Aplicacion.TransferObject.Base.ValidateModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.DataUnidadOperativaUsuarioConsultaRequest">
+            <summary>
+            Representa el objeto de filtro a aplicar a la Data Unidad Operativa Usuario consulta
+            </summary>
+            <remarks>
+            Creación:   GMD 20161122 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.DataUnidadOperativaUsuarioConsultaRequest.CodigoUnidadUsuarioConsulta">
+            <summary>
+            Código de Identificación del usuario de consulta de una unidad operativa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.DataUnidadOperativaUsuarioConsultaRequest.CodigoUnidadOperativa">
+            <summary>
+            Código de unidad operativa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.DataUnidadOperativaUsuarioConsultaRequest.CodigoTrabajador">
+            <summary>
+            CodigoTrabajador
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.DataUnidadOperativaStaffRequest.CodigoUnidadOperativa">
+            <summary>
+            Código de unidad operativa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.DataUnidadOperativaStaffRequest.CodigoUnidadOperativaStaff">
+            <summary>
+            Código de Identificación de la unidad operativa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.DataUnidadOperativaStaffRequest.CodigoSistema">
+            <summary>
+            CodigoSistema
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.DataUnidadOperativaStaffRequest.CodigoTrabajador">
+            <summary>
+            CodigoTrabajador
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroRequest">
+            <summary>
+            Representa el objeto de filtro a aplicar a la busqueda de parametro
+            </summary>
+            <remarks>
+            Creación:   GMD 20150327 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroRequest.#ctor">
+            <summary>
+            Constructor de la clase
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroRequest.CodigoParametro">
+            <summary>
+            Código del Parametro
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroRequest.IndicadorEmpresa">
+            <summary>
+            Indicador Empresa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroRequest.CodigoIdentificador">
+            <summary>
+            Código Identificador
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroRequest.CodigoEmpresa">
+            <summary>
+            Código de Empresa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroRequest.CodigoSistema">
+            <summary>
+            Código de Sistema
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroRequest.TipoParametro">
+            <summary>
+            Tipo de Parámetro
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroRequest.Nombre">
+            <summary>
+            Nombre
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroRequest.Descripcion">
+            <summary>
+            Descripción
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroRequest.IndicadorPermiteAgregar">
+            <summary>
+            Indicador Permite Agregar
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroRequest.IndicadorPermiteModificar">
+            <summary>
+            Indicador Permite Modificar
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroRequest.IndicadorPermiteEliminar">
+            <summary>
+            Indicador Permite Eliminar
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroRequest.EstadoRegistro">
+            <summary>
+            Estado de Registro
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.DataUnidadOperativaRequest">
+            <summary>
+            Representa el objeto de filtro a aplicar a la Data Unidad Operativa
+            </summary>
+            <remarks>
+            Creación:   GMD 20150327 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.DataUnidadOperativaRequest.CodigoUnidadOperativa">
+            <summary>
+            Código de unidad operativa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.DataUnidadOperativaRequest.CodigoIdentificacion">
+            <summary>
+            Código de Identificación de la unidad operativa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.DataUnidadOperativaRequest.Nombre">
+            <summary>
+            Nombre 
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.DataUnidadOperativaRequest.IndicadorActiva">
+            <summary>
+            Indicador de activación 
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.DataUnidadOperativaRequest.CodigoNivelJerarquia">
+            <summary>
+            Nombre 
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.DataUnidadOperativaRequest.CodigoUnidadOperativaPadre">
+            <summary>
+            Nombre de unidad operativa padre
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.DataUnidadOperativaRequest.CodigoTipoUnidadOperativa">
+            <summary>
+            Tipo de unidad operativa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.DataUnidadOperativaRequest.CodigoResponsable">
+            <summary>
+            Nombre del responsable
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.DataUnidadOperativaRequest.CodigoZonaHoraria">
+            <summary>
+            Nombre del responsable
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.DataUnidadOperativaRequest.CodigoPrimerRepresentante">
+            <summary>
+            Código del primer representante
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.DataUnidadOperativaRequest.CodigoSegundoRepresentante">
+            <summary>
+            Código del segundo representante
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.DataUnidadOperativaRequest.CodigoTercerRepresentante">
+            <summary>
+            Código del segundo representante
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.DataUnidadOperativaRequest.CodigoCuartoRepresentante">
+            <summary>
+            Código del segundo representante
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.DataUnidadOperativaRequest.Direccion">
+            <summary>
+            Dirección
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroSeccionRequest">
+            <summary>
+            Representa el objeto de filtro a aplicar a la busqueda de parametro sección
+            </summary>
+            <remarks>
+            Creación:   GMD 20150327 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroSeccionRequest.#ctor">
+            <summary>
+            Constructor Parametro Secccion Request
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroSeccionRequest.CodigoParametro">
+            <summary>
+            Código del Parametro
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroSeccionRequest.CodigoSeccion">
+            <summary>
+            Código de Sección
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroSeccionRequest.Nombre">
+            <summary>
+            Nombre de Sección
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroSeccionRequest.CodigoTipoDato">
+            <summary>
+            Código de Tipo de Dato
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroSeccionRequest.IndicadorPermiteModificar">
+            <summary>
+            Indicador de Permite Modificar
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroSeccionRequest.IndicadorObligatorio">
+            <summary>
+            Indicador de sección obligatorio
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroSeccionRequest.IndicadorSistema">
+            <summary>
+            Indicador de Sistema
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroSeccionRequest.CodigoParametroRelacionado">
+            <summary>
+            Código de Parametro Relacionado
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroSeccionRequest.CodigoSeccionRelacionado">
+            <summary>
+            Código de Sección Relacionada
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroSeccionRequest.CodigoSeccionRelacionadoMostrar">
+            <summary>
+            Código de Sección Relacionada a Mostrar
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroSeccionRequest.EstadoRegistro">
+            <summary>
+            Estado de Registro
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.FiltroTrabajador">
+            <summary>
+            Representa el objeto de filtro a aplicar a la busqueda de trabajador
+            </summary>
+            <remarks>
+            Creación:   GMD 20150327 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.FiltroTrabajador.CodigoTrabajador">
+            <summary>
+            Código de trabajador
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.FiltroTrabajador.Nombre">
+            <summary>
+            Nombre
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.FiltroTrabajador.CodigoIdentifiacion">
+            <summary>
+            Código de identifiación
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.FiltroTrabajador.CodigoTipoDocumentoIdentidad">
+            <summary>
+            Código tipo documento de identidad
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.FiltroTrabajador.NumeroDocumentoIdentidad">
+            <summary>
+            Número documento de identidad
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest">
+            <summary>
+            Representa el objeto de filtro a aplicar a la busqueda de parametro valor
+            </summary>
+            <remarks>
+            Creación:   GMD 20150327 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest.#ctor">
+            <summary>
+            Constructor de la Clase
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest.CodigoParametro">
+            <summary>
+            Código del Parametro
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest.CodigoIdentificador">
+            <summary>
+            Código Identificador
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest.CodigoEmpresa">
+            <summary>
+            Código de Empresa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest.CodigoSistema">
+            <summary>
+            Código de Sistema
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest.IndicadorEmpresa">
+            <summary>
+            Identificador Empresa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest.TipoParametro">
+            <summary>
+            Tipo de Parámetro
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest.CodigoSeccion">
+            <summary>
+            Código de Sección
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest.CodigoValor">
+            <summary>
+            Código del Valor
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest.Valor">
+            <summary>
+            Valor
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest.RegistroObjeto">
+            <summary>
+            Registro de Párametro en tipo Object
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest.RegistroCadena">
+            <summary>
+            Registro de Párametro en tipo String
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest.EstadoRegistro">
+            <summary>
+            Estado de Registro
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest.Usuario">
+            <summary>
+            Usuario
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest.Terminal">
+            <summary>
+            Terminal
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest.Accion">
+            <summary>
+            Tipo de accion a realizar.
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.PlantillaNotificacionRequest">
+            <summary>
+            Representa el objeto request de Plantilla Notificacion
+            </summary>
+            <remarks>
+            Creación:   GMD 20150401 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.PlantillaNotificacionRequest.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.PlantillaNotificacionRequest.CodigoPlantillaNotificacion">
+            <summary>
+            Código Plantilla Notificacion
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.PlantillaNotificacionRequest.CodigoSistema">
+            <summary>
+            Código de Sistema
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.PlantillaNotificacionRequest.CodigoTipoNotificacion">
+            <summary>
+            Código Tipo de Notificación
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.PlantillaNotificacionRequest.Asunto">
+            <summary>
+            Asunto
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.PlantillaNotificacionRequest.IndicadorActiva">
+            <summary>
+            Indicador Activa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.PlantillaNotificacionRequest.IndicadorActivaFiltro">
+            <summary>
+            Indicador de Plantilla Activa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.PlantillaNotificacionRequest.Contenido">
+            <summary>
+            Contenido
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.PlantillaNotificacionRequest.CodigoTipoDestinatario">
+            <summary>
+            Código del Tipo de Destinatario
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.PlantillaNotificacionRequest.Destinatario">
+            <summary>
+            Destinatario
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.PlantillaNotificacionRequest.DestinatarioCopia">
+            <summary>
+            Destinatario en Copia
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.PlantillaNotificacionRequest.EstadoRegistro">
+            <summary>
+            Estado de Registro
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.TrabajadorRequest">
+            <summary>
+            Representa el objeto request de Trabajador
+            </summary>
+            <remarks>
+            Creación:   GMD 20150401 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.TrabajadorRequest.CodigoTrabajador">
+            <summary>
+            Código de Trabajador
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.TrabajadorRequest.CodigoIdentificacion">
+            <summary>
+            Código de Identificación
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.TrabajadorRequest.CodigoTipoDocumentoIdentidad">
+            <summary>
+            Código de Identificación
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.TrabajadorRequest.NumeroDocumentoIdentidad">
+            <summary>
+            Número de Documento Identidad
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.TrabajadorRequest.ApellidoPaterno">
+            <summary>
+            Apellido Paterno
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.TrabajadorRequest.ApellidoMaterno">
+            <summary>
+            Apellido Materno
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.TrabajadorRequest.Nombres">
+            <summary>
+            Nombre
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.TrabajadorRequest.NombreCompleto">
+            <summary>
+            Nombre Completo
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.TrabajadorRequest.Organizacion">
+            <summary>
+            Organización
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.TrabajadorRequest.Departamento">
+            <summary>
+            Departamento
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.TrabajadorRequest.Cargo">
+            <summary>
+            Cargo
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.TrabajadorRequest.TelefonoTrabajo">
+            <summary>
+            Teléfono Trabajo
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.TrabajadorRequest.Anexo">
+            <summary>
+            Anexo
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.TrabajadorRequest.TelefonoMovil">
+            <summary>
+            Teléfono Móvil
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.TrabajadorRequest.TelefonoPersonal">
+            <summary>
+            Teléfono Personal
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.TrabajadorRequest.CorreoElectronico">
+            <summary>
+            Correo Eléctronico
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.TrabajadorRequest.CodigoFirma">
+            <summary>
+            Codigo de Firma de trabajador.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.TrabajadorRequest.Firma">
+            <summary>
+            Firma de trabajador.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.TrabajadorRequest.Dominio">
+            <summary>
+            Dominio de trabajador.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.TrabajadorRequest.EstadoRegistro">
+            <summary>
+            Estado de Registro
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.TrabajadorRequest.NivelAlerta">
+            <summary>
+            Nivel de Alerta para la Calendarizacion
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.TrabajadorRequest.IndicadorTodaUnidadOperativa">
+            <summary>
+            Indica si el trabajador esta asignado a todas las unidades operativas
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.TrabajadorRequest.CodigoUnidadOperativaMatriz">
+            <summary>
+            Código Unidad Operativa Matriz
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.TrabajadorRequest.trabajadorUnidadOperativaRequest">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.FiltroUnidadOperativa">
+            <summary>
+            Representa el objeto de filtro a aplicar a la busqueda de unidad operativa
+            </summary>
+            <remarks>
+            Creación:   GMD 20150327 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.FiltroUnidadOperativa.CodigoUnidadOperativa">
+            <summary>
+            Código de Unidad Operativa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.FiltroUnidadOperativa.Nombre">
+            <summary>
+            Nombre a buscar
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.FiltroUnidadOperativa.Nivel">
+            <summary>
+            Nivel asociado
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.FiltroUnidadOperativa.UnidadSuperior">
+            <summary>
+            Unidad operativa superior
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.FiltroUnidadOperativa.Indicador">
+            <summary>
+            Estado
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.TrabajadorSuplenteRequest">
+            <summary>
+            Representa el objeto request de TrabajadorSuplente
+            </summary>
+            <remarks>
+            Creación:   GMD 20150401 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.TrabajadorSuplenteRequest.CodigoTrabajador">
+            <summary>
+            Código de trabajador
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.TrabajadorSuplenteRequest.CodigoSuplente">
+            <summary>
+            Código de Suplente
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.TrabajadorSuplenteRequest.FechaInicio">
+            <summary>
+            Fecha de inicio
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.TrabajadorSuplenteRequest.FechaFin">
+            <summary>
+            Fecha fin 
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.TrabajadorSuplenteRequest.Activo">
+            <summary>
+            Activo
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.TrabajadorSuplenteRequest.Ejecutado">
+            <summary>
+            Ejecutado
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.TrabajadorSuplenteRequest.EstadoRegistro">
+            <summary>
+            Estado de Registro
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.TrabajadorSuplenteRequest.PerfilesAgregados">
+            <summary>
+            Perfiles agregados temporales al ser reemplazo
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.TrabajadorSuplenteRequest.UsuarioSession">
+            <summary>
+            Usuario de Sesion
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.TrabajadorSuplenteRequest.Terminal">
+            <summary>
+            Terminal
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.TrabajadorUnidadOperativaRequest">
+            <summary>
+            Representa el objeto request de TrabajadorUnidadOperativa
+            </summary>
+            <remarks>
+            Creación:   GMD 20150401 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.TrabajadorUnidadOperativaRequest.CodigoTrabajadorUnidadOperativa">
+            <summary>
+            Código de TrabajadorUnidadOperativa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.TrabajadorUnidadOperativaRequest.CodigoUnidadOperativaMatriz">
+            <summary>
+            Código de Unidad Operativa Matriz
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.TrabajadorUnidadOperativaRequest.CodigoTrabajador">
+            <summary>
+            Código de trabajador
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.TrabajadorUnidadOperativaRequest.CodigoUnidadOperativa">
+            <summary>
+            Código de unidad operativa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.TrabajadorUnidadOperativaRequest.EstadoRegistro">
+            <summary>
+            Estado de Registro
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.CodigoValorResponse">
+            <summary>
+            Entidad que retorna el código y valor de un parámetro.
+            </summary>
+            <remarks>
+            Creación:   GMD 14042015 <br />
+            Modificación:            <br />
+            </remarks>
+            
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.CodigoValorResponse.Codigo">
+            <summary>
+            Código de parámetro
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.CodigoValorResponse.Valor">
+            <summary>
+            Valor de parámetro
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.ParametroResponse">
+            <summary>
+            Datos generales de parametro
+            </summary>
+            <remarks>
+            Creación:   GMD 22122014 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.ParametroResponse.CodigoParametro">
+            <summary>
+            Código de parametro
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.ParametroResponse.CodigoIdentificador">
+            <summary>
+            Código Identificador 
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.ParametroResponse.IndicadorEmpresa">
+            <summary>
+            Identificador Empresa 
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.ParametroResponse.DescripcionIndicadorEmpresa">
+            <summary>
+            Descripción de Identificador de Empresa 
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.ParametroResponse.CodigoEmpresa">
+            <summary>
+            Código Empresa 
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.ParametroResponse.CodigoEmpresaIdentificador">
+            <summary>
+            Código Identificador de Empresa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.ParametroResponse.NombreEmpresa">
+            <summary>
+            Nombre de Empresa 
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.ParametroResponse.CodigoSistema">
+            <summary>
+            Código Sistema 
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.ParametroResponse.CodigoSistemaIdentificador">
+            <summary>
+            Código Identificador del Sistema 
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.ParametroResponse.NombreSistema">
+            <summary>
+            Nombre del Sistema
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.ParametroResponse.TipoParametro">
+            <summary>
+            Tipo de Parámetro
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.ParametroResponse.DescripcionTipoParametro">
+            <summary>
+            Descripción de Tipo de Parámetro
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.ParametroResponse.Nombre">
+            <summary>
+            Nombre del Parametro
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.ParametroResponse.Descripcion">
+            <summary>
+            Descripción del Parametro
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.ParametroResponse.IndicadorPermiteAgregar">
+            <summary>
+            Indicador Permite Agregar 
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.ParametroResponse.IndicadorPermiteModificar">
+            <summary>
+            Indicador Permite Modificar 
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.ParametroResponse.IndicadorPermiteEliminar">
+            <summary>
+            Indicador Permite Eliminar 
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.ParametroResponse.EstadoRegistro">
+            <summary>
+            Estadro de Registro
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.ParametroSeccionResponse">
+            <summary>
+            Datos generales de parametro sección
+            </summary>
+            <remarks>
+            Creación:   GMD 22122014 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.ParametroSeccionResponse.CodigoParametro">
+            <summary>
+            Código de Parametro
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.ParametroSeccionResponse.CodigoSeccion">
+            <summary>
+            Código de Sección
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.ParametroSeccionResponse.Nombre">
+            <summary>
+            Nombre de Sección
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.ParametroSeccionResponse.IndicadorSistema">
+            <summary>
+            Indicador de sistema
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.ParametroSeccionResponse.CodigoTipoDato">
+            <summary>
+            Código de Tipo de Dato
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.ParametroSeccionResponse.DescripcionTipoDato">
+            <summary>
+            Descripción de Tipo de Dato
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.ParametroSeccionResponse.IndicadorPermiteModificar">
+            <summary>
+            Indicador de Permite Modificar
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.ParametroSeccionResponse.IndicadorObligatorio">
+            <summary>
+            Indicador de Sección Obligatorio
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.ParametroSeccionResponse.CodigoParametroRelacionado">
+            <summary>
+            Código de Parametro Relacionado
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.ParametroSeccionResponse.NombreParametroRelacionado">
+            <summary>
+            Nombre de Parámetro Relacionado
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.ParametroSeccionResponse.CodigoSeccionRelacionado">
+            <summary>
+            Código de Sección Relacionada
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.ParametroSeccionResponse.NombreSeccionRelacionado">
+            <summary>
+            Nombre de Sección Relacionada
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.ParametroSeccionResponse.CodigoSeccionRelacionadoMostrar">
+            <summary>
+            Código de Sección Relacionada a Mostrar
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.ParametroSeccionResponse.NombreSeccionRelacionadoMostrar">
+            <summary>
+            Nombre de Sección Relacionada a Mostrar
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.ParametroSeccionResponse.EstadoRegistro">
+            <summary>
+            Estadro de Registro
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.ParametroValorResponse">
+            <summary>
+            Datos generales de parametro valor
+            </summary>
+            <remarks>
+            Creación:   GMD 22122014 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.ParametroValorResponse.CodigoParametro">
+            <summary>
+            Código de Parámetro
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.ParametroValorResponse.CodigoIdentificador">
+            <summary>
+            Código Identificador
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.ParametroValorResponse.CodigoValor">
+            <summary>
+            Código de Valor
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.ParametroValorResponse.RegistroObjeto">
+            <summary>
+            Registro de Párametro en tipo Object
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.ParametroValorResponse.RegistroCadena">
+            <summary>
+            Registro de Párametro en tipo String
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.ParametroValorResponse.EstadoRegistro">
+            <summary>
+            Estado de Registro
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.ParametroValorResponse.Valor">
+            <summary>
+            Valor de parametro
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.ParametroValorResponse.CodigoSeccion">
+            <summary>
+            Código Sección
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.PlantillaNotificacionResponse">
+            <summary>
+            Representa el objeto response de Plantilla Notificacion
+            </summary>
+            <remarks>
+            Creación:   GMD 20150401 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.PlantillaNotificacionResponse.CodigoPlantillaNotificacion">
+            <summary>
+            Código Plantilla Notificacion
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.PlantillaNotificacionResponse.CodigoSistema">
+            <summary>
+            Código de Sistema
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.PlantillaNotificacionResponse.CodigoTipoNotificacion">
+            <summary>
+            Código Tipo de Notificación
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.PlantillaNotificacionResponse.Asunto">
+            <summary>
+            Asunto
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.PlantillaNotificacionResponse.IndicadorActiva">
+            <summary>
+            Indicador Activa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.PlantillaNotificacionResponse.Contenido">
+            <summary>
+            Contenido
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.PlantillaNotificacionResponse.ContenidoReCortado">
+            <summary>
+            Contenido Recortado
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.PlantillaNotificacionResponse.CodigoTipoDestinatario">
+            <summary>
+            Codigo Tipo Destinatario
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.PlantillaNotificacionResponse.Destinatario">
+            <summary>
+            Destinatario
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.PlantillaNotificacionResponse.DestinatarioCopia">
+            <summary>
+            Destinatario Copia
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.ResultResponse">
+            <summary>
+            Representa un objeto response de Resultado
+            </summary>
+            <remarks>
+            Creación :  GMD 20150401 <br />
+            Modificación :           <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.ResultResponse.IndicadorExito">
+            <summary>
+            Indicador de Exito
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.TrabajadorDatoMinimoResponse">
+            <summary>
+            Representa el objeto response de Trabajador Datos Minimos
+            </summary>
+            <remarks>
+            Creación:   GMD 20150617 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.TrabajadorDatoMinimoResponse.CodigoTrabajador">
+            <summary>
+            Código Trabajador
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.TrabajadorDatoMinimoResponse.Dominio">
+            <summary>
+            Dominio
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.TrabajadorDatoMinimoResponse.DominioCorto">
+            <summary>
+            Dominio
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.TrabajadorDatoMinimoResponse.CodigoIdentificacion">
+            <summary>
+            Código Identificación
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.TrabajadorDatoMinimoResponse.NombreCompleto">
+            <summary>
+            Nombre Completo
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.TrabajadorDatoMinimoResponse.LinkFoto">
+            <summary>
+            Link de la foto
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.TrabajadorDatoMinimoResponse.CorreoElectronico">
+            <summary>
+            Correo Eléctronico
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.TrabajadorDatoMinimoResponse.Departamento">
+            <summary>
+            Departamento
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.TrabajadorDatoMinimoResponse.Cargo">
+            <summary>
+            Cargo
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.TrabajadorResponse">
+            <summary>
+            Representa el objeto response de Trabajador
+            </summary>
+            <remarks>
+            Creación:   GMD 20150401 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.TrabajadorResponse.CodigoTrabajador">
+            <summary>
+            Código Trabajador
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.TrabajadorResponse.CodigoIdentificacion">
+            <summary>
+            Código Identificación
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.TrabajadorResponse.CodigoTipoDocumentoIdentidad">
+            <summary>
+            Código Tipo Documento de Identidad
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.TrabajadorResponse.DescripcionTipoDocumentoIdentidad">
+            <summary>
+            Descripción del Tipo Documento de Identidad
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.TrabajadorResponse.NumeroDocumentoIdentidad">
+            <summary>
+            Número de Documento Identidad
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.TrabajadorResponse.ApellidoPaterno">
+            <summary>
+            Apellido Paterno
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.TrabajadorResponse.ApellidoMaterno">
+            <summary>
+            Apellido Materno
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.TrabajadorResponse.Nombres">
+            <summary>
+            Nombres
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.TrabajadorResponse.NombreCompleto">
+            <summary>
+            Nombre Completo
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.TrabajadorResponse.Organizacion">
+            <summary>
+            Organización
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.TrabajadorResponse.Cargo">
+            <summary>
+            Cargo
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.TrabajadorResponse.Departamento">
+            <summary>
+            Departamento
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.TrabajadorResponse.TelefonoTrabajo">
+            <summary>
+            Teléfono Trabajo
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.TrabajadorResponse.Anexo">
+            <summary>
+            Anexo
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.TrabajadorResponse.TelefonoMovil">
+            <summary>
+            Teléfono Móvil
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.TrabajadorResponse.TelefonoPersonal">
+            <summary>
+            Teléfono Personal
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.TrabajadorResponse.CorreoElectronico">
+            <summary>
+            Correo Eléctronico
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.TrabajadorResponse.CodigoFirma">
+            <summary>
+            Codigo de Firma de trabajador.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.TrabajadorResponse.Firma">
+            <summary>
+            Firma
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.TrabajadorResponse.Dominio">
+            <summary>
+            Dominio de trabajador.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.TrabajadorResponse.DominioCorto">
+            <summary>
+            Dominio de trabajador.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.TrabajadorResponse.LinkFoto">
+            <summary>
+            Foto de trabajador.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.TrabajadorResponse.EstadoRegistro">
+            <summary>
+            Estado de Registro
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.TrabajadorResponse.IndicadorTodaUnidadOperativa">
+            <summary>
+            Indica si el trabajador esta asociado a todas las unidad operativas o solo a algunas
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.TrabajadorResponse.CodigoUnidadOperativaMatriz">
+            <summary>
+            Código de unidad operativa matriz
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.TrabajadorResponse.UsuarioCreacion">
+            <summary>
+            Objeto creado para obtener la lógica de Consulta
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.TrabajadorSuplenteResponse">
+            <summary>
+            Representa el objeto response de TrabajadorSuplente
+            </summary>
+            <remarks>
+            Creación:   GMD 20150401 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.TrabajadorSuplenteResponse.CodigoTrabajador">
+            <summary>
+            Codigo del trabajador
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.TrabajadorSuplenteResponse.CodigoSuplente">
+            <summary>
+            Código de Suplente
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.TrabajadorSuplenteResponse.FechaInicio">
+            <summary>
+            Fecha de Inicio
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.TrabajadorSuplenteResponse.FechaInicioString">
+            <summary>
+            Fecha de Inicio en cadena
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.TrabajadorSuplenteResponse.FechaFin">
+            <summary>
+            Fecha Fin
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.TrabajadorSuplenteResponse.FechaFinString">
+            <summary>
+            Fecha Fin en cadena
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.TrabajadorSuplenteResponse.Activo">
+            <summary>
+            Es Activo
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.TrabajadorSuplenteResponse.Ejecutado">
+            <summary>
+            Ejecutado
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.TrabajadorSuplenteResponse.ListaSuplente">
+            <summary>
+            Diccionario de suplente
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.TrabajadorSuplenteResponse.PerfilAgregados">
+            <summary>
+            Perfiles agregados al suplente al SRA
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.TrabajadorUnidadOperativaResponse">
+            <summary>
+            Datos generales de trabajadorUnidadOperativa
+            </summary>
+            <remarks>
+            Creación:   GMD 22122014 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.TrabajadorUnidadOperativaResponse.CodigoTrabajadorUnidadOperativa">
+            <summary>
+            Código de trabajador unidad operativa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.TrabajadorUnidadOperativaResponse.CodigoUnidadOperativaMatriz">
+            <summary>
+            Código de Unidad Operativa Matriz
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.TrabajadorUnidadOperativaResponse.CodigoTrabajador">
+            <summary>
+            Código de trabajador
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.TrabajadorUnidadOperativaResponse.CodigoUnidadOperativa">
+            <summary>
+            Codigo de unidad operativa 
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.TrabajadorUnidadOperativaResponse.NombreUnidadOperativa">
+            <summary>
+            Nombre de unidad operativa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.TrabajadorUnidadOperativaResponse.EstadoRegistro">
+            <summary>
+            Estado actual del registro
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.TrabajadorUnidadOperativaResponse.FechaCreacion">
+            <summary>
+            Fecha de registro
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.UnidadOperativaUsuarioConsultaResponse">
+            <summary>
+            Datos generales del Usuario consulta de la Unidad Operativa
+            </summary>
+            <remarks>
+            Creación:   GMD 22112016 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.UnidadOperativaUsuarioConsultaResponse.CodigoUnidadUsuarioConsulta">
+            <summary>
+            Código de Identificación de la unidad operativa responsable
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.UnidadOperativaUsuarioConsultaResponse.CodigoUnidadOperativa">
+            <summary>
+            Código de unidad operativa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.UnidadOperativaUsuarioConsultaResponse.CodigoTrabajador">
+            <summary>
+            Código Trabajador
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.UnidadOperativaUsuarioConsultaResponse.EstadoRegistro">
+            <summary>
+            Estado del registro
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.UnidadOperativaUsuarioConsultaResponse.NombreCompleto">
+            <summary>
+            Descripción del Nombre completo del trabajador
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.UnidadOperativaUsuarioConsultaResponse.NombreUnidadOperativa">
+            <summary>
+            Nombre de la unidad operativa
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.UnidadOperativaResponse">
+            <summary>
+            Datos generales de la unidad operativa
+            </summary>
+            <remarks>
+            Creación:   GMD 22122014 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.UnidadOperativaResponse.CodigoUnidadOperativa">
+            <summary>
+            Código de unidad operativa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.UnidadOperativaResponse.CodigoIdentificacion">
+            <summary>
+            Código de Identificación de la unidad operativa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.UnidadOperativaResponse.Nombre">
+            <summary>
+            Nombre 
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.UnidadOperativaResponse.CodigoNivelJerarquia">
+            <summary>
+            Nivel asociado
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.UnidadOperativaResponse.DescripcionNivelJerarquia">
+            <summary>
+            Descripción del Nivel asociado
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.UnidadOperativaResponse.NivelJerarquia">
+            <summary>
+            Valor del Nivel asociado
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.UnidadOperativaResponse.CodigoUnidadOperativaPadre">
+            <summary>
+            Nombre de unidad operativa padre
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.UnidadOperativaResponse.UnidadOperativaPadre">
+            <summary>
+            Unidad Operativa Padre
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.UnidadOperativaResponse.NombreUnidadOperativaPadre">
+            <summary>
+            Nombre de unidad operativa padre
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.UnidadOperativaResponse.CodigoTipoUnidadOperativa">
+            <summary>
+            Tipo de unidad operativa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.UnidadOperativaResponse.DescripcionTipoUnidadOperativa">
+            <summary>
+            Descripción de Tipo de unidad operativa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.UnidadOperativaResponse.IndicadorActiva">
+            <summary>
+            Indicador de activación 
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.UnidadOperativaResponse.CodigoResponsable">
+            <summary>
+            Nombre del responsable
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.UnidadOperativaResponse.NombreResponsable">
+            <summary>
+            Nombre del responsable
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.UnidadOperativaResponse.Responsable">
+            <summary>
+            Objeto de Trabajador Responsable
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.UnidadOperativaResponse.CodigoPrimerRepresentante">
+            <summary>
+            Código del primer representante
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.UnidadOperativaResponse.NombrePrimerRepresentante">
+            <summary>
+            Nombre del primer representante
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.UnidadOperativaResponse.PrimerRepresentante">
+            <summary>
+            Objeto de primer representante
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.UnidadOperativaResponse.CodigoSegundoRepresentante">
+            <summary>
+            Código del segundo representante
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.UnidadOperativaResponse.NombreSegundoRepresentante">
+            <summary>
+            Nombre del segundo representante
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.UnidadOperativaResponse.SegundoRepresentante">
+            <summary>
+            Objeto de segundo representante
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.UnidadOperativaResponse.CodigoTercerRepresentante">
+            <summary>
+            Código del tercer representante
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.UnidadOperativaResponse.NombreTercerRepresentante">
+            <summary>
+            Nombre del tercer representante
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.UnidadOperativaResponse.TercerRepresentante">
+            <summary>
+            Objeto de tercer representante
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.UnidadOperativaResponse.CodigoCuartoRepresentante">
+            <summary>
+            Código del cuarto representante
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.UnidadOperativaResponse.NombreCuartoRepresentante">
+            <summary>
+            Nombre del cuarto representante
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.UnidadOperativaResponse.CuartoRepresentante">
+            <summary>
+            Objeto de cuarto representante
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.UnidadOperativaResponse.Direccion">
+            <summary>
+            Dirección
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.UnidadOperativaResponse.LogoUnidadOperativa">
+            <summary>
+            Logo Unidad Operativa
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.UnidadOperativaStaffResponse">
+            <summary>
+            Datos generales de la unidad operativa staff
+            </summary>
+            <remarks>
+            Creación:   GMD 22122014 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.UnidadOperativaStaffResponse.CodigoUnidadOperativa">
+            <summary>
+            Código de unidad operativa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.UnidadOperativaStaffResponse.CodigoUnidadOperativaStaff">
+            <summary>
+            Código de Identificación de la unidad operativa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.UnidadOperativaStaffResponse.CodigoSistema">
+            <summary>
+            Código Sistema
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.UnidadOperativaStaffResponse.CodigoTrabajador">
+            <summary>
+            Código Trabajador
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.UnidadOperativaStaffResponse.EstadoRegistro">
+            <summary>
+            Descripción del Nivel asociado
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.UnidadOperativaStaffResponse.NombreCompleto">
+            <summary>
+            Descripción del Nombre Completo
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.UnidadOperativaStaffResponse.NombreSistema">
+            <summary>
+            Descripción del Nombre Sistema
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.UnidadOperativaNivelResponse">
+            <summary>
+            Datos generales de la unidad operativa nivel
+            </summary>
+            <remarks>
+            Creación:   GMD 20161129 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.UnidadOperativaNivelResponse.CodigoNivelJerarquia">
+            <summary>
+            Código de Nivel de Jerarquía
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.UnidadOperativaNivelResponse.CodigoUnidadOperativaNivel1">
+            <summary>
+            Código Unidad Operativa Matriz
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.UnidadOperativaNivelResponse.CodigoResponsableNivel1">
+            <summary>
+            Código responsable Matriz
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.UnidadOperativaNivelResponse.CodigoUnidadOperativaNivel2">
+            <summary>
+            Código Unidad Operativa Nivel Empresa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.UnidadOperativaNivelResponse.CodigoResponsableNivel2">
+            <summary>
+            Código responsable Nivel Empresa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.UnidadOperativaNivelResponse.CodigoUnidadOperativaNivel3">
+            <summary>
+            Código Unidad Operativa Nivel Proyecto
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.UnidadOperativaNivelResponse.CodigoResponsableNivel3">
+            <summary>
+            Código responsable Nivel Proyecto
+            </summary>
+        </member>
+    </members>
+</doc>

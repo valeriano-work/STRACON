@@ -1,0 +1,289 @@
+﻿@using Pe.Stracon.SGC.Presentacion.Core.Helpers
+@using Pe.Stracon.SGC.Presentacion.Recursos.Mensajes
+@using Pe.Stracon.SGC.Presentacion.Recursos.Base
+@using Pe.GyM.Security.Account.Model
+@using Pe.GyM.Security.Web.Session
+@using Pe.Stracon.SGC.Infraestructura.Core.Context
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Expires" content="-1">
+
+    <title>@DatosConstantes.ConfiguracionPresentacion.TituloAplicacion</title>
+    <link href="~/Theme/images/system/s_rojo.ico" type="image/x-icon" rel="shortcut icon">
+    @Styles.Render("~/FrameworkStyle/css")
+    @Styles.Render("~/Template/css")
+    @Styles.Render("~/Components/JQueryCss")
+    @Styles.Render("~/Components/GmdCss")
+    @Styles.Render("~/Components/DataTablesCss")
+    @RenderSection("css", required: false)
+    @{
+        var user = HttpGyMSessionContext.CurrentAccount();
+    }
+
+</head>
+<body class="skin-Gmi skin-Stracon skin-BarDark nav-Aside--closed nav-Aside--closedComplete">
+    @*INICIO: Agregado por Julio Carrera - Norma Contable*@
+    <input type="hidden" id="hdfNormaContable" />
+    @*FIN: Agregado por Julio Carrera - Norma Contable*@
+    <!--<GmdWrap>-->
+    <div class="lay-GmdWrap">
+        <!--<GmdHeader>-->
+        <header class="lay-GmdHeader">
+            <div class="pull-left" >
+                <a class="GmdNavMain-button" data-script="asideSlide" data-element="button" href="#"><i class="fa fa-bars"></i></a>
+                <a class="Gmd-logo" href="@Url.Action("Index", "Principal", new { Area = "Base" })">
+                    <img src="@Url.Content("~/Theme/images/system/img.png")" alt="Logo">
+                </a>
+                <h1>@GenericoResource.NombreSistema</h1>
+            </div>
+            <div class="pull-right">
+                <div class="pull-left comp-BtnNotification btn-group hidden">
+                    <button class="btn dropdown-toggle" data-toggle="dropdown" type="button">
+                        <i class="fa fa-bell-o">
+                            <span class="total">4</span>
+                        </i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" role="menu">
+                        <div class="title">@GenericoResource.EtiquetaNotificaciones</div>
+                        <div>
+                            <div>
+                                <a href="#"><i class="icon-not icon-not-pend"></i>Tienes un pendiente hasta el 8/09/2012<span class="time">Hace 32 min</span></a>
+                            </div>
+                            <div>
+                                <a href="#"><i class="icon-not icon-not-val"></i>Ha sido validado<span class="time">Hace 32 min</span></a>
+                            </div>
+                            <div>
+                                <a href="#"><i class="icon-not icon-not-new"></i>Tienes un nuevo<span class="time">Hace una hora</span></a>
+                            </div>
+                            <div>
+                                <a href="#"><i class="icon-not icon-not-del"></i>No se ha podido validar<span class="time">Hace una hora</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pull-left comp-BtnInformativo btn-group">
+                    <a class="btnpersonalizado" href="https://www.thinglink.com/scene/1108522121300017154" target="_blank">
+                        <button class="btn" type="button" title="Toda la información relacionada al sistema SGC!">
+                            <span class="fa fa-laptop fa-3x" aria-hidden="true" style="padding-right:6px"></span>
+                            <span class="fa fa-question fa-3x" aria-hidden="true" style="padding-right: 6px"></span>
+                            @*<i class="fas fa-chalkboard-teacher"></i>*@
+                            @*<div class="pull-right">
+                                </div>*@
+                            @*<div class="pull-right">
+                                    <span class="name" style="padding-left:6px">Infórmate del Sistema SGC!!!</span>
+                                    <br>
+                                    <span class="name"> Click Aquí</span>
+                                </div>*@
+                        </button>
+                    </a>
+                </div>
+
+                <!-- <div class="pull-left comp-BtnWhatapp btn-group">
+                    <a class="btnpersonalizado" href="https://wa.me/51943136188" target="_blank">
+                        <button class="btn" type="button" title="Solo compatible con Navegador Chrome">
+                            <span class="fa fa-whatsapp fa-3x" aria-hidden="true" style="padding-right:6px"></span>
+                            <div class="pull-right">
+                            </div>
+                            <div class="pull-right">
+                                <span class="name" style="padding-left:6px">Problemas con el sistema</span>
+                                <br>
+                                <span class="name"> Click Aquí</span>
+                            </div>
+                        </button>
+                    </a>
+                </div> -->
+                <div class="pull-left comp-BtnUser btn-group">
+                    @if (user != null)
+                    {
+                        <button class="btn dropdown-toggle" data-toggle="dropdown" type="button">
+                            <img src="@Url.Content("~/Theme/images/system/usuario.jpg")" alt="@user.NombreCompleto" />
+                            <span class="name">@user.NombreCompleto</span>
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                            <li class="first hidden">
+                                <a href="#">Ver Perfil</a>
+                            </li>
+                            <li class="first">
+                                <a href="@Url.Action("", "LogOut", new { Area = "Base" })">@GenericoResource.BotonCerrarSesion</a>
+                            </li>
+                        </ul>
+                    }
+                </div>
+            </div>
+        </header>
+        <!--</GmdHeader>-->
+        <!--<GmdBody>-->
+        <div class="lay-GmdBody">
+            @CustomHtmlHelper.RenderMenu()
+            <div class="lay-PullBody">
+                <div class="lay-MainContent">
+                    @RenderSection("featured", required: false)
+                    @RenderBody()
+                </div>
+            </div>
+        </div>
+        <!--</GmdBody>-->
+        <!--<gmd-footer>-->
+        <footer class="lay-GmdFooter">
+            <div class="row">
+                <div class="col-sm-12">
+                    <p class="pull-left">©2018 STRACON</p>
+                    <ul class="pull-right">
+                        <li class="title">Powered by</li>
+                        <li class="img">
+                            <a href="#">
+                                <img src="@Url.Content("~/Theme/images/system/logo-qualis.png")" alt="GMD">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <!--</gmd-footer>-->
+        <div class="nav-UpPage upPage" data-element='btnUp'><span class="glyphicon glyphicon-chevron-up"></span></div>
+    </div>
+    <!--</GmdWrap>-->
+    @Scripts.Render("~/Components/JQuery")
+    @Scripts.Render("~/FrameworkStyle/js")
+    @Scripts.Render("~/Components/Codemaleon")
+    @Scripts.Render("~/Components/DataTables")
+    @Scripts.Render("~/Components/TinyMCE")
+    @Scripts.Render("~/Components/SumoSelect")
+    @Scripts.Render("~/Components/Gmd")
+    @Scripts.Render("~/Scripts/baselayout")
+
+    <!--  <script src="~/Scripts/jquery.cookie.js"></script>-->
+    <script src="~/Components/Foundation/js/foundation/jquery.cookie.js"></script>
+    <script src="~/Scripts/jquery.signalR-2.2.1.js" type="text/javascript"></script>
+    <!--  If this is an MVC project then use the following -->
+    <!--  <script src="~/signalr/hubs" type="text/javascript"></script> -->
+    <script src="~/signalr/hubs" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+            // Proxy created on the fly
+            var chat = $.connection.chat;
+            // Declare a function on the chat hub so the server can invoke it
+            chat.client.addMessage = function (message) {
+
+                Event = {
+                    PrincipalSuccess: function (data) {
+                        if (data.Result == "True") {
+                            alert("Refrescando Permisos, espere algunos segundos...");
+                            window.location.reload(true);
+                            window.location.reload(true);
+                            window.location.reload(true);
+                        }
+                    }
+                }
+
+                var ajax = new Pe.GMD.UI.Web.Components.Ajax({
+                    action: '@Url.Action("ObtenerPermisos", "Principal", new { Area = "Base" })',
+                    autoSubmit: false,
+                    onSuccess: Event.PrincipalSuccess
+                })
+
+                ajax.data = { perfiles: message };
+                ajax.submit();
+            };
+
+            $("#broadcast").click(function () {
+                // Call the chat method on the server
+                chat.server.send($('#msg').val());
+            });
+
+            // Start the connection
+            $.connection.hub.start().done(function () {
+                var sid = $.cookie('sid');
+                // chat.server.join({ Sid: sid, UserAgent: navigator.userAgent, Referer: document.referrer, CurrentPage: document.URL });
+            });
+        });
+
+
+        ns('Pe.GMD.UI.Web.Formato')
+        Pe.GMD.UI.Web.Formato.Fecha = '@Pe.Stracon.SGC.Infraestructura.Core.Context.DatosConstantes.Formato.FormatoFechaSelector';
+        Pe.GMD.UI.Web.Formato.FechaMascara = '@Pe.Stracon.SGC.Infraestructura.Core.Context.DatosConstantes.Formato.FormatoFechaMascara';
+        Pe.GMD.UI.Web.Formato.Decimal = '##0.00';
+        Pe.GMD.UI.Web.Formato.DecimalSeparadorDecimal = '.';
+        Pe.GMD.UI.Web.Formato.DecimalSeparadorMiles = '';
+        Pe.GMD.UI.Web.Formato.EnteroSeparadorMiles = '';
+
+        ns('Pe.Stracon.Politicas.Presentacion.Base.GenericoResource');
+        Pe.Stracon.Politicas.Presentacion.Base.GenericoResource.EtiquetaEditar = '@Html.Raw(GenericoResource.EtiquetaEditar)';
+        Pe.Stracon.Politicas.Presentacion.Base.GenericoResource.EtiquetaEliminar = '@Html.Raw(GenericoResource.EtiquetaEliminar)';
+        Pe.Stracon.Politicas.Presentacion.Base.GenericoResource.EtiquetaSeleccionar = '@Html.Raw(GenericoResource.EtiquetaSeleccionar)';
+        Pe.Stracon.Politicas.Presentacion.Base.GenericoResource.EtiquetaTodos = '@Html.Raw(GenericoResource.EtiquetaTodos)';
+        Pe.Stracon.Politicas.Presentacion.Base.GenericoResource.GridAcciones = '@Html.Raw(GenericoResource.GridAcciones)';
+
+        ns('Pe.Stracon.SGC.Presentacion.Base.Actions')
+        Pe.Stracon.SGC.Presentacion.Base.Actions.FormularioBuscarProveedor = '@Url.Action("BuscarProveedor", "BuscadorProveedor", new { Area = "Base" })';
+
+        //Mensajes Genericos
+        ns('Pe.Stracon.SGC.Presentacion.Base.MensajeGenerico');
+        Pe.Stracon.SGC.Presentacion.Base.MensajeGenerico.SeGuardoInformacionExito = '@Html.Raw(MensajeResource.SeGuardoInformacionExito)';
+        /*Validación de Carga de Archivo*/
+        Pe.Stracon.SGC.Presentacion.Base.MensajeGenerico.MsjValidaEligeArchivo = '@Html.Raw(MensajeResource.MsjValidaEligeArchivo)';
+        Pe.Stracon.SGC.Presentacion.Base.MensajeGenerico.MsjValidaExtensionArchivo = '@Html.Raw(MensajeResource.MsjValidaExtensionArchivo)';
+        /*Validación de Fecha de Resolucion*/
+        Pe.Stracon.SGC.Presentacion.Base.MensajeGenerico.DebeSeleccionarFechaResolucion = '@Html.Raw(MensajeResource.DebeSeleccionarFechaResolucion)';
+
+        //Mensajes
+        ns('Pe.Stracon.SGC.Presentacion.Base.MensajeResource');
+        Pe.Stracon.SGC.Presentacion.Base.MensajeResource.ConfirmacionEliminacion = '@Html.Raw(MensajeResource.ConfirmacionEliminacion)';
+        Pe.Stracon.SGC.Presentacion.Base.MensajeResource.ConfirmacionGuardar = '@Html.Raw(MensajeResource.ConfirmacionGuardar)';
+        Pe.Stracon.SGC.Presentacion.Base.MensajeResource.EtiquetaErrorRegistro = '@Html.Raw(MensajeResource.EtiquetaErrorRegistro)';
+        Pe.Stracon.SGC.Presentacion.Base.MensajeResource.SeGuardoInformacionExito = '@Html.Raw(MensajeResource.SeGuardoInformacionExito)';
+        Pe.Stracon.SGC.Presentacion.Base.MensajeResource.SeleccionarRegistroEliminar = '@Html.Raw(MensajeResource.SeleccionarRegistroEliminar)';
+        Pe.Stracon.SGC.Presentacion.Base.MensajeResource.SeleccioneFiltro = '@Html.Raw(MensajeResource.SeleccioneFiltro)';
+
+        //Recurso Genérico
+        ns('Pe.Stracon.SGC.Presentacion.Base.GenericoResource');
+        Pe.Stracon.SGC.Presentacion.Base.GenericoResource.EtiquetaEditar = '@Html.Raw(GenericoResource.EtiquetaEditar)';
+        Pe.Stracon.SGC.Presentacion.Base.GenericoResource.EtiquetaEliminar = '@Html.Raw(GenericoResource.EtiquetaEliminar)';
+        Pe.Stracon.SGC.Presentacion.Base.GenericoResource.GridDescargar = '@Html.Raw(GenericoResource.GridDescargar)';
+        Pe.Stracon.SGC.Presentacion.Base.GenericoResource.EtiquetaNo = '@Html.Raw(GenericoResource.EtiquetaNo)';
+        Pe.Stracon.SGC.Presentacion.Base.GenericoResource.EtiquetaSi = '@Html.Raw(GenericoResource.EtiquetaSi)';
+        Pe.Stracon.SGC.Presentacion.Base.GenericoResource.EtiquetaSeleccionar = '@Html.Raw(GenericoResource.EtiquetaSeleccionar)';
+        Pe.Stracon.SGC.Presentacion.Base.GenericoResource.EtiquetaNotificar = '@Html.Raw(GenericoResource.EtiquetaNotificar)';
+        Pe.Stracon.SGC.Presentacion.Base.GenericoResource.GridAcciones = '@Html.Raw(GenericoResource.GridAcciones)';
+        Pe.Stracon.SGC.Presentacion.Base.GenericoResource.GridEstadios = '@Html.Raw(GenericoResource.GridEstadios)';
+        Pe.Stracon.SGC.Presentacion.Base.GenericoResource.GridPredecesora = '@Html.Raw(GenericoResource.GridPredecesora)';
+        Pe.Stracon.SGC.Presentacion.Base.GenericoResource.GridPdf = '@Html.Raw(GenericoResource.GridPdf)';
+        Pe.Stracon.SGC.Presentacion.Base.GenericoResource.GridAdjunto = '@Html.Raw(GenericoResource.GridAdjunto)';
+        Pe.Stracon.SGC.Presentacion.Base.GenericoResource.GridObservacion = '@Html.Raw(GenericoResource.GridObservacion)';
+        Pe.Stracon.SGC.Presentacion.Base.GenericoResource.GridConsulta = '@Html.Raw(GenericoResource.GridConsulta)';
+        Pe.Stracon.SGC.Presentacion.Base.GenericoResource.GridAprobar = '@Html.Raw(GenericoResource.GridAprobar)';
+        Pe.Stracon.SGC.Presentacion.Base.GenericoResource.GridDetalle = '@Html.Raw(GenericoResource.GridDetalle)';
+        Pe.Stracon.SGC.Presentacion.Base.GenericoResource.EtiquetaCopiar = '@Html.Raw(GenericoResource.GridCopiar)';
+        Pe.Stracon.SGC.Presentacion.Base.GenericoResource.GridParrafo = '@Html.Raw(GenericoResource.GridParrafo)';
+        Pe.Stracon.SGC.Presentacion.Base.GenericoResource.EtiquetaCopiarEstadio = '@Html.Raw(GenericoResource.GridCopiarEstadio)';
+        Pe.Stracon.SGC.Presentacion.Base.GenericoResource.EtiquetaVerificar = '@Html.Raw(GenericoResource.EtiquetaVerificar)';
+        Pe.Stracon.SGC.Presentacion.Base.GenericoResource.EtiquetaGridFileUpload = '@Html.Raw(GenericoResource.EtiquetaGridFileUpload)';
+        Pe.Stracon.SGC.Presentacion.Base.GenericoResource.GridValorAlquiler = '@Html.Raw(GenericoResource.GridValorAlquiler)';
+        Pe.Stracon.SGC.Presentacion.Base.GenericoResource.GridVistaPrevia = '@Html.Raw(GenericoResource.GridVistaPrevia)';
+        Pe.Stracon.SGC.Presentacion.Base.GenericoResource.GridContrato = '@Html.Raw(GenericoResource.GridContrato)';
+        Pe.Stracon.SGC.Presentacion.Base.GenericoResource.EtiquetaEditarContenidoContrato = '@Html.Raw(GenericoResource.EtiquetaEditarContenidoContrato)';
+        Pe.Stracon.SGC.Presentacion.Base.GenericoResource.EtiquetaCopiarPlantilla = '@Html.Raw(GenericoResource.EtiquetaCopiarPlantilla)';
+        Pe.Stracon.SGC.Presentacion.Base.GenericoResource.EtiquetaResponder = '@Html.Raw(GenericoResource.EtiquetaResponder)';
+        Pe.Stracon.SGC.Presentacion.Base.GenericoResource.EtiquetaReenviar = '@Html.Raw(GenericoResource.EtiquetaReenviar)';
+        Pe.Stracon.SGC.Presentacion.Base.GenericoResource.EtiquetaVisualizar = '@Html.Raw(GenericoResource.EtiquetaVisualizar)';
+        ns('Pe.GMD.Web.Global.Format');
+        Pe.GMD.Web.Global.Format.Date = "dd/mm/yy";
+
+        //Modal de Cargar Archivo
+        ns('Pe.Stracon.SGC.Presentacion.Base.CargarArchivo.Actions');
+        Pe.Stracon.SGC.Presentacion.Base.CargarArchivo.Actions.VistaCargaArchivo = '@Url.Action("FormularioCarga", "CargaArchivo", new { Area = "Base" })';
+
+    </script>
+    <script src="~/Components/ckeditor/ckeditor.js"></script>
+    <script src="~/Components/ckeditor/adapters/jquery.js"></script>
+    @CustomHtmlHelper.RenderViewJs()
+    @RenderSection("scripts", required: false)
+</body>
+</html>

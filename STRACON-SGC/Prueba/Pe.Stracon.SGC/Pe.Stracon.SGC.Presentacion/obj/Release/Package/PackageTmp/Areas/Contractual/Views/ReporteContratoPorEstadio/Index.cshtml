@@ -1,0 +1,116 @@
+﻿@using Pe.Stracon.SGC.Presentacion.Recursos.Base
+@using Pe.Stracon.SGC.Presentacion.Recursos.Contractual
+@using Pe.Stracon.SGC.Presentacion.Recursos.Mensajes
+@using Pe.Stracon.SGC.Presentacion.Core.Helpers
+@model Pe.Stracon.SGC.Presentacion.Core.ViewModel.Contractual.ReporteContratoPorEstadio.ReporteContratoPorEstadioBusqueda
+
+@{
+    var dataReport = TempData["DataReport"];
+}
+ 
+<div class="GmdBody-header">
+    <h2>@ReporteContratoPorEstadioResource.EtiquetaTitulo</h2>
+</div>
+<div class="GmdBody-body">
+    <form id="frmReporteContratoPorEstadio">
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label>@ReporteContratoPorEstadioResource.EtiquetaUnidadOperativa</label>
+                    @Html.DropDownList("CodigoUnidadOperativa", @Model.UnidadOperativa, new { @class = "form-control", @id = "slcUnidadOperativa", @validable = "required ValidarUnidadOperativa"})
+                    @Html.TextBox("NombreUnidadOperativa", null, new { @class = "form-control hidden", @id = "hdnNombreUnidadOperativa"})
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label>@ReporteContratoPorEstadioResource.EtiquetaTipoRequerimiento</label>
+                    @Html.DropDownList("CodigoTipoRequerimiento", @Model.TipoRequerimiento.OrderBy(x => x.Text), new { @class = "form-control", @id = "slcTipoRequerimiento", @validable = "required ValidarTipoRequerimiento"})
+                    @Html.TextBox("DescripcionTipoRequerimiento", null, new { @class = "form-control hidden", @id = "hdnDescripcionTipoRequerimiento"})
+                </div>                
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label>@ReporteContratoPorEstadioResource.EtiquetaTipoServicio</label>
+                    @Html.DropDownList("CodigoTipoServicio", @Model.TipoServicio.OrderBy(x => x.Text), new { @class = "form-control", @id = "slcTipoServicio", @validable = "required ValidarTipoServicio"})
+                    @Html.TextBox("DescripcionTipoServicio", null, new { @class = "form-control hidden", @id = "hdnDescripcionTipoServicio"})
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label>@ReporteContratoPorEstadioResource.EtiquetaIndicadorMontoMinimo</label>
+                    <select class="form-control" id="slcIndicadorMontoMinimo">
+                        <option>@GenericoResource.EtiquetaTodos</option>
+                        <option value="true">Si</option>
+                        <option value="false">No</option>
+                    </select>
+                    @Html.TextBox("IndicadorMontoMinimo", null, new { @class = "form-control hidden", @id = "hdnIndicadorMontoMinimo"})
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label>@ReporteContratoPorEstadioResource.EtiquetaEstadio</label>
+                    @Html.DropDownList("CodigoFlujoAprobacionEstadio", @Model.Estadio , new { @class = "form-control", @id = "slcEstadio" })
+                    @Html.TextBox("DescripcionFlujoAprobacionEstadio", null, new { @class = "form-control hidden", @id = "hdnDescripcionFlujoAprobacionEstadio"})
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label>@ReporteContratoPorEstadioResource.EtiquetaGeneradoDesde</label>
+                    <div class="input-group">
+                        @Html.TextBox("GeneradosDesdeString", null, new { @class = "form-control", @id = "txtGeneradosDesde" })
+                        <div class="input-group-addon"><span class="fa fa-calendar"></span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label>@ReporteContratoPorEstadioResource.EtiquetaGeneradoHasta</label>
+                    <div class="input-group">
+                        @Html.TextBox("GeneradosHastaString", null, new { @class = "form-control", @id = "txtGeneradosHasta" })
+                        <div class="input-group-addon"><span class="fa fa-calendar"></span></div>
+                    </div>                       
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="form-group">
+                <button class="btn btn-info" id="btnLimpiar" type="reset">@GenericoResource.BotonLimpiar</button>
+                <button class="btn btn-default" id="btnBuscar">@GenericoResource.BotonMostrar</button>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <div id="divContenedorReportView">
+        @Html.Partial("~/Areas/Base/Views/Reporte/ReportViewControl.ascx", dataReport)
+    </div>
+</div>
+
+@section scripts
+{
+    <script type="text/javascript">
+        ns('Pe.Stracon.SGC.Presentacion.Contractual.ReporteContratoPorEstadio.Actions')
+        Pe.Stracon.SGC.Presentacion.Contractual.ReporteContratoPorEstadio.Actions.BuscarEstadio = '@Url.Action("BuscarEstadio", "ReporteContratoPorEstadio", new { Area = "Contractual" })';
+
+        ns('Pe.Stracon.SGC.Presentacion.Contractual.ReporteContratoPorEstadio.Resources')
+        Pe.Stracon.SGC.Presentacion.Contractual.ReporteContratoPorEstadio.Resources.EtiquetaSeleccionar = '@Html.Raw(GenericoResource.EtiquetaSeleccionar)';
+
+        ns('Pe.Stracon.SGC.Presentacion.Recursos.Validacion')
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ConfirmacionGuardar = '@Html.Raw(MensajeResource.ConfirmacionGuardar)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.EtiquetaConfirmacion = '@MensajeResource.SeGuardoInformacionExito';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ConfirmacionEliminacion = '@MensajeResource.ConfirmacionEliminacion';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.EtiquetaTituloAdvertencia = '@Html.Raw(MensajeResource.EtiquetaTituloAdvertencia)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.EtiquetaTituloConfirmar = '@Html.Raw(GenericoResource.EtiquetaTituloConfirmar)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.SeleccionarRegistroEliminar = '@Html.Raw(MensajeResource.SeleccionarRegistroEliminar)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.MsgEliminacionList = '@Html.Raw(MensajeResource.MsgEliminacionList)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.EtiquetaEliminacionExitosa = '@Html.Raw(MensajeResource.SeEliminoInformacionExito)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarUnidadOperativa = '@Html.Raw(ReporteContratoPorEstadioResource.EtiquetaUnidadOperativa)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarTipoServicio = '@Html.Raw(ReporteContratoPorEstadioResource.EtiquetaTipoServicio)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarTipoRequerimiento = '@Html.Raw(ReporteContratoPorEstadioResource.EtiquetaTipoRequerimiento)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarTipoFormaEdicion = '@Html.Raw(ReporteContratoPorEstadioResource.EtiquetaFormaEdicion)';
+    </script>
+}
+

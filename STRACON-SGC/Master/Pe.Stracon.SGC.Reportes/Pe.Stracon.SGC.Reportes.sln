@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "Pe.Stracon.SGC.Reportes", "Pe.Stracon.SGC.Reportes\Pe.Stracon.SGC.Reportes.rptproj", "{67041F05-2411-4718-8C90-6C9E14C8BBFF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{67041F05-2411-4718-8C90-6C9E14C8BBFF}.Debug|Default.ActiveCfg = Debug
+		{67041F05-2411-4718-8C90-6C9E14C8BBFF}.Debug|Default.Build.0 = DebugLocal
+		{67041F05-2411-4718-8C90-6C9E14C8BBFF}.Debug|Default.Deploy.0 = DebugLocal
+		{67041F05-2411-4718-8C90-6C9E14C8BBFF}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{67041F05-2411-4718-8C90-6C9E14C8BBFF}.DebugLocal|Default.Build.0 = DebugLocal
+		{67041F05-2411-4718-8C90-6C9E14C8BBFF}.Release|Default.ActiveCfg = Release
+		{67041F05-2411-4718-8C90-6C9E14C8BBFF}.Release|Default.Build.0 = Release
+		{67041F05-2411-4718-8C90-6C9E14C8BBFF}.Release|Default.Deploy.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

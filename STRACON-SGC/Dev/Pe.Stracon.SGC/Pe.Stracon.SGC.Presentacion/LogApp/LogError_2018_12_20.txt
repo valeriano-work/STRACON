@@ -1,0 +1,121 @@
+FechaHora = 20/12/2018 10:28:46
+MensajeError = [Error]
+Error en el servidor remoto: (403) Prohibido.
+DetalleError = [Pila]
+   en System.Net.HttpWebRequest.GetResponse()
+   en Microsoft.SharePoint.Client.SPWebRequestExecutor.Execute()
+   en Microsoft.SharePoint.Client.ClientContext.GetFormDigestInfoPrivate()
+   en Microsoft.SharePoint.Client.ClientContext.EnsureFormDigest()
+   en Microsoft.SharePoint.Client.ClientContext.ExecuteQuery()
+   en Pe.Stracon.SGC.Aplicacion.Service.Contractual.SharePointService.RegistraArchivoSharePoint(String& hayError, String listName, String folderName, String fileName, MemoryStream myFile, String prmSiteURL, NetworkCredential prmCredenciales) en D:\Modulos\Fuentes\STRACON-SGC\Dev\Pe.Stracon.SGC\Pe.Stracon.SGC.Aplicacion.Service\Contractual\SharePointService.cs:línea 172
+__________________________________________________
+FechaHora = 20/12/2018 10:31:50
+MensajeError = [Error]
+Error en el servidor remoto: (403) Prohibido.
+DetalleError = [Pila]
+   en System.Net.HttpWebRequest.GetResponse()
+   en Microsoft.SharePoint.Client.SPWebRequestExecutor.Execute()
+   en Microsoft.SharePoint.Client.ClientContext.GetFormDigestInfoPrivate()
+   en Microsoft.SharePoint.Client.ClientContext.EnsureFormDigest()
+   en Microsoft.SharePoint.Client.ClientContext.ExecuteQuery()
+   en Pe.Stracon.SGC.Aplicacion.Service.Contractual.SharePointService.RegistraArchivoSharePoint(String& hayError, String listName, String folderName, String fileName, MemoryStream myFile, String prmSiteURL, NetworkCredential prmCredenciales) en D:\Modulos\Fuentes\STRACON-SGC\Dev\Pe.Stracon.SGC\Pe.Stracon.SGC.Aplicacion.Service\Contractual\SharePointService.cs:línea 172
+__________________________________________________
+FechaHora = 20/12/2018 10:32:43
+MensajeError = [Error]
+Error en el servidor remoto: (403) Prohibido.
+DetalleError = [Pila]
+   en System.Net.HttpWebRequest.GetResponse()
+   en Microsoft.SharePoint.Client.SPWebRequestExecutor.Execute()
+   en Microsoft.SharePoint.Client.ClientContext.GetFormDigestInfoPrivate()
+   en Microsoft.SharePoint.Client.ClientContext.EnsureFormDigest()
+   en Microsoft.SharePoint.Client.ClientContext.ExecuteQuery()
+   en Pe.Stracon.SGC.Aplicacion.Service.Contractual.SharePointService.RegistraArchivoSharePoint(String& hayError, String listName, String folderName, String fileName, MemoryStream myFile, String prmSiteURL, NetworkCredential prmCredenciales) en D:\Modulos\Fuentes\STRACON-SGC\Dev\Pe.Stracon.SGC\Pe.Stracon.SGC.Aplicacion.Service\Contractual\SharePointService.cs:línea 172
+__________________________________________________
+FechaHora = 20/12/2018 10:34:54
+MensajeError = [Error]
+Error en el servidor remoto: (403) Prohibido.
+DetalleError = [Pila]
+   en System.Net.HttpWebRequest.GetResponse()
+   en Microsoft.SharePoint.Client.SPWebRequestExecutor.Execute()
+   en Microsoft.SharePoint.Client.ClientContext.GetFormDigestInfoPrivate()
+   en Microsoft.SharePoint.Client.ClientContext.EnsureFormDigest()
+   en Microsoft.SharePoint.Client.ClientContext.ExecuteQuery()
+   en Pe.Stracon.SGC.Aplicacion.Service.Contractual.SharePointService.RegistraArchivoSharePoint(String& hayError, String listName, String folderName, String fileName, MemoryStream myFile, String prmSiteURL, NetworkCredential prmCredenciales) en D:\Modulos\Fuentes\STRACON-SGC\Dev\Pe.Stracon.SGC\Pe.Stracon.SGC.Aplicacion.Service\Contractual\SharePointService.cs:línea 172
+__________________________________________________
+FechaHora = 20/12/2018 10:39:21
+MensajeError = [Error]
+Error en el servidor remoto: (401) No autorizado.
+DetalleError = [Pila]
+   en System.Net.HttpWebRequest.GetResponse()
+   en Microsoft.SharePoint.Client.SPWebRequestExecutor.Execute()
+   en Microsoft.SharePoint.Client.ClientContext.GetFormDigestInfoPrivate()
+   en Microsoft.SharePoint.Client.ClientContext.EnsureFormDigest()
+   en Microsoft.SharePoint.Client.ClientContext.ExecuteQuery()
+   en Pe.Stracon.SGC.Aplicacion.Service.Contractual.SharePointService.RegistraArchivoSharePoint(String& hayError, String listName, String folderName, String fileName, MemoryStream myFile, String prmSiteURL, NetworkCredential prmCredenciales) en D:\Modulos\Fuentes\STRACON-SGC\Dev\Pe.Stracon.SGC\Pe.Stracon.SGC.Aplicacion.Service\Contractual\SharePointService.cs:línea 172
+__________________________________________________
+FechaHora = 20/12/2018 10:39:41
+MensajeError = [Error]
+Error en el servidor remoto: (401) No autorizado.
+DetalleError = [Pila]
+   en System.Net.HttpWebRequest.GetResponse()
+   en Microsoft.SharePoint.Client.SPWebRequestExecutor.Execute()
+   en Microsoft.SharePoint.Client.ClientContext.GetFormDigestInfoPrivate()
+   en Microsoft.SharePoint.Client.ClientContext.EnsureFormDigest()
+   en Microsoft.SharePoint.Client.ClientContext.ExecuteQuery()
+   en Pe.Stracon.SGC.Aplicacion.Service.Contractual.SharePointService.RegistraArchivoSharePoint(String& hayError, String listName, String folderName, String fileName, MemoryStream myFile, String prmSiteURL, NetworkCredential prmCredenciales) en D:\Modulos\Fuentes\STRACON-SGC\Dev\Pe.Stracon.SGC\Pe.Stracon.SGC.Aplicacion.Service\Contractual\SharePointService.cs:línea 172
+__________________________________________________
+FechaHora = 20/12/2018 10:40:09
+MensajeError = [Error]
+Error en el servidor remoto: (401) No autorizado.
+DetalleError = [Pila]
+   en System.Net.HttpWebRequest.GetResponse()
+   en Microsoft.SharePoint.Client.SPWebRequestExecutor.Execute()
+   en Microsoft.SharePoint.Client.ClientContext.GetFormDigestInfoPrivate()
+   en Microsoft.SharePoint.Client.ClientContext.EnsureFormDigest()
+   en Microsoft.SharePoint.Client.ClientContext.ExecuteQuery()
+   en Pe.Stracon.SGC.Aplicacion.Service.Contractual.SharePointService.RegistraArchivoSharePoint(String& hayError, String listName, String folderName, String fileName, MemoryStream myFile, String prmSiteURL, NetworkCredential prmCredenciales) en D:\Modulos\Fuentes\STRACON-SGC\Dev\Pe.Stracon.SGC\Pe.Stracon.SGC.Aplicacion.Service\Contractual\SharePointService.cs:línea 172
+__________________________________________________
+FechaHora = 20/12/2018 10:42:55
+MensajeError = [Error]
+Error en el servidor remoto: (401) No autorizado.
+DetalleError = [Pila]
+   en System.Net.HttpWebRequest.GetResponse()
+   en Microsoft.SharePoint.Client.SPWebRequestExecutor.Execute()
+   en Microsoft.SharePoint.Client.ClientContext.GetFormDigestInfoPrivate()
+   en Microsoft.SharePoint.Client.ClientContext.EnsureFormDigest()
+   en Microsoft.SharePoint.Client.ClientContext.ExecuteQuery()
+   en Pe.Stracon.SGC.Aplicacion.Service.Contractual.SharePointService.RegistraArchivoSharePoint(String& hayError, String listName, String folderName, String fileName, MemoryStream myFile, String prmSiteURL, NetworkCredential prmCredenciales) en D:\Modulos\Fuentes\STRACON-SGC\Dev\Pe.Stracon.SGC\Pe.Stracon.SGC.Aplicacion.Service\Contractual\SharePointService.cs:línea 172
+__________________________________________________
+FechaHora = 20/12/2018 10:46:51
+MensajeError = [Error]
+Error en el servidor remoto: (401) No autorizado.
+DetalleError = [Pila]
+   en System.Net.HttpWebRequest.GetResponse()
+   en Microsoft.SharePoint.Client.SPWebRequestExecutor.Execute()
+   en Microsoft.SharePoint.Client.ClientContext.GetFormDigestInfoPrivate()
+   en Microsoft.SharePoint.Client.ClientContext.EnsureFormDigest()
+   en Microsoft.SharePoint.Client.ClientContext.ExecuteQuery()
+   en Pe.Stracon.SGC.Aplicacion.Service.Contractual.SharePointService.RegistraArchivoSharePoint(String& hayError, String listName, String folderName, String fileName, MemoryStream myFile, String prmSiteURL, NetworkCredential prmCredenciales) en D:\Modulos\Fuentes\STRACON-SGC\Dev\Pe.Stracon.SGC\Pe.Stracon.SGC.Aplicacion.Service\Contractual\SharePointService.cs:línea 172
+__________________________________________________
+FechaHora = 20/12/2018 10:47:17
+MensajeError = [Error]
+Error en el servidor remoto: (401) No autorizado.
+DetalleError = [Pila]
+   en System.Net.HttpWebRequest.GetResponse()
+   en Microsoft.SharePoint.Client.SPWebRequestExecutor.Execute()
+   en Microsoft.SharePoint.Client.ClientContext.GetFormDigestInfoPrivate()
+   en Microsoft.SharePoint.Client.ClientContext.EnsureFormDigest()
+   en Microsoft.SharePoint.Client.ClientContext.ExecuteQuery()
+   en Pe.Stracon.SGC.Aplicacion.Service.Contractual.SharePointService.RegistraArchivoSharePoint(String& hayError, String listName, String folderName, String fileName, MemoryStream myFile, String prmSiteURL, NetworkCredential prmCredenciales) en D:\Modulos\Fuentes\STRACON-SGC\Dev\Pe.Stracon.SGC\Pe.Stracon.SGC.Aplicacion.Service\Contractual\SharePointService.cs:línea 172
+__________________________________________________
+FechaHora = 20/12/2018 10:50:06
+MensajeError = [Error]
+Error en el servidor remoto: (401) No autorizado.
+DetalleError = [Pila]
+   en System.Net.HttpWebRequest.GetResponse()
+   en Microsoft.SharePoint.Client.SPWebRequestExecutor.Execute()
+   en Microsoft.SharePoint.Client.ClientContext.GetFormDigestInfoPrivate()
+   en Microsoft.SharePoint.Client.ClientContext.EnsureFormDigest()
+   en Microsoft.SharePoint.Client.ClientContext.ExecuteQuery()
+   en Pe.Stracon.SGC.Aplicacion.Service.Contractual.SharePointService.RegistraArchivoSharePoint(String& hayError, String listName, String folderName, String fileName, MemoryStream myFile, String prmSiteURL, NetworkCredential prmCredenciales) en D:\Modulos\Fuentes\STRACON-SGC\Dev\Pe.Stracon.SGC\Pe.Stracon.SGC.Aplicacion.Service\Contractual\SharePointService.cs:línea 172
+__________________________________________________

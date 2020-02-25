@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Pe.Stracon.SGC.Infraestructura.Proxy</name>
+    </assembly>
+    <members>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.Proxy.Amt.AmtProxy">
+            <summary>
+            Proxy del servicio AMT
+            </summary>
+            <remarks>
+            Creación:   GMD 20170628 <br />
+            Modificación:            <br />
+            </remarks> 
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Proxy.Amt.AmtProxy.ObtenerEquipos">
+            <summary>
+            Obtener los equipos de ATM
+            </summary>
+            <returns>Lista de equipos</returns>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.Proxy.Amt.IAmtProxy">
+            <summary>
+            Interface de proxy del servicio AMT
+            </summary>
+            <remarks>
+            Creación:   GMD 20170628 <br />
+            Modificación:            <br />
+            </remarks> 
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Proxy.Amt.IAmtProxy.ObtenerEquipos">
+            <summary>
+            Obtener los equipos de ATM
+            </summary>
+            <returns>Lista de equipos</returns>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.Proxy.Oracle.IOracleProxy">
+            <summary>
+            Interface de proxy del servicio de Oracle
+            </summary>
+            <remarks>
+            Creación:   GMD 20150424 <br />
+            Modificación:            <br />
+            </remarks> 
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Proxy.Oracle.IOracleProxy.ObtenerProveedores(System.String)">
+            <summary>
+            Obtiene los proveedores
+            </summary>
+            <param name="request">Request de búsqueda</param>
+            <returns>Lista de Proveedores</returns>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.Proxy.Oracle.OracleProxy">
+            <summary>
+            Proxy del servicio de Oracle
+            </summary>
+            <remarks>
+            Creación:   GMD 20150424 <br />
+            Modificación:            <br />
+            </remarks> 
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Proxy.Oracle.OracleProxy.ObtenerProveedores(System.String)">
+            <summary>
+            Obtiene los proveedores
+            </summary>
+            <param name="request">Request de búsqueda</param>
+            <returns>Lista de Proveedores</returns>
+        </member>
+    </members>
+</doc>

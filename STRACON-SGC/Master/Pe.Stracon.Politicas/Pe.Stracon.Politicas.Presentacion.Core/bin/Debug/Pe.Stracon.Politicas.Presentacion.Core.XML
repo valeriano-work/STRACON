@@ -1,0 +1,1131 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Pe.Stracon.Politicas.Presentacion.Core</name>
+    </assembly>
+    <members>
+        <member name="T:Pe.Stracon.Politicas.Presentacion.Core.Controllers.Base.CargaArchivoController">
+            <summary>
+            Controladora del Componente de Carga de Archivo
+            </summary>
+            <remarks>
+            Creación:       GMD 20150318
+            Modificación:
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.Controllers.Base.CargaArchivoController.FormularioCarga">
+            <summary>
+            Muestra el popup de Formulario de Carga
+            </summary>
+            <returns>Vista Parcial</returns>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Presentacion.Core.Controllers.Base.LogOutController">
+            <summary>
+            Controladora de Cierre de sesión
+            </summary>
+            <remarks>
+            Creación: 	GMD 20140508 <br />
+            Modificación: 	 <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.Controllers.Base.LogOutController.Index">
+            <summary>
+            Muestra la vista principal
+            </summary>
+            <returns>Vista principal de la opción</returns>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Presentacion.Core.Controllers.Base.UsuarioADController">
+            <summary>
+            Controladora de Usuario de Active Directory
+            </summary>
+            <remarks>
+            Creación: 	GMD 20140508 <br />
+            Modificación: 	 <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Core.Controllers.Base.UsuarioADController.politicaService">
+            <summary>
+            Servicio de política
+            </summary>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.Controllers.Base.UsuarioADController.FormularioBusquedaUsuarioAD">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.Controllers.Base.UsuarioADController.BuscarUsuarioAD(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="Usuario"></param>
+            <param name="Dominio"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Core.Controllers.Base.UsuarioADController.DominiosEmpresas">
+            <summary>
+            Dominios de empresas.
+            </summary>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.Controllers.Base.UsuarioADController.ObtenerPermisos(System.String)">
+            <summary>
+            Obtiene los permisos asignados al usuario segun sistema
+            </summary>
+            <param name="usuario">Usuario</param>
+            <param name="codigoSistema">Código del Sistema</param>
+            <returns>Cuenta de Usuario</returns>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Presentacion.Core.Controllers.Base.BuscadorTrabajadorController">
+            <summary>
+            Controladora del Componente de Búsqueda de Trabajadores
+            </summary>
+            <remarks>
+            Creación:       GMD 20150318
+            Modificación:
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Core.Controllers.Base.BuscadorTrabajadorController.trabajadorService">
+            <summary>
+            Servicio para el manejo de Trabajadores
+            </summary>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.Controllers.Base.BuscadorTrabajadorController.BuscarTrabajador">
+            <summary>
+            Muestra el popup de búsqueda de trabajadores
+            </summary>
+            <returns>Vista Parcial</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.Controllers.Base.BuscadorTrabajadorController.Buscar(System.String,System.String)">
+            <summary>
+            Método para recargar la grilla
+            </summary>
+            <param name="nombreUsuario">Nombre de Usuario</param>
+            <param name="nombreTrabajador">Nombre de Trabajador</param>
+            <returns>Json con la estructura a mostrar</returns>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Presentacion.Core.Controllers.Base.ErrorController">
+            <summary>
+            Controladora del Componente de Error
+            </summary>
+            <remarks>
+            Creación:       GMD 20150318
+            Modificación:
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.Controllers.Base.ErrorController.Index(System.Int32)">
+            <summary>
+            Muestra la vista principal
+            </summary>
+            <returns>Vista principal de la opción</returns>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Presentacion.Core.Controllers.Base.GenericController">
+            <summary>
+            Controladora del Componente de Generico
+            </summary>
+            <remarks>
+            Creación:       GMD 20150318
+            Modificación:
+            </remarks>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.PlantillaNotificacionController">
+            <summary>
+            Controlador de Plantilla de Notificación
+            </summary>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.PlantillaNotificacionController.Index">
+            <summary>
+            Muestra la vista principal
+            </summary>
+            <returns>Vista Principal de la opción</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.PlantillaNotificacionController.FormularioPlantillaNotificacion(System.String)">
+            <summary>
+            Muestra la vista del Formulario Plantilla Notificacion
+            </summary>
+            <param name="codigoPlantillaNotificacion">CÓdigo Plantilla Notificacion</param>
+            <returns>Vista de Formulario Plantilla Notificacion</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.PlantillaNotificacionController.BuscarBandejaPlantillaNotificacion(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.PlantillaNotificacionRequest)">
+            <summary>
+            Realiza la busqueda de Plantilla Notificación
+            </summary>
+            <param name="filtro">Parametros a buscar</param>
+            <returns>Lista de Plantillas de Notificación</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.PlantillaNotificacionController.RegistraPlantillaNotificacion(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.PlantillaNotificacionRequest)">
+            <summary>
+            Método que registra plantillas de notificación
+            </summary>
+            <param name="data">Información de la plantilla</param>
+            <returns>Resultado de operación</returns>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.SeccionParametroController">
+            <summary>
+            Controladora de Unidad Operativa
+            </summary>
+            <remarks>
+            Creación:       GMD 20150319
+            Modificación:   
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.SeccionParametroController.Index(System.Int32)">
+            <summary>
+            Muestra la vista principal
+            </summary>
+            <param name="codigoParametro">Código de Parámetro</param>
+            <returns>Vista principal de la opción</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.SeccionParametroController.FormularioSeccionParametro(System.Int32,System.Nullable{System.Int32})">
+            <summary>
+            Muesta la vista del Formulario de la Sección del Parámetro
+            </summary>
+            <param name="codigoParametro">Código del Parámetro</param>
+            <param name="codigoSeccion">Código de Sección</param>
+            <returns>Vista de Formulario</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.SeccionParametroController.BuscarSeccionParametro(System.Int32)">
+            <summary>
+            Permite realizar la busqueda de las Secciones del Parámetro
+            </summary>
+            <param name="codigoParametro">Código de Parámetro</param>
+            <returns>Json</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.SeccionParametroController.GuardarSeccionParametro(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroSeccionRequest)">
+            <summary>
+            Permite realizar la busqueda de las Secciones del Parámetro
+            </summary>
+            <param name="codigoParametro">Código de Parámetro</param>
+            <returns>Json</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.SeccionParametroController.EliminarSeccionParametro(System.Collections.Generic.List{Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroSeccionRequest})">
+            <summary>
+            Permite buscar el parametro
+            </summary>
+            <param name="codigoParametro">Código de Parametro</param>
+            <returns>Secciones del Parametro</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.SeccionParametroController.ListarParametroRelacionado(System.String,System.String,System.Nullable{System.Int32},System.String)">
+            <summary>
+            Lista los Parámetros
+            </summary>
+            <param name="codigoEmpresa">Código de Empresa</param>
+            <param name="codigoSistema">Código de Sistema</param>
+            <param name="codigoParametroMarcado">Código del Parámetro Marcado</param>
+            <param name="etiquetaDefecto">Etiqueta por Defecto</param>
+            <returns>Lista de Parámetro</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.SeccionParametroController.ListarSeccionRelacionado(System.Nullable{System.Int32},System.Nullable{System.Int32},System.String)">
+            <summary>
+            Lista Sección Relacionado
+            </summary>
+            <param name="codigoParametroRelacionado">Código de Parámetro Relacionado</param>
+            <param name="codigoSeccionRelacionado">Código de Sección Relacionada</param>
+            <param name="etiquetaDefecto">Etiqueta por Defecto</param>
+            <returns>Lista de Sección Relacionado</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.SeccionParametroController.ListarTipoDato(System.String,System.String)">
+            <summary>
+            Lista los Tipos de Dato
+            </summary>
+            <param name="etiquetaDefecto">Etiqueta por defecto</param>
+            <returns>Lista de Tipo de Dato</returns>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.ParametroController">
+            <summary>
+            Controladora de Parámetro
+            </summary>
+            <remarks>
+            Creación:       GMD 20150319
+            Modificación:   
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.ParametroController.parametroService">
+            <summary>
+            Servicio de Parámetro
+            </summary>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.ParametroController.Index">
+            <summary>
+            Muestra la vista principal
+            </summary>
+            <returns>Vista principal de la opción</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.ParametroController.FormularioParametro(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroRequest)">
+            <summary>
+            Muestra la vista del formulario de Parámetro
+            </summary>
+            <param name="request">Request</param>
+            <returns>Vista de formulario de Parámetro</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.ParametroController.BuscarParametro(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroRequest)">
+            <summary>
+            Permite realizar la búsqueda de parametros
+            </summary>
+            <param name="request">Request de busqueda</param>
+            <returns>Json</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.ParametroController.GuardarParametro(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroRequest)">
+            <summary>
+            Permite realizar el registro de parametros
+            </summary>
+            <param name="request">Request de registro</param>
+            <returns>Json</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.ParametroController.EliminarParametro(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroRequest)">
+            <summary>
+            Permite realizar la eliminación del parámetro
+            </summary>
+            <param name="request">request</param>
+            <returns>Json</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.ParametroController.ListarSistema(System.String,System.String)">
+            <summary>
+            Lista los sistemas por empresa
+            </summary>
+            <param name="codigoEmpresa">Código de Empresa</param>
+            <param name="etiquetaDefecto">Etiqueta por defecto</param>
+            <returns>Lista de Selección</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.ParametroController.ListarTipoParametro(System.String)">
+            <summary>
+            Lista los Tipo de Parametros
+            </summary>
+            <param name="etiquetaDefecto">Etiqueta de Defecto</param>
+            <returns>Lista de Tipo de Parámetros</returns>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.ValorParametroController">
+            <summary>
+            Controladora de Unidad Operativa
+            </summary>
+            <remarks>
+            Creación:       GMD 20150319
+            Modificación:   
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.ValorParametroController.parametroValorService">
+            <summary>
+            Servicio de parámetro valor
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.ValorParametroController.parametroSeccionService">
+            <summary>
+             Servicio de parámetro sección
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.ValorParametroController.parametroService">
+            <summary>
+             Servicio de servicio
+            </summary>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.ValorParametroController.Index(System.String)">
+            <summary>
+            Muestra la vista principal
+            </summary>
+            <param name="tipoParametro">Tipo de parámetro</param>
+            <returns>Vista principal de la opción</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.ValorParametroController.FormularioParametro(System.Int32,System.Nullable{System.Int32},System.String)">
+            <summary>
+            Muestra el formulario de busqueda
+            </summary>
+            <param name="codigoParametro">Código de Parámetro</param>
+            <param name="codigoValor">Código de valor</param>
+            <returns>Vista FormularioBuscarParametro</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.ValorParametroController.Buscar(System.Int32)">
+            <summary>
+            Permite buscar el parametro valor
+            </summary>
+            <param name="codigoParametro">Código de Parámetro</param>
+            <returns>Valores del Parametro</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.ValorParametroController.BuscarParametro(System.Int32)">
+            <summary>
+            Permite buscar el parametro
+            </summary>
+            <param name="codigoParametro">Código de Parámetro</param>
+            <returns>Secciones del Parametro</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.ValorParametroController.GuardarParametro(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest)">
+            <summary>
+            Permite registrar o actualizar un parametro
+            </summary>
+            <param name="parametroValor">Valor de Parámetro</param>
+            <returns>Indicador de Conformidad</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.ValorParametroController.EliminarParametro(System.Collections.Generic.List{Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.ParametroValorRequest})">
+            <summary>
+            Permite eliminar los valores del parámetro
+            </summary>
+            <param name="listaParametroValor">Lista de parámetro de valor</param>
+            <returns>Indicador de Conformidad</returns>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.TrabajadorController">
+            <summary>
+            Controladora de Unidad Operativa
+            </summary>
+            <remarks>
+            Creación:       GMD 20150319
+            Modificación:
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.TrabajadorController.trabajadorService">
+            <summary>
+            Servicio de manejo de trabajadores.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.TrabajadorController.politicaService">
+            <summary>
+            Servicio de manejo de políticas.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.TrabajadorController.unidadOperativaService">
+            <summary>
+            Servicio de manejo de unidad operativa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.TrabajadorController.entornoAplicacion">
+            <summary>
+            Interface para obtener el entorno de la aplicación.
+            </summary>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.TrabajadorController.Index">
+            <summary>
+            Muestra la vista principal
+            </summary>
+            <returns>Vista principal de la opción</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.TrabajadorController.FormularioTrabajador(System.String)">
+            <summary>
+            Muestra el formulario de datos
+            </summary>
+            <param name="CodigoTrabajador">Código de trabajador</param>
+            <returns>Vista FormularioTrabajador</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.TrabajadorController.FormularioTrabajadorUnidadOperativa(System.String)">
+            <summary>
+            Muestra el formulario de trabajador unidad operativa
+            </summary>
+            <param name="codigoTrabajador">Código de trabajador</param>
+            <returns>Vista FormularioTrabajador</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.TrabajadorController.FormularioTrabajadorSuplente(System.String)">
+            <summary>
+            Muestra el formulario de trabajador unidad operativa
+            </summary>
+            <param name="codigoTrabajador">Código de trabajador</param>
+            <returns>Vista FormularioTrabajador</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.TrabajadorController.Buscar(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.TrabajadorRequest)">
+            <summary>
+            Permite buscar el trabajador
+            </summary>
+            <param name="filtro">Filtro</param>
+            <returns>Retorna el trabajador</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.TrabajadorController.BuscarTrabajadorUnidadOperativa(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.TrabajadorUnidadOperativaRequest)">
+            <summary>
+            Permite buscar el trabajador
+            </summary>
+            <param name="filtro">Filtro de búsqueda</param>
+            <returns>Retorna el trabajador</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.TrabajadorController.Registrar(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.TrabajadorRequest)">
+            <summary>
+            Permite registrar el trabajador
+            </summary>
+            <param name="filtro">Filtro</param>
+            <returns>Resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.TrabajadorController.RegistrarTrabajadorUnidadOperativa(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.TrabajadorRequest)">
+            <summary>
+            Permite registrar el trabajador
+            </summary>
+            <param name="filtro">Filtro</param>
+            <returns>Resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.TrabajadorController.RegistrarTrabajadorSuplente(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.TrabajadorSuplenteRequest)">
+            <summary>
+            Permite registrar el trabajador
+            </summary>
+            <param name="filtro">Filtro</param>
+            <returns>Resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.TrabajadorController.RegistrarValidar(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.TrabajadorRequest)">
+            <summary>
+            Permite registrar validar
+            </summary>
+            <param name="filtro">Filtro</param>
+            <returns>Resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.TrabajadorController.CargarFirmaTrabajador">
+            <summary>
+            Permite cargar la firma del trabajador
+            </summary>
+            <returns>Resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.TrabajadorController.VerFirmaTrabajador(System.String)">
+            <summary>
+            Permite ver la firma del trabajador
+            </summary>
+            <param name="codigoTrabajador">Código de Firma</param>
+            <returns>Retorna el trabajador con su firma</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.TrabajadorController.Eliminar(System.Collections.Generic.List{Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.TrabajadorRequest})">
+            <summary>
+            Acción para la eliminación de trabajadores.
+            </summary>
+            <param name="listaTrabajadores">Lista de trabajadores</param>
+            <returns>Resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.TrabajadorController.EliminarTrabajadorUnidadOperativa(System.String)">
+            <summary>
+            Elimina un proyecto asociado a un trabajador
+            </summary>
+            <param name="codigoTrabajadorUnidadOperativa">Código de trabajador unidad operativa</param>
+            <returns>Resultado del registro</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.TrabajadorController.BuscarTrabajadorUO(System.String)">
+            <summary>
+            Busca Trabajador
+            </summary>
+            <param name="filtroReq"></param>
+            <returns>Lista con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.TrabajadorController.BuscarUnidadOperativaProyectoPorEmpresaMatriz(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.FiltroUnidadOperativa)">
+            <summary>
+            Busca las Unidades Operativas de Nivel Proyecto
+            </summary>
+            <param name="filtro">Filtro de búsqueda</param>
+            <returns>Lista con el resultado de la operación</returns>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.UnidadOperativaController">
+            <summary>
+            Controladora de Unidad Operativa
+            </summary>
+            <remarks>
+            Creación:       GMD 20150319
+            Modificación:   
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.UnidadOperativaController.unidadOperativaService">
+            <summary>
+            Servicio para el manejo de Unidades Operativas
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.UnidadOperativaController.parametroValorService">
+            <summary>
+            Servicio de manejo de parametro valor
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.UnidadOperativaController.politicaService">
+            <summary>
+            Servicio de manejo de políticas
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.UnidadOperativaController.trabajadorService">
+            <summary>
+            Serviciop para el manejo de Trabajadores
+            </summary>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.UnidadOperativaController.Index(System.String)">
+            <summary>
+            Muestra la vista principal
+            </summary>
+            <returns>Vista principal de la opción</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.UnidadOperativaController.FormularioUnidadOperativa(System.String,System.String)">
+            <summary>
+            Muestra el formulario de datos
+            </summary>
+            <param name="codigoUnidadOperativa">Código de unidad operativa</param>
+            <param name="tipo">Tipo de Visualización</param>
+            <returns>Vista del Formulario de Unidad Operativa</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.UnidadOperativaController.FormularioUnidadOperativaStaff(System.String)">
+            <summary>
+            Mostrar vista Asignar staff
+            </summary>
+            <param name="codigoUnidadOperativa">Código de unidad operativa</param>
+            <returns>Mostrar asignar staff</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.UnidadOperativaController.FormularioAsignarResponsable(System.String)">
+            <summary>
+            Mostrar vista Asignar responsable
+            </summary>
+            <param name="codigoUnidadOperativa">Código de unidad operativa</param>
+            <returns>Mostrar asignar responsable</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.UnidadOperativaController.Buscar(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.FiltroUnidadOperativa)">
+            <summary>
+            Permite buscar el trabajador
+            </summary>
+            <param name="filtro">Filtro de  unidad operativa</param>
+            <returns>Retorna la unidad operativa</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.UnidadOperativaController.BuscarNivelSuperior(System.String)">
+            <summary>
+            Permite buscar el nivel de superior
+            </summary>
+            <param name="codigoNivel">Código de nivel</param>
+            <returns>Resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.UnidadOperativaController.BuscarTipoUnidadOperativa(System.String)">
+            <summary>
+            Permite buscar el tipo de unidad operativa
+            </summary>
+            <param name="codigoNivel"></param>
+            <returns>Resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.UnidadOperativaController.Registrar(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.DataUnidadOperativaRequest)">
+            <summary>
+            Permite registrar
+            </summary>
+            <param name="data">Data</param>
+            <returns>Resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.UnidadOperativaController.EliminarUnidadOperativa(System.Collections.Generic.List{System.String})">
+            <summary>
+            Método para eliminar Unidades Operativas
+            </summary>
+            <param name="listaCodigos">Lista de Códigos de Unidades Operativas</param>
+            <returns>Resultado de la Operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.UnidadOperativaController.BuscarUnidadOperativaStaff(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.FiltroUnidadOperativa)">
+            <summary>
+            Permite buscar el unidad operativa staff
+            </summary>
+            <param name="filtro">Filtro de  unidad operativa</param>
+            <returns>Retorna la unidad operativa</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.UnidadOperativaController.BuscarTrabajador(System.String)">
+            <summary>
+            Permite la búsqueda de Trabajadores
+            </summary>
+            <param name="nombreTrabajador">Nombre de Trabajador</param>
+            <returns>Lista con el resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.UnidadOperativaController.RegistrarStaff(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.DataUnidadOperativaStaffRequest)">
+            <summary>
+            Permite registrar Staff
+            </summary>
+            <param name="data">Data</param>
+            <returns>Resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.UnidadOperativaController.EliminarUnidadOperativaStaff(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.DataUnidadOperativaStaffRequest)">
+            <summary>
+            Permite Eliminar Staff
+            </summary>
+            <param name="data">Data</param>
+            <returns>Resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.UnidadOperativaController.RegistrarUsuarioConsultaUnidadOperativa(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.DataUnidadOperativaUsuarioConsultaRequest)">
+            <summary>
+            Permite registrar el usuario de consulta de la Unidad Operativa
+            </summary>
+            <param name="data">Data</param>
+            <returns>Resultado de la operación json</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.UnidadOperativaController.EliminarUsuarioConsultaUnidadOperativa(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.DataUnidadOperativaUsuarioConsultaRequest)">
+            <summary>
+            Permite Eliminar el usuario de consulta de la Unidad Operativa
+            </summary>
+            <param name="data">Data</param>
+            <returns>Resultado de la operación</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.Controllers.General.UnidadOperativaController.BuscarUsuariosConsultaUnidadOperativa(Pe.Stracon.Politicas.Aplicacion.TransferObject.Request.General.FiltroUnidadOperativa)">
+            <summary>
+            Permite buscar usuarios de consulta de la unidad operativa
+            </summary>
+            <param name="filtro">Filtro de unidad operativa</param>
+            <returns>Retorna los usuarios de consulta de la unidad operativa</returns>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Presentacion.Core.Helpers.CustomHtmlHelper">
+            <summary>
+            Helpers personalizados
+            </summary>
+            <remarks>
+            Creación:   GMD 22122014 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.Helpers.CustomHtmlHelper.RenderViewJs(System.String)">
+            <summary>
+            Renderiza los archivos js optimizados segun la vista actual
+            </summary>
+            <param name="scriptView">Vista del script</param>
+            <returns>Indicador</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.Helpers.CustomHtmlHelper.RenderMenu">
+            <summary>
+            Renderiza el componente Menú
+            </summary>
+            <returns>Html generado para el menú</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.Helpers.CustomHtmlHelper.CreateItemLinkModule(Pe.GyM.Security.Account.Model.Modulo)">
+            <summary>
+            Crea el item para el modulo
+            </summary>
+            <param name="module">modulo</param>
+            <returns>modulo</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.Helpers.CustomHtmlHelper.CreateContentModule(Pe.GyM.Security.Account.Model.Modulo)">
+            <summary>
+            Crea el contenido del módulo
+            </summary>
+            <param name="module">Módulo</param>
+            <returns>Módulo</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.Helpers.CustomHtmlHelper.SetActiveModule(System.Collections.Generic.List{Pe.GyM.Security.Account.Model.Modulo})">
+            <summary>
+            Método que permite obtener establecer el módulo activo
+            </summary>
+            <param name="menu">Menu</param>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Presentacion.Core.ViewModel.Base.GenericViewModel">
+            <summary>
+            Modelo de vista genérico - base
+            </summary>
+            <remarks>
+            Creación:   GMD 20150327 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.ViewModel.Base.GenericViewModel.GenerarListadoOpcioneEstadoFiltro">
+            <summary>
+            Generar una lista de opciones con los valores de estado para las bandejas con filtro
+            </summary>
+            <returns>Lista generada</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.ViewModel.Base.GenericViewModel.GenerarListadoOpcioneEstadoFormulario">
+            <summary>
+            Generar una lista de opciones con los valores de estado para los furmularios
+            </summary>
+            <returns>Lista generada</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.ViewModel.Base.GenericViewModel.GenerarListadoOpcioneEstado">
+            <summary>
+            Generar una lista de opciones con los valores de estado
+            </summary>
+            <returns>Lista generada</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.ViewModel.Base.GenericViewModel.GenerarListadoOpcioneGenericoFiltro(System.Collections.Generic.List{System.Web.Mvc.SelectListItem})">
+            <summary>
+            Genera una lista de opciones con el item generico Todos
+            </summary>
+            <param name="opciones">Opciones a agregar</param>
+            <returns>Lista generada</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.ViewModel.Base.GenericViewModel.GenerarListadoOpcioneGenericoFormulario(System.Collections.Generic.List{System.Web.Mvc.SelectListItem})">
+            <summary>
+            Genera una lista de opciones con el item generico Seleccionar
+            </summary>
+            <param name="opciones">Opciones a agregar</param>
+            <returns>Lista generada</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.ViewModel.Base.GenericViewModel.GenerarListadoOpcioneGenerico(System.String,System.Collections.Generic.List{System.Web.Mvc.SelectListItem})">
+            <summary>
+            Genera una lista de opciones agregando la opción indicada
+            </summary>
+            <param name="etiquetaPrimaria">Etiqueta primaria</param>
+            <param name="opciones">Opciones a agregar</param>
+            <returns>Lista generada</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.ViewModel.Base.GenericViewModel.GenerarListadoOpcioneGenericoFiltro(System.Collections.Generic.List{Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.CodigoValorResponse},System.Object)">
+            <summary>
+            Genera una lista de opciones con el item generico Todos
+            </summary>
+            <param name="opciones">Opciones a agregar</param>
+            <param name="seleccionado">Item seleccionado</param>
+            <returns>Lista generada</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.ViewModel.Base.GenericViewModel.GenerarListadoOpcioneGenericoFormulario(System.Collections.Generic.List{Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.CodigoValorResponse},System.Object)">
+            <summary>
+            Genera una lista de opciones con el item generico Seleccionar
+            </summary>
+            <param name="opciones">Opciones a agregar</param>
+            <param name="seleccionado">Item seleccionado</param>
+            <returns>Lista generada</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.ViewModel.Base.GenericViewModel.CastearOpcioneGenerico(System.Collections.Generic.List{Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.CodigoValorResponse},System.Object)">
+            <summary>
+            Convierta una lista de CodigoValorResponse a SelectListItem
+            </summary>
+            <param name="opciones">Opciones a convertir</param>
+            <param name="seleccionado">Seleccionado</param>
+            <returns>Lista generada</returns>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.PlantillaNotificacion.PlantillaNotificacionFormulario">
+            <summary>
+            Modelo de Plantilla Notificacion Formulario
+            </summary>
+            <remarks>
+            Creación:   GMD 22122014 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.PlantillaNotificacion.PlantillaNotificacionFormulario.#ctor(Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.PlantillaNotificacionResponse)">
+            <summary>
+            Constructor de Plantilla Notificacion Response 
+            </summary>
+            <param name="plantillaNotificacionResponse">Plantilla notificación response</param>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.PlantillaNotificacion.PlantillaNotificacionFormulario.plantillaNotificacionResponse">
+            <summary>
+            Clase Plantilla Notificacion Response
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.PlantillaNotificacion.PlantillaNotificacionModel">
+            <summary>
+            Modelo de vista para la bandeja de Plantillas de Notificación
+            </summary>
+            <remarks>
+            Creación:       GMD 20150319
+            Modificación:   
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.PlantillaNotificacion.PlantillaNotificacionModel.ListaIndicadorActiva">
+            <summary>
+            Lista para los indicadores de Plantilla Activa.
+            </summary>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.PlantillaNotificacion.PlantillaNotificacionModel.#ctor">
+            <summary>
+            Constructor de la Clase
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.PlantillaNotificacion.PlantillaNotificacionModel.ControlPermisos">
+            <summary>
+            Controles de Permiso
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.SeccionParametro.SeccionParametroModel">
+            <summary>
+            Modelo de Sección Parámetro
+            </summary>
+            <remarks>
+            Creación:   GMD 22122014 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.SeccionParametro.SeccionParametroModel.#ctor">
+            <summary>
+            Constructor de la Clase
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.SeccionParametro.SeccionParametroModel.ListaTipoDato">
+            <summary>
+            Lista de Tipo de Dato
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.SeccionParametro.SeccionParametroModel.ListaParametroRelacionado">
+            <summary>
+            Lista de Parámetro Relacionado
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.SeccionParametro.SeccionParametroModel.ListaSeccionRelacionada">
+            <summary>
+            Lista de Sección Relacionada
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.SeccionParametro.SeccionParametroModel.ListaSeccionRelacionadaVisible">
+            <summary>
+            Lista de Sección Relacionada Visible
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.SeccionParametro.SeccionParametroModel.Parametro">
+            <summary>
+            Parámetro
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.SeccionParametro.SeccionParametroModel.SeccionParametro">
+            <summary>
+            Parámetro Sección
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.Parametro.ParametroModel">
+            <summary>
+            Modelo de Parámetro
+            </summary>
+            <remarks>
+            Creación:   GMD 22122014 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.Parametro.ParametroModel.#ctor">
+            <summary>
+            Constructor de la Clase
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.Parametro.ParametroModel.ListaEmpresa">
+            <summary>
+            Lista de Empresa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.Parametro.ParametroModel.ListaSistema">
+            <summary>
+            Lista de Sistema
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.Parametro.ParametroModel.ListaTipoParametro">
+            <summary>
+            Lista de Acceso
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.Parametro.ParametroModel.Parametro">
+            <summary>
+            Parámetro
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.Trabajador.TrabajadorSuplenteModel">
+            <summary>
+            Modelo de vista para el formulario TrabajadorSuplente
+            </summary>
+            <remarks>
+            Creación:       GMD 20150319
+            Modificación:   
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.Trabajador.TrabajadorSuplenteModel.#ctor(Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.TrabajadorSuplenteResponse,Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.TrabajadorResponse)">
+            <summary>
+            Constructor del Modelo
+            </summary>
+            <param name="trabajadorSuplente">TrabajadorSuplente</param>
+            <param name="trabajador">Trabajador</param>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.Trabajador.TrabajadorSuplenteModel.TrabajadorSuplente">
+            <summary>
+            TrabajadorSuplente
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.Trabajador.TrabajadorSuplenteModel.Trabajador">
+            <summary>
+            Trabajador
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.Trabajador.TrabajadorUnidadOperativaModel">
+            <summary>
+            Modelo de vista para el formulario TrabajadorUnidadOperativa
+            </summary>
+            <remarks>
+            Creación:       GMD 20150319
+            Modificación:   
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.Trabajador.TrabajadorUnidadOperativaModel.#ctor(Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.TrabajadorResponse,System.Collections.Generic.List{Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.UnidadOperativaResponse})">
+            <summary>
+            Constructor del Modelo
+            </summary>
+            <param name="trabajador">Trabajador</param>
+            <param name="unidadOperativaMatriz">Unidad Operativa Matriz</param>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.Trabajador.TrabajadorUnidadOperativaModel.UnidadOperativaMatriz">
+            <summary>
+            Lista de Unidad Operativa Matriz
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.Trabajador.TrabajadorUnidadOperativaModel.UnidadOperativa">
+            <summary>
+            Lista de Unidades Operativas
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.Trabajador.TrabajadorUnidadOperativaModel.Trabajador">
+            <summary>
+            Trabajador
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.Trabajador.TrabajadorModel">
+            <summary>
+            Modelo de vista para la bandeja de busqueda
+            </summary>
+            <remarks>
+            Creación:       GMD 20150319
+            Modificación:   
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.Trabajador.TrabajadorModel.#ctor(System.Collections.Generic.List{Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.CodigoValorResponse},System.Boolean)">
+            <summary>
+            Constructor del Modelo
+            </summary>
+            <param name="identificacion">Identificación</param>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.Trabajador.TrabajadorModel.#ctor(System.Collections.Generic.List{Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.CodigoValorResponse},Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.TrabajadorResponse)">
+            <summary>
+            Constructor del Modelo
+            </summary>
+            <param name="identificacion">Identificación</param>
+            <param name="trabajador">Trabajador</param>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.Trabajador.TrabajadorModel.CodigoTipoDocumentoIdentidad">
+            <summary>
+            Código de Tipo de documento de identidad
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.Trabajador.TrabajadorModel.Trabajador">
+            <summary>
+            Trabajador
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.Trabajador.TrabajadorModel.UnidadOperativa">
+            <summary>
+            Lista de Unidades Operativas
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.Trabajador.TrabajadorModel.ControlPermisos">
+            <summary>
+            Controles de Permiso
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.UnidadOperativa.UnidadOperativaStaffFormulario.ListaSistema">
+            <summary>
+            Lista de Sistemas
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.UnidadOperativa.UnidadOperativaBusqueda">
+            <summary>
+            Modelo de vista para la bandeja de busqueda
+            </summary>
+            <remarks>
+            Creación:       GMD 20150319
+            Modificación:   
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.UnidadOperativa.UnidadOperativaBusqueda.#ctor(System.Collections.Generic.List{Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.CodigoValorResponse},System.String)">
+            <summary>
+            Constructor de Unidad operativa de búsqueda
+            </summary>
+            <param name="niveles">Niveles</param>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.UnidadOperativa.UnidadOperativaBusqueda.Niveles">
+            <summary>
+            Niveles
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.UnidadOperativa.UnidadOperativaBusqueda.UnidadesOperativasPadre">
+            <summary>
+            Unidades Operativas padre
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.UnidadOperativa.UnidadOperativaBusqueda.Estado">
+            <summary>
+            Estado
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.UnidadOperativa.UnidadOperativaBusqueda.Tipo">
+            <summary>
+            Tipo
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.UnidadOperativa.UnidadOperativaBusqueda.ControlPermisos">
+            <summary>
+            Controles de Permiso
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.UnidadOperativa.UnidadOperativaBusqueda.EsScc">
+            <summary>
+            Si el sistema es Cierre contable
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.UnidadOperativa.UnidadOperativaFormulario">
+            <summary>
+            Modelo de vista para el formulario de unidad operativa
+            </summary>
+            <remarks>
+            Creación:       GMD 20150319
+            Modificación:   
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.UnidadOperativa.UnidadOperativaFormulario.#ctor(System.Collections.Generic.List{Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.CodigoValorResponse},System.String)">
+            <summary>
+            Constructor usado para el registro de datos
+            </summary>
+            <param name="niveles">Niveles a cargar</param>
+            <param name="tipo">Tipo de visualización</param>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.UnidadOperativa.UnidadOperativaFormulario.#ctor(System.Collections.Generic.List{Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.CodigoValorResponse},System.Collections.Generic.List{Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.UnidadOperativaResponse},System.Collections.Generic.List{Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.CodigoValorResponse},Pe.Stracon.Politicas.Aplicacion.TransferObject.Response.General.UnidadOperativaResponse,System.String)">
+            <summary>
+            Constructor usado para la edición de datos
+            </summary>
+            <param name="niveles">Niveles a cargar</param>
+            <param name="unidadesSuperiores">Unidades Superiores a cargar</param>
+            <param name="tipos">Tipos a cargar</param>
+            <param name="unidadOperativa">Unidad operativa a editar</param>
+            <param name="tipo">Tipo de visualización</param>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.UnidadOperativa.UnidadOperativaFormulario.Niveles">
+            <summary>
+            Niveles
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.UnidadOperativa.UnidadOperativaFormulario.UnidadesOperativasPadre">
+            <summary>
+            Unidades operativas padre
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.UnidadOperativa.UnidadOperativaFormulario.TiposUnidadOperativa">
+            <summary>
+            Tipos de unidades opeartivas
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.UnidadOperativa.UnidadOperativaFormulario.unidadOperativa">
+            <summary>
+            Unidad operativa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.UnidadOperativa.UnidadOperativaFormulario.sistema">
+            <summary>
+            Tipo de Visualización
+            </summary>
+            
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.UnidadOperativa.UnidadOperativaFormulario.Tipo">
+            <summary>
+            Tipo de Visualización
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.ValorParametro.ValorParametroModel">
+            <summary>
+            Modelo de Valor de Parámetro
+            </summary>
+            <remarks>
+            Creación:   GMD 22122014 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.ValorParametro.ValorParametroModel.#ctor">
+            <summary>
+            Constructor de la Clase
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.ValorParametro.ValorParametroModel.ListaParametro">
+            <summary>
+            Lista de Parámetro
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.ValorParametro.ValorParametroModel.ListaSecciones">
+            <summary>
+            Lista de Secciones
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.ValorParametro.ValorParametroModel.ListaParametroRelacionado">
+            <summary>
+            Lista de Parámetro Relacionado
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.ValorParametro.ValorParametroModel.ParametroActual">
+            <summary>
+            Parámetro Actual
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.ValorParametro.ValorParametroModel.ParametroValorActual">
+            <summary>
+            Parámetro de Valor Actual
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Presentacion.Core.ViewModel.General.ValorParametro.ValorParametroModel.Accion">
+            <summary>
+            Tipo de accion que se realizara.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,243 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Pe.Stracon.SGC.Infraestructura.Proxy</name>
+    </assembly>
+    <members>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.Proxy.Amt.AmtProxy">
+            <summary>
+            Proxy del servicio AMT
+            </summary>
+            <remarks>
+            Creación:   GMD 20170628 <br />
+            Modificación:            <br />
+            </remarks> 
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Proxy.Amt.AmtProxy.ObtenerEquipos">
+            <summary>
+            Obtener los equipos de ATM
+            </summary>
+            <returns>Lista de equipos</returns>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.Proxy.Amt.IAmtProxy">
+            <summary>
+            Interface de proxy del servicio AMT
+            </summary>
+            <remarks>
+            Creación:   GMD 20170628 <br />
+            Modificación:            <br />
+            </remarks> 
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Proxy.Amt.IAmtProxy.ObtenerEquipos">
+            <summary>
+            Obtener los equipos de ATM
+            </summary>
+            <returns>Lista de equipos</returns>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.Proxy.Oracle.IOracleProxy">
+            <summary>
+            Interface de proxy del servicio de Oracle
+            </summary>
+            <remarks>
+            Creación:   GMD 20150424 <br />
+            Modificación:            <br />
+            </remarks> 
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Proxy.Oracle.IOracleProxy.ObtenerProveedores(System.String)">
+            <summary>
+            Obtiene los proveedores
+            </summary>
+            <param name="request">Request de búsqueda</param>
+            <returns>Lista de Proveedores</returns>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.Proxy.Oracle.OracleProxy">
+            <summary>
+            Proxy del servicio de Oracle
+            </summary>
+            <remarks>
+            Creación:   GMD 20150424 <br />
+            Modificación:            <br />
+            </remarks> 
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Proxy.Oracle.OracleProxy.ObtenerProveedores(System.String)">
+            <summary>
+            Obtiene los proveedores
+            </summary>        /// <param name="request">Request de búsqueda</param>
+            <returns>Lista de Proveedores</returns>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.Proxy.SAP.ISAPProxy">
+            <summary>
+            Interface de proxy del servicio SAP
+            </summary>
+            <remarks>
+            Creación:  Qualis-Tech : 12/12/2018 <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Proxy.SAP.ISAPProxy.ZSGC_OBTPROVEEDORES(System.String)">
+            <summary>
+            Obtiene los proveedores
+            </summary>
+            <param name="request">Request de búsqueda</param>
+            <returns>Lista de Proveedores</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Proxy.SAP.ISAPProxy.ObtenerEquipos">
+            <summary>
+            Obtener los equipos de SAP
+            </summary>
+            <returns>Lista de equipos</returns>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.Proxy.SAP.SAPProxy">
+            <summary>
+            Proxy del servicio de SAP
+            </summary>
+            <remarks>
+            Creación: Qualis-Tech : 12/12/2018  <br />
+            </remarks> 
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Proxy.SAP.SAPProxy.ZSGC_OBTPROVEEDORES(System.String)">
+            <summary>
+            Obtiene los proveedores
+            </summary>
+            <param name="request">Request de búsqueda</param>
+            <returns>Lista de Proveedores</returns>
+        </member>
+        <member name="M:Pe.Stracon.SGC.Infraestructura.Proxy.SAP.SAPProxy.ObtenerEquipos">
+            <summary>
+            Obtener los equipos de SAP
+            </summary>
+            <returns>Lista de equipos</returns>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.Proxy.SAPBienService.ZETM_DATOS_EQUIPOS">
+            <remarks/>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.Proxy.SAPBienService.ZETM_DATOS_EQUIPOS.I_MARCA_DESC">
+            <remarks/>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.Proxy.SAPBienService.BAPIRET2">
+            <remarks/>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.Proxy.SAPBienService.BAPIRET2.TYPE">
+            <remarks/>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.Proxy.SAPBienService.BAPIRET2.ID">
+            <remarks/>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.Proxy.SAPBienService.BAPIRET2.NUMBER">
+            <remarks/>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.Proxy.SAPBienService.BAPIRET2.MESSAGE">
+            <remarks/>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.Proxy.SAPBienService.BAPIRET2.LOG_NO">
+            <remarks/>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.Proxy.SAPBienService.BAPIRET2.LOG_MSG_NO">
+            <remarks/>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.Proxy.SAPBienService.BAPIRET2.MESSAGE_V1">
+            <remarks/>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.Proxy.SAPBienService.BAPIRET2.MESSAGE_V2">
+            <remarks/>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.Proxy.SAPBienService.BAPIRET2.MESSAGE_V3">
+            <remarks/>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.Proxy.SAPBienService.BAPIRET2.MESSAGE_V4">
+            <remarks/>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.Proxy.SAPBienService.BAPIRET2.PARAMETER">
+            <remarks/>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.Proxy.SAPBienService.BAPIRET2.ROW">
+            <remarks/>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.Proxy.SAPBienService.BAPIRET2.FIELD">
+            <remarks/>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.Proxy.SAPBienService.BAPIRET2.SYSTEM">
+            <remarks/>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.Proxy.SAPBienService.ZST_DATOS_EQUIPOS_TEST">
+            <remarks/>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.Proxy.SAPBienService.ZST_DATOS_EQUIPOS_TEST.BUKRS">
+            <remarks/>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.Proxy.SAPBienService.ZST_DATOS_EQUIPOS_TEST.TIDNR">
+            <remarks/>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.Proxy.SAPBienService.ZST_DATOS_EQUIPOS_TEST.EQUNR">
+            <remarks/>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.Proxy.SAPBienService.ZST_DATOS_EQUIPOS_TEST.EQKTX">
+            <remarks/>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.Proxy.SAPBienService.ZST_DATOS_EQUIPOS_TEST.HERST">
+            <remarks/>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.Proxy.SAPBienService.ZST_DATOS_EQUIPOS_TEST.TYPBZ">
+            <remarks/>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.Proxy.SAPBienService.ZST_DATOS_EQUIPOS_TEST.SERGE">
+            <remarks/>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.Proxy.SAPBienService.ZST_DATOS_EQUIPOS_TEST.ANSDT">
+            <remarks/>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.Proxy.SAPBienService.ZST_DATOS_EQUIPOS">
+            <remarks/>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.Proxy.SAPBienService.ZST_DATOS_EQUIPOS.HERST">
+            <remarks/>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.Proxy.SAPBienService.ZST_DATOS_EQUIPOS.TYPBZ">
+            <remarks/>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.Proxy.SAPBienService.ZST_DATOS_EQUIPOS.SERGE">
+            <remarks/>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.Proxy.SAPBienService.ZST_DATOS_EQUIPOS.TIDNR">
+            <remarks/>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.Proxy.SAPBienService.ZST_DATOS_EQUIPOS.EQKTX">
+            <remarks/>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.Proxy.SAPBienService.ZST_DATOS_EQUIPOS.ANSDT">
+            <remarks/>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.Proxy.SAPBienService.ZETM_DATOS_EQUIPOSResponse">
+            <remarks/>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.Proxy.SAPBienService.ZETM_DATOS_EQUIPOSResponse.T_RESULTADO">
+            <remarks/>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.Proxy.SAPBienService.ZETM_DATOS_EQUIPOSResponse.T_RESULTADO_TEST">
+            <remarks/>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.Proxy.SAPBienService.ZETM_DATOS_EQUIPOSResponse.T_RETURN">
+            <remarks/>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.Proxy.SAPProvService.ZSGC_OBTPROVEEDORES">
+            <remarks/>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.Proxy.SAPProvService.ZSGC_OBTPROVEEDORES.I_BP">
+            <remarks/>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.Proxy.SAPProvService.ZSGC_PROVEEDOR">
+            <remarks/>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.Proxy.SAPProvService.ZSGC_PROVEEDOR.IDENT_FISCAL">
+            <remarks/>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.Proxy.SAPProvService.ZSGC_PROVEEDOR.NOMBRE_BP">
+            <remarks/>
+        </member>
+        <member name="T:Pe.Stracon.SGC.Infraestructura.Proxy.SAPProvService.ZSGC_OBTPROVEEDORESResponse">
+            <remarks/>
+        </member>
+        <member name="P:Pe.Stracon.SGC.Infraestructura.Proxy.SAPProvService.ZSGC_OBTPROVEEDORESResponse.E_PROVEEDOR">
+            <remarks/>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,20 @@
+﻿@using Pe.Stracon.SGC.Presentacion.Recursos.Base
+
+<input type="hidden" id="hdfCodigoContrato" value="@ViewBag.codigoContrato" />
+<div class="row">
+    <div class="col-sm-12">
+        <br />
+        <p>Ingrese el motivo por el que desea eliminar el contrato </p>        
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        <div class="form-group">
+            @Html.TextArea("txtFrmDescripcion", null, new { @class="form-control", @id="txtFrmDescripcion" ,@rows="3" })
+        </div>
+    </div>
+</div>
+<div class="comp-Modal-footer">
+    <button class="btn btn-default" id="btnFrmCancelar">@GenericoResource.BotonCancelar</button>
+    <button class="btn btn-primary" id="btnFrmGrabar">@GenericoResource.BotonGrabar</button>
+</div>

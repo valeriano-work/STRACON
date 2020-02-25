@@ -1,0 +1,1072 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Pe.Stracon.Politicas.Infraestructura.CommandModel</name>
+    </assembly>
+    <members>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.CommandModel.Base.BaseEntityMapping`1">
+            <summary>
+            Clase base para el mapping de entidades
+            </summary>
+            <remarks>
+            Creación:   GMD 20150107 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.CommandModel.Base.BaseEntityMapping`1.ConfigureAuditMapping(System.Boolean)">
+            <summary>
+            Permite configurar los atributos del registro de auditoria.
+            </summary>
+            <param name="isAuditContex">Indicador si es un contexto de auditoria</param>
+            <returns>Indicador si la entidad tiene registro de auditoria</returns>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.CommandModel.Base.Entity">
+            <summary>
+            Clase base para las entidades
+            </summary>
+            <remarks>
+            Creación:   GMD 20150107 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.CommandModel.Base.Entity.#ctor">
+            <summary>
+            Constructor Entity
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.Base.Entity.EstadoRegistro">
+            <summary>
+            Estado de Registro
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.Base.Entity.UsuarioCreacion">
+            <summary>
+            Usuario de Creación
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.Base.Entity.FechaCreacion">
+            <summary>
+            Fecha de Creación 
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.Base.Entity.TerminalCreacion">
+            <summary>
+            Terminal de Creación 
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.Base.Entity.UsuarioModificacion">
+            <summary>
+            Usuario de Modificación
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.Base.Entity.FechaModificacion">
+            <summary>
+            Fecha de Modificación 
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.Base.Entity.TerminalModificacion">
+            <summary>
+            Terminal de Modificación
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.CommandModel.Base.TraceAuditAttribute">
+            <summary>
+            Define si una entidad va registrar auditoria o no
+            </summary>
+            <remarks>
+            Creación:   GMD 22122014 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.CommandModel.Base.TraceAuditAttribute.#ctor">
+            <summary>
+            Constructor de TraceAuditAttribute
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.DepartamentoEntity">
+            <summary>
+            Clase que representa la entidad departamento
+            </summary>
+            <remarks>
+            Creación:   GMD 20150107 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.DepartamentoEntity.Codigo">
+            <summary>
+            Código de departamento
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.DepartamentoEntity.CodigoPais">
+            <summary>
+            Código de país
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.DepartamentoEntity.CodigoUbigeo">
+            <summary>
+            Código de ubigeo
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.DepartamentoEntity.Nombre">
+            <summary>
+            Nombre 
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.DistritoEntity">
+            <summary>
+            Clase que representa la entidad distrito
+            </summary>
+            <remarks>
+            Creación:   GMD 20150107 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.DistritoEntity.Codigo">
+            <summary>
+            Código de distrito
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.DistritoEntity.CodigoPronvicia">
+            <summary>
+            Código de provincia
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.DistritoEntity.CodigoUbigeo">
+            <summary>
+            Código de ubigeo
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.DistritoEntity.Nombre">
+            <summary>
+            Nombre 
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.PaisEntity">
+            <summary>
+            Clase que representa la entidad país
+            </summary>
+            <remarks>
+            Creación:   GMD 20150107 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.PaisEntity.Codigo">
+            <summary>
+            Código de país
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.PaisEntity.Nombre">
+            <summary>
+            Nombre 
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.PaisEntity.CodigoSecundario">
+            <summary>
+            Código Secundario
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.ParametroEntity">
+            <summary>
+            Clase que representa la entidad parámetro
+            </summary>
+            <remarks>
+            Creación:   GMD 20150107 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.ParametroEntity.CodigoParametro">
+            <summary>
+            Código de parámetro
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.ParametroEntity.CodigoEmpresa">
+            <summary>
+            Código de Empresa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.ParametroEntity.CodigoSistema">
+            <summary>
+            Código de sistema
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.ParametroEntity.CodigoIdentificador">
+            <summary>
+            Código de identificador
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.ParametroEntity.Nombre">
+            <summary>
+            Nombre 
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.ParametroEntity.Descripcion">
+            <summary>
+            Descripción
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.ParametroEntity.IndicadorPermiteAgregar">
+            <summary>
+            Indicador que permite agregar
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.ParametroEntity.IndicadorPermiteModificar">
+            <summary>
+            Indicador que permite modificar
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.ParametroEntity.IndicadorPermiteEliminar">
+            <summary>
+            Indicador que permite eliminar
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.ParametroEntity.TipoParametro">
+            <summary>
+            Tipo de Parámetro
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.ParametroEntity.IndicadorEmpresa">
+            <summary>
+            Indicador empresa
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.ParametroSeccionEntity">
+            <summary>
+            Clase que representa la entidad parámetro sección
+            </summary>
+            <remarks>
+            Creación:   GMD 20150107 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.ParametroSeccionEntity.CodigoParametro">
+            <summary>
+            Código de parámetro
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.ParametroSeccionEntity.CodigoSeccion">
+            <summary>
+            Código de Sección
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.ParametroSeccionEntity.Nombre">
+            <summary>
+            Nombre 
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.ParametroSeccionEntity.CodigoTipoDato">
+            <summary>
+            Código de Tipo de Dato
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.ParametroSeccionEntity.IndicadorPermiteModificar">
+            <summary>
+            Indicador que permite modificar
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.ParametroSeccionEntity.IndicadorObligatorio">
+            <summary>
+            Indicador Obligatorio
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.ParametroSeccionEntity.IndicadorSistema">
+            <summary>
+            Indicador de sistema
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.ParametroSeccionEntity.CodigoParametroRelacionado">
+            <summary>
+            Código de Parametro Relacionado
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.ParametroSeccionEntity.CodigoSeccionRelacionado">
+            <summary>
+            Código de Sección Relacionada
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.ParametroSeccionEntity.CodigoSeccionRelacionadoMostrar">
+            <summary>
+            Código de Sección Relacionada a Mostrar
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.ParametroValorEntity">
+            <summary>
+            Clase que representa la entidad parámetro valor
+            </summary>
+            <remarks>
+            Creación:   GMD 20150107 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.ParametroValorEntity.CodigoParametro">
+            <summary>
+            Código de parámetro
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.ParametroValorEntity.CodigoSeccion">
+            <summary>
+            Código de sección
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.ParametroValorEntity.CodigoValor">
+            <summary>
+            Código de valor
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.ParametroValorEntity.Valor">
+            <summary>
+            Valor
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.PlantillaNotificacionEntity">
+            <summary>
+            Representa el objeto entity de Plantilla Notificacion
+            </summary>
+            <remarks>
+            Creación:   GMD 20150401 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.PlantillaNotificacionEntity.CodigoPlantillaNotificacion">
+            <summary>
+            Código Plantilla Notificacion
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.PlantillaNotificacionEntity.CodigoSistema">
+            <summary>
+            Código de Sistema
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.PlantillaNotificacionEntity.CodigoTipoNotificacion">
+            <summary>
+            Código Tipo de Notificación
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.PlantillaNotificacionEntity.Asunto">
+            <summary>
+            Asunto
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.PlantillaNotificacionEntity.IndicadorActiva">
+            <summary>
+            Indicador Activa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.PlantillaNotificacionEntity.Contenido">
+            <summary>
+            Contenido
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.PlantillaNotificacionEntity.CodigoTipoDestinatario">
+            <summary>
+            Código del Tipo de Destinatario
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.PlantillaNotificacionEntity.Destinatario">
+            <summary>
+            Destinatario
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.PlantillaNotificacionEntity.DestinatarioCopia">
+            <summary>
+            Destinatario en Copia
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.ProvinciaEntity">
+            <summary>
+            Clase que representa la entidad provincia
+            </summary>
+            <remarks>
+            Creación:   GMD 20150107 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.ProvinciaEntity.Codigo">
+            <summary>
+            Código de provincia
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.ProvinciaEntity.CodigoDepartamento">
+            <summary>
+            Código de departamento
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.ProvinciaEntity.CodigoUbigeo">
+            <summary>
+            Código de ubigeo
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.ProvinciaEntity.Nombre">
+            <summary>
+            Nombre 
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.SistemaEntity">
+            <summary>
+            Clase que representa la entidad de sistema
+            </summary>
+            <remarks>
+            Creación:   GMD 20150107 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.SistemaEntity.Codigo">
+            <summary>
+            Código de sistema
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.SistemaEntity.Nombre">
+            <summary>
+            Nombre 
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.TipoDatoEntity">
+            <summary>
+            Clase que representa la entidad tipo de dato
+            </summary>
+            <remarks>
+            Creación:   GMD 20150107 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.TipoDatoEntity.CodigoTipoDato">
+            <summary>
+            Código de tipo de dato
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.TipoDatoEntity.Nombre">
+            <summary>
+            Nombre 
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.TipoDatoEntity.Descripcion">
+            <summary>
+            Descripción
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.TrabajadorEntity">
+            <summary>
+            Clase que representa la entidad trabajador
+            </summary>
+            <remarks>
+            Creación:   GMD 20150107 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.TrabajadorEntity.Codigo">
+            <summary>
+            Código de Trabajador
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.TrabajadorEntity.CodigoIdentificacion">
+            <summary>
+            Código de Trabajador
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.TrabajadorEntity.CodigoTipoDocumentoIdentidad">
+            <summary>
+            Código de tipo de documento de identidad
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.TrabajadorEntity.NumeroDocumentoIdentidad">
+            <summary>
+            Número de documento de identidad
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.TrabajadorEntity.ApellidoPaterno">
+            <summary>
+            Apellido paterno
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.TrabajadorEntity.ApellidoMaterno">
+            <summary>
+            Apellido materno
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.TrabajadorEntity.Nombres">
+            <summary>
+            Nombres
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.TrabajadorEntity.NombreCompleto">
+            <summary>
+            Nombre completo
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.TrabajadorEntity.Organizacion">
+            <summary>
+            Organización
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.TrabajadorEntity.Departamento">
+            <summary>
+            Departamento
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.TrabajadorEntity.Cargo">
+            <summary>
+            Cargo
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.TrabajadorEntity.TelefonoTrabajo">
+            <summary>
+            Teléfono de trabajo
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.TrabajadorEntity.Anexo">
+            <summary>
+            Anexo
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.TrabajadorEntity.TelefonoMovil">
+            <summary>
+            Teléfono móvil
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.TrabajadorEntity.TelefonoPersonal">
+            <summary>
+            Teléfono personal
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.TrabajadorEntity.CorreoElectronico">
+            <summary>
+            Correo electronico
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.TrabajadorEntity.Dominio">
+            <sumary>
+            Dominio del trabajador.
+            </sumary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.TrabajadorEntity.IndicadorTieneFoto">
+            <summary>
+            Indicador si el usuario tiene Foto
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.TrabajadorEntity.IndicadorTodaUnidadOperativa">
+            <summary>
+            Indica si el trabajador esta asignado a todas las unidades operativas
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.TrabajadorEntity.CodigoUnidadOperativaMatriz">
+            <summary>
+            Código de Unidad Operativa Matriz
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.TrabajadorFirmaEntity">
+            <summary>
+            Clase que representa la entidad trabajador firma.
+            </summary>
+            <remarks>
+            Creación:   GMD 20150107 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.TrabajadorFirmaEntity.Codigo">
+            <summary>
+            Código de Firma del Trabajador.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.TrabajadorFirmaEntity.CodigoTrabajador">
+            <summary>
+            Código de Trabajador.
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.TrabajadorFirmaEntity.Firma">
+            <summary>
+            Firma de Trabajador.
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.TrabajadorSuplenteEntity">
+            <summary>
+            Clase que representa la entidad trabajador suplente
+            </summary>
+            <remarks>
+            Creación:   GMD 20150107 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.TrabajadorSuplenteEntity.CodigoTrabajador">
+            <summary>
+            Código de trabajador
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.TrabajadorSuplenteEntity.CodigoSuplente">
+            <summary>
+            Código de Suplente
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.TrabajadorSuplenteEntity.FechaInicio">
+            <summary>
+            Fecha de inicio
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.TrabajadorSuplenteEntity.FechaFin">
+            <summary>
+            Fecha fin 
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.TrabajadorSuplenteEntity.Activo">
+            <summary>
+            Activo
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.TrabajadorSuplenteEntity.Ejecutado">
+            <summary>
+            Ejecutado
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.TrabajadorSuplenteEntity.PerfilesAgregados">
+            <summary>
+            Perfiles agregados temporales al ser reemplazo
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.TrabajadorUnidadOperativaEntity">
+            <summary>
+            Clase que representa la entidad trabajadorUnidadOperativa
+            </summary>
+            <remarks>
+            Creación:   GMD 20150107 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.TrabajadorUnidadOperativaEntity.CodigoTrabajadorUnidadOperativa">
+            <summary>
+            Código de TrabajadorUnidadOperativa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.TrabajadorUnidadOperativaEntity.CodigoUnidadOperativaMatriz">
+            <summary>
+            Código de Unidad Operativa Matriz
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.TrabajadorUnidadOperativaEntity.CodigoTrabajador">
+            <summary>
+            Código de Trabajador
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.TrabajadorUnidadOperativaEntity.CodigoUnidadOperativa">
+            <summary>
+            Código de unidad operativa
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.UnidadOperativaEntity">
+            <summary>
+            Clase que representa la entidad de unidad operativa
+            </summary>
+            <remarks>
+            Creación:   GMD 20150107 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.UnidadOperativaEntity.Codigo">
+            <summary>
+            Código de unidad operativa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.UnidadOperativaEntity.CodigoIdentificacion">
+            <summary>
+            Código de identificación de la unidad operativa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.UnidadOperativaEntity.Nombre">
+            <summary>
+            Nombre 
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.UnidadOperativaEntity.IndicadorActiva">
+            <summary>
+            Indicador de activación 
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.UnidadOperativaEntity.CodigoNivelJerarquia">
+            <summary>
+            Código de nivel de jerarquía
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.UnidadOperativaEntity.CodigoUnidadOperativaPadre">
+            <summary>
+            Código de unidad operativa padre
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.UnidadOperativaEntity.CodigoTipoUnidadOperativa">
+            <summary>
+            Código de tipo de unidad operativa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.UnidadOperativaEntity.CodigoResponsable">
+            <summary>
+            Código del responsable
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.UnidadOperativaEntity.CodigoPrimerRepresentante">
+            <summary>
+            Código del primer representante
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.UnidadOperativaEntity.CodigoSegundoRepresentante">
+            <summary>
+            Código del segundo representante
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.UnidadOperativaEntity.CodigoTercerRepresentante">
+            <summary>
+            Código del tercer representante
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.UnidadOperativaEntity.CodigoCuartoRepresentante">
+            <summary>
+            Código del cuarto representante
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.UnidadOperativaEntity.Direccion">
+            <summary>
+            Dirección
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.UnidadOperativaEntity.CodigoZonaHoraria">
+            <summary>
+            Código de zona horaria
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.UnidadOperativaEntity.CodigoPrimerRepresentanteOriginal">
+            <summary>
+            Código del primer representante Original
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.UnidadOperativaEntity.CodigoSegundoRepresentanteOriginal">
+            <summary>
+            Código del segundo representante Original
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.UnidadOperativaEntity.CodigoTercerRepresentanteOriginal">
+            <summary>
+            Código del tercer representante Original
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.UnidadOperativaEntity.CodigoCuartoRepresentanteOriginal">
+            <summary>
+            Código del cuarto representante Original
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.UnidadOperativaUsuarioConsultaEntity">
+            <summary>
+            Clase que representa la entidad de unidad operativa responsable
+            </summary>
+            <remarks>
+            Creación:   GMD 20161121 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.UnidadOperativaUsuarioConsultaEntity.CodigoUnidadUsuarioConsulta">
+            <summary>
+            Código de Identificación de la unidad operativa usuario consulta
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.UnidadOperativaUsuarioConsultaEntity.CodigoUnidadOperativa">
+            <summary>
+            Código de unidad operativa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.UnidadOperativaUsuarioConsultaEntity.CodigoTrabajador">
+            <summary>
+            CodigoTrabajador
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.UnidadOperativaStaffEntity">
+            <summary>
+            Clase que representa la entidad de unidad operativa staff
+            </summary>
+            <remarks>
+            Creación:   GMD 20150107 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.UnidadOperativaStaffEntity.CodigoUnidadOperativa">
+            <summary>
+            Código de unidad operativa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.UnidadOperativaStaffEntity.CodigoUnidadOperativaStaff">
+            <summary>
+            Código de Identificación de la unidad operativa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.UnidadOperativaStaffEntity.CodigoSistema">
+            <summary>
+            CodigoSistema
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.UnidadOperativaStaffEntity.CodigoTrabajador">
+            <summary>
+            CodigoTrabajador
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.ZonaHorariaEntity">
+            <summary>
+            Clase que representa la entidad de zona horaria
+            </summary>
+            <remarks>
+            Creación:   GMD 20150107 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.ZonaHorariaEntity.Codigo">
+            <summary>
+            Código de zona horaria
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.ZonaHorariaEntity.HoraUTC">
+            <summary>
+            Hora utc
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.ZonaHorariaEntity.MinutoUTC">
+            <summary>
+            Minuto utc
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.CommandModel.General.ZonaHorariaEntity.Descripcion">
+            <summary>
+            Descripción
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.CommandModel.Mapping.General.PlantillaNotificacionMapping">
+            <summary>
+            Implementación del mapeo de la entidad parámetro
+            </summary>
+            <remarks>
+            Creación:   GMD 20150107 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.CommandModel.Mapping.General.PlantillaNotificacionMapping.#ctor">
+            <summary>
+            Constuctor del Mapping de Parámetro
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.CommandModel.Mapping.General.DepartamentoMapping">
+            <summary>
+            Implementación del mapeo de la entidad departamento
+            </summary>
+            <remarks>
+            Creación:   GMD 20150107 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.CommandModel.Mapping.General.DepartamentoMapping.#ctor">
+            <summary>
+            Constuctor del Mapping de Departamento
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.CommandModel.Mapping.General.DistritoMapping">
+            <summary>
+            Implementación del mapeo de la entidad distrito
+            </summary>
+            <remarks>
+            Creación:   GMD 20150107 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.CommandModel.Mapping.General.DistritoMapping.#ctor">
+            <summary>
+            Constuctor del Mapping de Distrito
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.CommandModel.Mapping.General.PaisMapping">
+            <summary>
+            Implementación del mapeo de la entidad país
+            </summary>
+            <remarks>
+            Creación:   GMD 20150107 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.CommandModel.Mapping.General.PaisMapping.#ctor">
+            <summary>
+            Constuctor del Mapping de Pais
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.CommandModel.Mapping.General.ParametroMapping">
+            <summary>
+            Implementación del mapeo de la entidad parámetro
+            </summary>
+            <remarks>
+            Creación:   GMD 20150107 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.CommandModel.Mapping.General.ParametroMapping.#ctor">
+            <summary>
+            Constuctor del Mapping de Parámetro
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.CommandModel.Mapping.General.ParametroSeccionMapping">
+            <summary>
+            Implementación del mapeo de la entidad parámetro sección
+            </summary>
+            <remarks>
+            Creación:   GMD 20150107 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.CommandModel.Mapping.General.ParametroSeccionMapping.#ctor">
+            <summary>
+            Constructor de la Clase
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.CommandModel.Mapping.General.ParametroValorMapping">
+            <summary>
+            Implementación del mapeo de la entidad parámetro valor
+            </summary>
+            <remarks>
+            Creación:   GMD 20150107 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.CommandModel.Mapping.General.ParametroValorMapping.#ctor">
+            <summary>
+            Constuctor del Mapping de Parametro Valor
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.CommandModel.Mapping.General.ProvinciaMapping">
+            <summary>
+            Implementación del mapeo de la entidad provincia
+            </summary>
+            <remarks>
+            Creación:   GMD 20150107 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.CommandModel.Mapping.General.ProvinciaMapping.#ctor">
+            <summary>
+            Constuctor del Mapping de Provincia
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.CommandModel.Mapping.General.SistemaMapping">
+            <summary>
+            Implementación del mapeo de la entidad sistema
+            </summary>
+            <remarks>
+            Creación:   GMD 20150107 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.CommandModel.Mapping.General.SistemaMapping.#ctor">
+            <summary>
+            Constuctor del Mapping de Sistema
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.CommandModel.Mapping.General.TrabajadorFirmaMapping">
+            <summary>
+            Implementación del mapeo de la entidad trabajador firma.
+            </summary>
+            <remarks>
+            Creación:   GMD 20150326 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.CommandModel.Mapping.General.TrabajadorFirmaMapping.#ctor">
+            <summary>
+            Constuctor del Mapping de Trabajador Firma
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.CommandModel.Mapping.General.TrabajadorMapping">
+            <summary>
+            Implementación del mapeo de la entidad trabajador
+            </summary>
+            <remarks>
+            Creación:   GMD 20150326 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.CommandModel.Mapping.General.TrabajadorMapping.#ctor">
+            <summary>
+            Constuctor del Mapping de Trabajador
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.CommandModel.Mapping.General.TrabajadorSuplenteMapping">
+            <summary>
+            Implementación del mapeo de la entidad Trabajador Suplente
+            </summary>
+            <remarks>
+            Creación:   GMD 20150107 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.CommandModel.Mapping.General.TrabajadorSuplenteMapping.#ctor">
+            <summary>
+            Constuctor del Mapping de Departamento
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.CommandModel.Mapping.General.TrabajadorUnidadOperativaMapping">
+            <summary>
+            Implementación del mapeo de la entidad trabajadorUnidadOperativa
+            </summary>
+            <remarks>
+            Creación:   GMD 20150326 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.CommandModel.Mapping.General.TrabajadorUnidadOperativaMapping.#ctor">
+            <summary>
+            Constuctor del Mapping de TrabajadorUnidadOperativa
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.CommandModel.Mapping.General.UnidadOperativaMapping">
+            <summary>
+            Implementación del mapeo de la entidad unidad operativa
+            </summary>
+            <remarks>
+            Creación:   GMD 20150107 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.CommandModel.Mapping.General.UnidadOperativaMapping.#ctor">
+            <summary>
+            Constuctor del Mapping de Unidad Operativa
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.CommandModel.Mapping.General.UnidadOperativaUsuarioConsultaMapping">
+            <summary>
+            Implementación del mapeo de la entidad unidad operativa staff
+            </summary>
+            <remarks>
+            Creación:   GMD 20161121 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.CommandModel.Mapping.General.UnidadOperativaUsuarioConsultaMapping.#ctor">
+            <summary>
+            Constuctor del Mapping de Unidad Operativa Responsable
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.CommandModel.Mapping.General.UnidadOperativaStaffMapping">
+            <summary>
+            Implementación del mapeo de la entidad unidad operativa staff
+            </summary>
+            <remarks>
+            Creación:   GMD 20150107 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.CommandModel.Mapping.General.UnidadOperativaStaffMapping.#ctor">
+            <summary>
+            Constuctor del Mapping de Unidad Operativa staff
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.CommandModel.Mapping.General.ZonaHorariaMapping">
+            <summary>
+            Implementación del mapeo de la entidad zona horaria
+            </summary>
+            <remarks>
+            Creación:   GMD 20150107 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.CommandModel.Mapping.General.ZonaHorariaMapping.#ctor">
+            <summary>
+            Constuctor del Mapping de Zona Horaria
+            </summary>
+        </member>
+    </members>
+</doc>

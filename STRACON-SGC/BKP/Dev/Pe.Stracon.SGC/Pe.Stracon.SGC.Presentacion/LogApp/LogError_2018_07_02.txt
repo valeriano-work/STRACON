@@ -1,0 +1,6 @@
+FechaHora = 02/07/2018 19:57:19
+MensajeError = [Error]
+Referencia a objeto no establecida como instancia de un objeto.
+DetalleError = [Pila]
+   en Pe.Stracon.SGC.Aplicacion.Service.Contractual.SharePointService.DescargaArchivoPorId(String& hayError, Int64 idItem, String listName) en c:\TFS\STRACON-SGC\DEV\Pe.Stracon.SGC\Pe.Stracon.SGC.Aplicacion.Service\Contractual\SharePointService.cs:línea 114
+__________________________________________________

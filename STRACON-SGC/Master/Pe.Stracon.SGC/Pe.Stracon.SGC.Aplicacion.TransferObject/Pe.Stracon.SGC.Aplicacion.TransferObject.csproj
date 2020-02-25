@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E43DA679-229C-4103-AF10-7FA3584BA914}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Pe.Stracon.SGC.Aplicacion.TransferObject</RootNamespace>
+    <AssemblyName>Pe.Stracon.SGC.Aplicacion.TransferObject</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Pe.Stracon.SGC.Aplicacion.TransferObject.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'STRACON_QA|AnyCPU'">
+    <OutputPath>bin\STRACON_QA\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\Filtro.cs" />
+    <Compile Include="Base\Paginado.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Request\Base\ProveedorRequest.cs" />
+    <Compile Include="Request\Contractual\BienAlquilerRequest.cs" />
+    <Compile Include="Request\Contractual\BienRequest.cs" />
+    <Compile Include="Request\Contractual\ConsultaAdjuntoRequest.cs" />
+    <Compile Include="Request\Contractual\ConsultaRequest.cs" />
+    <Compile Include="Request\Contractual\ContratoBienRequest.cs" />
+    <Compile Include="Request\Contractual\ContratoCorporativoRequest.cs" />
+    <Compile Include="Request\Contractual\ContratoDocumentoAdjuntoResolucionRequest.cs" />
+    <Compile Include="Request\Contractual\ContratoDocumentoRequest.cs" />
+    <Compile Include="Request\Contractual\ContratoEstadioConsultaRequest.cs" />
+    <Compile Include="Request\Contractual\ContratoEstadioObservacionRequest.cs" />
+    <Compile Include="Request\Contractual\ContratoEstadioRequest.cs" />
+    <Compile Include="Request\Contractual\ContratoFirmanteRequest.cs" />
+    <Compile Include="Request\Contractual\ContratoParrafoRequest.cs" />
+    <Compile Include="Request\Contractual\ContratoParrafoVariableRequest.cs" />
+    <Compile Include="Request\Contractual\ContratoRequest.cs" />
+    <Compile Include="Request\Contractual\ContratoDocumentoAdjuntoRequest.cs" />
+    <Compile Include="Request\Contractual\PlantillaNotaPieRequest.cs" />
+    <Compile Include="Request\Contractual\ReporteBienesContratoRequest.cs" />
+    <Compile Include="Request\Contractual\ReporteConsultaRequest.cs" />
+    <Compile Include="Request\Contractual\ReporteContratoObservadoAprobadoRequest.cs" />
+    <Compile Include="Request\Contractual\ReporteContratoEliminadoRequest.cs" />
+    <Compile Include="Request\Contractual\ReporteContratoPendienteElaborarRequest.cs" />
+    <Compile Include="Request\Contractual\ReporteContratoPorEstadioRequest.cs" />
+    <Compile Include="Request\Contractual\ReporteContratoPorFinalizarRequest.cs" />
+    <Compile Include="Request\Contractual\ReporteContratoPorVencerRequest.cs" />
+    <Compile Include="Request\Contractual\ReporteEstadioActualContratoRequest.cs" />
+    <Compile Include="Request\Contractual\ListadoContratoRequest.cs" />
+    <Compile Include="Request\Contractual\PlantillaParrafoVariableRequest.cs" />
+    <Compile Include="Request\Contractual\ProcesoAuditoriaRequest.cs" />
+    <Compile Include="Request\Contractual\FlujoAprobacionParticipanteRequest.cs" />
+    <Compile Include="Request\Contractual\FlujoAprobacionEstadioRequest.cs" />
+    <Compile Include="Request\Contractual\PlantillaParrafoRequest.cs" />
+    <Compile Include="Request\Contractual\PlantillaRequest.cs" />
+    <Compile Include="Request\Contractual\ReporteHojaRutaRequest.cs" />
+    <Compile Include="Request\Contractual\ReporteListadoContratoRequest.cs" />
+    <Compile Include="Request\Contractual\ReporteTiempoAtencionRequest.cs" />
+    <Compile Include="Request\Contractual\ValorPorDefectoRequest.cs" />
+    <Compile Include="Request\Contractual\VariableCampoRequest.cs" />
+    <Compile Include="Request\Contractual\VariableListaRequest.cs" />
+    <Compile Include="Request\Contractual\VariableRequest.cs" />
+    <Compile Include="Response\Base\BaseResponse.cs" />
+    <Compile Include="Response\Base\ProveedorResponse.cs" />
+    <Compile Include="Response\Contractual\BienAlquilerResponse.cs" />
+    <Compile Include="Response\Contractual\BienRegistroResponse.cs" />
+    <Compile Include="Response\Contractual\BienResponse.cs" />
+    <Compile Include="Response\Contractual\ConsultaAdjuntoResponse.cs" />
+    <Compile Include="Response\Contractual\ConsultaResponse.cs" />
+    <Compile Include="Response\Contractual\ContratoBienResponse.cs" />
+    <Compile Include="Response\Contractual\ContratoCorporativoResponse.cs" />
+    <Compile Include="Response\Contractual\ContratoDocumentoAdjuntoResolucionResponse.cs" />
+    <Compile Include="Response\Contractual\ContratoDocumentoResponse.cs" />
+    <Compile Include="Response\Contractual\ContratoEstadioConsultaResponse.cs" />
+    <Compile Include="Response\Contractual\ContratoEstadioObservacionResponse.cs" />
+    <Compile Include="Response\Contractual\ContratoEstadioResponse.cs" />
+    <Compile Include="Response\Contractual\ContratoFirmanteResponse.cs" />
+    <Compile Include="Response\Contractual\ContratoParrafoResponse.cs" />
+    <Compile Include="Response\Contractual\ContratoParrafoVariableResponse.cs" />
+    <Compile Include="Response\Contractual\ContratoResponse.cs" />
+    <Compile Include="Response\Contractual\ContratoDocumentoAdjuntoResponse.cs" />
+    <Compile Include="Response\Contractual\EmpresaVinculadaResponse.cs" />
+    <Compile Include="Response\Contractual\FlujoAprobacionParticipanteResponse.cs" />
+    <Compile Include="Response\Contractual\FlujoAprobacionEstadioResponse.cs" />
+    <Compile Include="Response\Contractual\FlujoAprobacionResponse.cs" />
+    <Compile Include="Request\Contractual\FlujoAprobacionRequest.cs" />
+    <Compile Include="Response\Contractual\ListadoContratoResponse.cs" />
+    <Compile Include="Response\Contractual\PlantillaNotaPieResponse.cs" />
+    <Compile Include="Response\Contractual\PlantillaParrafoResponse.cs" />
+    <Compile Include="Response\Contractual\PlantillaParrafoVariableResponse.cs" />
+    <Compile Include="Response\Contractual\PlantillaResponse.cs" />
+    <Compile Include="Response\Contractual\ProcesoAuditoriaResponse.cs" />
+    <Compile Include="Response\Contractual\ReporteBienesContratoResponse.cs" />
+    <Compile Include="Response\Contractual\ReporteContratoObservadoAprobadoResponse.cs" />
+    <Compile Include="Response\Contractual\ReporteConsultaResponse.cs" />
+    <Compile Include="Response\Contractual\ReporteContratoPendienteElaborarResponse.cs" />
+    <Compile Include="Response\Contractual\ReporteContratoPorFinalizarResponse.cs" />
+    <Compile Include="Response\Contractual\ReporteEstadioActualContratoResponse.cs" />
+    <Compile Include="Response\Contractual\ReporteHojaRutaResponse.cs" />
+    <Compile Include="Response\Contractual\ReporteListadoContratoResponse.cs" />
+    <Compile Include="Response\Contractual\ReporteTiempoAtencionResponse.cs" />
+    <Compile Include="Response\Contractual\VariableCampoResponse.cs" />
+    <Compile Include="Response\Contractual\VariableListaResponse.cs" />
+    <Compile Include="Response\Contractual\VariableResponse.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Pe.Stracon.Politicas\Pe.Stracon.Politicas.Aplicacion.TransferObject\Pe.Stracon.Politicas.Aplicacion.TransferObject.csproj">
+      <Project>{3b488d54-5850-425e-b187-0a232afa02cc}</Project>
+      <Name>Pe.Stracon.Politicas.Aplicacion.TransferObject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pe.Stracon.SGC.Infraestructura.Core\Pe.Stracon.SGC.Infraestructura.Core.csproj">
+      <Project>{2b8f9b45-35da-4eea-b07e-f2598b2863ab}</Project>
+      <Name>Pe.Stracon.SGC.Infraestructura.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

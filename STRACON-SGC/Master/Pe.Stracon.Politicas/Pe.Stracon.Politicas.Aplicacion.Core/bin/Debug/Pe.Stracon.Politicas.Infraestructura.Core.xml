@@ -1,0 +1,983 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Pe.Stracon.Politicas.Infraestructura.Core</name>
+    </assembly>
+    <members>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.Core.Base.IComandRepository`1">
+            <summary>
+            Repository contract: for persisting an entity.
+            </summary>
+            <remarks>
+            Creación:   GMD 22122014 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.Core.Base.IComandRepository`1.Insertar(`0)">
+            <summary>
+            Save an entity.
+            </summary>
+            <param name="obj">The entity to save.</param>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.Core.Base.IComandRepository`1.Editar(`0)">
+            <summary>
+            Update an entity.
+            </summary>
+            <param name="obj">The entity to update.</param>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.Core.Base.IComandRepository`1.Eliminar(System.Object[])">
+            <summary>
+            Delete an entity
+            </summary>
+            <param name="obj">The entity to update.</param>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.Core.Base.IComandRepository`1.GetById(System.Object[])">
+            <summary>
+            Get Entity by primary key
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.Core.Base.IComandRepository`1.GuardarCambios">
+            <summary>
+            Save all changes
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.Core.Base.IQueryRepository`1">
+            <summary>
+            Repository contract: for Read a DTO.
+            </summary>
+            <remarks>
+            Creación:   GMD 22122014 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.Core.CommandContract.General.IPlantillaNotificacionEntityRepository">
+            <summary>
+            Interface del repositorio de Plantilla Notificacion
+            </summary>
+            <remarks>
+            Creación:   GMD 20140310 <br />
+            Modificación:            <br />
+            </remarks> 
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.Core.CommandContract.General.IParametroSeccionEntityRepository">
+            <summary>
+            Interface del repositorio de Parametro Sección
+            </summary>
+            <remarks>
+            Creación:   GMD 20140310 <br />
+            Modificación:            <br />
+            </remarks> 
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.Core.CommandContract.General.IParametroEntityRepository">
+            <summary>
+            Interface del repositorio de Parametro
+            </summary>
+            <remarks>
+            Creación:   GMD 20140310 <br />
+            Modificación:            <br />
+            </remarks> 
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.Core.CommandContract.General.IParametroValorEntityRepository">
+            <summary>
+            Interface del repositorio de Parametro Valor
+            </summary>
+            <remarks>
+            Creación:   GMD 20140310 <br />
+            Modificación:            <br />
+            </remarks> 
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.Core.CommandContract.General.ITrabajadorEntityRepository">
+            <summary>
+            Interface del repositorio de Trabajador
+            </summary>
+            <remarks>
+            Creación:   GMD 20140310 <br />
+            Modificación:            <br />
+            </remarks> 
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.Core.CommandContract.General.ITrabajadorFirmaEntityRepository">
+            <summary>
+            Interface del repositorio de Trabajador Firma
+            </summary>
+            <remarks>
+            Creación:   GMD 20140310 <br />
+            Modificación:            <br />
+            </remarks> 
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.Core.CommandContract.General.ITrabajadorSuplenteEntityRepository">
+            <summary>
+            Interface del repositorio de Trabajador Suplente
+            </summary>
+            <remarks>
+            Creación:   GMD 20140310 <br />
+            Modificación:            <br />
+            </remarks> 
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.Core.CommandContract.General.ITrabajadorUnidadOperativaEntityRepository">
+            <summary>
+            Interface del repositorio de TrabajadorUnidadOperativa
+            </summary>
+            <remarks>
+            Creación:   GMD 20140310 <br />
+            Modificación:            <br />
+            </remarks> 
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.Core.CommandContract.General.IUnidadOperativaEntityRepository">
+            <summary>
+            Interface del repositorio de Unidad Operativa
+            </summary>
+            <remarks>
+            Creación:   GMD 20140310 <br />
+            Modificación:            <br />
+            </remarks> 
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.Core.CommandContract.General.IUnidadOperativaUsuarioConsultaEntityRepository">
+            <summary>
+            Interface del repositorio de Unidad Operativa Responsable
+            </summary>
+            <remarks>
+            Creación:   GMD 20161122 <br />
+            Modificación:            <br />
+            </remarks> 
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.Core.CommandContract.General.IUnidadOperativaStaffEntityRepository">
+            <summary>
+            Interface del repositorio de Unidad Operativa staff
+            </summary>
+            <remarks>
+            Creación:   GMD 20140310 <br />
+            Modificación:            <br />
+            </remarks> 
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.Core.Context.PoliticaAuditDbContextProvider">
+            <summary>
+            Proveedor del contexto de base de datos de auditoria
+            </summary>
+            <remarks>
+            Creación:   GMD 22122014 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.Core.Context.PoliticaAuditDbContextProvider.#ctor">
+            <summary>
+            Constructor por defecto de implementación de la clase
+            </summary>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.Core.Context.PoliticaAuditDbContextProvider.OnModelCreating(System.Data.Entity.DbModelBuilder)">
+            <summary>
+            Establece la configuración de creación de la base de datos
+            </summary>
+            <param name="modelBuilder">contructor del modelo de base de datos</param>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.Core.Context.PoliticaAuditDbContextProvider.MapEntitiesFromMappingConfigurations(System.Data.Entity.DbModelBuilder)">
+            <summary>
+            Permite inicializar el mapping de cada entidad
+            </summary>
+            <param name="modelBuilder">contructor del modelo de base de datos</param>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.Core.Context.PoliticaAuditDbContextProvider.LazyLoadingEnabled">
+            <summary>
+            Indicador de carga perezosa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.Core.Context.PoliticaAuditDbContextProvider.ProxyCreationEnabled">
+            <summary>
+            Inidicador de implementación de proxy
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.Core.Context.PoliticaAuditDbContextProvider.ConnectionString">
+            <summary>
+            Cadena de conexión
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.Core.Context.PoliticaAuditDbContextProvider.DataBase">
+            <summary>
+            Base de datos asociado al contexto
+            </summary>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.Core.Context.PoliticaAuditDbContextProvider.DbSet``1">
+            <summary>
+            genera el DbSet de una entidad
+            </summary>
+            <typeparam name="T">entidad asociada</typeparam>
+            <returns>DbSet de la entidad asociada</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.Core.Context.PoliticaAuditDbContextProvider.Modified``1(``0)">
+            <summary>
+            Setea el estado de la entidad a modificado
+            </summary>
+            <typeparam name="T">Tipo entidad</typeparam>
+            <param name="entidad">Entidad</param>
+            <returns>Entidad modificada</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.Core.Context.PoliticaAuditDbContextProvider.Persist">
+            <summary>
+            Persiste los cambios
+            </summary>
+            <returns>Registros afectados</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.Core.Context.PoliticaAuditDbContextProvider.ExecuteStoreProcedure``1(System.String,System.Object[])">
+            <summary>
+            Ejecuta un store procedure del tipo consulta
+            </summary>
+            <typeparam name="T">Tipo de entidad de resultado</typeparam>
+            <param name="query">Nombre del store procedure</param>
+            <param name="parameters">Parametros</param>
+            <returns>Resultado</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.Core.Context.PoliticaAuditDbContextProvider.ExecuteStoreProcedureScalar``1(System.String,System.Object[])">
+            <summary>
+            Ejecuta un store procedure del tipo escalar
+            </summary>
+            <param name="query">Nombre del store procedure</param>
+            <param name="parameters">Parametros</param>
+            <returns>Resultado</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.Core.Context.PoliticaAuditDbContextProvider.ExecuteStoreProcedureNonQuery(System.String,System.Object[])">
+            <summary>
+            Ejecuta un store procedure del tipo transacción
+            </summary>
+            <param name="query">Nombre del store procedure</param>
+            <param name="parameters">Parametros</param>
+            <returns>Resultado</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.Core.Context.PoliticaAuditDbContextProvider.GenerateQueryString(System.String,System.Object[])">
+            <summary>
+            Permite generar la sentencia a ejecutar
+            </summary>
+            <param name="query">nombre de store procedure</param>
+            <param name="parameters">parametros de entrada del store procedure</param>
+            <returns>Sentencia a ejecutar</returns>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.Core.Context.PoliticaDbContextProvider">
+            <summary>
+            Proveedor del contexto de base de datos
+            </summary>
+            <remarks>
+            Creación:   GMD 22122014 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.Core.Context.PoliticaDbContextProvider.OnModelCreating(System.Data.Entity.DbModelBuilder)">
+            <summary>
+            Establece la configuración de creación de la base de datos
+            </summary>
+            <param name="modelBuilder">contructor del modelo de base de datos</param>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.Core.Context.PoliticaDbContextProvider.MapEntitiesFromMappingConfigurations(System.Data.Entity.DbModelBuilder)">
+            <summary>
+            Permite inicializar el mapping de cada entidad
+            </summary>
+            <param name="modelBuilder">contructor del modelo de base de datos</param>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.Core.Context.PoliticaDbContextProvider.LazyLoadingEnabled">
+            <summary>
+            Indicador de carga perezosa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.Core.Context.PoliticaDbContextProvider.ProxyCreationEnabled">
+            <summary>
+            Inidicador de implementación de proxy
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.Core.Context.PoliticaDbContextProvider.ConnectionString">
+            <summary>
+            Cadena de conexión
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.Core.Context.PoliticaDbContextProvider.DataBase">
+            <summary>
+            Base de datos asociado al contexto
+            </summary>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.Core.Context.PoliticaDbContextProvider.DbSet``1">
+            <summary>
+            genera el DbSet de una entidad
+            </summary>
+            <typeparam name="T">entidad asociada</typeparam>
+            <returns>DbSet de la entidad asociada</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.Core.Context.PoliticaDbContextProvider.Modified``1(``0)">
+            <summary>
+            Setea el estado de la entidad a modificado
+            </summary>
+            <typeparam name="T">Tipo entidad</typeparam>
+            <param name="entidad">Entidad</param>
+            <returns>Entidad modificada</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.Core.Context.PoliticaDbContextProvider.Persist">
+            <summary>
+            Persiste los cambios
+            </summary>
+            <returns>Registros afectados</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.Core.Context.PoliticaDbContextProvider.ExecuteStoreProcedure``1(System.String,System.Object[])">
+            <summary>
+            Ejecuta un store procedure del tipo consulta
+            </summary>
+            <typeparam name="T">Tipo de entidad de resultado</typeparam>
+            <param name="query">Nombre del store procedure</param>
+            <param name="parameters">Parametros</param>
+            <returns>Resultado</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.Core.Context.PoliticaDbContextProvider.ExecuteStoreProcedureScalar``1(System.String,System.Object[])">
+            <summary>
+            Ejecuta un store procedure del tipo escalar
+            </summary>
+            <param name="query">Nombre del store procedure</param>
+            <param name="parameters">Parametros</param>
+            <returns>Resultado</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.Core.Context.PoliticaDbContextProvider.ExecuteStoreProcedureNonQuery(System.String,System.Object[])">
+            <summary>
+            Ejecuta un store procedure del tipo transacción
+            </summary>
+            <param name="query">Nombre del store procedure</param>
+            <param name="parameters">Parametros</param>
+            <returns>Resultado</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.Core.Context.PoliticaDbContextProvider.GenerateQueryString(System.String,System.Object[])">
+            <summary>
+            Permite generar la sentencia a ejecutar
+            </summary>
+            <param name="query">nombre de store procedure</param>
+            <param name="parameters">parametros de entrada del store procedure</param>
+            <returns>Sentencia a ejecutar</returns>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.Core.Context.DatosConstantes">
+            <summary>
+            Clase de datos constantes de la Base datos
+            </summary>
+            <remarks>
+            Creación:   GMD 20140310 <br />
+            Modificación:            <br />
+            </remarks> 
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.Core.Context.DatosConstantes.ParametrosGenerales">
+            <summary>
+            Constantes de parametros generales
+            </summary>
+        </member>
+        <member name="F:Pe.Stracon.Politicas.Infraestructura.Core.Context.DatosConstantes.ParametrosGenerales.CodigoNivel">
+            <summary>
+            Código de parametro general tipo nivel
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.Core.Context.DatosConstantes.Empresa">
+            <summary>
+            Constantes de Empresa
+            </summary>
+        </member>
+        <member name="F:Pe.Stracon.Politicas.Infraestructura.Core.Context.DatosConstantes.Empresa.CodigoStracon">
+            <summary>
+            Codigo de la Stracon
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.Core.Context.DatosConstantes.Sistema">
+            <summary>
+            Constantes de Sistema
+            </summary>
+        </member>
+        <member name="F:Pe.Stracon.Politicas.Infraestructura.Core.Context.DatosConstantes.Sistema.CodigoSCC">
+            <summary>
+            Codigo del Sistema SCC
+            </summary>
+        </member>
+        <member name="F:Pe.Stracon.Politicas.Infraestructura.Core.Context.DatosConstantes.Sistema.CodigoSGC">
+            <summary>
+            Codigo del Sistema SGC
+            </summary>
+        </member>
+        <member name="F:Pe.Stracon.Politicas.Infraestructura.Core.Context.DatosConstantes.Sistema.CodigoTRA">
+            <summary>
+            Codigo del Sistema Trasciende
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.Core.Context.DatosConstantes.EstadoRegistro">
+            <summary>
+            Constantes de Estado de Registro
+            </summary>
+        </member>
+        <member name="F:Pe.Stracon.Politicas.Infraestructura.Core.Context.DatosConstantes.EstadoRegistro.Activo">
+            <summary>
+            Estado de Activo
+            </summary>
+        </member>
+        <member name="F:Pe.Stracon.Politicas.Infraestructura.Core.Context.DatosConstantes.EstadoRegistro.Inactivo">
+            <summary>
+            Estado de Inactivo
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.Core.Context.DatosConstantes.Formato">
+            <summary>
+            Constantes Formato
+            </summary>
+        </member>
+        <member name="F:Pe.Stracon.Politicas.Infraestructura.Core.Context.DatosConstantes.Formato.FormatoFecha">
+            <summary>
+            Formato de Fecha
+            </summary>
+        </member>
+        <member name="F:Pe.Stracon.Politicas.Infraestructura.Core.Context.DatosConstantes.Formato.FormatoFechaSelector">
+            <summary>
+            Formato de Fecha de Selector
+            </summary>
+        </member>
+        <member name="F:Pe.Stracon.Politicas.Infraestructura.Core.Context.DatosConstantes.Formato.FormatoFechaMascara">
+            <summary>
+            Formato de Fecha de Mascara
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.Core.Context.DatosConstantes.TipoParametro">
+            <summary>
+            Constantes de Tipo de Parámetro
+            </summary>
+        </member>
+        <member name="F:Pe.Stracon.Politicas.Infraestructura.Core.Context.DatosConstantes.TipoParametro.Comun">
+            <summary>
+            Tipo de Parámetro Común
+            </summary>
+        </member>
+        <member name="F:Pe.Stracon.Politicas.Infraestructura.Core.Context.DatosConstantes.TipoParametro.Sistema">
+            <summary>
+            Tipo de Parámetro Sistema
+            </summary>
+        </member>
+        <member name="F:Pe.Stracon.Politicas.Infraestructura.Core.Context.DatosConstantes.TipoParametro.Funcional">
+            <summary>
+            Tipo de Parámetro Funcional
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.Core.Context.DatosConstantes.TipoDato">
+            <summary>
+            Constantes de Tipo de Dato
+            </summary>
+        </member>
+        <member name="F:Pe.Stracon.Politicas.Infraestructura.Core.Context.DatosConstantes.TipoDato.Decimal">
+            <summary>
+            Tipo Decimal
+            </summary>
+        </member>
+        <member name="F:Pe.Stracon.Politicas.Infraestructura.Core.Context.DatosConstantes.TipoDato.Encriptado">
+            <summary>
+            Tipo Encriptado
+            </summary>
+        </member>
+        <member name="F:Pe.Stracon.Politicas.Infraestructura.Core.Context.DatosConstantes.TipoDato.Entero">
+            <summary>
+            Tipo Entero
+            </summary>
+        </member>
+        <member name="F:Pe.Stracon.Politicas.Infraestructura.Core.Context.DatosConstantes.TipoDato.Fecha">
+            <summary>
+            Tipo Fecha
+            </summary>
+        </member>
+        <member name="F:Pe.Stracon.Politicas.Infraestructura.Core.Context.DatosConstantes.TipoDato.Texto">
+            <summary>
+            Tipo Texto
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.Core.Context.DatosConstantes.TipoVisualizacionUnidadOperativa">
+            <summary>
+            Tipo de Visualización de Unidad Operativa
+            </summary>
+        </member>
+        <member name="F:Pe.Stracon.Politicas.Infraestructura.Core.Context.DatosConstantes.TipoVisualizacionUnidadOperativa.Responsable">
+            <summary>
+            Responsable
+            </summary>
+        </member>
+        <member name="F:Pe.Stracon.Politicas.Infraestructura.Core.Context.DatosConstantes.TipoVisualizacionUnidadOperativa.RepresentanteDireccion">
+            <summary>
+            Representantes y Dirección
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.Core.Context.DatosConstantes.TipoDocumentoIdentidad">
+            <summary>
+            Tipo de Documento de Identidad
+            </summary>
+        </member>
+        <member name="F:Pe.Stracon.Politicas.Infraestructura.Core.Context.DatosConstantes.TipoDocumentoIdentidad.Dni">
+            <summary>
+            Tipo Dni
+            </summary>
+        </member>
+        <member name="F:Pe.Stracon.Politicas.Infraestructura.Core.Context.DatosConstantes.TipoDocumentoIdentidad.Ruc">
+            <summary>
+            Tipo RUC
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.Core.Context.DatosConstantes.Nivel">
+            <summary>
+            Constantes de Niveles
+            </summary>
+        </member>
+        <member name="F:Pe.Stracon.Politicas.Infraestructura.Core.Context.DatosConstantes.Nivel.EmpresaMatriz">
+            <summary>
+            Nivel de Empresa Matriz
+            </summary>
+        </member>
+        <member name="F:Pe.Stracon.Politicas.Infraestructura.Core.Context.DatosConstantes.Nivel.Empresa">
+            <summary>
+            Nivel de Empresa
+            </summary>
+        </member>
+        <member name="F:Pe.Stracon.Politicas.Infraestructura.Core.Context.DatosConstantes.Nivel.Proyecto">
+            <summary>
+            Nivel de Proyecto
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.Core.Context.DatosConstantes.ConfiguracionPresentacion">
+            <summary>
+            Configuración de la capa de presentación
+            </summary>
+        </member>
+        <member name="F:Pe.Stracon.Politicas.Infraestructura.Core.Context.DatosConstantes.ConfiguracionPresentacion.TituloAplicacion">
+            <summary>
+            Titulo de la aplicación
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.Core.Context.DatosConstantes.ConfiguracionFileServer">
+            <summary>
+            Configuración de file server
+            </summary>
+        </member>
+        <member name="F:Pe.Stracon.Politicas.Infraestructura.Core.Context.DatosConstantes.ConfiguracionFileServer.UbicacionFotoColaborador">
+            <summary>
+            Ubicacion de fotos del colaborador
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.Core.Context.DatosConstantes.ConfiguracionNombreDataBasePoliticas">
+            <summary>
+            Configuración de la Nombre DataBase Politicas
+            </summary>
+        </member>
+        <member name="F:Pe.Stracon.Politicas.Infraestructura.Core.Context.DatosConstantes.ConfiguracionNombreDataBasePoliticas.NombreBaseDatosPoliticas">
+            <summary>
+            Nombre Base Datos
+            </summary>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.Core.Context.DbContextInitializer">
+            <summary>
+            Inicialización del contexto Entity Framework
+            </summary>
+            <remarks>
+            Creación:   GMD 22122014 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.Core.Context.IDbContextProvider">
+            <summary>
+            Proveedor de contexto
+            </summary>
+            <remarks>
+            Creación:   GMD 22122014 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.Core.Context.IDbContextProvider.LazyLoadingEnabled">
+            <summary>
+            Indicador de carga perezosa
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.Core.Context.IDbContextProvider.ProxyCreationEnabled">
+            <summary>
+            Inidicador de implementación de proxy
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.Core.Context.IDbContextProvider.DataBase">
+            <summary>
+            Base de datos asociado al contexto
+            </summary>
+        </member>
+        <member name="P:Pe.Stracon.Politicas.Infraestructura.Core.Context.IDbContextProvider.ConnectionString">
+            <summary>
+            Cadena de conexión
+            </summary>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.Core.Context.IDbContextProvider.DbSet``1">
+            <summary>
+            genera el DbSet de una entidad
+            </summary>
+            <typeparam name="T">entidad asociada</typeparam>
+            <returns>DbSet de la entidad asociada</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.Core.Context.IDbContextProvider.Modified``1(``0)">
+            <summary>
+            Setea el estado de la entidad a modificado
+            </summary>
+            <typeparam name="T">Tipo entidad</typeparam>
+            <param name="entidad">Entidad</param>
+            <returns>Entidad modificada</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.Core.Context.IDbContextProvider.Persist">
+            <summary>
+            Persiste los cambios
+            </summary>
+            <returns>Registros afectados</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.Core.Context.IDbContextProvider.ExecuteStoreProcedure``1(System.String,System.Object[])">
+            <summary>
+            Ejecuta un store procedure del tipo consulta
+            </summary>
+            <typeparam name="T">Tipo de entidad de resultado</typeparam>
+            <param name="query">Nombre del store procedure</param>
+            <param name="parameters">Parametros</param>
+            <returns>Resultado</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.Core.Context.IDbContextProvider.ExecuteStoreProcedureScalar``1(System.String,System.Object[])">
+            <summary>
+            Ejecuta un store procedure del tipo escalar
+            </summary>
+            <param name="query">Nombre del store procedure</param>
+            <param name="parameters">Parametros</param>
+            <returns>Resultado</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.Core.Context.IDbContextProvider.ExecuteStoreProcedureNonQuery(System.String,System.Object[])">
+            <summary>
+            Ejecuta un store procedure del tipo transacción
+            </summary>
+            <param name="query">Nombre del store procedure</param>
+            <param name="parameters">Parametros</param>
+            <returns>Resultado</returns>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.Core.QueryContract.General.IParametroLogicRepository">
+            <summary>
+            Interface de Parametro de Valor Repository
+            </summary>
+            <remarks>
+            Creación:   GMD <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.Core.QueryContract.General.IParametroLogicRepository.BuscarParametro(System.Nullable{System.Int32},System.Nullable{System.Boolean},System.Nullable{System.Guid},System.Nullable{System.Guid},System.String,System.String,System.String,System.String,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.String)">
+            <summary>
+            Permite buscar Parametros
+            </summary>
+            <param name="codigoParametro">Código de Parametro</param>
+            <param name="indicadorGlobal">Indicador Global</param>
+            <param name="codigoEmpresa">Código de Empresa</param>
+            <param name="codigoSistema">Código de Sistema</param>
+            <param name="codigoIdentificador">Código Identificador</param>
+            <param name="tipoParametro">Código de Tipo de Parámetro</param>
+            <param name="nombre">Nombre</param>
+            <param name="descripcion">Descripción</param>
+            <param name="indicadorPermiteAgregar">Indicador de Permite Agregar</param>
+            <param name="indicadorPermiteModificar">Indicador de Permite Modificar</param>
+            <param name="indicadorPermiteEliminar">Indicador de Permite Eliminar</param>
+            <param name="estadoRegistro">Estado de Registro</param>
+            <returns>Lista de Parametros</returns>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.Core.QueryContract.General.IParametroSeccionLogicRepository">
+            <summary>
+            Interface de Parametro de Valor Repository
+            </summary>
+            <remarks>
+            Creación:   GMD <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.Core.QueryContract.General.IParametroSeccionLogicRepository.BuscarParametroSeccion(System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.String)">
+            <summary>
+            Realiza la busqueda de Parametro Seccion
+            </summary>
+            <param name="codigoParametro">Código de Parametro</param>
+            <param name="codigoSeccion">Código de Sección</param>
+            <param name="nombre">Nombre</param>
+            <param name="codigoTipoDato">Código de Tipo de Dato</param>
+            <param name="indicadorPermiteModificar">Identificador de Permite Modificar</param>
+            <param name="indicadorObligatorio">Indicador de Sección Obligatorio</param>
+            <param name="indicadorSistema">Indicador de Sistema</param>
+            <param name="estadoRegistro">Estado de Registro</param>
+            <returns>Lista de secciones de parametro</returns>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.Core.QueryContract.General.IParametroValorLogicRepository">
+            <summary>
+            Interface de Parametro de Valor Repository
+            </summary>
+            <remarks>
+            Creación:   GMD <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.Core.QueryContract.General.IParametroValorLogicRepository.BuscarParametroValor(System.Nullable{System.Int32},System.Nullable{System.Boolean},System.Nullable{System.Guid},System.Nullable{System.Guid},System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String)">
+            <summary>
+            Realiza la busqueda de Parametro Valor
+            </summary>
+            <param name="codigoParametro">Código de Parametro</param>
+            <param name="indicadorGlobal">Indicador de Global</param>
+            <param name="codigoEmpresa">Código de Empresa</param>
+            <param name="codigoSistema">Código de Sistema</param>
+            <param name="codigoIdentificador">Código Identificador</param>
+            <param name="tipoParametro">Tipo de Parámetro</param>
+            <param name="codigoSeccion">Código de Sección</param>
+            <param name="codigoValor">Código de Valor</param>
+            <param name="valor">Valor</param>
+            <param name="estadoRegistro">Estado de Registro</param>
+            <returns>Lista de valores de parametro</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.Core.QueryContract.General.IParametroValorLogicRepository.BuscarParametroValorMejorado(System.Nullable{System.Int32},System.Nullable{System.Boolean},System.Nullable{System.Guid},System.Nullable{System.Guid},System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="codigoParametro"></param>
+            <param name="indicadorGlobal"></param>
+            <param name="codigoEmpresa"></param>
+            <param name="codigoSistema"></param>
+            <param name="codigoIdentificador"></param>
+            <param name="tipoParametro"></param>
+            <param name="codigoSeccion"></param>
+            <param name="codigoValor"></param>
+            <param name="valor"></param>
+            <param name="estadoRegistro"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.Core.QueryContract.General.IParametroValorLogicRepository.RegistrarParametroValor(Pe.Stracon.Politicas.Infraestructura.QueryModel.General.ParametroValorLogic)">
+            <summary>
+            Realiza el registro de un parametro valor
+            </summary>
+            <param name="parametroValorLogic">Entidad logica de parametro valor</param>
+            <returns>Cantidad de registros registrados</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.Core.QueryContract.General.IParametroValorLogicRepository.ModificarParametroValor(Pe.Stracon.Politicas.Infraestructura.QueryModel.General.ParametroValorLogic)">
+            <summary>
+            Realiza la modificación de un parametro valor
+            </summary>
+            <param name="parametroValorLogic">Entidad logica de parametro valor</param>
+            <returns>Cantidad de registros modificados</returns>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.Core.QueryContract.General.IPlantillaNotificacionLogicRepository">
+            <summary>
+            Interface de Plantilla Notificación 
+            </summary>
+            <remarks>
+            Creación:   GMD <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.Core.QueryContract.General.IPlantillaNotificacionLogicRepository.BuscarPlantillaNotificacion(System.Nullable{System.Guid},System.Nullable{System.Guid},System.String,System.String,System.Nullable{System.Boolean},System.String,System.String)">
+            <summary>
+            Realiza la busqueda de Plantilla 
+            </summary>
+            <param name="codigoPlantillaNotificacion">Código Plantilla Notificacion</param>
+            <param name="codigoSistema">Código Sistema</param>
+            <param name="codigoTipoNotificacion">Código Tipo Notificacion</param>
+            <param name="asunto">Asunto</param>
+            <param name="indicadorActiva">Indicador Activa</param>
+            <param name="contenido">Contenido</param>
+            <param name="estadoRegistro">Estado Registro</param>
+            <returns>Lista con el resultado de la operación</returns>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.Core.QueryContract.General.ITrabajadorLogicRepository">
+            <summary>
+            Definición del Repositorio de Trabajador
+            </summary>
+            <remarks>
+            Creación :  GMD 20150401 <br />
+            Modificación :           <br />
+            </remarks>    
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.Core.QueryContract.General.ITrabajadorLogicRepository.BuscarTrabajador(System.Nullable{System.Guid},System.String,System.String,System.String,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            Buscar Trabajador
+            </summary>
+            <param name="nombre">Nombre</param>
+            <param name="apellidoPaterno">Apellido Paterno</param>
+            <param name="apellidoMaterno">Apellido Materno</param>
+            <param name="tipoDocumento">Tipo Documento</param>
+            <param name="numeroDocumento">Número de Documento</param>
+            <returns>Lista con datos de trabajadores</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.Core.QueryContract.General.ITrabajadorLogicRepository.ListarTrabajadores(System.Collections.Generic.List{System.Nullable{System.Guid}})">
+            <summary>
+            Lista trabajadores
+            </summary>
+            <param name="listaCodigos">Lista de códigos de trabajadores</param>
+            <returns>Lista de registros encontrados</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.Core.QueryContract.General.ITrabajadorLogicRepository.RegistrarTrabajador(Pe.Stracon.Politicas.Infraestructura.CommandModel.General.TrabajadorEntity)">
+            <summary>
+            Registrar Trabajador
+            </summary>
+            <param name="data">Trabajador Entity</param>
+            <returns>Identificador con el resultado</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.Core.QueryContract.General.ITrabajadorLogicRepository.ActualizarTrabajador(Pe.Stracon.Politicas.Infraestructura.CommandModel.General.TrabajadorEntity)">
+            <summary>
+            Actualizar Trabajador
+            </summary>
+            <param name="data">Trabajador Entity</param>
+            <returns>Identificador con el resultado</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.Core.QueryContract.General.ITrabajadorLogicRepository.BuscarTrabajadorDatoMinimo(System.String,System.String,System.String,System.String)">
+            <summary>
+            Lista de Trabajadores con información mínima.
+            </summary>
+            <param name="dominio">dominio del trabajador</param>
+            <param name="codigoIdentificacion">codigo identificador del trabajador</param>
+            <param name="NombreCompleto">nombre completo del trabajador</param>
+            <param name="correoElectronico">correo electrónico del trabajador</param>
+            <returns>Lista con resultados</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.Core.QueryContract.General.ITrabajadorLogicRepository.BuscarFirmaTrabajador(Pe.Stracon.Politicas.Infraestructura.CommandModel.General.TrabajadorEntity)">
+            <summary>
+            Obtener la firma del trabajador.
+            </summary>
+            <param name="trabajador">Trabajador Entity</param>
+            <returns>Lista de registros encontrados</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.Core.QueryContract.General.ITrabajadorLogicRepository.NotificaParticipanteCalendarizacion(System.Collections.Generic.List{System.Nullable{System.Guid}},System.String,System.String,System.String,System.String,System.Guid,System.String)">
+            <summary>
+            Notificar inicios y cierres de periodo.
+            </summary>
+            <param name="listaTrabajadores">Lista de trabajaores</param>
+            <param name="CodigoNotificar">tipo de notificacion</param>
+            <param name="AnioPeriodo">Anio de Periodo</param>
+            <param name="MesPeriodo"> Mes del Periodo </param>
+            <param name="codigoSistema">Código del sistema</param>
+            <param name="profileCorreo">Perfil de la cuenta que ejecuta la notificación.</param>
+            <returns>Identificador de proceso</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.Core.QueryContract.General.ITrabajadorLogicRepository.ListarTrabajadorUnidadOperativa(System.Nullable{System.Guid},System.Nullable{System.Guid})">
+            <summary>
+            Lista trabajadoreUnidadOperativa
+            </summary>
+            <param name="codigoUnidadOperativaMatriz">Código de Unidad Operativa Matriz</param>
+            <param name="codigoTrabajador">Código de trabajador</param>
+            <returns>Lista de trabajadorUndiadOperativa</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.Core.QueryContract.General.ITrabajadorLogicRepository.ListarTrabajadorSuplente(System.Guid)">
+            <summary>
+            Lista trabajador suplente
+            </summary>
+            <param name="codigoTrabajador">Código de trabajador</param>
+            <returns>Lista de trabajador suplente</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.Core.QueryContract.General.ITrabajadorLogicRepository.EnviarNotificacionFinReemplazo(System.Guid,System.Guid,System.String)">
+            <summary>
+            Enviar notificacion fin de reemplazo
+            </summary>
+            <param name="codigoTrabajador">Codigo de Trabajador</param>
+            <param name="codigoSuplente">Código de suplente</param>
+            <param name="profileCorreo">Perfil de correo</param>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.Core.QueryContract.General.ITrabajadorLogicRepository.RegistrarSuplenteTrabajador(Pe.Stracon.Politicas.Infraestructura.CommandModel.General.TrabajadorSuplenteEntity)">
+            <summary>
+            Registrar Trabajador Suplente
+            </summary>
+            <param name="data">Trabajador Suplente Entity</param>
+            <returns>Identificador con el resultado</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.Core.QueryContract.General.ITrabajadorLogicRepository.ActualizarSuplenteTrabajador(Pe.Stracon.Politicas.Infraestructura.CommandModel.General.TrabajadorSuplenteEntity)">
+            <summary>
+            Actualizar Trabajador
+            </summary>
+            <param name="data">Trabajador Suplente Entity</param>
+            <returns>Identificador con el resultado</returns>
+        </member>
+        <member name="T:Pe.Stracon.Politicas.Infraestructura.Core.QueryContract.General.IUnidadOperativaLogicRepository">
+            <summary>
+            Definición del repositorio UnidadOperativaLogic
+            </summary>
+            <remarks>
+            Creación:   GMD 22150326 <br />
+            Modificación:            <br />
+            </remarks>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.Core.QueryContract.General.IUnidadOperativaLogicRepository.BuscarUnidadOperativa(System.Nullable{System.Guid},System.String,System.String,System.Nullable{System.Guid},System.String,System.Int32,System.Int32)">
+            <summary>
+            Realiza la busqueda de unidades operativas
+            </summary>
+            <param name="codigoUnidadOperativa">Código de Unidad Operativa</param>
+            <param name="nombre">Nombre a buscar</param>
+            <param name="nivel">Nivel asociado</param>
+            <param name="unidadPadre">Unidad perativa superior</param>
+            <param name="estado">Estado del registro</param>
+            <returns>Listado de unidad operativas encontrados</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.Core.QueryContract.General.IUnidadOperativaLogicRepository.BuscarUnidadOperativaProyectoPorEmpresaMatriz(System.Guid)">
+            <summary>
+            Realiza la busqueda de unidades operativas de nivel proyecto por Empresa Matriz
+            </summary>
+            <param name="codigoUnidadOperativaMatriz">Código de Unidad Operativa Matriz</param>
+            <returns>Listado de Unidad Operativa de nivel proyecto por Empresa Matriz</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.Core.QueryContract.General.IUnidadOperativaLogicRepository.ListarUnidadesOperativas(System.Collections.Generic.List{System.Nullable{System.Guid}})">
+            <summary>
+            Lista registros de Unidades Operativas a partir de códigos.
+            </summary>
+            <param name="listaCodigos">Lista de códigos de Unidades Operativas</param>
+            <returns>Lista unidades operativas</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.Core.QueryContract.General.IUnidadOperativaLogicRepository.BuscarUnidadOperativaNivelSuperior(System.String)">
+            <summary>
+            Lista las unidades operativas de un nivel superior al indicado como parámetro.
+            </summary>
+            <param name="codigoNivelUnidadOperativa">Codigo de Nivel de la Unidad Operativa</param>
+            <returns>Listado de unidad operativas encontrados</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.Core.QueryContract.General.IUnidadOperativaLogicRepository.ListarUnidadesOperativasPorResponsable(System.String)">
+            <summary>
+            Lista las Unidades Operativas según el Responsable.
+            </summary>
+            <param name="loginResponsable">Código de Identificación del Responsable</param>
+            <returns>Lista las Unidades Operativas</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.Core.QueryContract.General.IUnidadOperativaLogicRepository.RepiteCI(System.String)">
+            <summary>
+            Valida Registro Codigo Identificacion
+            </summary>
+            <param name="codigoIdentificacion">Código de Identificacion</param>
+            <param name="orden">Orden</param>
+            <returns>Identificador con resultado</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.Core.QueryContract.General.IUnidadOperativaLogicRepository.RepiteNombre(System.String)">
+            <summary>
+            Valida registro de Nombre
+            </summary>
+            <param name="nombre">Nombre</param>
+            <returns>Identificador con el resultado</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.Core.QueryContract.General.IUnidadOperativaLogicRepository.BuscarUnidadOperativaStaff(System.Nullable{System.Guid},System.Int32,System.Int32)">
+            <summary>
+            Realiza la busqueda de unidades operativas staff
+            </summary>
+            <param name="codigoUnidadOperativa">Código de Unidad Operativa</param>
+            <returns>Listado de unidad operativas encontrados</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.Core.QueryContract.General.IUnidadOperativaLogicRepository.ObtenerUnidadOperativaPorNivelSuperior(System.Nullable{System.Guid},System.String)">
+            <summary>
+            Obtener la unidad operativa superior de un nivel específico
+            </summary>
+            <param name="codigoUnidadOperativa">Código de Unidad Operativa</param>
+            <param name="nivel">Código de nivel que se desea obtener</param>       
+            <returns>Unidad operativa matriz o superior</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.Core.QueryContract.General.IUnidadOperativaLogicRepository.BuscarUsuariosConsultaUnidadOperativa(System.Nullable{System.Guid})">
+            <summary>
+            Realiza la búsqueda de usuarios de consulta de la Unidad Operativa
+            </summary>
+            <param name="codigoUnidadOperativa">Código de la Unidad Operativa</param>
+            <returns>Listado de usuarios de consulta</returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.Core.QueryContract.General.IUnidadOperativaLogicRepository.ObtenerResponsablesUnidadOperativaPorNivelSuperior(System.Nullable{System.Guid},System.String)">
+            <summary>
+            Obtener los responsables de la unidad operativa y sus niveles superiores por el código o nombre de la Unidad Operativa
+            </summary>
+            <param name="codigoUnidadOperativa">Código de la Unidad Operativa</param>
+            <param name="nombreUnidadOperativa">Nombre de la Unidad Operativa</param>
+            <returns></returns>
+        </member>
+        <member name="M:Pe.Stracon.Politicas.Infraestructura.Core.QueryContract.General.IUnidadOperativaLogicRepository.ObtenerUnidadesOperativasConsultaPorTrabajador(System.Guid)">
+            <summary>
+            Realiza la búsqueda de unidades operativas de consulta por trabajador
+            </summary>
+            <param name="codigoTrabajador">Código del trabajador</param>
+            <returns>Listado unidades operativas de consulta del trabajador</returns>
+        </member>
+    </members>
+</doc>

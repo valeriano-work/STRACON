@@ -1,0 +1,6 @@
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.Stracon.SGC\Pe.Stracon.SGC.Infraestructura.QueryModel\bin\Release\Pe.Stracon.SGC.Infraestructura.QueryModel.dll
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.Stracon.SGC\Pe.Stracon.SGC.Infraestructura.QueryModel\bin\Release\Pe.Stracon.SGC.Infraestructura.QueryModel.pdb
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.Stracon.SGC\Pe.Stracon.SGC.Infraestructura.QueryModel\obj\Release\Pe.Stracon.SGC.Infraestructura.QueryModel.csprojAssemblyReference.cache
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.Stracon.SGC\Pe.Stracon.SGC.Infraestructura.QueryModel\obj\Release\Pe.Stracon.SGC.Infraestructura.QueryModel.csproj.CoreCompileInputs.cache
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.Stracon.SGC\Pe.Stracon.SGC.Infraestructura.QueryModel\obj\Release\Pe.Stracon.SGC.Infraestructura.QueryModel.dll
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.Stracon.SGC\Pe.Stracon.SGC.Infraestructura.QueryModel\obj\Release\Pe.Stracon.SGC.Infraestructura.QueryModel.pdb

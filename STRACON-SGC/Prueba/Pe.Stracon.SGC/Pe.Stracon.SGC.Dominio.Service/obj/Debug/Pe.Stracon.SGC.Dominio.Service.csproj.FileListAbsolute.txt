@@ -1,0 +1,7 @@
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.Stracon.SGC\Pe.Stracon.SGC.Dominio.Service\bin\Debug\Pe.Stracon.SGC.Dominio.Service.XML
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.Stracon.SGC\Pe.Stracon.SGC.Dominio.Service\bin\Debug\Pe.Stracon.SGC.Dominio.Service.dll
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.Stracon.SGC\Pe.Stracon.SGC.Dominio.Service\bin\Debug\Pe.Stracon.SGC.Dominio.Service.pdb
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.Stracon.SGC\Pe.Stracon.SGC.Dominio.Service\obj\Debug\Pe.Stracon.SGC.Dominio.Service.csprojAssemblyReference.cache
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.Stracon.SGC\Pe.Stracon.SGC.Dominio.Service\obj\Debug\Pe.Stracon.SGC.Dominio.Service.csproj.CoreCompileInputs.cache
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.Stracon.SGC\Pe.Stracon.SGC.Dominio.Service\obj\Debug\Pe.Stracon.SGC.Dominio.Service.dll
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.Stracon.SGC\Pe.Stracon.SGC.Dominio.Service\obj\Debug\Pe.Stracon.SGC.Dominio.Service.pdb

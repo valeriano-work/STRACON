@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="DistributedServices.Base" elementFormDefault="qualified" targetNamespace="DistributedServices.Base" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ApplicationServiceError">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ApplicationServiceError" nillable="true" type="tns:ApplicationServiceError" />
+</xs:schema>

@@ -1,0 +1,16 @@
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.Stracon.Politicas\Pe.Stracon.Politicas.Aplicacion.TransferObject\bin\Release\Pe.Stracon.Politicas.Aplicacion.TransferObject.dll
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.Stracon.Politicas\Pe.Stracon.Politicas.Aplicacion.TransferObject\bin\Release\Pe.Stracon.Politicas.Aplicacion.TransferObject.pdb
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.Stracon.Politicas\Pe.Stracon.Politicas.Aplicacion.TransferObject\bin\Release\Pe.Stracon.Politicas.Infraestructura.Core.dll
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.Stracon.Politicas\Pe.Stracon.Politicas.Aplicacion.TransferObject\bin\Release\Pe.Stracon.Politicas.Infraestructura.QueryModel.dll
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.Stracon.Politicas\Pe.Stracon.Politicas.Aplicacion.TransferObject\bin\Release\Pe.Stracon.Politicas.Infraestructura.CommandModel.dll
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.Stracon.Politicas\Pe.Stracon.Politicas.Aplicacion.TransferObject\bin\Release\EntityFramework.dll
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.Stracon.Politicas\Pe.Stracon.Politicas.Aplicacion.TransferObject\bin\Release\Pe.Stracon.Politicas.Infraestructura.Core.pdb
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.Stracon.Politicas\Pe.Stracon.Politicas.Aplicacion.TransferObject\bin\Release\Pe.Stracon.Politicas.Infraestructura.Core.dll.config
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.Stracon.Politicas\Pe.Stracon.Politicas.Aplicacion.TransferObject\bin\Release\Pe.Stracon.Politicas.Infraestructura.QueryModel.pdb
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.Stracon.Politicas\Pe.Stracon.Politicas.Aplicacion.TransferObject\bin\Release\Pe.Stracon.Politicas.Infraestructura.CommandModel.pdb
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.Stracon.Politicas\Pe.Stracon.Politicas.Aplicacion.TransferObject\bin\Release\Pe.Stracon.Politicas.Infraestructura.CommandModel.dll.config
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.Stracon.Politicas\Pe.Stracon.Politicas.Aplicacion.TransferObject\obj\Release\Pe.Stracon.Politicas.Aplicacion.TransferObject.csprojAssemblyReference.cache
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.Stracon.Politicas\Pe.Stracon.Politicas.Aplicacion.TransferObject\obj\Release\Pe.Stracon.Politicas.Aplicacion.TransferObject.csproj.CoreCompileInputs.cache
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.Stracon.Politicas\Pe.Stracon.Politicas.Aplicacion.TransferObject\obj\Release\Pe.Stracon.Politicas.Aplicacion.TransferObject.csproj.CopyComplete
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.Stracon.Politicas\Pe.Stracon.Politicas.Aplicacion.TransferObject\obj\Release\Pe.Stracon.Politicas.Aplicacion.TransferObject.dll
+D:\Modulos\Fuentes\STRACON-SGC\Prueba\Pe.Stracon.Politicas\Pe.Stracon.Politicas.Aplicacion.TransferObject\obj\Release\Pe.Stracon.Politicas.Aplicacion.TransferObject.pdb

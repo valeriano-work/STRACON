@@ -1,0 +1,60 @@
+﻿@using Pe.Stracon.SGC.Presentacion.Recursos.Base
+@using Pe.Stracon.SGC.Presentacion.Recursos.Contractual
+@using Pe.Stracon.SGC.Presentacion.Recursos.Mensajes
+@using Pe.Stracon.SGC.Presentacion.Core.Helpers
+@model Pe.Stracon.SGC.Presentacion.Core.ViewModel.Contractual.ReporteTiempoEjecucion.ReporteTiempoEjecucionBusqueda
+<div class="GmdBody-header">
+    <h2>@ReporteTiempoEjecucionResource.EtiquetaTitulo</h2>
+</div>
+<div class="GmdBody-body">
+    <form id="frmBandejaTiempoAtencion">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label>@ReporteTiempoEjecucionResource.EtiquetaUnidadOperativa</label>
+                    @Html.DropDownList("slcUnidadOperativa", new List<SelectListItem>(), new { @class = "form-control", @id = "slcUnidadOperativa" })
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label>@ReporteTiempoEjecucionResource.EtiquetaContratosGeneradosDesde</label>
+                    @Html.TextBox("txtContratosDesde", null, new { @class = "form-control", @id = "txtContratosDesde" })
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label>@ReporteTiempoEjecucionResource.EtiquetaContratosGeneradosHasta</label>
+                    @Html.TextBox("txtContratosHasta", null, new { @class = "form-control", @id = "txtContratosHasta" })
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <button class="btn btn-info" id="btnLimpiar" type="reset">@GenericoResource.BotonLimpiar</button>
+                    <button class="btn btn-default" id="btnBuscar">@GenericoResource.BotonBuscar</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+@section scripts
+{
+    <script type="text/javascript">
+        ns('Pe.Stracon.SGC.Presentacion.Contractual.ReporteTiempoEjecucion.Actions')
+        
+
+        ns('Pe.Stracon.SGC.Presentacion.Contractual.ReporteTiempoEjecucion.Mensaje')
+        
+
+        ns('Pe.Stracon.SGC.Presentacion.Contractual.ReporteTiempoEjecucion.Resources')
+        
+
+        ns('Pe.Stracon.SGC.Presentacion.Recursos.Validacion')
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.SeleccionarRegistroEliminar = '@Html.Raw(MensajeResource.SeleccionarRegistroEliminar)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ConfirmacionGuardar = '@Html.Raw(MensajeResource.ConfirmacionGuardar)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.EtiquetaConfirmacion = '@MensajeResource.SeGuardoInformacionExito';
+
+    </script>
+}
+

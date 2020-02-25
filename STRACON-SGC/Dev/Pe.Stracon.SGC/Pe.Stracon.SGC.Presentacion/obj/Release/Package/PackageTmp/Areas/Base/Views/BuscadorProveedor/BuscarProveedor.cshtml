@@ -1,0 +1,45 @@
+﻿@using Pe.Stracon.SGC.Presentacion.Recursos.Base
+<div id="divContenedorProveedorComponente">
+    <form id="frmBuscadorProveedorComponente">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <label for="txtRucNombreProveedorComponente">@BuscadorProveedorResource.EtiquetaRucNombreProveedor</label>
+                    @Html.TextBox("txtRucNombreProveedorComponente", null, new { @class = "form-control", @id = "txtRucNombreProveedorComponente" })
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <button id="btnBuscarProveedorComponente" class="btn btn-default" type="button">@GenericoResource.BotonMostrar</button>
+                <hr />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>@GenericoResource.EtiquetaResultadosBusqueda</h3>
+            </div>
+        </div>
+        <div id="divGrdResultProveedorComponente">
+        </div>
+    </form>
+    <div class="comp-Modal-footer">
+        <button class="btn btn-default" id="btnCancelarProveedorComponente">@GenericoResource.BotonCancelar</button>
+        <button class="btn btn-primary" id="btnAceptarProveedorComponente">@GenericoResource.BotonAceptar</button>
+    </div>
+</div>
+<script type="text/javascript">
+    ns('Pe.Stracon.SGC.Presentacion.Base.BuscadorProveedor.Actions');
+    Pe.Stracon.SGC.Presentacion.Base.BuscadorProveedor.Actions.BuscarProveedorSAP = '@Url.Action("BuscarProveedorSAP", "BuscadorProveedor", new { Area = "Base" })';
+
+    ns('Pe.Stracon.SGC.Presentacion.Base.BuscadorProveedor.Resource');
+    Pe.Stracon.SGC.Presentacion.Base.BuscadorProveedor.Resource.EtiquetaTitulo = '@Html.Raw(BuscadorProveedorResource.EtiquetaTitulo)';
+    Pe.Stracon.SGC.Presentacion.Base.BuscadorProveedor.Resource.GridRucProveedor = '@Html.Raw(BuscadorProveedorResource.GridRucProveedor)';
+    Pe.Stracon.SGC.Presentacion.Base.BuscadorProveedor.Resource.GridNombreProveedor = '@Html.Raw(BuscadorProveedorResource.GridNombreProveedor)';
+
+    ns('Pe.Stracon.SGC.Presentacion.Recursos.Validacion')
+    Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarRucNombreProveedor = '@Html.Raw(BuscadorProveedorResource.EtiquetaRucNombreProveedor)';
+    Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ValidarRucNombreProveedorMinimoTresLetras = '@Html.Raw(BuscadorProveedorResource.EtiquetaRucNombreProveedorMinimoTresLetras)';
+</script>
+
+

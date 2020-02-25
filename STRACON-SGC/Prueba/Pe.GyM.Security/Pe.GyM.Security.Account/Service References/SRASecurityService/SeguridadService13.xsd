@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Domain.Implementation.Security.Aggregates.UserProfileAgg" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Domain.Implementation.Security.Aggregates.UserProfileAgg" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://10.244.4.20/SRAService/SeguridadService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Domain.Base" />
+  <xs:complexType name="UserProfile">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Domain.Base" base="q1:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="D_DATE_CREATION" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="D_DATE_MODIFICATION" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="D_DATE_START_VALIDITY" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="N_ID_PROFILE" type="xs:int" />
+          <xs:element minOccurs="0" name="N_ID_USER" type="xs:int" />
+          <xs:element minOccurs="0" name="N_ID_USER_PROFILE" type="xs:int" />
+          <xs:element minOccurs="0" name="S_STATUS_REGISTER" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="S_TERMINAL_CREATION" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="S_TERMINAL_MODIFICATION" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="S_USER_CREATION" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="S_USER_MODIFICATION" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UserProfile" nillable="true" type="tns:UserProfile" />
+</xs:schema>

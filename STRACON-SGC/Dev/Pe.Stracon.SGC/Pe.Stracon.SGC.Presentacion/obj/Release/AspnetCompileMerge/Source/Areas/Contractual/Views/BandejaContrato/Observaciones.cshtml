@@ -1,0 +1,154 @@
+﻿@using Pe.Stracon.SGC.Presentacion.Recursos.Base
+@using Pe.Stracon.SGC.Presentacion.Recursos.Contractual
+@using Pe.Stracon.SGC.Presentacion.Recursos.Mensajes
+@using Pe.Stracon.SGC.Presentacion.Core.Helpers
+@model Pe.Stracon.SGC.Presentacion.Core.ViewModel.Contractual.BandejaContrato.ObservacionesBusqueda
+
+@{
+    var disabled = (ViewBag.ControlPermisos.ControlTotal || ViewBag.ControlPermisos.Escritura) ? false : true;
+}
+
+<div class="GmdBody-header">
+    <h2>@Html.ActionLink(@BandejaContratoResource.EtiquetaTituloPrincipal, "Index") <i class="fa fa-angle-right"></i>@BandejaContratoResource.EtiquetaTituloObservaciones</h2>
+</div>
+
+<input type="hidden" id="hExisteObsPorResponder" value="@ViewBag.ObsPorResponder" />
+<input type="hidden" id="hCodigoTrabajadorSession" value="@ViewBag.CodigoTrabajador" />
+<input type="hidden" id="hContratoEstadioObservacion" value="@ViewBag.CodigoContratoEstadio" />
+<input type="hidden" id="hCodigoContratoObservacion" value="@ViewBag.CodigoDeContrato" />
+<div class="GmdBody-body">
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="form-group">
+                <label>@BandejaContratoResource.EtiquetaNumeroContrato</label>
+                <h3>@ViewBag.NumeroContrado</h3>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="form-group">
+                <label>@BandejaContratoResource.EtiquetaUnidadOrganizacional</label>
+                <h3>@ViewBag.NombreUO</h3>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="form-group">
+                <label>@BandejaContratoResource.EtiquetaTipoServicio</label>
+                <h3>@ViewBag.NombreTipoServicio</h3>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="form-group">
+                <label>@BandejaContratoResource.EtiquetaTipoRequerimiento</label>
+                <h3>@ViewBag.NombreTipoRequerimiento</h3>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="form-group">
+                <label>@BandejaContratoResource.EtiquetaProveedor</label>
+                <h3>@ViewBag.NombreProveedor</h3>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="form-group">
+                <label>@BandejaContratoResource.EtiquetaFechaCreacion</label>
+                <h3>@ViewBag.FechaCreacion</h3>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <div class="row">
+        <div class="col-sm-6 text-left">
+            <div class="form-group">
+                <h3>@GenericoResource.EtiquetaResultadosBusqueda</h3>
+            </div>
+        </div>
+        <div class="col-sm-6 text-right">
+            <div class="form-group">
+                @* @if (@ViewBag.ObsPorResponder == 0)
+                {
+                    *@
+                @if (!disabled)
+                {
+                    <button id="btnAgregarObservacion" class="btn btn-primary">@GenericoResource.BotonAñadir</button>
+                }
+@*
+                }
+                else
+                {
+                    <button id="btnAgregarObservacion" class="btn btn-primary" disabled>@GenericoResource.BotonAñadir</button>
+                }*@
+            </div>
+        </div>
+    </div>
+    <div id="divGrdResult">
+    </div>
+    <hr />
+    <div class="col-sm-12 text-right">
+        @Html.ActionLink(@GenericoResource.BtnRegresar, "Index", null, new { @class = "btn btn-default right" })
+    </div>
+</div>
+@section scripts
+{
+    <script type="text/javascript">
+        ns('Pe.Stracon.SGC.Presentacion.Contractual.BandejaContrato.Actions')
+        Pe.Stracon.SGC.Presentacion.Contractual.BandejaContrato.Actions.BandejaIndex = '@Url.Action("Index", "BandejaContrato", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.BandejaContrato.Actions.BuscarBandejaObservaciones = '@Url.Action("BuscarBandejaObservaciones", "BandejaContrato", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.BandejaContrato.Actions.FormularioObservaciones = '@Url.Action("FormularioObservaciones", "BandejaContrato", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.BandejaContrato.Actions.FormularioResponderObservacion = '@Url.Action("FormularioResponderObservacion", "BandejaContrato", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.BandejaContrato.Actions.EliminarObservaciones = '@Url.Action("EliminarObservaciones", "BandejaContrato", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.BandejaContrato.Actions.RegistrarObservaciones = '@Url.Action("RegistrarObservaciones", "BandejaContrato", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.BandejaContrato.Actions.RespondeObservaciones = '@Url.Action("RespondeObservaciones", "BandejaContrato", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.BandejaContrato.Actions.ParrafosPorContrato = '@Url.Action("ListaParrafosPorContrato", "BandejaContrato", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.BandejaContrato.Actions.EstadiosPorContrato = '@Url.Action("ListaEstadiosPorContrato", "BandejaContrato", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.BandejaContrato.Actions.ConsultaContenidoParrafo = '@Url.Action("ConsultaContenidoParrafo", "BandejaContrato", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.BandejaContrato.Actions.ObservacionesPorResponder = '@Url.Action("ObservacionesPorResponder", "BandejaContrato", new { Area = "Contractual" })';
+
+        Pe.Stracon.SGC.Presentacion.Contractual.BandejaContrato.Actions.MostrarContratoDocumentoAnteriorObservacion = '@Url.Action("MostrarContratoDocumentoAnteriorObservacion", "BandejaContrato", new { Area = "Contractual" })';
+        Pe.Stracon.SGC.Presentacion.Contractual.BandejaContrato.Actions.MostrarContratoDocumentoReemplazanteObservacion = '@Url.Action("MostrarContratoDocumentoReemplazanteObservacion", "BandejaContrato", new { Area = "Contractual" })';
+
+        ns('Pe.Stracon.SGC.Presentacion.Contractual.BandejaContrato.Mensaje')
+        @*Pe.Stracon.SCC.Presentacion.Contable.ActividadUnidadOperativa.MensajeMensajeSeleccionarNivel = '@Html.Raw(ActividadUnidadOperativaResource.MensajeSeleccionarNivel)';*@
+
+        ns('Pe.Stracon.SGC.Presentacion.Contractual.BandejaContrato.Resources')
+        Pe.Stracon.SGC.Presentacion.Contractual.BandejaContrato.Resources.GridObservacion = '@Html.Raw(BandejaContratoResource.GridObservacion)';
+        Pe.Stracon.SGC.Presentacion.Contractual.BandejaContrato.Resources.GridObservadoPor = '@Html.Raw(BandejaContratoResource.GridObservadoPor)';
+        Pe.Stracon.SGC.Presentacion.Contractual.BandejaContrato.Resources.GridFechaObservacion = '@Html.Raw(BandejaContratoResource.GridFechaObservacion)';
+        Pe.Stracon.SGC.Presentacion.Contractual.BandejaContrato.Resources.GridTipoRespuesta = '@Html.Raw(BandejaContratoResource.GridTipoRespuesta)';
+        Pe.Stracon.SGC.Presentacion.Contractual.BandejaContrato.Resources.GridRespuesta = '@Html.Raw(BandejaContratoResource.GridRespuesta)';
+        Pe.Stracon.SGC.Presentacion.Contractual.BandejaContrato.Resources.GridRespondidoPor = '@Html.Raw(BandejaContratoResource.GridRespondidoPor)';
+        Pe.Stracon.SGC.Presentacion.Contractual.BandejaContrato.Resources.GridFechaRespuesta = '@Html.Raw(BandejaContratoResource.GridFechaRespuesta)';
+        Pe.Stracon.SGC.Presentacion.Contractual.BandejaContrato.Resources.EtiquetaFormulario = '@Html.Raw(BandejaContratoResource.EtiquetaTituloFormulario)';
+        Pe.Stracon.SGC.Presentacion.Contractual.BandejaContrato.Resources.EtiquetaFormularioResponderObservacion = '@Html.Raw(BandejaContratoResource.EtiquetaFormularioResponderObservacion)';
+        Pe.Stracon.SGC.Presentacion.Contractual.BandejaContrato.Resources.EtiquetaVerObservacion = '@Html.Raw(BandejaContratoResource.EtiquetaFormularioVerConsulta)';
+        Pe.Stracon.SGC.Presentacion.Contractual.BandejaContrato.Resources.EtiquetaTituloConfirmar = '@Html.Raw(GenericoResource.EtiquetaTituloConfirmar)';
+        Pe.Stracon.SGC.Presentacion.Contractual.BandejaContrato.Resources.EtiquetaTituloAdvertencia = '@Html.Raw(MensajeResource.EtiquetaTituloAdvertencia)';
+        Pe.Stracon.SGC.Presentacion.Contractual.BandejaContrato.Resources.ValidarNoEvidenciaObservacion = '@Html.Raw(BandejaContratoResource.MsjValidarNoEvidenciaObservacion)';
+        Pe.Stracon.SGC.Presentacion.Contractual.BandejaContrato.Resources.ValidarTextoObservacion = '@Html.Raw(BandejaContratoResource.MsjValidarTextoObservacion)';
+        Pe.Stracon.SGC.Presentacion.Contractual.BandejaContrato.Resources.CodigoRptaObservacionAplica = '@Html.Raw(BandejaContratoResource.CodigoRptaObservacionAplica)';
+        Pe.Stracon.SGC.Presentacion.Contractual.BandejaContrato.Resources.CodigoRptaObservacionNoAplica = '@Html.Raw(BandejaContratoResource.CodigoRptaObservacionNoAplica)';
+        Pe.Stracon.SGC.Presentacion.Contractual.BandejaContrato.Resources.MsjValidarRespuesta = '@Html.Raw(BandejaContratoResource.MsjValidarRespuesta)';
+        Pe.Stracon.SGC.Presentacion.Contractual.BandejaContrato.Resources.GridAcciones = '@Html.Raw(GenericoResource.GridAcciones)';
+        Pe.Stracon.SGC.Presentacion.Contractual.BandejaContrato.Resources.GridContratoAnterior = '@Html.Raw(BandejaContratoResource.GridContratoAnterior)';
+        Pe.Stracon.SGC.Presentacion.Contractual.BandejaContrato.Resources.GridContratoReemplazante = '@Html.Raw(BandejaContratoResource.GridContratoReemplazante)';
+        Pe.Stracon.SGC.Presentacion.Contractual.BandejaContrato.Resources.ValidarObservacionConCopia = '@Html.Raw(BandejaContratoResource.MsjValidarObservacionConCopia)';
+
+        ns('Pe.Stracon.SGC.Presentacion.Recursos.Validacion')
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.SeleccionarRegistroEliminar = '@Html.Raw(MensajeResource.SeleccionarRegistroEliminar)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ConfirmacionGuardar = '@Html.Raw(MensajeResource.ConfirmacionGuardar)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.EtiquetaConfirmacion = '@MensajeResource.SeGuardoInformacionExito';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.ConfirmacionModificarContrato = '@Html.Raw(MensajeResource.ConfirmacionModificarContrato)';
+        Pe.Stracon.SGC.Presentacion.Recursos.Validacion.EtiquetaTituloConfirmar = '@Html.Raw(MensajeResource.EtiquetaTituloConfirmar)';
+
+        ns('Pe.Stracon.SGC.Presentacion.Contractual.BandejaContrato.Variables')
+        Pe.Stracon.SGC.Presentacion.Contractual.BandejaContrato.Variables.ControlPermisos = @(Html.Raw(Json.Encode(ViewBag.ControlPermisos)));
+
+    </script>
+
+    @*    <script src="~/Scripts/Contractual/BandejaContrato/FormularioObservaciones/Controller.js"></script>
+    <script src="~/Scripts/Contractual/BandejaContrato/FormularioResponderObservacion/Controller.js"></script>*@
+    @CustomHtmlHelper.RenderViewJs("contractualbandejacontratoformularioobservaciones")
+    @CustomHtmlHelper.RenderViewJs("contractualbandejacontratoformularioresponderobservacion")
+}
+

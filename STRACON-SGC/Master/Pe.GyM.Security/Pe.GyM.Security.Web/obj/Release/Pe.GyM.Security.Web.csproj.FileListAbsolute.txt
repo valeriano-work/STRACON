@@ -1,0 +1,16 @@
+D:\Modulos\Fuentes\STRACON-SGC\Master\Pe.GyM.Security\Pe.GyM.Security.Web\bin\Release\Pe.GyM.Security.Web.dll
+D:\Modulos\Fuentes\STRACON-SGC\Master\Pe.GyM.Security\Pe.GyM.Security.Web\bin\Release\Pe.GyM.Security.Web.pdb
+D:\Modulos\Fuentes\STRACON-SGC\Master\Pe.GyM.Security\Pe.GyM.Security.Web\bin\Release\Pe.GyM.Security.Account.dll
+D:\Modulos\Fuentes\STRACON-SGC\Master\Pe.GyM.Security\Pe.GyM.Security.Web\bin\Release\System.Web.Mvc.dll
+D:\Modulos\Fuentes\STRACON-SGC\Master\Pe.GyM.Security\Pe.GyM.Security.Web\bin\Release\System.Web.Razor.dll
+D:\Modulos\Fuentes\STRACON-SGC\Master\Pe.GyM.Security\Pe.GyM.Security.Web\bin\Release\System.Web.WebPages.Razor.dll
+D:\Modulos\Fuentes\STRACON-SGC\Master\Pe.GyM.Security\Pe.GyM.Security.Web\bin\Release\System.Web.WebPages.dll
+D:\Modulos\Fuentes\STRACON-SGC\Master\Pe.GyM.Security\Pe.GyM.Security.Web\bin\Release\Microsoft.Web.Infrastructure.dll
+D:\Modulos\Fuentes\STRACON-SGC\Master\Pe.GyM.Security\Pe.GyM.Security.Web\bin\Release\System.Web.WebPages.Deployment.dll
+D:\Modulos\Fuentes\STRACON-SGC\Master\Pe.GyM.Security\Pe.GyM.Security.Web\bin\Release\Pe.GyM.Security.Account.pdb
+D:\Modulos\Fuentes\STRACON-SGC\Master\Pe.GyM.Security\Pe.GyM.Security.Web\bin\Release\Pe.GyM.Security.Account.dll.config
+D:\Modulos\Fuentes\STRACON-SGC\Master\Pe.GyM.Security\Pe.GyM.Security.Web\obj\Release\Pe.GyM.Security.Web.csprojAssemblyReference.cache
+D:\Modulos\Fuentes\STRACON-SGC\Master\Pe.GyM.Security\Pe.GyM.Security.Web\obj\Release\Pe.GyM.Security.Web.csproj.CoreCompileInputs.cache
+D:\Modulos\Fuentes\STRACON-SGC\Master\Pe.GyM.Security\Pe.GyM.Security.Web\obj\Release\Pe.GyM.Security.Web.csproj.CopyComplete
+D:\Modulos\Fuentes\STRACON-SGC\Master\Pe.GyM.Security\Pe.GyM.Security.Web\obj\Release\Pe.GyM.Security.Web.dll
+D:\Modulos\Fuentes\STRACON-SGC\Master\Pe.GyM.Security\Pe.GyM.Security.Web\obj\Release\Pe.GyM.Security.Web.pdb

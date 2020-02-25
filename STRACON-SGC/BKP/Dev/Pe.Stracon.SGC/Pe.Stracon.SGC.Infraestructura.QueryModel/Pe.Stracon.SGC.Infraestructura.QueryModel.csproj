@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7280CDD5-08DB-4BE3-A412-1B1E6D9A5DE2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Pe.Stracon.SGC.Infraestructura.QueryModel</RootNamespace>
+    <AssemblyName>Pe.Stracon.SGC.Infraestructura.QueryModel</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Pe.Stracon.SGC.Infraestructura.QueryModel.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'STRACON_QA|AnyCPU'">
+    <OutputPath>bin\STRACON_QA\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\Logic.cs" />
+    <Compile Include="Contractual\BienAlquilerLogic.cs" />
+    <Compile Include="Contractual\BienLogic.cs" />
+    <Compile Include="Contractual\BienRegistroLogic.cs" />
+    <Compile Include="Contractual\ConsultaAdjuntoLogic.cs" />
+    <Compile Include="Contractual\ConsultaLogic.cs" />
+    <Compile Include="Contractual\ConsultaTrazabilidadLogic.cs" />
+    <Compile Include="Contractual\RequerimientoDocumentoAdjuntoResolucionLogic.cs" />
+    <Compile Include="Contractual\RequerimientoDocumentoAdjuntoLogic.cs" />
+    <Compile Include="Contractual\RequerimientoObservadoAprobadoLogic.cs" />
+    <Compile Include="Contractual\RequerimientoEstadioLogic.cs" />
+    <Compile Include="Contractual\RequerimientoDocumentoLogic.cs" />
+    <Compile Include="Contractual\RequerimientoParrafoLogic.cs" />
+    <Compile Include="Contractual\RequerimientoEstadioConsultaLogic.cs" />
+    <Compile Include="Contractual\RequerimientoEstadioObservacionLogic.cs" />
+    <Compile Include="Contractual\RequerimientoFirmanteLogic.cs" />
+    <Compile Include="Contractual\RequerimientoBienLogic.cs" />
+    <Compile Include="Contractual\ContratoCorporativoLogic.cs" />
+    <Compile Include="Contractual\ContratoDocumentoAdjuntoResolucionLogic.cs" />
+    <Compile Include="Contractual\ContratoDocumentoLogic.cs" />
+    <Compile Include="Contractual\ContratoEstadioConsultaLogic.cs" />
+    <Compile Include="Contractual\ContratoEstadioLogic.cs" />
+    <Compile Include="Contractual\ContratoEstadioObservacionLogic.cs" />
+    <Compile Include="Contractual\ContratoFirmanteLogic.cs" />
+    <Compile Include="Contractual\RequerimientoParrafoVariableLogic.cs" />
+    <Compile Include="Contractual\ListadoRequerimientoLogic.cs" />
+    <Compile Include="Contractual\RequerimientoLogic.cs" />
+    <Compile Include="Contractual\ContratoObservadoAprobadoLogic.cs" />
+    <Compile Include="Contractual\ContratoParrafoLogic.cs" />
+    <Compile Include="Contractual\ContratoParrafoVariableLogic.cs" />
+    <Compile Include="Contractual\ContratoDocumentoAdjuntoLogic.cs" />
+    <Compile Include="Contractual\EmpresaVinculadaLogic.cs" />
+    <Compile Include="Contractual\PlantillaRequerimientoParrafoVariableLogic.cs" />
+    <Compile Include="Contractual\PlantillaRequerimientoParrafoLogic.cs" />
+    <Compile Include="Contractual\PlantillaRequerimientoNotaPieLogic.cs" />
+    <Compile Include="Contractual\PlantillaRequerimientoLogic.cs" />
+    <Compile Include="Contractual\PlantillaNotaPieLogic.cs" />
+    <Compile Include="Contractual\FlujoAprobacionParticipanteLogic.cs" />
+    <Compile Include="Contractual\FlujoAprobacionTipoContratoLogic.cs" />
+    <Compile Include="Contractual\FlujoAprobacionTipoServicioLogic.cs" />
+    <Compile Include="Contractual\ListadoContratoLogic.cs" />
+    <Compile Include="Contractual\PlantillaParrafoLogic.cs" />
+    <Compile Include="Contractual\PlantillaParrafoVariableLogic.cs" />
+    <Compile Include="Contractual\ProcesoAuditoriaLogic.cs" />
+    <Compile Include="Contractual\FlujoAprobacionEstadioLogic.cs" />
+    <Compile Include="Contractual\FlujoAprobacionLogic.cs" />
+    <Compile Include="Contractual\PlantillaLogic.cs" />
+    <Compile Include="Contractual\ContratoLogic.cs" />
+    <Compile Include="Contractual\ProveedorLogic.cs" />
+    <Compile Include="Contractual\ProveedorOracleLogic.cs" />
+    <Compile Include="Contractual\ProveedorSAPLogic.cs" />
+    <Compile Include="Contractual\UnidadOperativaLogic.cs" />
+    <Compile Include="Contractual\VariableCampoLogic.cs" />
+    <Compile Include="Contractual\VariableListaLogic.cs" />
+    <Compile Include="Contractual\VariableLogic.cs" />
+    <Compile Include="Contractual\ContratoBienLogic.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

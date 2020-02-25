@@ -1,0 +1,81 @@
+﻿@using Pe.Stracon.SGC.Presentacion.Recursos.Base
+@using Pe.Stracon.SGC.Presentacion.Recursos.Contractual
+@model Pe.Stracon.SGC.Presentacion.Core.ViewModel.Contractual.Plantilla.PlantillaFormulario
+
+<form id="frmPlantilla">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                @Html.Hidden("hdnCodigoPlantilla", Model.Plantilla.CodigoPlantilla, new { id = "hdnCodigoPlantilla" })
+                <label for="txtFrmDescripcion">@PlantillaContratoResource.EtiquetaDescripcion</label>
+                <input class="form-control hasRequired" type="text" id="txtFrmDescripcion" value="@Model.Plantilla.Descripcion" validable="required ValidarDescripcion" />
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="slcFrmTipoContrato">@PlantillaContratoResource.EtiquetaTipoContrato</label>
+                @Html.DropDownList("slcFrmTipoContrato", Model.TipoServicio, new { @class = "form-control", @id = "slcFrmTipoContrato", @validable = "required ValidarTipoContrato" })
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="slcFrmTipoDocumentoContrato">@PlantillaContratoResource.EtiquetaTipoDocumento</label>
+                @Html.DropDownList("slcFrmTipoDocumentoContrato", Model.TipoDocumentoContrato, new { @class = "form-control", @id = "slcFrmTipoDocumentoContrato", @validable = "required ValidarTipoDocumentoContrato" })
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="dtpFrmFechaInicioVigencia">@PlantillaContratoResource.EtiquetaInicioVigencia</label>
+                <div class="input-group">
+                    @Html.TextBox("dtpFrmFechaInicioVigencia", Model.Plantilla.FechaInicioVigenciaString, new { @class = "form-control", @id = "dtpFrmFechaInicioVigencia", @validable = "required ValidarFechaInicioVigencia" })
+                    <div class="input-group-addon"><span class="fa fa-calendar"></span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        @if (Model.IndicadorCopia != "1")
+        {
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        <label>
+                            @PlantillaContratoResource.EtiquetaTipoAdhesion
+                        </label>
+                    </div>
+                    <div align="center" class="col-sm-6">
+                        <input type="radio" value="true" name="rdbAdhesion" @Html.Raw((Model.Plantilla.IndicadorAdhesion) ? "checked" : string.Empty)>@GenericoResource.EtiquetaSi
+                    </div>
+                    <div align="center" class="col-sm-6">
+                        <input type="radio" value="false" name="rdbAdhesion" @Html.Raw((!Model.Plantilla.IndicadorAdhesion) ? "checked" : string.Empty)>@GenericoResource.EtiquetaNo
+                    </div>
+                </div>
+            </div>
+        }
+        @*INICIO: Agregado por Julio Carrera -Norma Contable*@
+        <div class="col-sm-6">
+            <div class="form-group">
+                <div class="col-sm-12">
+                    <label>
+                        Arrendamiento equipo mayor
+                    </label>
+                </div>
+                <div align="center" class="col-sm-6">
+                    <input type="radio" value="true" name="rdbMayorMenor" @Html.Raw((Model.Plantilla.EsMayorMenor) ? "checked" : string.Empty)>@GenericoResource.EtiquetaSi
+                </div>
+                <div align="center" class="col-sm-6">
+                    <input type="radio" value="false" name="rdbMayorMenor" @Html.Raw((!Model.Plantilla.EsMayorMenor) ? "checked" : string.Empty)>@GenericoResource.EtiquetaNo
+                </div>
+            </div>
+        </div>
+        @*FIN: Agregado por Julio Carrera -Norma Contable*@
+    </div>
+</form>
+
+<div class="comp-Modal-footer">
+    <button class="btn btn-default" id="btnFrmPlantillaCancelar">@GenericoResource.BotonCancelar</button>
+    <button class="btn btn-primary" id="btnFrmPlantillaGrabar">@GenericoResource.BotonGrabar</button>
+</div>

@@ -1,0 +1,309 @@
+﻿/**********************************************
+File : layout.css;
+-----------------------------------------------
+Description:
+   - Reglas para la distribucion
+     de los elementos principales.
+-----------------------------------------------
+Assigned to: Sebastian Yabiku        
+/*********************************************/
+
+/*----.GmdWrap*/
+/*********************************************/
+
+
+/*----.GmdHeader*/
+/*********************************************/
+.Gmd-logo {
+    float: left;
+    display: block;
+    margin: 11px 11px 11px 5px;
+    position: relative;
+}
+
+    .Gmd-logo:before {
+      content: '';
+      width: 1px;
+      height: 70%;
+      background: #ccc;
+      position: absolute;
+      right: -14px;
+      top: 12%;
+    }
+
+.lay-GmdHeader {
+    height: 52px;
+    border-top: 1px solid #dddedf;
+    /*border-bottom: 1px solid #dddedf;*/
+    background: #fff;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+    .lay-GmdHeader .logo {
+        display: block;
+        float: left;
+        margin-top: 12px;
+        margin-left: 22px;
+        min-width: 102px;
+        border-right: 1px solid #d9d9d9;
+    }
+
+    .lay-GmdHeader h1 {
+        float: left;
+        margin: 13px;
+        font-weight: bold;
+        color: #676767;
+        font-size: 20px;
+        text-transform: uppercase;
+        margin-top: 16px;
+    }
+
+/*----.GmdBody*/
+/*********************************************/
+.lay-PullBody {
+    padding-left: 58px;
+}
+
+.lay-MainContent {
+    float: left;
+    width: 100%;
+}
+
+.lay-GmdBody {
+    padding: 52px 0 0;
+}
+
+    .lay-GmdBody .main-content {
+        background: #fff;
+        min-height: 950px;
+        position: relative;
+    }
+
+.GmdBody-header {
+    border-bottom: 1px solid #d4d4d4;
+    padding: 10px 14px;
+    -webkit-box-shadow: 0px 3px 2px #f0f0f0;
+    box-shadow: 0px 3px 2px #f0f0f0;
+    -moz-box-shadow: 0px 3px 2px #f0f0f0;
+}
+
+    .GmdBody-header h2 {
+        margin: 0px;
+    }
+
+        .GmdBody-header h2 a {
+            color: #777;
+        }
+
+.GmdBody-body {
+    min-height:532px;
+    padding: 15px 15px 102px 15px;
+}
+
+
+/*----.GmdFooter*/
+/*********************************************/
+.lay-GmdFooter {
+    background: #15284b;
+    color: #fff;
+    font-size: 12px;
+    height: 52px;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    z-index: 9;
+}
+
+    .lay-GmdFooter ul {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .lay-GmdFooter a,
+    .lay-GmdFooter p {
+        color: #fff;
+        font-size: 12px;
+    }
+
+    .lay-GmdFooter li {
+        list-style: none;
+    }
+
+    .lay-GmdFooter .pull-left {
+        margin: 18px 0 0 15px;
+    }
+
+    .lay-GmdFooter .pull-right {
+        margin: 18px 15px 0 0;
+    }
+
+        .lay-GmdFooter .pull-right li {
+            display: inline-block;
+        }
+
+        .lay-GmdFooter .pull-right .title {
+            margin-right: 10px;
+        }
+
+        .lay-GmdFooter .pull-right a {
+            display: block;
+            position: relative;
+            top: -2px;
+        }
+
+td.left {
+    text-align: left !important;
+}
+
+/*---.view-home*/
+/*********************************************/
+.view-home .bs-callout {
+    border-left: 8px solid #ee1621;
+    padding: 15px;
+    
+    margin: 10px 0;
+}
+
+.view-home .images {
+    position: relative;
+    display: inline-block;
+    margin: 48px 0 20px 20px;
+    vertical-align: top;
+    text-align: center;
+}
+
+.view-home .images img {
+      display: inline-block;
+      border: 1px solid #ABABAB;
+      /* width: 400px; */
+      margin-right: 14px;
+      box-shadow: 0px 2px 28px #9D9D9D;
+      border-radius: 6px;
+}
+
+.view-home .images img.image-two {
+    position: absolute;
+    top: 0px;
+    left: 25%;
+    z-index: 2;
+    top: 80px;
+}
+
+.view-home ul {
+     display: inline-block;
+  margin: 20px 40px 0 0;
+  padding: 0px;
+  vertical-align:top;
+}
+
+.view-home li {
+     list-style: none;
+    margin: 0 0 25px;
+}
+
+.view-home .title {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.view-home .fa {
+    color: #00A002;
+    margin: 0 10px 0 0;
+}
+
+.view-home .list {
+    display: inline-block;
+    padding: 50px 0 0 60px;
+}
+
+.view-home h1 {
+   margin: 0 0 10px;
+}
+
+.view-home .images h4 {
+    padding: 100px 0 0;
+}
+.view-home .owl-item .item {
+    padding: 5px;
+  border: 1px solid #C8C8C8;
+  margin-right: 20px;
+  background: #EDEDED;
+  border-radius: 6px;
+}
+.owl-pagination {
+    text-align:center;
+    margin:20px 0 0;
+}
+.owl-pagination .owl-page{
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      border-radius: 15px;
+      background: #D5D5D5;
+      text-indent: -9999px;
+      margin: 0 0 0 15px;
+      box-shadow: 0px 1px 3px #525252;
+}
+.owl-pagination .owl-page.active, .owl-pagination .owl-page:hover{
+    background:#ee1621;
+}
+.owl-buttons {
+    
+}
+.view-home .owl-item .item img {
+    width:100%;
+}
+.view-homeSGC .list{
+    padding:0px;
+    display:block;
+}
+.view-homeSGC h1{
+    border-bottom: 1px solid #D8D8D8;
+    padding-bottom: 10px;
+    font-size:19px;
+    margin:0px;
+}
+.view-homeSGC .wrap-images {
+    padding: 20px;
+    border-radius: 3px;
+    margin: 10px 0 0;
+}
+.view-homeSGC ul {
+    margin-bottom:20px;
+}
+.view-homeSGC li{
+    margin:0 0 10px;
+}
+.view-homeSGC .box .item{
+    display: inline-block;
+    width: 22%;
+    margin-right: 2%;
+    padding: 5px;
+    border: 1px solid #C8C8C8;  
+    background: #EDEDED;
+    border-radius: 6px;
+}
+.view-homeSGC .box .item img {
+    width:100%;
+}
+/*---lay-iframeVisorPdf*/
+/*********************************************/
+.lay-iframeVisorPdf,
+.lay-iframeVisorPdf iframe{
+    width:100%;
+    display:block;
+    min-height:285px;
+}
+
+
+/*---Heigh*/
+/*********************************************/
+.Lay-Height150 {
+    height:150px!important;
+}
+
+.Lay-Height100 {
+    height:100px!important;
+}

@@ -1,0 +1,42 @@
+﻿@{
+    @*Layout = "~/Views/Shared/_Layout.cshtml";
+}*@
+
+@if (TempData["StatusCode"] != null)
+{ 
+    switch ((int)TempData["StatusCode"])
+    {
+        case 404:
+        <div class="GmdBody-header">
+            <h2>Página No Encontrada</h2>
+        </div>
+        <div class="GmdBody-body">
+            <h3>La URL a la que está tratando de ingresar no existe. Por favor usar las opciones del menú.</h3>
+        </div>
+            break;
+        default:
+        <div class="GmdBody-header">
+            <h2>Error Interno</h2>
+        </div>
+        <div class="GmdBody-body">
+            <h3>Ha ocurrido un error interno en la aplicación. Por favor intentar nuevamente, si el problema persiste comuniquese con el adminitrador del sistema.</h3>
+        </div>
+            break;
+    }
+
+}
+
+<div style="display: none">
+    @if (Model != null && Model is System.Web.Mvc.HandleErrorInfo)
+    {
+        if (Model.Exception != null)
+        { 
+        <br />   @("Message :" + Model.Exception.Message)
+        <br /> @("tracer :" + Model.Exception.StackTrace)
+            if (Model.Exception.InnerException != null)
+            { 
+        <br />@Model.Exception.InnerException.Message
+            }
+        }
+    }
+</div>

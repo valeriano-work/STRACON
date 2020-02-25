@@ -1,0 +1,47 @@
+﻿@using Pe.Stracon.SGC.Presentacion.Recursos.Base
+@using Pe.Stracon.SGC.Presentacion.Recursos.Contractual
+@model Pe.Stracon.SGC.Presentacion.Core.ViewModel.Contractual.BandejaContrato.ConsultasBusqueda
+<div class="row">
+    <div class="col-sm-12">
+        <div class="form-group">
+            <label for="txtObservacion">@BandejaContratoResource.EtiquetaConsulta</label>
+            @Html.TextArea("txtObservacion", null, new { @class = "form-control", @id = "txtObservacion" })
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        <div class="form-group">
+            <label>@BandejaContratoResource.EtiquetaParrafoRelacionado</label>
+        </div>
+    </div>
+</div>
+@if(!Model.Contrato.IndicadorAdhesion == true)
+{
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <div id="divGrdParrafos" style="max-height: 140px; overflow-y:auto; overflow-x:hidden;">
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <div id="divContenidoContrato" class="box-ParrafosObservacion" style="max-height: 140px; overflow:auto;">
+                </div>
+            </div>
+        </div>
+    </div>
+}
+<div class="row">
+    <div class="col-sm-12">
+        <div class="form-group">
+            <label for="slcResponsable">@BandejaContratoResource.EtiquetaEnviarA</label>
+            @Html.DropDownList("slcResponsable", Model.ResponsableFlujoEstadio, new { @class = "form-control", @id = "slcResponsable" })
+        </div>
+    </div>
+</div>
+<div class="comp-Modal-footer">
+    <button class="btn btn-default" id="btnFrmConsultaCancelar">@GenericoResource.BotonCancelar</button>
+    <button class="btn btn-primary" id="btnFrmConsultaGrabar">@GenericoResource.BotonGrabar</button>
+</div>
